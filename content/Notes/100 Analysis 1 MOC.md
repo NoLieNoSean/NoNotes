@@ -4,35 +4,6 @@ tags:
   - MOC
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
-# Lecture Notes
-
-These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
-- [[Analysis1_L1]] ✅
-- [[Analysis1_L2]] ✅
-- [[Analysis1_L3]] ✅
-- [[Analysis1_L4]] ✅
-- [[Analysis1_L5]] ✅
-- [[Analysis1_L6]] ✅
-- [[Analysis1_L7]] ✅
-- [[Analysis1_L8]] ✅
-- [[Analysis1_L9]] Reconciliation of limsup/liminf. Also, compilation
-	- This weekend.
-
-Proper lecture notes start here.
-- [[Analysis1_L10]] ✅ 
-	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
-- [[Analysis1_L11]] ✅
-	- Continuity (4.5, 4.6, 4.7, 4.12). The sequence criterion (4.2). Algebra of limits of functions (4.4). 
-- [[Analysis1_L12]] skip for now
-	- NEED to FINISH THIS STUFF!
-- [[Analysis1_L13]] ✅
-	- Motivated and defined open and closed sets from 2.18. Proved 4.8 halfway.
-- [[Analysis1_L14]] ✅
-	- Finished proof of 4.8. Examples of open/closed sets. Showed that being closed implies containing all your limit points (This is Rudin's definition of being closed. We defined being closed as the complement being empty, which rudin proves in 2.23). 2.24, 2.25, 2.26.
-- [[Analysis1_L15]] ✅
-	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
-- [[Analysis1_L16]]
-- [[Analysis1_L17]]
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
@@ -54,6 +25,37 @@ Proper lecture notes start here.
 - [[Subsequences]]
 - [[Cauchy sequences]]
 - [[LimSup and LimInf]]
+
+# Lecture Notes
+
+Proper lecture notes start here.
+- [[Analysis1_L10]] ✅ 
+	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
+- [[Analysis1_L11]] ✅
+	- Continuity (4.5, 4.6, 4.7, 4.12). The sequence criterion (4.2). Algebra of limits of functions (4.4). 
+- [[Analysis1_L12]] skip for now
+	- NEED to FINISH THIS STUFF!
+- [[Analysis1_L13]] ✅
+	- Motivated and defined open and closed sets from 2.18. Proved 4.8 halfway.
+- [[Analysis1_L14]] ✅
+	- Finished proof of 4.8. Examples of open/closed sets. Showed that being closed implies containing all your limit points (This is Rudin's definition of being closed. We defined being closed as the complement being empty, which rudin proves in 2.23). 2.24, 2.25, 2.26.
+- [[Analysis1_L15]] ✅
+	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
+- [[Analysis1_L16]]
+- [[Analysis1_L17]]
+
+>[!Excali/Old]-
+These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
+>- [[Analysis1_L1]] ✅
+>- [[Analysis1_L2]] ✅
+>- [[Analysis1_L3]] ✅
+>- [[Analysis1_L4]] ✅
+>- [[Analysis1_L5]] ✅
+>- [[Analysis1_L6]] ✅
+>- [[Analysis1_L7]] ✅
+>- [[Analysis1_L8]] ✅
+>- [[Analysis1_L9]] Reconciliation of limsup/liminf. Also, compilation
+>	- This weekend.
 
 # Tutorials
 - [[Analysis1_T2]]

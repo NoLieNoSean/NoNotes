@@ -2,6 +2,7 @@
 tags:
   - ALG1
   - Lecture
+  - Processed
 ---
 
 ## Recall and orient
