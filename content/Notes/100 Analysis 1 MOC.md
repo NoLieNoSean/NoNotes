@@ -5,6 +5,8 @@ tags:
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
 # Live Notes
+
+These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 - [[Analysis1_L1]] ✅
 - [[Analysis1_L2]] ✅
 - [[Analysis1_L3]] ✅
@@ -15,7 +17,9 @@ tags:
 - [[Analysis1_L8]] ✅
 - [[Analysis1_L9]] Reconciliation of limsup/liminf. Also, compilation
 	- This weekend.
-- [[Analysis1_L10]] ✅ <-- proper lecture notes start here.
+
+Proper lecture notes start here.
+- [[Analysis1_L10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
 - [[Analysis1_L11]] ✅
 	- Continuity (4.5, 4.6, 4.7, 4.12). The sequence criterion (4.2). Algebra of limits of functions (4.4). 
@@ -50,7 +54,6 @@ tags:
 - [[Subsequences]]
 - [[Cauchy sequences]]
 - [[LimSup and LimInf]]
-## Continuity
 
 # Tutorials
 - [[Analysis1_T2]]

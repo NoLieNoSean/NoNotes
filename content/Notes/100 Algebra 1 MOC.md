@@ -3,7 +3,9 @@
 **TAs:** Subhranil Deb, Sunaina Pati, Abhishek Goel.
 **Primary Text:** ‘Algebra’ by Michael Artin, Ed 2
 # Live Notes
-- [[Algebra1_L1]] Intro, Vector spaces, Fields. ✅
+
+These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
+- [[Algebra1_L1]] Intro, Vector spaces, Fields.
 - [[Algebra1_L2]] Matrices, Variables vs equations table
 - [[Algebra1_L3]] Row reduction, RREF, pivots
 - [[Algebra1_L4]]
@@ -12,13 +14,15 @@
 - [[Algebra1_L7]]
 - [[Algebra1_T1]]
 - [[Algebra1_T2]]
-- [[Algebra1_L8]] ✅ <--- proper lecture notes starting here
+
+Proper lecture notes start here.
+- [[Algebra1_L8]] ✅ 
 - [[Algebra1_L9]] ✅ 
 - [[Algebra1_L10]] ✅
 - [[Algebra1_L11]]
 - [[Algebra1_L12]]
 # Compiled Notes
-## Basic stuff
+
 - [[Vector spaces]]
 - [[Matrices]]
 - [[Linear Combinations]]
@@ -30,5 +34,4 @@
 - [[Subspaces]]
 - [[Solving linear systems, Pivots]]
 
-Are RREFs unique?
  
