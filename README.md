@@ -1,18 +1,10 @@
-# Quartz v4
+# NoNotes
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+https://nolienosean.github.io/NoNotes/
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+These are my notes from my first sem at CMI.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+Disclaimer These notes were written primarily for my own reference and personal use. While I’m sharing them publicly, I make no claims about their quality, completeness, or accuracy. Use them at your own discretion, and feel free to reach out if you spot any errors or have suggestions!
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
-## Sponsors
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
