@@ -44,8 +44,8 @@ Proper lecture notes start here.
 - [[Analysis1_L16]]
 - [[Analysis1_L17]]
 
->[!Excali/Old]-
-These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
+>[!Excalidraw]-
+>These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Analysis1_L1]] ✅
 >- [[Analysis1_L2]] ✅
 >- [[Analysis1_L3]] ✅

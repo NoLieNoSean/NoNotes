@@ -26,7 +26,7 @@ Proper lecture notes start here.
 - [[Algebra1_L11]]
 - [[Algebra1_L12]]
 
->[!Excali/Old]-
+>[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Algebra1_L1]] Intro, Vector spaces, Fields.
 >- [[Algebra1_L2]] Matrices, Variables vs equations table
