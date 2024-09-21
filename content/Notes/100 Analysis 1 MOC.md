@@ -4,7 +4,7 @@ tags:
   - MOC
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
-# Live Notes
+# Lecture Notes
 
 These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 - [[Analysis1_L1]] ✅

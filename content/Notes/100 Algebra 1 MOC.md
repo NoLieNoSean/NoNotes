@@ -1,8 +1,10 @@
-#MOC #ALG1 
-
+---
+tags:
+  - ALG1
+  - MOC
+---
 **TAs:** Subhranil Deb, Sunaina Pati, Abhishek Goel.
-**Primary Text:** ‘Algebra’ by Michael Artin, Ed 2
-# Live Notes
+# Lecture Notes
 
 These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 - [[Algebra1_L1]] Intro, Vector spaces, Fields.
