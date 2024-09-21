@@ -41,7 +41,7 @@ Proper lecture notes start here.
 	- Finished proof of 4.8. Examples of open/closed sets. Showed that being closed implies containing all your limit points (This is Rudin's definition of being closed. We defined being closed as the complement being empty, which rudin proves in 2.23). 2.24, 2.25, 2.26.
 - [[Analysis1_L15]] ✅
 	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
-- [[Analysis1_L16]]
+- [[Analysis1_L16]] ✅
 - [[Analysis1_L17]]
 
 >[!Excalidraw]-

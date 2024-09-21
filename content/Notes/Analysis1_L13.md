@@ -119,7 +119,7 @@ Having already shown $\implies$, it only remains to show its converse.
 Defined closed sets.
 
 >[!Definition]
->A subset $C\subset X$ is called *closed* $\boxed{\text{ in }X}$ if $X\setminus C$ is open (or, equivalently, $C$ contains all the limit points of $C$).
+>A subset $C\subset X$ is called *closed* $\boxed{\text{ in }X}$ if $X\setminus C$ is open in $X$ (or, equivalently, $C$ contains all the limit points of $C$).
 
 Stated properties of open and closed sets under set operations:
 - Any union of open sets is open (it it understood that we are working in the context of a fixed metric space). This should be easy to see.

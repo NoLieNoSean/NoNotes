@@ -2,6 +2,7 @@
 tags:
   - Lecture
   - ANA1
+  - Processed
 ---
 2024-09-20, Friday
 1031
@@ -9,21 +10,17 @@ tags:
 ---
 
 ![[1726814241809.jpg]]
-
 ![[1726814241813.jpg]]
-
 ![[1726814241805.jpg]]
-
 ![[1726814241801.jpg]]
-
 ![[1726814241798.jpg]]
 
 To-do
-- [ ] Study sequential and limit point compactness. Show that their absolute and relative definitions are equivalent, essentially showing that they are intrinsic properties. Prove equivalence of the two notions for metric spaces.
-- [ ] Examples of compact metric spaces
-- [ ] Applications of compactness in $\mathbb{R}$
-- [ ] The extreme value theorem
-- [ ] Heine-Borel characterization of compact sets in $\mathbb{R}^{k}$ 
+- [x] Study sequential and limit point compactness. Show that their absolute and relative definitions are equivalent, essentially showing that they are intrinsic properties. Prove equivalence of the two notions for metric spaces.
+- [x] Examples of compact metric spaces
+- [x] Applications of compactness in $\mathbb{R}$
+- [x] The extreme value theorem
+- [x] Heine-Borel characterization of compact sets in $\mathbb{R}^{k}$ 
 
 "Compact sets work extremely well will continuous functions: Image of a compact set is compact."
 
@@ -108,34 +105,50 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 >If $S$ is infinite, since $X$ is limit point compact, $S$ must have a limit point in $X$. Call it $p$. Define a sequence of $\epsilon$'s: $(\epsilon_{n})=\left( \frac{1}{2^{n}} \right)$. Construct a subsequence $(p_{k_{n}})$ of $(p_{n})$ like so: Let $p_{k_{1}}$ be any point in $B_{\epsilon_{1}}(p, S)\setminus \{ p \}$, and let $p_{k_{n+1}}$ be any point such that $k_{n+1}>k_{n}$ and $p_{k_{n+1}}\in B_{\epsilon_{n+1}}(p, S)\setminus \{ p \}$ (such a $k_{n+1}$ must exist since every deleted neighborhood of $p$ contains infinitely many elements of $S$). Then, $(p_{n})\to p$ since $(\epsilon_{n})\to 0$. ❏
 
 ---
-
 ## Image of a compact set under a continuous function
 
 >[!Theorem]
 >if $f:X\to Y$ is continuous, and $X$ is compact, $f(X)$ is compact.
 
-
-
-
-
-Special case: $Y=\mathbb{R}$.
-from the next theorem, $f(x)$ must have a max and min value (extreme value theorem).
+>**Proof**
+>Consider a sequence $f(x_{1}), f(x_{2}), \dots$ in $f(X)$. $x_{1}, x_{2}, \dots$ is a sequence in $X$. Since $X$ is compact, $x_{1}, x_{2}, \dots$ has a subsequence $(x_{k_{n}})\to p\in X$. Since $f$ is continuous, it [[Analysis1_L15#Continuous functions map convergent sequences to convergent sequences|follows]] that $f(x_{k_{n}})\to f(p)\in f(X)$. ❏
 
 ---
+## Characterization of compact sets
 
 >[!Theorem]
->Every compact set $C$ in any metric space $X$ is closed in $X$ and bounded.
+>Every compact set $C$ in a metric space $X$ is closed in $X$ and bounded.
+
+>**Proof** 
+>Assume $C$ is not closed. Then, $|C|=\infty$, and $C$ has a limit point $p$ outside $C$. There exists a sequence $(p_{n})$ in $C$ that converges to $p$. Since every subsequence of $C$ also converges to $p$, $(p_{n})$ has no subsequence that converges to a point in $C$, contradicting the hypothesis that $C$ is compact. $\Rightarrow\Leftarrow$
+>
+>Suppose $C$ is unbounded. Pick $x_{0}\in C$. Pick $x_{n+1}$ such that $d(x_{0}, x_{n+1})>1+d(x_{0}, x_{n})$. This construction results in the distance between any two terms in $(x_{n})$ being greater than 1. Thus, there does not exist an $N$ such that for all $n\ge N$, all $x_{n}$ lie in a ball of radius $\frac{1}{2}$. So, no subsequence of $(x_{n})$ converges, contradicting the hypothesis that $C$ is compact. $\Rightarrow\Leftarrow$ ❏
+
+---
+## Extreme value theorem
+
+Consider $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[Analysis1_L15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$. Hence the extreme value theorem.
 
 ---
 
 >[!Theorem]
 >If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.
 
+>**Proof**
+>Consider a infinite subset $S\subset C$. Since $S\subset X$, $S$ has a limit point $p$ in $X$. However, a limit of $S$ is also a limit point of $C$, which contains all of its limit points since it is closed. Thus, $p \in C$. ❏
+
 ---
 ## Heine Borel Theorem
 
 >[!Theorem]
->$C$ is compact $\iff$ $C$ is closed in $\mathbb{R}$ and bounded.
+>Let $C$ be a subset of $\mathbb{R}$. Then, $C$ is compact $\iff$ $C$ is closed in $\mathbb{R}$ and bounded.
 
+>**Proof of $\implies$** 
+>Follows from the [[#Characterization of compact sets]].
+>
+>**Proof of $\Longleftarrow$**
+>
 
-Caution: In general, $X$ is closed and bounded $\not\implies$ $X$ is compact. (The converse is true.)
+>[!Warning]
+>Caution: In general, $X$ is closed and bounded $\not\implies$ $X$ is compact.
+

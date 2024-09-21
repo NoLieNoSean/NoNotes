@@ -37,7 +37,10 @@ Arbitrary unions of open sets are open. Finite intersections of open sets are op
 Arbitrary intersections of closed sets are closed. Finite unions of closed sets are closed.
 [[Analysis1_L14#Open and closed sets under intersections and unions]] 
 
-We have developed two ways to think about continuity - the epsilon-delta [[Analysis1_L11#Definition|definition]] and the [[Analysis1_L13#Halfway through to a new definition of continuity|theorem]] about inverse images under a continuous function of open sets being open sets. We observe a rather simple to see result that Rudin fails to mention:
+We have developed two ways to think about continuity - the epsilon-delta [[Analysis1_L11#Definition|definition]] and the [[Analysis1_L13#Halfway through to a new definition of continuity|theorem]] about inverse images under a continuous function of open sets being open sets. 
+
+We observe a rather simple to see result that Rudin fails to mention:
+### Continuous functions map convergent sequences to convergent sequences
 
 >[!Theorem]
 >Let $f:X\to Y$ be continuous on $X$. Let $(p_{n})$ be a sequence in $X$ which converges to $p\in X$. Then, $(f(p_{n}))$ must converge to $f(p)\in Y$.
@@ -45,6 +48,7 @@ We have developed two ways to think about continuity - the epsilon-delta [[Analy
 >**Proof**
 >If there is a sequence converging to $p$, then $p$ is a limit point of $X$. So, $f$ being continuous on $X$ [[Analysis1_L11#Case 1 $p$ is a limit point of $E$|implies]] $\lim_{ x \to p }f(x)$ must exist, and must equal $f(p)$. We know from the [[Analysis1_L11#Sequence criterion|sequence criterion]] that $\lim_{ x \to p }f(x)=f(p)$ means $\lim_{ n \to \infty }f(p_{n})=f(p)$. ❏
 
+### Closed sets in $\mathbb{R}$ contain their suprema
 
 A stray theorem form Rudin, which is fairly easy to see:
 
@@ -54,7 +58,7 @@ Rudin, 2.28
 >Let $E$ be a non-empty set of real numbers which is bounded above. Then, $\sup E\in \overline{E}$. Hence $\sup E\in E$ if $E$ is closed.
 
 >**Proof**
->For any $\epsilon>0$, there must exist $e\in E$ such that $\sup E-\epsilon<e<\sup E$. Thus, $B_{\epsilon}(\sup E, E)\setminus \{ \sup E \}\ne \emptyset$, i.e, $\sup E$ is a limit point of $E$, and $\sup E\in \overline{E}$. 
+>For any $\epsilon>0$, there must exist $e\in E$ such that $\sup E-\epsilon<e<\sup E$. Thus, $B_{\epsilon}(\sup E, E)\setminus \{ \sup E \}\ne \emptyset$, i.e, $\sup E$ is a limit point of $E$, and $\sup E\in \overline{E}$. ❏
 
 ---
 ## Algebra of continuous functions
@@ -107,11 +111,18 @@ Rudin, 2.30
 >$$
 >Clearly, $G$ is open in $X$ since it is a union of open balls in $X$. 
 >Clearly, $E\subset G\cap Y$.
->$G\cap Y=\bigcup_{p\in E}(B_{r_{p}}(p, X)\cap Y)=\bigcup_{p\in E}B_{r_{p}}(p, Y)\subset E$. 
+>$G\cap Y=\bigcup_{p\in E}(B_{r_{p}}(p, X)\cap Y)$ $=\bigcup_{p\in E}B_{r_{p}}(p, Y)\subset E$. 
 >Thus, $E=G\cap Y$. ❏
 >
 >**Proof of $\Longleftarrow$**
 >Let $E=Y\cap G$ for some open subset $G$ in $X$. For every $p \in E$, there exists $r_{p}>0$ such that $B_{r_{p}}(p, X)\subset G$ $\implies$ $B_{r_{p}}(p, X)\cap Y\subset G\cap Y$ $\implies$ $B_{r_{p}}(p, Y)\subset E$. ❏
+
+>[!Theorem] Corollary
+>Suppose $Y\subset X$. A subset $E$ of $Y$ is closed relative to $Y$ if  and only if $E=Y\cap C$ for some closed subset $C$ in $X$.
+
+>**Proof**
+>$E\subset Y$ is closed in $Y$ $\iff$ $Y\setminus E$ is open in $Y$ $\iff$ $Y\setminus E=Y\cap G$ for some $G$ open in $X$ $\iff$ $E=Y\setminus(Y\cap G)=Y\setminus G=Y\cap(X\setminus G)$, where $X\setminus G$ is closed in $X$. ❏
+
 ### Restrictions of continuous functions are continuous
 
 >[!Theorem]
