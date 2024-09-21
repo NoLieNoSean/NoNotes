@@ -3,7 +3,7 @@ tags:
   - ANA1
   - MOC
 ---
-**TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
+**TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
