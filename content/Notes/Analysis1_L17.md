@@ -61,7 +61,7 @@ $E$ is open cover compact as per definition 1 as a metric space in its own right
 >\bigcup_{\alpha \in I}V_{\alpha} & \supset E \\
 >\left( \bigcup_{\alpha \in I}V_{\alpha} \right)\cap E & =E \\
 >\bigcup_{\alpha \in I}(V_{\alpha}\cap E) & =E \\
-\bigcup_{\alpha \in I}W_{\alpha}  & =E
+>\bigcup_{\alpha \in I}W_{\alpha}  & =E
 >\end{align*}
 >$$
 >Where $W_{\alpha}=V_{\alpha}\cap E$. Note that each $W_{\alpha}$ is open in $E$. Thus, $\{ W_{\alpha} \}_{\alpha \in I}$ is an open cover of $E$, and from the hypothesis it must have a finite subcover $\{ W_{\beta} \}_{\beta \in J\subset I}$. It follows that $\{ V_{\beta} \}_{\beta \in J\subset I}$ also covers $V$, since $W_{\alpha}\subset V_{\alpha}$ for every $\alpha$. ❏
@@ -159,8 +159,9 @@ Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] 
 >Consider an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $f(X)$. 
 >$$
 >\begin{align*}
- f(X) & \subset \bigcup_{\alpha \in I}V_{\alpha} \\
->X & \subset f^{-1}\left( \bigcup_{\alpha \in I}V_{\alpha} \right) =\bigcup_{\alpha \in I}f^{-1}(V_{\alpha})
+>f(X) & \subset \bigcup_{\alpha \in I}V_{\alpha} \\
+>X & \subset f^{-1}\left( \bigcup_{\alpha \in I}V_{\alpha} \right)
+>=\bigcup_{\alpha \in I}f^{-1}(V_{\alpha})
 >\end{align*}
 >$$
 >Now, since $f$ is continuous, $f^{-1}(V_{a})$ is open in $X$ for all $\alpha$. Thus, $\{ f^{-1}(V_{\alpha}) \}_{\alpha \in I}$ is an open cover of $X$. Since $X$ is compact, there exists a finite subcover.
