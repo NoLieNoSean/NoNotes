@@ -110,16 +110,3 @@ You can show that these will always be linearly independent, provided we obtain 
 Thus, the dimension of the null space of $A$ is 3.
 Thus, $\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3} \}$ is a basis for the kernel of $A$.
 Conclusion: Dimension of null space = Number of free variables.
-
-
-
-
-
-
-%%
-
-![[Recording 20240911125822.webm]]
-
-
-%%
-

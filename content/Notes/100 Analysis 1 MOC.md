@@ -42,7 +42,7 @@ Proper lecture notes start here.
 - [[Analysis1_L15]] ✅
 	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
 - [[Analysis1_L16]] ✅
-- [[Analysis1_L17]]
+- [[Analysis1_L17]] ✅
 
 >[!Excalidraw]-
 >These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
