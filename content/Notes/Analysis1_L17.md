@@ -166,10 +166,10 @@ Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] 
 >$$
 >Now, since $f$ is continuous, $f^{-1}(V_{a})$ is open in $X$ for all $\alpha$. Thus, $\{ f^{-1}(V_{\alpha}) \}_{\alpha \in I}$ is an open cover of $X$. Since $X$ is compact, there exists a finite subcover.
 >$$
->\begin{align}
+>\begin{align*}
 >X & \subset   \bigcup_{\beta \in J\subset I}f^{-1}(V_{\beta}) \\
 >f(X) & \subset \bigcup_{\beta \in J\subset I}V_{\beta}
->\end{align}
+>\end{align*}
 >$$
 >❏
 

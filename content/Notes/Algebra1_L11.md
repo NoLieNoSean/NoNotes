@@ -52,7 +52,7 @@ Remarks (prove as necessary)
    ^dim=n+1  ^dim=n
    Dim(ker D)=1
    So, dim(ker D)+dim(Im D)=dim(Domain D).
-3. $V$= set of $n\times m$ matrices. 
+3. $V$= set of $n\times n$ matrices. 
    $W=\mathbb{R}$
    $T: V\to W$, $T(A)=\text{Tr }(A)$.
    Check the dimension formula holds, find a basis for the kernel.
@@ -69,14 +69,14 @@ Remarks (prove as necessary)
 >To show: dim Im T = r.
 >Guess: $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ is a basis of $\mathrm{Im}(T)$. 
 >
->these vectors span Im T:
+>1) these vectors span Im T:
 >Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of $V$, $\{ T(\mathbf{k}_{i}) \}_{1}^{t}$ and $\{ T(\mathbf{v}_{j}) \}_{1}^{r}$ span $T(V)=\mathrm{Im} (T)$
 >
->these vectors are linearly independent.
+>2) these vectors are linearly independent:
 >Consider a linear combination of  the vectors thats equals 0.
 >$\sum_{i=1}^{r}c_{i}T(\mathbf{v}_{i})=\mathbf{0}$.
 >Then, $T\left( \sum_{i=1}^{r}c_{i}\mathbf{v}_{i} \right)=0$
 >therefore, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}\in\text{Ker }(T)$.
 >so, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}=\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}$
 >so, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}-\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}=0$
->since $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$  forms a basis of $V$, all $c_{i}$ and $a_{i}$ must be $0$. Thus, $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ are linearly independent.
+>since $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$  forms a basis of $V$, all $c_{i}$ and $a_{i}$ must be $0$. Thus, $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ are linearly independent. 

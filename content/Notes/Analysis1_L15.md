@@ -39,7 +39,7 @@ Arbitrary intersections of closed sets are closed. Finite unions of closed sets 
 
 We have developed two ways to think about continuity - the epsilon-delta [[Analysis1_L11#Definition|definition]] and the [[Analysis1_L13#Halfway through to a new definition of continuity|theorem]] about inverse images under a continuous function of open sets being open sets. 
 
-We observe a rather simple to see result that Rudin fails to mention:
+We observe a simple result that Rudin fails to mention:
 ### Continuous functions map convergent sequences to convergent sequences
 
 >[!Theorem]
@@ -50,7 +50,7 @@ We observe a rather simple to see result that Rudin fails to mention:
 
 ### Closed sets in $\mathbb{R}$ contain their suprema
 
-A stray theorem form Rudin, which is fairly easy to see:
+A stray theorem form Rudin.
 
 Rudin, 2.28
 

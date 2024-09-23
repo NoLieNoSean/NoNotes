@@ -4,7 +4,6 @@ tags:
   - Lecture
   - Processed
 ---
-
 2024-09-11, Wednesday
 1154
 
@@ -35,8 +34,7 @@ tags:
 >
 >Take a basis $B$ for $W$. (note that since $V$ is fd, so is $W$, because spanning set for $V$ will give a spanning set for $W$).
 >$B$ stays linearly independent over $V$.
->Ten, by our proposition yesterday, $\text{Dim }W=|B|\le |\text{basis for }V|=\text{Dim }V$. ❏
-
+>Then, by our proposition yesterday, $\text{Dim }W=|B|\le |\text{basis for }V|=\text{Dim }V$. ❏
 
 >[!Remark]
 >For vector spaces that are not fdvsp, existence of a basis can be shown using strategy $A$ (not strategy $B$) and Zorn's lemma, and the Axiom of Choice. Uniqueness of cardinality also holds, and requires set theory to show. Not part of this course.
@@ -56,9 +54,9 @@ Exercise: find coefficients of $3+4x-9x^{2}$ in the basis $\{ 1, 1+x, 1+x+x^{2} 
 
 
 ### Example 3
-A $r\times c$ matrix, $f_{A}:\mathbb{R}^{c}\to \mathbb{R}^{r}$. 
+$A$ is a $r\times c$ matrix, $f_{A}:\mathbb{R}^{c}\to \mathbb{R}^{r}$. 
 How to find basis of null space of $A$?
-Observe that the null space of $A$ is the same as the null space of the RREF $R$ of A. 
+Observe that the null space of $A$ is the same as the null space of the RREF $R$ of $A$. 
 Consider this example:
 $$
 R=
@@ -69,7 +67,31 @@ R=
 0 & 0 & 0 & 0 & 0 & 0
 \end{bmatrix}
 $$
-The solution to $R\mathbf{x}=\mathbf{0}$ is of the form
+Consider the equation $R\mathbf{x}=\mathbf{0}$, i.e, 
+$$
+R=
+\begin{bmatrix}
+0 &  1 & p & 0 & q & 0 \\
+0 & 0 & 0 & 1 & r & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{bmatrix}\begin{bmatrix}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4} \\
+x_{5} \\
+x_{6}
+\end{bmatrix}=\begin{bmatrix}
+0 \\
+0 \\
+0 \\
+0
+\end{bmatrix}
+$$
+
+The solution to $R\mathbf{x}=\mathbf{0}$ is of the form:
+
 $$
 \begin{bmatrix}
 x_{1} \\
@@ -105,6 +127,7 @@ x_{5} \\
 0
 \end{bmatrix}
 $$
+Notice that the pivot variables are expressed in terms of the free variables.
 Call the vectors on the right $\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}$. $x_{1}$, $x_{2}$, $x_{3}$ are free variables.
 You can show that these will always be linearly independent, provided we obtain them via the RREF. 
 Thus, the dimension of the null space of $A$ is 3.

@@ -48,9 +48,7 @@ Start with an empty set, and keep appending vectors till it spans the entire set
 The first is true and can be proved. The second, however, is harder to tackle.
 
 ### Strategy B
-Start with a spanning set, and keep deleting vectors while the resulting set is linearly independent. Again, this requires that you to prove that you can remove a vector from a linearly dependent set of vectors without reducing the span, and that the process actually terminates. The first can be proved, but face the same problem with the termination requirement.
+Start with a spanning set, and keep deleting vectors while the resulting set is linearly independent. This requires that you to prove that you can remove a vector from a linearly dependent set of vectors without reducing the span, and that the process actually terminates. The first can be proved, but face the same problem with the termination requirement.
 
 >[!Definition]
 >$V$ is called a finite dimensional vector space if $V$ has a finite spanning set. 
-
-Assuming our vector space is a 

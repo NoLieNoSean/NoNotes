@@ -4,7 +4,6 @@ tags:
   - Lecture
   - Processed
 ---
-
 ## Recall and orient
 
 >There's no point to being stupid. 
@@ -60,7 +59,7 @@ Take a finite spanning set $S$ of $V$ and keep deleting unnecessary vectors till
 >[!Note]
 >Theorem 2 does not say anything about the existence of bases, only that if bases exist, they must have the same cardinality. We proved Theorem 1 for a reason.
 
-We have already shown that any basis of $\mathbb{R}^{n}$ has $n$ vectors. This is a result of pivot analysis. Now, we need to show this result for all fdvsps. Again, two strategies:
+We have already shown that any basis of $\mathbb{R}^{n}$ has $n$ vectors. This is a result of pivot analysis. Now, we will show an analogue for a general fdvsp. Again, two strategies:
 1. Use first principles of vector spaces to prove the result.
 2. Show that every fdvsp is isomorphic to $\mathbb{R}^{n}$. 
 
@@ -151,7 +150,7 @@ Thus, $\mathbb{R}^{n}\cong\mathbb{R}^{k}\iff n=k$.
 >**Proof**
 >
 >Let $V$ be a fdvsp.
->Let $\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n} \}$ and $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ be bases of $V$. 
+>Let $\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n} \}$ and $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{k} \}$ be bases of $V$.
 >Now, there exist isomorphisms $f:\mathbb{R}^{n}\to V$, defined by $f\left((c_{1}, c_{2}, \dots, c_{n})^{T}\right)= \sum c_{i}\mathbf{v}_{i}$ and $g: \mathbb{R}^{k}\to V$ defined by $g((d_{1}, d_{2}, \dots, d_{k})^{T})= \sum d_{i}\mathbf{u}_{i}$. 
 >It follows that $g^{-1}f:\mathbb{R}^{n}\to \mathbb{R}^{k}$ is an isomorphism.
 >Thus, $n=k$. ❏

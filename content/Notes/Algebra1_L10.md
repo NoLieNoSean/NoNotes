@@ -4,7 +4,6 @@ tags:
   - Lecture
   - Processed
 ---
-
 2024-09-12, Thursday
 1400
 
@@ -21,7 +20,7 @@ In the previous lecture, we found a basis for the null space of a matrix. We now
 
 ### Strategy 1
 
-Make rows into columns and vice versa, i.e, take the transpose. Not elaborated upon in class.
+Make rows into olumns and vice versa, i.e, take the transpose. Not elaborated upon in class.
 #### Transpose
 
 Defined [[Matrices#Transpose|transpose]] 
@@ -39,6 +38,7 @@ $$
 Exploit properties of RREF.
 
 $\text{Col }A:=\text{Span (Columns of A)}$ 
+
 $\text{Row }A:=\text{Span (Rows of A)}$ 
 #### Case 1: $A$ is in RREF.
 The pivot columns are linearly independent, and the other columns are in their span.
@@ -47,10 +47,13 @@ In this case, A basis of $\text{Col }A = \{ \text{Pivot columns of }A \}$
 Row operations change the column space of $A$. For example, $\begin{bmatrix}\sqrt{ 2 }\\ \pi\end{bmatrix}\underset{ \text{Row operations} }{ \longrightarrow } \begin{bmatrix}1\\ 0\end{bmatrix}$. The spans of the two vectors are clearly different.
 
 Insight: Find linear relations among column vectors of $A$, so that we can drop "unnecessary" columns to get a basis.
-This is the same as finding non-trivial solutions to $A\mathbf{x}=\mathbf{0}$, which is equivalent to finding non trivial solutions to $\text{RREF}(A)~\mathbf{x}=\mathbf{0}$. 
-Any set of columns of RREF(A) is linearly dependent/independent $\iff$ the corresponding set of columns of $A$ is linearly dependent/independent. 
+This is the same as finding non-trivial solutions to $A\mathbf{x}=\mathbf{0}$, which is equivalent to finding non trivial solutions to $\text{RREF}(A)~\mathbf{x}=\mathbf{0}$.
+Any set of columns of RREF(A) is linearly dependent/independent $\iff$ the corresponding set of columns of $A$ is linearly dependent/independent.
 
 Thus, a basis of $\text{Col }A=\{ \text{Columns of A corresponding to the pivot columns of RREF(A)} \}$
+
+>[!Note] A better explanation
+>We want to find a basis for the column space of $A$. We consider the pivot columns of $R=$RREF($A$). You can easily show that these are linearly independent, and span $\text{Col }R$. Thus, they are a basis for $\text{Col }R$. Now, it must be that $R=EA$, for some invertible matrix $E$. Thus, $R$ and $A$ are isomorphic, with $f_{E}$ being an isomorphism. If $f_{E}$ is an isomorphism, $f_{E}^{-1}$ is also an isomorphism. We know that an isomorphism maps a basis to a basis. Thus, the image of the pivot columns of $R$ under $f_{E}^{-1}$ (which are basically the corresponding columns in $A$) form a basis of $\text{Col }A$.
 
 ---
 ## Relation between rank and nullity
@@ -68,8 +71,8 @@ Non-zero rows form a basis as they are linearly independent.
 #### General case
 For an arbitrary matrix $A$, obtains its RREF $A'$. Then Rows of $A'$ are linear combinations of rows of $A$ and vice versa.
 
-Thus, a basis for $\text{Row }A = \{ \text{Non zero vectors of RREF(A)} \}$. 
-Thus, $\text{Dim }(\text{Row }A) =\text{Number of pivot variables in RREF(A)}=\text{Dim }(\text{Col }A)$ 
+Thus, a basis for $\text{Row }A = \{ \text{Non zero row vectors of RREF(A)} \}$. 
+Thus, $\text{Dim }(\text{Row }A) =\text{Number of pivots in RREF(A)}=\text{Dim }(\text{Col }A)$ 
 Thus, column rank = row rank.
 
 ### Rank-nullity theorem
