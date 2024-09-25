@@ -4,7 +4,7 @@ tags:
   - ANA1
   - Processed
 ---
-R2024-09-20, Friday
+2024-09-20, Friday
 1031
 
 ---
@@ -122,6 +122,8 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 ---
 ## Characterization of compact sets
 
+Rudin, 2.34
+
 >[!Theorem]
 >Every compact set $C$ in a metric space $X$ is closed in $X$ and bounded.
 
@@ -137,6 +139,8 @@ Consider $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this 
 
 ---
 ## Closed subsets of compact sets are compact
+
+Rudin, 2.35
 
 >[!Theorem]
 >If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.

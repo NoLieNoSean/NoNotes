@@ -43,6 +43,7 @@ Proper lecture notes start here.
 	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
 - [[Analysis1_L16]] ✅
 - [[Analysis1_L17]] ✅
+- [[Analysis1_L18]]
 
 >[!Excalidraw]-
 >These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
@@ -84,6 +85,31 @@ Proper lecture notes start here.
 	18. the plethora of definitions this chapter is known for
 	19. Theorem. Every neighborhood is an open set.
 	20. Theorem. If p is a limit point of a set E, then every neighborhood of p contains infinitely many points of E.
+	21. Examples of closed, open, perfect and bounded sets.
+	22. Complement of infinite union is intersection of complements
+	23. A set E is open if and only if its complement is closed.
+	24. Theorems on unions and intersections of open and closed sets.
+	25. Emphasis of finiteness of some collections in 24
+	26. Definition of closure
+	27. Theorems about closure
+	28. Closed sets in R contain their suprema and infima
+	29. Openness is relative
+	30. Subspace topology
+	31. Definition: open cover
+	32. Definition: open cover compactness
+	33. Compactness is intrinsic
+	34. Theorem: Compact sets are closed.
+	    [[Analysis1_L16#Characterization of compact sets]] 
+	35. Theorem: Closed subsets of compact sets are compact. 
+	    [[Analysis1_L16#Closed subsets of compact sets are compact]]
+	    [[Analysis1_L17#Closed subsets of compact sets are compact]]
+	36. Theorem: If {Kα} is a collection of compact subsets of a metric space X such that the intersection of every finite sub-collection of {Kα} is nonempty, then $\cap$ Kα is nonempty.
+	37. Theorem: If E is an infinite subset of a compact set K, then E has a limit point in K.
+	38. Nested interval property
+	39. Nested k-cell property
+	40. Every k-cell is compact
+	41. Heine-Borel
+	42. Every bounded infinite subset of Rk has a limit point in Rk. 
 3. Numerical sequences and series
 	1. **Definition. Convergence**
 	2. Basic theorems about convergent sequences in metric spaces

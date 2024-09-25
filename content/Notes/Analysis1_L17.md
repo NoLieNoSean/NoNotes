@@ -71,7 +71,7 @@ So, as we have seen with the previous forms of compactness, open cover compactne
 ### Equivalence with limit point compactness
 
 >[!Theorem] Claim
->$X$ is open cover compact $\implies$ $X$ is limit point compact.
+>$X$ is open cover compact $\implies$ $X$ is [[Analysis1_L16#Limit point compactness|limit point compact]].
 
 >**Proof** 
 >Consider an infinite subset $S\subset X$. Assume $S$ does not have a limit point. Thus, for every point $p \in X$ there exists $r_{p}>0$ such that $|B_{r_{p}}(p, S)|\le 1$. Consider the set $E=\{ B_{r_{p}}(p, X)\ |\ p \in X \}$. Clearly, $E$ is an open cover of $X$. However, the union of a finite subset of $E$ will contain only finitely many elements of $S$. So, $X$ cannot be open cover compact. (We have proved the contrapositive of the claim). ❏
@@ -94,7 +94,8 @@ Note this is not implied by any of our previous work - it does need to be proved
 >**Proof**
 >Let $E=\{ V_{\alpha} \}_{\alpha \in I}$ be an open cover of $[a, b]$. Suppose there does not exist a finite subcover of $E$ covering $[a, b]$. Starting with $[a, b]$, successively bisect the interval, at each step choosing the half which is not covered by a finite subcover of $E$ (at least one of the two is guaranteed to have this property). This should give us nested intervals of the form $[a_{0}, b_{0}], [a_{1}, b_{1}], \dots$ where the length of each interval is $(a_{0}-b_{0})/2^{n}$ and each $[a_{i}, b_{i}]$ is not covered by a finite subcover of $E$. We know from the [[The real field#Nested interval property|nested interval property]] that $\bigcap_{i\geq 0}[a_{i}, b_{i}]=\{ p \}$. Let $p\in V_{\beta}$ for some $\beta$. Since $V_{\beta}$ is open, there must exist an $\epsilon>0$ such that $(p-\epsilon, p+{\epsilon})\subset V_{\beta}$. Since the lengths of $[a_{i}, b_{i}]$ converge to $0$ and $p\in[a_{i}, b_{i}]$, we can find an $[a_{k}, b_{k}]$ such that $[a_{k}, b_{k}]\subset(p-\epsilon, p+\epsilon)$. But this implies the finite subcover $\{ V_{\beta} \}$ of $E$ covers $[a_{k}, b_{k}]$. $\Rightarrow\Leftarrow$ ❏
 
-Do this dance in $\mathbb{R}^{k}$, and you get that all closed boxes in $\mathbb{R}^{k}$ are open cover compact.
+>[!Important]
+>Do this dance in $\mathbb{R}^{k}$, and you get that all closed boxes in $\mathbb{R}^{k}$ are open cover compact.
 ### An exercise in working with open cover compactness
 
 In the previous lecture, [[Analysis1_L16#Characterization of compact sets|we proved]] that every (limit point/sequentially) compact set $C$ in a metric space $X$ is closed in $X$ and bounded. We do not need to prove this separately for open cover compact sets, because of the equivalence with limit point compact sets we proved above. However, it is a good exercise.

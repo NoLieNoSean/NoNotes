@@ -24,7 +24,7 @@ Proper lecture notes start here.
 	- Any two bases of an fdvsp have same cardinality, i.e, the cardinality of a basis is an *invariant* of an fdvsp.
 - [[Algebra1_L9]] ✅ 
 - [[Algebra1_L10]] ✅
-- [[Algebra1_L11]]
+- [[Algebra1_L11]] ✅
 - [[Algebra1_L12]]
 
 >[!Excalidraw]-

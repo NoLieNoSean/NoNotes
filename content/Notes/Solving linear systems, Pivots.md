@@ -59,6 +59,8 @@ The end result is a matrix in echelon form.
 
 To get reduced echelon form from echelon form, we work from the bottom to the top and from the right to the left, using row replacement to kill all entries above the pivots.
 
+The reduced echelon form of a matrix is unique. [[Proof of uniqueness of RREF|Proof]]. 
+
 ---
 ## Writing solution from RREF
 

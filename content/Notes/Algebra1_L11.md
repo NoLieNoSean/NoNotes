@@ -2,6 +2,7 @@
 tags:
   - ALG1
   - Lecture
+  - Processed
 ---
 2024-09-17, Tuesday
 1357
@@ -39,7 +40,7 @@ Remarks (prove as necessary)
 
 ### Examples
 
-1. the set of functions $f_{A}$ associated with $r\times c$ matrices
+1. The set of functions $f_{A}$ associated with $r\times c$ matrices
 2. $V$= set of all differentiable functions $f:\mathbb{R}\to\mathbb{R}$.
    
    $W$= set of all functions $g:\mathbb{R}\to \mathbb{R}$.
@@ -68,25 +69,16 @@ Remarks (prove as necessary)
 >For a linear map $T:V\to W$, where $V$ is a fdvsp, dim(ker T) + dim(im T)= dim V.
 
 >**Proof**
->We will show: (Basis of ker $T$) $\bigcup$ (some disjoint set of size dim Im T)=(a basis of $V$).
 >
->Take a basis $\mathbf{k}_{1}, \mathbf{k}_{2}, \dots, \mathbf{k}_{t}$ of ker T.
->
->Extend to get a basis $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$ of $V$.
->
->Dim Ker $T$ = $r$, dim $V$ = $t+r$.
->
->To show: Dim Im $T$ = $r$.
->
->Guess: $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ is a basis of $\mathrm{Im}(T)$. 
+>We will show that (Basis of ker $T$) $\cup$ (some disjoint set of size dim Im T)=(a basis of $V$). Take a basis $\mathbf{k}_{1}, \mathbf{k}_{2}, \dots, \mathbf{k}_{t}$ of ker T. Extend it to get a basis $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$ of $V$. Dim Ker $T$ = $r$, dim $V$ = $t+r$. We have to show that Dim Im $T$ = $r$. We guess that $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ is a basis of $\mathrm{Im}(T)$, i.e, they span $\mathrm{Im}(T)$ and are linearly independent.
 >
 >
->1) These vectors span Im T:
+>**These vectors span Im T**
 >
 >Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of (in particular, spans) $V$, $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t}), T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ span $T(V)=\mathrm{Im} (T)$.
 >
 >
->2) These vectors are linearly independent:
+>**These vectors are linearly independent**
 >
 >Consider a linear combination of  the vectors thats equals 0.
 >
