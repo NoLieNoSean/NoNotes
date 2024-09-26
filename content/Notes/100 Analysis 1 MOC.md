@@ -42,11 +42,14 @@ Proper lecture notes start here.
 - [[Analysis1_L15]] ✅
 	- 4.9, 4.10, 4.11. 2.29, 2.28, 2.27, 2.30.
 - [[Analysis1_L16]] ✅
+	- Sequential/limit point compactness and their equivalence. Intrinsic property of compactness. Examples of compact sets: closed boxes in $\mathbb{R}^{k}$ are bounded. A few proofs using sequential/limit point compactness. Heine Borel.
 - [[Analysis1_L17]] ✅
-- [[Analysis1_L18]]
+	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
+- [[Analysis1_L18]] ✅
+	- More proofs using OCC. 2.36, 3.10 b, 2.42
 
 >[!Excalidraw]-
->These notes are in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
+>These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Analysis1_L1]] ✅
 >- [[Analysis1_L2]] ✅
 >- [[Analysis1_L3]] ✅
@@ -55,8 +58,7 @@ Proper lecture notes start here.
 >- [[Analysis1_L6]] ✅
 >- [[Analysis1_L7]] ✅
 >- [[Analysis1_L8]] ✅
->- [[Analysis1_L9]] Reconciliation of limsup/liminf. Also, compilation
->	- This weekend.
+>- [[Analysis1_L9]] 
 
 # Tutorials
 - [[Analysis1_T2]]

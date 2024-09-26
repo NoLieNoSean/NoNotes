@@ -2,9 +2,13 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 ---
 2024-09-25, Wednesday
 1537
+
+---
+![[IMG_20240925_164725.jpg]]
 
 ---
 ## Proof of Rudin, 2.34 using open cover compactness
@@ -41,7 +45,7 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 >It follows from the previous theorem that for every $x \in C_{1}$, there exist disjoint open sets $U_{x}$ and $V_{x}$ such that $U_{x}\ni x$ and $V_{x}\supset C_{2}$. Clearly, $\{ U_{x}\ |\ x \in C_{1} \}$ is an open cover of $C_{1}$. Since $C_{1}$ is compact, there exists a finite subcover $\{ U_{x}\ |\ x \in K\subset C_{1} \}$. Now, observe that
 >$$
 >\begin{align*}
- \left( \bigcup_{x \in K} U_{x} \right)\cap\left( \bigcap_{x \in K}V_{x} \right)=\emptyset.
+>\left( \bigcup_{x \in K} U_{x} \right)\cap\left( \bigcap_{x \in K}V_{x} \right)=\emptyset.
 >\end{align*}
 >$$
 >Setting $U_{1}=\bigcup_{x \in K}U_{x}$ and $U_{2}=\bigcap_{x \in K}V_{x}$ works, because
@@ -55,23 +59,82 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 ---
 ## Proof of compactness of $[a, b]$ using [[LUB property]] of $\mathbb{R}$
 
-
-
-
+>**Proof**
+>Consider an open cover $B=\{ V_{\alpha} \}_{\alpha \in I}$ of $[a, b]$. Define $S$ to be the set of all $x\in [a, b]$ such that $[a, x]$ can be covered by a finite subcover of $B$. This set is non empty because $a\in S$. Let $s=\sup S$. Assume $s<b$. There exists a $V_{s}\in B$ containing $s$. Since $V_{s}$ is open, it must also contain an open interval around $s$, say $(s-\epsilon, s+\epsilon)$. Now, $[a, s-\epsilon]$ must have a finite subcover $\{ V_{\beta} \}_{\beta \in J\subset I}$. Thus, $\{ V_{\beta} \}_{\beta\in J\subset I}\cup \{ V_{s} \}$ covers $\left[ a, s+\frac{\epsilon}{2} \right]$. So, $s+\frac{\epsilon}{2}\in S$. This contradicts the hypothesis that $s$ is the supremum of $S$. Hence, $s= b$. ❏ 
 
 ---
+## Rudin, 2.36
 
-Noted alternate defn of open cover compactness:
+Let $B=\{ V_{\alpha} \}_{\alpha \in I}$, be a collection of open sets in $X$. Then,  $K\subset X$ is compact iff
+$$
+\begin{align}
+\bigcup_{\alpha \in I}V_{\alpha}\supset K\implies \exists\ \text{ finite }J\subset I \text{ such that } \bigcup_{\beta \in J}V_{\beta}\supset K.
+\end{align}
+$$
+Now, we will rephrase the hypothesis in terms of closed sets $V_{\alpha}^{c}$. 
+$$
+\begin{align}
+ & \bigcup_{\alpha \in I}V_{\alpha} =\left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)^{c}\supset K \\
+\iff  & \left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)\cap K=\emptyset.
+\end{align}
+$$
+Ditto for the conclusion.
+$$
+\begin{align}
+ & \bigcup_{\beta \in J}V_{\beta}\supset K \\
+\iff  & \left( \bigcap_{\beta \in J}V_{\beta}^{c} \right)\cap K=\emptyset.
+\end{align}
+$$
+Thus, we can say $K$ is compact iff, for a collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
+$$
+\begin{align}
+\left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
+\end{align}
+$$
+We can consider all $K_{\alpha}$ to be compact subsets of $X$, since [[#Proof of Rudin, 2.34 using open cover compactness|compact sets are in particular closed sets]]. Now, say $K$ is compact. Augment $B'$ such that it now contains $K$ (update $I$ and $J$ accordingly). This gives us
+$$
+\begin{align}
+ \bigcap_{\alpha \in I}K_{\alpha} =\emptyset \implies \exists\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}=\emptyset.
+\end{align}
+$$
+Take the contrapositive of this statement.
+$$
+\begin{align}
+\forall\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}\ne \emptyset \implies \bigcap_{\alpha \in I}K_{\alpha}\ne \emptyset.
+\end{align}
+$$
+This is essentially Rudin, 2.36.
 
-$K$ is compact if $\left( \bigcap_{\alpha}C_{\alpha} \right)\cap K=\phi$, where $C_{\alpha}$ are closed sets, a finite collection of $C_{\alpha}$ has the same property.
+>[!Theorem]
+>If $\{ K_{\alpha} \}$ is a set of compact subsets of a metric space $X$ such that the intersection of every finite subcollection of $\{ K_{\alpha} \}$ is nonempty, then $\cap \ K_{\alpha}$ is nonempty.
 
-Contrapositive: $K$ is compact. Suppose $\{ C_{\alpha} \}_{\alpha \in I}$ is a family of closed sets such that every finite intersection $C_{\alpha_{1}}\cap C_{\alpha_{2}}\dots \cap C_{\alpha_{n}}\cap K\ne \phi$. Then, $\left( \bigcap_{\alpha\in I}C_{\alpha} \right)\cap K\ne \phi$. 
+### Analogue of nested interval property in metric spaces
 
-Upshot: Suppose $\{ K_{\alpha} \}_{\alpha \in I}$ is a family of compact sets such that every finite intersection $K_{\alpha_{1}}\cap\dots \cap K_{\alpha_{n}}\ne \phi$, then $\cap_{\alpha \in I}K_{\alpha}\ne \phi$. 
+A special case of the above theorem is the analogue of the [[The real field#Nested interval property|nested interval property]] in metric spaces.
 
-Special case: If $K_{1}\supset K_{2}\supset K_{3}\dots$, each $K_{i}$ compact and non empty, then $\bigcap K_{i}\ne \phi$. 
+>[!Theorem] Corollary
+>If $\{ K_{n} \}$ is a sequence of non empty compact sets such that $K_{n} \supset K_{n+1}$, then $\bigcap K_{i}$ is nonempty.
+>
 
-3.10
-3.7
+#### Rudin, 3.10 b
+
+If we have the additional constraint that $\lim_{ n \to \infty }\text{diam } K_{n}=0$, then $\bigcap K_{i}$ contains only one element.
+
+>[!Theorem]
+>If $\{ K_{n} \}$ is a sequence of non empty compact sets such that $K_{n} \supset K_{n+1}$, and if  $\lim_{ n \to \infty }\text{diam } K_{n}=0$, then $\bigcap K_{i}$ contains only one element.
+
+>**Proof**
+>$\bigcap K_{i}$ is non empty, so it has some element $p$. Let it also have another element $q$. There exists $N$ such that for all $n\ge N$, $\text{diam }K_{n}<d(q, p)$. Thus, we are forced to conclude $q=p$. ❏
+
+---
+## Weierstrass theorem, rephrased
+
+Rudin, 2.42
+
+>[!Theorem]
+>Every bounded infinite subset of $\mathbb{R}^{k}$ has a limit point in $\mathbb{R}^{k}$.
+
+>**Proof**
+>Let $S\subset \mathbb{R}^{k}$ be bounded and infinite. Since it is bounded, you can enclose it in a box, [[Analysis1_L17#$[a, b] in mathbb{R}$ is open cover compact|which is compact]], [[Analysis1_L17#Equivalence with limit point compactness|in particular]] [[Analysis1_L16#Limit point compactness|limit point compact]], which guarantees that $S$ has a limit point in the box. ❏
 
 

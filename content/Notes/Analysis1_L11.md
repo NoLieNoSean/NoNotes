@@ -103,7 +103,7 @@ The previous definitions defined $f$ on a subset $E$ of a metric space $X$. Howe
 Rudin, 4.7
 >[!Theorem]
 >Suppose $X$, $Y$, $Z$ are metric spaces, and $f:X\to Y$, $g:Y\to Z$.
->If $f$ is continuous at a point $p\in E$ and if $g$ is continuous at the point $f(p)\in Y$ then $g\circ f$ is continuous at $p$.
+>If $f$ is continuous at a point $p\in X$ and if $g$ is continuous at the point $f(p)\in Y$ then $g\circ f$ is continuous at $p$.
 
 Note that the result from the previous section has been used to simplify the theorem from how it appears in Rudin. 
 

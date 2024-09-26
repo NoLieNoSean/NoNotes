@@ -9,7 +9,7 @@ The fact that $\mathbb{R}$ has the LUB property is also referred to as the axiom
 
 The following theorems follow as consequences of the axiom of completeness.
 
->[!Note]
+>[!Info]
 >Remember the axiomatic stack on which $\mathbb{R}$ rests:
 >Field -> Ordered Field -> Complete ordered field with $\mathbb{Q}$ as subfield
 
@@ -25,6 +25,8 @@ The following theorems follow as consequences of the axiom of completeness.
 >Consider the set $A = \{ a_{n}\ | \ n \in \mathbb{N} \}$. $A$ is clearly non empty, and bounded above (by every $b_{n}$). Thus, $x = \sup A$ exists. 
 >Now consider a particular interval $I_{n} =[a_{n}, b_{n}]$. Because $x$ is an upper bound for $A$, be have $a_{n}\le x$. The fact that each $b_{n}$ is an upper bound for $A$ and that $x$ is the supremum of $A$ implies that $x\le b_{n}$. 
 >So, we have $a_{n}\leq x\leq b_{n}$ for every $n$. Hence, $x\in \bigcup_{n=1}^{\infty}I_{n}$ , and the intersection is nonempty.
+
+This property fails for open intervals. Consider the sequence of nested open intervals $I_{n}=\left( 0, \frac{1}{n} \right)$ as a counter example. 
 
 >[!Theorem]
 >In the above theorem, the intersection is a singleton set if and only if $\lim_{ n \to \infty }(a_{n}-b_{n})=0$.

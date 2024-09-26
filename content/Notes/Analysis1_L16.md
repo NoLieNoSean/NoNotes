@@ -8,11 +8,11 @@ tags:
 1031
 
 ---
-
+%% 
 ![[1726814241809.jpg]]
 ![[1726814241813.jpg]]
 ![[1726814241805.jpg]]
-![[1726814241801.jpg]]
+![[1726814241801.jpg]] %%
 ![[1726814241798.jpg]]
 
 To-do
@@ -21,8 +21,6 @@ To-do
 - [x] Applications of compactness in $\mathbb{R}$
 - [x] The extreme value theorem
 - [x] Heine-Borel characterization of compact sets in $\mathbb{R}^{k}$ 
-
-"Compact sets work extremely well will continuous functions: Image of a compact set is compact."
 
 >[!Recall]
 >[[Analysis1_L15#An introduction to compactness]]
@@ -135,7 +133,7 @@ Rudin, 2.34
 ---
 ## Extreme value theorem
 
-Consider $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[Analysis1_L15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$. Hence the extreme value theorem.
+Consider $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[Analysis1_L15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$ since it is closed. Hence the extreme value theorem.
 
 ---
 ## Closed subsets of compact sets are compact
