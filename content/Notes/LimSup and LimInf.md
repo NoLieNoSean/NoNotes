@@ -56,13 +56,17 @@ We have to show that, for a sequence $(p_{n})$,
 $$
 \lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) = \sup \{ x\ |\ p_{n_{k}}\to x \}
 $$
-FTSOC, assume not. Let $(a_{n}):=(\sup \{ p_{n}, p_{n+1}, \dots \})$ and let $(a_{n})\to A$. Let $\sup \{ x\ |\ p_{n_{k}}\to x \}$ be $B$. We have two cases:
-#### $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) < \sup \{ x\ |\ p_{n_{k}}\to x \}$
-
-Let $\epsilon=\frac{{B-A}}{2}$. There exists $N$ such that for all $n\ge N$, $|a_{n}-A|<\epsilon$. Thus, for all $n\ge N$, $p_{n}\le A+\epsilon$. However, this implies no subsequence of $(p_{n})$ can converge to any point greater than $A+\epsilon$. Thus, $A+\epsilon$ is an upper bound for $\{ x\ |\ p_{n_{k}}\to x \}$. This contradicts our hypothesis that $B$ is the supremum of all subsequential limits.
-#### $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) > \sup \{ x\ |\ p_{n_{k}}\to x \}$
-
-Let $\epsilon>0$. Note that $(a_{n})$ is a monotone decreasing sequence. Since $(a_{n})\to A$, there exists $a_{k}$ such that $A<a_{k}<A+\epsilon$, and since $a_{k}$ is the supremum of the tail $\{ p_{n}, p_{n+1}, \dots \}$, there exists $p_{i}$, $i\geq k$ such that $A<p_{i}<a_{k}<A+\epsilon$. Thus, we can construct a subsequence $(p_{n_{k}})$ of $(p_{n})$ which converges to $A$. However, this contradicts our hypothesis that $B$ is an upper bound of all subsequential limits.
+>**Proof**
+>
+>FTSOC, assume not. Let $(a_{n}):=(\sup \{ p_{n}, p_{n+1}, \dots \})$ and let $(a_{n})\to A$. Let $\sup \{ x\ |\ p_{n_{k}}\to x \}$ be $B$. We have two cases:
+>
+>**Case 1:** $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) < \sup \{ x\ |\ p_{n_{k}}\to x \}$.
+>
+>Let $\epsilon=\frac{{B-A}}{2}$. There exists $N$ such that for all $n\ge N$, $|a_{n}-A|<\epsilon$. Thus, for all $n\ge N$, $p_{n}\le A+\epsilon$. However, this implies no subsequence of $(p_{n})$ can converge to any point greater than $A+\epsilon$. Thus, $A+\epsilon$ is an upper bound for $\{ x\ |\ p_{n_{k}}\to x \}$. This contradicts our hypothesis that $B$ is the supremum of all subsequential limits.
+>
+>**Case 2:** $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) > \sup \{ x\ |\ p_{n_{k}}\to x \}$.
+>
+>Let $\epsilon>0$. Note that $(a_{n})$ is a monotone decreasing sequence. Since $(a_{n})\to A$, there exists $a_{k}$ such that $A<a_{k}<A+\epsilon$, and since $a_{k}$ is the supremum of the tail $\{ p_{n}, p_{n+1}, \dots \}$, there exists $p_{i}$, $i\geq k$ such that $A<p_{i}<a_{k}<A+\epsilon$. Thus, we can construct a subsequence $(p_{n_{k}})$ of $(p_{n})$ which converges to $A$. However, this contradicts our hypothesis that $B$ is an upper bound of all subsequential limits. ❏
 
 ---
 ## Some observations and theorems
@@ -91,6 +95,7 @@ These will be using Kulkarni's definitions.
 >\end{align*}
 >$$
 
+
 ### Limsup = Liminf iff the sequence converges
 
 >[!Theorem]
@@ -99,16 +104,16 @@ These will be using Kulkarni's definitions.
 >$$
 
 >**Proof of $\implies$**
->Suppose $(p_{n})\to p \in \mathbb{R}$. Let $\epsilon>0$. There exists an $N$ such that for all $n>N$, $|p_{n}-p|<\epsilon$, i.e, $\{ p_{n}, p_{n+1}, \dots \}\subset(p-\epsilon, p+\epsilon)$. Thus, $s_{n}$ and and $i_{n}$ must lie in $[p-\epsilon, p+\epsilon]$ which implies $\inf s_{n}$ and $\sup i_{n}$ must also lie in $[p-\epsilon, p+\epsilon]$. If we consider a sequence of $\epsilon$'s $(\epsilon_{n})\to 0$, it follows from the nested interval property that $\inf s_{n}=\sup i_{n}=p$. ❏
+>Suppose $(p_{n})\to p \in \mathbb{R}$. Let $\epsilon>0$. There exists an $N$ such that for all $n>N$, $|p_{n}-p|<\epsilon$, i.e, $\{ p_{n}, p_{n+1}, \dots \}\subset(p-\epsilon, p+\epsilon)$. Thus, $s_{n}$ and and $i_{n}$ must lie in $[p-\epsilon, p+\epsilon]$ which implies $\inf s_{n}$ and $\sup i_{n}$ must also lie in $[p-\epsilon, p+\epsilon]$. If we consider a sequence of $\epsilon$'s $(\epsilon_{n})\to 0$, it follows from the [[The real field#Nested interval property|nested interval property]] that $\inf s_{n}=\sup i_{n}=p$. ❏
 >
 >Proof of $\Longleftarrow$
 >$\lim\sup$ = $\lim\inf$ = $p$, i.e, $(s_{n})\to p$ (monotonically from above), and $(i_{n})\to p$ (monotonically from below). Let $\epsilon>0$. Find $N$ such that for all $n>N$, we have $0\le s_{n}-p<\epsilon$ and $0\le p-i_{n}<\epsilon$. Now, 
 >$$
->\begin{align}
+>\begin{align*}
 >0\le s_{n}-p<\epsilon  & \implies p_{n}-p <\epsilon \\
 >0\le p-i_{n}<\epsilon  & \implies p-p_{n}<\epsilon  \\
 >\implies |p-p_{n}|<\epsilon.
->\end{align}
+>\end{align*}
 >$$
 >❏
 

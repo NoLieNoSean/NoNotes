@@ -67,41 +67,41 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 
 Let $B=\{ V_{\alpha} \}_{\alpha \in I}$, be a collection of open sets in $X$. Then,  $K\subset X$ is compact iff
 $$
-\begin{align}
+\begin{align*}
 \bigcup_{\alpha \in I}V_{\alpha}\supset K\implies \exists\ \text{ finite }J\subset I \text{ such that } \bigcup_{\beta \in J}V_{\beta}\supset K.
-\end{align}
+\end{align*}
 $$
 Now, we will rephrase the hypothesis in terms of closed sets $V_{\alpha}^{c}$. 
 $$
-\begin{align}
+\begin{align*}
  & \bigcup_{\alpha \in I}V_{\alpha} =\left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)^{c}\supset K \\
 \iff  & \left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)\cap K=\emptyset.
-\end{align}
+\end{align*}
 $$
 Ditto for the conclusion.
 $$
-\begin{align}
+\begin{align*}
  & \bigcup_{\beta \in J}V_{\beta}\supset K \\
 \iff  & \left( \bigcap_{\beta \in J}V_{\beta}^{c} \right)\cap K=\emptyset.
-\end{align}
+\end{align*}
 $$
 Thus, we can say $K$ is compact iff, for a collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
 $$
-\begin{align}
+\begin{align*}
 \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
-\end{align}
+\end{align*}
 $$
 We can consider all $K_{\alpha}$ to be compact subsets of $X$, since [[#Proof of Rudin, 2.34 using open cover compactness|compact sets are in particular closed sets]]. Now, say $K$ is compact. Augment $B'$ such that it now contains $K$ (update $I$ and $J$ accordingly). This gives us
 $$
-\begin{align}
+\begin{align*}
  \bigcap_{\alpha \in I}K_{\alpha} =\emptyset \implies \exists\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}=\emptyset.
-\end{align}
+\end{align*}
 $$
 Take the contrapositive of this statement.
 $$
-\begin{align}
+\begin{align*}
 \forall\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}\ne \emptyset \implies \bigcap_{\alpha \in I}K_{\alpha}\ne \emptyset.
-\end{align}
+\end{align*}
 $$
 This is essentially Rudin, 2.36.
 

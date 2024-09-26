@@ -49,7 +49,7 @@ Proper lecture notes start here.
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
 
 >[!Excalidraw]-
->These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
+>These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Analysis1_L1]] ✅
 >- [[Analysis1_L2]] ✅
 >- [[Analysis1_L3]] ✅
@@ -58,7 +58,7 @@ Proper lecture notes start here.
 >- [[Analysis1_L6]] ✅
 >- [[Analysis1_L7]] ✅
 >- [[Analysis1_L8]] ✅
->- [[Analysis1_L9]] 
+>- [[Analysis1_L9]] ✅ (Done! F'ing finally)
 
 # Tutorials
 - [[Analysis1_T2]]
