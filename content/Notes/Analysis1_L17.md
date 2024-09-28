@@ -87,7 +87,7 @@ It follows form the previous claim that every set we showed to be not limit poin
 For $(0, 1)$, consider the open cover $\left\{  \left( \frac{1}{n}, 1 \right) \ |\ n\in \mathbb{N} \right\}$. 
 For $\mathbb{R}$, consider the open cover $\{ (-n, n)\ |\ n\in \mathbb{N} \}$. 
 
-#### $[a, b]\in \mathbb{R}$ is open cover compact
+#### Closed intervals in R are open cover compact
 
 Note this is not implied by any of our previous work - it does need to be proved.
 

@@ -11,7 +11,7 @@ A vector space $V$ is a collection of objects called vectors, along with two ope
 Additive properties:
 - Commutativity
 - Associativity
-- Zero vector: Existence of special vector $\bf{0}$ such that $\bf{v} + \bf{0} = \bf{v}$ for all $\bf{v} \in V$. Note that this does not explicitly require $\mathbf{0}$ to be unique.  
+- Zero vector: Existence of special vector $\bf{0}$ such that $\bf{v} + \bf{0} = \bf{v}$ for all $\bf{v} \in V$. Note that this does not explicitly require $\mathbf{0}$ to be unique.
 - Additive inverse: For every vector $\bf{v}\in V$ there exists a vector $\bf{w} \in V$ such that $\bf{v + w = 0}$. Note that this does not explicitly require $\mathbf{w}$ to be unique for a given $\mathbf{v}$.
 
 Multiplicative properties:

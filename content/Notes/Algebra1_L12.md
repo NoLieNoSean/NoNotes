@@ -9,7 +9,6 @@ tags:
 
 ---
 
-
 Claim: Any linear map $T:\mathbb{R}^{p}\to \mathbb{R}^{q}$ is of the form $f_{A}(\mathbf{x})$ for some $q\times p$ matrix $A$. 
 
 >**Proof**

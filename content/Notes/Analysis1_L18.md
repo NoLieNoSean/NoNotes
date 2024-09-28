@@ -135,6 +135,6 @@ Rudin, 2.42
 >Every bounded infinite subset of $\mathbb{R}^{k}$ has a limit point in $\mathbb{R}^{k}$.
 
 >**Proof**
->Let $S\subset \mathbb{R}^{k}$ be bounded and infinite. Since it is bounded, you can enclose it in a box, [[Analysis1_L17#$[a, b] in mathbb{R}$ is open cover compact|which is compact]], [[Analysis1_L17#Equivalence with limit point compactness|in particular]] [[Analysis1_L16#Limit point compactness|limit point compact]], which guarantees that $S$ has a limit point in the box. ❏
+>Let $S\subset \mathbb{R}^{k}$ be bounded and infinite. Since it is bounded, you can enclose it in a box, [[Analysis1_L17#Closed intervals in R are open cover compact|which is compact]] ([[Analysis1_L17#Equivalence with limit point compactness|in particular]], [[Analysis1_L16#Limit point compactness|limit point compact]]), which guarantees that $S$ has a limit point in the box. ❏
 
 

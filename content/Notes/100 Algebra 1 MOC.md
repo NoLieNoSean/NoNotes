@@ -16,6 +16,7 @@ tags:
 - [[Isomorphism]]
 - [[Subspaces]]
 - [[Solving linear systems, Pivots]]
+- [[How to find matrices with a given kernel]]
 # Lecture Notes
 
 Proper lecture notes start here.
@@ -56,3 +57,6 @@ Proper lecture notes start here.
 >	- fdvsp
 >- [[Algebra1_T1]]
 >- [[Algebra1_T2]]
+
+
+[[Hofmann Kunze select theorems and definitions]]

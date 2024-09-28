@@ -95,7 +95,6 @@ These will be using Kulkarni's definitions.
 >\end{align*}
 >$$
 
-
 ### Limsup = Liminf iff the sequence converges
 
 >[!Theorem]
@@ -104,9 +103,11 @@ These will be using Kulkarni's definitions.
 >$$
 
 >**Proof of $\implies$**
+>
 >Suppose $(p_{n})\to p \in \mathbb{R}$. Let $\epsilon>0$. There exists an $N$ such that for all $n>N$, $|p_{n}-p|<\epsilon$, i.e, $\{ p_{n}, p_{n+1}, \dots \}\subset(p-\epsilon, p+\epsilon)$. Thus, $s_{n}$ and and $i_{n}$ must lie in $[p-\epsilon, p+\epsilon]$ which implies $\inf s_{n}$ and $\sup i_{n}$ must also lie in $[p-\epsilon, p+\epsilon]$. If we consider a sequence of $\epsilon$'s $(\epsilon_{n})\to 0$, it follows from the [[The real field#Nested interval property|nested interval property]] that $\inf s_{n}=\sup i_{n}=p$. ❏
 >
->Proof of $\Longleftarrow$
+>**Proof of $\Longleftarrow$**
+>
 >$\lim\sup$ = $\lim\inf$ = $p$, i.e, $(s_{n})\to p$ (monotonically from above), and $(i_{n})\to p$ (monotonically from below). Let $\epsilon>0$. Find $N$ such that for all $n>N$, we have $0\le s_{n}-p<\epsilon$ and $0\le p-i_{n}<\epsilon$. Now, 
 >$$
 >\begin{align*}
@@ -116,7 +117,6 @@ These will be using Kulkarni's definitions.
 >\end{align*}
 >$$
 >❏
-
 
 
 

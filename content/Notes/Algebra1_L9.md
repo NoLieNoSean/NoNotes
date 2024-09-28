@@ -127,6 +127,7 @@ x_{5} \\
 0
 \end{bmatrix}
 $$
+
 Notice that the pivot variables are expressed in terms of the free variables.
 Call the vectors on the right $\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}$. $x_{1}$, $x_{2}$, $x_{3}$ are free variables.
 You can show that these will always be linearly independent, provided we obtain them via the RREF. 

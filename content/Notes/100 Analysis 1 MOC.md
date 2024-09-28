@@ -47,6 +47,8 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
+- [[Analysis1_L19]]
+- [[Analysis1_L20]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
