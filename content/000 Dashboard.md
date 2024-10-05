@@ -5,3 +5,7 @@
 - [[100 Intro to Programming MOC]]
 - [[100 Classical Mechanics MOC]]
 - [[100 Empower with English MOC]]
+
+# Other stuff
+
+[[Napkin]]

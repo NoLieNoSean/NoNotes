@@ -75,7 +75,7 @@ Remarks (prove as necessary)
 >
 >**These vectors span Im T**
 >
->Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of (in particular, spans) $V$, $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t}), T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ span $T(V)=\mathrm{Im} (T)$.
+>Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of (in particular, spans) $V$, $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t}), T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ span $T(V)=\mathrm{Im} (T)$. Since $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t})\}$ has span $\{ \mathbf{0} \}$, $\{T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ must span $\mathrm{Im}(T)$. 
 >
 >
 >**These vectors are linearly independent**

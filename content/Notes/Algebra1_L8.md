@@ -100,6 +100,10 @@ The lemma claims that $m\le n$.
 
 We will first show that if $m\le n$ then, after rearranging $v_{j}$ if necessary, $\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. A sub-lemma, if you will.
 
+>[!Warning]
+>I am certain the following proof is wrong; there may exist infinitely many linear combinations of $S'$ equalling $\mathbf{u}_{m'}$, and we do not know that $\mathbf{u}_{m'}\not\in\text{Span }(S'\setminus \{ \mathbf{v}_{m'} \})$. Also, what we're trying to prove can be shown easily. Since $I$ spans $V$, take the same linear combinations, and $\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m+1}, \dots, \mathbf{v}_{n} \}$ now spans $V$. Why did we do the following!?
+
+
 >**Proof**
 >
 >By induction on $|I|$.
@@ -112,7 +116,10 @@ We will first show that if $m\le n$ then, after rearranging $v_{j}$ if necessary
 >We have shown that $S''=\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m'-1}, \mathbf{u}_{m'}, \mathbf{v}_{m'+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. 
 >❏
 
-Now, assume $m=n+k$ for some $k> 0$. Since the preceeding result holds for $m=n$, $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ must be a spanning set. This implies that $\mathbf{u}_{n+1}, \dots, \mathbf{u}_{k}$ can be expressed as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}$, which implies $I$ cannot be linearly independent (contradiction!). Consequently, we must have  $m\le n$. ❏
+
+> Everything that follows is ok
+
+Now, assume $m=n+k$ for some $k> 0$. Since the preceding result holds for $m=n$, $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ must be a spanning set. This implies that $\mathbf{u}_{n+1}, \dots, \mathbf{u}_{k}$ can be expressed as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}$, which implies $I$ cannot be linearly independent (contradiction!). Consequently, we must have  $m\le n$. ❏
 #### Finally, theorem 2
 
 >**Proof**

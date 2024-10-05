@@ -1,4 +1,4 @@
-Let $f_{A}:\mathbb{R}^{c}\to \mathbb{R}^{r}$. Let $W$ be a subspace of $\mathbb{R}^{c}$ with basis vectors $\mathbf{w}_{1}, \mathbf{w}_{2}, \dots, \mathbf{w}_{n}$, where $n\le c$. If $W$ is the kernel of $A$, find all possible matrices $A$.
+ Let $f_{A}:\mathbb{R}^{c}\to \mathbb{R}^{r}$. Let $W$ be a subspace of $\mathbb{R}^{c}$ with basis vectors $\mathbf{w}_{1}, \mathbf{w}_{2}, \dots, \mathbf{w}_{n}$, where $n\le c$. If $W$ is the kernel of $A$, find all possible matrices $A$.
 
 ## Method 1
 The column space must be $c-n$ dimensional. If we assume $A$ is in RREF, then $A$ must have $c-n$ pivots. Try to solve for the non pivot cells in every possible arrange of the pivots. One should work. Can get very tedious very quick.

@@ -21,7 +21,7 @@ $\iff$ $V$ is the interior of $V$.
 
 $C$ is [[Analysis1_L13#Epilogue|closed]] in $X$
 $\iff$ $X\setminus C$ is open in $X$
-$\iff$ $X$ contains all of its [[Analysis1_L10#Limit points|limit points]]
+$\iff$ $C$ contains all of its [[Analysis1_L10#Limit points|limit points]] which occur in $X$.
 $\iff$ $C$ is the closure of $C$. (Rudin, 2.27. Easy proof)
 
 More stuff about open and closed sets:
