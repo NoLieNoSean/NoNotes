@@ -27,7 +27,7 @@ tags:
 - [[LimSup and LimInf]]
 
 # Lecture Notes
-
+11
 Proper lecture notes start here.
 - [[Analysis1_L10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
@@ -47,7 +47,7 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
-- [[Analysis1_L19]] <- Mid term syllabus ends here.
+- [[Analysis1_L19]] <- *Mid term syllabus ends here.*
 - [[Analysis1_L20]]
 
 >[!Excalidraw]-
@@ -69,11 +69,24 @@ Proper lecture notes start here.
 
 
 # To-do
+
+
+- [ ] Revise notes 
+- [ ] Abbot chapters 3, 4
 - [ ] 1.21, 3.20. Lecture 12
+- [ ] Rudin chapters 2, 3, 4. Link up.
+- [ ] Chapter 2, 3, 4 problems
 - [ ] Compile Lecture 19
-- [ ] Chapter 2, Chapter 4 problems
+
+
 - [ ] Review quiz 1 solutions
 - [ ] Review HW 1 solutions
+
+- [ ] $f^{-1}$ of a closed set is closed for continuous $f$. 
+- [ ] note 3.11 b, 4.3
+- [ ] 3.21, Thm 3.7, 3.17 
+
+
 
 # Rudin sections
 2. Basic topology

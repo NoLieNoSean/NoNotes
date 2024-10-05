@@ -35,23 +35,20 @@ If a set can be arranged into a single list, then deleting some elements from th
 >is countable.
 >[[A Note about Abbot T1.5.8|A lil note]]
 
-
-
 >[!Theorem]
 >Let $A$ be a countable set, and let $B_{n}$ be the set of all $n$-tuples $(a_{1}, a_{2}, \dots a_{n})$ where $a_{k}\in A, 1\le k\le n$, and the elements $a_{1}, \dots, a_{n}$ need not be distinct. Then, $B_{n}$ is countable.
->
->Corollary: The set of all rational numbers is countable.
 
->[!Theorem]
+>[!Theorem] Colollary
 >The set $\mathbb{Q}$ is countable.
 
+---
 ## Uncountable sets
+
 >[!Theorem]
 >Let $A$ be the set of all sequences whose elements are the digits 0 and 1. This set $A$ is uncountable.
 
 >**Proof**
 >Let $E$ be a countable subset of $A$, and let $E$ consist of the sequences $s_{1}, s_{2}, s_{3}, \dots$ . Construct a sequence $s$ as follows: If the $n$th digit in $s_{n}$ is 1, we let the $n$th digit ok $s$ be 0, and vice versa. Then, the sequence differs from every member of $E$ in at least one place, hence $s\not\in E$. But clearly $s\in A$, so $E$ is a proper subset of $A$. 
->
 >We have shown that every countable subset of $A$ is a proper subset of $A$. It follows that $A$ is uncountable. ❏
 
 
@@ -59,8 +56,6 @@ If a set can be arranged into a single list, then deleting some elements from th
 >The number we construct from the diagonalization procedure has an infinite number of decimals, i.e, it is irrational.
 
 This theorem also implies that the set of all real numbers is uncountable, since all real numbers have a binary representation. However, do also note the proof that follows.
-
-
 
 >[!Theorem]
 >The set $\mathbb{R}$ is uncountable.
@@ -71,14 +66,14 @@ This theorem also implies that the set of all real numbers is uncountable, since
 >- $I_{n+1}\subseteq I_{n}$ and
 >- $x_{n+1} \not\in I_{n+1}$
 >
->Now consider the intersection $\bigcap_{n=1}^{\infty}I_{n}$. If some real number $x_{k}$ is in the list of real real numbers, $x_{k}\not\in I_{k}$, and it follows that 
+>Now consider the intersection $\bigcap_{n=1}^{\infty}I_{n}$. For every real number $x_{k}$, $x_{k}\not\in I_{k}$, and it follows that 
 >$$
 >x_{k}\not\in \bigcap_{n=1}^{\infty}I_{n}
 >$$
->Now, we assumed every real number eventually appears in the list $x_{1}, x_{2}, \dots$, which leads to the conclusion that $\bigcup_{n=1}^{\infty}I_{n} = \emptyset$. However, the [[The real field#Nested interval property|nested interval property]] asserts that $\bigcup_{n=1}^{\infty}I_{n} \ne \emptyset$. This contradiction means that such an enumeration of $\mathbb{R}$ is impossible.
+>Now, we assumed every real number eventually appears in the list $x_{1}, x_{2}, \dots$, which leads to the conclusion that $\bigcup_{n=1}^{\infty}I_{n} = \emptyset$. However, the [[The real field#Nested interval property|nested interval property]] asserts that $\bigcup_{n=1}^{\infty}I_{n} \ne \emptyset$. This contradiction means that such an enumeration of $\mathbb{R}$ is impossible. ❏
 
 >[!Question]- Why doesn't this work for $\mathbb{Q}$?
->The nested interval property is not true for $\mathbb{Q}$. Consider $I_{n}$ to be rational bounds for $\sqrt{ 2 }$, for example (like what Rudin does on p2). Then, $\bigcup_{n=1}^{\infty}I_{n}=\emptyset$ since $\sqrt{ 2 }\not\in \mathbb{R}$.
+>The nested interval property does not hold for $\mathbb{Q}$. Consider $I_{n}$ to be rational bounds for $\sqrt{ 2 }$, for example (like what Rudin does on p2). Then, $\bigcap_{n=1}^{\infty}I_{n}=\emptyset$ since $\sqrt{ 2 }\not\in \mathbb{Q}$.
 
 This combined with our proof that the union of two countable sets is countable, and that $\mathbb{Q}$ is countable, implies that $\mathbb{I}$, the set of all irrational numbers, is not countable since $\mathbb{R}=\mathbb{Q}\cup \mathbb{I}$.
 

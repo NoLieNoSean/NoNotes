@@ -3,7 +3,7 @@ tags:
   - ANA1
 ---
 ## Motivation
-If a [[Sequences and convergence#Sequences|sequence]] in $\mathbb{R}$ fails to [[Sequences and convergence#Definition of convergence in $ mathbb{R}$ and $X$|converge]], we would like to be able to measure the extent of the failure. To do so, we will define *LimSup* and *LimInf*  in the [[The extended real number system|extended real numbers]] (allowing them to possibly be infinity) for every sequence of real numbers. These will always exist. 
+If a [[Sequences and convergence#Sequences|sequence]] in $\mathbb{R}$ fails to [[Sequences and convergence#Definition of convergence in real numbers and metric spaces|converge]], we would like to be able to measure the extent of the failure. To do so, we will define *LimSup* and *LimInf*  in the [[The extended real number system|extended real numbers]] (allowing them to possibly be infinity) for every sequence of real numbers. These will always exist. 
 
 ---
 ## Preliminaries
@@ -15,7 +15,7 @@ To allow limits to be potentially infinite, we must define what it means to conv
 
 Ditto with a swap for $-\infty$.
 
-It should be noted that we now use the symbol $\to$ for certain types of divergent sequences, as well as for convergent sequences, but that the definitions of convergence and of limit, given [[Sequences and convergence#Definition of convergence in $ mathbb{R}$ and $X$|here]], are unchanged.
+It should be noted that we now use the symbol $\to$ for certain types of divergent sequences, as well as for convergent sequences, but that the definitions of convergence and of limit, given [[Sequences and convergence#Definition of convergence in real numbers and metric spaces|here]], are unchanged.
 
 ---
 ## Definition 

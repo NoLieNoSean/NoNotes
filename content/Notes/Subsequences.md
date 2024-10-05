@@ -16,13 +16,20 @@ tags:
 ## Subsequences of a convergent sequence
 
 >[!Theorem]
->$(p_{n})$ [[Sequences and convergence#Definition of convergence in $ mathbb{R}$ and $X$|converges]] to $p$ if and only if every subsequence of $(p_{n})$ converges to $p$.
+>$(a_{n})$ [[Sequences and convergence#Definition of convergence in real numbers and metric spaces|converges]] to $a$ if and only if every subsequence of $(a_{n})$ converges to $a$.
 
->**Proof** of $\Rightarrow$
+>**Proof of $\Rightarrow$**
 >Assume $(a_{n})\to a$, and let $(a_{n_{k}})$ be a subsequence. Given $\epsilon>0$, there exists $N$ such that $|a_{n}-a|<\epsilon$ whenever $n\ge N$. Because $n_{k}\geq k$ for all $k$, the same $N$ will suffice for the subsequence, i.e, $|a_{n_{k}}-a|<\epsilon$ whenever $k\geq N$. ❏
-
->**Proof** of $\Leftarrow$
->Let $\epsilon>0$ be arbitrary. Since every subsequence of $(a_{n})$ converges to $a$, we can find one $N$ such that for all $k\ge N$, $|a_{n_{k}}-p|<\epsilon$ for every subsequence. Now, for every $k$, there exists a subsequence of $(a_{n})$ such that $n_{k} = k$. Thus, the result follows. ❏
+>
+>**Proof of $\Leftarrow$**
+>$(a_{n})$ is a subsequence of itself.  ❏
+>
+>>[!Question]- What if we only know that every proper subsequence of $(a_{n})$ converges? 
+>>
+>>Let $\epsilon>0$. Every subsequence $(a_{k_{i}({n})})$, $k_{i}:\mathbb{N}\to \mathbb{N}$, should have a $N_{i}$ such that for all $n>N_{i}$, $|a-a_{k_{i}(n)}|<\epsilon$. If we show that  $\{ N_{i} \}$ is bounded above, then it must have a supremum $N$, and we have for all $i$, for all $n>N$, $|a-a_{k_{i}(n)}|<\epsilon$. Since for every given $n$ there exists a subsequence satisfying $k_{i}(n)=n$ (basically, a subsequence that has the same first $n$ elements as $(a_{n})$), we get for all $n>N$, $|a-a_{n}|<\epsilon$. Done!
+>>
+>>To show that $\{ N_{i} \}$ is bounded above, assume otherwise. If we assume each $N_{i}$ is the smallest such number for its subsequence, $a_{k_{i}(N_{i})}$ should not satisfy $|a-a_{k_{i}(N_{i})}|<\epsilon$. Now, pick a subsequence $(a_{k_{\alpha_{1}}(n)})$. We know that $a_{k_{\alpha_{1}}(N_{\alpha_{1}})}$ lies outside the $\epsilon$ ball at $a$. Thanks to our assumption that $\{ N_{i} \}$ is unbounded, there should exist another subsequence $(a_{k_{\alpha_{2}}(n)})$ with $N_{\alpha_{2}}>k_{\alpha_{1}}(N_{\alpha_{1}})$. Note that $k_{\alpha_{2}}(N_{\alpha_{2}})\geq N_{\alpha_{2}}$, and  $a_{k_{\alpha_{2}}(N_{\alpha_{2}})}$ also lies outside the $\epsilon$ ball at $a$. We can keep going, and form a subsequence $(a_{k_{\alpha_{n}}(N_{\alpha_{n}})})$ which does not converge to $a$. Contradiction!
+>
 
 Same argument can be made for metric spaces.
 
@@ -32,8 +39,8 @@ Same argument can be made for metric spaces.
 >[!Theorem]
 >Every [[Sequences and convergence#Boundedness|bounded]] sequence in $\mathbb{R}^{k}$ contains a convergent subsequence.
 
-A more precise statement would be "Every sequence in $[a,b]$ in $\mathbb{R}$ has a convergent subsequence converging to an element in $[a, b]$".
-### First, we prove for $\mathbb{R}$.
+A more precise statement in $\mathbb{R}$ would be "Every sequence in $[a,b]$ in $\mathbb{R}$ has a convergent subsequence converging to an element in $[a, b]$".
+### First, we prove for R
 
 One way to prove this is like so:
 1. Show that every sequence in $\mathbb{R}$ has a monotone subsequence, done [[Cauchy sequences#Step 2 Pervasive monotonicity|here]]. 
@@ -46,7 +53,7 @@ Here's an alternate proof featured in Abbot, that uses the [[The real field#Nest
 ---
 ### Now, for $\mathbb{R}^{k}$.
 
-We know that the [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|convergence of vectors in R^k]] is tested slot-wise. If a sequence is bounded in $\mathbb{R}^{k}$, it doesn't take much to show that every slot must be bounded too. Thus, the sequence is bounded in the region $[a_{1},b_{1}]\times[a_{2},b_{2}]\times\dots \times[a_{k},b_{k}]$, called a closed box. (I know, we defined being bounded as being within a ball, but you can draw a ball around a box). Since each slot is bounded, we should be able to extract a convergent subsequence for every slot. However, this does not work right away since the indices for the convergent subsequences obtained in slot 1 and slot 2 may have nothing to do with each other. Fortunately, this is easily remedied. First, extract a convergent subsequence in slot 1. Now, throw away all the vectors whose first slot does not appear in this subsequence. Repeat the same process for slot 2. Since subsequences of convergent sequences also converge, this ensures that we end up with a subsequence of vectors where every slot converges.
+We know that the [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|convergence of vectors in R^k]] is tested slot-wise. If a sequence is bounded in $\mathbb{R}^{k}$, it doesn't take much to show that every slot must be bounded too. Thus, the sequence is bounded in the region $[a_{1},b_{1}]\times[a_{2},b_{2}]\times\dots \times[a_{k},b_{k}]$, called a closed box. (I know, we defined being bounded as being within a ball, but you can draw a ball around a box). Since each slot is bounded, we should be able to extract a convergent subsequence for every slot. However, this does not work right away since the indices for the convergent subsequences obtained in slot 1 and slot 2 may have nothing to do with each other. Fortunately, this is easily remedied. First, extract a convergent subsequence in slot 1. Now, throw away all the vectors whose indices do not appear in this subsequence. Repeat the same process for slot 2. Since subsequences of convergent sequences also converge, this ensures that we end up with a subsequence of vectors where every slot converges.
 
 ---
 ## Sequential compactness

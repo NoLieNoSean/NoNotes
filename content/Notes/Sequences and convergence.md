@@ -14,7 +14,7 @@ Given a function $f:\mathbb{N}\to \mathbb{R}$, $f(n)$ is just the $n$th term of 
 It is evident that sequences must be *infinitely* long.
 
 ---
-## Definition of convergence in $\mathbb{R}$ and $X$
+## Definition of convergence in real numbers and metric spaces
 
 >[!Definition]
 >A [[Sequences and convergence#Sequences|sequence]] $(a_{n})$ in $\mathbb{R}$ *converges* to $a\in \mathbb{R}$ if, for every positive number $\epsilon$, there exists an $N\in \mathbb{N}$ such that whenever $n\ge N$ it follows that $|a_{n}-a|<\epsilon$.
@@ -47,7 +47,7 @@ indicate that $(a_{n})$ converges to $a$.
 >The limit of a sequence, when it exists, is unique.
 
 >**Proof**
->let $(a_{n})\to a$ and $(a_{n})\to b$. FSTOC, assume $a\ne b$. WLOG, $a<b$. Let $\epsilon< \frac{{b-a}}{2}$. 
+>Let $(a_{n})\to a$ and $(a_{n})\to b$. FSTOC, assume $a\ne b$. WLOG, $a<b$. Let $\epsilon< \frac{{b-a}}{2}$. 
 >Now, there must exist an $N$ such that for all $n\ge N$, $|a_{n}-a|<\epsilon$. From the triangle inequality, we have
 >$$
 >\begin{align*}
@@ -56,7 +56,7 @@ indicate that $(a_{n})$ converges to $a$.
 >|a_{n}-b|&>\epsilon, \ \forall n\ge N
 >\end{align*}
 >$$
->Thus, if $(a_{n})$ converges to $a$, $(a_{n})$ cannot converge to $b$. ❏
+>This contradicts our hypothesis that $(a_{n})\to b$. $\Rightarrow\Leftarrow$ ❏
 
 Another way to prove this would be to use the fact that there exist $N_{1}, N_{2}\in \mathbb{N}$ such that for any arbitrary $\epsilon>0$ 
 $$
@@ -89,7 +89,7 @@ This proof can be modified to work for a general metric space when we use [[Metr
 >Every convergent sequence is bounded.
 
 >**Proof**
->Assume $(x_{n})\to l$. This means that given a particular value of $\epsilon$, we know that there must exist an integer $N\in \mathbb{N}$ such that if $n\ge N$, $x_{n}\in(l-\epsilon, l+\epsilon)$. Thus, the sequence is bounded for $n\ge N$ by $|l|+\epsilon$. We still need to worry (slightly) about the terms in the sequence that come before the $N$th term. Because there are only a finite number of these, we let
+>Assume $(x_{n})\to l$. This means that given a particular value of $\epsilon$, we know that there must exist an integer $N\in \mathbb{N}$ such that if $n\ge N$, $x_{n}\in(l-\epsilon, l+\epsilon)$. Thus, the sequence is bounded for $n\ge N$ by $|l|+\epsilon$. We still need to worry about the terms in the sequence that come before the $N$th term. Because there are only a finite number of these, we let
 >$$
 >M=\max\{|x_1|,|x_2|,|x_3|,\ldots,|x_{N-1}|,|l|+\epsilon\}.
 >$$
@@ -118,8 +118,6 @@ This proof can be easily rephrased in terms of open balls to prove the theorem f
 >1. If $a_{n}\ge 0$ for all $n\in \mathbb{N}$, then $a\ge 0$.
 >2. If $a_{n}\leq b_{n}$ for all $n\in \mathbb{N}$, then $a\le b$. 
 >3. If there exists $c\in \mathbb{R}$ for which $c\le b_{n}$ for all $n\in \mathbb{N}$, then $c\le b$. Similarly, if $a_{n}\le c$ for all $n\in \mathbb{N}$, then $a\le c$. 
-
-[[Proof of the Order Limit Theorem|Proof]]
 
 ---
 
@@ -151,7 +149,8 @@ This proof can be easily rephrased in terms of open balls to prove the theorem f
 
 >**Proof**
 >Assume $(p_{n})\to p$ is increasing (the decreasing case is handled similarly). Clearly, $p_{1}$ is a lower bound for $S = \{ p_{1}, p_{2}, \dots \}$. 
->Next, FTSOC, assume $p_{k}>p$ for some $k$. It follows that $p < p_{k} \leq p_{n}$ for all $n\ge k$. Now, if we set $\epsilon = p_{k}-p$, we get $p_{n}-p\ge \epsilon$ for all $n\ge k$, i.e, the sequence does not converge, which is a contradiction. Thus, $p_{k}\le p$ for all $k$, i.e, $p$ is an upper bound. ❏ 
+>Next, FTSOC, assume $p_{k}>p$ for some $k$. It follows that $p < p_{k} \leq p_{n}$ for all $n\ge k$. Now, if we set $\epsilon = p_{k}-p$, we get $p_{n}-p\ge \epsilon$ for all $n\ge k$, i.e, the sequence does not converge. $\Rightarrow\Leftarrow$ 
+>Thus, $p_{k}\le p$ for all $k$, i.e, $p$ is an upper bound. ❏ 
 
 So, just to recap:
 - *convergent* $\implies$ *bounded*.

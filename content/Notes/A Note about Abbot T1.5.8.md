@@ -26,8 +26,7 @@ $$
 &~\vdots
 \end{aligned}
 $$
-where the $i$th row represents $C_{i}$, a part of $\mathbb{N}$. Clearly, all $C_{i}$ are countable and disjoint. 
-Assume $A_{i}$ are disjoint (this not being the case can be easily remedied). Now, we define a bijection $f_{n}: C_{i}\to A_{i}$ (the existence of which is guaranteed by the definition of begin countable). Finally, we define a function $f:\mathbb{N}\to \bigcup_{n=1}^{\infty}A_{n}$ as
+where the $i$th row represents $C_{i}$, a part of $\mathbb{N}$. Clearly, all $C_{i}$ are countable and disjoint. Assume $A_{i}$ are disjoint (this not being the case can be easily remedied). Now, we define a bijection $f_{n}: C_{i}\to A_{i}$ (the existence of which is guaranteed by the definition of begin countable). Finally, we define a function $f:\mathbb{N}\to \bigcup_{n=1}^{\infty}A_{n}$ as
 $$
 f(n)=\begin{cases}f_1(n)&\mathrm{if~}n\in C_1\\f_2(n)&\mathrm{if~}n\in C_2\\\vdots&\end{cases}
 $$

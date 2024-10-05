@@ -10,7 +10,7 @@ Consider the [[Vector spaces|vector space]] $\mathbb{R}^{k}$. In addition to the
 
 The structure now defined (the vector space $\mathbb{R}^{k}$ with the inner product and the norm) is called euclidean $k$-space.
 
->[!Info]
+>[!Info]-
 >A vector space with a norm is called a normed vector space. Thus, you could say a Euclidean space is a normed vector space with an inner product. Not all normed vector spaces are Euclidean spaces. A Euclidean space specifically refers to a vector space equipped with a Euclidean inner product (usually the standard dot product in $\mathbb{R}^n$). In contrast, there are normed vector spaces where the norm is not induced by an inner product (e.g., spaces with a non-Euclidean norm like the p-norm for p $\neq$ 2).
 
 ---

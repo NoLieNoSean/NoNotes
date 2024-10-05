@@ -24,7 +24,7 @@ Observe:
 >If $x \in X$ where $(X,d)$ is a metric space and $r\in \mathbb{R}, r>0$ , the *open* (or *closed*) *ball* $B$ with center at $x$ and radius $r$ is defined to be the set of all $y\in X$ such that $d(x,y)<r$(or $d(x,y)\leq r$). These are analogues of open (or closed) intervals in $\mathbb{R}$. 
 ### Neighborhood
 >[!Definition]
->A *neighborhood* of $p\in X$ in a metric space $(X,d)$ is any set $S\subseteq X$ which contains an open ball centered at $p$ and radius $r>0$. Basically, elements of $X$ not in the neighborhood should not get arbitrarily close to $p$.
+>A *neighborhood* of $p\in X$ in a metric space $(X,d)$ is any set $S\subseteq X$ which contains an open ball centered at $p$ with radius $r>0$. Basically, elements of $X$ not in the neighborhood should not get arbitrarily close to $p$.
 
 >[!Warning]
 >Rudin's neighborhood is Kulkarni's open ball.
