@@ -43,7 +43,6 @@ tags:
 $E$ is open cover compact as per definition 1 as a metric space in its own right $\iff$ $E$ is an open cover compact subset of $X$ as per 2.
 
 >**Proof of $\Longleftarrow$**
->
 >$E$ is an open cover compact subset of $X$. Let $W\equiv\{ W_{\alpha} \}_{\alpha \in I}$ be an open cover of $E$ by sets open in $E$. We need to show that a finite subset of $W$ covers $E$. We know from our study of [[Analysis1_L15#Subspace topology|subspace topology]] that for each $W_{\alpha}$ there must exist $V_{\alpha}\subset X$ open in $X$ such that $W_{\alpha}=E\cap V_{\alpha}$. Since $W_{\alpha}\subset V_{\alpha}$ for all $\alpha$, $V\equiv\{ V_{\alpha} \}_{\alpha\in I}$ covers $E$ in $X$. From the hypothesis, there exists a finite subcover $\{ V_{\beta} \}_{\beta \in J\subset I}$ of $V$ covering $E$. Thus, 
 >$$
 >\begin{align*}
@@ -54,7 +53,6 @@ $E$ is open cover compact as per definition 1 as a metric space in its own right
 >\end{align*}
 >$$
 >**Proof of $\implies$**
->
 >Start with an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $E$ with sets which are open in $X$. We want to show that a finite subset of this open cover covers $E$. 
 >$$
 >\begin{align*}
@@ -82,7 +80,7 @@ The converse is also true, but harder to prove.
 
 ### Examples
 
-It follows form the previous claim that every set we showed to be not limit point compact in the [[Analysis1_L16#Open intervals in $ mathbb{R}$ (non example)|previous lecture]] is not open cover compact either. 
+It follows form the previous claim that every set we showed to be not limit point compact in the [[Analysis1_L16#Open intervals in R (non example)|previous lecture]] is not open cover compact either. 
 
 For $(0, 1)$, consider the open cover $\left\{  \left( \frac{1}{n}, 1 \right) \ |\ n\in \mathbb{N} \right\}$. 
 For $\mathbb{R}$, consider the open cover $\{ (-n, n)\ |\ n\in \mathbb{N} \}$. 

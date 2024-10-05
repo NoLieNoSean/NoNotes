@@ -57,7 +57,7 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 >❏
 
 ---
-## Proof of compactness of $[a, b]$ using [[LUB property]] of $\mathbb{R}$
+## Proof of compactness of closed intervals in R using [[LUB property]]
 
 >**Proof**
 >Consider an open cover $B=\{ V_{\alpha} \}_{\alpha \in I}$ of $[a, b]$. Define $S$ to be the set of all $x\in [a, b]$ such that $[a, x]$ can be covered by a finite subcover of $B$. This set is non empty because $a\in S$. Let $s=\sup S$. Assume $s<b$. There exists a $V_{s}\in B$ containing $s$. Since $V_{s}$ is open, it must also contain an open interval around $s$, say $(s-\epsilon, s+\epsilon)$. Now, $[a, s-\epsilon]$ must have a finite subcover $\{ V_{\beta} \}_{\beta \in J\subset I}$. Thus, $\{ V_{\beta} \}_{\beta\in J\subset I}\cup \{ V_{s} \}$ covers $\left[ a, s+\frac{\epsilon}{2} \right]$. So, $s+\frac{\epsilon}{2}\in S$. This contradicts the hypothesis that $s$ is the supremum of $S$. Hence, $s= b$. ❏ 

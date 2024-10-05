@@ -57,7 +57,7 @@ Rudin, 2.19
 >$$
 
 >**Proof**
->choose $s=r-d(p, q)$. Use triangle inequality. ❏
+>Choose $s=r-d(p, q)$. Use triangle inequality. ❏
 
 As defined later, this basically means every open ball is an open set.
 ### If $f$ is continuous, $f^{-1}$ of any ball is a neighborhood of each of its points

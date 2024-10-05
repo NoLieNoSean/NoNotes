@@ -14,7 +14,7 @@ tags:
 >- $\alpha$ is an upper bound of $E$.
 >- If $\gamma<\alpha$, then $\gamma$ is not an upper bound of $E$.
 >
->Then $\alpha$ is called the *least upper bound * or *supremum* of $E$. 
+>Then $\alpha$ is called the *least upper bound* or *supremum* of $E$. 
 
 Analogous definitions exist for *bounded below* and *infimum*.
 Note that $\sup A$ and $\inf A$ may or may not be in $A$. 

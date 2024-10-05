@@ -9,5 +9,5 @@ tags:
 >- Transitivity: If $x,y,z \in S$, if $x<y$ and $y<z$, then $x<z$.
 
 >[!Definition]
->An *ordered set* is a set $S$ in which an order is defined. 
+>An *ordered set* is a set $S$ on which an order is defined. 
 

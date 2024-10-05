@@ -3,7 +3,7 @@ tags:
   - ANA1
 ---
 
-If there exists a 1-1 mapping of $A$ onto $B$, we say that $A$ and $B$ can be put in 1-1 *correspondence*, or that $A$ and $B$ have the same *cardinal number*, or that $A$ and $B$ are *equivalent*. This relation is an equivalence relation.
+If there exists a 1-1 mapping of $A$ onto $B$, we say that $A$ and $B$ can be put in 1-1 *correspondence*, or that $A$ and $B$ have the same *cardinal number*, or that $A$ and $B$ are *equivalent*, and denote it by $A\sim B$. 
 
 For any positive integer $n$, let $\mathbb{N}_{n}$ be the set whose elements are the integers $1,2,\dots,n$; Let $\mathbb{N}$ be the set consisting of all positive integers. For any $A$, we say:
 - $A$ is *finite* if $A\sim \mathbb{N}_{n}$ for some $n$.
@@ -12,8 +12,10 @@ For any positive integer $n$, let $\mathbb{N}_{n}$ be the set whose elements are
 - $A$ is *uncountable* if $A$ is neither finite nor countable.
 - $A$ is *at most countable* if $A$ is finite or countable.
 
->[!Note]
+>[!Info]
 >A finite set cannot be equivalent to one of its subsets. This is, however, possible for infinite sets.
+
+---
 
 ## Countable sets
 
@@ -23,8 +25,6 @@ For any positive integer $n$, let $\mathbb{N}_{n}$ be the set whose elements are
 >If $A\subseteq B$ and $B$ is countable, then $A$ is either countable or finite.
 
 If a set can be arranged into a single list, then deleting some elements from this list results in another (shorter, and potentially terminating) list. This means that countable sets are the smallest type of infinite set. Anything smaller is either still countable or finite.
-
----
 ### Combining countable sets
 
 >[!Theorem]
@@ -42,13 +42,8 @@ If a set can be arranged into a single list, then deleting some elements from th
 >
 >Corollary: The set of all rational numbers is countable.
 
----
-
-
 >[!Theorem]
 >The set $\mathbb{Q}$ is countable.
-
-
 
 ## Uncountable sets
 >[!Theorem]

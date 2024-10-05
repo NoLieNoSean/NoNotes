@@ -70,7 +70,7 @@ strong {
 
 a {
   font-weight: $semiBoldWeight;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s ease;
   color: var(--secondary);
 
@@ -79,8 +79,8 @@ a {
   }
 
   &.internal {
-    text-decoration: none;
-    background-color: var(--highlight);
+    text-decoration: underline;
+    // background-color: var(--highlight);
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;

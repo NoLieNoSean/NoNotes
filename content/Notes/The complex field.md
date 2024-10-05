@@ -36,7 +36,7 @@ Proof on Rudin, p14.
 **Neat proof by Mohak:**
 From the CS inequality for real numbers and the triangle inequality, we have
 $$
-\underbrace{ \left|\sum_{j=1}^na_jb_j\right|^2\le\left( \sum_{i=1}^{n} |a_{j}b_{j}| \right)^{2} }_{\text{triangle inequality} }=\underbrace{ \left( \sum_{i=1}^{n} |a_{j}||b_{j}| \right)^{2}\le\sum_{j=1}^n\left|a_j\right|^2\sum_{j=1}^n\left|b_j\right|^2 }_{\text{CS inequality for reals} }.
+\underbrace{ \left|\sum_{i=1}^na_ib_i\right|^2\le\left( \sum_{i=1}^{n} |a_{i}b_{i}| \right)^{2} }_{\text{triangle inequality} }=\underbrace{ \left( \sum_{i=1}^{n} |a_{i}||b_{i}| \right)^{2}\le\sum_{i=1}^n\left|a_i\right|^2\sum_{i=1}^n\left|b_i\right|^2 }_{\text{CS inequality for reals} }.
 $$
 
 >[!Question]

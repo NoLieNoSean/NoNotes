@@ -71,7 +71,7 @@ Same argument as in sequential compactness.
 
 Any set $S$ of finite cardinality is compact. Any sequence in $S$ must have at least one element of $S$ repeating infinitely many times - take the subsequence required by sequential compactness to be a constant sequence of just this element. The condition for limit point compactness is vacuously true, since no infinite subset of $S$ exists.
 
-### Open intervals in $\mathbb{R}$ (non example)
+### Open intervals in R (non example)
 
 $(a, b)$, $[a, b)$, $(a, b]$, and $\mathbb{R}$ are *not* compact. It is easy to find sequences in these sets which violate the definition of sequential compactness. Take the set of terms of these sequences to violate the definition of limit point compactness.
 
@@ -93,15 +93,11 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 >Let $X$ be a metric space. Then, $X$ is sequentially compact $\iff$ $X$ is limit point compact.
 
 >**Proof of $\implies$**
->
 >Let $S\subset X$, $|S|=\infty$. We want to show that $S$ has a limit point in $X$. Take $T=\{ x_{1}, x_{2}, \dots \}\subset S$. Since $X$ is sequentially compact, we can extract a sequence $x_{k_{1}}, x_{k_{2}}, \dots$ from $T$ such that $(x_{k_{n}})\to p\in X$. Observe that $p$ is a limit point of $T$, and hence of $S$. ❏
 >
 >**Proof of $\Longleftarrow$**
->
 >Let $(p_{n})$ be a sequence in $X$. We want to show that some subsequence of $(p_{n})$ converges to a point in $X$. 
->
 >Let $S=\{ p_{n}\ |\ n\in \mathbb{N} \}$. If $S$ is finite, i.e, $(p_{n})$ has a finite number of distinct terms, a single element must repeat infinite times in the sequence. Let the constant sequence of this element be the subsequence required, and we are done.
->
 >If $S$ is infinite, since $X$ is limit point compact, $S$ must have a limit point in $X$. Call it $p$. Define a sequence of $\epsilon$'s: $(\epsilon_{n})=\left( \frac{1}{2^{n}} \right)$. Construct a subsequence $(p_{k_{n}})$ of $(p_{n})$ like so: Let $p_{k_{1}}$ be any point in $B_{\epsilon_{1}}(p, S)\setminus \{ p \}$, and let $p_{k_{n+1}}$ be any point such that $k_{n+1}>k_{n}$ and $p_{k_{n+1}}\in B_{\epsilon_{n+1}}(p, S)\setminus \{ p \}$ (such a $k_{n+1}$ must exist since every deleted neighborhood of $p$ contains infinitely many elements of $S$). Then, $(p_{n})\to p$ since $(\epsilon_{n})\to 0$. ❏
 
 
@@ -127,7 +123,6 @@ Rudin, 2.34
 
 >**Proof** 
 >Assume $C$ is not closed. Then, $|C|=\infty$, and $C$ has a limit point $p$ outside $C$. There exists a sequence $(p_{n})$ in $C$ that converges to $p$. Since every subsequence of $(p_{n})$ also converges to $p$, $(p_{n})$ has no subsequence that converges to a point in $C$, contradicting the hypothesis that $C$ is compact. $\Rightarrow\Leftarrow$
->
 >Suppose $C$ is unbounded. Pick $x_{0}\in C$. Pick $x_{n+1}$ such that $d(x_{0}, x_{n+1})>1+d(x_{0}, x_{n})$. This construction results in the distance between any two terms in $(x_{n})$ being greater than 1. Thus, there does not exist an $N$ such that for all $n\ge N$, all $x_{n}$ lie in a ball of radius $\frac{1}{2}$. So, no subsequence of $(x_{n})$ converges, contradicting the hypothesis that $C$ is compact. $\Rightarrow\Leftarrow$ ❏
 
 ---

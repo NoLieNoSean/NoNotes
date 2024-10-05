@@ -1,3 +1,29 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+h1
+{
+    color: #7a7aff;//rgb(238, 125, 130);
+}
+
+h2
+{
+    color: rgb(238, 125, 130);
+}
+
+
+h3
+{
+    color: #a5c974;
+}
+
+
+em, strong{
+    color: #448aff !important;// #1ABC9C ;#7aa8ff
+}
+
+.page-title>a{
+    color: #7a7aff;
+    text-decoration: none !important;
+}

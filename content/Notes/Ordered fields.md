@@ -3,11 +3,12 @@ tags:
   - ANA1
 ---
 
-An *ordered field* is a [[Fields|field]] $\mathbb{F}$ which is also an [[Ordered sets|ordered set]], such that
-- $x+y<x+z$ if $x,y,z\in \mathbb{F}$ and $y<z$.
-- $xy>0$ if $x\in \mathbb{F}, y\in \mathbb{F}, x>0, y>0$.
+An *ordered field* is a [[Fields|field]] $\mathbb{F}$ which is also an [[Ordered sets|ordered set]], such that for all $x,y,z\in \mathbb{F}$, 
+- If $y<z$, then $x+y<x+z$, and
+- If $x>0, y>0$ then $xy>0$.
 
-Note that merely a field which is ordered is NOT an ordered field. 
+Note that a field which is ordered is NOT an ordered field. 
+
 If $x>0$, we call $x$ positive. If $x<0$, we call $x$ negative.
 
 The following statements are true in every ordered field.

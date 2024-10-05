@@ -15,7 +15,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "https://nolienosean.github.io/NoNotes/",
     ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Excalidraw", "Config"],
     defaultDateType: "created",
     theme: {
@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
+          light: "#1a1b25", //"#161618",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",

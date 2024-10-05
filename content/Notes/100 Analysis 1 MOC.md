@@ -47,7 +47,7 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
-- [[Analysis1_L19]] <-- Mid term syllabus till here.
+- [[Analysis1_L19]] <- Mid term syllabus ends here.
 - [[Analysis1_L20]]
 
 >[!Excalidraw]-
@@ -66,6 +66,14 @@ Proper lecture notes start here.
 - [[Analysis1_T2]]
 - [[Analysis1_T3]]
 - [[Analysis1_T4]]
+
+
+# To-do
+- [ ] 1.21, 3.20. Lecture 12
+- [ ] Compile Lecture 19
+- [ ] Chapter 2, Chapter 4 problems
+- [ ] Review quiz 1 solutions
+- [ ] Review HW 1 solutions
 
 # Rudin sections
 2. Basic topology
@@ -146,17 +154,10 @@ Proper lecture notes start here.
 	8. Alternate definition of continuity using open sets + corollary
 	9. 
 
-# To-do
-- [ ] 1.21 proof
-- [ ] Chapter 2 problems
-- [ ] Chapter 3 non series quesitons
-- [ ] Aditya sett tutorial problems
-- [ ] 3.20 c, d
+
 - [ ] No set S can be in bijection with its power set (classic Cantor diagonalization argument)
 - [ ] Try to prove the Schroder-Bernstein theorem: if there is an injection from S to T and an injection from T to S, then there is a bijection between S and T. Then locate a proof and see if you can read a little and complete the rest. (Check abbot)
 - [ ] $a_{0}\ge a_{1}\ge \dots \ge 0$. $\lim_{ n \to \infty }a_{n}=0$. Show that $\sum(-1)^{n}a_{n}$ converges.
-- [ ] Review quiz 1 solutions
-- [ ] Review HW 1 solutions
 - [ ] Fixed point theorem
       $M$ is a complete metric space.
       $T:M\to M$ is continuous.

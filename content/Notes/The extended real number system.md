@@ -10,6 +10,6 @@ $$
 $$
 for every $x\in \mathbb{R}$.
 
-$+\infty$ is an upper bound for every subset of the extended real number system, and every non empty subset has an upper bound. Ditto for $-\infty$.
+$+\infty$ is an upper bound for every subset of the extended real number system, so every non empty subset has an upper bound. Ditto for $-\infty$.
 
-The extended real number system does not form a field.
+The extended real number system does not form a field, since $\pm \infty$ do not have additive or multiplicative inverses.

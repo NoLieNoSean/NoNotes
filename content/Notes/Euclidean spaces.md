@@ -4,9 +4,9 @@ tags:
 ---
 
 
-Consider a [[Vector spaces|vector space]] $\mathbb{R}^{k}$. In addition to the operations and properties already defined for a vector space, we define the following:
-- An operation called the *inner product* of $\mathbf{v}$ and $\mathbf{w}$ such that $\mathbf{v}\cdot \mathbf{w}=\sum_{i=1}^{k} v_{i}w_{i},$
-- and the *norm* of $\mathbf{x}$ by $|\mathbf{x}| = (\mathbf{x}\cdot \mathbf{x})^{1/2}=\left( \sum_{i=1}^{k} x_{i}^{2} \right)^{1/2}$.
+Consider the [[Vector spaces|vector space]] $\mathbb{R}^{k}$. In addition to the operations and properties already defined for a vector space, we define the following:
+- An operation called the *inner product* of $\mathbf{v}$ and $\mathbf{w}$ such that $\mathbf{v}\cdot \mathbf{w}=\sum_{i=1}^{k} v_{i}w_{i},$ and 
+- the *norm* of $\mathbf{x}$ by $|\mathbf{x}| = (\mathbf{x}\cdot \mathbf{x})^{1/2}=\left( \sum_{i=1}^{k} x_{i}^{2} \right)^{1/2}$.
 
 The structure now defined (the vector space $\mathbb{R}^{k}$ with the inner product and the norm) is called euclidean $k$-space.
 

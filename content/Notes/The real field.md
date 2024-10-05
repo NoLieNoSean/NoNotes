@@ -5,14 +5,13 @@ tags:
 
 There exists an [[Ordered fields|ordered field]] $\mathbb{R}$ which has the [[LUB property]]. Also, $\mathbb{R}$ contains $\mathbb{Q}$ as a subfield.
 
-The fact that $\mathbb{R}$ has the LUB property is also referred to as the axiom of completeness.
-
-The following theorems follow as consequences of the axiom of completeness.
+$\mathbb{R}$ having the LUB property is also referred to as the axiom of completeness.
 
 >[!Info]
->Remember the axiomatic stack on which $\mathbb{R}$ rests:
+>Remember the structural stack on which $\mathbb{R}$ rests:
 >Field -> Ordered Field -> Complete ordered field with $\mathbb{Q}$ as subfield
 
+---
 ## Consequences of completeness
 
 ### Nested interval property
@@ -24,7 +23,7 @@ The following theorems follow as consequences of the axiom of completeness.
 >**Proof** 
 >Consider the set $A = \{ a_{n}\ | \ n \in \mathbb{N} \}$. $A$ is clearly non empty, and bounded above (by every $b_{n}$). Thus, $x = \sup A$ exists. 
 >Now consider a particular interval $I_{n} =[a_{n}, b_{n}]$. Because $x$ is an upper bound for $A$, be have $a_{n}\le x$. The fact that each $b_{n}$ is an upper bound for $A$ and that $x$ is the supremum of $A$ implies that $x\le b_{n}$. 
->So, we have $a_{n}\leq x\leq b_{n}$ for every $n$. Hence, $x\in \bigcup_{n=1}^{\infty}I_{n}$ , and the intersection is nonempty.
+>So, we have $a_{n}\leq x\leq b_{n}$ for every $n$. Hence, $x\in \bigcup_{n=1}^{\infty}I_{n}$. ❏
 
 This property fails for open intervals. Consider the sequence of nested open intervals $I_{n}=\left( 0, \frac{1}{n} \right)$ as a counter example. 
 
@@ -51,9 +50,9 @@ up the holes in Q, carries with it the implication that N is an unbounded subset
 of R.
 
 >**Proof**
->Assume, for contradiction, that $\mathbb{N}$ is bounded above. By AoC, $\mathbb{N}$ should have a supremum. Set $\alpha=\sup \mathbb{N}$. 
->Now, consider $\alpha-1$. This should not be an upper bound. Thus, $n>\alpha-1$, $n\in \mathbb{N}$ must exist. But that is the same as saying $\alpha <n+1$. Since $\mathbb{N}$ is closed under addition, $n+1\in \mathbb{N}$. Thus, we have reached a contradiction. ❏
-### Density of $\mathbb{Q}$ in $\mathbb{R}$
+>FTSOC, assume $\mathbb{N}$ is bounded above. By AoC, $\mathbb{N}$ should have a supremum. Set $\alpha\equiv\sup \mathbb{N}$. 
+>Now, consider $\alpha-1$. This should not be an upper bound of $\mathbb{N}$. Thus, $n>\alpha-1$, $n\in \mathbb{N}$ must exist. But that is the same as saying $\alpha <n+1$. Since $\mathbb{N}$ is closed under addition, $n+1\in \mathbb{N}$. $\Rightarrow\Leftarrow$ ❏
+### Density of Q in R
 
 >[!Theorem]
 >If $a\in \mathbb{R}$, $b\in \mathbb{R}$, and $a<b$, then there exists a $r\in \mathbb{Q}$ such that $a<r<b$.
@@ -61,11 +60,11 @@ of R.
 >**Proof**
 >We have $b-a>0$. Pick an integer $n$ such that $n(b-a)>1$, existence of which is guaranteed by the Archimedean property. Thus, we have $na+1<nb$. Now, consider $m$ such that 
 >$$
->m-1\leq na<m
+>m-1\leq na<m,
 >$$
->The existence of which is also ensured by the Archimedean property. So, we have
+>the existence of which is also ensured by the Archimedean property. So, we have
 >$$
->m\le na+1<nb \implies na<m<nb
+>m\le na+1<nb \implies na<m<nb.
 >$$
 >Therefore, $a< \frac{m}{n} < b$. ❏
 
@@ -73,34 +72,41 @@ of R.
 >Given any two real numbers $a<b$, there exists an irrational number $t$ satisfying $a<t<b$.
 
 >**Proof**
->In the previous proof, replace the 1's with $\sqrt{ 2 }$s. Redefine $m$ to be an integer multiple of $\sqrt{ 2 }$. What this does ends up proving is that between $a$ and $b$ there exists a rational multiple of $\sqrt{ 2 }$, which is irrational.
+>We have $b-a>0$. Pick an integer $n$ such that $n(b-a)>\sqrt{ 2 }$, existence of which is guaranteed by the Archimedean property. Thus, we have $na+\sqrt{ 2 }<nb$. Now, consider $m$ such that 
+>$$
+>\sqrt{ 2 }m-\sqrt{ 2 }\leq na<\sqrt{ 2 }m,
+>$$
+>the existence of which is also ensured by the Archimedean property. So, we have
+>$$
+>\sqrt{ 2 }m\le na+\sqrt{ 2 }<nb \implies na<\sqrt{ 2 }m<nb.
+>$$
+>Therefore, $a< \sqrt{ 2 }\frac{m}{n} < b$. ❏
 
+---
 ## Cut property
 
 >[!Theorem]
 >If $A$ and $B$ are nonempty, disjoint sets with $A\cup B=\mathbb{R}$ and $a<b$ for all $a\in A$ and $b\in B$, then there exists $c\in \mathbb{R}$ such that $x\leq c$ whenever $x\in A$ and $x\ge c$ whenever $x\in B$. 
 
 >**Proof**
->$A$ is nonempty and bounded above (by every $b\in B$). Thus, $\alpha = \sup A$ must exist. 
->Similarly, $\beta = \inf B$ must exist.
+>$A$ is nonempty and bounded above (by every $b\in B$). Thus, $\alpha = \sup A$ must exist. Similarly, $\beta = \inf B$ must exist.
 >Now consider the possibilities:
 >- If $\alpha<\beta$,
-  There must exist $\gamma \in \mathbb{R}$ such that $\alpha<\gamma<\beta$. Clearly, $\gamma \not\in A$ and $\gamma \not\in B$, i.e, $\gamma \not\in \mathbb{R}$. Cont.
+  there must exist $\gamma \in \mathbb{R}$ such that $\alpha<\gamma<\beta$. Clearly, $\gamma \not\in A$ and $\gamma \not\in B$, i.e, $\gamma \not\in \mathbb{R}$. $\Rightarrow\Leftarrow$
 >- If $\alpha > \beta$,
   there must exist $\gamma \in \mathbb{R}$ such that $\beta<\gamma<\alpha$. 
   Since $\alpha$ is the supremum of $A$, there must exist $a\in A$ such that $\gamma<a<\alpha$. 
-  Similarly, since $\beta$ is the supremum of $A$, there must exist $b\in B$ such that $\beta<b<\gamma$.
-  Thus, we have $b<a$, $b\in B$, $a\in A$. Cont.
+  Similarly, since $\beta$ is the infimum of $A$, there must exist $b\in B$ such that $\beta<b<\gamma$.
+  Thus, we have $b<a$. $\Rightarrow\Leftarrow$
 >
 >Thus, it must be the case that $\alpha = \beta$.
->Now, since $\alpha$ is also a real number, $\alpha\in A$ or $\alpha \in B$. 
+>Now, since $\alpha$ is a real number, $\alpha\in A$ or $\alpha \in B$. 
 >If $\alpha\in A$, we have $x\le\alpha$ for all $x\in A$ and $x>\alpha$ for all $x\in B$. 
 >If $\alpha \in B$, we have $x<\alpha$ for all $x\in A$ and $x\ge \alpha$ for all $x\in B$. 
 >
 >Thus, $\alpha$ satisfies the properties for $c$ described in the theorem. ❏
 
 Note that the cut property could be used in place of the Axiom of completeness as the fundamental axiom that distinguishes $\mathbb{R}$ from $\mathbb{Q}$. 
-
 
 ---
 ## Existence of nth roots of real numbers
