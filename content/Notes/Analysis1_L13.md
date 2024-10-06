@@ -35,10 +35,10 @@ Had a rather lengthy discussion on why the definition of continuity as stated in
 
 The learning from the discussion was one pertaining to basic logic. Consider three logical statements $A$, $B$, and $C$. Define $P$ and $Q$ thus:
 $$
-\begin{align*}
+\begin{align}
 P: A \implies B \\
 Q: C \implies B
-\end{align*}
+\end{align}
 $$
 Now, if $C\implies A$, what can we say about $P$ and $Q$? if $P$ is true, then $C\implies A\implies B$, i.e $Q$ is true. Thus, hypothesis of $Q$ $\implies$ hypothesis $P$ implies $P\implies Q$ and vice versa.
 

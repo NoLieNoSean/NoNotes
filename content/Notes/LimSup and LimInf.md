@@ -37,17 +37,17 @@ It should be noted that we now use the symbol $\to$ for certain types of diverge
 >[!Definition]
 >Let $(s_{n})$ be a sequence of real numbers. Let $E$ be the set of numbers $x$ (in the extended real number system) such that $s_{n_{k}}\to x$ for some subsequence $(s_{n_{k}})$. This set $E$ contains all [[Subsequences#Definition|subsequential limits]] of $(s_{n})$, plus possibly $+\infty$ and $-\infty$. Define 
 >$$
->\begin{align*}
+>\begin{align}
 >s^{*}&:=\sup E, \\
 >s_{*}&:=\inf E.
->\end{align*} 
+>\end{align} 
 >$$
 >The numbers $s^{*}$ and $s_{*}$ are called the *upper* and *lower* limits of $(s_{n})$. We use the notation
 >$$
->\begin{align*}
+>\begin{align}
 >\limsup _{ n \to \infty } s_{n}:=s^{*}, \\
 >\liminf _{ n \to \infty } s_{n}:=s_{*}.
->\end{align*}
+>\end{align}
 >$$
 
 ### Reconciling the two
@@ -89,10 +89,10 @@ These will be using Kulkarni's definitions.
 >[!Theorem]
 >If $s_{n}\le t_{n}$ for $n\ge N$, where $N$ is fixed, then
 >$$
->\begin{align*}
+>\begin{align}
 >\liminf_{ n \to \infty } s_{n} & \le \liminf_{ n \to \infty } t_{n}, \\
 >\limsup _{ n \to \infty } s_{n} & \le \limsup _{ n \to \infty } t_{n}.
->\end{align*}
+>\end{align}
 >$$
 
 ### Limsup = Liminf iff the sequence converges
@@ -110,11 +110,11 @@ These will be using Kulkarni's definitions.
 >
 >$\lim\sup$ = $\lim\inf$ = $p$, i.e, $(s_{n})\to p$ (monotonically from above), and $(i_{n})\to p$ (monotonically from below). Let $\epsilon>0$. Find $N$ such that for all $n>N$, we have $0\le s_{n}-p<\epsilon$ and $0\le p-i_{n}<\epsilon$. Now, 
 >$$
->\begin{align*}
+>\begin{align}
 >0\le s_{n}-p<\epsilon  & \implies p_{n}-p <\epsilon \\
 >0\le p-i_{n}<\epsilon  & \implies p-p_{n}<\epsilon  \\
 >\implies |p-p_{n}|<\epsilon.
->\end{align*}
+>\end{align}
 >$$
 >❏
 

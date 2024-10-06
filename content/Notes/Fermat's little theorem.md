@@ -4,19 +4,19 @@
 >**Proof**
 >Assume $p$ is prime and $p\nmid a$. $a$ is congruent to one of $1, 2, \dots ,p-1 \mod p$. Multiply all of these by $a$: $a, 2a, \dots, (p-1)a$. We will show that this is a rearrangement of the congruence classes we started with. Clearly, none of $a, 2a, \dots, (p-1)a$ can be congruent to $0 \mod p$. We will now show that all of the new congruence classes are distinct. Pick two values: $ra$, $sa$. If $ra\equiv sa \mod p$, $(r-s)a\equiv0\mod p$. Thus, $p\mid r-s$, which can only happen if $r=s$:
 >$$
->\begin{align*}
+>\begin{align}
 >  & 0<r<p \\
 > 0<s<p  \implies & -p<-s<0 \\ \\
 >  \therefore -p<r-s<p.
->\end{align*}
+>\end{align}
 >$$
 >Thus, $a, 2a, \dots, (p-1)a$ is a rearrangement of $1, 2, \dots ,p-1 \mod p$. Thus, 
 >$$
->\begin{align*}
+>\begin{align}
 >a\cdot 2a\cdot \dots \cdot (p-1)a & \equiv 1\cdot 2\cdot \dots \cdot p-1 \mod p \\
 >(p-1)!~a^{p-1} & \equiv(p-1)!\mod p \\
 >a^{p-1} & \equiv 1 \mod p,
->\end{align*}
+>\end{align}
 >$$
 >since $p\nmid (p-1)!$. ❏
 

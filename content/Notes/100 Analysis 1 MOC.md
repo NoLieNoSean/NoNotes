@@ -27,7 +27,7 @@ tags:
 - [[LimSup and LimInf]]
 
 # Lecture Notes
-11
+
 Proper lecture notes start here.
 - [[Analysis1_L10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
@@ -77,10 +77,9 @@ Proper lecture notes start here.
 - [ ] Rudin chapters 2, 3, 4. Link up.
 - [ ] Chapter 2, 3, 4 problems
 - [ ] Compile Lecture 19
-
-
 - [ ] Review quiz 1 solutions
 - [ ] Review HW 1 solutions
+
 
 - [ ] $f^{-1}$ of a closed set is closed for continuous $f$. 
 - [ ] note 3.11 b, 4.3

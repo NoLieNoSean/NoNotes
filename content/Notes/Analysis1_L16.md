@@ -81,9 +81,9 @@ $[a, b]$ is compact.
 
 **Sequential compactness:** Consider a sequence in $[a, b]$. We know it has a convergent subsequence, courtesy the [[Subsequences#Bolzano-Weierstrass Theorem|Bolzano-Weierstrass Theorem]]. The point to which this subsequence converges is a limit point of $[a, b]$, and must be contained in $[a, b]$ since $[a, b]$ is a closed set. 
 
-**Limit point compactness:** Showing this follows a very similar strategy to Abbot's proof of the Bolzano-Weierstrass Theorem (bisection search). Given an infinite $S$, successively bisect the intervals, continuing with the half having infinite elements of $S$ at each step. This should give us nested intervals of the form $[a_{0}, b_{0}], [a_{1}, b_{1}], [a_{2}, b_{2}], \dots$, where the length of $[a_{n}, b_{n}]$ is $(a_{0}-b_{0})/2^{n}$ ($\to 0$), and $|[a_{n}, b_{n}]\cap S|=\infty$. From the [[The real field#Nested interval property|nested interval property]], we know that $\bigcap_{i\geq 0}[a_{i}, b_{i}]$ is non-empty (in fact, we know it is a singleton, but we just need it to be non-empty for this to work). Let $p$ be an element in this intersection. Let $\epsilon>0$. We can find $k$ such that the length $[a_{k}, b_{k}]<\epsilon$. Thus, $[a_{k}, b_{k}]\subset(p-\epsilon, p+\epsilon)$. So, any $\epsilon$ ball around $p$ contains elements of $S$, i.e, $p\in[a, b]$ is a limit point of $S$. 
+**Limit point compactness:** Showing this follows a very similar strategy to Abbot's proof of the Bolzano-Weierstrass Theorem (bisection search). Given an infinite $S$, successively bisect the intervals, continuing with the half having infinite elements of $S$ at each step. This should give us nested intervals of the form $[a_{0}, b_{0}], [a_{1}, b_{1}], [a_{2}, b_{2}], \dots$, where the length of $[a_{n}, b_{n}]$ is $|a_{0}-b_{0}|/2^{n}$ ($\to 0$), and $|[a_{n}, b_{n}]\cap S|=\infty$. From the [[The real field#Nested interval property|nested interval property]], we know that $\bigcap_{i\geq 0}[a_{i}, b_{i}]$ is non-empty (in fact, we know it is a singleton, but we just need it to be non-empty for this to work). Let $p$ be an element in this intersection. Let $\epsilon>0$. We can find $k$ such that the length of $[a_{k}, b_{k}]<\epsilon$. Thus, $[a_{k}, b_{k}]\subset(p-\epsilon, p+\epsilon)$. So, any $\epsilon$ ball around $p$ contains elements of $S$, i.e, $p\in[a, b]$ is a limit point of $S$. 
 
-It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This can be shown using an analogue of bijection search in $\mathbb{R}^{k}$, where you divide the set into $2^{k}$ sections in each step. We will skip showing these are sequentially compact (follows trivially from BWT), since the two notions are actually equivalent, as we will now show.
+It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This can be shown using an analogue of bisection search in $\mathbb{R}^{k}$, where you divide the set into $2^{k}$ sections in each step. We will skip showing these are sequentially compact (follows trivially from BWT), since the two notions are actually equivalent, as we will now show.
 
 ---
 
@@ -154,7 +154,7 @@ Rudin, 2.35
 >Since $C$ is bounded, $C\subset[-M, M]$ for some $M$. Now, $C=[-M, M]\cap C$, and thus $C$ is closed in $[-M, M]$ ([[Analysis1_L15#Subspace topology|Subspace topology]]). We have previously [[#Closed intervals in R|shown]] that closed intervals in $\mathbb{R}$ are compact, so $[-M, M]$ is compact. It follows form the [[#Closed subsets of compact sets are compact|previous theorem]] that $C$ is compact. ❏
 
 >[!Warning]
->Caution: In general, $X$ is closed and bounded $\not\implies$ $X$ is compact.
+>In general, $X$ is closed and bounded $\not\implies$ $X$ is compact.
 
 >[!Important]
 >While stated for $\mathbb{R}$, the Heine Borel theorem is valid for $\mathbb{R}^{k}$. It is easy to show.

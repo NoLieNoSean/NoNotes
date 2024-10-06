@@ -50,27 +50,27 @@ indicate that $(a_{n})$ converges to $a$.
 >Let $(a_{n})\to a$ and $(a_{n})\to b$. FSTOC, assume $a\ne b$. WLOG, $a<b$. Let $\epsilon< \frac{{b-a}}{2}$. 
 >Now, there must exist an $N$ such that for all $n\ge N$, $|a_{n}-a|<\epsilon$. From the triangle inequality, we have
 >$$
->\begin{align*}
+>\begin{align}
 >|b-a|&\leq|a_{n}-b|+|a_{n}-a| \\
 >2\epsilon&<|a_{n}-b|+\epsilon \\
 >|a_{n}-b|&>\epsilon, \ \forall n\ge N
->\end{align*}
+>\end{align}
 >$$
 >This contradicts our hypothesis that $(a_{n})\to b$. $\Rightarrow\Leftarrow$ ❏
 
 Another way to prove this would be to use the fact that there exist $N_{1}, N_{2}\in \mathbb{N}$ such that for any arbitrary $\epsilon>0$ 
 $$
-\begin{align*}
+\begin{align}
 |a_{n}-a|&< \frac{\epsilon}{2} \ \ \forall n\geq N_{1} \text{ and}\\
 |a_{n}-b|&< \frac{\epsilon}{2}\ \ \forall n\ge N_{2}
-\end{align*}
+\end{align}
 $$
 Let $N=\max\{ N_{1},N_{2} \}$. From the triangle inequality, we have
 $$
-\begin{align*}
+\begin{align}
 |a-b| & \le |a-a_{n}|+|a_{n}-b| \\
  & < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon.
-\end{align*}
+\end{align}
 $$
 $|a-b|<\epsilon$ for any positive $\epsilon$. This can only happen if $a=b$. 
 
@@ -137,10 +137,10 @@ This proof can be easily rephrased in terms of open balls to prove the theorem f
 >**Proof**
 >Assume $(p_{n})$ is increasing. We have to prove that $(p_{n})\to p$. Let $S=\{ p_{1}, p_{2}, \dots \}$. Consider the number $p-\epsilon$ for arbitrary $\epsilon>0$. Since $p$ is $\sup S$, there must exist $p_{N}\in S$ such that
 >$$
->\begin{align*}
+>\begin{align}
 >&p-\epsilon<p_{N} \\
 >\implies&|p-p_{N}|<\epsilon.
->\end{align*}
+>\end{align}
 >$$
 >Since $(p_{n})$ is a monotone increasing sequence, the above inequality is also true for all $n\ge N$. A similar argument works for decreasing $(p_{n})$. ❏
 

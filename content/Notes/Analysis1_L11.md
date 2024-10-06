@@ -79,10 +79,10 @@ We can recast 4.5 like so:
 >Then $f$ is said to be *continuous* at $p$ if for every $\epsilon>0$ there exists a $\delta>0$ such that $f(B_{\delta}(p, E))\subset B_{\epsilon}(f(p), Y)$.
 
 $$
-\begin{align*}
+\begin{align}
 & f(B_{\delta}(p, E))\subset B_{\epsilon}(f(p), Y) \\
 \implies & B_{\delta}(p, E)\subset f^{-1}(B_{\epsilon}(f(p), Y))
-\end{align*}
+\end{align}
 $$
 So, continuity at $p$ means $f^{-1}(\text{Any ball around } f(p))$ contains a ball of non zero radius around $p$, i.e, is a neighborhood of $p$. 
 

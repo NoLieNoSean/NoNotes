@@ -8,10 +8,10 @@ Statement can be found [[Sequences and convergence#Algebraic limit theorem|here]
 
 Assume $c$ is not 0 (constant sequences converge). We know that $\lim_{ n \to \infty }a_{n} = a$. Thus, we can choose $N\in \mathbb{N}$ such that for all $n\ge N$, $|a_{n}-a|< \frac{\epsilon}{|c|}$, for some arbitrary positive number $\epsilon$. Then we have
 $$
-\begin{align*}
+\begin{align}
 &|c||a_{n}-a|<\epsilon \\
 \implies& |ca_{n}-ca|<\epsilon \ \forall n\ge N
-\end{align*}
+\end{align}
 $$
 ❏
 
@@ -19,19 +19,19 @@ $$
 
 Let $\epsilon>0$ be arbitrary. Since $(a_{n})\to a$ and $(b_{n})\to b$, we can choose $N_{1}\in \mathbb{N}$ and $N_{2}\in \mathbb{N}$ such that 
 $$
-\begin{align*}
+\begin{align}
 |a_{n}-a|< \frac{\epsilon}{2} \ \  &\forall n\geq N_{1}, \text{ and } \\
 |b_{n}-b|< \frac{\epsilon}{2}\ \ &\forall n\geq N_{2}
-\end{align*}
+\end{align}
 $$
 Let $N=\max\{ N_{1}, N_{2} \}$. From the triangle inequality, we have
 $$
-\begin{align*}
+\begin{align}
 |(a_{n}+b_{n})-(a+b)| &=  
 |(a_{n}-a)+(b_{n}-b)| \\
 &\le|a_{n}-a|+|b_{n}-b| \\
 &< \frac{\epsilon}{2}+ \frac{\epsilon}{2}=\epsilon
-\end{align*}
+\end{align}
 $$
 for all $n\ge N$. ❏
 
@@ -46,24 +46,24 @@ a_{n}b_{n}-ab = (a_{n}-a)(b_{n}-b)+b(a_{n}-a)+a(b_{n}-b)
 $$
 Using parts (1) and (2) and the above equality, we have
 $$
-\begin{align*}
+\begin{align}
 &\lim_{ n \to \infty } (a_{n}b_{n}-ab) \\
 =&\lim_{ n \to \infty } (a_{n}-a)(b_{n}-b)
-\end{align*}
+\end{align}
 $$
 Let $\epsilon>0$ be arbitrary. Since $(a_{n})\to a$ and $(b_{n})\to b$, we can choose $N_{1}\in \mathbb{N}$ and $N_{2}\in \mathbb{N}$ such that 
 $$
-\begin{align*}
+\begin{align}
 |a_{n}-a|<  \sqrt{ \epsilon }\ \  &\forall n\geq N_{1}, \text{ and } \\
 |b_{n}-b|< \sqrt{ \epsilon }\ \ &\forall n\geq N_{2}
-\end{align*}
+\end{align}
 $$
 Let $N=\max\{ N_{1},N_{2} \}$. Multiplying the two inequalities gives us
 $$
-\begin{align*}
+\begin{align}
  & |(a_{n}-a)(b_{n}-b)-0|<\epsilon \ \ \forall n\ge N \\
  & \therefore \lim_{ n \to \infty } (a_{n}-a)(b_{n}-b) = 0
-\end{align*}
+\end{align}
 $$
 ❏
 
@@ -87,12 +87,12 @@ $$
 $$
 From the triangle inequality, 
 $$
-\begin{align*}
+\begin{align}
 |b|&\le |b-b_{n}|+|b_{n}| \\
 &< \frac{|b|}{2}+|b_{n}| \\ \\
 
 \implies &|b_{n}| > \frac{|b|}{2}.
-\end{align*}
+\end{align}
 $$
 Thus, we have
 $$

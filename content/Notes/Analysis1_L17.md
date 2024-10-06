@@ -45,22 +45,22 @@ $E$ is open cover compact as per definition 1 as a metric space in its own right
 >**Proof of $\Longleftarrow$**
 >$E$ is an open cover compact subset of $X$. Let $W\equiv\{ W_{\alpha} \}_{\alpha \in I}$ be an open cover of $E$ by sets open in $E$. We need to show that a finite subset of $W$ covers $E$. We know from our study of [[Analysis1_L15#Subspace topology|subspace topology]] that for each $W_{\alpha}$ there must exist $V_{\alpha}\subset X$ open in $X$ such that $W_{\alpha}=E\cap V_{\alpha}$. Since $W_{\alpha}\subset V_{\alpha}$ for all $\alpha$, $V\equiv\{ V_{\alpha} \}_{\alpha\in I}$ covers $E$ in $X$. From the hypothesis, there exists a finite subcover $\{ V_{\beta} \}_{\beta \in J\subset I}$ of $V$ covering $E$. Thus, 
 >$$
->\begin{align*}
+>\begin{align}
 >\bigcup_{\beta \in J}V_{\beta} & \supset E \\
 >\left( \bigcup_{\beta \in J}V_{\beta} \right)\cap E & \supset E \\
 >\bigcup_{\beta \in J}(V_{\beta}\cap E) & \supset E \\
 >\bigcup_{\beta \in J}W_{\beta} & \supset E.
->\end{align*}
+>\end{align}
 >$$
 >**Proof of $\implies$**
 >Start with an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $E$ with sets which are open in $X$. We want to show that a finite subset of this open cover covers $E$. 
 >$$
->\begin{align*}
+>\begin{align}
 >\bigcup_{\alpha \in I}V_{\alpha} & \supset E \\
 >\left( \bigcup_{\alpha \in I}V_{\alpha} \right)\cap E & =E \\
 >\bigcup_{\alpha \in I}(V_{\alpha}\cap E) & =E \\
 >\bigcup_{\alpha \in I}W_{\alpha}  & =E
->\end{align*}
+>\end{align}
 >$$
 >Where $W_{\alpha}=V_{\alpha}\cap E$. Note that each $W_{\alpha}$ is open in $E$. Thus, $\{ W_{\alpha} \}_{\alpha \in I}$ is an open cover of $E$, and from the hypothesis it must have a finite subcover $\{ W_{\beta} \}_{\beta \in J\subset I}$. It follows that $\{ V_{\beta} \}_{\beta \in J\subset I}$ also covers $V$, since $W_{\alpha}\subset V_{\alpha}$ for every $\alpha$. ❏
 
@@ -157,18 +157,18 @@ Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] 
 >**Proof**
 >Consider an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $f(X)$. 
 >$$
->\begin{align*}
+>\begin{align}
 >f(X) & \subset \bigcup_{\alpha \in I}V_{\alpha} \\
 >X & \subset f^{-1}\left( \bigcup_{\alpha \in I}V_{\alpha} \right)
 >=\bigcup_{\alpha \in I}f^{-1}(V_{\alpha})
->\end{align*}
+>\end{align}
 >$$
 >Now, since $f$ is continuous, $f^{-1}(V_{a})$ is open in $X$ for all $\alpha$. Thus, $\{ f^{-1}(V_{\alpha}) \}_{\alpha \in I}$ is an open cover of $X$. Since $X$ is compact, there exists a finite subcover.
 >$$
->\begin{align*}
+>\begin{align}
 >X & \subset   \bigcup_{\beta \in J\subset I}f^{-1}(V_{\beta}) \\
 >f(X) & \subset \bigcup_{\beta \in J\subset I}V_{\beta}
->\end{align*}
+>\end{align}
 >$$
 >❏
 

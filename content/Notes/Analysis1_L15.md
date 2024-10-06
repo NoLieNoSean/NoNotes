@@ -104,9 +104,9 @@ Rudin, 2.30
 >**Proof of $\implies$**
 >Since $E$ is open relative to $Y$, each $p \in E$ should have an $r_{p}>0$ associated with it such that $B_{r_{p}}(p, Y)\subset E$. Consider the set
 >$$
->\begin{align*}
+>\begin{align}
 >G=\bigcup_{p \in E} B_{r_{p}}(p, X).
->\end{align*}
+>\end{align}
 >$$
 >Clearly, $G$ is open in $X$ since it is a union of open balls in $X$. 
 >Clearly, $E\subset G\cap Y$.

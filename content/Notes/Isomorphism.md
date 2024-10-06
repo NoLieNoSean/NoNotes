@@ -43,12 +43,12 @@ Isomorphic spaces can be considered as different representations of the same spa
 >$$
 >where $\beta_{i}\ne \gamma_{i}$ for some $i$. Now, 
 >$$
->\begin{align*}
+>\begin{align}
 >&\sum_{i=1}^{n} \beta_{i}(A\mathbf{v}_{i}) = \sum_{i=1}^{n} \gamma_{i}(A\mathbf{v}_{i}) \\
 >\implies& A\left( \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}  \right)= A\left( \sum_{i=1}^{n}\gamma_{i}\mathbf{v}_{i} \right) \\
 >\implies &\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}= \sum_{i=1}^{n}\gamma_{i}\mathbf{v}_{i}, &\text{A is invertible} \\
 >\implies& \beta_{i}=\gamma_{i}\ \  \forall 1\le i\le n,  & \text{S is a basis in V}
->\end{align*}
+>\end{align}
 >$$
 >We have reached a contradiction. Thus,  $S'$ must be linearly independent. ❏
 
@@ -91,13 +91,13 @@ Thus, the two theorems effectively say given $1$, we have $2\iff 3$.
 
 Here is a concise thought trail (Given $1$):
 $$
-\begin{align*}
+\begin{align}
 A \text{ is invertible}  \underset{ \text{defn} }{ \iff } &(\text{Left inverse exists})\text{ and }(\text{Right inverse exists}) \\
   \underset{ * }{ \iff } & (A \text{ is injective})\text{ and }(A \text{ is surjective}) \\
 \underset{ ** }{ \iff } & (A(S)\text{ is linearly independent})\text{ and } \\
 &(A(S)\text{ is a spanning set}) \\
 \underset{ \text{defn} }{ \iff } & A(S)\text{ is a basis in }W
-\end{align*}
+\end{align}
 $$
 (\*) is easy to show. Refer [[Analysis1_HW1.pdf|this]].
 (\*\*) is important. Proof goes exactly like the proof of the [[#^Theorem1|first theorem]]. 

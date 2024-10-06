@@ -23,17 +23,17 @@ Rudin, 2.34
 >**Proof**
 >We will show $X\setminus C$ is open in $X$. Let $x \in X\setminus C$. We have to show that a neighborhood of $x$ in $X$ is contained in $X\setminus C$. For every $y\in C$ find disjoint open sets $U_{y}$ containing $x$ and $V_{y}$ containing $y$. Then, $\bigcup_{y \in C}V_{y}\supset C$. Now, observe that
 >$$
->\begin{align*}
+>\begin{align}
 >\left( \bigcap_{y\in C}U_{y} \right)\cap\left( \bigcup_{y\in C}V_{y} \right)=\emptyset.
->\end{align*}
+>\end{align}
 >$$
 >[[Analysis1_L14#Open and closed sets under intersections and unions|Recall]] that *finite* intersections of open sets are open. Since $C$ is compact, there exists a *finite* subcover $\{ V_{y}\ |\ y\in K\subset C \}$ of $C$, i.e, $\bigcup_{y\in K}V_{y}\supset C$. Since $K$ is finite, $\bigcap_{y\in K}U_{y}$ is open in $X$. So, 
 >$$
->\begin{align*}
+>\begin{align}
 > & \left( \bigcap_{y\in K}U_{y} \right)\cap\left( \bigcup_{y\in K}V_{y} \right)=\emptyset \\
 >\implies  & \left( \bigcap_{y\in K}U_{y} \right)\cap C=\emptyset  \\
 >\implies  & \left( \bigcap_{y\in K}U_{y} \right)\subset X\setminus C.
->\end{align*}
+>\end{align}
 >$$
 >❏
 
@@ -44,9 +44,9 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 >**Proof**
 >It follows from the previous theorem that for every $x \in C_{1}$, there exist disjoint open sets $U_{x}$ and $V_{x}$ such that $U_{x}\ni x$ and $V_{x}\supset C_{2}$. Clearly, $\{ U_{x}\ |\ x \in C_{1} \}$ is an open cover of $C_{1}$. Since $C_{1}$ is compact, there exists a finite subcover $\{ U_{x}\ |\ x \in K\subset C_{1} \}$. Now, observe that
 >$$
->\begin{align*}
+>\begin{align}
 >\left( \bigcup_{x \in K} U_{x} \right)\cap\left( \bigcap_{x \in K}V_{x} \right)=\emptyset.
->\end{align*}
+>\end{align}
 >$$
 >Setting $U_{1}=\bigcup_{x \in K}U_{x}$ and $U_{2}=\bigcap_{x \in K}V_{x}$ works, because
 >- $U_{1}\cap U_{2}=\emptyset$.
@@ -67,41 +67,41 @@ Note that we actually ended up proving a stronger result: For every $x \in X\set
 
 Let $B=\{ V_{\alpha} \}_{\alpha \in I}$, be a collection of open sets in $X$. Then,  $K\subset X$ is compact iff
 $$
-\begin{align*}
+\begin{align}
 \bigcup_{\alpha \in I}V_{\alpha}\supset K\implies \exists\ \text{ finite }J\subset I \text{ such that } \bigcup_{\beta \in J}V_{\beta}\supset K.
-\end{align*}
+\end{align}
 $$
 Now, we will rephrase the hypothesis in terms of closed sets $V_{\alpha}^{c}$. 
 $$
-\begin{align*}
+\begin{align}
  & \bigcup_{\alpha \in I}V_{\alpha} =\left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)^{c}\supset K \\
 \iff  & \left( \bigcap_{\alpha \in I}V_{\alpha}^{c} \right)\cap K=\emptyset.
-\end{align*}
+\end{align}
 $$
 Ditto for the conclusion.
 $$
-\begin{align*}
+\begin{align}
  & \bigcup_{\beta \in J}V_{\beta}\supset K \\
 \iff  & \left( \bigcap_{\beta \in J}V_{\beta}^{c} \right)\cap K=\emptyset.
-\end{align*}
+\end{align}
 $$
 Thus, we can say $K$ is compact iff, for a collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
 $$
-\begin{align*}
+\begin{align}
 \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
-\end{align*}
+\end{align}
 $$
 We can consider all $K_{\alpha}$ to be compact subsets of $X$, since [[#Proof of Rudin, 2.34 using open cover compactness|compact sets are in particular closed sets]]. Now, say $K$ is compact. Augment $B'$ such that it now contains $K$ (update $I$ and $J$ accordingly). This gives us
 $$
-\begin{align*}
+\begin{align}
  \bigcap_{\alpha \in I}K_{\alpha} =\emptyset \implies \exists\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}=\emptyset.
-\end{align*}
+\end{align}
 $$
 Take the contrapositive of this statement.
 $$
-\begin{align*}
+\begin{align}
 \forall\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}\ne \emptyset \implies \bigcap_{\alpha \in I}K_{\alpha}\ne \emptyset.
-\end{align*}
+\end{align}
 $$
 This is essentially Rudin, 2.36.
 

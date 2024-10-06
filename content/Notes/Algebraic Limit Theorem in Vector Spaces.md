@@ -23,26 +23,26 @@ First, we need to establish what it means for a sequence of vectors to converge.
 >Forward direction:
 >Since $(\mathbf{x}_{n})\to \mathbf{x}$, we have
 >$$
->\begin{align*}
+>\begin{align}
 >&|\mathbf{x}_{n}-\mathbf{x}|<\epsilon \\
 >\implies&\sqrt{  \sum_{j=1}^{k} (\alpha_{j,n}-\alpha_{j})^{2}}<\epsilon \\
 >\implies &|\alpha_{j,n}-\alpha_{j}|<\epsilon \ \ \forall 1\le j \le k
->\end{align*}
+>\end{align}
 >$$
 >for all $n\ge N$ for some $N$. Thus, $\lim_{ n \to \infty }a_{j,n} = a_{j}$ for all $1\le j \le k$. 
 >
 >Backward direction:
 >Let $\epsilon>0$ be arbitrary. Choose $N_{1}, N_{2}, \dots, N_{k}$ such that
 >$$
->\begin{align*}
+>\begin{align}
 >|\alpha_{j,n}-\alpha_{j}|< \frac{\epsilon}{\sqrt{ k }}
->\end{align*}
+>\end{align}
 >$$
 >For all $n\ge N_{j}$ respectively. Let $N=\max \{ N_{1}, N_{2}, \dots, N_{k} \}$. Squaring and adding the $k$ inequalities, we get
 >$$
->\begin{align*}
+>\begin{align}
 >\sum_{j=1}^{k} (\alpha_{j,n}-\alpha_{j})^{2}<\epsilon^{2}
->\end{align*}
+>\end{align}
 >$$
 >for all $n\ge N$. ❏
 

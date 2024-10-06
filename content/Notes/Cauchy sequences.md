@@ -2,7 +2,6 @@
 tags:
   - ANA1
 ---
-
 ## Cauchy sequences
 
 >[!Definition]
@@ -24,10 +23,10 @@ Our interest in Cauchy sequences is motivated by the definition of Cauchy sequen
 >**Proof**
 >Let $(a_{n})\to a$ . Let $\epsilon>0$ be arbitrary. Then, there must exist an $N\in \mathbb{N}$ such that $|a_{n}-a|< \frac{\epsilon}{2}$ for all $n\ge N$. Let $m\ge N$ too. Now, (surprise) triangle inequality:
 >$$
->\begin{align*}
+>\begin{align}
 >|a_{n}-a_{m}|&\le |a_{n}-a| + |a-a_{m}| \\
 >&< \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
->\end{align*}
+>\end{align}
 >$$
 >❏
 

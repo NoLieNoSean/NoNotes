@@ -85,18 +85,18 @@ The invertibility of the product $AB$ does not imply $A$ and $B$ are invertible.
 >**Proof**
 >Assume $B$ and $AB$ are invertible.
 >$$
->\begin{align*}
+>\begin{align}
 >(AB)^{-1}(AB)&=I\\
 >B(AB)^{-1}(AB)B^{-1}&=BIB^{-1}\\
 >B(AB)^{-1}A&=I\\
->\end{align*}
+>\end{align}
 >$$
 >Thus, $A$ has a left inverse, namely $B(AB)^{-1}$. Also, 
 >$$
->\begin{align*}
+>\begin{align}
 >(AB)(AB)^{-1}&=I\\
 >A(B(AB)^{-1})&=I
->\end{align*}
+>\end{align}
 >$$
 >Thus, $A$ has a right inverse, namely $B(AB)^{-1}$. Therefore, $A$ is invertible. ❏
 
