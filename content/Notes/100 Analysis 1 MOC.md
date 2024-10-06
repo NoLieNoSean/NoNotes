@@ -81,7 +81,6 @@ Proper lecture notes start here.
 - [ ] Review HW 1 solutions
 
 
-- [ ] $f^{-1}$ of a closed set is closed for continuous $f$. 
 - [ ] note 3.11 b, 4.3
 - [ ] 3.21, Thm 3.7, 3.17 
 

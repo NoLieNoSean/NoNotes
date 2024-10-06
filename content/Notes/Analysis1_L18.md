@@ -37,6 +37,9 @@ Rudin, 2.34
 >$$
 >❏
 
+>**Alternate proof (Abbot)**
+>We have to show that every point in $X$ which is a limit point of $C$ is in $C$. Let $(y_{n})$ be a sequence in $C$, with $(y_{n})\to y\in X$. FTSOC, assume $y\not\in C$. So, every $x \in C$ is a positive distance away from $y$. Let $U_{x}\equiv B_{d(x, y)/2}(x, X)$. Clearly, $\{ U_{x}\ |\ x \in C \}$ is an open cover of $C$, and $y\not\in \bigcup U_{x}$. Let $\{ U_{x}\ |\ x \in K\subset C \}$ be a finite subcover. Let $\epsilon$ be the minimum of the radii of the balls in this finite subcover. Since $(y_{n})\to y$, we can find terms of the sequence inside an $\epsilon$ ball around $y$, not covered by our supposed finite subcover. $\Rightarrow\Leftarrow$ ❏
+
 Note that we actually ended up proving a stronger result: For every $x \in X\setminus C$, there exist disjoint open sets $U\ni x$ and $V\supset C$, where $U=\bigcap_{y\in K}U_{y}$ and $V=\bigcup_{y\in K}V_{y}$.  
 
 **Exercise:** Show that for two disjoint compact sets $C_{1}$ and $C_{2}$, there exist disjoint open sets $U_{1}$ and $U_{2}$ such that $U_{1}\supset C_{1}$ and $U_{2} \supset C_{2}$. 
@@ -85,13 +88,13 @@ $$
 \iff  & \left( \bigcap_{\beta \in J}V_{\beta}^{c} \right)\cap K=\emptyset.
 \end{align}
 $$
-Thus, we can say $K$ is compact iff, for a collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
+Thus, we can say $K$ is compact iff, for any collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
 $$
 \begin{align}
 \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
 \end{align}
 $$
-We can consider all $K_{\alpha}$ to be compact subsets of $X$, since [[#Proof of Rudin, 2.34 using open cover compactness|compact sets are in particular closed sets]]. Now, say $K$ is compact. Augment $B'$ such that it now contains $K$ (update $I$ and $J$ accordingly). This gives us
+We can consider all $K_{\alpha}$ to be compact subsets of $X$, since [[#Proof of Rudin, 2.34 using open cover compactness|compact sets are in particular closed sets]]. Now, say $K$ is compact. Augment $B'$ such that it now contains $K$ (update $I$ accordingly). This gives us
 $$
 \begin{align}
  \bigcap_{\alpha \in I}K_{\alpha} =\emptyset \implies \exists\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}=\emptyset.
@@ -103,10 +106,56 @@ $$
 \forall\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}\ne \emptyset \implies \bigcap_{\alpha \in I}K_{\alpha}\ne \emptyset.
 \end{align}
 $$
-This is essentially Rudin, 2.36.
+This is essentially Rudin, 2.36. 
+
+%%
+
+Statement 1:
+$$
+\begin{align} \\
+ & (K \text{ is compact }, K_{\alpha}\text{ are closed }\forall\alpha \in I) \\ \\
+
+ &  \iff \\ \\
+
+
+ & \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
+\end{align}
+$$
+
+Notice that  $(K\text{ is compact, } K_{\alpha}\text{ are compact } \forall\alpha \in I)\implies(K\text{ is compact, } K_{\alpha}\text{ are closed }\forall\alpha \in I)$
+
+so, we have
+
+$$
+\begin{align} \\
+ & (K \text{ is compact }, K_{\alpha}\text{ are compact }\forall\alpha \in I) \\ \\
+
+ &  \implies\\ \\
+
+
+ & \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.
+\end{align}
+$$
+Since there is no property distinguishing $K$ and the $K_{\alpha}$'s anymore, we can just bundle them up together: set $K_{\gamma}\equiv K$ for some gamma not in $I$. If we NOW redefine $I$ to contain $\gamma$, we get to say this:
+
+$$
+\begin{align} \\
+ & (K_{\alpha}\text{ are compact }\forall\alpha \in I) \\ \\
+
+ &  \implies\\ \\
+
+
+
+  & \bigcap_{\alpha \in I}K_{\alpha} =\emptyset \implies \exists\text{ finite }J\subset I \text{ such that } \bigcap_{\beta \in J}K_{\beta}=\emptyset.
+
+\end{align}
+$$
+
+
+%%
 
 >[!Theorem]
->If $\{ K_{\alpha} \}$ is a set of compact subsets of a metric space $X$ such that the intersection of every finite subcollection of $\{ K_{\alpha} \}$ is nonempty, then $\cap \ K_{\alpha}$ is nonempty.
+>If $\{ K_{\alpha} \}$ is a set of compact subsets of a metric space $X$ such that the intersection of every finite subcollection of $\{ K_{\alpha} \}$ is nonempty, then $\bigcap \ K_{\alpha}$ is nonempty.
 
 ### Analogue of nested interval property in metric spaces
 
@@ -116,6 +165,8 @@ A special case of the above theorem is the analogue of the [[The real field#Nest
 >If $\{ K_{n} \}$ is a sequence of non empty compact sets such that $K_{n} \supset K_{n+1}$, then $\bigcap K_{i}$ is nonempty.
 >
 
+>**Alternate proof using sequential compactness**
+>For every $n\in \mathbb{N}$, pick $x_{n}\in K_{n}$. It follows that $K_{n}$ should contain the tails of $(x_{n})$ from the $n$th term. Since $K_{1}$ is compact, $(x_{n})$ must have a convergent subsequence $(x_{k_{n}})\to x\in K_{1}$. Since tails of $(x_{k_{n}})$ also converge to $x$ (and all subsequences of a convergent sequence converge to the limit of the sequence), we have $x\in K_{n} \ \forall n$. Thus, $x\in \bigcap K_{i}$. ❏
 #### Rudin, 3.10 b
 
 If we have the additional constraint that $\lim_{ n \to \infty }\text{diam } K_{n}=0$, then $\bigcap K_{i}$ contains only one element.

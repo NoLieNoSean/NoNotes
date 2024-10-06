@@ -21,6 +21,8 @@ tags:
 >Given an arbitrary $\epsilon$ challenge, we want $\delta>0$ such that $d(x, p)<\delta$ $\implies d(f(x), f(p))<\epsilon$. This is the same as saying we want $\delta>0$ such that $x\in B_{\delta}(p)\implies f(x)\in B_{\epsilon}(f(p))$. 
 >We know that $f^{-1}(B_{\epsilon}(f(p)))$ is open in $X$ and contains $p$. Importantly, it contains a ball with center $p$. Take $\delta$ to be the radius of this ball. ❏
 
+Since $f^{-1}$ preserves complements, we also have $f^{-1}$(closed set in $Y$) is a closed set in $X$.  
+
 ---
 ## Examples and observations on open and closed sets
 
@@ -46,6 +48,17 @@ In general,
 
 >[!Example]
 >Let $X\equiv \{ -1 \}\bigcup \{ x\ |\ x\ge 0 \}$ be a metric space. Then, the subset $\{ -1 \}\subset X$ is both open and closed.
+
+>[!Example]
+>It is quite easy to confuse closed sets with closed intervals in $\mathbb{R}$. Non-trivial examples of closed sets which are not closed intervals:
+>- The cantor set; it is an arbitrary intersection of closed sets, and [[#Open and closed sets under intersections and unions|hence]] is closed.
+>- Sets of the form $[x, \infty)$ and $(\infty, x]$.
+
+>[!Theorem]
+>In $\mathbb{R}$, there cannot exist an uncountable collection of disjoint open intervals. 
+
+>**Proof** 
+>Let $A$ be a collection of disjoint open intervals. The key is to try to show $A\sim \mathbb{Q}$ instead of $A\sim \mathbb{N}$. From the density of the rationals, we know that we can associate a unique rational number with each interval in $A$. So, the cardinality of $A$ must be less than or equal to $\mathbb{Q}$, which implies $A$ cannot be uncountable. ❏
 
 ---
 ## An aside

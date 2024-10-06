@@ -85,6 +85,10 @@ $[a, b]$ is compact.
 
 It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This can be shown using an analogue of bisection search in $\mathbb{R}^{k}$, where you divide the set into $2^{k}$ sections in each step. We will skip showing these are sequentially compact (follows trivially from BWT), since the two notions are actually equivalent, as we will now show.
 
+### The Cantor set
+
+The Cantor set is closed and bounded in $\mathbb{R}$. It follows from the [[#Heine Borel Theorem]] that it is compact.
+
 ---
 
 ## Equivalence of sequential and limit point compactness
@@ -139,7 +143,7 @@ Rudin, 2.35
 >If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.
 
 >**Proof**
->Consider a infinite subset $S\subset C$. Since $S\subset X$, $S$ has a limit point $p$ in $X$. However, a limit of $S$ is also a limit point of $C$, which contains all of its limit points since it is closed. Thus, $p \in C$. ❏
+>Consider a infinite subset $S\subset C$. Since $S\subset X$, $S$ has a limit point $p$ in $X$. However, a limit point of $S$ is also a limit point of $C$, which contains all of its limit points since it is closed. Thus, $p \in C$. ❏
 
 ---
 ## Heine Borel Theorem

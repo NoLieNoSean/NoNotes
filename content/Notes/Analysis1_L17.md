@@ -57,9 +57,9 @@ $E$ is open cover compact as per definition 1 as a metric space in its own right
 >$$
 >\begin{align}
 >\bigcup_{\alpha \in I}V_{\alpha} & \supset E \\
->\left( \bigcup_{\alpha \in I}V_{\alpha} \right)\cap E & =E \\
->\bigcup_{\alpha \in I}(V_{\alpha}\cap E) & =E \\
->\bigcup_{\alpha \in I}W_{\alpha}  & =E
+>\left( \bigcup_{\alpha \in I}V_{\alpha} \right)\cap E & \supset E \\
+>\bigcup_{\alpha \in I}(V_{\alpha}\cap E) & \supset E \\
+>\bigcup_{\alpha \in I}W_{\alpha}  & \supset E
 >\end{align}
 >$$
 >Where $W_{\alpha}=V_{\alpha}\cap E$. Note that each $W_{\alpha}$ is open in $E$. Thus, $\{ W_{\alpha} \}_{\alpha \in I}$ is an open cover of $E$, and from the hypothesis it must have a finite subcover $\{ W_{\beta} \}_{\beta \in J\subset I}$. It follows that $\{ V_{\beta} \}_{\beta \in J\subset I}$ also covers $V$, since $W_{\alpha}\subset V_{\alpha}$ for every $\alpha$. ❏
@@ -94,8 +94,11 @@ Note this is not implied by any of our previous work - it does need to be proved
 
 >[!Important]
 >Do this dance in $\mathbb{R}^{k}$, and you get that all closed boxes in $\mathbb{R}^{k}$ are open cover compact.
-### An exercise in working with open cover compactness
 
+Note that closed intervals in $\mathbb{Q}$ are not compact. For example, $\left\{  \left( -1, \frac{1}{\sqrt{ 2 }}-\frac{1}{n} \right)\cup\left( \frac{1}{\sqrt{ 2 }}+\frac{1}{n}, 2 \right)\ : n \in \mathbb{N}   \right\}$ is an open cover of $\mathbb{Q}\cap[0, 1]$, but does not have a finite subcover.
+### Exercises in working with open cover compactness
+
+#### Exercise 1
 In the previous lecture, [[Analysis1_L16#Characterization of compact sets|we proved]] that every (limit point/sequentially) compact set $C$ in a metric space $X$ is closed in $X$ and bounded. We do not need to prove this separately for open cover compact sets, because of the equivalence with limit point compact sets we proved above. However, it is a good exercise.
 
 >[!Theorem]
@@ -103,6 +106,14 @@ In the previous lecture, [[Analysis1_L16#Characterization of compact sets|we pro
 
 >**Proof** 
 >Consider a point $p \in C$. Consider the set $E=\{ B_{n}(p, C)\ |\ n\in \mathbb{N} \}$. Clearly, it is an open cover of $C$. Since $C$ is compact, $E$ must have a finite subcover. Thus, there exists $n\in \mathbb{N}$ such that $C=B_{n}(p, C)$. ❏
+
+#### Exercise 2
+
+>[!Theorem]
+>The arbitrary intersection of compact sets is compact.
+
+>**Proof**
+>Let $\{ C_{\alpha} \ |\  {\alpha \in I}\}$ be a collection of compact sets in $X$. Let $C\equiv \bigcap_{\alpha \in I} C_{\alpha}$. Note [[Analysis1_L16#Characterization of compact sets|that]] every $C_{\alpha}$ is closed in $X$ and bounded, and [[Analysis1_L14#Open and closed sets under intersections and unions|that]] an arbitrary intersection of closed sets is closed. Thus, $C$ is closed in $X$. Now, consider an open cover $\{ V_{\alpha}\ |\ {\alpha \in J} \}$ of $C$. Pick any $C_{\alpha}$. Since $X\setminus C$ is open in $X$, and $C_{\alpha}\setminus C\subset X\setminus C$, every element $p \in C_{\alpha}\setminus C$ has a neighborhood $W_{p}\subset X\setminus C$. It follows that $\Omega= \{ V_{\alpha} \ | \ {\alpha \in J}\}\cup \{ W_{p}\ |\ {p \in C_{\alpha} \setminus C}\}$ is an open cover of $C_{\alpha}$. Since $C_{\alpha}$ is compact, $\Omega$ must have a finite subcover $\Omega'\subset \Omega$. Since the $W_{p}$'s do not contain any points from $C$, it must be that $\Lambda= \Omega'\cap \{ V_{\alpha}\ |\ \alpha \in J \}$ must cover $C$. Observe that $|\Lambda|$ is finite and $\Lambda \subset \{ V_{\alpha}\ |\ \alpha \in J \}$, and we are done. ❏
 
 ---
 ## Equivalence of the three versions of compactness
@@ -171,5 +182,4 @@ Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] 
 >\end{align}
 >$$
 >❏
-
 
