@@ -27,6 +27,7 @@ Proper lecture notes start here.
 - [[Algebra1_L10]] ✅
 - [[Algebra1_L11]] ✅
 - [[Algebra1_L12]]
+- [[Algebra1_L13]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.

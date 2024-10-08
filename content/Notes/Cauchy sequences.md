@@ -11,6 +11,7 @@ tags:
 
 Notice that this definition bears striking resemblance to the definition of [[Sequences and convergence|convergence for a sequence]]. The motivation for this definition is that to test for convergence, you need a candidate limit value. However, you can test whether a sequence is Cauchy without such an entity.
 
+---
 ## Cauchy Criterion
 
 Our interest in Cauchy sequences is motivated by the definition of Cauchy sequences having no mention of a limit, and thus possibly allowing us to test for convergence without a candidate limit. We will now prove that this is in fact possible in $\mathbb{R}$. 
@@ -39,7 +40,7 @@ Proof can be adapted to show the same for metric spaces. Thus, in any metric spa
 Here's how we'll go about proving this:
 1. We will show that being Cauchy implies being bounded.
 2. We will show that given any sequence, a [[Sequences and convergence#Monotone convergence theorem|monotone]] [[Subsequences|subsequence]] can be extracted.
-3. Thus, we should be able to extract a monotone subsequence from a Cauchy sequence, which will be bounded since Cauchy sequences are bounded. From the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]], the subsequence must converge. Now we will show that the limit of the subsequence must equal the limit of the Cauchy sequence.
+3. Thus, we should be able to extract a monotone subsequence from a Cauchy sequence, which will be bounded since Cauchy sequences are bounded. From the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]], the subsequence must converge. Then we will show that the limit of the subsequence must equal the limit of the Cauchy sequence.
 
 ##### Step 1: Cauchy $\implies$ bounded
 
@@ -50,7 +51,7 @@ Here's how we'll go about proving this:
 >**Proof**
 >Given $\epsilon>0$, there exists an $N$ such that $|x_{m}-x_{n}|<\epsilon$ for all $m,n\geq N$. Thus, the sequence is bounded by $|x_{N}|+\epsilon$ for all $n\ge N$. It follows that 
 >$$
->M=\max\{ |x_{1}|, |x_{2}|, \dots, |x_{N-1}|, |x_{N}|+1 \}
+>M=\max\{ |x_{1}|, |x_{2}|, \dots, |x_{N-1}|, |x_{N}|+\epsilon \}
 >$$
 >is a bound for the sequence $(x_{n})$. ❏
 
@@ -81,8 +82,9 @@ Again, this argument can be made for any metric space.
 
 #### Proof in $\mathbb{R}^{k}$
 
-It can be shown that if a sequence is Cauchy in $\mathbb{R}^{k}$, it must be Cauchy slot-wise too (very similar argument to how we proved [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence#|slot-wise convergence]]). Since Cauchy sequences in $\mathbb{R}$ converge, every slot converges, and thus the vector sequence converges. 
+It can be shown that if a sequence is Cauchy in $\mathbb{R}^{k}$, it must be Cauchy slot-wise too (very similar argument to how we proved [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot-wise convergence]]). Since Cauchy sequences in $\mathbb{R}$ converge, every slot converges, and thus the vector sequence converges. 
 
+---
 ## Complete metric space
 
 >[!Definition]

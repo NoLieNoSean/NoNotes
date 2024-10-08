@@ -70,11 +70,12 @@ Same argument as in sequential compactness.
 ### Finite sets
 
 Any set $S$ of finite cardinality is compact. Any sequence in $S$ must have at least one element of $S$ repeating infinitely many times - take the subsequence required by sequential compactness to be a constant sequence of just this element. The condition for limit point compactness is vacuously true, since no infinite subset of $S$ exists.
+### The Cantor set
 
+The Cantor set is closed and bounded in $\mathbb{R}$. It follows from the [[#Heine Borel Theorem]] that it is compact.
 ### Open intervals in R (non example)
 
 $(a, b)$, $[a, b)$, $(a, b]$, and $\mathbb{R}$ are *not* compact. It is easy to find sequences in these sets which violate the definition of sequential compactness. Take the set of terms of these sequences to violate the definition of limit point compactness.
-
 ### Closed intervals in R
 
 $[a, b]$ is compact. 
@@ -84,10 +85,6 @@ $[a, b]$ is compact.
 **Limit point compactness:** Showing this follows a very similar strategy to Abbot's proof of the Bolzano-Weierstrass Theorem (bisection search). Given an infinite $S$, successively bisect the intervals, continuing with the half having infinite elements of $S$ at each step. This should give us nested intervals of the form $[a_{0}, b_{0}], [a_{1}, b_{1}], [a_{2}, b_{2}], \dots$, where the length of $[a_{n}, b_{n}]$ is $|a_{0}-b_{0}|/2^{n}$ ($\to 0$), and $|[a_{n}, b_{n}]\cap S|=\infty$. From the [[The real field#Nested interval property|nested interval property]], we know that $\bigcap_{i\geq 0}[a_{i}, b_{i}]$ is non-empty (in fact, we know it is a singleton, but we just need it to be non-empty for this to work). Let $p$ be an element in this intersection. Let $\epsilon>0$. We can find $k$ such that the length of $[a_{k}, b_{k}]<\epsilon$. Thus, $[a_{k}, b_{k}]\subset(p-\epsilon, p+\epsilon)$. So, any $\epsilon$ ball around $p$ contains elements of $S$, i.e, $p\in[a, b]$ is a limit point of $S$. 
 
 It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This can be shown using an analogue of bisection search in $\mathbb{R}^{k}$, where you divide the set into $2^{k}$ sections in each step. We will skip showing these are sequentially compact (follows trivially from BWT), since the two notions are actually equivalent, as we will now show.
-
-### The Cantor set
-
-The Cantor set is closed and bounded in $\mathbb{R}$. It follows from the [[#Heine Borel Theorem]] that it is compact.
 
 ---
 

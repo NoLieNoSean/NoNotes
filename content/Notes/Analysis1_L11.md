@@ -30,7 +30,7 @@ To-do:
 
 Few things to note:
 - While defining the limit of a function at a point $p$, we wanted it to be such that we could pick $p$ from outside the domain of $f$. In contrast, we want $f$ being defined at $p$ as a prerequisite for $f$ being continuous at $p$.
-- We do not want to restrict $p$ to be a limit point of the domain of $f$, since we would like to comment on weather $f$ is continuous or not at any point in its domain. 
+- We do not want to restrict $p$ to be a limit point of the domain of $f$, since we would like to comment on whether $f$ is continuous or not at any point in its domain. 
 ### Continuity at a point
 
 #### Definition
@@ -120,7 +120,7 @@ Note that the result from the previous section has been used to simplify the the
 For example, consider the function $f:\mathbb{R}\setminus \mathbb{N}\to \mathbb{R}$, defined by $f(x) = \lfloor x \rfloor$. 
 Given any point $p$ in the domain of the function, we can pick 
 $$
-\delta=\frac{\min(p-\lfloor p \rfloor, \lceil p \rceil-1)}{2}.
+\delta=\frac{\min(p-\lfloor p \rfloor, \lceil p \rceil-p)}{2}.
 $$
 For every $x\in(p-\delta, p+\delta)$, $f(x)=\lfloor p \rfloor$, and thus $|f(p)-f(x)|=0$, which will satisfy any $\epsilon$. So, $f$ is continuous.  
 
@@ -137,11 +137,11 @@ Rudin, 4.2
 >
 >**Proof of $\Longleftarrow$**
 >Proof by contradiction. Suppose $\lim_{ x \to p }f(x)=q$ is false (see how this is different from having $\ne$ here). Then, there exists a "bad" $\epsilon$ such that for all $\delta>0$, there exists some $x$ such that $0<d(x, p)<\delta$ and $d(f(x), q)\geq \epsilon$. 
->Let $(\delta_{i})=1, \frac{1}{2}, \frac{1}{3}, ..$, get $x_{i}$ such that $0<d(x_{i}, p)< \delta_{i}$ but $d(f(x_{i}), q)\ge \epsilon$. Then $x_{i}\to p$, but $f(x_{i})\not\to q$. ❏
+>Let $(\delta_{i})=1, \frac{1}{2}, \frac{1}{3}, ..$, get $x_{i}$ such that $0<d(x_{i}, p)< \delta_{i}$ but $d(f(x_{i}), q)\ge \epsilon$. Then $x_{i}\to p$, but $f(x_{i})\not\to q$. $\Rightarrow\Leftarrow$ ❏
 
 The usefulness of this theorem will become apparent when we define algebraic properties of limits in the next section.
 
->[!Note]
+>[!Info]
 >For the second part of the proof, we are given are statements about sequences, and what we need to show involves balls. This suggests that we should try to employ proof by contradiction, since there is no straightforward way to turn a statement about all sequences that converge to a point into one about all points within balls centered at a point.
 
 >[!Theorem] Corollary
@@ -167,7 +167,7 @@ Rudin, 4.4
 
 Similar proofs for (2) and (3).
 
->[!Note]
+>[!Info]
 >In (3), we have only required the limit of $g$ at $p$ to be non-zero, because this guarantees a $\delta$ window about $p$ where $g$ must be non-zero. 
 
 Have a peek at Rudin, 4.9.

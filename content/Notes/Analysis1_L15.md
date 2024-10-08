@@ -24,9 +24,8 @@ $\iff$ $C$ contains all of its [[Analysis1_L10#Limit points|limit points]] which
 $\iff$ $C$ is the closure of $C$. (Rudin, 2.27. Easy proof)
 
 More stuff about open and closed sets:
-- Every finite subset of a metric space $X$ is closed in $X$.
-- Any metric space is an open and closed subset of itself
-- In any metric space $X$, a singleton set is closed in $X$. 
+- Every finite subset of a metric space $X$ is closed in $X$. Particularly, singleton subsets of $X$ are closed in $X$.
+- Any metric space is an open and closed subset of itself.
 - In any metric space $X$, a singleton set is open in $X$ iff its element is an isolated point of $X$. 
 
 [[Analysis1_L14#Interior|Interior]] of $A$, denoted by $A\degree$, is the set of all interior points of $A$. It is defined as the union of all open sets contained within $A$. It is the largest open set contained within $A$. 
@@ -54,7 +53,7 @@ A stray theorem form Rudin.
 Rudin, 2.28
 
 >[!Theorem]
->Let $E$ be a non-empty set of real numbers which is bounded above. Then, $\sup E\in \overline{E}$. Hence $\sup E\in E$ if $E$ is closed.
+>Let $E$ be a non-empty set of real numbers which is bounded above. Then, $\sup E\in \overline{E}$. Hence $\sup E\in E$ if $E$ is closed and bounded.
 
 >**Proof**
 >For any $\epsilon>0$, there must exist $e\in E$ such that $\sup E-\epsilon<e<\sup E$. Thus, $B_{\epsilon}(\sup E, E)\setminus \{ \sup E \}\ne \emptyset$, i.e, $\sup E$ is a limit point of $E$, and $\sup E\in \overline{E}$. ❏
@@ -81,7 +80,7 @@ Rudin, 4.10
 >Let $f_{1}, f_{2}, \dots, f_{k}:X\to \mathbb{R}$. Let $\mathbf{f}:X\to \mathbb{R}^{k}$ be defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))^{T}$. Then, $\mathbf{f}$ is continuous $\iff$ each $f_{i}$ is continuous.
 
 >**Proof**
->Again, we only need to consider $p\in X$ which are limit points of $X$. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. ❏
+>Again, we only need to consider $p\in X$ which are limit points of $X$. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. The backwards implication in trivial. ❏
 
 >[!Theorem]
 >If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\mathbb{R}^{k}$, $\mathbf{f}+\mathbf{g}$ and $\mathbf{f}\cdot \mathbf{g}$ are continuous.
@@ -93,6 +92,8 @@ This follows from the two previous theorems.
 
 Rudin, 4.11
 
+- $\phi_{i}:\mathbb{R}^{k}\to \mathbb{R}$, $\phi_{i}(\mathbf{x})=x_{i}$, where $\mathbf{x}=(x_{1}, x_{2}, \dots, x_{k})$ is a continuous function. 
+- The mapping $\mathbf{x}\to |\mathbf{x}|$ is continuous.
 ---
 ## Subspace topology
 

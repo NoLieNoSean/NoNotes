@@ -72,7 +72,7 @@ So, as we have seen with the previous forms of compactness, open cover compactne
 >$X$ is open cover compact $\implies$ $X$ is [[Analysis1_L16#Limit point compactness|limit point compact]].
 
 >**Proof** 
->Consider an infinite subset $S\subset X$. Assume $S$ does not have a limit point. Thus, for every point $p \in X$ there exists $r_{p}>0$ such that $|B_{r_{p}}(p, S)|\le 1$. Consider the set $E=\{ B_{r_{p}}(p, X)\ |\ p \in X \}$. Clearly, $E$ is an open cover of $X$. However, the union of a finite subset of $E$ will contain only finitely many elements of $S$. So, $X$ cannot be open cover compact. (We have proved the contrapositive of the claim). ❏
+>We will prove the contrapositive. Consider an infinite subset $S\subset X$. Assume $S$ does not have a limit point. Thus, for every point $p \in X$ there exists $r_{p}>0$ such that $|B_{r_{p}}(p, S)|\le 1$. Consider the set $E=\{ B_{r_{p}}(p, X)\ |\ p \in X \}$. Clearly, $E$ is an open cover of $X$. However, the union of a finite subset of $E$ will contain only finitely many elements of $S$. So, $X$ cannot be open cover compact. ❏
 
 This will allow us to import all the results we proved for limit point compact sets to open cover compact sets.
 

@@ -4,6 +4,8 @@ tags:
   - MOC
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
+
+Edit
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
@@ -49,6 +51,7 @@ Proper lecture notes start here.
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
 - [[Analysis1_L19]] <- *Mid term syllabus ends here.*
 - [[Analysis1_L20]]
+- [[Analysis1_L21]] 
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.

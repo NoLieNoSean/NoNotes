@@ -66,7 +66,7 @@ $$
 >
 >**Case 2:** $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) > \sup \{ x\ |\ p_{n_{k}}\to x \}$.
 >
->Let $\epsilon>0$. Note that $(a_{n})$ is a monotone decreasing sequence. Since $(a_{n})\to A$, there exists $a_{k}$ such that $A<a_{k}<A+\epsilon$, and since $a_{k}$ is the supremum of the tail $\{ p_{n}, p_{n+1}, \dots \}$, there exists $p_{i}$, $i\geq k$ such that $A<p_{i}<a_{k}<A+\epsilon$. Thus, we can construct a subsequence $(p_{n_{k}})$ of $(p_{n})$ which converges to $A$. However, this contradicts our hypothesis that $B$ is an upper bound of all subsequential limits. ❏
+>Let $\epsilon>0$. Note that $(a_{n})$ is a monotone decreasing sequence. Since $(a_{n})\to A$, there exists $a_{k}$ such that $A<a_{k}<A+\epsilon$, and since $a_{k}$ is the supremum of the tail $\{ p_{k}, p_{k+1}, \dots \}$, there exists $p_{i}$, $i\geq k$ such that $A<p_{i}\leq a_{k}<A+\epsilon$. Thus, we can construct a subsequence $(p_{n_{k}})$ of $(p_{n})$ which converges to $A$. However, this contradicts our hypothesis that $B$ is an upper bound of all subsequential limits. ❏
 
 ---
 ## Some observations and theorems

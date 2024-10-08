@@ -7,39 +7,42 @@ tags:
 1034
 
 ---
+## Variations on $\lim_{ x \to a }f(x)=L$
 
-**Variations on $\lim_{ x \to a }f(x)=L$**
+>[!Definition] General definition
+>Let $f:E\to Y$, $E\subset X$, $a$ is a limit point of $E$.
+>$\lim_{ x \to a }f(x)=L$ means for any neighborhood $U$ of $L$, there exists a neighborhood $V$ of $a$ such that $f(V\cap E\setminus \{ a \})\subset U$.
 
-Let $f:E\to Y$, $E\subset X$, $a$ is a limit point of $E$.
+We wish to define what it means to take the limit of a function as $x\to \infty$. To do this, We must first define what neighborhoods of $\infty$ and $-\infty$ are.
 
-General definition
-$\lim_{ x \to a }f(x)=L$ means for any neighborhood $U$ of $L$, there exists a neighborhood $V$ of $a$ such that $f(V\cap E\setminus \{ a \})\subset U$.
+Rudin, 4.32
 
-4.32
-Work with extended reals.
-a neighborhood of infinity is of the form $(x, \infty)$. for -infinity is $(-\infty, x)$. 
+>[!Definition]
+>For any real $c$, the set of real numbers $x$ such that $x>c$ is called a neighborhood of infinity and is denoted by $(c, \infty)$. Ditto for $-\infty$.
 
-$\lim_{ x \to a }f(x)=\infty$ means for all real $M$, there exists $\delta>0$ such that $0<|x-a|<\delta$ $\implies$ $f(x)>M$.
-
-$\lim_{ x \to -\infty }f(x)=L$ means for all $\epsilon>0$, there exists $N$ such that $x<N$ $\implies$ $|f(x)-L|<\epsilon$. 
+Now, we can define limits as $x$ approaches $\infty$ and limits that are themselves $\infty$. Of the nine combinations, two examples are given:
+- $\lim_{ x \to a }f(x)=\infty$ means for all real $M$, there exists $\delta>0$ such that $0<|x-a|<\delta$ $\implies$ $f(x)>M$.
+- $\lim_{ x \to -\infty }f(x)=L$ means for all $\epsilon>0$, there exists $N$ such that $x<N$ $\implies$ $|f(x)-L|<\epsilon$.
 
 
+Rudin, 4.34
 
-4.34
-$f, g$ defined on $E\subset R\cup \{ -\infty, \infty \}$. As $t\to x$, $f(t)\to A$ and $g(t)\to B$.
+>[!Definition]
+>$f, g$ are defined on $E\subset R$. As $t\to x$, $f(t)\to A$ and $g(t)\to B$, where $x$, $A$, and $B$ are in the extended real number system. 
+>Then, $A$ and $B$ are unique, and $(f+g)(t)\to A+B$, $fg(t)\to AB$, provided the RHS is defined.
 
-Then, $A$ and $B$ are unique, and $(f+g)(t)\to A+B$, $fg(t)\to AB$, provided the RHS is defined.
 
 ---
+## One sided limits
 
-Definition
-$(a, b)\subset \mathbb{R}$, $a\le c<b$ 
-$f:(a, b)\to \mathbb{R}$.
-
-$f(c+)=\lim_{ x \to c^{+} }f(x)=L$ means any of these
-- for all $\epsilon>0$, there exists $\delta>0$ such that $0<x-c<\delta$ $\implies$ $|f(x)-L|<\epsilon$.
-- use general definition with $E=[c, b)$
-- for any sequence $\{ t_{n} \}$ in $(c, b)$ such that $t_{n}\to c$, is is true that $f(t_{n})\to L$. 
+>[!Definition]
+>Let $(a, b)\subset \mathbb{R}$, and $a\le c<b$. 
+>$f:(a, b)\to \mathbb{R}$.
+>
+>Then, $f(c+)=\lim_{ x \to c^{+} }f(x)=L$ means any of these:
+>- For all $\epsilon>0$, there exists $\delta>0$ such that $0<x-c<\delta$ $\implies$ $|f(x)-L|<\epsilon$.
+>- Use the general definition with $E=[c, b)$.
+>- For any sequence $\{ t_{n} \}$ in $(c, b)$ such that $t_{n}\to c$, is is true that $f(t_{n})\to L$. 
 
 ---
 

@@ -119,3 +119,14 @@
 - /aʊ/
 	- mouth
 		- /maʊθ/
+
+
+
+
+
+Moral stand?
+
+see a catch 22 situation here?
+
+DEspite the devotion of the son, the sotry ends in bitterenss. How could this have been avoided?
+

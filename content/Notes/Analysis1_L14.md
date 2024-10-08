@@ -54,12 +54,6 @@ In general,
 >- The cantor set; it is an arbitrary intersection of closed sets, and [[#Open and closed sets under intersections and unions|hence]] is closed.
 >- Sets of the form $[x, \infty)$ and $(\infty, x]$.
 
->[!Theorem]
->In $\mathbb{R}$, there cannot exist an uncountable collection of disjoint open intervals. 
-
->**Proof** 
->Let $A$ be a collection of disjoint open intervals. The key is to try to show $A\sim \mathbb{Q}$ instead of $A\sim \mathbb{N}$. From the density of the rationals, we know that we can associate a unique rational number with each interval in $A$. So, the cardinality of $A$ must be less than or equal to $\mathbb{Q}$, which implies $A$ cannot be uncountable. ❏
-
 ---
 ## An aside
 

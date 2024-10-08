@@ -16,7 +16,6 @@ For any positive integer $n$, let $\mathbb{N}_{n}$ be the set whose elements are
 >A finite set cannot be equivalent to one of its subsets. This is, however, possible for infinite sets.
 
 ---
-
 ## Countable sets
 
 ### Stripping down a countable set
@@ -51,7 +50,6 @@ If a set can be arranged into a single list, then deleting some elements from th
 >Let $E$ be a countable subset of $A$, and let $E$ consist of the sequences $s_{1}, s_{2}, s_{3}, \dots$ . Construct a sequence $s$ as follows: If the $n$th digit in $s_{n}$ is 1, we let the $n$th digit ok $s$ be 0, and vice versa. Then, the sequence differs from every member of $E$ in at least one place, hence $s\not\in E$. But clearly $s\in A$, so $E$ is a proper subset of $A$. 
 >We have shown that every countable subset of $A$ is a proper subset of $A$. It follows that $A$ is uncountable. ❏
 
-
 >[!question]- Why does't this work for $\mathbb{Q}$?
 >The number we construct from the diagonalization procedure has an infinite number of decimals, i.e, it is irrational.
 
@@ -77,3 +75,8 @@ This theorem also implies that the set of all real numbers is uncountable, since
 
 This combined with our proof that the union of two countable sets is countable, and that $\mathbb{Q}$ is countable, implies that $\mathbb{I}$, the set of all irrational numbers, is not countable since $\mathbb{R}=\mathbb{Q}\cup \mathbb{I}$.
 
+>[!Theorem]
+>In $\mathbb{R}$, there cannot exist an uncountable collection of disjoint open intervals. 
+
+>**Proof** 
+>Let $A$ be a collection of disjoint open intervals. The key is to try to show $A\sim \mathbb{Q}$ instead of $A\sim \mathbb{N}$. From the density of the rationals, we know that we can associate a unique rational number with each interval in $A$. So, the cardinality of $A$ must be less than or equal to $\mathbb{Q}$, which implies $A$ cannot be uncountable. ❏
