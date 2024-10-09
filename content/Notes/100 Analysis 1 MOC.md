@@ -52,6 +52,8 @@ Proper lecture notes start here.
 - [[Analysis1_L19]] <- *Mid term syllabus ends here.*
 - [[Analysis1_L20]]
 - [[Analysis1_L21]] 
+- [[Analysis1_L22]]
+- [[Analysis1_L23]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
