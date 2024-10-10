@@ -102,6 +102,7 @@ Defined perfect sets, and noted that they are not important for this course.
 >[!Definition]
 >$E$ is perfect if $E$ is closed and every point of $E$ is a limit point of $E$. 
 
+---
 ## Open and closed sets under intersections and unions
 
 Rudin, 2.24

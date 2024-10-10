@@ -5,7 +5,9 @@ tags:
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
 
-Edit
+>[!Info] Notation
+>- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 
+
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]

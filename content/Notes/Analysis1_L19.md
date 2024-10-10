@@ -13,7 +13,7 @@ tags:
 >Let $f:E\to Y$, $E\subset X$, $a$ is a limit point of $E$.
 >$\lim_{ x \to a }f(x)=L$ means for any neighborhood $U$ of $L$, there exists a neighborhood $V$ of $a$ such that $f(V\cap E\setminus \{ a \})\subset U$.
 
-We wish to define what it means to take the limit of a function as $x\to \infty$. To do this, We must first define what neighborhoods of $\infty$ and $-\infty$ are.
+When $X=\mathbb{R}$, we wish to define what it means to take the limit as $x\to \infty$, and when $Y\subset \mathbb{R}$, we wish to define what it means for $L$ to be $\infty$. To do this, we must first define what neighborhoods of $\infty$ and $-\infty$ in $\mathbb{R}$ are.
 
 Rudin, 4.32
 
@@ -21,9 +21,11 @@ Rudin, 4.32
 >For any real $c$, the set of real numbers $x$ such that $x>c$ is called a neighborhood of infinity and is denoted by $(c, \infty)$. Ditto for $-\infty$.
 
 Now, we can define limits as $x$ approaches $\infty$ and limits that are themselves $\infty$. Of the nine combinations, two examples are given:
-- $\lim_{ x \to a }f(x)=\infty$ means for all real $M$, there exists $\delta>0$ such that $0<|x-a|<\delta$ $\implies$ $f(x)>M$.
-- $\lim_{ x \to -\infty }f(x)=L$ means for all $\epsilon>0$, there exists $N$ such that $x<N$ $\implies$ $|f(x)-L|<\epsilon$.
+- Let $Y=\mathbb{R}$. $\lim_{ x \to a }f(x)=\infty$ means for every neighborhood $(M, \infty)$ of $\infty$, there exists a neighborhood $V$ of $a$ such that $f(V\cap E\setminus \{ a \})\subset (M, \infty)$. 
+- Let $X=\mathbb{R}$. $\lim_{ x \to -\infty }f(x)=L$ means for every neighborhood $U$ of $L$, there exists a neighborhood $V=(-\infty, N)$ of $-\infty$ such that $f((-\infty, N)\cap E)\subset U$. 
 
+What this really says is that the notion of limit and the notion of continuity can be defined for any topological space. Continuity makes sense in such a situation, because open sets makes sense. 
+ 
 
 Rudin, 4.34
 
