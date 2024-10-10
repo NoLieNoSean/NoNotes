@@ -4,7 +4,8 @@ tags:
   - ANA1
   - Processed
 ---
-Wednesday, 11 September
+2024-09-11, Wednesday
+1530
 
 ---
 

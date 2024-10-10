@@ -4,9 +4,8 @@ tags:
   - ANA1
   - Processed
 ---
-
-
-Friday, 6 September
+2024-09-06, Friday
+1030
 
 ---
 ## What does $\lim_{ x \to p }f(x) = p$ mean?
