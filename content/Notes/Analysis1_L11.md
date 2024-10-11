@@ -3,12 +3,9 @@ tags:
   - Lecture
   - ANA1
   - Processed
+date: 2024-09-11
+time: 15:30
 ---
-2024-09-11, Wednesday
-1530
-
----
-
 ![[1726055561814.jpg]]
 ![[1726055561810.jpg]]
 

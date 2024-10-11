@@ -3,10 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-2024-09-13, Friday
-1403
-
+date: 2024-09-13
+time: 14:03
 ---
 ## Recall
 

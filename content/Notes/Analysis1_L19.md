@@ -3,10 +3,8 @@ tags:
   - ANA1
   - Lecture
   - Processed
----
-2024-09-27, Friday
-1034
-
+date: 2024-09-27
+time: 10:34
 ---
 ## Infinite limits and limits at infinity
 

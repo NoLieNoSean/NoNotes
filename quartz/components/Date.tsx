@@ -20,8 +20,9 @@ export function getDate(cfg: GlobalConfiguration, data: QuartzPluginData): Date 
 
 export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
   return d.toLocaleDateString(locale, {
+    weekday: 'long',
     year: "numeric",
-    month: "short",
+    month: "long",
     day: "2-digit",
   })
 }
@@ -29,3 +30,4 @@ export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
 export function Date({ date, locale }: Props) {
   return <>{formatDate(date, locale)}</>
 }
+ 

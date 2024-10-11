@@ -3,10 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-2024-09-06, Friday
-1030
-
+date: 2024-09-06
+time: 10:30
 ---
 ## What does $\lim_{ x \to p }f(x) = p$ mean?
 

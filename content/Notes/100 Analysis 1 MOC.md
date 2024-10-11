@@ -52,7 +52,7 @@ Proper lecture notes start here.
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
 - [[Analysis1_L19]] ✅ <- *Mid term syllabus ends here.*
-- [[Analysis1_L20]]
+- [[Analysis1_L20]] ✅
 - [[Analysis1_L21]] 
 - [[Analysis1_L22]]
 - [[Analysis1_L23]]
@@ -73,6 +73,7 @@ Proper lecture notes start here.
 - [[Analysis1_T2]]
 - [[Analysis1_T3]]
 - [[Analysis1_T4]]
+
 
 
 # To-do

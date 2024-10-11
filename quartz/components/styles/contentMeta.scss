@@ -4,10 +4,8 @@
 
   &[show-comma="true"] {
     > span:not(:last-child) {
-      margin-right: 8px;
-
       &::after {
-        content: ",";
+        content: " | ";
       }
     }
   }

@@ -29,9 +29,17 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
-      if (fileData.dates) {
-        segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
+      if (fileData.frontmatter) {
+        if (fileData.frontmatter.date)
+          if (fileData.dates) {
+            segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
+          }
       }
+      
+      if (fileData.frontmatter) {
+        if (fileData.frontmatter.time) segments.push(fileData.frontmatter.time)
+      }
+
 
       // Display reading time if enabled
       if (options.showReadingTime) {
@@ -42,6 +50,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         segments.push(displayedTime)
       }
 
+      
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)
 
       return (

@@ -3,16 +3,14 @@ tags:
   - Lecture
   - ANA1
   - Processed
+date: 2024-09-18
+time: 15:24
 ---
-2024-09-18, Wednesday
-1524
 %% 
-
 ![[1726743654020.jpg]]
 ![[1726743654012.jpg]]
  %%
  
----
 ## Review
 
 $V$ is [[Analysis1_L13#Open sets|open]] in $X$
