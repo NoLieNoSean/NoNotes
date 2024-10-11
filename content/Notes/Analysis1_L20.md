@@ -6,14 +6,15 @@ tags:
 2024-09-27, Friday
 1402
 
-to do
-- [ ] uniform continuity
+---
+![[1728577113539.jpg]]
+
+To do:
+- [x] uniform continuity
 - [ ] connectedness
 
----
-
 >[!Recall]
->definition of open cover compactness
+>Definition of [[Analysis1_L17#Absolute and relative definitions of open cover compactness|open cover compactness]].
 
 ---
 

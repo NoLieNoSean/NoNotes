@@ -51,7 +51,7 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
-- [[Analysis1_L19]] ✅<- *Mid term syllabus ends here.*
+- [[Analysis1_L19]] ✅ <- *Mid term syllabus ends here.*
 - [[Analysis1_L20]]
 - [[Analysis1_L21]] 
 - [[Analysis1_L22]]

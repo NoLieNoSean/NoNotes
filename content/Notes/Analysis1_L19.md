@@ -93,7 +93,7 @@ Rudin, 4.29
 >Let $s$ be the supremum mentioned. Given $\epsilon>0$, find $t_{1}\in(a, x)$ such that $s-\epsilon<f(t_{1})\le s$. Take $\delta=x-t_{1}$. For all $t$ such that $t_{1}<t<x$($0<x-t<\delta$), $f(t_{1})\le f(t)\le s$. ❏
 >
 >**Proof of 2**
->Observe that $\inf\{ f(t)\ |\ x<t<b \}=\inf\{ f(t)\ |\ x<t<y \}$. Thus, $f(x^{+})$ and $f(y^{-})$ are the infimum and supremum of the same set. the result follows. ❏
+>Observe that $\inf\{ f(t)\ |\ x<t<b \}=\inf\{ f(t)\ |\ x<t<y \}$. Thus, $f(x^{+})$ and $f(y^{-})$ are the infimum and supremum of the same set. The result follows. ❏
 
 Rudin, 4.30
 

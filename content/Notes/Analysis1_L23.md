@@ -3,6 +3,10 @@
 
 ---
 
+![[1728577113476.jpg]]
+
+---
+
 Rudin, 5.1
 
 Consider $f: [a, b]\to \mathbb{R}$
