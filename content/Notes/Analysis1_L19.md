@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 ---
 2024-09-27, Friday
 1034
