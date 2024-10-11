@@ -82,7 +82,7 @@ Ditto.
 ### Definition of limit point in metric spaces
 
 >[!Definition]
->Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$. 
+>Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$.
 
 ### Definition of limit of a function in metric spaces
 
