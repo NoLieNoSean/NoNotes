@@ -3,18 +3,10 @@ tags:
   - Lecture
   - ANA1
   - Processed
+date: 2024-09-13
+time: 10:31
 ---
-
-
-2024-09-13, Friday
-1031
-
----
-![[1726481994456.jpg]]
-![[1726481994452.jpg]]
-
-To-do:
-- [x] Open and closed sets
+%% ![[1726481994456.jpg]] %%![[1726481994452.jpg]]
 
 ---
 

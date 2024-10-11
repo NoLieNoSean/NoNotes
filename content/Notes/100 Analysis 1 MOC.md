@@ -5,7 +5,9 @@ tags:
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
 
-Edit
+>[!Info] Notation
+>- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 
+
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
@@ -49,9 +51,11 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
-- [[Analysis1_L19]] <- *Mid term syllabus ends here.*
-- [[Analysis1_L20]]
+- [[Analysis1_L19]] ✅ <- *Mid term syllabus ends here.*
+- [[Analysis1_L20]] ✅
 - [[Analysis1_L21]] 
+- [[Analysis1_L22]]
+- [[Analysis1_L23]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
@@ -69,6 +73,7 @@ Proper lecture notes start here.
 - [[Analysis1_T2]]
 - [[Analysis1_T3]]
 - [[Analysis1_T4]]
+
 
 
 # To-do

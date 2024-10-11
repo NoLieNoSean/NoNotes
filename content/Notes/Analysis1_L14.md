@@ -3,10 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-2024-09-13, Friday
-1403
-
+date: 2024-09-13
+time: 14:03
 ---
 ## Recall
 
@@ -102,6 +100,7 @@ Defined perfect sets, and noted that they are not important for this course.
 >[!Definition]
 >$E$ is perfect if $E$ is closed and every point of $E$ is a limit point of $E$. 
 
+---
 ## Open and closed sets under intersections and unions
 
 Rudin, 2.24

@@ -3,11 +3,9 @@ tags:
   - Lecture
   - ANA1
   - Processed
+date: 2024-09-11
+time: 15:30
 ---
-Wednesday, 11 September
-
----
-
 ![[1726055561814.jpg]]
 ![[1726055561810.jpg]]
 
@@ -143,6 +141,7 @@ The usefulness of this theorem will become apparent when we define algebraic pro
 
 >[!Info]
 >For the second part of the proof, we are given are statements about sequences, and what we need to show involves balls. This suggests that we should try to employ proof by contradiction, since there is no straightforward way to turn a statement about all sequences that converge to a point into one about all points within balls centered at a point.
+### Uniqueness of limit of a function
 
 >[!Theorem] Corollary
 >If $f$ has a limit at $p$, this limit is unique.

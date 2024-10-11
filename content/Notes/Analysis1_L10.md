@@ -3,11 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-
-
-Friday, 6 September
-
+date: 2024-09-06
+time: 10:30
 ---
 ## What does $\lim_{ x \to p }f(x) = p$ mean?
 
@@ -49,9 +46,11 @@ Rudin, 2.18
 >[!Definition]
 >If $p\in E$ and $p\not\in E'$, $p$ is called an *isolated point* of $E$. 
 
-Note that 
-- If $p\in E$, $p$ may or may not be in $E'$.
-- If $p\not\in E$, $p$ may or may not be in $E'$.
+Note that the membership of $p$ in $E'$ has got nothing to do with the membership of $p$ in $E$. 
+- $p \in E$, $p\in E'$: For example, $1\in(0, 2)$
+- $p \in E$, $p\not\in E'$: $p$ is an isolated point of $E$. For example, $1\in \{ 1, 2 \}$
+- $p\not\in E$, $p\in E'$: For example, $0\not\in(0, 1)$
+- $p\not\in E$, $p\not\in E'$: For example, $2\not\in(0, 1)$
 
 Observe that if $E$ has a limit point, it cannot be of finite cardinality.
 
@@ -83,14 +82,14 @@ Ditto.
 ### Definition of limit point in metric spaces
 
 >[!Definition]
->Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$. 
+>Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$.
 
 ### Definition of limit of a function in metric spaces
 
 Rudin, 4.1
 >[!Definition]
 >Let $X$ and $Y$ be metric spaces, $E\subset X$, $f:E\to Y$, $p$ is a limit point of $E$.
->We write *$\lim_{ x \to p }f(x)= q$* , $q\in Y$ if for any $\epsilon>0$ there exists a $\delta>0$ such that $0<d_{X}(x, p)<\delta$ implies $d_{Y}(f(x), q)<\epsilon$.
+>We write *$\lim_{ x \to p }f(x)= q$* , $q\in Y$ if for any $\epsilon>0$ there exists a $\delta>0$ such that $0<d_{X}(x, p)<\delta$ implies $d_{Y}(f(x), q)<\epsilon$, i.e, $f(B_{\delta}(p, E)\setminus \{ p \})\subset B_{\epsilon}(q, Y)$.
 
 ---
 

@@ -3,10 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-2024-09-20, Friday
-1031
-
+date: 2024-09-20
+time: 10:31
 ---
 %% 
 ![[1726814241809.jpg]]
@@ -15,7 +13,7 @@ tags:
 ![[1726814241801.jpg]] %%
 ![[1726814241798.jpg]]
 
-To-do
+To-do:
 - [x] Study sequential and limit point compactness. Show that their absolute and relative definitions are equivalent, essentially showing that they are intrinsic properties. Prove equivalence of the two notions for metric spaces.
 - [x] Examples of compact metric spaces
 - [x] Applications of compactness in $\mathbb{R}$
@@ -129,7 +127,10 @@ Rudin, 2.34
 ---
 ## Extreme value theorem
 
-Consider $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[Analysis1_L15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$ since it is closed. Hence the extreme value theorem.
+Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[Analysis1_L15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$ since it is closed. Hence the theorem.
+
+>[!Theorem] Extreme value theorem
+>A continuous function from a non-empty compact space to a subset of the real numbers attains a maximum and a minimum value.
 
 ---
 ## Closed subsets of compact sets are compact
