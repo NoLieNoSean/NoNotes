@@ -23,7 +23,7 @@ Let $T:V\to W$ is a linear map, with $B_{V}$ and $B_{W}$ being bases of $V$ and 
 > \end{bmatrix}
 > $$
  
-## Homomorphism
+## Homomorphisms
 
 > [!Definition]
 >For any two vector spaces $V$ and $W$, a homomorphism is defined be the following

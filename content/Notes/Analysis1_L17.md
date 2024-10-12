@@ -164,7 +164,7 @@ Tasks:
 Briefly discussed uniform continuity.
 ### Another exercise in working with open cover compactness 
 
-Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] theorem, for open cover compact sets sets without using the equivalence.
+Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] theorem (Image of a compact set under a continuous function is compact), for open cover compact sets sets without using the equivalence.
 
 >**Proof**
 >Consider an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $f(X)$. 

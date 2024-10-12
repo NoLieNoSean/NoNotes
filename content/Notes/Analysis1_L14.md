@@ -19,7 +19,7 @@ time: 14:03
 >Given an arbitrary $\epsilon$ challenge, we want $\delta>0$ such that $d(x, p)<\delta$ $\implies d(f(x), f(p))<\epsilon$. This is the same as saying we want $\delta>0$ such that $x\in B_{\delta}(p)\implies f(x)\in B_{\epsilon}(f(p))$. 
 >We know that $f^{-1}(B_{\epsilon}(f(p)))$ is open in $X$ and contains $p$. Importantly, it contains a ball with center $p$. Take $\delta$ to be the radius of this ball. ❏
 
-Since $f^{-1}$ preserves complements, we also have $f^{-1}$(closed set in $Y$) is a closed set in $X$.  
+Since $f^{-1}$ preserves complements, we also have $f^{-1}$(closed set in $Y$) is a closed set in $X$.
 
 ---
 ## Examples and observations on open and closed sets
