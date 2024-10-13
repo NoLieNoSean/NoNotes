@@ -42,7 +42,7 @@ T(cT^{-1}\mathbf{v}) & =c\mathbf{v}  & T\text{ is linear}\\
 cT^{-1}\mathbf{v} & =T^{-1}c\mathbf{v}& T\text{ is bijective}
 \end{align}
 $$
-Thus, begin a bijective linear map is sufficient to be an isomorphism between two vector spaces. 
+Thus, being a bijective linear map is sufficient to be an isomorphism between two vector spaces. 
 
 In metric spaces, the structure is defined by the distances between every pair of points. Preserving the structure is akin to preserving these distances, i.e, if $f:X\to Y$ is an isomorphism of metric spaces, $d_{X}(p, q)=d_{Y}(f(p), f(q))$. Thus, an isomorphism of metric spaces, called an *isometry*, is a bijective distance preserving function (even here, it so happens that the inverse automatically preserves distances).
 
