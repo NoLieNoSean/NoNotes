@@ -3,10 +3,8 @@ tags:
   - ANA1
   - Lecture
   - Processed
----
-2024-09-25, Wednesday
-1537
-
+date: 2024-09-25
+time: 15:37
 ---
 ![[IMG_20240925_164725.jpg]]
 
@@ -88,7 +86,7 @@ $$
 \iff  & \left( \bigcap_{\beta \in J}V_{\beta}^{c} \right)\cap K=\emptyset.
 \end{align}
 $$
-Thus, we can say $K$ is compact iff, for any collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
+Thus, we say $K$ is compact iff, for any collection of closed sets $B'=\{ K_{\alpha} \}_{\alpha\in I}$, 
 $$
 \begin{align}
 \left( \bigcap_{\alpha \in I}K_{\alpha} \right)\cap K=\emptyset \implies \exists\ \text{ finite }J\subset I \text{ such that } \left( \bigcap_{\beta \in J}K_{\beta} \right)\cap K=\emptyset.

@@ -3,10 +3,8 @@ tags:
   - Lecture
   - ANA1
   - Processed
----
-2024-09-20, Friday
-1400
-
+date: 2024-09-20
+time: 14:00
 ---
 ![[1726947785622.jpg]]
 
@@ -65,6 +63,9 @@ $E$ is open cover compact as per definition 1 as a metric space in its own right
 >Where $W_{\alpha}=V_{\alpha}\cap E$. Note that each $W_{\alpha}$ is open in $E$. Thus, $\{ W_{\alpha} \}_{\alpha \in I}$ is an open cover of $E$, and from the hypothesis it must have a finite subcover $\{ W_{\beta} \}_{\beta \in J\subset I}$. It follows that $\{ V_{\beta} \}_{\beta \in J\subset I}$ also covers $V$, since $W_{\alpha}\subset V_{\alpha}$ for every $\alpha$. ❏
 
 So, as we have seen with the previous forms of compactness, open cover compactness in intrinsic.
+
+>[!info] An analogy
+>Consider a policeman in each open set of an open cover of a set $X$ whose can see only inside their open set. If $X$ is compact, regardless of how myopic the policemen are (regardless of how small the open sets are/ how many open sets are present in the cover), a finite number of them will be able to watch the entire set $X$.
 
 ### Equivalence with limit point compactness
 
@@ -163,7 +164,7 @@ Tasks:
 Briefly discussed uniform continuity.
 ### Another exercise in working with open cover compactness 
 
-Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] theorem, for open cover compact sets sets without using the equivalence.
+Prove [[Analysis1_L16#Image of a compact set under a continuous function|this]] theorem (Image of a compact set under a continuous function is compact), for open cover compact sets sets without using the equivalence.
 
 >**Proof**
 >Consider an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $f(X)$. 
