@@ -5,11 +5,13 @@
 
 ## Recall:
 
-Let $T:V\to W$ is a linear map, with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. The matrix of $T$ in a given basis is the matrix whose columns are coordinate vectors of $T(B_{V})$ with respect to the basis $B_{W}$.
+Let $T:V\to W$ be a [[Algebra1_L11#Linear maps|linear map]], with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. The matrix of $T$ in a given basis is the matrix whose columns are coordinate vectors of $T(B_{V})$ with respect to the basis $B_{W}$.
 
 > [!example]
 > Let  $T : V \to W$ be  the derivative map where $V = \mathbb{P}_{3}$ and $W =\mathbb{P}_{2}$. Let the bases be
-> $$B_{V} = \{ 1,x,x^2,x^3 \} \quad \quad B_{W} = \{ 1,x,x^2 \}$$
+> $$
+> B_{V} = \{ 1,x,x^2,x^3 \} \quad \quad B_{W} = \{ 1,x,x^2 \}
+> $$
 > Observe that:
 > $$
 >  T(1)  = 0 \quad\quad T(x) = 1 \quad\quad T(x^2) = 2x \quad\quad T(x^3) = 3x^2
@@ -157,11 +159,11 @@ Let $\text{rank} \ T = r$. Now,
 5) Now $M_{\beta_{V}, \beta_{W}}(T)$ will be 
 $$
 \left[\begin{array}{ccccc|ccccc}
-0 & 0 & 0 & \dots & 0 & 1 & 0 & 0 & \dots & 0 \\
-0 & 0 & 0 & \dots & 0 & 0 & 1 & 0 & \dots & 0 \\
-0 & 0 & 0 & \dots & 0 & 0 & 0 & 1 & \dots & 0 \\
+0 & 0 & 0 & \dots & 0 & \mathbf{1} & 0 & 0 & \dots & 0 \\
+0 & 0 & 0 & \dots & 0 & 0 & \mathbf{1} & 0 & \dots & 0 \\
+0 & 0 & 0 & \dots & 0 & 0 & 0 & \mathbf{1} & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 1 \\
+0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & \mathbf{1} \\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0
