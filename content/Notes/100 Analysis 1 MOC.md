@@ -5,8 +5,10 @@ tags:
 ---
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
 
->[!Info] Notation
+>[!Info]- Notation
 >- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 
+>- $\sqcup$ denotes disjoint union.
+>- $\overline{P}$ denotes the closure of $P$ in the contextually appropriate space.
 
 # Compiled Notes
 ## The real and complex number systems
@@ -52,9 +54,12 @@ Proper lecture notes start here.
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
 - [[Analysis1_L19]] ✅ <- *Mid term syllabus ends here.*
+	- Infinite limits and limits at infinity, discontinuities, monotonic functions. 4.25, 4.26, 4.27, 4.28, 4.29, 4.30, 4.32, 4.33, 4.34
 - [[Analysis1_L20]] ✅
-- [[Analysis1_L21]] 
-- [[Analysis1_L22]]
+	- Uniform continuity
+- [[Analysis1_L21]] ✅
+	- Topological spaces, homeomorphisms, 4.17
+- [[Analysis1_L22]] ✅
 - [[Analysis1_L23]]
 
 >[!Excalidraw]-
@@ -74,11 +79,8 @@ Proper lecture notes start here.
 - [[Analysis1_T3]]
 - [[Analysis1_T4]]
 
-
-
+%% 
 # To-do
-
-
 - [ ] Revise notes 
 - [ ] Abbot chapters 3, 4
 - [ ] 1.21, 3.20. Lecture 12
@@ -87,11 +89,20 @@ Proper lecture notes start here.
 - [ ] Compile Lecture 19
 - [ ] Review quiz 1 solutions
 - [ ] Review HW 1 solutions
-
-
+- [ ] Cauchy functional equaitons
 - [ ] note 3.11 b, 4.3
 - [ ] 3.21, Thm 3.7, 3.17 
+- [ ] No set S can be in bijection with its power set (classic Cantor diagonalization argument)
+- [ ] Try to prove the Schroder-Bernstein theorem: if there is an injection from S to T and an injection from T to S, then there is a bijection between S and T. Then locate a proof and see if you can read a little and complete the rest. (Check abbot)
+- [ ] $a_{0}\ge a_{1}\ge \dots \ge 0$. $\lim_{ n \to \infty }a_{n}=0$. Show that $\sum(-1)^{n}a_{n}$ converges.
+- [ ] Fixed point theorem
+      $M$ is a complete metric space.
+      $T:M\to M$ is continuous.
+      $d(T(p), T(q))<k(d(p,q))$, where $k$ is a constant less than 1.
+      Then, $T$ has a unique fixed point (If $T(x_{0}) = x_{0}$, then, $x_{0}$ is called a fixed point).
+      It is easy to see that at most one fixed point can exist for $T$ given the distance inequality.
 
+ %%
 
 
 # Rudin sections
@@ -173,19 +184,42 @@ Proper lecture notes start here.
 	8. Alternate definition of continuity using open sets + corollary
 	9. 
 
-
-- [ ] No set S can be in bijection with its power set (classic Cantor diagonalization argument)
-- [ ] Try to prove the Schroder-Bernstein theorem: if there is an injection from S to T and an injection from T to S, then there is a bijection between S and T. Then locate a proof and see if you can read a little and complete the rest. (Check abbot)
-- [ ] $a_{0}\ge a_{1}\ge \dots \ge 0$. $\lim_{ n \to \infty }a_{n}=0$. Show that $\sum(-1)^{n}a_{n}$ converges.
-- [ ] Fixed point theorem
-      $M$ is a complete metric space.
-      $T:M\to M$ is continuous.
-      $d(T(p), T(q))<k(d(p,q))$, where $k$ is a constant less than 1.
-      Then, $T$ has a unique fixed point (If $T(x_{0}) = x_{0}$, then, $x_{0}$ is called a fixed point).
-      It is easy to see that at most one fixed point can exist for $T$ given the distance inequality.
-
 # Homework
 - [[Analysis1_HW1.pdf]]
 - [[Analysis1_HW2.pdf]]
 - [[Analysis1_HW3.pdf]]
 - [[Analysis1_HW4.pdf]]
+
+%%
+# HW 5
+
+**Submit these five problems.**
+
+4.10, 4.13 (see problem 3.21), 4.15, 2.19, 5.1
+
+**Do for yourself but do not submit.**
+
+1) Remaining problems in 4.8-15, 4.21-22, 2.20-21. In 4.11 is the result true if f is assumed to be merely continuous? Compare with test problem 1b.
+
+2) **Understand connectedness** combining Rudin's treatment and what we did in class. Here is a sketch.
+
+A _separation_ of a metric space X means writing X as a disjoint union of two nonempty sets that are both open in X (and hence both are closed in X). We say that X is disconnected if X has a separation. Otherwise X is connected.  
+
+As per Rudin’s definition, two subsets A, B of a metric X are _separated_ when the closure in X of either set is disjoint from the other set, i.e., A and B are disjoint _and_ neither contains a limit point of the other. This notion is useful to investigate connectedness of subspaces of X, in view of the following fairly simple fact that we saw:
+
+Subsets A, B of X are _separated_ if and only if A and B constitute a _separation_ _of their union_. This is essentially because for A ⊂ Y ⊂ X, the limit points of A in the metric space Y are just those limit of points of A (in X) that lie in Y. 
+
+**Optional**
+
+4.17-19, 4.23-26. Note that the natural answer to midterm Q3 solves 4.20. 
+
+Prove the following easy results. 
+
+1. If A and B form a separation of X then any connected subset of X is contained in A or in B.
+2. If a family of connected subsets of X have a point in common, then their union is connected.
+3. Define x ~ y if points x and y belong to a connected subset of X. This is an equivalence relation on X, whose equivalence classes are called the (connected) components of X. Show that any component is indeed connected and any connected subset of X is contained in one of the components.
+4. If A is connected, then adding any subset of its limit points to A gives a connected set. In particular the closure of A is connected. So connected components of X are closed in X. The components are also open in X if their number is finite.
+5. The connected components of ℚ are singletons. Such a space is called totally disconnected.
+6. Look up path connectedness, a more intuitive notion. How would you define path components? Path connected spaces are easily seen to be connected. Problem 2.20 is a special case.
+
+%%
