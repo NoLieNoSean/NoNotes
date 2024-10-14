@@ -36,6 +36,8 @@ Things to note:
 
 ### Continuous functions defined on compact sets are uniformly continuous
 
+Rudin, 4.19
+
 >[!Theorem]
 >Let $X$ be compact, $f:X\to Y$ be continuous. Then, $f$ is uniformly continuous.
 
@@ -59,6 +61,8 @@ We will now show that these theorems do not hold when $X$ is not compact.
 
 We know that compact sets are [[Analysis1_L16#Characterization of compact sets|closed and bounded]], i.e, compact $\implies$ closed and bounded. So, (not closed) or (not bounded) $\implies$ not compact.
 Also, if $f$ does not attain a maximum or minimum, it is either unbounded, or is bounded and $f(X)$ does not contain its supremum and infimum. 
+
+Rudin, 4.20
 
 >[!Theorem]
 >Let $E\subset \mathbb{R}$ be non compact.
