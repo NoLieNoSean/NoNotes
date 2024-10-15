@@ -162,10 +162,10 @@ $$
 
 Let $T:V\to W$ be a linear map with $\dim V = p$ and $\dim W = q$.
 Let $\text{rank} \ T = r$. Now,
-1) Take a basis of $\ker T$ ;                    $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$
-2) Extend to get a basis of $V$,  $\beta_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$
+1) Take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$.
+2) Extend to get a basis of $V$,  $\beta_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$.
 3) We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|here]]).
-4) Extend this to a basis of $W$. $\beta_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$
+4) Extend this to a basis of $W$. $\beta_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$.
 5) Now $M_{\beta_{V}, \beta_{W}}(T)$ will be 
 $$
 \left[\begin{array}{ccccc|ccccc}
@@ -174,9 +174,10 @@ $$
 0 & 0 & 0 & \dots & 0 & 0 & 0 & \mathbf{1} & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & \mathbf{1} \\
+\hline
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0
-\end{array}\right]
+\end{array}\right].
 $$
 (Basically $I_{q\times q}$ but with the last $q-r$ elements of its diagonal 0).
