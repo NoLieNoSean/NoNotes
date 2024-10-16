@@ -1,83 +1,127 @@
+## Determinants
+### Another Formula
+Let $M$ be an $n\times n$ matrix.
+Let $M_1,M_2,...,M_n$ be the rows of the matrix.
+We have $M_{i}^{t}= \begin{bmatrix} M_{i1}\\ M_{i2} \\ \cdots \\ M_{in} \end{bmatrix} = \sum\limits_{j = 1}^{n}M_{ij}e_{j}$ where $e_j$ is the $jth$ vector of the standard basis in canonical order
+$$\mathrm{det}(M_{1}^{t},M_{2}^{t},\cdots,M_{n}^{t})= \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right)$$
 
->[!Recall]
->[[Algebra1_L15#Invariant Subspaces| Invariant Subspace]]
->[[Algebra1_L15#What will the matrix of $T$ with respect to $ beta_v$ look like?|Matrix of a linear operator with respect to an invariant subspace]]
->[[Algebra1_L15#If the vector space is the direct sum of two invariant subspaces| If V is the direct sum of two invariant subspaces]]
 
 
-## Eigenvectors and Eigenvalues
->[!Definition]
->An eigenvector $v$ of a linear map $A$ is a ***nonzero*** vector such that $T(v) = \lambda v$
+By multilinearity of the determinant,
+$$
+\mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right) = \sum\limits_{i_1,i_2,...,i_n}M_{1i_{1}}M_{2i_{2}}...M_{ni_{n}}\det(e_{i_1},e_{i_2},...,e_{i_n})
+$$
+where $i_{k}\in \{1,..,n\}$
+The antisymmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
+Therefore we only need to consider the case when all the $i_k$ are pairwise distinct. I.e, a permutation of $\{1,..,n\}$
+
+### Permutations
+We now begin a brief study of permutations in order to simplify the determinant
 
 >[!definition]
->An eigenvalue of $A$ is a scalar $\lambda$ such that the equations $Av = \lambda v$ has ***nontrivial*** solution
+>A bijection of $\{1,..,n\}$ with itself is defined to be a permutation of $\{1,..,n\}$. $S_n$ is denoted as the set of permutations of $\{1,..,n\}$
 
-If $Av = \lambda v$ for some nontrivial $v$, then we say
-1. $v$ is an eigenvector for $\lambda$
-2. $\lambda$ is an eigenvalue for $v$
->[!Example]
->Let $$A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$$
->Now consider the vectors $v = \left[\begin{array}{c}1 \\ 1\end{array}\right], w = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
->Notice that $Av = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4v$. Thus $v$ is an eigenvector of $A$. 
->On the other hand, $Aw = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda w$ for any $\lambda \in \mathbb{R}$. Thus it is not an eigenvector of $A$
+>[!notation]
+>Remember the elements of $S_n$ are functions. Suppose $\sigma\in S_n$. We write $\sigma(i) = \sigma_i$
 
->[!Example] Example: (Reflection)
->Let $T:\mathbb{R}^2\mapsto\mathbb{R}^2$ be the linear map that reflects over the line $L :y = -x$
->Consider vectors $w$ and $w'$, perpendicular to $L$ and parallel to $L$ respectively. 
->Notice that $w$ is an eigenvector with eigenvalue $-1$ and $w$ is an eigenvector with value $1$.
->![[Screenshot 2024-10-16 at 10.12.49 PM.png]]
+>[!definition]
+>Define the length of a permutation $\sigma$ denoted by $l(\sigma) := \# \{(i,j) | i < j \text{ and } \sigma_{i}>\sigma_{j}\}$ where $\# X$ is the number of elements in a set $X$
 
+>[!exercise]
+> Show that a permutation $\sigma$ can be reordered using $l(\sigma)$ steps
 
->[!Example] Example: Projection
->Let $T:\mathbb{R}^{2}\mapsto \mathbb{R}^2$ be the projection map that projects a vector vertically onto the $x$-axis. Notice once again that vectors along the line $y = 0$ ($x$ axis) and the line perpendicular to the $x$ axis consist of eigenvectors.
+### Back to determinants
+From our study above, we see that 
+$$\det(e_{\sigma_1},e_{\sigma_2},...,e_{\sigma_{n})}= (-1)^{l(\sigma)}$$
+Define the quantity
+$$(-1)^{l(\sigma)} := \mathrm{sgn}(\sigma)$$
 
->[!Example] Example: Rotation
->Consider a rotation map $R_{\theta}$ on $\mathbb{R}^2$ that rotates a vector by an angle $\theta \neq n\pi, n\in \mathbb{Z}$ 
->in this case we can see geometrically itself that no eigenvectors exist
+Keeping the discussion till now in mind, we see that the determinant must be uniquely determined, meaning that there is only one determinantal map from $\mathbb{R}^{n\times n}$ to $\mathbb{R}$. The upshot of this is that all formulas covered in the previous lectures for the determinant give the same answer.
 
-The preceding discussion suggests that linear maps somehow have a "preferred direction"
+### Properties of The Determinant
 
->[!Lemma] Lemma: Eigenvectors with different eigenvalues are independent
+>[!lemma]
+>$\det(A) = 0 \iff A$ is not invertible
 
 >**Proof**
->Suppose eigenvectors $v_1,v_2,...,v_k$ of $A$ have distinct eigenvalues $\lambda_1,\lambda_2,..,\lambda_k$
->If the vectors are linearly independent, we are done.
->If they are not independent , choose maximal $j$ such that $v_1,...,v_{j-1}$ is linearly independent. Note that $j > 1$. This means $v_1,v_2,...,v_j$ is not linearly independent. Reorder the basis such that $v_j$ does not have eigenvalue 0. Thus we have a nontrivial relation 
->$$
->\sum\limits_{i = 1}^{j-1}\alpha_{i}v_{i} = v_j
->$$
->applying $A$ to both sides, we have 
->$$
->\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i}= \lambda_{j}v_j
->$$
->$$
->\implies \sum\limits_{i = 1}^{j-1}\alpha_i\frac{\lambda_i}{\lambda_j}v_{i}= v_j
->$$
->this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly independent set, which isnt possible.
+>A is invertible 
+>$\implies$ $\mathrm{RREF}(A) = id$
+>$\implies \det(A) \neq 0$
+>
+>A is not invertible
+>$\implies$ $\mathrm{RREF(A)}$ has a zero row
+>$\implies$ $\det(\mathrm{RREF}(A)) = 0$
+>$\implies \det(A) = 0$
 
 >[!Corollary]
->An $n\times n$ matrix has atmost $n$ eigenvalues.
+>If $A$ is an $n\times n$ matrix and the rows of $A$ are linearly dependent, then $\det(A) = 0$
 
-### Eigenspaces
-#### Goal: 
-For a given real number and a linear map $A$, 
-1. Check if it is an eigenvalue of $A$
-2. If yes, find all vectors corresponding to said eigenvalue
+>[!Lemma(Multiplicativity)]
+>$\det(AB) = \det(BA)$
 
-Eigenvectors with eigenvalue $\lambda$, if they exist, are nonzero solutions of $$\begin{align}Av &= \lambda v\end{align} \\ \iff (A-\lambda I)v = 0\iff v\in \ker(A-\lambda I)$$
->[!Definition] Definition: $\lambda-$eigenspace
->Let $A$ have eigenvalue $\lambda$. Then the $\lambda-$eigenspace if $A$ is the solution set of $(A-\lambda I)v = 0$. i.e, $\ker (A-\lambda I)$. Notice that since $\ker (A-\lambda I)$ is a subspace, the $\lambda-$eigenspace of an eigenvalue $\lambda$ is a subspace
+>**Proof**
+>Case 1: $A$ is not invertible
+>In this case, the product $AB$ will not be invertible. Thus we have
+>$$\det(AB) = 0 = 0\det(B) = \det(A)\det(B)$$
+>Case 2: A is invertible
+>Define the function $\mathrm{d}(B) = \frac{\det(AB)}{\det(A)}$ 
+>This is well defined, since $\det(A) \neq 0$.
+>Observe that $\mathrm{d}$ is a determinantal map. Therefore, $\mathrm{d}(B) = \det(B)$ and we are done.
 
->[!Example]
->Let $A = \begin{bmatrix}2 & -4\\ -1 & -1\end{bmatrix}$. We want to check if $\lambda = 3$ is an eigenvalue.
+>[!Corollary]
+>$\det(A^{n})= \det(A)^n$
+>$\prod_{i=1}^{n}A_i$ is invertble $\iff$ each $A_i$ is inveritble
+
+>[!Proposition]
+>$\det(A) = \det(A^t)$
+
+
+>**Proof**
+>consider the function $f(A) = det(A^t)$
+> Exercise: prove that $f$ is a determinantal map and therefore $f(A) = \det(A)$
+> 
+
+>[!Corollary]
+>All statements about row operations etc,. can be made about column operations
+
+## Invariant Subspaces
+
+>[!Definition]
+>Let $W\subseteq V$  be a subspace of $V$. $W$ is said to be invariant under a linear map $T$, or $T-$invariant, if $T(W)\subseteq W$
+
+i.e, $W$ is $T$ invariant whenever $T(w)\in W \impliedby w\in W$
+
+This is useful, since we can now define a linear map from $W$
+ to $W$ called the restriction of $T$ to $W$
+>[!Definition]
+>If $W$ is a $T-$invariant subspace, we define the restriction of $T$ to $W$ denoted by $T|_{W} : W \mapsto W$ given by $T|_{W}(w) = T(w)$
 >
->$A - 3I = \begin{bmatrix}-1&-4 \\ -1&-4 \end{bmatrix}$
->
->Row reducing,
->
->$\mathrm{RREF}(A) = \begin{bmatrix}1 &4\\ 0& 0\end{bmatrix}$
->
->We can read off the solution $\begin{bmatrix}-4\\1 \end{bmatrix}$. We can also be sure this constitutes entirely of a basis of the $3-$eigenspace, since the dimension of the $3-$eigenspace is 1
 
 
+Let $T:V\mapsto V$ be a linear map. If $W$ is a $T-$invariant subspace, we can take a basis $(w_1,w_2,...,w_k)$ of $W$ and extend it to a basis $\beta_{v} = (w_1,w_2,...,w_k,v_1,v_2,...,v_{n-k})$ of $V$ where $n = \dim V$.
 
+#### What will the matrix of $T$ with respect to $\beta_v$ look like?
+
+1. The first $k$ columns of $T$ will be the image of the $w_is$ , but since all of them map into $W$, they are expressible as linear combinations of only the vectors in $W$. 
+2. This is nice, since the coordinates of $(v_1,v_2,...,v_{n-k})$ in the vectors $T(w_1),T(w_2),..,T(w_k)$ will be zero. Thus the matrix of $T$ with respect to the basis $\beta_v$ will look like:
+$$
+\mathcal{M}_{\beta_{v}}{(T)}= \left[\begin{array}{c|c}
+A &B\\
+\hline
+0 & C
+\end{array}\right]
+$$
+
+
+3. Another upshot is that 
+$$A = \mathcal{M}_{\beta_w}(T|_{W})$$
+where $\beta_{w} = (w_1,w_2,..,w_k)$
+
+##### If the vector space is the direct sum of two invariant subspaces
+4. If it happens that $V = W_{1} \oplus W_{2}$ and also  $W_1$ , $W_2$ are $T-$ invariant with bases $\beta_{w_{1}}= (w_1,w_2,...,w_k)$ and $\beta_{w_{2}}= (w_1',w_2',...,w_{n-k}')$ then the matrix of $T$ in the basis $\beta_{V} = (w_1,w_2,...,w_k,w_1',w_2',...,w_{n-k}')$ will look like $$
+\mathcal{M}_{\beta_{v}}(T)= \left[\begin{array}{c|c}
+A& 0\\
+\hline
+0&B
+\end{array}\right]$$
+where $A = \mathcal{M}_{\beta_{w_{1}}}(T), B = \mathcal{M}_{\beta_{w_2}}(T)$
