@@ -15,7 +15,7 @@ time: 10:30
 >[!Definition]
 >For a metric space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both open in $X$. 
 
-Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are both closed in $X$. A set which is both open and closed in called *clopen* set. So, $A$ and $B$ are clopen in $X$. 
+Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are both closed in $X$. A set which is both open and closed in called a *clopen* set. So, $A$ and $B$ are clopen in $X$. 
 
 >[!Definition]
 >If $X$ has a separation, $X$ is called *disconnected*. If $X$ is not disconnected, $X$ is *connected*.
