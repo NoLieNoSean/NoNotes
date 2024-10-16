@@ -2,7 +2,7 @@
 tags:
   - MOC
 ---
-TAs: Harsh, Kaustav, Aleek
+**TAs:** Harsh, Kaustav, Aleek
 
 # Notes
 Really?
@@ -12,7 +12,8 @@ Really?
 [[CM1 HW3]]
 [[CM1 HW4]]
 [[CM1 HW5]]
-[[CM1_HW6]]
+[[CM1 HW6]]
+[[CM1 HW7]]
 
 
 
