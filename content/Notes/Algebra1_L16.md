@@ -44,10 +44,16 @@ The preceding discussion suggests that linear maps somehow have a "preferred dir
 >If the vectors are linearly independent, we are done.
 >If they are not independent , choose maximal $j$ such that $v_1,...,v_{j-1}$ is linearly independent. Note that $j > 1$. This means $v_1,v_2,...,v_j$ is not linearly independent. Reorder the basis such that $v_j$ does not have eigenvalue 0. Thus we have a nontrivial relation 
 >$$
- \sum\limits_{i = 1}^{j-1}\alpha_{i}v_{i} = v_j
-$$
-applying $A$ to both sides, we have $$\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i}= \lambda_{j}v_j$$
-$$\implies \sum\limits_{i = 1}^{j-1}\alpha_i\frac{\lambda_i}{\lambda_j}v_{i}= v_j$$ this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly      independent set, which isnt possible.
+>\sum\limits_{i = 1}^{j-1}\alpha_{i}v_{i} = v_j
+>$$
+>applying $A$ to both sides, we have 
+>$$
+>\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i}= \lambda_{j}v_j
+>$$
+>$$
+>\implies \sum\limits_{i = 1}^{j-1}\alpha_i\frac{\lambda_i}{\lambda_j}v_{i}= v_j
+>$$
+>this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly independent set, which isnt possible.
 
 >[!Corollary]
 >An $n\times n$ matrix has atmost $n$ eigenvalues.
