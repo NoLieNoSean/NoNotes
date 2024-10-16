@@ -64,7 +64,10 @@ For a given real number and a linear map $A$,
 1. Check if it is an eigenvalue of $A$
 2. If yes, find all vectors corresponding to said eigenvalue
 
-Eigenvectors with eigenvalue $\lambda$, if they exist, are nonzero solutions of $$\begin{align}Av &= \lambda v\end{align} \\ \iff (A-\lambda I)v = 0\iff v\in \ker(A-\lambda I)$$
+Eigenvectors with eigenvalue $\lambda$, if they exist, are nonzero solutions of
+$$
+\begin{align}Av &= \lambda v\end{align} \\ \iff (A-\lambda I)v = 0\iff v\in \ker(A-\lambda I)
+$$
 >[!Definition] Definition: $\lambda-$eigenspace
 >Let $A$ have eigenvalue $\lambda$. Then the $\lambda-$eigenspace if $A$ is the solution set of $(A-\lambda I)v = 0$. i.e, $\ker (A-\lambda I)$. Notice that since $\ker (A-\lambda I)$ is a subspace, the $\lambda-$eigenspace of an eigenvalue $\lambda$ is a subspace
 
