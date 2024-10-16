@@ -73,6 +73,6 @@ $$
 $$
 $r$ is only defined when  $-1\le\cos\theta< -\frac{1}{\epsilon}$. Thus, the trajectory of the particle is the left branch of the hyperbola. 
 
-![[Pasted image 20241017000954.png]]
+![[Pasted image 20241017003046.png]]
 
 
