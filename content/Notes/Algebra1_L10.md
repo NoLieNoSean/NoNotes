@@ -3,10 +3,8 @@ tags:
   - ALG1
   - Lecture
   - Processed
----
-2024-09-12, Thursday
-1400
-
+date: 2024-09-12
+time: 14:00
 ---
 ## Recall and orient
 

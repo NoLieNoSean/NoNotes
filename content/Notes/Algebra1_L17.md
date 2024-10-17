@@ -1,4 +1,10 @@
-
+---
+tags:
+  - ALG1
+  - Lecture
+date: 2024-10-16
+time: 11:50
+---
 >[!Recall]
 >[[Algebra1_L16#Invariant Subspaces| Invariant Subspace]]
 >[[Algebra1_L16#What will the matrix of $T$ with respect to $ beta_v$ look like?|Matrix of a linear operator with respect to an invariant subspace]]

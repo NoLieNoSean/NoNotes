@@ -1,3 +1,10 @@
+---
+tags:
+  - ALG1
+  - Lecture
+date: 2024-10-15
+time: 14:00
+---
 ## Determinants
 ### Another Formula
 Let $M$ be an $n\times n$ matrix.

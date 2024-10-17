@@ -2,12 +2,10 @@
 tags:
   - ALG1
   - Lecture
+date: 2024-09-19, Thursday
+time: 14:05
 ---
 
-2024-09-19, Thursday
-1405
-
----
 
 Claim: Any linear map $T:\mathbb{R}^{p}\to \mathbb{R}^{q}$ is of the form $f_{A}(\mathbf{x})$ for some $q\times p$ matrix $A$. 
 

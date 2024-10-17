@@ -3,12 +3,9 @@ tags:
   - ALG1
   - Lecture
   - Processed
+date: 2024-09-17
+time: 13:57
 ---
-2024-09-17, Tuesday
-1357
-
----
-
 ## Recall
 
 >[!Recall]

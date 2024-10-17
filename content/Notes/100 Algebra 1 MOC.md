@@ -28,10 +28,11 @@ Proper lecture notes start here.
 - [[Algebra1_L11]] ✅
 - [[Algebra1_L12]] (unfinished)
 - [[Algebra1_L13]] ✅
-- [[Algebra1_L14]]
-- [[Algebra1_L15]]
-- [[Algebra1_L16]]
-- [[Algebra1_L17]]
+- [[Algebra1_L14]] %%  (handwritten notes) %%
+- [[Algebra1_L15]] %% (handwritten notes) %%
+- [[Algebra1_L16]] %% (online) %%
+- [[Algebra1_L17]] %% (online) %%
+- [[Algebra1_L18]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
@@ -64,5 +65,5 @@ Proper lecture notes start here.
 >- [[Algebra1_T2]]
 
 
-[[Hofmann Kunze select theorems and definitions]]
+%% [[Hofmann Kunze select theorems and definitions]] %%
 
