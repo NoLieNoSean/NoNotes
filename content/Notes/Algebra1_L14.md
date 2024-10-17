@@ -18,7 +18,7 @@ time: 14:02
 >We define the following operations, which make $V\oplus W$ a vector space.
 >$$
 >\begin{align}
->\text{Addition} & &(v_{1},\  w_{1}) \ + \ (v_{2}, \ w_{2})  & = (v_{1} + v_{2}, w_{1} + w_{2}) \\ \text{Scalar Multiplication} & 
+>\text{Addition} & &(v_{1},\  w_{1}) \ + \ (v_{2}, \ w_{2})  & = (v_{1} + v_{2}, w_{1} + w_{2}) \\ \text{Scalar Multiplication} & &
 >c(v,\ w) & =(cv,\ cw)
 >\end{align}
 >$$
@@ -112,16 +112,6 @@ $$
 > \dim \left( \sum_{i=1}^n W_{i} \right) = \sum_{i=1}^{n} (-1)^{n+1} \left(\sum_{1 \leq i_{1}<\dots<i_{k} \leq n} \dim(W_{i_{1}} \cap \dots \cap W_{i_{k}})\right)
 > $$
 
-Example for $n=3$: 
-$$
-\begin{align}
-\dim(A+B+C)  = & \ \dim A+\dim(B+C)-\dim(A\cap(B+C)) \\
-  = & \ \dim A+\dim B +\dim C -\dim(B\cap C)\\ & -\dim(A\cap B+A\cap C)\\ 
-  = & \ \dim A+\dim B +\dim C\\
-  & -\dim(B\cap C)-\dim(A\cap B)-\dim(A\cap C) \\
- & +\dim(A\cap B\cap C)
-\end{align}
-$$
 A more general statement is:
 $$
 \begin{align}
@@ -162,4 +152,4 @@ A determinant is a function $\det : M_{n \times n}(\mathbb{R}) \to \mathbb{R}$ w
 > $$
 > \det A = {(-1)^r}\, \frac{\text{ product of diagonal entries of }B}{\text{product of scaling factors}}
 > $$
-> where $r$ is the number of rows swapped in getting from $A$ to $B$. Will be proved in the next lecture.
+> where $r$ is the number of rows swapped in getting from $A$ to $B$. [[Algebra1_L15|Proof]]

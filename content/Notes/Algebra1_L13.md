@@ -9,7 +9,7 @@ time: 14:09
 ![[1728577113536.jpg]]
 ## Recall
 
-Let $T:V\to W$ be a [[Algebra1_L11#Linear maps|linear map]], with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. Define isomorphisms $\phi:V\to \mathbb{R}^{\text{Dim }V}$ and $\psi:W\to \mathbb{R}^{\text{Dim }W}$. Then, the columns of the matrix of $T$ are $\psi T\phi ^{-1} \mathbf{v}_{1}$, $\psi T\phi ^{-1} \mathbf{v}_{2}$, ..., $\psi T\phi ^{-1} \mathbf{v}_{\text{Dim} V}$ where $\mathbf{v}_{i}\in B_{V}$. 
+Let $T:V\to W$ is a linear map, with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. The matrix of $T$ in the given bases is the matrix whose columns are coordinate vectors of $T(B_{V})$ with respect to the basis $B_{W}$.
 
 > [!example]
 > Let  $T : V \to W$ be  the derivative map where $V = \mathbb{P}_{3}$ and $W =\mathbb{P}_{2}$. Let the bases be
