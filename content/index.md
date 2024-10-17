@@ -1,6 +1,8 @@
-These are my notes from my first semester at CMI. 
+Here are my notes from the first semester at CMI, with additional contributions from Karan and Anirudha.
 
 These were written primarily for personal use; I make no claims about their quality, completeness, or accuracy. 
+
+Pull requests are welcome!
 
 !!@!@!@!!!@!@!@@!@!@!@@
 
