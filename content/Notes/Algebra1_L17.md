@@ -12,8 +12,9 @@ time: 11:50
 
 
 ## Eigenvectors and Eigenvalues
+
 >[!Definition]
->An eigenvector $v$ of a linear map $A$ is a ***nonzero*** vector such that $T(v) = \lambda v$
+>An eigenvector $v$ of a linear map $A$ is a *nonzero* vector such that $T(v) = \lambda v$
 
 >[!definition]
 >An eigenvalue of $A$ is a scalar $\lambda$ such that the equations $Av = \lambda v$ has ***nontrivial*** solution
@@ -21,18 +22,19 @@ time: 11:50
 If $Av = \lambda v$ for some nontrivial $v$, then we say
 1. $v$ is an eigenvector for $\lambda$
 2. $\lambda$ is an eigenvalue for $v$
+
 >[!Example]
 >Let $$A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$$
 >Now consider the vectors $v = \left[\begin{array}{c}1 \\ 1\end{array}\right], w = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
 >Notice that $Av = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4v$. Thus $v$ is an eigenvector of $A$. 
 >On the other hand, $Aw = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda w$ for any $\lambda \in \mathbb{R}$. Thus it is not an eigenvector of $A$
 
->[!Example] Example: (Reflection)
+>[!Example] Example: Reflection
 >Let $T:\mathbb{R}^2\mapsto\mathbb{R}^2$ be the linear map that reflects over the line $L :y = -x$
 >Consider vectors $w$ and $w'$, perpendicular to $L$ and parallel to $L$ respectively. 
 >Notice that $w$ is an eigenvector with eigenvalue $-1$ and $w$ is an eigenvector with value $1$.
+>
 >![[Screenshot 2024-10-16 at 10.12.49 PM.png]]
-
 
 >[!Example] Example: Projection
 >Let $T:\mathbb{R}^{2}\mapsto \mathbb{R}^2$ be the projection map that projects a vector vertically onto the $x$-axis. Notice once again that vectors along the line $y = 0$ ($x$ axis) and the line perpendicular to the $x$ axis consist of eigenvectors.

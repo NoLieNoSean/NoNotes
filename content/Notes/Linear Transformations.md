@@ -55,7 +55,7 @@ So, by this *column by coordinate* definition of matrix by vector multiplication
 
 ---
 ### Linear transformations as a vector space
-If we fi vector spaces $V$ and $W$ and consider the collection of all linear transformations from $V$ to $W$ (denoted by $\mathcal{L}(V,W)$), we can define two operations on $\mathcal{L}(V,W)$: multiplication by a scalar and addition like so
+If we fix vector spaces $V$ and $W$ and consider the collection of all linear transformations from $V$ to $W$ (denoted by $\mathcal{L}(V,W)$), we can define two operations on $\mathcal{L}(V,W)$: multiplication by a scalar and addition like so
 1. $(\alpha T)\mathbf{v} = \alpha(T\mathbf{v})\ \ \forall \mathbf{v} \in V\ \ \forall T \in \mathcal{L}(V,W)$
 2. $(T_{1}+T_{2})\mathbf{v} = T_{1}\mathbf{v}+T_{2}\mathbf{v}\ \ \forall \mathbf{v}\in V\ \ \forall T\in \mathcal{L}(V,W)$
 

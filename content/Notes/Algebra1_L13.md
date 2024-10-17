@@ -38,16 +38,16 @@ Let $T:V\to W$ be a [[Algebra1_L11#Linear maps|linear map]], with $B_{V}$ and $B
 Contrast with isomorphism, which is a structure preserving map between two structures of the same type which can be reversed by an inverse mapping.
 
 A linear map is a homomorphism of vector spaces. 
-$$
-\hom(V,W) \equiv \{ \text{All linear maps} \ T: V \to W \}
-$$
-#### Relation to Matrices
 
-For two vector spaces $V$ and $W$ with dimensions $p$ and $q$ respectively, $M_{B_{V}, B_{W}}(T)$ is a $q \times p$ matrix.
-As every $T$ has a single matrix for a fixed set of bases,  $M_{B_{V}, B_{W}}(T)$ is a function. That is, 
-$$M_{B_{V}, B_{W}}(T):\hom(V, W)\to \{ q\times p \text{ matrices} \}$$
+$\hom(V,W) \equiv \{ \text{all linear maps} \ T: V \to W \}$.
+### Relation to Matrices
+
+For two vector spaces $V$ and $W$ with dimensions $p$ and $q$ and $T:v\to W$, $M_{B_{V}, B_{W}}(T)$ is a $q \times p$ matrix, as we have [[Algebra1_L12#Matrices of linear maps in fdvsp|seen]]. As every $T$ has a single matrix for a fixed set of bases,  $M_{B_{V}, B_{W}}(T)$ is a function. That is,
+$$
+M_{B_{V}, B_{W}}(T):\hom(V, W)\to \{ q\times p \text{ matrices} \}.
+$$
 **Exercise:** Prove that $M_{B_{V}, B_{W}}$ is an isomorphism of vector spaces.
-Thus, $\hom(V,W) \cong \{ q \times p \ \text{matrices} \}$. Therefore $\dim \hom(V,W) = p\times q$
+Thus, $\hom(V,W) \cong \{ q \times p \ \text{matrices} \}$. Therefore $\dim \hom(V,W) = p\times q$.
 
 ---
 ## Change of basis
@@ -141,14 +141,14 @@ $$
 >C_{r\times p}&=M_{B_{V}, B_{U}}(S \circ T) & = (c_{ij})
 >\end{align}
 >$$
->Recall the representation of [[Linear Transformations]] as matrices.
+>Recall the [[Linear Transformations#Matrix-vector multiplication as a linear transformation|representation of linear transformations as matrices]].
 >$$c_{i,j} = \text{Coefficient of} \ \mathbf{u_{i}} \ \text{in} \ (S \circ T)(\mathbf{v_{j}})$$
 >Now,
 >$$
 >\begin{align}
 >(S \circ T)(\mathbf{v_{j}}) &= S\left( \sum_{\nu=1}^{q} a_{\nu, j} \mathbf{w_{\nu}}\right) \\
 >&= \sum_{\nu=1}^{q} a_{\nu, j} S(\mathbf{w_{\nu}})\\
->&= \sum_{\nu=1}^{q} a_{\nu, j} \sum_{\lambda=1}^{r}b_{\lambda,\nu} \mathbf{u_{\lambda}}
+>&= \sum_{\nu=1}^{q} a_{\nu, j} \sum_{\lambda=1}^{r}b_{\lambda,\nu} \mathbf{u_{\lambda}}.
 >\end{align}
 >$$
 >As we want the coefficient of $\mathbf{u_{i}}$, we will only take the $\lambda = i$ term from the second sum. That is
@@ -158,26 +158,32 @@ $$
 >❏
 
 ---
-## A "Good basis" for a linear map
+## A "Good" basis for a linear map
 
-Let $T:V\to W$ be a linear map with $\dim V = p$ and $\dim W = q$.
-Let $\text{rank} \ T = r$. Now,
-1) Take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$.
-2) Extend to get a basis of $V$,  $\beta_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$.
-3) We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|here]]).
-4) Extend this to a basis of $W$. $\beta_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$.
-5) Now $M_{\beta_{V}, \beta_{W}}(T)$ will be 
+Let $T:V\to W$ be a linear map with $\dim V = p$ and $\dim W = q$. We want to choose bases $B_{V}$ and $B_{W}$ such that $M_{B_{V}, B_{W}}(T)$ is as simple as possible. 
+
+Let $\text{rank} \ T = r$. Now, take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$ (Recall the [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]]).
+Extend to get a basis of $V$,  $B_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$.
+We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|here]]).
+Extend this to a basis of $W$. $B_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$.
+Now $M_{B_{V}, B_{W}}(T)$ will be 
 $$
 \left[\begin{array}{ccccc|ccccc}
-0 & 0 & 0 & \dots & 0 & \mathbf{1} & 0 & 0 & \dots & 0 \\
-0 & 0 & 0 & \dots & 0 & 0 & \mathbf{1} & 0 & \dots & 0 \\
+0 & 0 & 0 & \dots & 0 & \mathbf{1} & 0 & 0 & \dots & 0 \\ 
+0 & 0 & 0 & \dots & 0 & 0 & \mathbf{1} & 0 & \dots & 0 \\ 
 0 & 0 & 0 & \dots & 0 & 0 & 0 & \mathbf{1} & \dots & 0 \\
-\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\ 
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & \mathbf{1} \\
-\hline
-0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0 \\
+\hline 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0
-\end{array}\right].
+\end{array}\right]
 $$
-(Basically $I_{q\times q}$ but with the last $q-r$ elements of its diagonal 0).
+More concisely, 
+$$
+\Large
+\left[\begin{array}{c|c}
+\mathbf{0}_{r\times(p-r)} & I_{r\times r} \\
+\hline\mathbf{0}_{(q-r)\times(p-r)}& \mathbf{0}_{(q-r)\times r}
+\end{array}\right]
+$$

@@ -88,50 +88,40 @@ We have already shown that any basis of $\mathbb{R}^{n}$ has $n$ vectors. This i
 
 What this is essentially saying is that you can "exchange" or "replace" $\mathbf{v}$ with $\mathbf{u}$ while conserving the span of $S$ (We can express any linear combination of elements in $S$ as a linear combination of elements in $(S\setminus \{ \mathbf{v} \})\cup \{ \mathbf{u} \}$ by replacing $\mathbf{v}$ in the linear combination with the expression for $\mathbf{v}$  in terms of $\mathbf{u}$ obtained in the proof above). 
 
-
-#### One more Lemma
+#### Embedding a linearly independent set in a spanning set
 
 >[!Theorem] Lemma
->If $I\subset V$ is a finite linearly independent set, and $S\subset V$ is a finite spanning set, then $|I|\le|S|$. 
-
-Define
-$I:=\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots \mathbf{u}_{m} \}$
-$S:=\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots \mathbf{v}_{n} \}$
-
-The lemma claims that $m\le n$.
-
-We will first show that if $m\le n$ then, after rearranging $v_{j}$ if necessary, $\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. A sub-lemma, if you will.
-
->[!Warning]
->I am certain the following proof is wrong; there may exist infinitely many linear combinations of $S'$ equalling $\mathbf{u}_{m'}$, and we do not know that $\mathbf{u}_{m'}\not\in\text{Span }(S'\setminus \{ \mathbf{v}_{m'} \})$. Also, what we're trying to prove can be shown easily. Since $I$ spans $V$, take the same linear combinations, and $\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m+1}, \dots, \mathbf{v}_{n} \}$ now spans $V$. Why did we do the following!?
-
+>If $I:=\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots \mathbf{u}_{m} \}\subset V$ is a finite linearly independent set and $S:=\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots \mathbf{v}_{n} \}\subset V$ is a finite spanning set in a fdvsp $V$, and $m\le n$, then, after rearranging $v_{j}$ if necessary, $\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m+1}, \dots, \mathbf{v}_{n} \}$ spans $V$.
 
 >**Proof**
->
 >By induction on $|I|$.
 >Holds for $|I|=0$, as there are no $\mathbf{u}_{i}$'s, and $S$ spans $V$. 
 >Assume the result holds for $|I|=m'-1$, where $m'-1< n$. 
 >$S'=\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m'-1}, \mathbf{v}_{m'}, \mathbf{v}_{m'+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. 
->Then, $\mathbf{u}_{m'}=\sum_{i=1}^{m'-1}c_{i}\mathbf{u}_{i}+\sum_{j=m'}^{n}d_{j}\mathbf{v}_{j}$. Observe that some $d_{j}$ must be non zero, say $d_{m'}$, after possibly rearranging the $\mathbf{v}_{j}$'s.
->Further, $\mathbf{u}_{m'}\in\text{Span }S'$, $\mathbf{u}_{m'}\not\in\text{Span }(S'\setminus \{ \mathbf{v}_{m'} \})$.
->Exchange $\mathbf{v}_{m'}$ and $\mathbf{u}_{m'}$, which we can do courtesy the Steinitz Exchange Lemma.
->We have shown that $S''=\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m'-1}, \mathbf{u}_{m'}, \mathbf{v}_{m'+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. 
+>Then, $\mathbf{u}_{m'}=\sum_{i=1}^{m'-1}c_{i}\mathbf{u}_{i}+\sum_{j=m'}^{n}d_{j}\mathbf{v}_{j}$. Observe that, since $I$ is linearly independent, some $d_{j}$ must be non zero, say $d_{m'}$, after possibly rearranging the $\mathbf{v}_{j}$'s. Note that more than one of the $d$'s may be non zero. 
+>
+>Now, two things can happen:
+>1. $\mathbf{u}_{m'}\not\in\text{Span }(S'\setminus \{ \mathbf{v}_{m'} \})$. We can exchange $\mathbf{v}_{m'}$ with $\mathbf{u}_{m'}$ in $S'$ while keeping its span unchanged courtesy the Steinitz Exchange Lemma.
+>2. $\mathbf{u}_{m'}\in\text{Span }(S'\setminus \{ \mathbf{v}_{m'} \})$. This means $\mathbf{u}_{m'}$ can be expressed as a linear combination of the vectors in $S'\setminus \{ \mathbf{v}_{m'} \}$, i.e, $S'\setminus \{ \mathbf{v}_{m'} \}$ spans $V$. Obviously, tacking on $\mathbf{u}_{m'}$ isn't going to change that. 
+>
+>Thus, either way, we can swap $\mathbf{v}_{m'}$ with $\mathbf{u}_{m'}$ in $S'$ while maintaining the spanning property of $S'$. We have shown that $S''=\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{m'-1}, \mathbf{u}_{m'}, \mathbf{v}_{m'+1}, \dots, \mathbf{v}_{n} \}$ spans $V$. 
 >❏
 
+#### Linearly independent sets cannot be larger than spanning sets
 
-> Everything that follows is ok
+>[!Theorem] Lemma
+>If $I:=\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots \mathbf{u}_{m} \}\subset V$ is a finite linearly independent set and $S:=\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots \mathbf{v}_{n} \}\subset V$ is a finite spanning set in a fdvsp $V$, then $|I|\le|S|$. 
 
-Now, assume $m=n+k$ for some $k> 0$. Since the preceding result holds for $m=n$, $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ must be a spanning set. This implies that $\mathbf{u}_{n+1}, \dots, \mathbf{u}_{k}$ can be expressed as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}$, which implies $I$ cannot be linearly independent (contradiction!). Consequently, we must have  $m\le n$. ❏
+>**Proof**
+>Assume $m=n+k$ for some $k> 0$. From the previous lemma, $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ must be a spanning set (a subset of a linearly independent set is linearly independent). This implies that $\mathbf{u}_{n+1}, \dots, \mathbf{u}_{k}$ can be expressed as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}$, which implies $I$ cannot be linearly independent (contradiction!). Consequently, we must have  $m\le n$. ❏
 #### Finally, theorem 2
 
 >**Proof**
->
 >Let $B_{1}$ and $B_{2}$ be bases of cardinality $n$ and $m$ respectively.
 >Since $B_{1}$ is linearly independent, and $B_{2}$ is a spanning set, $n\le m$.
 >Since $B_{2}$ is linearly independent, and $B_{1}$ is a spanning set, $m\le n$.
 >Thus, $m=n$. ❏
 
----
 ### Strategy 2: Exploit previous work on $\mathbb{R}^{n}$
 
 #### Isomorphisms

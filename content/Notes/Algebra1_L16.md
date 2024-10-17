@@ -7,20 +7,23 @@ time: 14:00
 ---
 ## Determinants
 ### Another Formula
-Let $M$ be an $n\times n$ matrix.
-Let $M_1,M_2,...,M_n$ be the rows of the matrix.
-We have $M_{i}^{t}= \begin{bmatrix} M_{i1}\\ M_{i2} \\ \cdots \\ M_{in} \end{bmatrix} = \sum\limits_{j = 1}^{n}M_{ij}e_{j}$ where $e_j$ is the $jth$ vector of the standard basis in canonical order
-$$\mathrm{det}(M_{1}^{t},M_{2}^{t},\cdots,M_{n}^{t})= \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right)$$
 
+Let $M$ be an $n\times n$ matrix. Let $M_1,M_2,...,M_n$ be the rows of the matrix.
 
+We have $M_{i}^{t}= \begin{bmatrix} M_{i1}\\ M_{i2} \\ \cdots \\ M_{in} \end{bmatrix} = \sum\limits_{j = 1}^{n}M_{ij}e_{j}$ where $e_j$ is the $j$th vector of the standard basis in canonical order. Now, the determinant can be thought of as a function of the row vectors of $M$:
 
-By multilinearity of the determinant,
+$$
+\mathrm{det}(M_{1}^{t},M_{2}^{t},\cdots,M_{n}^{t})= \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right)
+$$
+
+By multilinearity of the determinant, we have
 $$
 \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right) = \sum\limits_{i_1,i_2,...,i_n}M_{1i_{1}}M_{2i_{2}}...M_{ni_{n}}\det(e_{i_1},e_{i_2},...,e_{i_n})
 $$
-where $i_{k}\in \{1,..,n\}$
+where $i_{k}\in \{1,..,n\}$.
+
 The antisymmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
-Therefore we only need to consider the case when all the $i_k$ are pairwise distinct. I.e, a permutation of $\{1,..,n\}$
+Therefore we only need to consider the case when all the $i_k$ are pairwise distinct, i.e, a permutation of $\{1,..,n\}$. 
 
 ### Permutations
 We now begin a brief study of permutations in order to simplify the determinant

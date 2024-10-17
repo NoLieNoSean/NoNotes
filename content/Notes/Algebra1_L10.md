@@ -18,10 +18,10 @@ In the previous lecture, we found a basis for the null space of a matrix. We now
 
 ### Strategy 1
 
-Make rows into olumns and vice versa, i.e, take the transpose. Not elaborated upon in class.
+Make rows into columns and vice versa, i.e, take the transpose. Not elaborated upon in class.
 #### Transpose
 
-Defined [[Matrices#Transpose|transpose]] 
+Defined [[Matrices#Transpose|transpose]].
 
 Properties of transpose:
 - distributes over sums

@@ -26,7 +26,7 @@ Proper lecture notes start here.
 - [[Algebra1_L9]] ✅ 
 - [[Algebra1_L10]] ✅
 - [[Algebra1_L11]] ✅
-- [[Algebra1_L12]] (unfinished)
+- [[Algebra1_L12]] ✅
 - [[Algebra1_L13]] ✅
 - [[Algebra1_L14]] %%  (handwritten notes) %%
 - [[Algebra1_L15]] %% (handwritten notes) %%
