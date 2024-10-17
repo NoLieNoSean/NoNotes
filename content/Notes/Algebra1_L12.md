@@ -3,7 +3,6 @@ tags:
   - ALG1
   - Lecture
 ---
-
 2024-09-19, Thursday
 1405
 

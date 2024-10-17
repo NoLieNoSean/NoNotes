@@ -1,8 +1,11 @@
-2024-10-08
-1409
-
 ---
-
+tags:
+  - ALG1
+  - Lecture
+  - Processed
+date: 2024-10-08
+time: 14:09
+---
 ## Recall:
 
 Let $T:V\to W$ be a [[Algebra1_L11#Linear maps|linear map]], with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. The matrix of $T$ in a given basis is the matrix whose columns are coordinate vectors of $T(B_{V})$ with respect to the basis $B_{W}$.
