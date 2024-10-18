@@ -80,7 +80,7 @@ Rudin, 4.10
 >Let $f_{1}, f_{2}, \dots, f_{k}:X\to \mathbb{R}$. Let $\mathbf{f}:X\to \mathbb{R}^{k}$ be defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))^{T}$. Then, $\mathbf{f}$ is continuous $\iff$ each $f_{i}$ is continuous.
 
 >**Proof**
->Again, we only need to consider $p\in X$ which are limit points of $X$. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. The backwards implication in trivial. ❏
+>We only need to consider $p\in X$ which are limit points of $X$. Consider the forward implication. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. Note the similarity to the proof of the forward implication of [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot wise convergence]]. The proof of the backward implication of this theorem is also essentially the same as its counterpart, with $N$'s replaced with $\delta$'s, the maximum of all $N$'s replaced with the minimum of all $\delta$'s, and other tiny appropriate contextual changes. ❏
 
 >[!Theorem]
 >If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\mathbb{R}^{k}$, $\mathbf{f}+\mathbf{g}$ and $\mathbf{f}\cdot \mathbf{g}$ are continuous.

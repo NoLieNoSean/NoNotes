@@ -39,7 +39,6 @@ Rudin, 4.5
 >Then $f$ is said to be *continuous* at $p$ if for every $\epsilon>0$ there exists a $\delta>0$ such that $d_{X}(x, p)<\delta$, $x\in E$ implies  $d_{Y}(f(x), f(p))<\epsilon$. 
 
 #### How it compares to limit of $f$ at a point
-
 Compare the above with the definition of the limit of a function as $x$ approaches $p$, restated here from yesterday:
 
 Rudin, 4.1

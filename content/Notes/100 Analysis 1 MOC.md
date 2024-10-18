@@ -62,6 +62,8 @@ Proper lecture notes start here.
 - [[Analysis1_L22]] ✅
 	- Connected sets, Intermediate value theorem, connected components, allied theorems.
 - [[Analysis1_L23]]
+- [[Analysis1_L24]]
+- [[Analysis1_L25]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
