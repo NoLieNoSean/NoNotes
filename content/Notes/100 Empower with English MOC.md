@@ -134,6 +134,4 @@ DEspite the devotion of the son, the sotry ends in bitterenss. How could this ha
 
 Suppose the mayor really is back home when M Gaultier returns. Write a dialogue between them. 
 
-M (annoyed): Ah, G! My apologies for bailing on the dinner, something important came up. 
-G: M! It's great-
-M: I'd love to 
+ 

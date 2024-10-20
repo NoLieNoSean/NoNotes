@@ -56,7 +56,8 @@ Observe that if $E$ has a limit point, it cannot be of finite cardinality.
 
 For $f:E(\subset \mathbb{R})\to \mathbb{R}$, it makes sense to define $\lim_{ x \to p }f(x)$ only if $p$ is a limit point of the domain of $f$. 
 
-#### Definition of limit of a function in $\mathbb{R}$
+#### Definition of limit of a function in R
+
 >[!Definition]
 >Let $f: E(\subset \mathbb{R})\to \mathbb{R}$, and let $p$ be a limit point of $E$.
 >Then, $\lim_{ x \to p }f(x) = q$ means for any $\epsilon>0$, there exists a $\delta>0$, such that  $0<|x-p|<\delta$ implies $|f(x)-q|<\epsilon$. 

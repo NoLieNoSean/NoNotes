@@ -97,7 +97,7 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 >**Proof of $\Longleftarrow$**
 >Let $(p_{n})$ be a sequence in $X$. We want to show that some subsequence of $(p_{n})$ converges to a point in $X$. 
 >Let $S=\{ p_{n}\ |\ n\in \mathbb{N} \}$. If $S$ is finite, i.e, $(p_{n})$ has a finite number of distinct terms, a single element must repeat infinite times in the sequence. Let the constant sequence of this element be the subsequence required, and we are done.
->If $S$ is infinite, since $X$ is limit point compact, $S$ must have a limit point in $X$. Call it $p$. Define a sequence of $\epsilon$'s: $(\epsilon_{n})=\left( \frac{1}{2^{n}} \right)$. Construct a subsequence $(p_{k_{n}})$ of $(p_{n})$ like so: Let $p_{k_{1}}$ be any point in $B_{\epsilon_{1}}(p, S)\setminus \{ p \}$, and let $p_{k_{n+1}}$ be any point such that $k_{n+1}>k_{n}$ and $p_{k_{n+1}}\in B_{\epsilon_{n+1}}(p, S)\setminus \{ p \}$ (such a $k_{n+1}$ must exist since every deleted neighborhood of $p$ contains infinitely many elements of $S$). Then, $(p_{n})\to p$ since $(\epsilon_{n})\to 0$. ❏
+>If $S$ is infinite, since $X$ is limit point compact, $S$ must have a limit point in $X$. Call it $p$. Define a sequence of $\epsilon$'s: $(\epsilon_{n})=\left( \frac{1}{2^{n}} \right)$. Construct a subsequence $(p_{k_{n}})$ of $(p_{n})$ like so: Let $p_{k_{1}}$ be any point in $B_{\epsilon_{1}}(p, S)\setminus \{ p \}$, and let $p_{k_{n+1}}$ be any point such that $k_{n+1}>k_{n}$ and $p_{k_{n+1}}\in B_{\epsilon_{n+1}}(p, S)\setminus \{ p \}$ (such a $k_{n+1}$ must exist since every deleted neighborhood of $p$ contains infinitely many elements of $S$). Then, $(p_{n_{k}})\to p$ since $(\epsilon_{n})\to 0$. ❏
 
 
 >[!Info]

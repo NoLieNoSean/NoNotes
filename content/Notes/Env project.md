@@ -23,17 +23,25 @@ time: 18:04
 
 ### A theory of institutions
 
-Definition. An *institution* is a body of people with an internal structure which works to bring the the world to a certain state (its alignment), and is empowered as an entity by society to some extent to pursue this state, i.e, allowed to take actions that individuals (both inside and outside of the institution) are not.
+An *institution* is a body of institutions with an internal structure which works to bring the the world to a certain state (its alignment), and is empowered as an entity by society to some extent to pursue this state, i.e, allowed to take actions that individuals (both inside and outside of the institution) are not, and the ethics of an institution. Note that all these properties are mutable over time.
 
-Thus, a constructor of an institution would take the following arguments: (set of people in the institution, internal structure of the institution, the alignment of the institution, the power vested in the institution by society). Note that all these properties are mutable over time.
+Every individual person is an institution themselves. 
 
-People who might be impacted by the actions of the institution are called the *stakeholders* of the institution. The set of stakeholders is a function of the institution's alignment and power. 
+Every institution takes an action every day. This action is determined
+
+If we assume that the alignment subsumes the entire history of the world that lead to itself, we do not need ethics, 
+
+Thus, a constructor of an institution would take the following arguments: (set of people in the institution, internal structure of the institution, the alignment of the institution, the power vested in the institution by society). 
+
+People and other institutions which can be impacted by the actions of the institution are called the *stakeholders* of the institution. The set of stakeholders is a function of the institution's alignment and power.
 
 An institution is said to have turned *malevolent* when its alignment mutates enough to oppose its initial alignment.
 
 An institution's *effectiveness* is the ratio of the rate at which it is pursuing its alignment to the maximum rate at which it could be doing so, given its powers.
 
-An institution is said to have *collapsed* when
+An institution is said to have _collapsed_ when it is no longer able to exert meaningful influence in pursuit of its alignment, either due to internal breakdown of its structure, failure to exert its power (ex a communications breakdown), or overwhelming opposition from stakeholders leading to loss of power.
+
+The *resilience* of an institution is its resistance to collapse.
 
 
 Assuming a proper initial alignment, we need to set up institutions such that they
