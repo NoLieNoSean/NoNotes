@@ -54,14 +54,14 @@ The preceding discussion suggests that linear maps somehow have a "preferred dir
 >$$
 >\sum\limits_{i = 1}^{j-1}\alpha_{i}v_{i} = v_j
 >$$
->applying $A$ to both sides, we have 
+>applying $A$ to both salides, we have 
 >$$
->\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i}= \lambda_{j}v_j
+> \begin{align}
+> &\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i} = \lambda_{j}v_j\\
+> &\sum\limits_{i = 1}^{j-1}\alpha_i\frac{\lambda_i}{\lambda_j}v_{i} = v_j
+> \end{align}
 >$$
->$$
->\implies \sum\limits_{i = 1}^{j-1}\alpha_i\frac{\lambda_i}{\lambda_j}v_{i}= v_j
->$$
->this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly independent set, which isnt possible.
+>this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly independent set, which is not possible.
 
 >[!Corollary]
 >An $n\times n$ matrix has atmost $n$ eigenvalues.
