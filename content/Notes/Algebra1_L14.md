@@ -146,10 +146,3 @@ A determinant is a function $\det : M_{n \times n}(\mathbb{R}) \to \mathbb{R}$ w
 2) Scaling a row scales the determinant
 3) Swapping rows negates the determinant
 4) $\det I_{n} = 1$
-
->[!Proposition]
-> We may compute the determinant of a matrix $A$ by using row operations. Let $B$ a row reduced form of $A$. Then, 
-> $$
-> \det A = {(-1)^r}\, \frac{\text{ product of diagonal entries of }B}{\text{product of scaling factors}}
-> $$
-> where $r$ is the number of rows swapped in getting from $A$ to $B$. [[Algebra1_L15|Proof]]
