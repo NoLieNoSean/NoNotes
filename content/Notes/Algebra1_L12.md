@@ -19,7 +19,7 @@ time: 14:05
 
 Thus, the matrix $A$ corresponding to $T$ (the matrix $A$ such that $T=f_{A}$) is the matrix whose columns are the images of the standard basis of $\mathbb{R}^{p}$ under $T$ in the canonical order. 
 
-Note that every linear map $T:\mathbb{R}^{p}\to \mathbb{R}^{q}$ has a unique $q\times p$ matrix $A$ associated with it, i.e, there exists a bijection $\zeta:\mathcal{L}(\mathbb{R}^{p}, \mathbb{R}^{q})\to  M_{q\times p}(\mathbb{R})$, $\zeta(T)=\text{ matrix of } T$, where the domain of $\zeta$ is the set of all linear maps from $\mathbb{R}^{p}$ to $\mathbb{R}^{q}$ and the codomain is the set of all $q\times p$ matrices with real entries. We have [[Linear Transformations#Linear transformations as a vector space|seen]] that both are vector spaces. It can also be easily verified that $\zeta$ is itself a linear map. Thus, $\mathcal{L}(\mathbb{R}^{p}, \mathbb{R}^{q})\cong M_{q\times p}(\mathbb{R})$. 
+Note that every linear map $T:\mathbb{R}^{p}\to \mathbb{R}^{q}$ has a unique $q\times p$ matrix $A$ associated with it, i.e, there exists a bijection $\zeta:\mathcal{L}(\mathbb{R}^{p}, \mathbb{R}^{q})\to  \mathcal{M}_{q\times p}(\mathbb{R})$, $\zeta(T)=\text{ matrix of } T$, where the domain of $\zeta$ is the set of all linear maps from $\mathbb{R}^{p}$ to $\mathbb{R}^{q}$ and the codomain is the set of all $q\times p$ matrices with real entries. We have [[Linear Transformations#Linear transformations as a vector space|seen]] that both are vector spaces. It can also be easily verified that $\zeta$ is itself a linear map. Thus, $\mathcal{L}(\mathbb{R}^{p}, \mathbb{R}^{q})\cong \mathcal {M}_{q\times p}(\mathbb{R})$. 
 ### Examples
 
 Observe that the following maps are linear for geometric reasons. Find their matrices (In the standard basis, of course).
@@ -90,13 +90,13 @@ With representations of elements of $V$ and $W$ in $\mathbb{R}^{n}$, we can cons
 
 $T$ takes in an element of $V$ and spits out an element of $W$. So, given a coordinate vector of $\mathbf{v}\in V$, we have to map it to $\mathbf{v}$, then apply $T$, then map the result to its coordinate vector in $\mathbb{R}^{q}$. Thus, the transformation we seek is $L= \phi T\psi ^{-1}$. 
 
-Finally, the matrix of $T$ in bases $B_{V}$ and $B_{W}$ (denoted $M_{B_{V}, B_{W}}(T)$) is $\begin{bmatrix}L(\mathbf{e}_{1})& L(\mathbf{e}_{2}) & \dots & L(\mathbf{e}_{p})\end{bmatrix}$. It is a $q\times p$ matrix.
+Finally, the matrix of $T$ in bases $B_{V}$ and $B_{W}$ (denoted $\mathcal{M}_{B_{V}, B_{W}}(T)$) is $\begin{bmatrix}L(\mathbf{e}_{1})& L(\mathbf{e}_{2}) & \dots & L(\mathbf{e}_{p})\end{bmatrix}$. It is a $q\times p$ matrix.
 
 ### Change of basis
 
-Let $B_{V}$ and $B_{V}'$ be two bases for $V$. Similarly, let $B_{W}$ and $B_{W}'$ be two bases for $W$. Let $T:V\to W$. Given $M_{B_{V}, B_{W}}(T)$, how do we find $M_{B_{V}', B_{W}'}(T)$? 
+Let $B_{V}$ and $B_{V}'$ be two bases for $V$. Similarly, let $B_{W}$ and $B_{W}'$ be two bases for $W$. Let $T:V\to W$. Given $\mathcal{M}_{B_{V}, B_{W}}(T)$, how do we find $\mathcal{M}_{B_{V}', B_{W}'}(T)$? 
 
-Just as we did previously, all we need to do is change the "interface" of $M_{B_{V}, B_{W}}(T)$. We can define the following isomorphisms:
+Just as we did previously, all we need to do is change the "interface" of $\mathcal{M}_{B_{V}, B_{W}}(T)$. We can define the following isomorphisms:
 $$
 \begin{array}{ll}
    \psi: V\to \mathbb{R}^{p}, & \psi(\mathbf{v})=\text{ coordinate vector of }\mathbf{v}\text{ in }B_{V}\\
@@ -106,7 +106,7 @@ $$
   \phi': W\to \mathbb{R}^{q}, & \phi'(\mathbf{w})=\text{ coordinate vector of }\mathbf{w}\text{ in }B_{W}'\\
 \end{array}
 $$
-Then, $M_{B_{V}', B_{W}'}(T)=\phi'\ \phi ^{-1}\ M_{B_{V}, B_{W}}(T)\ \psi\ \psi'^{-1}$. 
+Then, $\mathcal{M}_{B_{V}', B_{W}'}(T)=\phi'\ \phi ^{-1}\ \mathcal{M}_{B_{V}, B_{W}}(T)\ \psi\ \psi'^{-1}$. 
 
 $\psi\ \psi'^{-1}$ is a map from $\mathbb{R}^{p}\to \mathbb{R}^{p}$, so it must have a unique matrix representation, say $A$. Similarly, let $B$ be the matrix of $\phi\ \phi'^{-1}$. Note that $A$ is a $p\times p$ matrix, and $B$ is a $q\times q$ matrix. $A$ is called the change of basis matrix in $V$, and $B$ is called the change of basis matrix in $W$. Observe:
 $$
@@ -117,5 +117,5 @@ $$
 $$
 Observe that the columns of $A$ are the coordinate vectors of the elements of $B_{V}'$ in $B_{V}$. Similarly, the columns of $B$ are the coordinate vectors of the elements of $B_{W}'$ in $B_{W}$.
 
-Finally, we have $M_{B_{V}', B_{W}'}(T)=B^{-1}\ M_{B_{V}, B_{W}}(T)\ A$.
+Finally, we have $\mathcal{M}_{B_{V}', B_{W}'}(T)=B^{-1}\ \mathcal{M}_{B_{V}, B_{W}}(T)\ A$.
 

@@ -85,7 +85,6 @@ The preceding discussion coupled with our discussion in L9 regarding the basis f
 ## Epilogue
 
 Discussed abstract vector spaces
-- Discussed how all $p\times q$ matrices form a vector space. In particular, observed that $M_{p\times q}\cong \mathbb{R}^{pq}$.
+- Discussed how all $p\times q$ matrices form a vector space. In particular, observed that $\mathcal{M}_{p\times q}\cong \mathbb{R}^{pq}$.
 - If $X$ is any set, then $W=\{ f:X\to \mathbb{R} \}$ is a vector space under point wise addition and scalar multiplication. Exercise: if $X$ is finite, then what is the dimension of $W$?
 	- My solution: If we fix an order for the elements of $X$, then every element of $W$ can be represented as a member of $\mathbb{R}^{n}$, where $n$ is the cardinality of $X$. For example, if $X=\{ x_{1}, x_{2}, x_{3} \}$, consider $f_{1}\in W$, where $f_{1}(x_{1})=r_{1}$, $f_{1}(x_{2})=r_{2}$, and $f_{1}(x_{3})=r_{3}$. Then, $f_{1}$ can be represented as $[r_{1}, r_{2}, r_{3}]^{T}$. Thus, if $X$ is finite, $W\cong \mathbb{R}^{|X|}$. 
-

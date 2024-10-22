@@ -141,7 +141,7 @@ $$
 ---
 ## Determinants
 
-A determinant is a function $\det : M_{n \times n}(\mathbb{R}) \to \mathbb{R}$ which satisfies the following properties:
+A determinant is a function $\det : \mathcal{M}_{n \times n}(\mathbb{R}) \to \mathbb{R}$ which satisfies the following properties:
 1) A row operation ($R_{i} \to R_{i} + \lambda R_{j}$) on the matrix does not change the determinant
 2) Scaling a row scales the determinant
 3) Swapping rows negates the determinant
