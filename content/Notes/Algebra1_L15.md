@@ -17,10 +17,10 @@ Recall the [[Algebra1_L14#Determinants|defining properties of the determinant fu
 >Let the $j^{th}$ row of $A$ be a zero row.
 >Let $R_{j} \to -R_{j}$ give the matrix $A'$. Then,
 >$$
-> \begin{align}
- \det A &= - \det A'\\
- \det A &= - \det A\\
- \det A &= 0.
+>\begin{align}
+>\det A &= - \det A'\\
+>\det A &= - \det A\\
+>\det A &= 0.
 >\end{align} 
 >$$
 >❏
@@ -58,6 +58,8 @@ This also shows that $\det A=\det A^{T}$.
 
 ---
 ## Another characterization of the determinant
+
+### Multilinearity
 
 >[!Definition] 
 >Let $V_{1}, V_{2}, \dots, V_{k}$ and $W$ be vector spaces. A function $f:V_{1}\times V_{2}\times\dots \times V_{k}\to W$ is called *multilinear* if it is [[Algebra1_L11#Linear maps|linear]] in each of the $k$ arguments, when the rest of the arguments are kept constant.
