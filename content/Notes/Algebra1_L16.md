@@ -135,11 +135,12 @@ A &B\\
 $$
 Another upshot is that $A = \mathcal{M}_{\beta_W, \beta_{W}}(T|_{W})$.
 
-If it happens that $V = W_{1} \oplus W_{2}$ and $W_1$ , $W_2$ are $T-$ invariant with bases $\beta_{W_{1}}= (w_1,w_2,...,w_k)$ and $\beta_{W_{2}}= (w_1',w_2',...,w_{n-k}')$ then the matrix of $T$ in the basis $\beta_{V} = (w_1,w_2,...,w_k,w_1',w_2',...,w_{n-k}')$ will look like
+If it happens that $V = W_{1} \oplus W_{2}$ (i.e, $W_{1}$ and $W_{2}$ are linearly independent and span $V$) and $W_1$ , $W_2$ are $T-$ invariant with bases $\beta_{W_{1}}= (w_1,w_2,...,w_k)$ and $\beta_{W_{2}}= (w_1',w_2',...,w_{n-k}')$ then the matrix of $T$ in the basis $\beta_{V} = (w_1,w_2,...,w_k,w_1',w_2',...,w_{n-k}')$ will look like
 $$
 \mathcal{M}_{\beta_{V}, \beta_{V}}(T)= \left[\begin{array}{c|c}
 A& 0\\
 \hline
 0&B
 \end{array}\right]
-$$where $A = \mathcal{M}_{\beta_{W_{1}}, \beta_{W_{1}}}(T), B = \mathcal{M}_{\beta_{W_2}, \beta_{W_{2}}}(T)$. 
+$$
+where $A = \mathcal{M}_{\beta_{W_{1}}, \beta_{W_{1}}}(T), B = \mathcal{M}_{\beta_{W_2}, \beta_{W_{2}}}(T)$. 
