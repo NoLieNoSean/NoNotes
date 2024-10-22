@@ -125,4 +125,3 @@ $$ (This gives another proof for "$A$ has at-most $n$ eigenvalues")
 > f(x) = (a_{11}-x)(a_{22}-x)\dots(a_{nn} - x)
 > $$
 > We can see that the diagonal entries are the eigenvalues of $A$. [[Algebra1_L15|proof]]
-
