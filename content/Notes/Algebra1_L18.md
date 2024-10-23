@@ -3,7 +3,7 @@ tags:
   - ALG1
   - Lecture
   - Processed
-date: 2024-10-17, Thursday
+date: 2024-10-17
 time: 14:00
 ---
 ## Finding eigenstuff
@@ -22,6 +22,7 @@ Here is more involved example of finding eigenvectors given the eigenvalues.
 > -\frac{3}{2} & 0 & -1
 > \end{bmatrix},
 > $$
+> 
 > given that the eigenvalues of $A$ are $2$ and $1/2$. 
 > For $\lambda = 2$, we have
 > $$
@@ -35,7 +36,7 @@ Here is more involved example of finding eigenvectors given the eigenvalues.
 > \begin{bmatrix}
 > 1 & 0 & 2 \\
 > 0 & 0 & 0 \\
-  0 & 0 & 0
+>   0 & 0 & 0
 > \end{bmatrix}
 > $$
 > Using the fact that $\ker M = \ker (\text{RREF} \ M)$, we can say that the any vector $\mathbf{v}$ in the 2-eigenspace of $A$ is in the span of the basis vectors of $\ker (A-2I_{3})$. That is
@@ -75,8 +76,8 @@ Here is more involved example of finding eigenvectors given the eigenvalues.
 > $$
 > So, we have obtained three linearly independent eigenvectors and two eigenvalues. Since $A$ cannot have more than 3 linearly independent eigenvectors, we can be sure that no more eigenvalues exist.
 
- >[!info]
- >If $0$ is an eigenvalue of $A$, then $\ker (A-0I) = \ker{A}$ is nonzero $\iff A$ is non-invertable.
+>[!info]
+>If $0$ is an eigenvalue of $A$, then $\ker (A-0I) = \ker{A}$ is nonzero $\iff A$ is non-invertable.
 
 ### Characteristic Polynomial
 
