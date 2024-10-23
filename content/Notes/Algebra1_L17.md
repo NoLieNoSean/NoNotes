@@ -24,7 +24,9 @@ If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we 
 
 >[!Example]
 >Let $A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$. Consider the vectors $\mathbf{v} = \left[\begin{array}{c}1 \\ 1\end{array}\right], \mathbf{w} = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
+>
 >Notice that $A\mathbf{v} = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4\mathbf{v}$. Thus $\mathbf{v}$ is an eigenvector of $A$. 
+>
 >On the other hand, $A\mathbf{w} = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda \mathbf{w}$ for any $\lambda \in \mathbb{R}$. Thus $\mathbf{w}$ is not an eigenvector of $A$.
 
 >[!Example] Example: Reflection
@@ -79,7 +81,7 @@ This is great, since we already know [[Algebra1_L9#Example 3|how to find the ker
 If $\ker(A-\lambda I)=\{\mathbf{0}\}$, then $\lambda$ is not an eigenvalue.
 
 >[!Definition] Definition: $\lambda-$eigenspace
->Let $A$ have eigenvalue $\lambda$. Then the $\lambda-$eigenspace of $A$ is the solution set of $(A-\lambda I)\mathbf{v} = 0$. i.e, $\ker (A-\lambda I)$. Notice that since $\ker (A-\lambda I)$ is a subspace, the $\lambda-$eigenspace of an eigenvalue $\lambda$ is a subspace.
+>Let $A$ have eigenvalue $\lambda$. The $\lambda$-eigenspace of $A$ is the null space of $A - \lambda I$. Notice that since $\ker (A-\lambda I)$ is a subspace, the $\lambda-$eigenspace of an eigenvalue $\lambda$ is a subspace.
 
 >[!Example]
 >Let $A = \begin{bmatrix}2 & -4\\ -1 & -1\end{bmatrix}$. 
