@@ -61,7 +61,7 @@ Proper lecture notes start here.
 	- Topological spaces, homeomorphisms, 4.17
 - [[Analysis1_L22]] ✅
 	- Connected sets, Intermediate value theorem, connected components, allied theorems.
-- [[Analysis1_L23]]
+- [[Analysis1_L23]] ✅
 - [[Analysis1_L24]]
 - [[Analysis1_L25]]
 

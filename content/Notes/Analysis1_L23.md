@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-10-09
 time: 15:55
 ---
@@ -77,4 +78,37 @@ Rudin, 5.3
 
 ### Chain rule
 
+Rudin, 5.5
+
+>[!Theorem]
+>Suppose $f$ is defined $[a, b]$, $f'(x)$ exists at some $x\in[a, b]$, $g$ is defined on an interval $I$ which contains the range of $f$, and $g$ is differentiable at the point $f(x)$. 
+>If $h(t)=g(f(t)), a\leq t\leq b$, then  $h$ is differentiable at $x$, and
+>$$
+>h'(x)=g'(f(x))f'(x).
+>$$
+
+> **Proof**
+> Let $y=f(x)$. By the definition of the derivative, we have
+> $$
+> \begin{align}
+> f(t)-f(x) & =(t-x)[f'(x)+u(t)], \\
+> g(s)-g(y) & =(s-y)[g'(y)+v(s)],
+> \end{align}
+> $$
+> where $t\in[a, b]$, $s\in I$, and $u(t)\to 0$ as $t\to x$, $v(s)\to 0$ as $s\to y$. Now, 
+> $$
+> \begin{align}
+> h(t)-h(x)= & \ g(f(t))-g(f(x)) \\ 
+> = & \ (f(t)-f(x))\ (g'(f(x))+v(f(t))) \\
+> = & \ (t-x)\ (f'(x)+u(t))\ (g'(f(x))+v(f(t))) \\ \\
+> 
+> \implies \frac{{h(t)-h(x)}}{t-x}= & \ (f'(x)+u(t))\ (g'(f(x))+v(f(t))) \\
+> \implies h'(x)= & \ \lim_{ t \to x } (f'(x)+u(t))\ (g'(f(x))+v(f(t)))
+> \end{align}
+> $$
+> We know $u(t)$ vanishes as $t\to x$. As $t\to x$, $f(t)\to f(x)$ since $f$ is continuous at $x$. As $f(t)\to f(x)$, $v(f(t))\to 0$ . Thus, 
+> $$
+> h'(x)=f'(x)g'(f(x)).
+> $$
+> ❏
 

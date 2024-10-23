@@ -7,27 +7,24 @@ time: 11:50
 ---
 >[!Recall]
 >[[Algebra1_L16#Invariant Subspaces| Invariant Subspace]]
->[[Algebra1_L16#What will the matrix of $T$ with respect to $ beta_v$ look like?|Matrix of a linear operator with respect to an invariant subspace]]
->[[Algebra1_L16#If the vector space is the direct sum of two invariant subspaces| If V is the direct sum of two invariant subspaces]]
 
-
+---
 ## Eigenvectors and Eigenvalues
 
 >[!Definition]
->An eigenvector $v$ of a linear map $A$ is a *nonzero* vector such that $T(v) = \lambda v$
+>An *eigenvector* $\mathbf{v}$ of a linear map $A$ is a *nonzero* vector such that $T(\mathbf{v}) = \lambda \mathbf{v}$.
 
 >[!definition]
->An eigenvalue of $A$ is a scalar $\lambda$ such that the equations $Av = \lambda v$ has ***nontrivial*** solution
+>An *eigenvalue* of $A$ is a scalar $\lambda$ such that the equation $A\mathbf{v} = \lambda \mathbf{v}$ has a *nontrivial* solution.
 
-If $Av = \lambda v$ for some nontrivial $v$, then we say
-1. $v$ is an eigenvector for $\lambda$
-2. $\lambda$ is an eigenvalue for $v$
+If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we say
+1. $\mathbf{v}$ is an eigenvector for $\lambda$, and
+2. $\lambda$ is an eigenvalue for $\mathbf{v}$.
 
 >[!Example]
->Let $$A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$$
->Now consider the vectors $v = \left[\begin{array}{c}1 \\ 1\end{array}\right], w = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
->Notice that $Av = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4v$. Thus $v$ is an eigenvector of $A$. 
->On the other hand, $Aw = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda w$ for any $\lambda \in \mathbb{R}$. Thus it is not an eigenvector of $A$
+>Let $A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$. Consider the vectors $\mathbf{v} = \left[\begin{array}{c}1 \\ 1\end{array}\right], \mathbf{w} = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
+>Notice that $A\mathbf{v} = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4\mathbf{v}$. Thus $\mathbf{v}$ is an eigenvector of $A$. 
+>On the other hand, $A\mathbf{w} = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda \mathbf{w}$ for any $\lambda \in \mathbb{R}$. Thus $\mathbf{w}$ is not an eigenvector of $A$.
 
 >[!Example] Example: Reflection
 >Let $T:\mathbb{R}^2\mapsto\mathbb{R}^2$ be the linear map that reflects over the line $L :y = -x$
@@ -37,24 +34,25 @@ If $Av = \lambda v$ for some nontrivial $v$, then we say
 >![[Screenshot 2024-10-16 at 10.12.49 PM.png]]
 
 >[!Example] Example: Projection
->Let $T:\mathbb{R}^{2}\mapsto \mathbb{R}^2$ be the projection map that projects a vector vertically onto the $x$-axis. Notice once again that vectors along the line $y = 0$ ($x$ axis) and the line perpendicular to the $x$ axis consist of eigenvectors.
+>Let $T:\mathbb{R}^{2}\mapsto \mathbb{R}^2$ be the projection map that projects a vector vertically onto the $x$-axis. Notice that the vectors lying on the x axis and y axis are eigenvectors with eigenvalues 1 and 0 respectively.
 
 >[!Example] Example: Rotation
->Consider a rotation map $R_{\theta}$ on $\mathbb{R}^2$ that rotates a vector by an angle $\theta \neq n\pi, n\in \mathbb{Z}$ 
->in this case we can see geometrically itself that no eigenvectors exist
+>Consider a rotation map $R_{\theta}$ on $\mathbb{R}^2$ that rotates a vector by an angle $\theta \neq n\pi, n\in \mathbb{Z}$.
+>In this case we can see geometrically that no eigenvectors exist.
 
 The preceding discussion suggests that linear maps somehow have a "preferred direction"
 
->[!Lemma] Lemma: Eigenvectors with different eigenvalues are independent
+>[!Theorem]
+>Eigenvectors with different eigenvalues are linearly independent.
 
 >**Proof**
->Suppose eigenvectors $v_1,v_2,...,v_k$ of $A$ have distinct eigenvalues $\lambda_1,\lambda_2,..,\lambda_k$
+>Suppose eigenvectors $v_1,v_2,...,v_k$ of $A$ have distinct eigenvalues $\lambda_1,\lambda_2,..,\lambda_k$.
 >If the vectors are linearly independent, we are done.
 >If they are not independent , choose maximal $j$ such that $v_1,...,v_{j-1}$ is linearly independent. Note that $j > 1$. This means $v_1,v_2,...,v_j$ is not linearly independent. Reorder the basis such that $v_j$ does not have eigenvalue 0. Thus we have a nontrivial relation 
 >$$
 >\sum\limits_{i = 1}^{j-1}\alpha_{i}v_{i} = v_j
 >$$
->applying $A$ to both salides, we have 
+>applying $A$ to both sides, we have 
 >$$
 > \begin{align}
 > &\sum\limits_{i = 1}^{j-1}\alpha_i\lambda_{i}v_{i} = \lambda_{j}v_j\\
@@ -63,8 +61,8 @@ The preceding discussion suggests that linear maps somehow have a "preferred dir
 >$$
 >this is a problem, since we have found a way to express $v_j$ in two different ways with a linearly independent set, which is not possible.
 
->[!Corollary]
->An $n\times n$ matrix has atmost $n$ eigenvalues.
+>[!Theorem] Corollary
+>An $n\times n$ matrix has at most $n$ eigenvalues.
 
 ### Eigenspaces
 #### Goal: 
