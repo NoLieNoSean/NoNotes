@@ -177,7 +177,7 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 
 ---
 
-## Eigenvalues are properties of maps, not matrices
+## Eigenstuff of abstract operators
 
 Linear operators can have different matrices. For linear operators in $\mathbb{R}^{2}$ and $\mathbb{R}^{3}$, geometric intuition tells us that eigenvalues should be properties of the map itself, and not the matrix used to represent it. This is true in general.
 
@@ -187,9 +187,23 @@ Linear operators can have different matrices. For linear operators in $\mathbb{R
 >A=PBP^{-1}.
 >$$
 
+Note that the determinants of similar matrices are equal. $\det PBP^{-1}=\det P\det B\det P^{-1}=\det B$.
 
+>[!Info] Notation
+>So far, the matrix of a linear transformation $T:V\to W$ in bases $B_{V}$ and $B_{W}$ has been denoted by $\mathcal{M}_{B_{V}, B_{W}}(T)$. From now on, it will be denoted by $[T]_{B_{V}B_{W}}$. Note that the change of basis matrix between two bases $B_{V}$ and $B_{V}'$ can now be denoted as $[I]_{B_{V}B_{V}'}$. If $\mathbf{v}\in V$, the coordinate vector of $\mathbf{v}$ in basis $B_{V}$ is denoted as $[\mathbf{v}]_{B_{V}}$. Thus, we have $[\mathbf{v}]_{B_{V}}=[I]_{B_{V}B_{V}'}[\mathbf{v}]_{B_{V}'}$. 
 
+One should think of two similar matrices as representing the same abstract linear operator $T:V\to V$ in different bases. For example, if $B$ and $B'$ are bases of $V$, then $[T]_{BB}$ and $[T]_{B'B'}$ are similar matrices, related by $[T]_{BB}=[I]_{BB'}[T]_{B'B'}[I]_{B'B}$. 
 
+From the previous section, we know how to find the eigenvalues of a matrix. How do we find the eigenvalues of an abstract linear operator $T:V\to V$? We pick an arbitrary basis, and compute the eigenvalues of the matrix of the operator in that basis. We can do this because similar matrices have the same characteristic polynomial:
+
+>Let $A=SBS^{-1}$.
+>$A-\lambda I=SBS^{-1}-\lambda SIS^{-1}=S(B-{\lambda I})S^{-1}$.
+>So, $\det(A-\lambda I)=\det(B-\lambda I)$.
+
+Therefore, we can define the characteristic polynomial of an operator as the characteristic polynomial of its matrix in some basis. As we have discussed above, the result does not depend on the choice of the basis, so characteristic polynomial of an operator is well defined.
+
+>[!Warning] Similar matrices do not have the same eigenvectors!
+>Let $A=SBS^{-1}$. Let $\mathbf{v}$ be an eigenvector of $A$ with eigenvalue $\lambda$. Then, $A\mathbf{v}=\lambda \mathbf{v}$. So, $SBS^{-1}\mathbf{v}=\lambda \mathbf{v}$. Hence, $BS^{-1}\mathbf{v}=\lambda S^{-1}\mathbf{v}$, i.e, $S^{-1}\mathbf{v}$ is the eigenvector in $B$ with eigenvalue $\lambda$.
 
 
 
