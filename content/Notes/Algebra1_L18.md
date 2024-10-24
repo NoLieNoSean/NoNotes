@@ -177,15 +177,23 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 
 ---
 
-## Eigenstuff are properties of maps, not matrices
+## Eigenvalues are properties of maps, not matrices
 
-Linear operators can have different matrices. For linear operators in $\mathbb{R}^{2}$ and $\mathbb{R}^{3}$, geometric intuition tells us that eigenvectors and eigenvalues should be properties of the map itself, and not the matrix used to represent it. This is true in general.
+Linear operators can have different matrices. For linear operators in $\mathbb{R}^{2}$ and $\mathbb{R}^{3}$, geometric intuition tells us that eigenvalues should be properties of the map itself, and not the matrix used to represent it. This is true in general.
 
 >[!Definition]
 >Two $n\times n$ matrices $A$ and $B$ are *similar* if there exists an invertible $n\times n$ matrix $P$ such that
 >$$
 >A=PBP^{-1}.
 >$$
+
+
+
+
+
+
+
+
 
 Observe that $I_{n}$ is the only matrix similar to $I_{n}$. 
 Note that similarity is an equivalence relation.

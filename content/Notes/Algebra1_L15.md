@@ -102,10 +102,13 @@ $$
 
 Thus, we arrive at these alternate defining properties of the determinant:
 1. $\det A$ is multilinear in the rows of $A$.
-2. if $A$ has two identical rows then its determinant is zero.
+2. If $A$ has two identical rows then its determinant is zero.
 3. The determinant of the identity matrix is one.
 
 **Exercise:** Show that these are equivalent to the the previous defining properties.
+
+>[!Info]- 
+>LADW used the same defining properties, with (2) replaced by antisymmetry.
 
 ---
 ## Cofactor expansions

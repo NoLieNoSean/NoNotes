@@ -144,5 +144,18 @@ $$
 A determinant is a function $\det : \mathcal{M}_{n \times n}(\mathbb{R}) \to \mathbb{R}$ which satisfies the following properties:
 1) A row operation ($R_{i} \to R_{i} + \lambda R_{j}$) on the matrix does not change the determinant
 2) Scaling a row scales the determinant
-3) Swapping rows negates the determinant
+3) Swapping rows negates the determinant (antisymmetry) (can be derived from 1 and 2)
 4) $\det I_{n} = 1$
+
+> **Derivation of (3) from (1) and (2):**
+> $$
+> \begin{aligned}
+> &D(\mathbf{v}_1,\ldots,\mathbf{v}_j,\ldots,\mathbf{v}_k,\ldots,\mathbf{v}_n)\\
+> &=D(\mathbf{v}_1,\ldots,\mathbf{v}_j,\ldots,\underbrace{\mathbf{v}_k-\mathbf{v}_j}_k,\ldots,\mathbf{v}_n) \\
+> &=D(\mathbf{v}_1,\ldots,\underbrace{\mathbf{v}_j+(\mathbf{v}_k-\mathbf{v}_j)}_j,\ldots,\underbrace{\mathbf{v}_k-\mathbf{v}_j}_k,\ldots,\mathbf{v}_n) \\
+> &=D(\mathbf{v}_1,\ldots,\mathbf{v}_k,\ldots,\underbrace{\mathbf{v}_k-\mathbf{v}_j}_k,\ldots,\mathbf{v}_n) \\
+> &=D(\mathbf{v}_1,\ldots,\mathbf{v}_k,\ldots,\underbrace{(\mathbf{v}_k-\mathbf{v}_j)-\mathbf{v}_k}_k,\ldots,\mathbf{v}_n) \\
+> &=D(\mathbf{v}_1,\ldots,\mathbf{v}_k,\ldots,-\mathbf{v}_j,\ldots,\mathbf{v}_n) \\
+> &=-D(\mathbf{v}_1,\ldots,\mathbf{v}_k,\ldots,\mathbf{v}_j,\ldots,\mathbf{v}_n).
+> \end{aligned}
+> $$
