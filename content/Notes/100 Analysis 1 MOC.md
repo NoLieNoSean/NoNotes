@@ -62,8 +62,13 @@ Proper lecture notes start here.
 - [[Analysis1_L22]] ✅
 	- Connected sets, Intermediate value theorem, connected components, allied theorems.
 - [[Analysis1_L23]] ✅
-- [[Analysis1_L24]]
-- [[Analysis1_L25]]
+	- Derivatives, Algebra of derivatives, chain rule
+- [[Analysis1_L24]] %% Fri 1, have rec%% < (will get back to these, promise)
+- [[Analysis1_L25]] %% Fri 2, no rec, missed this one%% <
+- [[Analysis1_L26]] Integration!
+- [[Analysis1_L27]]
+- [[Analysis1_L28]]
+- [[Analysis1_L29]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
