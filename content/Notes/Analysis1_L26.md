@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-10-23
 time: 15:30
 ---
@@ -90,18 +91,19 @@ The $\inf$ and $\sup$ are taken over all partitions, with $\alpha$ being fixed. 
 $$
 \int_{a}^{b} f \, d\alpha,
 $$
-called the Stieltjes integral of $f$ with respect to $\alpha$. Remember that $d\alpha$ here is just notation.
+called the Stieltjes integral of $f$ with respect to $\alpha$, and we say $f$ is R-S or S integrable with respect to $\alpha$, denoted as $f\in\mathscr{R}(\alpha)$. Remember that $d\alpha$ here is just notation.
 
 Observe that 
 - taking $\alpha(x)=x$ gives us the vanilla Riemann integral.
 - $f$ begin Riemann-Stieltjes integrable for some $\alpha$ does not mean $f$ is Riemann-Stieltjes integrable for all $\alpha$. 
 
 ---
-
-
+## Lower integrals, upper integrals and integrability
 
 > [!Definition]
 > A partition $P^{*}$ is called a *refinement* of $P$ if $P^{*}\supset P$. Given two partitions $P_{1}$ and $P_{2}$, we say $P^{*}$ is their *common refinement* if $P^{*}=P_{1}\cup P_{2}$.
+
+### Effect of refinement on upper and lower sums
 
 Rudin, 6.4
 
@@ -129,6 +131,8 @@ Rudin, 6.4
 > $$
 > ❏
 
+### Relation between upper and lower integrals
+
 Rudin, 6.5
 
 > [!Theorem]
@@ -142,4 +146,21 @@ Rudin, 6.5
 > L(P_{1}, f, \alpha)\leq L(P^{*}, f, \alpha)\leq U(P^{*}, f, \alpha)\leq U(P_{2}, f, \alpha).
 > $$
 > Now, fix $P_{2}$. We get $L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$ for all $P$. Thus, $\sup L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$. However, this is true for all $P_{2}$. Thus, $\sup L(P, f, \alpha)\leq \inf U(P, f, \alpha)$. ❏
+
+### A criterion for integrability
+
+Rudin, 6.6
+
+> [!Theorem]
+> $f:[a, b]\to \mathbb{R}\in\mathscr{R}(\alpha)$ $\iff$ $\forall\epsilon>0$ $\exists$ partition $P$ of $[a, b]$ such that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$. 
+
+> **Proof of $\Longleftarrow$**
+> If $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for some $P$, then $\inf U(P, f, \alpha)-\sup L(P, f, \alpha)<\epsilon$ for some $P$. Combined with 6.5, this gives us
+> $$
+> 0\leq \overline{\int_{a}^{b}} f \, d\alpha-\underline{\int_{a}^{b}} f \, d\alpha \leq \epsilon
+> $$
+> for all $\epsilon$. Thus, we must have equality.
+> 
+> **Proof of $\Longrightarrow$**
+> Given $\epsilon$, find $P_{1}$ such that $\int f\,d\alpha-L(P_{1}, f, \alpha)< \frac{\epsilon}{2}$ and $P_{2}$ such that $U(P_{2}, f, \alpha)-\int f\,d\alpha< \frac{\epsilon}{2}$. Now, consider the common refinement $P^{*}$ of $P_{1}$ and $P_{2}$. From 6.4, we get $U(P^{*}, f, \alpha)-L(P^{*}, f, \alpha)< \epsilon$. ❏
 

@@ -65,7 +65,8 @@ Proper lecture notes start here.
 	- Derivatives, Algebra of derivatives, chain rule
 - [[Analysis1_L24]] %% Fri 1, have rec%% < (will get back to these, promise)
 - [[Analysis1_L25]] %% Fri 2, no rec, missed this one%% <
-- [[Analysis1_L26]] Integration!
+- [[Analysis1_L26]] ✅ Integration!
+	- Riemann and Stieltjes integrals, partitions, 6.1 through 6.6
 - [[Analysis1_L27]]
 - [[Analysis1_L28]]
 - [[Analysis1_L29]]
