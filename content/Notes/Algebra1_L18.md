@@ -205,10 +205,17 @@ Therefore, we can define the characteristic polynomial of an operator as the cha
 >[!Warning] Similar matrices do not have the same eigenvectors!
 >Let $A=SBS^{-1}$. Let $\mathbf{v}$ be an eigenvector of $A$ with eigenvalue $\lambda$. Then, $A\mathbf{v}=\lambda \mathbf{v}$. So, $SBS^{-1}\mathbf{v}=\lambda \mathbf{v}$. Hence, $BS^{-1}\mathbf{v}=\lambda S^{-1}\mathbf{v}$, i.e, $S^{-1}\mathbf{v}$ is the eigenvector in $B$ with eigenvalue $\lambda$.
 
-
-
-
-
 Observe that $I_{n}$ is the only matrix similar to $I_{n}$. 
 Note that similarity is an equivalence relation.
 Also note that if $A$ is similar to $B$, $A^{r}$ is similar to $B^{r}$.
+
+---
+tut
+
+If $A$ and $B$ are similar, they have the same rank.
+Characteristic polynomial of similar matrices are the same.
+symmetric matrices have real eigenvalues.
+minimal polynomials
+	must be unique
+	minimal polynomial always divides any poly which has $T$ as a root
+	

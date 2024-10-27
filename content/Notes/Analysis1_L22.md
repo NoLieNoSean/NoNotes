@@ -42,6 +42,8 @@ For example, $X=\mathbb{R}\setminus \{ p \}$ is disconnected because $X=(-\infty
 
 ### Intermediate value theorem
 
+Rudin, 4.23
+
 >[!Theorem]
 >Let $f:[a, b]\to \mathbb{R}$ be continuous, WLOG $f(a)<c<f(b)$. Then, $\exists x\in(a, b)$ such that $f(x)=c$. 
 

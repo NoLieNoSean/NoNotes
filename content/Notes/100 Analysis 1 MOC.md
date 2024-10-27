@@ -67,7 +67,8 @@ Proper lecture notes start here.
 - [[Analysis1_L25]] %% Fri 2, no rec, missed this one%% <
 - [[Analysis1_L26]] ✅ Integration!
 	- Riemann and Stieltjes integrals, partitions, 6.1 through 6.6
-- [[Analysis1_L27]]
+- [[Analysis1_L27]] ✅
+	- 6.8 through 6.12
 - [[Analysis1_L28]]
 - [[Analysis1_L29]]
 

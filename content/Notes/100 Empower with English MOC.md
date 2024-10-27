@@ -139,13 +139,14 @@ Suppose the mayor really is back home when M Gaultier returns. Write a dialogue 
 
 ---
 
-Describe the setting of the poem with focus on imagery.
+**Describe the setting of the poem with focus on imagery.**
 
 bad vibe
-disease, gloomy, dark
+pestilent, gloomy, dark
 despairing, Irish, desolate
 
-Or under green sods lay:
+Examples of imagery:
+Or under green sods lay
 And stars began to peep.
 And leaves shook in the wind;
 He rode now as he never rode,
@@ -157,7 +158,6 @@ By rocky lane and fen;
 works to exhaustion, hardworking
 "The old priest Peter Gilligan
 Was weary night and day;"
-
 
 religious, compassionate, god loving, grateful
 "'He Who hath made the night of stars
@@ -172,7 +172,7 @@ Asleep upon a chair."
 
 **character sketch of mariner**
 
-captivating: 
+captivating
 "He holds him with his glittering eye—
 The Wedding-Guest stood still,
 And listens like a three years' child:
@@ -180,7 +180,6 @@ The Mariner hath his will."
 
 rough and impulsive
 "And he stoppeth one of three."
-
 "He holds him with his skinny hand,
 'There was a ship,' quoth he.
 'Hold off! unhand me, grey-beard loon!"
@@ -191,7 +190,10 @@ From the fiends, that plague thee thus!—
 Why look'st thou so?'—With my cross-bow
 I shot the ALBATROSS."
 
-descriptive. 
-the entire poem
+---
 
+**Debate**
 
+*"Religion and state should be separate entities."*
+
+Being *separate* means that the state recognizes religion in the same manner it recognizes any other legal organization, but nothing more. 

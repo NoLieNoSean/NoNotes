@@ -61,7 +61,7 @@ $$
 Since $L(P, f)$ is bounded above and $U(P, f)$ is bounded below, we can be sure that their supremum and infimum exists respectively, i.e, the upper and lower integrals are defined for *every* bounded function $f$. Note the use of the [[LUB property]] of $\mathbb{R}$. 
 
 > [!Definition]
-> $f$ is *Riemann integrable* if the upper and lower integrals coincide. If $f$ is Riemann integrable, we define
+> $f$ is *Riemann integrable* if the upper and lower integrals coincide. We denote this by $f\in\mathscr R$. If $f$ is Riemann integrable, we define
 > $$
 > \int_{a}^{b} f \, dx \equiv \overline{\int_{a}^{b}} f \, dx =\underline{\int_{a}^{b}} f \, dx .
 > $$
@@ -163,4 +163,3 @@ Rudin, 6.6
 > 
 > **Proof of $\Longrightarrow$**
 > Given $\epsilon$, find $P_{1}$ such that $\int f\,d\alpha-L(P_{1}, f, \alpha)< \frac{\epsilon}{2}$ and $P_{2}$ such that $U(P_{2}, f, \alpha)-\int f\,d\alpha< \frac{\epsilon}{2}$. Now, consider the common refinement $P^{*}$ of $P_{1}$ and $P_{2}$. From 6.4, we get $U(P^{*}, f, \alpha)-L(P^{*}, f, \alpha)< \epsilon$. ❏
-
