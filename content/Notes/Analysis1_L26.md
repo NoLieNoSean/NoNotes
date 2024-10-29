@@ -66,6 +66,9 @@ Since $L(P, f)$ is bounded above and $U(P, f)$ is bounded below, we can be sure 
 > \int_{a}^{b} f \, dx \equiv \overline{\int_{a}^{b}} f \, dx =\underline{\int_{a}^{b}} f \, dx .
 > $$
 
+> [!Important]
+> Since the definition of the Riemann integral requires $f$ to be bounded, the statement $f\in\mathscr R$ comes loaded with the presumption that $f$ is bounded. Ditto for the R-S integral.
+
 ### Riemann-Stieltjes integrals
 
 Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Let $\alpha$ be a monotone increasing function on $[a, b]$. For a partition $P$ of $[a, b]$, define $\Delta\alpha_{i}\equiv\alpha(x_{i})-\alpha(x_{i-1})$. Define

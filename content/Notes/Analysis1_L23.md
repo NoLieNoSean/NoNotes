@@ -28,15 +28,15 @@ If $f'(x)$ exists, then define $u(t)$ by :
 
 $$
 u(t)\equiv \begin{cases}
-{\huge \frac{{f(t)-f(x)}}{t-x}}-f'(x) & t\ne x \\
+{ \frac{{f(t)-f(x)}}{t-x}}-f'(x) & t\ne x \\
 0 & t=x
 \end{cases}
 $$
-, i.e, 
+$u(t)$ satisfies 
 $$
-{f(t)-f(x)}=(t-x)[f'(x)+u(t)]
+{f(t)-f(x)}=(t-x)[f'(x)+u(t)],
 $$
-As $t\to 0$, $u(t)\to 0$.
+and as $t\to 0$, $u(t)\to 0$.
 
 ### Differentiability implies continuity
 

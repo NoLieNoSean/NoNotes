@@ -110,6 +110,7 @@ Note that the result from the previous section has been used to simplify the the
 ### Continuous functions
 
 #### Definition
+
 >[!Definition]
 >If $f$ is continuous at every point of $E$, then $f$ is said to be *continuous* on $E$. If $E$ happens to be the domain of $f$, then $f$ is just said to be continuous.
 
