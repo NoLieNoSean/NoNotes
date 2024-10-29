@@ -38,7 +38,7 @@ Rudin, 6.8
 > If $f$ is continuous on $[a, b]$ then $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
 
 > **Proof**
-> Note that since $[a, b]$ is [[Analysis1_L17#Absolute and relative definitions of open cover compactness|compact]], $f$ is [[Analysis1_L20#Continuous functions defined on compact sets are uniformly continuous|uniformly continuous]] on $[a, b]$. We will use the [[Analysis1_L26#A criterion for integrability|the criterion for integrability]] to show $f\in\mathscr R$. Let $\epsilon>0$. We can find $\delta>0$ such that whenever $|s-t|<\delta$, $|f(s)-f(t)|<\epsilon$. Choose $P$ such that each $\Delta x_{i}<\delta$. Thus, in $[x_{i-1}, x_{i}]$, $M_{i}-m_{i}<\epsilon$. Therefore, 
+> Note that [[Analysis1_L20#Continuous functions defined on compact sets are uniformly continuous|since]] $[a, b]$ is [[Analysis1_L17#Absolute and relative definitions of open cover compactness|compact]], $f$ is [[Analysis1_L20#Uniform continuity|uniformly continuous]] on $[a, b]$. We will use the [[Analysis1_L26#A criterion for integrability|the criterion for integrability]] to show $f\in\mathscr R$. Let $\epsilon>0$. We can find $\delta>0$ such that whenever $|s-t|<\delta$, $|f(s)-f(t)|<\epsilon$. Choose $P$ such that each $\Delta x_{i}<\delta$. Thus, in $[x_{i-1}, x_{i}]$, $M_{i}-m_{i}<\epsilon$. Therefore, 
 > $$
 > \begin{align}
 > U(P, f, \alpha)-L(P, f, \alpha) = & \ \sum_{i=1}^{n} (M_{i}-m_{i})\Delta\alpha_{i}< \epsilon(\alpha(b)-\alpha(a)).
@@ -87,7 +87,7 @@ Rudin, 6.9
 > \forall n\in \mathbb{N}, \forall {0}\leq i\leq n, \exists x_{i}\in[a, b] \text{ such that } \alpha(x_{i})=\alpha(a)+ \frac{i}{n}(\alpha(b)-\alpha(a)).
 > $$
 > 
-> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a very specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. One way of ensuring this is to require $\alpha$ to be continuous, as done in the hypothesis of this theorem. So, we can proceed to write
+> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a very specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. We can ensure this by requiring $\alpha$ to be continuous (If a monotone function has IVP, then it must be continuous), as done in the hypothesis of this theorem. So, we can proceed to write
 > $$
 > U(P, f, \alpha)-L(P, f, \alpha )=(f(x_{n})-f(x_{0})) \frac{{\alpha(b)-\alpha(a)}}{n},
 > $$
@@ -101,7 +101,7 @@ Rudin, 6.10
 > Suppose $f$ is continuous on $[a, b]$ except at finitely many points, and $f$ is bounded on $[a, b]$. Then, $f\in\mathscr{R}$ on $[a, b]$.
 
 > **Proof**
-> It suffices to consider the case when $f$ is discontinuous at only one point in $[a, b]$, say $p$. Let $\epsilon>0$. Now, let $k\in(p-\epsilon, p)$ and $k'\in(p, p+\epsilon)$. $f$ is uniformly continuous on $[a, k]\cap[k', b]$, so we can choose $\delta$ such that $s, t\in[a, k]\cap[k', b], |s-t|<\delta\implies |f(s)-f(t)|<\epsilon$. Now, choose a partition $P$ such that $x_{j-1}=k$ and $x_{j}=k'$ for some $j$, and $\Delta x_{i}<\delta$ for all $i\ne j$. Let $M=\sup |f(x)|$. Note that $M_{j}-m_{j}\leq {2}M$. Then,
+> It suffices to consider the case when $f$ is discontinuous at only one point in $[a, b]$, say $p$. Let $\epsilon>0$. Now, let $k\in(p-\epsilon, p)$ and $k'\in(p, p+\epsilon)$. $f$ is uniformly continuous on $[a, k]\cup[k', b]$, so we can choose $\delta$ such that $s, t\in[a, k]\cup[k', b], |s-t|<\delta\implies |f(s)-f(t)|<\epsilon$. Now, choose a partition $P$ such that $x_{j-1}=k$ and $x_{j}=k'$ for some $j$, and $\Delta x_{i}<\delta$ for all $i\ne j$. Let $M=\sup |f(x)|$. Note that $M_{j}-m_{j}\leq {2}M$. Then,
 > $$
 > \begin{align}
 > U(P, f)-L(P, f)= & \ \sum_{i=1}^{j-1} (M_{i}-m_{i})(x_{i}-x_{i-1}) \\
@@ -153,6 +153,7 @@ Rudin, 6.11
 ## Properties of the integral
 
 Rudin, 6.12
+### a
 
 > [!Theorem]
 > If $f\in\mathscr R(\alpha)$, for every constant $c$ we have $cf\in\mathscr R(\alpha)$ and
@@ -198,12 +199,14 @@ Rudin, 6.12
 > \int_{a}^{b} f_{1}+f_{2} \, d\alpha\leq U(P, f_{1}+f_{2}, \alpha)< \int_{a}^{b} f_{1} \, d\alpha +\int_{a}^{b} f_{2} \, d\alpha+2\epsilon.  
 > $$
 > ❏
+### b
 
 > [!Theorem]
 > If $f_{1}\in\mathscr R(\alpha)$ and $f_{2}\in\mathscr R(\alpha)$ on $[a, b]$ and $f_{1}(x)\leq f_{2}(x)$, then
 > $$
 > \int_{a}^{b} f_{1} \, d\alpha\leq \int_{a}^{b} f_{2} \, d\alpha. 
 > $$
+### c
 
 > [!Theorem]
 > If $f\in\mathscr R(\alpha)$ on $[a, b]$ and if $a<c<b$, then $f\in\mathscr R(\alpha)$ on $[a, c]$ and on $[c, b]$, and
@@ -224,12 +227,14 @@ Rudin, 6.12
 > \int_{a}^{b} f \, d\alpha \leq U(P, f, \alpha)_{[a, c]}+U(P, f, \alpha)_{{[c, b]}}<\int_{a}^{c} f \, d\alpha+\int_{c}^{b}f  \, d\alpha+2\epsilon
 > $$
 > ❏
+### d
 
 > [!Theorem]
 > If $f\in\mathscr R(\alpha)$ on $[a, b]$ and if $|f(x)|\leq M$ on $[a, b]$, then
 > $$
 > \left|\int_{a}^{b} f \, d\alpha \right|\leq M[\alpha(b)-\alpha(a)].
 > $$
+### e
 
 > [!Theorem]
 > If $f\in\mathscr R(\alpha)$ and $c$ is a positive constant, then $f\in\mathscr R(c\alpha)$ and
