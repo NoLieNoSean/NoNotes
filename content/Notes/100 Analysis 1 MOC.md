@@ -69,7 +69,7 @@ Proper lecture notes start here.
 	- Riemann and Stieltjes integrals, partitions, 6.1 through 6.6
 - [[Analysis1_L27]] ✅
 	- 6.8 through 6.12
-- [[Analysis1_L28]]
+- [[Analysis1_L28]] ✅
 - [[Analysis1_L29]]
 
 >[!Excalidraw]-
