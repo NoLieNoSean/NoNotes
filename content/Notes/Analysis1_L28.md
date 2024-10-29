@@ -137,7 +137,7 @@ Rudin, 6.22
 Rudin, 6.13b
 
 > [!Theorem]
-> If $f\in\mathscr{R}(\alpha)$ and $g\in\mathscr{R}(\alpha)$ on $[a, b]$, then
+> If $f\in\mathscr{R}(\alpha)$, then
 > $$
 > |f|\in\mathscr{R}(\alpha)\text{ and } \left|\int_{a}^{b} f \, d\alpha\right|\leq \int_{a}^{b} |f| \, d\alpha  .
 > $$
