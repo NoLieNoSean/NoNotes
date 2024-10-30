@@ -6,28 +6,20 @@ date: 2024-10-16
 time: 11:50
 ---
 >[!Recall]
->[[Algebra1_L16#Invariant Subspaces| Invariant Subspace]]
+>[[Algebra1_L16#Invariant Subspaces|Invariant Subspace]]
 >[[Algebra1_L16#What will the matrix of $T$ with respect to $ beta_v$ look like?|Matrix of a linear operator with respect to an invariant subspace]]
 >[[Algebra1_L16#If the vector space is the direct sum of two invariant subspaces| If V is the direct sum of two invariant subspaces]]
-
 
 ## Eigenvectors and Eigenvalues
 
 >[!Definition]
->An eigenvector $v$ of a linear map $A$ is a *nonzero* vector such that $T(v) = \lambda v$
-
->[!definition]
->An eigenvalue of $A$ is a scalar $\lambda$ such that the equations $Av = \lambda v$ has ***nontrivial*** solution
-
-If $Av = \lambda v$ for some nontrivial $v$, then we say
-1. $v$ is an eigenvector for $\lambda$
-2. $\lambda$ is an eigenvalue for $v$
+>An eigenvector $v$ of a linear map $T$ is a ***nonzero*** vector such that $T(v) = \lambda v$ where $\lambda \in \mathbb{F}$ is called the eigenvalue of $T$
 
 >[!Example]
 >Let $$A= \left[\begin{array}{cc} 2 &2 \\ -4 & 8\end{array}\right]$$
 >Now consider the vectors $v = \left[\begin{array}{c}1 \\ 1\end{array}\right], w = \left[\begin{array}{c}2 \\ 1\end{array}\right]$. 
->Notice that $Av = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4v$. Thus $v$ is an eigenvector of $A$. 
->On the other hand, $Aw = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda w$ for any $\lambda \in \mathbb{R}$. Thus it is not an eigenvector of $A$
+>Notice that $Av = \begin{bmatrix} 4 \\4 \end{bmatrix} = 4v$. Thus $v$ is an eigenvector of $A$ with eigenvalue 4. 
+>While, $Aw = \begin{bmatrix}  6 \\ 0\end{bmatrix} \neq \lambda w$ for any $\lambda \in \mathbb{R}$. Thus it is not an eigenvector of $A$.
 
 >[!Example] Example: Reflection
 >Let $T:\mathbb{R}^2\mapsto\mathbb{R}^2$ be the linear map that reflects over the line $L :y = -x$

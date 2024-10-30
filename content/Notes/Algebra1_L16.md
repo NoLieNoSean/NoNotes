@@ -8,130 +8,137 @@ time: 14:00
 ## Determinants
 ### Another Formula
 
-Let $M$ be an $n\times n$ matrix. Let $M_1,M_2,...,M_n$ be the rows of the matrix.
-
-We have $M_{i}^{t}= \begin{bmatrix} M_{i1}\\ M_{i2} \\ \cdots \\ M_{in} \end{bmatrix} = \sum\limits_{j = 1}^{n}M_{ij}e_{j}$ where $e_j$ is the $j$th vector of the standard basis in canonical order. Now, the determinant can be thought of as a function of the row vectors of $M$:
+Let $M$ be an $n\times n$ matrix. Let $M_1,M_2,...,M_n$ be the rows of the matrix. We have 
+$$
+M_{i}^{T}= \begin{bmatrix} M_{i1}\\ M_{i2} \\ \cdots \\ M_{in} \end{bmatrix} = \sum\limits_{j = 1}^{n}M_{ij}e_{j}
+$$
+where $e_j$ is the $j^{th}$ vector of the standard basis in canonical order. Now, the determinant can be thought of as a function of the row vectors of $M$, that is
 
 $$
-\mathrm{det}(M_{1}^{t},M_{2}^{t},\cdots,M_{n}^{t})= \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right)
+\mathrm{det}(M_{1}^{T},M_{2}^{T},\cdots,M_{n}^{T})= \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right)
 $$
-
 By multilinearity of the determinant, we have
 $$
 \mathrm{det}\left(\sum\limits_{j = 1}^{n}M_{1j}e_{j},\sum\limits_{j = 1}^{n}M_{2j}e_{j},\cdots,\sum\limits_{j = 1}^{n}M_{nj}e_{j}\right) = \sum\limits_{i_1,i_2,...,i_n}M_{1i_{1}}M_{2i_{2}}...M_{ni_{n}}\det(e_{i_1},e_{i_2},...,e_{i_n})
 $$
 where $i_{k}\in \{1,..,n\}$.
 
-The antisymmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
-Therefore we only need to consider the case when all the $i_k$ are pairwise distinct, i.e, a permutation of $\{1,..,n\}$. 
+>[!Info] Permutations
+>A permutation is defined to be a bijection of the set $\mathcal{N}=\{ 1,2,\dots ,n \}$ to itself. We define $S_{n}$ to be the set of all permutations of $\mathcal{N}$. The elements of $S_{n}$ are functions. For some $\sigma \in S$, $\sigma(i)$ is denoted by $\sigma_{i}$.
+>
+>Define the length of a permutation $\sigma$ as
+>$$
+>l(\sigma) \overset{\text{def}}= \text{card}\, \{ (i,j) \mid i < j \text{ and } \sigma(i) > \sigma(j)\}
+>$$
+>We claim that a permutation $\sigma$ can be reordered using $l(\sigma)$ swaps.
+>We define another quantity
+>$$
+>\text{sign}(\sigma) = {(-1)}^{l(\sigma)}
+>$$ 
 
-### Permutations
-We now begin a brief study of permutations in order to simplify the determinant
 
->[!definition]
->A bijection of $\{1,..,n\}$ with itself is defined to be a permutation of $\{1,..,n\}$. $S_n$ is denoted as the set of permutations of $\{1,..,n\}$
+The anti-symmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{m}= i_n$ for $m\neq n$. Therefore, we need only consider the case when all the $i_k$ are pairwise distinct, that is a permutation of $\{1,..,n\}$.
 
->[!notation]
->Remember the elements of $S_n$ are functions. Suppose $\sigma\in S_n$. We write $\sigma(i) = \sigma_i$
+Using the fact that swapping rows of a determinant introduces a minus sign and that $\det I_{n} = 1$, 
+we conclude
+$$
+\begin{align}
+\det M&= \sum\limits_{i_1,i_2,...,i_n}M_{1i_{1}}M_{2i_{2}}...M_{ni_{n}}\det(e_{i_1},e_{i_2},...,e_{i_n}) \\
+ & =\sum_{\sigma \in S_{n}} M_{1\sigma_{1}}M_{2\sigma_{2}}\dots M_{n\sigma_{n}}\det(e_{\sigma_{1}}, e_{\sigma_{2}}, \dots, e_{\sigma_{n}})\\
+ & =\sum_{\sigma \in S_{n}} M_{1\sigma_{1}}M_{2\sigma_{2}}\dots M_{n\sigma_{n}}\text{sign}(\sigma)
+\end{align}
+$$
 
->[!definition]
->Define the length of a permutation $\sigma$ denoted by $l(\sigma) := \# \{(i,j) | i < j \text{ and } \sigma_{i}>\sigma_{j}\}$ where $\# X$ is the number of elements in a set $X$
+>[!error] Note
+>During the course of this proof, we have used all the axioms from the definition of the determinant. Hence this resulting formula must be unique.
 
->[!exercise]
-> Show that a permutation $\sigma$ can be reordered using $l(\sigma)$ steps
+### Properties
 
-### Back to determinants
-From our study above, we see that 
-$$\det(e_{\sigma_1},e_{\sigma_2},...,e_{\sigma_{n})}= (-1)^{l(\sigma)}$$
-Define the quantity
-$$(-1)^{l(\sigma)} := \mathrm{sgn}(\sigma)$$
 
-Keeping the discussion till now in mind, we see that the determinant must be uniquely determined, meaning that there is only one determinantal map from $\mathbb{R}^{n\times n}$ to $\mathbb{R}$. The upshot of this is that all formulas covered in the previous lectures for the determinant give the same answer.
-
-### Properties of The Determinant
-
->[!lemma]
->$\det(A) = 0 \iff A$ is not invertible
+#### 1) $\det A = 0 \iff A$ is not invertible
 
 >**Proof**
->A is invertible 
->$\implies$ $\mathrm{RREF}(A) = id$
->$\implies \det(A) \neq 0$
 >
->A is not invertible
->$\implies$ $\mathrm{RREF(A)}$ has a zero row
->$\implies$ $\det(\mathrm{RREF}(A)) = 0$
->$\implies \det(A) = 0$
+> Case (1)
+> $$
+> \begin{align}
+>  & A \text{ is invertable} \\
+> \implies  & \text{RREF}(A) = I_{n} \\
+> \implies  & \det(A) \neq 0 
+> \end{align}
+> $$
+> Case (2)
+> $$
+> \begin{align}
+>  & A \text{ is not invertable} \\
+> \implies  & \text{RREF}(A) \text{ has a zero row} \\
+> \implies  & \det(\text{RREF}(A)) = 0\\ 
+> \implies  & \det(A) = 0 
+> \end{align}
+> $$
 
 >[!Corollary]
 >If $A$ is an $n\times n$ matrix and the rows of $A$ are linearly dependent, then $\det(A) = 0$
 
->[!Lemma(Multiplicativity)]
->$\det(AB) = \det(BA)$
+
+#### 2) $\det(AB) = \det(A)\det(B)$
 
 >**Proof**
->Case 1: $A$ is not invertible
->In this case, the product $AB$ will not be invertible. Thus we have
->$$\det(AB) = 0 = 0\det(B) = \det(A)\det(B)$$
->Case 2: A is invertible
->Define the function $\mathrm{d}(B) = \frac{\det(AB)}{\det(A)}$ 
->This is well defined, since $\det(A) \neq 0$.
->Observe that $\mathrm{d}$ is a determinantal map. Therefore, $\mathrm{d}(B) = \det(B)$ and we are done.
+>
+>_Case 1_: $A$ is not invertible
+>In this case, the product $AB$ will not be invertible, for if $(AB)^{-1}$ did exist then $B(AB)^{-1}$ would be an inverse of $A$ which is a contradiction.
+>Thus we have
+>$$
+>\det(AB) = 0 = 0\cdot\det(B) = \det(A)\det(B)
+>$$
+>_Case 2_: A is invertible
+>Define the function $f(B) = \frac{\det(AB)}{\det(A)}$. This is well defined, since $\det(A) \neq 0$.
+>Observe that $f$ satisfies all the determinant axioms, hence $f(B) = \det(B)$.
 
 >[!Corollary]
->$\det(A^{n})= \det(A)^n$
->$\prod_{i=1}^{n}A_i$ is invertble $\iff$ each $A_i$ is inveritble
+>	- $\det(A^{n})= \det(A)^n$
+>	- $\prod_{i=1}^{n}A_i$ is invertible $\iff$ each $A_i$ is invertible
 
->[!Proposition]
->$\det(A) = \det(A^t)$
 
+#### 3) $\det A = \det A^T$
 
 >**Proof**
->consider the function $f(A) = det(A^t)$
-> Exercise: prove that $f$ is a determinantal map and therefore $f(A) = \det(A)$
+>consider the function $f(A) = \det A^T$
+>Prove that $f$ is a determinantal map and therefore $f(A) = \det(A)$
 > 
 
->[!Corollary]
->All statements about row operations etc,. can be made about column operations
 
 ## Invariant Subspaces
 
 >[!Definition]
->Let $W\subseteq V$  be a subspace of $V$. $W$ is said to be invariant under a linear map $T$, or $T-$invariant, if $T(W)\subseteq W$
-
-i.e, $W$ is $T$ invariant whenever $T(w)\in W \impliedby w\in W$
-
-This is useful, since we can now define a linear map from $W$
- to $W$ called the restriction of $T$ to $W$
->[!Definition]
->If $W$ is a $T-$invariant subspace, we define the restriction of $T$ to $W$ denoted by $T|_{W} : W \mapsto W$ given by $T|_{W}(w) = T(w)$
+>A subspace $W$ of $V$ is said to be invariant under a linear map $T$, or $T-$invariant, if $T(W)\subseteq W$, that is $w \in W \implies T(w) \in W$.
 >
+>For such $T$-invariant subspaces, we can define a linear map $T|_{W}:W \to W$ called the restriction of $T$ to $W$.
 
+Let $T:V \to V$ be a linear map. If $W$ is a $T-$invariant subspace, we can take a basis $(w_1,w_2,...,w_k)$ of $W$ and extend it to a basis $\beta_{V} = (w_1,w_2,...,w_k,v_1,v_2,...,v_{n-k})$ of $V$ where $n = \dim V$ and $k = \dim W$.
 
-Let $T:V\mapsto V$ be a linear map. If $W$ is a $T-$invariant subspace, we can take a basis $(w_1,w_2,...,w_k)$ of $W$ and extend it to a basis $\beta_{v} = (w_1,w_2,...,w_k,v_1,v_2,...,v_{n-k})$ of $V$ where $n = \dim V$.
+### Matrix of T with respect to $\beta_{V}$
 
-#### What will the matrix of $T$ with respect to $\beta_v$ look like?
-
-1. The first $k$ columns of $T$ will be the image of the $w_is$ , but since all of them map into $W$, they are expressible as linear combinations of only the vectors in $W$. 
-2. This is nice, since the coordinates of $(v_1,v_2,...,v_{n-k})$ in the vectors $T(w_1),T(w_2),..,T(w_k)$ will be zero. Thus the matrix of $T$ with respect to the basis $\beta_v$ will look like:
+The first $k$ columns of $T$ will be the image of the $w_is$.Since all $T(w_{i}) \in W$, they are expressible as linear combinations of only the vectors in $W$. Thus the matrix of $T$ with respect to the basis $\beta_V$ will look like:
 $$
-\mathcal{M}_{\beta_{v}}{(T)}= \left[\begin{array}{c|c}
+{M}_{\beta_{V}, \beta_{V}}{(T)}= \left[\begin{array}{c|c}
 A &B\\
 \hline
 0 & C
 \end{array}\right]
 $$
 
+Also notice that $A = M_{\beta_{W}, \beta_{W}}(T|_{{W}})$ where $\beta_{W} = (w_{1}, w_{2},\dots,w_{n})$
 
-3. Another upshot is that 
-$$A = \mathcal{M}_{\beta_w}(T|_{W})$$
-where $\beta_{w} = (w_1,w_2,..,w_k)$
+### Matrix of $T$ when $V = W_{1} \oplus W_{2}$
 
-##### If the vector space is the direct sum of two invariant subspaces
-4. If it happens that $V = W_{1} \oplus W_{2}$ and also  $W_1$ , $W_2$ are $T-$ invariant with bases $\beta_{w_{1}}= (w_1,w_2,...,w_k)$ and $\beta_{w_{2}}= (w_1',w_2',...,w_{n-k}')$ then the matrix of $T$ in the basis $\beta_{V} = (w_1,w_2,...,w_k,w_1',w_2',...,w_{n-k}')$ will look like $$
-\mathcal{M}_{\beta_{v}}(T)= \left[\begin{array}{c|c}
+If it happens that $V = W_{1} \oplus W_{2}$ where  $W_1$ and $W_2$ are $T$-invariant with bases $\beta_{W_{1}}= (w_1,...,w_k)$ 
+$\beta_{W_{2}}= (w_1',...,w_{n-k}')$
+$\beta_{V}= (w_{1},\dots,w_{k}, w_{1}', \dots, w_{k}')$
+then the matrix of $T$ will be $$
+M_{\beta_{V}, \beta_{V}}(T)= \left[\begin{array}{c|c}
 A& 0\\
 \hline
 0&B
 \end{array}\right]$$
-where $A = \mathcal{M}_{\beta_{w_{1}}}(T), B = \mathcal{M}_{\beta_{w_2}}(T)$
+where $A = M_{\beta_{W_{1}},\beta_{W_{1}}}(T), B = {M}_{\beta_{W_2}, \beta_{W_{2}}}(T)$
