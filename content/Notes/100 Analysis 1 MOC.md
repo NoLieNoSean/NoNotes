@@ -64,7 +64,9 @@ Proper lecture notes start here.
 - [[Analysis1_L23]] ✅
 	- Derivatives, Algebra of derivatives, chain rule
 - [[Analysis1_L24]] ✅
-- [[Analysis1_L25]] 
+	- Mean value theorems, properties of derivatives
+- [[Analysis1_L25]] ✅
+	- Taylor's theorem, MVT analogue for vector valued functions
 - [[Analysis1_L26]] ✅ Integration!
 	- Riemann and Stieltjes integrals, partitions, 6.1 through 6.6
 - [[Analysis1_L27]] ✅
