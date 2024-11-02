@@ -93,6 +93,7 @@ Rudin, 6.9
 > $$
 > and make $n$ as small as we like to meet any $\epsilon$ challenge. ❏
 
+Note that $\alpha$ being a derivative also works - [[Analysis1_L24#Properties of derivatives|derivatives have the IVP]].
 ### Continuous functions with finitely many transgressions
 
 Rudin, 6.10
@@ -252,5 +253,4 @@ Rudin, 6.12
 
 ---
 
-$\alpha$ can be a derivative in 6.9, but why?
 

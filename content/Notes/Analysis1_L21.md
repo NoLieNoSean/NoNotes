@@ -57,12 +57,12 @@ However, If the domain is compact, it is in fact true that a bijective continuou
 Rudin, 4.17
 
 >[!Theorem]
->Let $X$ be compact. Then, if $f:X\to Y$ is continuous, $f^{-1}$ is continuous, i.e, $f$ is a homeomorphism.
+>Let $X$ be compact. Then, if $f:X\to Y$ is bijective and continuous, $f^{-1}$ is continuous, i.e, $f$ is a homeomorphism.
 
 >**Proof**
 >We have to prove that $f^{-1}$ is continuous, i.e, $f(U)$ is open for every open $U\subset X$, i.e, $f(C)$ is closed for every closed $C\subset X$ (Since $f$ is bijective, it preserves complements). Let $C\subset X$ be closed. [[Analysis1_L17#Closed subsets of compact sets are compact|Since]] $X$ is compact, $C$ must be compact. It [[Analysis1_L17#Another exercise in working with open cover compactness|follows]] that $f(C)$ is a compact subset of $Y$. So, $f(C)$ [[Analysis1_L18#Proof of Rudin, 2.34 using open cover compactness|must be]] closed in $Y$. ❏
 
-Note that the function begin bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps from compact sets are *closed maps*, i.e, they map closed sets to closed sets.
+Note that the function being bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps from compact sets are *closed maps*, i.e, they map closed sets to closed sets.
 
 >[!Theorem]
 >Continuous maps from compact sets are closed maps.

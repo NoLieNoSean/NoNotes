@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-10-18, Friday
 time: 10:30
 ---
@@ -113,3 +114,23 @@ Rudin, 5.11
 > **Proof**
 > For (1), Let $x_{2}, x_{1}\in(a, b)$, $x_{1}<x_{2}$. Then, $f(x_{2})-f(x_{1})=(x_{2}-x_{1})f'(x)$ for some $x\in(x_{1}, x_{2})$. Thus, $f(x_{2})-f(x_{1})\geq 0$. Similar proofs for (2) and (3). ❏
 
+---
+## Properties of derivatives
+
+Not all functions can be derivatives. While every derivative certainly need not be continuous (for example, $x^{2}\sin\left( \frac{1}{x} \right)$ is differentiable at every point in $\mathbb{R}$, but its derivative is not continuous at $0$), every derivative satisfies a property of continuous functions, namely, the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]].
+
+Rudin, 5.12
+
+> [!Theorem]
+> Suppose $f$ is a real differentiable function on $[a, b]$ and suppose $f'(a)<\lambda<f'(b)$. Then there is a point $x\in(a, b)$ such that $f'(x)=\lambda$. 
+
+> **Proof**
+> Define $g(x)\equiv f(x)-\lambda t$. Notice that $g'(a)<0$ and $g'(b)>0$. This implies that there exist $t_{1}, t_{2}\in(a, b)$ such that $g(t_{1})<g(a)$ and $g(t_{2})<g(b)$. Thus, $g$ attains its minimum value at some $t\in(a, b)$. Since the derivative is zero at local maxima, we have $g'(t)=0$, which gives us $f'(t)=\lambda$. ❏
+
+> [!Info]
+> How does $g'(a)<0$ imply the existence of $t_{1}\in(a, b)$ such that $g(t_{1})<g(a)$? Recall the definition of [[Analysis1_L10#Definition of limit of a function in R|limit of a function]]. We know that $\lim_{ x \to a }  \frac{{g(x)-g(a)}}{x-a}<0$. Choose $\epsilon$ to be $|g'(a)|$, and obtain the corresponding $\delta$. So, for all $x\in(a, a+\delta)$, $\frac{{g(x)-g(a)}}{x-a}\in(-2g'(a), 0)$, i.e, $g(x)<g(a)$. Note that we arrived at stronger statement than we required: $g'(a)<0$ not only implies the existence of $t_{1}\in(a, b)$, but also the existence of an entire interval $(a, a+\delta)$ satisfying the same condition.
+
+> [!Theorem] Corollary
+> If $f$ is differentiable on $[a, b]$, then $f'$ cannot have any [[Analysis1_L19#Discontinuous functions|discontinuities]] of the first kind on $[a, b]$.
+
+$f'$ may have discontinuities of the second kind, though.

@@ -63,14 +63,16 @@ Proper lecture notes start here.
 	- Connected sets, Intermediate value theorem, connected components, allied theorems.
 - [[Analysis1_L23]] ✅
 	- Derivatives, Algebra of derivatives, chain rule
-- [[Analysis1_L24]] %% Fri 1, have rec%% < (will get back to these, promise)
-- [[Analysis1_L25]] %% Fri 2, no rec, missed this one%% <
+- [[Analysis1_L24]] ✅
+- [[Analysis1_L25]] 
 - [[Analysis1_L26]] ✅ Integration!
 	- Riemann and Stieltjes integrals, partitions, 6.1 through 6.6
 - [[Analysis1_L27]] ✅
 	- 6.8 through 6.12
 - [[Analysis1_L28]] ✅
 - [[Analysis1_L29]]
+- [[Analysis1_L30]]
+- [[Analysis1_L31]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
