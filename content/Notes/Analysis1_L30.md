@@ -1,5 +1,7 @@
 ---
-tags: 
+tags:
+  - ANA1
+  - Lecture
 date: 2024-10-30, Wednesday
 time: 10:32
 ---

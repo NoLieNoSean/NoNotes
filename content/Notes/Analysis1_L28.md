@@ -61,7 +61,7 @@ Rudin, 6.20
 > $$
 > |F(y)-F(x)|=\left|\int_{x}^{y} f(t) \, dt \right|<M(y-x)=\epsilon.
 > $$
-> Now, suppose $f$ is continuous as $x_{0}$. Let $\epsilon>0$. Choose $\delta>0$ such that $|t-x_{0}|<\delta$$\implies$$|f(t)-f(x_{0})|<\epsilon$. Let $|t-x_{0}|<\delta$.
+> Now, suppose $f$ is continuous as $x_{0}$. Let $\epsilon>0$. Choose $\delta>0$ such that $|t-x_{0}|<\delta$ $\implies$ $|f(t)-f(x_{0})|<\epsilon$. Let $|t-x_{0}|<\delta$.
 > $$
 > \begin{align}
 > \left| \frac{1}{t-x_{0}}{\int_{x_{0}}^{t} f(u) \, du} -f(x_{0})\right| &\ =\left| \frac{1}{t-x_{0}}\right|\left|\int_{x_{0}}^{t} [f(u)  -f(x_{0})]\, du\right| \\
