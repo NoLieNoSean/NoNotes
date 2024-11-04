@@ -35,7 +35,7 @@ time: 10:30
 Rudin, 6.8
 
 > [!Theorem]
-> If $f$ is continuous on $[a, b]$ then $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
+> If $f:[a, b]\to \mathbb{R}$ is continuous on $[a, b]$ then $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
 
 > **Proof**
 > Note that [[Analysis1_L20#Continuous functions defined on compact sets are uniformly continuous|since]] $[a, b]$ is [[Analysis1_L17#Absolute and relative definitions of open cover compactness|compact]], $f$ is [[Analysis1_L20#Uniform continuity|uniformly continuous]] on $[a, b]$. We will use the [[Analysis1_L26#A criterion for integrability|the criterion for integrability]] to show $f\in\mathscr R$. Let $\epsilon>0$. We can find $\delta>0$ such that whenever $|s-t|<\delta$, $|f(s)-f(t)|<\epsilon$. Choose $P$ such that each $\Delta x_{i}<\delta$. Thus, in $[x_{i-1}, x_{i}]$, $M_{i}-m_{i}<\epsilon$. Therefore, 
@@ -51,7 +51,7 @@ Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attain
 ### Monotonic functions
 
 >[!Theorem]
->If $f$ is monotone on $[a, b]$ then $f\in\mathscr R$.
+>If $f:[a, b]\to \mathbb{R}$ is monotone on $[a, b]$ then $f\in\mathscr R$.
 
 > **Proof**
 > Let $f$ be monotone increasing. For any $P$, we have
@@ -72,7 +72,7 @@ Note that it does not matter whether $f$ is continuous or not.
 Rudin, 6.9
 
 >[!Theorem]
->If $f$ is monotone on $[a, b]$ and $\alpha$ is continuous on $[a, b]$ then $f\in\mathscr R(\alpha)$.
+>If $f:[a, b]\to \mathbb{R}$ is monotone on $[a, b]$ and $\alpha$ is continuous on $[a, b]$ then $f\in\mathscr R(\alpha)$.
 
 > **Proof**
 > Let $f$ be monotone increasing. For any $P$, we have
@@ -116,7 +116,7 @@ Rudin, 6.10
 > ❏
 
 > [!Theorem]
-> Suppose $f$ is continuous on $[a, b]$ except at finitely many points, and $\alpha$ is continuous at those points. Then, $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
+> Suppose $f:[a, b]\to \mathbb{R}$ is continuous on $[a, b]$ except at finitely many points, and $\alpha$ is continuous at those points. Then, $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
 
 > **Proof**
 > Note that again, it would suffice to consider the case where $f$ is discontinuous only at a single point in $[a, b]$, say $p$. Exactly the same set up as in the previous proof.
@@ -250,7 +250,3 @@ Rudin, 6.12
 > \int_{a}^{b} f \, d(\alpha_{1}+\alpha_{2} )=\int_{a}^{b} f \, d\alpha_{1} +\int_{a}^{b} f \, d\alpha_{2} .
 > $$
 > 
-
----
-
-

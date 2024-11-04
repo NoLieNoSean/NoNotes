@@ -60,7 +60,7 @@ Proper lecture notes start here.
 - [[Analysis1_L21]] ✅
 	- Topological spaces, homeomorphisms, 4.17
 - [[Analysis1_L22]] ✅
-	- Connected sets, Intermediate value theorem, connected components, allied theorems.
+	- Connected sets, Intermediate value theorem, connected components, allied theorems. <- *Quiz 2 syllabus ends here*
 - [[Analysis1_L23]] ✅
 	- Derivatives, Algebra of derivatives, chain rule
 - [[Analysis1_L24]] ✅
@@ -72,6 +72,7 @@ Proper lecture notes start here.
 - [[Analysis1_L27]] ✅
 	- 6.8 through 6.12
 - [[Analysis1_L28]] ✅
+	- Fundamental theorem of calculus, integration by parts
 - [[Analysis1_L29]]
 - [[Analysis1_L30]]
 - [[Analysis1_L31]]

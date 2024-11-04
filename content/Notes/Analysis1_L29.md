@@ -9,6 +9,8 @@ time: 9:30
 
 ## Integration of vector valued functions
 
+Rudin, 6.23
+
 > [!Definition]
 > Let $f_{1}, f_{2}, \dots, f_{k}:[a, b]\to \mathbb{R}$. Let $\mathbf{f}:[a, b]\to \mathbb{R}^{k}$ defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))$. 
 > We say $\mathbf{f}\in\mathscr{R}$ if $f_{j}\in\mathscr{R}$ for all $1\leq j \leq k$. If this is the case, we define
@@ -18,6 +20,8 @@ time: 9:30
 
 Similar definition exists for the Stieltjes integral. Note that parts [[Analysis1_L27#a|a]], [[Analysis1_L27#c|c]] and [[Analysis1_L27#e|e]] of the properties of integrals are valid for these integrals, and so is the [[Analysis1_L28#Integration and differentiation|fundamental theorem of calculus]]:
 
+Rudin, 6.24
+
 > [!Theorem]
 > Let $\mathbf{f}:[a, b]\to \mathbb{R}^{k}$. If $\mathbf{f}\in\mathscr R$ on $[a, b]$ and if there is a differentiable function $\mathbf{F}:[a, b]\to \mathbb{R}^{k}$ such that $\mathbf{F}'=\mathbf{f}$, then
 > $$
@@ -26,11 +30,69 @@ Similar definition exists for the Stieltjes integral. Note that parts [[Analysis
 
 ### Analogue of 6.13b
 
+Rudin, 6.25
+
 > [!Theorem]
 > Let $\mathbf{f}:[a, b]\to \mathbb{R}^{k}$. If $\mathbf{f}\in\mathscr{R}$, then
 > $$
 > |\mathbf{f}|\in\mathscr{R}\text{ and } \left|\int_{a}^{b} \mathbf{f} \, dx\right|\leq \int_{a}^{b} |\mathbf{f}| \, dx  .
 > $$
 
-**Proof**
-$|\mathbf{f}|=\sqrt{ f_{1}^{2}+f_{2}^{2}+\dots f_{k}^{2} }$. By definition, each $f_{i}\in\mathscr{R}$. It [[Analysis1_L27#Compositions of integrable functions with continuous functions|follows]] that $f_{i}^{2}$ is integrable for each $i$, since $x^{2}$ is continuous (alternatively, the [[Analysis1_L28#Product of integrable functions is integrable|product of two integrable functions is integrable]]). Also, note that $x^{2}$ is bijective and continuous on $[0, \infty)$. Thus, $\sqrt{ x }$ is continuous on $[0, \infty)$. It follows that $|\mathbf{f}|\in\mathscr{R}$.  
+> **Proof**
+> $|\mathbf{f}|=\sqrt{ f_{1}^{2}+f_{2}^{2}+\dots f_{k}^{2} }$. By definition, each $f_{i}\in\mathscr{R}$. It [[Analysis1_L27#Compositions of integrable functions with continuous functions|follows]] that $f_{i}^{2}$ is integrable for each $i$, since $x^{2}$ is continuous (alternatively, the [[Analysis1_L28#Product of integrable functions is integrable|product of two integrable functions is integrable]]). Also, note that $x^{2}$ is bijective and continuous on $[0, \infty)$. Thus, $\sqrt{ x }$ is continuous on $[0, \infty)$. It [[Analysis1_L21#Continuous maps on compact sets are homeomorphisms|follows]] that $|\mathbf{f}|\in\mathscr{R}$.
+> 
+> Now, let $\mathbf{y}\equiv \int_{a}^{b} \mathbf{f} \, dx=(y_{1}, y_{2}, \dots, y_{n})$. 
+> $$
+> \begin{align}
+> |\mathbf{y}|^{2} & = \sum_{j=1}^{k}  y_{j}^{2}=\sum_{j=1}^{k} y_{j}\left( \int_{a}^{b} f_{j} \, dx  \right)=\int_{a}^{b} \left( \sum_{j=1}^{k} y_{j}f_{j} \right)  \, dx  \\
+>  & =\int_{a}^{b} \mathbf{y}\cdot \mathbf{f} \, dx .
+> \end{align}
+> $$
+> From the Cauchy-Schwarz inequality, we have
+> $$
+> \mathbf{y}\cdot \mathbf{f}\leq |\mathbf{y}||\mathbf{f}|.
+> $$
+> Thus, we have
+> $$
+> |\mathbf{y}|^{2}=\int_{a}^{b} \mathbf{y}\cdot \mathbf{f} \, d \leq \int_{a}^{b} |\mathbf{y}||\mathbf{f}| \, dx  = |\mathbf{y}|\int_{a}^{b} |\mathbf{f}| \, dx .
+> $$
+> If $|\mathbf{y}|=0$, the result is trivial. If $|\mathbf{y}|\ne 0$, divide both sides by $|\mathbf{y}|$ to obtain the result. ❏
+
+---
+## Rectifiable curves
+
+Rudin, 6.26
+
+> [!Definition]
+> A [[Analysis1_L11#Definition|continuous]] mapping $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{k}$ is called a *curve*. If $\boldsymbol{\gamma}$ is injective, it is called an *arc*. If $\boldsymbol{\gamma}(b)=\boldsymbol{\gamma}(a)$, $\boldsymbol{\gamma}$ is called a *closed curve*. 
+
+Consider a [[Analysis1_L26#Partitions|partition]] $P=\{ x_{0}, x_{1}, \dots, x_{n} \}$ of $[a, b]$. Define
+$$
+\begin{align}
+\Lambda(P, \boldsymbol{\gamma})\equiv\sum_{i=1}^{n} |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|; \\
+\end{align}
+$$
+$$
+\Lambda(\boldsymbol{\gamma})\equiv \sup \Lambda(P, \boldsymbol{\gamma}).
+$$
+If $\Lambda(\boldsymbol{\gamma})$ is finite, we say $\boldsymbol{\gamma}$ is *rectifiable*, and has length $\Lambda(\boldsymbol{\gamma})$.
+
+To motivate what's coming, let $f:[a, b]\to \mathbb{R}$ and let $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{2}$, $x\xmapsto{\boldsymbol{\gamma}}(x, f(x))$ be the curve of $f$. Recall the high school formula for finding the length of the curve of $f$:
+$$
+L=\int_{a}^{b} \sqrt{ 1+f'(x)^{2} } \, dx .
+$$
+Note that $\boldsymbol{\gamma}'(x)=(1, f'(x))$, and that $L$ can be rewritten as
+$$
+\int_{a}^{b} |\boldsymbol{\gamma}'| \, dx .
+$$
+Thus, it makes sense to conjecture that $\Lambda(\boldsymbol{\gamma})=\int_{a}^{b} |\boldsymbol{\gamma}'| \, dx$ in general. For the integral to be defined, $\boldsymbol{\gamma}'$ needs to exist, and $|\boldsymbol{\gamma}'|$ needs to be integrable.
+One way to ensure integrability is to require $\boldsymbol{\gamma}'$ to be continuous, [[Analysis1_L15#Vector valued functions whose components are continuous|since that makes]] $|\boldsymbol{\gamma}'|$ continuous, and [[Analysis1_L27#Continuous functions|continuous real valued functions are integrable]].
+
+Rudin, 6.27
+
+> [!Theorem]
+> If $\boldsymbol{\gamma}'$ exists and is continuous, then $\boldsymbol{\gamma}$ is rectifiable and
+> $$
+> \Lambda(\boldsymbol{\gamma})=\int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt .
+> $$
+

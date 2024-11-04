@@ -17,7 +17,7 @@ leftovers:
 
 ## Definition of the integral
 
-### Riemann integrals
+### Partitions
 
 > [!Definition]
 > A *partition* $P$ of $[a, b]$ is a finite (multi)set of points $x_{0}, x_{1}, \dots, x_{n}$ where
@@ -27,6 +27,7 @@ leftovers:
 > We write $\Delta x_{i}\equiv x_{i}-x_{i-1}$. 
 
 Note that a partition has finitely many points.
+### Riemann integrals
 
 > [!Definition]
 > Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Corresponding to each partition $P$ of $[a, b]$, define
