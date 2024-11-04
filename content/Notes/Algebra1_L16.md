@@ -26,31 +26,27 @@ where $i_{k}\in \{1,..,n\}$.
 
 The antisymmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
 Therefore we only need to consider the case when all the $i_k$ are pairwise distinct, i.e, a permutation of $\{1,..,n\}$. 
-### Permutation groups
 
->[!definition]
->A bijection of $\{1,..,n\}$ with itself is defined to be a *permutation* of $\{1,..,n\}$. $S_n$ is denoted as the set of permutations of $\{1,..,n\}$.
-
-The elements of $S_n$ are functions. If $\sigma\in S_n$, we write $\sigma(i) = \sigma_i$.
-
->[!definition]
->The *length* of a permutation $\sigma$ is defined as $l(\sigma) \equiv  \left|\left\{(i,j) \ | \  i < j \text{ and } \sigma_{i}>\sigma_{j}\right\}\right|$. 
-
-**Exercise:** Show that a permutation $\sigma$ can be reordered to $1, 2, \dots, n$ using $l(\sigma)$ swaps.
-
-### Back to determinants
+>[!Info] Permutations
+>A permutation is defined to be a bijection of the set $\mathcal{N}=\{ 1,2,\dots ,n \}$ to itself. We define $S_{n}$ to be the set of all permutations of $\mathcal{N}$. The elements of $S_{n}$ are functions. For some $\sigma \in S$, $\sigma(i)$ is denoted by $\sigma_{i}$.
+>
+>Define the length of a permutation $\sigma$ as
+>$$
+>l(\sigma) \overset{\text{def}}= \text{card}\, \{ (i,j) \mid i < j \text{ and } \sigma(i) > \sigma(j)\}
+>$$
+>We claim that a permutation $\sigma$ can be reordered using $l(\sigma)$ swaps.
+>We define another quantity
+>$$
+>\text{sign}(\sigma) = {(-1)}^{l(\sigma)}
+>$$ 
 
 From our study above, we see that 
 $$
 \det(e_{\sigma_1},e_{\sigma_2},...,e_{\sigma_{n}})= (-1)^{l(\sigma)}.
 $$
-Define the quantity
-$$
-(-1)^{l(\sigma)} \equiv \mathrm{sgn}(\sigma).
-$$
 Thus, 
 $$
-\det M=\sum_{\sigma\in S_{n}}^{} \mathrm{sgn}(\sigma)\ m_{1\sigma_{1}}m_{2\sigma_{2}}\dots m_{n\sigma_{n}}.
+\det M=\sum_{\sigma\in S_{n}}^{} \mathrm{sign}(\sigma)\ m_{1\sigma_{1}}m_{2\sigma_{2}}\dots m_{n\sigma_{n}}.
 $$
 Note that we have arrived at this formula by using every single one of the [[Algebra1_L15#New defining properties|defining properties of the determinant]] (contrast with what we have done previously, which is to present a formula and show that it satisfies the defining properties). This tells us that the determinant must indeed be uniquely determined, meaning that there is only one map from $\mathbb{R}^{n\times n}$ to $\mathbb{R}$ which satisfies the defining properties. The upshot of this is that all formulas covered in previous lectures for the determinant are equivalent.
 
@@ -111,36 +107,36 @@ Thus, all statements about row operations etc. can be made about column operatio
 ## Invariant Subspaces
 
 >[!Definition]
->Let $W\subseteq V$  be a subspace of $V$. $W$ is said to be *invariant* under a linear map $T$, or $T-$invariant, if $T(W)\subseteq W$.
+>A subspace $W$ of $V$ is said to be invariant under a linear map $T$, or $T-$invariant, if $T(W)\subseteq W$, that is $w \in W \implies T(w) \in W$.
+>
+>For such $T$-invariant subspaces, we can define a linear map $T|_{W}:W \to W$ called the restriction of $T$ to $W$.
 
-In other words, $W$ is $T$ invariant whenever $T(w)\in W \impliedby w\in W$.
+Let $T:V \to V$ be a linear map. If $W$ is a $T-$invariant subspace, we can take a basis $(w_1,w_2,...,w_k)$ of $W$ and extend it to a basis $\beta_{V} = (w_1,w_2,...,w_k,v_1,v_2,...,v_{n-k})$ of $V$ where $n = \dim V$ and $k = \dim W$.
 
-We can now define a linear map from $W$ to $W$ called the restriction of $T$ to $W$:
+### Matrix of T with respect to $\beta_{V}$
 
->[!Definition]
->If $W$ is a $T-$invariant subspace, we define the *restriction* of $T$ to $W$ denoted by $T|_{W} : W \mapsto W$ given by $T|_{W}(w) = T(w)$.
-
-Let $T:V\mapsto V$ be a linear map. If $W$ is a $T-$invariant subspace, we can take a basis $\beta_{W}=(w_1,w_2,...,w_k)$ of $W$ and extend it to a basis $\beta_{V} = (w_1,w_2,...,w_k,v_1,v_2,...,v_{n-k})$ of $V$ where $n = \dim V$.
-### What will the matrix of $T$ with respect to $\beta_v$ look like?
-
-The first $k$ columns of a $\mathcal{M}_{\beta_{V}, \beta_{V}}(T)$ will be the image of $w_i$'s , but since all of them map into $W$, they are expressible as linear combinations of $w_{i}$'s.
-
-This is nice, since the coordinates corresponding to $v_1,v_2,...,v_{n-k}$ in the vectors $T(w_1),T(w_2),..,T(w_k)$ will be zero. The matrix will look like
+The first $k$ columns of $T$ will be the image of the $w_is$.Since all $T(w_{i}) \in W$, they are expressible as linear combinations of only the vectors in $W$. Thus the matrix of $T$ with respect to the basis $\beta_V$ will look like:
 $$
-\mathcal {M}_{\beta_{V}, \beta_{V}}(T)= \left[\begin{array}{c|c}
+\mathcal{M}_{\beta_{V}, \beta_{V}}{(T)}= \left[\begin{array}{c|c}
 A &B\\
 \hline
 0 & C
-\end{array}\right].
+\end{array}\right]
 $$
-Another upshot is that $A = \mathcal{M}_{\beta_W, \beta_{W}}(T|_{W})$.
 
-If it happens that $V = W_{1} \oplus W_{2}$ (i.e, $W_{1}$ and $W_{2}$ are linearly independent and span $V$) and $W_1$ , $W_2$ are $T-$ invariant with bases $\beta_{W_{1}}= (w_1,w_2,...,w_k)$ and $\beta_{W_{2}}= (w_1',w_2',...,w_{n-k}')$ then the matrix of $T$ in the basis $\beta_{V} = (w_1,w_2,...,w_k,w_1',w_2',...,w_{n-k}')$ will look like
+Also notice that $A = \mathcal{M}_{\beta_{W}, \beta_{W}}(T|_{{W}})$ where $\beta_{W} = (w_{1}, w_{2},\dots,w_{n})$
+
+### Matrix of $T$ when $V = W_{1} \oplus W_{2}$
+
+If it happens that $V = W_{1} \oplus W_{2}$ where  $W_1$ and $W_2$ are $T$-invariant with bases $\beta_{W_{1}}= (w_1,...,w_k)$ 
+$\beta_{W_{2}}= (w_1',...,w_{n-k}')$
+$\beta_{V}= (w_{1},\dots,w_{k}, w_{1}', \dots, w_{k}')$
+then the matrix of $T$ will be 
 $$
-\mathcal{M}_{\beta_{V}, \beta_{V}}(T)= \left[\begin{array}{c|c}
+\mathcal M_{\beta_{V}, \beta_{V}}(T)= \left[\begin{array}{c|c}
 A& 0\\
 \hline
 0&B
 \end{array}\right]
 $$
-where $A = \mathcal{M}_{\beta_{W_{1}}, \beta_{W_{1}}}(T), B = \mathcal{M}_{\beta_{W_2}, \beta_{W_{2}}}(T)$. 
+where $A = \mathcal M_{\beta_{W_{1}},\beta_{W_{1}}}(T), B = \mathcal {M}_{\beta_{W_2}, \beta_{W_{2}}}(T)$.

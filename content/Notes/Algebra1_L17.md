@@ -6,10 +6,6 @@ tags:
 date: 2024-10-16
 time: 11:50
 ---
->[!Recall]
->[[Algebra1_L16#Invariant Subspaces| Invariant Subspace]]
-
----
 ## Eigenvectors and Eigenvalues
 
 >[!Definition]
@@ -34,7 +30,7 @@ If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we 
 >Consider vectors $w$ and $w'$, perpendicular to $L$ and parallel to $L$ respectively. 
 >Notice that $w$ is an eigenvector with eigenvalue $-1$ and $w$ is an eigenvector with value $1$.
 >
->![[Screenshot 2024-10-16 at 10.12.49 PM.png]]
+>![[Screenshot 2024-10-16 at 10.12.49 PM.png|300]]
 
 >[!Example] Example: Projection
 >Let $T:\mathbb{R}^{2}\mapsto \mathbb{R}^2$ be the projection map that projects a vector vertically onto the $x$-axis. Notice that the vectors lying on the x axis and y axis are eigenvectors with eigenvalues 1 and 0 respectively.
@@ -84,12 +80,12 @@ If $\ker(A-\lambda I)=\{\mathbf{0}\}$, then $\lambda$ is not an eigenvalue.
 >Let $A$ have eigenvalue $\lambda$. The $\lambda$-eigenspace of $A$ is the null space of $A - \lambda I$. Notice that since $\ker (A-\lambda I)$ is a subspace, the $\lambda-$eigenspace of an eigenvalue $\lambda$ is a subspace.
 
 >[!Example]
->Let $A = \begin{bmatrix}2 & -4\\ -1 & -1\end{bmatrix}$. 
->We want to check if $\lambda = 3$ is an eigenvalue.
+>Let $A = \begin{bmatrix}2 & -4\\ -1 & -1\end{bmatrix}$. We want to check if $\lambda = 3$ is an eigenvalue.
 >
->$A - 3I = \begin{bmatrix}-1&-4 \\ -1&-4 \end{bmatrix}$
->
->$\mathrm{RREF}(A-3I) = \begin{bmatrix}1 &4\\ 0& 0\end{bmatrix}$
->
->The basis of the kernel is $\left\{\begin{bmatrix}-4\\1 \end{bmatrix}\right\}$.
->So yes, $3$ is an eigenvalue, and has a one dimensional eigenspace associated with it.
+>$$
+>\begin{align}
+>A - 3I &= \begin{bmatrix}-1&-4 \\ -1&-4 \end{bmatrix}\\ \\
+> \text{RREF}(A-3I) &=\begin{bmatrix}1&4 \\ 0 & 0 \end{bmatrix}
+>\end{align}
+>$$
+>We can see that $\begin{bmatrix}-4\\1\end{bmatrix}$ is the basis of the $3$-eigenspace of $A$.
