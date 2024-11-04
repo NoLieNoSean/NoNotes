@@ -24,8 +24,8 @@ $$
 $$
 where $i_{k}\in \{1,..,n\}$.
 
-The antisymmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
-Therefore we only need to consider the case when all the $i_k$ are pairwise distinct, i.e, a permutation of $\{1,..,n\}$. 
+The anti-symmetry property implies that $\det(e_{i_{1}},...,e_{i_{n}}) = 0$ if $i_{k}= i_l$ for $k\neq l$
+Therefore we only need to consider the case when all the $i_k$ are pairwise distinct, i.e. a permutation of $\{1,..,n\}$. 
 
 >[!Info] Permutations
 >A permutation is defined to be a bijection of the set $\mathcal{N}=\{ 1,2,\dots ,n \}$ to itself. We define $S_{n}$ to be the set of all permutations of $\mathcal{N}$. The elements of $S_{n}$ are functions. For some $\sigma \in S$, $\sigma(i)$ is denoted by $\sigma_{i}$.
