@@ -15,14 +15,10 @@ Let $V,W$ be vector spaces over the same field $\mathbb{F}$. A transformation $T
 
 Properties 1 and 2 together are equivalent to $T(\alpha \mathbf{u}+\beta \mathbf{v}) = \alpha T(\mathbf{u}) + \beta T(\mathbf{v})\ \ \forall \mathbf{u},\mathbf{v}\in V \text{ and } \alpha,\beta\in \mathbb{F}$.
 In other words, $T$ applied on a linear combination of $\mathbf{u}$ and $\mathbf{v}$ should equal the same linear combination of the transformed versions of $\mathbf{u}$ and $\mathbf{v}$. 
-
----
 ### Properties of linear transformations
 - $T(\mathbf{0})=\mathbf{0}$.
 - $T(V)$ is a vector space (subspace of $W$).
 - $\text{Ker }T$ is a subspace of $V$.
-
----
 ### Matrix-vector multiplication as a linear transformation
 A linear transformation $T:\mathbb{F}^n\rightarrow \mathbb{F}^m$ can be represented as "multiplication" by a [[Matrices|matrix]]. 
 
@@ -53,7 +49,6 @@ So, by this *column by coordinate* definition of matrix by vector multiplication
 >[!Important]
 >We previously claimed that it is sufficient to know how a linear map $T$ acts on a basis of its domain to know how it acts on any member of its domain. Taking this further, it is also true that if we merely assign an element from a vector space $B$ to every element of a basis of a vector space $A$, we get a linear map $L:A\to B$.
 
----
 ### Linear transformations as a vector space
 If we fix vector spaces $V$ and $W$ and consider the collection of all linear transformations from $V$ to $W$ (denoted by $\mathcal{L}(V,W)$), we can define two operations on $\mathcal{L}(V,W)$: multiplication by a scalar and addition like so
 1. $(\alpha T)\mathbf{v} = \alpha(T\mathbf{v})\ \ \forall \mathbf{v} \in V\ \ \forall T \in \mathcal{L}(V,W)$
@@ -61,7 +56,23 @@ If we fix vector spaces $V$ and $W$ and consider the collection of all linear tr
 
 It can be easily shown that these operations satisfy the axioms of a [[Vector spaces|vector space]]. Thus, $\mathcal{L}(\mathbb{F}^n, \mathbb{F}^m)$ is a vector space.
 
+While we usually do not define a product for vector spaces, a useful definition of multiplication does exist for some vector spaces, like this one.
 
+> [!Definition]
+> If $T\in\mathcal{L}(U, V)$ and $S\in\mathcal{L}(V, W)$ then the *product* $ST\in\mathcal{L}(U, W)$ is defined by
+> $$
+> (ST)(\mathbf{u})=S(T\mathbf{u})
+> $$
+> for $\mathbf{u}\in U$.
+
+$ST$ is just the usual composition $S\circ T$ of two functions. 
+
+When the product is defined, the following properties can be easily proved:
+- Associativity: $T_{1}(T_{2}T_{3})=(T_{1}T_{2})T_{3}$
+- Identity: $TI=IT=T$
+- distributivity: $(S_{1}+S_{2})T=S_{1}T+S_{2}T$, $T(S_{1}+S_{2})=TS_{1}+TS_{2}$.
+
+---
 ## Matrix multiplication
 
 Knowing [[#Matrix-vector multiplication as a linear transformation|matrix-vector multiplication]], a natural way arises to define the product $AB$ of two matrices: multiply by $A$ each column of $B$, and join the resulting column vectors into a matrix. 

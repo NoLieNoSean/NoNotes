@@ -138,6 +138,20 @@ $$
 > $$
 > Note that the backwards implication is not true for $k \geq 3$. 
 
+> [!Warning]
+> Almost all the literature I could find has these completely different definitions for the "sum of subspaces" and "direct sums":
+> 
+> > [!Definition]
+> > Suppose $U_{1}, \dots, U_{m}$ are subspaces of $V$. The *sum* of $U_{1}, \dots, U_{m}$, denoted $U_{1}+\dots+U_{m}$, is the set of all possible sums of elements of $U_{1}, \dots, U_{m}$.
+> > $$
+> > U_{1}+\dots+U_{m}=\{ \mathbf{u}_{1}+\dots+\mathbf{u}_{m}\ |\ \mathbf{u}_{1}\in U_{1}, \dots, \mathbf{u}_{m}\in U_{m} \}.
+> > $$
+> 
+> > [!Definition]
+> > The sum $U_{1}+\dots+U_{m}$ is called a *direct sum* is each element of $U_{1}+\dots+U_{m}$ can be written in only one way as a sum $\mathbf{u}_{1}+\dots+\mathbf{u}_{m}$, where each $\mathbf{u}_{j}$ is in $U_{j}$. If $U_{1}+\dots+U_{m}$ is a direct sum, then it is denoted by $U_{1}\oplus\dots\oplus U_{m}$.
+> 
+---
+
 ---
 ## Determinants
 

@@ -24,15 +24,25 @@ Proper lecture notes start here.
 	- Every fdvsp has a basis.
 	- Any two bases of an fdvsp have same cardinality, i.e, the cardinality of a basis is an *invariant* of an fdvsp.
 - [[Algebra1_L9]] ✅ 
+	- Working with bases, finding a basis for the null space of a matrix
 - [[Algebra1_L10]] ✅
+	- Finding a basis for the column space of a matrix, equivalence of column rank and row rank, rank nullity theorem for matrices
 - [[Algebra1_L11]] ✅
+	- Linear maps, rank nullity theorem for linear maps over abstract vector spaces
 - [[Algebra1_L12]] ✅
+	- Linear maps in $\mathbb{R}^{n}$ can be represented as matrices, matrices of linear maps between abstract vector spaces, change of basis
 - [[Algebra1_L13]] ✅
+	- Homomorphisms, more change of basis, composition of linear maps in terms of matrices, choosing a good basis for a linear map
 - [[Algebra1_L14]] ✅
+	- Sums of subspaces, direct sums, dimension of a sum, determinants
 - [[Algebra1_L15]] ✅
+	- An algorithm to compute the determinant, multilinearity and alternate characterization of the determinant, cofactor expansions
 - [[Algebra1_L16]] ✅
+	- Alternate formula for determinant and proof of its uniqueness, properties of determinant, Invariant subspaces
 - [[Algebra1_L17]] ✅
+	- Eigenvectors, eigenvalues, eigenspaces
 - [[Algebra1_L18]] ✅
+	- Finding Eigenstuff of matrices and abstract operators, characteristic polynomial
 - [[Algebra1_L19]]
 
 >[!Excalidraw]-

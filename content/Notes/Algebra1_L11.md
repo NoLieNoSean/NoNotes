@@ -44,7 +44,6 @@ Remarks (prove as necessary)
    Consider $D:V\to W$, $D(f)=f'$.
    $(f+g)'=f'+g'$, $(cf)'=cf'$.
    The kernel of $D$ is the set of all constant functions.
-   
    Consider the same map on the subspace $P_{n}$ of polynomial of degree $\le n$.
    $P_{n}\overset{ \text{D} }\to P_{n-1}$ .
    $P_{n}$ has dimension $n$, and $P_{n-1}$ has dimension $n-1$. Also, Dim(Ker $D$) = 1. 
@@ -53,6 +52,10 @@ Remarks (prove as necessary)
    $W=\mathbb{R}$
    $T: V\to W$, $T(A)=\text{Tr }(A)$.
    Check the dimension formula holds, find a basis for the kernel.
+
+Neither homogeneity nor additivity alone is enough to imply that a function is a linear map.
+- $\phi:\mathbb{R}^{2}\to \mathbb{R}$, $(x, y)\xmapsto{\phi} \frac{x^{2}}{y}$ is an example of a function which satisfies $\phi(a\mathbf{v})=a\phi(\mathbf{v})$ for all $a\in \mathbb{R}$ and $\mathbf{v}\in \mathbb{R}^{2}$ but is not linear since it does not satisfy additivity.
+- $\phi:\mathbb{C}\to \mathbb{C}$, $x+iy\xmapsto{\phi}x-iy$ is an example of a function which satisfies additivity but is not linear since it is not homogeneous ($\mathbb{C}$ is though of as a complex vector space, i.e, the scalars are drawn from $\mathbb{C}$). $\phi(i\times i)=\phi(-1)=-1$, but $i\phi(i)=1$. There also exists a function $\phi:\mathbb{R}\to \mathbb{R}$ such that $\phi$ satisfies the additivity condition but is not homogeneous. However, showing the existence of such a function involves considerably more advanced tools.
 
 ---
 ## Rank nullity theorem for general linear maps over fdvsps
