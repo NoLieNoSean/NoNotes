@@ -67,8 +67,8 @@ Proper lecture notes start here.
 	- Uniform continuity
 - [[Analysis1_L21]] ✅
 	- Topological spaces, homeomorphisms, 4.17
-- [[Analysis1_L22]] ✅
-	- Connected sets, Intermediate value theorem, connected components, allied theorems. <- *Quiz 2 syllabus ends here*
+- [[Analysis1_L22]] ✅ <- *Quiz 2 syllabus ends here*
+	- Connected sets, Intermediate value theorem, connected components, allied theorems. 
 - [[Analysis1_L23]] ✅
 	- Derivatives, Algebra of derivatives, chain rule
 - [[Analysis1_L24]] ✅
