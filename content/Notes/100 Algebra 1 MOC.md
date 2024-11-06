@@ -3,7 +3,15 @@ tags:
   - ALG1
   - MOC
 ---
+**Prof:** Aditya Karnataki
 **TAs:** Subhranil Deb, Sunaina Pati, Abhishek Goel.
+
+Reference material:
+- Algebra, Artin
+- Linear Algebra, Hoffman & Kunze
+- Linear Algebra Done Right, Axler
+- Linear Algebra Done Wrong, Treil
+- Linear Algebra, Curtis
 # Compiled Notes
 
 - [[Vector spaces]]

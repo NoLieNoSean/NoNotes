@@ -171,9 +171,9 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 >[!important]
 > For a upper/lower triangular matrix $A$, the characteristic polynomial is of the form
 > $$
-> f(x) = (a_{11}-x)(a_{22}-x)\dots(a_{nn} - x).
+> f(x) = (a_{11}-x)(a_{22}-x)\dots(a_{nn} - x),
 > $$
-> We can see that the diagonal entries are the eigenvalues of $A$.
+> since the determinant of a triangular matrix is the [[Algebra1_L15#Computing the determinant|product of its diagonal entries]]. We can see that the diagonal entries are the eigenvalues of $A$.
 
 ---
 
@@ -213,7 +213,6 @@ Also note that if $A$ is similar to $B$, $A^{r}$ is similar to $B^{r}$.
 tut
 
 If $A$ and $B$ are similar, they have the same rank.
-Characteristic polynomial of similar matrices are the same.
 symmetric matrices have real eigenvalues.
 minimal polynomials
 	must be unique

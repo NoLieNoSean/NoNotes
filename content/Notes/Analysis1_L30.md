@@ -9,7 +9,6 @@ Quiz next week! likely on Tuesday 5:30. Uniform continuity, connectedness.
 Test following week on Ch 5, 6
 
 ---
-
 ## Series
 
 Will get to:

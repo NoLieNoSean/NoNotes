@@ -5,6 +5,8 @@ tags:
 date: 2024-10-30, Wednesday
 time: 14:08
 ---
+![[1730581827131.jpg]]
+
 $\sum |a_{k}|$ converges $\implies$ $\sum a_{k}$ converges.
 
 We say $\sum a_{k}$ "converges absolutely" if $\sum |a_{k}|$ converges.

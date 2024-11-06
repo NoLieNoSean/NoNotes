@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-10-26, Saturday
 time: 9:30
 ---
@@ -83,9 +84,9 @@ L=\int_{a}^{b} \sqrt{ 1+f'(x)^{2} } \, dx .
 $$
 Note that $\boldsymbol{\gamma}'(x)=(1, f'(x))$, and that $L$ can be rewritten as
 $$
-\int_{a}^{b} |\boldsymbol{\gamma}'| \, dx .
+\int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt .
 $$
-Thus, it makes sense to conjecture that $\Lambda(\boldsymbol{\gamma})=\int_{a}^{b} |\boldsymbol{\gamma}'| \, dx$ in general. For the integral to be defined, $\boldsymbol{\gamma}'$ needs to exist, and $|\boldsymbol{\gamma}'|$ needs to be integrable.
+Thus, it makes sense to conjecture that $\Lambda(\boldsymbol{\gamma})=\int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt$ in general. For the integral to be defined, $\boldsymbol{\gamma}'$ needs to exist, and $|\boldsymbol{\gamma}'|$ needs to be integrable.
 One way to ensure integrability is to require $\boldsymbol{\gamma}'$ to be continuous, [[Analysis1_L15#Vector valued functions whose components are continuous|since that makes]] $|\boldsymbol{\gamma}'|$ continuous, and [[Analysis1_L27#Continuous functions|continuous real valued functions are integrable]].
 
 Rudin, 6.27
@@ -96,3 +97,39 @@ Rudin, 6.27
 > \Lambda(\boldsymbol{\gamma})=\int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt .
 > $$
 
+> **Proof**
+> Fix $P$. From the [[Analysis1_L28#Integration and differentiation|fundamental theorem of calculus]] and [[#Analogue of 6.13b|6.25]], we have
+> $$
+> |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|= \left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\gamma}'(t) \, dt \right|\leq \int_{x_{i-1}}^{x_{i}} |\boldsymbol{\gamma}'(t)| \, dt.
+> $$
+> Summing up both sides, we get
+> $$
+> \Lambda(P, \boldsymbol{\gamma})\leq \int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt .
+> $$
+> Thus, 
+> $$
+> \Lambda(\boldsymbol{\gamma})=\sup \Lambda(P, \boldsymbol{\gamma})\leq \int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt .
+> $$
+> Now, if we bound the integral above by $\Lambda(\boldsymbol{\gamma})+\epsilon$ where $\epsilon$ is a quantity that can be made arbitrarily small, we are done. Let $\epsilon>0$. [[Analysis1_L28#Integration and differentiation|Recall]] that since $\boldsymbol{\gamma}'\in\mathscr{R}$ on $[a, b]$, $\boldsymbol{\gamma}'$ is uniformly continuous on $[a, b]$. So, we get to pick $\delta>0$ such that whenever $|s-t|<\delta$, we have $|\boldsymbol{\gamma}'(s)-\boldsymbol{\gamma}'(t)|<\epsilon$. Choose $P$ such that $\Delta x_{i}<\delta \ \forall i$. This ensures that for all $t\in[x_{i-1}, x_{i}]$ we have $\boldsymbol{\gamma}'(t)=\boldsymbol{\gamma}'(x_{i})+\boldsymbol{\zeta}(t)$ where $|\boldsymbol{\zeta}(t)|<\epsilon$. Now,
+> $$
+> \begin{align}
+> \int_{x_{i-1}}^{x_{i}} |\boldsymbol{\gamma}'(t)| \, dt \leq  & \int_{x_{i-1}}^{x_{i}} |\boldsymbol{\gamma}'(x_{i})| \, dt+\int_{x_{i-1}}^{x_{i}} |\boldsymbol{\zeta}(t)| \, dt   \\
+> = & \left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\gamma}'(x_{i}) \, dt\right|+\int_{x_{i-1}}^{x_{i}} |\boldsymbol{\zeta}(t)| \, dt \\
+> \leq & \left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\gamma}'(x_{i}) \, dt\right|+\epsilon\Delta x_{i} \\
+> = & \left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\gamma}'(t) \, dt -\int_{x_{i-1}}^{x_{i}} \boldsymbol{\zeta}(t) \, dt \right|+\epsilon\Delta x_{i}  \\
+> \leq & \left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\gamma}'(t) \, dt\right| +\left|\int_{x_{i-1}}^{x_{i}} \boldsymbol{\zeta}(t) \, dt \right|+\epsilon\Delta x_{i}  \\
+> \leq  & |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|+2\epsilon\Delta x_{i}.
+> \end{align}
+> $$
+> Summing up both sides, we get
+> $$
+> \begin{align}
+> \int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt   & \leq  \Lambda(P, \boldsymbol{\gamma})+2\epsilon(b-a) \\
+>  & \leq \Lambda(\boldsymbol{\gamma})+2\epsilon(b-a).
+> \end{align}
+> $$
+> This combined with the previous inequality gives
+> $$
+> \Lambda(\boldsymbol{\gamma})\leq \int_{a}^{b} |\boldsymbol{\gamma}'(t)| \, dt\leq\Lambda(\boldsymbol{\gamma})+2\epsilon(b-a).
+> $$
+> ❏

@@ -3,7 +3,15 @@ tags:
   - ANA1
   - MOC
 ---
-**TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee 
+**Prof:** Upendra Kulkarni
+**TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
+
+Reference Material:
+- Principles of Mathematical Analysis, Rudin
+- Understanding Analysis, Abbot
+- Analysis 1, Tao
+- Introduction to Real Analysis, Bartle & Sherbert
+- Analysis 1, Amann & Escher
 
 >[!Info]- Notation
 >- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 
@@ -73,7 +81,8 @@ Proper lecture notes start here.
 	- 6.8 through 6.12
 - [[Analysis1_L28]] ✅
 	- Fundamental theorem of calculus, integration by parts
-- [[Analysis1_L29]]
+- [[Analysis1_L29]] ✅
+	- Integration of vector valued functions, rectifiable curves
 - [[Analysis1_L30]]
 - [[Analysis1_L31]]
 
