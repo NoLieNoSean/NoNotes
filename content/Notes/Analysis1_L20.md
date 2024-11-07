@@ -22,7 +22,7 @@ To do:
 Recall the definition of a continuous function:
 
 >[!Definition]
->Let $f:X\to Y$. $f$ is *continuous* if $\forall x \in X$, $\forall \epsilon>0$, $\exists\delta>0$ such that $f(B_{\delta}(x, X))\subset B_{\epsilon}(f(x), Y)$.
+>Let $f:X\to Y$. $f$ is *continuous* on $X$ if $\forall\ x \in X$,  $\forall\ \epsilon>0$, $\exists\ \delta>0$ such that $f(B_{\delta}(x, X))\subset B_{\epsilon}(f(x), Y)$.
 
 Compare with definition of uniform continuity:
 
@@ -32,7 +32,8 @@ Compare with definition of uniform continuity:
 Things to note:
 - Uniform continuity implies continuity, but the converse is generally not true. Consider $f:(0, \infty)\to \mathbb{R}$, $f(x)=\frac{1}{x}$ as a counterexample.  The converse *is* true, if $X$ is *compact*, as we will prove.
 - Continuity is a local phenomenon; you only need to look in a (potentially very tiny) neighborhood of $x$ and $f(x)$ to check if an $\epsilon$ challenge can be met. Uniform continuity requires you to analyze the function over its entire domain. 
-- The definition for uniform continuity can be rephrased like so: $f:X\to Y$ is uniformly continuous if for every $\epsilon>0$, there exists a $\delta$ such that $d_{X}(p, q)<\delta$ implies $d_{Y}(f(p), f(q))<\epsilon$.  
+- The definition for uniform continuity can be rephrased like so:
+  $f:X\to Y$ is uniformly continuous if $\forall\ \epsilon>0$, $\exists \ \delta > 0$ such that if for some $p, q \in X$, $d_{X}(p, q)<\delta$ then $d_{Y}(f(p), f(q))<\epsilon$.  
 
 ### Continuous functions defined on compact sets are uniformly continuous
 
@@ -42,7 +43,7 @@ Rudin, 4.19
 >Let $X$ be compact, $f:X\to Y$ be continuous. Then, $f$ is uniformly continuous.
 
 >**Proof**
->Let $\epsilon>0$ be arbitrary. To show that $f$ is uniformly continuous, we have to produce a $\delta$ such that $d_{X}(p, q)<\delta$ implies $d_{Y}(f(p), f(q))<\epsilon$. For every $x\in X$, we can find $\delta_{x}$ such that $f(B_{\delta_{x}}(x))\subset B_{\frac{\epsilon}{2}}(f(x))$. Note that the set
+>Let $\epsilon>0$ be arbitrary. To show that $f$ is uniformly continuous, we have to produce a $\delta$ such that $d_{X}(p, q)<\delta$ implies $d_{Y}(f(p), f(q))<\epsilon$. Since $f$ is continuous, we can find $\delta_{x}$ for every $x \in X$ such that $f(B_{\delta_{x}}(x))\subset B_{\frac{\epsilon}{2}}(f(x))$. Note that the set
 > $$
 > S\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in X  \right\}
 > $$ 

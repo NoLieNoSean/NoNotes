@@ -21,7 +21,7 @@ Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are b
 >If $X$ has a separation, $X$ is called *disconnected*. If $X$ is not disconnected, $X$ is *connected*.
 
 For example, $X=\mathbb{R}\setminus \{ p \}$ is disconnected because $X=(-\infty, p)\sqcup(p, \infty)$. 
-### Characterization of connected sets in R
+### Characterization of connected sets in $\mathbb{R}$R
 
 >[!Theorem]
 >A nonempty subset $X\subset \mathbb{R}$ is connected $\iff$ (($p, q\in X$ and $p<x<q$ )$\implies$ $x\in X$), i.e, a connected set in $\mathbb{R}$ is either a singleton, an interval, a ray, or $\mathbb{R}$.
