@@ -13,7 +13,7 @@ time: 10:30
 ### Definition
 
 >[!Definition]
->For a metric space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both open in $X$. 
+>For a metric space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both [[Analysis1_L13#Open sets|open]] in $X$. 
 
 Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are both closed in $X$. A set which is both open and closed in called a *clopen* set. So, $A$ and $B$ are clopen in $X$. 
 
@@ -87,7 +87,7 @@ Note that $\overline{P}\cap \overline{Q}$ need not be empty.
 >$X\subset Z$ is *disconnected* if $X$ is a union of two nonempty separated sets.
 >If $X$ is not disconnected, $X$ is *connected*.
 
-From the previous theorem, this is equivalent to our definition in the beginning.
+From the previous theorem (take $X$ to be $P\cup Q$), this is equivalent to our definition in the beginning.
 
 ### Some theorems
 
@@ -104,7 +104,7 @@ From the previous theorem, this is equivalent to our definition in the beginning
 >Let $\{ C_{\alpha} \}$ be a family of connected subsets of $X$, and let $p\in \bigcap_{\alpha}C_{\alpha}$. FTSOC, assume $C\equiv \bigcup_{\alpha}C_{\alpha}$ is disconnected, i.e, there exist non empty, disjoint $A$ and $B$ such that $A\sqcup B=C$ and $A$ and $B$ are open in $C$. WLOG, $p\in A$. Consider $q\in B$. There must exist $C_{\alpha}$ such that $p, q\in C_{\alpha}$. [[Analysis1_L15#Subspace topology|Since]] $A$ and $B$ are open in $C$, it follows that $A\cap C_{\alpha}$ and $B\cap C_{\alpha}$ are open in $C_{\alpha}$. We can write $C_{\alpha}=(A\cap C_{\alpha})\sqcup (B\cap C_{\alpha})$, i.e, $C_{\alpha}$ is the the disjoint union of two nonempty sets open in $C_{\alpha}$. But this means $C_{\alpha}$ is disconnected! $\Rightarrow\Leftarrow$ ❏
 
 >[!Theorem] Theorem 3
->Let $E\subset X$. $E$ is connected $\iff$ $\overline{E}$ is connected.
+>Let $E\subset X$. $E$ is connected $\implies$ $\overline{E}$ is connected.
 
 >**Proof**
 >FTSOC, suppose $\overline{E} = A \sqcup B$, where $A$ and $B$ are disjoint nonempty open subsets of $\overline{E}$. Then $E = (A \cap E) \sqcup (B \cap E)$. Note that $(A \cap E)$ and $(B \cap E)$ are open in $E$ as $A$ and $B$ are open in $\overline{E}$. Since $E$ is connected, one of $(A \cap E)$ or $(B \cap E)$ must be empty. WLOG, suppose $(B \cap E) = \emptyset$, which implies $A\supset E$.
