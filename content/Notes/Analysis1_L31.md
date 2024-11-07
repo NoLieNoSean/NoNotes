@@ -2,7 +2,7 @@
 tags:
   - ANA1
   - Lecture
-date: 2024-10-30, Wednesday
+date: 2024-10-30
 time: 14:08
 ---
 ![[1730581827131.jpg]]

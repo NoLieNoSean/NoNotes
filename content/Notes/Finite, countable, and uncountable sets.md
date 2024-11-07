@@ -71,7 +71,7 @@ This theorem also implies that the set of all real numbers is uncountable, since
 >Now, we assumed every real number eventually appears in the list $x_{1}, x_{2}, \dots$, which leads to the conclusion that $\bigcup_{n=1}^{\infty}I_{n} = \emptyset$. However, the [[The real field#Nested interval property|nested interval property]] asserts that $\bigcup_{n=1}^{\infty}I_{n} \ne \emptyset$. This contradiction means that such an enumeration of $\mathbb{R}$ is impossible. ❏
 
 >[!Question]- Why doesn't this work for $\mathbb{Q}$?
->The nested interval property does not hold for $\mathbb{Q}$. Consider $I_{n}$ to be rational bounds for $\sqrt{ 2 }$, for example (like what Rudin does on p2). Then, $\bigcap_{n=1}^{\infty}I_{n}=\emptyset$ since $\sqrt{ 2 }\not\in \mathbb{Q}$.
+>The nested interval property does not hold for $\mathbb{Q}$. Consider $I_{n}$ to be rational bounds for $\sqrt{ 2 }$, for example (like what Rudin does in 1.1). Then, $\bigcap_{n=1}^{\infty}I_{n}=\emptyset$ since $\sqrt{ 2 }\not\in \mathbb{Q}$.
 
 This combined with our proof that the union of two countable sets is countable, and that $\mathbb{Q}$ is countable, implies that $\mathbb{I}$, the set of all irrational numbers, is not countable since $\mathbb{R}=\mathbb{Q}\cup \mathbb{I}$.
 

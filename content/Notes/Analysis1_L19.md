@@ -30,9 +30,9 @@ Rudin, 4.33
 >Let $f:E\to Y$, $E\subset X$, $a$ is a limit point of $E$.
 >$\lim_{ x \to a }f(x)=L$ means for any neighborhood $U$ of $L$, there exists a neighborhood $V$ of $a$ such that $f(V\cap E\setminus \{ a \})\subset U$.
 
-$Y$ or $X$ can be $\mathbb{R}\cup \{ -\infty, \infty \}$ (with $E$ being $\mathbb{R}$, of course), and since we have the neighborhoods infinity defined, the definition works!
+$Y$ or $X$ (with $E$ being $\mathbb{R}$, of course) can be $\mathbb{R}\cup \{ -\infty, \infty \}$.
 
-With this, we have formulated taking limits in the extended real number system in terms of neighborhoods. Note that our definitions now are completely bereft of $\epsilon$'s and $\delta$'s, i.e, they depend only on what the open sets are in the domain and codomain, and not on the actual value of a metric.
+With this, we have formulated taking limits in the extended real number system in terms of neighborhoods. Note that our definitions now are completely bereft of $\epsilon$'s and $\delta$'s, i.e, they depend only on what the open sets are in the domain and codomain, and not on the metric.
 
 Rudin, 4.34
 

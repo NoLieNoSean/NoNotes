@@ -2,7 +2,7 @@
 tags:
   - ANA1
   - Lecture
-date: 2024-10-30, Wednesday
+date: 2024-10-30
 time: 10:32
 ---
 Quiz next week! likely on Tuesday 5:30. Uniform continuity, connectedness.

@@ -111,17 +111,12 @@ Proper lecture notes start here.
 
 %% 
 # To-do
-- [ ] Revise notes 
-- [ ] Abbot chapters 3, 4
-- [ ] 1.21, 3.20. Lecture 12
-- [ ] Rudin chapters 2, 3, 4. Link up.
-- [ ] Chapter 2, 3, 4 problems
-- [ ] Compile Lecture 19
 - [ ] Review quiz 1 solutions
 - [ ] Review HW 1 solutions
 - [ ] Cauchy functional equaitons
 - [ ] note 3.11 b, 4.3
 - [ ] 3.21, Thm 3.7, 3.17 
+- [ ] Cantor-like set on $[\sqrt{ 2 }, 2\sqrt{ 2 }]$ has no rationals.
 - [ ] No set S can be in bijection with its power set (classic Cantor diagonalization argument)
 - [ ] Try to prove the Schroder-Bernstein theorem: if there is an injection from S to T and an injection from T to S, then there is a bijection between S and T. Then locate a proof and see if you can read a little and complete the rest. (Check abbot)
 - [ ] $a_{0}\ge a_{1}\ge \dots \ge 0$. $\lim_{ n \to \infty }a_{n}=0$. Show that $\sum(-1)^{n}a_{n}$ converges.
@@ -132,8 +127,7 @@ Proper lecture notes start here.
       Then, $T$ has a unique fixed point (If $T(x_{0}) = x_{0}$, then, $x_{0}$ is called a fixed point).
       It is easy to see that at most one fixed point can exist for $T$ given the distance inequality.
 
- %%
-
+%%
 
 # Rudin sections
 2. Basic topology

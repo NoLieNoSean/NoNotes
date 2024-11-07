@@ -98,7 +98,9 @@ Rudin defines (2.26) closure of $E$ as $E\cup E'$, where $E'$ is the set of all 
 Defined perfect sets, and noted that they are not important for this course.
 
 >[!Definition]
->$E$ is perfect if $E$ is closed and every point of $E$ is a limit point of $E$. 
+>$E$ is *perfect* if $E$ is closed and every point of $E$ is a limit point of $E$. 
+
+For example, the Cantor set is a perfect set.
 
 ---
 ## Open and closed sets under intersections and unions

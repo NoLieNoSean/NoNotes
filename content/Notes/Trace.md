@@ -11,7 +11,6 @@ $$
 >[!Theorem]
 >Let $A$ and $B$ be matrices of size $m\times n$ and $n\times m$ respectively. Then, $\mathrm{Tr}(AB) = \mathrm{Tr}(BA)$.
 
-
 >**Proof**
 >$$
 >\mathrm{Tr}(AB) = \sum_{j=1}^{m} \sum_{i=1}^{n} a_{j,i}b_{i,j} =

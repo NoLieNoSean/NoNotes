@@ -3,7 +3,7 @@ tags:
   - ANA1
   - Lecture
   - Processed
-date: 2024-10-25, Friday
+date: 2024-10-25
 time: 10:30
 ---
 ![[1729857829763.jpg]]

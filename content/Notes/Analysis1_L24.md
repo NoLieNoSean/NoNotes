@@ -3,7 +3,7 @@ tags:
   - ANA1
   - Lecture
   - Processed
-date: 2024-10-18, Friday
+date: 2024-10-18
 time: 10:30
 ---
 ## Mean value theorems

@@ -158,7 +158,7 @@ Rudin, 2.35
 >Since $C$ is bounded, $C\subset[-M, M]$ for some $M$. Now, $C=[-M, M]\cap C$, and thus $C$ is closed in $[-M, M]$ ([[Analysis1_L15#Subspace topology|Subspace topology]]). We have previously [[#Closed intervals in R|shown]] that closed intervals in $\mathbb{R}$ are compact, so $[-M, M]$ is compact. It follows form the [[#Closed subsets of compact sets are compact|previous theorem]] that $C$ is compact. ❏
 
 >[!Warning]
->In general, $X$ is closed and bounded $\not\implies$ $X$ is compact.
+>In general, $X$ is closed and bounded $\not\implies$ $X$ is compact. For example, let $E$ be the set of all $p\in \mathbb{Q}$ such that $2<p^{2}<3$. $E$ is closed and bounded in $\mathbb{Q}$, but $E$ is not compact. 
 
 >[!Important]
 >While stated for $\mathbb{R}$, the Heine Borel theorem is valid for $\mathbb{R}^{k}$. It is easy to show.

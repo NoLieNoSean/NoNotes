@@ -2,7 +2,7 @@
 tags:
   - ALG1
   - Lecture
-date: 2024-10-29, Tuesday
+date: 2024-10-29
 time: 14:00
 ---
 ## Recall
