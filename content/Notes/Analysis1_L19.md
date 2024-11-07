@@ -53,14 +53,14 @@ Rudin, 4.25
 >Let $(a, b)\subset \mathbb{R}$, and $a\le c<b$. 
 >$f:(a, b)\to \mathbb{R}$.
 >
->Then, $f(c+)=\lim_{ x \to c^{+} }f(x)=L$ means any of these:
+>Then, $f(c^{+})=\lim_{ x \to c^{+} }f(x)=L$ means any of these:
 >- For all $\epsilon>0$, there exists $\delta>0$ such that $0<x-c<\delta$ $\implies$ $|f(x)-L|<\epsilon$.
 >- Use the general definition (4.33) with $E=[c, b)$.
->- For any sequence $( t_{n} )$ in $(c, b)$ such that $(t_{n})\to c$, is is true that $f(t_{n})\to L$. 
+>- For any sequence $( t_{n} )$ in $(c, b)$ such that $(t_{n})\to c$, it is true that $f(t_{n})\to L$. 
 >
 >Ditto for left handed limits.
 
-We define one sided limits since they help us to study discontinuous and monotonic functions.
+We define one sided limits to help us to study discontinuous and monotonic functions.
 ### Discontinuous functions
 
 Rudin, 4.26
@@ -91,7 +91,7 @@ Rudin, 4.29
 >Let $s$ be the supremum mentioned. Given $\epsilon>0$, find $t_{1}\in(a, x)$ such that $s-\epsilon<f(t_{1})\le s$. Take $\delta=x-t_{1}$. For all $t$ such that $t_{1}<t<x$($0<x-t<\delta$), $f(t_{1})\le f(t)\le s$. ❏
 >
 >**Proof of 2**
->Observe that $\inf\{ f(t)\ |\ x<t<b \}=\inf\{ f(t)\ |\ x<t<y \}$. Thus, $f(x^{+})$ and $f(y^{-})$ are the infimum and supremum of the same set. The result follows. ❏
+>Observe that $\inf\{ f(t)\ |\ x<t<b \}=\inf\{ f(t)\ |\ x<t<y \}$ and $\sup \{ f(t)\ |\ a<t<y \}=\sup \{ f(t)\ |\ x<t<y \}$. Thus, $f(x^{+})$ and $f(y^{-})$ are the infimum and supremum of the same set. The result follows. ❏
 
 Rudin, 4.30
 
@@ -101,7 +101,7 @@ Rudin, 4.30
 >2. $E$ is finite or countable.
 
 >**Proof**
->(1) follows form the fact the the left and right limits exist at every point in the functions domain. For (2), the hypothesis tells us that for each $x\in E$,  $f(x^{-})<f(x^{+})$. Thus, with each element in $E$, we can associate a rational number $r(x)$ such that $f(x^{-})<r(x)<f(x^{+})$. Since $x_{1}<x_{2}$ implies $f(x_{1}^{+})\leq f(x_{2}^{-})$, we have $r_{1}\ne r_{2}$ if $x_{1}\ne x_{2}$. Thus, we have a bijection between $E$ and a subset of $\mathbb{Q}$, which we know is countable. ❏
+>(1) follows form the fact that the left and right limits exist at every point in the function's domain. For (2), the hypothesis tells us that for each $x\in E$,  $f(x^{-})<f(x^{+})$. Thus, with each element in $E$, we can associate a rational number $r(x)$ such that $f(x^{-})<r(x)<f(x^{+})$. Since $x_{1}<x_{2}$ implies $f(x_{1}^{+})\leq f(x_{2}^{-})$, we have $r_{1}\ne r_{2}$ if $x_{1}\ne x_{2}$. Thus, we have a bijection between $E$ and a subset of $\mathbb{Q}$, which we know is countable. ❏
 
 See examples 4.27
 
