@@ -159,7 +159,8 @@ Let $\mathbb{F}$ be $\mathbb{R}$ or $\mathbb{C}$. The motivation behind this is 
 > $$
 > where $\overline z$ denotes the complex conjugate.
 > >[!info]- Motivation
-> > If we used the _naïve_ definition of the inner product, that is
+> >
+> >If we used the _naïve_ definition of the inner product, that is
 > > $$
 > > \langle v, w \rangle = v_{1}w_{1} + v_{2}w_{2}+\dots+v_{n}w_{n}
 > > $$
