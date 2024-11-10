@@ -81,7 +81,8 @@ This is a vector space over $\mathbb{F}$ with pointwise addition and scalar mult
 > $$
 > \dim_{\mathbb{F}}\hom(V, \mathbb{F}) = \dim V
 > $$
-> > [!remark]-
+> > [!info]- Remark
+> > 
 > > If $V$ is a finite dimensional vector space, then
 > > $$
 > > V \cong \mathbb{F}^{\dim V} \cong \hom(V,\mathbb{F})
@@ -96,7 +97,8 @@ This is a vector space over $\mathbb{F}$ with pointwise addition and scalar mult
  - Elements of $\hat{V}$ are called linear functionals i.e. $f: V \to \mathbb{F}$ where $\text{vector }v \mapsto \text{scalar}\ f(v)$.
 
 - If $V$ has basis $v_{1}, v_{2}, \dots, v_{n}$ then define $\hat{v}_{i} \in \hat{V}$ as 
-$$\hat{v_{i}}(v_{j})
+$$
+\hat{v_{i}}(v_{j})
 =
 \begin{cases}
 0 & i \neq j \\
