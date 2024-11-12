@@ -139,3 +139,31 @@ Rudin, 5.12
 > In the second case, let $d=|L-f(p)|$. Let $\epsilon=d/2$. Find $\delta$ such that $x\in(p-\delta, p+\delta)$ $\implies$ $f(x)\in(L-\epsilon, L+\epsilon)$. Choose $t_{1}\in(p-\delta, p)$. $f$ satisfies the intermediate value property on $[t_{1}, p]$. WLOG, $f(t_{1})<L+\epsilon<f(p)$. But, $\not\exists$ $t\in(t_{1}, p)$ such that $f(t)=L=\epsilon$. $\Rightarrow \Leftarrow$ ❏
 
 $f'$ may have discontinuities of the second kind, though.
+
+---
+## Epilogue
+
+**Find a differentiable function $f$ and a point $p$ such that $f'(p)>0$ but the function is not increasing in any interval containing $p$.**
+
+Consider 
+$$
+f(x) = \begin{cases}x + 2x^2\sin\left(\frac1x\right),& x\ne 0\\0& x = 0\;.\end{cases}
+$$
+It can be shown that $f$ is differentiable on $\mathbb{R}$ and $f'(0)=1$. The derivative when $x\ne 0$ is
+$$
+f\,'(x) = 1+4x\sin\left(\frac1x\right)−2\cos\left(\frac1x\right)\;.
+$$
+Now, we know that
+$$
+\lim_{ x \to 0 } 4x\sin\left( \frac{1}{x} \right)=0.
+$$
+Consider any interval $[t_{1}, t_{2}]$ containing $0$. Let $\epsilon=1$. Find $\delta>0$ such that $(-\delta, \delta)\subset[t_{1}, t_{2}]$ and $x\in(-\delta, \delta)\implies 4x\sin\left( \frac{1}{x} \right)\in(-1, 1)$. Find an integer $n$ such that 
+$$
+\frac{1}{2n\pi}\in(-\delta, \delta).
+$$
+Thus, we have
+$$
+f'\left( \frac{1}{2n\pi} \right)<1+1-2=0.
+$$
+
+Thus, $f$ is not increasing on $[t_{1}, t_{2}]$.
