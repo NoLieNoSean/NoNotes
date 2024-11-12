@@ -151,7 +151,7 @@ f(x) = \begin{cases}x + 2x^2\sin\left(\frac1x\right),& x\ne 0\\0& x = 0\;.\end{c
 $$
 It can be shown that $f$ is differentiable on $\mathbb{R}$ and $f'(0)=1$. The derivative when $x\ne 0$ is
 $$
-f\,'(x) = 1+4x\sin\left(\frac1x\right)−2\cos\left(\frac1x\right)\;.
+f'(x) = 1+4x\sin\left(\frac1x\right)−2\cos\left(\frac1x\right).
 $$
 Now, we know that
 $$
