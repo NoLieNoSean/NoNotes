@@ -9,7 +9,7 @@ We write $T:X\rightarrow Y$ to say that $T$ is a transformation with domain $X$ 
 
 ---
 ## Linear transformations
-Let $V,W$ be vector spaces over the same field $\mathbb{F}$. A transformation $T:V\rightarrow W$ is called *linear* if
+Let $V,W$ be vector spaces over the *same field* $\mathbb{F}$. A transformation $T:V\rightarrow W$ is called *linear* if
 1. $T(\mathbf{u}+\mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \ \  \forall \mathbf{u}, \mathbf{v} \in V$
 2. $T(\alpha \mathbf{v}) = \alpha T(\mathbf{v})$
 

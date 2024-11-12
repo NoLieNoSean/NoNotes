@@ -51,7 +51,8 @@ Proper lecture notes start here.
 	- Eigenvectors, eigenvalues, eigenspaces
 - [[Algebra1_L18]] ✅
 	- Finding Eigenstuff of matrices and abstract operators, characteristic polynomial
-- [[Algebra1_L19]]
+- [[Algebra1_L19]] ✅
+	- Diagonalization
 - [[Algebra1_L20]]
 
 >[!Excalidraw]-
