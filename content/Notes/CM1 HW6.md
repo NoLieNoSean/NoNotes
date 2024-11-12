@@ -1,5 +1,3 @@
-`Vasudeva S Nanjangud`
-
 ## 5.81
 Let the two masses be $m_{1}$ and $m_{2}$, with $m_{1}$ moving to the right with a velocity $\mathbf{u}_{1}$ and $m_{2}$ stationary.
 ![[Pasted image 20240927232739.png|200]]

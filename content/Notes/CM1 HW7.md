@@ -1,5 +1,3 @@
-`Vasudeva S Nanjangud`
-
 ## 7.7
 
 ### Part a
