@@ -95,7 +95,7 @@ Notice that plugging $g(x)=x$ gives us the mean value theorem.
 > $$
 > ❏
 
->[!Info]
+>[!Info] Remark
 >A simpler version of $h(x)$ that can be used instead:
 >$$
 >h(x)\equiv(f(b)-f(a))g(x)-(g(b)-g(a))f(x)
@@ -125,7 +125,7 @@ Rudin, 5.12
 > Suppose $f$ is a real differentiable function on $[a, b]$ and suppose $f'(a)<\lambda<f'(b)$. Then there is a point $x\in(a, b)$ such that $f'(x)=\lambda$. 
 
 > **Proof**
-> Define $g(x)\equiv f(x)-\lambda t$. Notice that $g'(a)<0$ and $g'(b)>0$. This implies that there exist $t_{1}, t_{2}\in(a, b)$ such that $g(t_{1})<g(a)$ and $g(t_{2})<g(b)$. Thus, $g$ attains its minimum value at some $t\in(a, b)$. Since the derivative is zero at local maxima, we have $g'(t)=0$, which gives us $f'(t)=\lambda$. ❏
+> Define $g(t)\equiv f(t)-\lambda t$. Notice that $g'(a)<0$ and $g'(b)>0$. This implies that there exist $t_{1}, t_{2}\in(a, b)$ such that $g(t_{1})<g(a)$ and $g(t_{2})<g(b)$. Thus, $g$ attains its minimum value at some $x\in(a, b)$. Since the derivative is zero at local maxima, we have $g'(x)=0$, which gives us $f'(x)=\lambda$. ❏
 
 > [!Info]
 > How does $g'(a)<0$ imply the existence of $t_{1}\in(a, b)$ such that $g(t_{1})<g(a)$? Recall the definition of [[Analysis1_L10#Definition of limit of a function in R|limit of a function]]. We know that $\lim_{ x \to a }  \frac{{g(x)-g(a)}}{x-a}<0$. Choose $\epsilon$ to be $|g'(a)|$, and obtain the corresponding $\delta$. So, for all $x\in(a, a+\delta)$, $\frac{{g(x)-g(a)}}{x-a}\in(-2g'(a), 0)$, i.e, $g(x)<g(a)$. Note that we arrived at stronger statement than we required: $g'(a)<0$ not only implies the existence of $t_{1}\in(a, b)$, but also the existence of an entire interval $(a, a+\delta)$ satisfying the same condition.
