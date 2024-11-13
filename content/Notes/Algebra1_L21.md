@@ -1,54 +1,64 @@
 ---
-tags: 
+tags:
+  - ALG1
+  - Lecture
+  - Processed
 date: 2024-11-10
 time: 17:58
 ---
->[!info] Recall
->- [[Algebra1_L20#Inner Product Spaces|Inner Product Space]]
-
 ## Inner Product Spaces
 
->[!theorem] Lemma
->
->The inner product is linear in the first slot and anti-linear in the second slot
+The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
 
-> **Proof:**
+>[!Definition]
+> A vector space $V$ over $\mathbb{F} = \mathbb{R}, \mathbb{C}$ is an *inner product space* if for any two $\mathbf{v}, \mathbf{w} \in V$, there is defined an element $\langle \mathbf{v},\mathbf{w} \rangle \in \mathbb{F}$ such that it satisfies the following properties:
+>  - $\langle \mathbf{v},\mathbf{w} \rangle$ = $\overline{\langle \mathbf{w},\mathbf{v} \rangle}$;
+>  - $\langle \mathbf{v},\mathbf{v} \rangle \geq 0$;
+>  - $\langle \mathbf{v},\mathbf{v} \rangle = 0 \iff \mathbf{v} = 0$;
+>  - $\langle \alpha \mathbf{u} + \beta \mathbf{v},\mathbf{w} \rangle$ = $\alpha\langle \mathbf{u},\mathbf{w} \rangle + \beta\langle \mathbf{v},\mathbf{w} \rangle$.
+
+>[!theorem] Theorem 1
+>The inner product is anti-linear in the second slot.
+
+> **Proof**
 > $$
 > \begin{align}
-> \langle u, \alpha v+\beta w\rangle &= \overline{\langle\alpha v+\beta w, u\rangle} \\
-> & = \overline{\alpha\langle v,u\rangle + \beta\langle w,u\rangle}\\
-> & = \overline\alpha\overline{\langle v,u\rangle} + \overline\beta \overline{\langle w,u\rangle}\\
-> & = \overline\alpha\langle u,v\rangle + \overline\beta \langle u,w\rangle
+> \langle \mathbf{u}, \alpha \mathbf{v}+\beta \mathbf{w}\rangle &= \overline{\langle\alpha \mathbf{v}+\beta \mathbf{w}, \mathbf{u}\rangle} \\
+> & = \overline{\alpha\langle \mathbf{v},\mathbf{u}\rangle + \beta\langle \mathbf{w},\mathbf{u}\rangle}\\
+> & = \overline\alpha\ \overline{\langle \mathbf{v},\mathbf{u}\rangle} + \overline\beta \ \overline{\langle \mathbf{w},\mathbf{u}\rangle}\\
+> & = \overline\alpha\langle \mathbf{u},\mathbf{v}\rangle + \overline\beta \langle \mathbf{u},\mathbf{w}\rangle.
 > \end{align}
 > $$
+> ❏
 
->[!important] Corollary
->$\langle \alpha u + \beta v, \alpha u + \beta v\rangle = \alpha\bar{\alpha}\langle u,u\rangle + \alpha\bar{\beta}\langle u,v\rangle + \bar{\alpha}\beta\langle v,u\rangle + \beta\bar{\beta}\langle v,v\rangle$
+>[!Theorem] Corollary 1
+>$\langle \alpha \mathbf{u} + \beta \mathbf{v}, \alpha \mathbf{u} + \beta \mathbf{v}\rangle = \alpha\bar{\alpha}\langle \mathbf{u},\mathbf{u}\rangle + \alpha\bar{\beta}\langle \mathbf{u},\mathbf{v}\rangle + \bar{\alpha}\beta\langle \mathbf{v},\mathbf{u}\rangle + \beta\bar{\beta}\langle \mathbf{v},\mathbf{v}\rangle$.
 
->[!theorem] Lemma
-> If $u = 0$, then $\langle u, v \rangle = 0$.
+>[!theorem] Theorem 2
+> If $\mathbf{u} = 0$, then $\langle \mathbf{u}, \mathbf{v} \rangle = 0$.
 
-> **Proof:**
+> **Proof**
 > _Method 1:_
 > $$
-> \langle 0, v\rangle = \langle 0 + 0, v\rangle = \langle 0, v\rangle + \langle 0, v\rangle \implies \langle 0, v\rangle = 0
+> \langle 0, \mathbf{v}\rangle = \langle 0 + 0, \mathbf{v}\rangle = \langle 0, \mathbf{v}\rangle + \langle 0, \mathbf{v}\rangle \implies \langle 0, \mathbf{v}\rangle = 0
 > $$
+> 
 > *Method 2: (~~used only by the utterly deranged~~)*
-> Consider the linear map $T: V \to W$ where $u \mapsto \langle u, v \rangle$ for a fixed $v \in V$. We know that $T(0) = 0$. Hence $\langle 0, u\rangle = 0$. As $v$ was arbitrary, the proposition holds for any $v \in V$.
->  
+> Consider the linear map $T: V \to \mathbb{F}$ where $\mathbf{u} \mapsto \langle \mathbf{u}, \mathbf{v} \rangle$ for a fixed $\mathbf{v} \in V$. We know that $T(0) = 0$. Hence $\langle 0, \mathbf{u}\rangle = 0$. As $\mathbf{v}$ was arbitrary, the proposition holds for any $\mathbf{v} \in V$. ❏
 
->[!example] Inner Product in $\mathbb{F}^n$
-> For $V = \mathbb{F}^n$, take
+>[!Example] Hermitian Dot Product
+> For vectors $\mathbf{v}, \mathbf{w} \in \mathbb{C}^n$, let $\mathbf{v} = (v_{1}, v_{2}, \dots, v_{n})$ and $\mathbf{w} =(w_{1}, w_{2}, \dots, w_{n})$. The inner product of $\mathbf{v}$ and $\mathbf{w}$ is defined as
 > $$
-> \begin{align}
-> u &= (u_{1}, u_{2}, \dots, u_{n})\\
-> v &= (v_{1}, v_{2}, \dots, v_{n})
-> \end{align}
+> \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}\overline{w}_{1} + v_{2}\overline{w}_{2} + \dots + v_{n}\overline{w}_{n},
 > $$
-> Then the inner product of $u$ and $v$ is
-> $$
-> \langle u, v\rangle = \sum_{i=1}^n u_{i}\bar{v}_{i}
-> $$
+> where $\overline z$ denotes the complex conjugate.
+> >[!info]- Motivation
+> >
+> >If we used the _naïve_ definition of the inner product, that is
+> > $$
+> > \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}w_{1} + v_{2}w_{2}+\dots+v_{n}w_{n}
+> > $$
+> > Then for the example of $(1, i) \in \mathbb{C}^2$, we have $\langle (1, i),(1, i)\rangle = 1\cdot 1 + i \cdot i = 0$. This is somewhat of a problem as we expect this to be positive. If we use the Hermitian dot product, we get a nicer answer: $\langle (1, i),(1, i)\rangle = 1\cdot \bar{1} + i \cdot \bar{i} = 2$. The Hermitian dot product in fact guarantees $\langle\mathbf{v}, \mathbf{v}\rangle\geq 0$ and $\langle\mathbf{v}, \mathbf{v}\rangle= 0 \iff \mathbf{v}=0$ along with the other two properties, as you can easily verify.  
 
 >[!example] Inner Product of Functions (Hilbert Space)
 >
@@ -57,164 +67,193 @@ time: 17:58
 >$$
 > \langle f(t), g(t) \rangle = \int_{0}^{1} f(t)\overline{g(t)} \ dt
 >$$
->It is easy to see that this satisfies all the rules of the inner product.
+>It is easy to see that this satisfies all the requirements of the inner product.
+### Norm
 
-### Length of vectors
-
->[!theorem] Definition
-> We define the length of a $v \in V$ as 
+>[!Definition]
+> Given an inner product space, one defines a *norm* on it by 
 > $$
-> \lVert v \rVert  = \sqrt{ \langle v, v\rangle }
+> \lVert \mathbf{v} \rVert  = \sqrt{ \langle \mathbf{v}, \mathbf{v}\rangle }.
 > $$
-- We can infer from the definition of the norm that $\lVert \lambda v \rVert = |\lambda| \, \lVert v \rVert$
 
-## The Cauchy-Schwarz Inequality
+If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVert = |\lambda| \, \lVert \mathbf{v} \rVert$.
+### The Cauchy-Schwarz Inequality
 
->[!Theorem] The Inequality
-> For any two $u, v \in V$, we have
+> [!Theorem]
+> Let $V$ be an inner product space. For any two $\mathbf{u}, \mathbf{v} \in V$, we have
 > $$
-> \lvert\langle u,v\rangle\rvert \leq \lVert u \rVert \,\lVert v \rVert 
+> \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert \leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
 > $$ 
 
->**Proof:**
-> *Case 1:* $u = 0$ 
-> $$ 
-> 0 = |\langle u, v\rangle| \le \lVert u \rVert \, \lVert v \rVert  = 0
-> $$
-> *Case 2*: $u \neq 0$ and $\langle u, v\rangle \in \mathbb{R}$
+> **Proof**
+> *Case 1*: $\langle \mathbf{u}, \mathbf{v}\rangle \in \mathbb{R}$
 > 
 > For any $\lambda \in \mathbb{R}$, we have
 > $$
 > \begin{align}
-> \langle \lambda u + v, \lambda u + v \rangle &\geq 0 \\
-> \lambda^2 \langle u, u \rangle + 2\lambda\langle u , v\rangle + \langle v, v\rangle  & \geq 0 
+> \langle \lambda \mathbf{u} + \mathbf{v}, \lambda \mathbf{u} + \mathbf{v} \rangle &\geq 0 \\
+> \lambda^2 \langle \mathbf{u}, \mathbf{u} \rangle + 2\lambda\langle \mathbf{u} , \mathbf{v}\rangle + \langle \mathbf{v}, \mathbf{v}\rangle  & \geq 0 .
 > \end{align}
 > $$
 > As this hold for all $\lambda$, we have
 > $$
 > \begin{align}
 > 4\langle u, v\rangle^2 & \leq 4\langle u, u\rangle \langle v, v\rangle \\
-\langle u, v\rangle  & \leq \lVert u \rVert \,\lVert v \rVert 
+> |\langle u, v\rangle|  & \leq \lVert u \rVert \,\lVert v \rVert .
 > \end{align}
 > $$
-> *Case 3:* $u \neq 0$ and $\langle u, v\rangle \not\in \mathbb{R}$
+> *Case 2:* $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$
 > 
-> We have $\langle u, v\rangle \neq 0$ as as $\langle u, v\rangle \not\in \mathbb{R}$.
-> Take $\alpha = \langle u, v\rangle$. Observe that
+> Note that $\langle \mathbf{u}, \mathbf{v}\rangle \neq 0$ as as $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$.
+> Let $\alpha = \langle \mathbf{u}, \mathbf{v}\rangle$. Observe that
 > $$
-> \left\langle  \frac{u}{\alpha}, v \right\rangle = \frac{1}{\alpha}\langle u, v\rangle =1 \in R
+> \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle = \frac{1}{\alpha}\langle \mathbf{u}, \mathbf{v}\rangle =1 \in \mathbb{R}
 > $$
-> We can apply *Case 2*.
+> We can apply Case 1.
 > $$
 > \begin{align}
-> \left\lvert  \left\langle  \frac{u}{\alpha}, v \right\rangle   \right\rvert &\leq \left\lVert  \frac{u}{\alpha}  \right\rVert \, \lVert v \rVert  \\
-> \cancel{\frac{1}{\lvert \alpha \rvert }} \lvert \langle u, v\rangle  \rvert &\leq \cancel{\frac{1}{\lvert a \rvert }}\lVert u \rVert \, \lVert v \rVert  \\
-> \lvert\langle u,v\rangle\rvert &\leq \lVert u \rVert \,\lVert v \rVert 
+> \left\lvert  \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle   \right\rvert &\leq \left\lVert  \frac{\mathbf{u}}{\alpha}  \right\rVert \, \lVert \mathbf{v} \rVert  \\
+> \cancel{\frac{1}{\lvert \alpha \rvert }} \lvert \langle \mathbf{u}, \mathbf{v}\rangle  \rvert &\leq \cancel{\frac{1}{\lvert \alpha \rvert }}\lVert \mathbf{u} \rVert \, \lVert \mathbf{v} \rVert  \\
+> \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert &\leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert 
 > \end{align}
 > $$
+> ❏
 
->[!important] Corollary
+>[!Theorem] Corollary
 >$$
 >{\left\lvert  \int_{0}^1 f(t)g(t) \, dt \right\rvert}^2 \leq \left( \int_{0}^{1} \lvert f^2(t) \rvert  \, dt  \right)\left( \int_{0}^{1} \lvert g^2(t) \rvert  \, dt  \right)
 >$$
 
+Now, bow before the almighty...
+### The Triangle Inequality
+
+> [!Theorem]
+> For any vectors $\mathbf{x}$ and $\mathbf{y}$ in an inner product space, we have
+> $$
+> \lVert \mathbf{x}+\mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert .
+> $$
+
+> **Proof**
+> $$
+> \begin{align}
+> \lVert \mathbf{x}+\mathbf{y} \rVert ^{2} & =\langle \mathbf{x}+\mathbf{y}, \mathbf{x}+\mathbf{y} \rangle  \\
+>  & =\lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} +\langle \mathbf{x}, \mathbf{y} \rangle +\langle \mathbf{y}, \mathbf{x} \rangle  \\
+>  & = \lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} + 2\mathrm{Re}\langle \mathbf{x}, \mathbf{y} \rangle  \\
+>  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lvert \langle \mathbf{x}, \mathbf{y} \rangle  \rvert  \\
+>  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lVert \mathbf{x} \rVert \lVert \mathbf{y} \rVert  \\
+>  & =(\lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert )^{2}.
+> \end{align}
+> $$
+> ❏
+
+---
+## Normed spaces
+
+We have shown that the norm $\lVert \mathbf{v} \rVert$ derived from the inner product satisfies the following properties:
+1. Homogeneity: $\lVert \alpha \mathbf{v} \rVert=\lvert \alpha \rvert\lVert \mathbf{v} \rVert$ for all $\mathbf{v}\in V$ and $\alpha\in \mathbb{F}$.
+2. Triangle inequality: $\lVert \mathbf{x}+\mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert$. 
+3. Non-negativity: $\lVert \mathbf{v} \rVert\geq 0$ for all $\mathbf{v}\in V$.
+4. Non-degeneracy: $\lVert \mathbf{v} \rVert=0 \iff \mathbf{v}=\mathbf{0}$. 
+
+Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfies. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a *norm*. 
+
+>[!Definition]
+>A vector space equipped with a norm is called a *normed space*.
+
+Any inner product space is a normed space, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, not all normed spaces are inner product spaces.
+
+---
 ## Orthogonal Vectors
 
->[!theorem] Definition
->If $u, v \in V$ then $u$ is orthogonal to $v$ if $\langle u, v\rangle = 0$.
+>[!Definition]
+>If $\mathbf{u}, \mathbf{v} \in V$ then $\mathbf{u}$ is *orthogonal* to $\mathbf{v}$ if $\langle \mathbf{u}, \mathbf{v}\rangle = 0$.
 
->[!theorem] Definition
-> If $W \subset V$ is a subspace then the Orthogonal complement of $W$ is defined as
+If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to $\mathbf{u}$ as $\langle \mathbf{v}, \mathbf{u}\rangle = \overline{\langle \mathbf{u}, \mathbf{v}\rangle} = 0$
+
+>[!Definition]
+> If $W \subset V$ is a subspace then the *orthogonal complement* of $W$ is defined as
 > $$
-> W^{\perp} = \{ x \in V \mid \langle x, w\rangle = 0\,, \ \forall \ w \in W \}
+> W^{\perp} \equiv \{ \mathbf{x} \in V \mid \langle \mathbf{x}, \mathbf{w}\rangle = 0\, \ \forall \, \mathbf{w} \in W \}.
 > $$
 
-- If $u$ is orthogonal to $v$ then $v$ is orthogonal to $u$ as $\langle v, u\rangle = \overline{\langle u, v\rangle} = 0$
-
->[!theorem] Lemma
+>[!theorem]
 > $W^\perp$ is a subspace of $V$.
 
-> **Proof:**
-> 1) $0 \in W^\perp$ as $\langle 0, w\rangle = 0\ \forall \ w \in W$.
-> 2) For any $u, v \in W^\perp$, we have
+> **Proof**
+> 1) $\mathbf{0} \in W^\perp$ as $\langle \mathbf{0}, w\rangle = 0\ \forall \ \mathbf{w} \in W$.
+> 2) For any $\mathbf{u}, \mathbf{v} \in W^\perp$, we have
 > $$
-> \langle \alpha u + \beta v, w\rangle = \alpha \langle u, w\rangle +\beta\langle v, w\rangle = 0
+> \langle \alpha \mathbf{u} + \beta \mathbf{v}, \mathbf{w}\rangle = \alpha \langle \mathbf{u}, \mathbf{w}\rangle +\beta\langle \mathbf{v}, \mathbf{w}\rangle = 0.
 > $$
-> That is $W^\perp$ is closed under addition and scalar multiplication.
+> So, $W^\perp$ is closed under addition and scalar multiplication. ❏
 
->[!theorem] Lemma
->$$
->W \, \cap \, W^\perp = \emptyset
->$$
+>[!theorem]
+>$W \, \cap \, W^\perp = \emptyset.$
 
-> **Proof:**
-> If $w \in W \, \cap \, W^\perp$ then $\langle w, w\rangle = 0 \implies w = 0$
+> **Proof**
+> If $\mathbf{w} \in W \, \cap \, W^\perp$ then $\langle \mathbf{w}, \mathbf{w}\rangle = 0 \implies \mathbf{w} = 0$. ❏
 
->[!theorem] Definition
-> A set of vectors $\{ v_{i} \}$ in $V$ is an orthonormal set if
+### Orthonormal vectors
+
+>[!Definition]
+> A set of vectors $\{ \mathbf{v}_{i} \}$ in $V$ is an *orthonormal set* if
 > $$
-> \langle v_{i}, v_{j}\rangle = 
+> \langle \mathbf{v}_{i}, \mathbf{v}_{j}\rangle = 
 > \begin{cases}
 > 1 & i = j \\
-> 0 & i \neq j
+> 0 & i \neq j.
 > \end{cases}
 > $$
 
->[!theorem] Lemma
-> If $\{ v_{i} \} \subset V$ is an orthonormal set then $\{ v_{i} \}$ are linearly independent.
+>[!Theorem]
+> If $\{ \mathbf{v}_{i} \} \subset V$ is an orthonormal set then $\{ \mathbf{v}_{i} \}$ are linearly independent.
 
-> **Proof:**
-> Assume that for some $\beta_{i}$,
+> **Proof**
+> Assume that for some $\beta_{i}$, $\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}  =0$. Then,
 > $$
 > \begin{align}
-> \sum_{i=1}^{n} \beta_{i}v_{i} & =0 \\
-> \left\langle  \sum_{i=1}^{n} \beta_{i}v_{i}, v_{k} \right\rangle &= \langle 0, v_{k}\rangle  \\
-> \sum_{i=1}^{n} \beta_{i}\langle v_{i}, v_{k}\rangle &=0 \\
-> \beta_{k}&=0
+> 0=\langle \mathbf{0}, \mathbf{v}_{k}\rangle =\left\langle  \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}, \mathbf{v}_{k} \right\rangle=\sum_{i=1}^{n} \beta_{i}\langle \mathbf{v}_{i}, \mathbf{v}_{k}\rangle =\beta_{k}.
 > \end{align}
 > $$
-> As $1 \leq k \leq n$, this gives that all $\beta_{i}= 0$. Hence $\{ v_{i} \}$ is linearly independent.
+> As $1 \leq k \leq n$, we have all $\beta_{i}= 0$. Hence $\{ v_{i} \}$ is linearly independent. ❏
 
- >[!important] Corollary
- > For an orthonormal set $\{ v_{i} \}$, if there is some $w$ such that $w = \alpha_{1}v_{1} + \alpha_{2}v_{2} +\dots + \alpha_{n}v_{n}$ then $\alpha_{k} = \langle w, v_{k}\rangle$.
+ >[!Important] 
+ > For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
 
->[!Important] Corollary
-> For an orthonormal set $\{ v_{i} \}$ in $V$ and a $w \in V$, we have
+>[!Important]
+> For an orthonormal set $\{ \mathbf{v}_{i} \}$ in $V$ and any $\mathbf{w} \in V$,
 > $$
-> u = w - \langle w, v_{1} \rangle v_{1} - \langle w, v_{2}\rangle v_{2} - \dots - \langle w, v_{n}\rangle v_{n} 
+> \mathbf{u} \equiv \mathbf{w} - \langle \mathbf{w}, \mathbf{v}_{1} \rangle \mathbf{v}_{1} - \langle \mathbf{w}, \mathbf{v}_{2}\rangle \mathbf{v}_{2} - \dots - \langle \mathbf{w}, \mathbf{v}_{n}\rangle \mathbf{v}_{n} 
 > $$
-> Here, $u$ is orthogonal to each $v_{1}, v_{2}, \dots,v_{n}$.
+> is orthogonal to each of $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots,\mathbf{v}_{n}$.
 
-## Gram-Schmidt Orthogonalization Process
+### Gram-Schmidt Orthogonalization Process
 
 >[!Theorem] Theorem
->Every finite dimensional vector space has an orthogonal basis.
+>Every finite dimensional inner product space has an orthonormal basis.
 
-Let $V$ be any finite dimensional vector space. Take a basis of $V$, say $\{ v_{1}, v_{2},\dots,v_{n} \}$. From this, we will construct an orthonormal set of $n$ vectors.
-
-Define 
-$$
-w_{1} = \frac{v_{1}}{\lVert v_{1} \rVert}
-$$
-as we want $\langle w_{1}, w_{1}\rangle = 1$.
-Using out corollary, we see that $u_{2}$ defined as
-$$
-u_{2} = v_{2} - \langle v_{2}, w_{1}\rangle w_{1}
-$$
-
-is orthogonal to $w_{1}$. Note that $u_{2}\neq 0$ as $v_{2}$ and $w_{1}$ are linearly independent. Now we can define
-$w_{2}$ as
-$$
-w_{2} = \frac{u_{2}}{\lVert u_{2} \rVert }
-$$Continuing this process, we get
-$$
-\begin{align}
-u_{1} &= v_{1}  & w_{1} = \hat{u}_{1}\\
-u_{2} &= v_{2} - \langle v_{2}, w_{1} \rangle v_{2}  & w_{2} = \hat{u}_{2}\\
-u_{3} &= v_{3} - \langle v_{3}, w_{1} \rangle v_{3} - \langle v_{3}, w_{2}\rangle w_{2}  & w_{3} = \hat{u}_{3}\\
- & \ \ \vdots  & \vdots \quad \ \ \\
-u_{k} &= v_{k}-\langle v_{k}, w_{1}\rangle w_{1} - \langle v_{k}, w_{2}\rangle w_{2} - \dots - \langle v_{k} , w_{k-1}\rangle v_{k} & w_{k} = \hat{u}_{k} 
-\end{align}
-$$
-where $\hat{v}$ represents the normalized vector $v$.
-The set of $\{ w_{i} \}$ will be an orthonormal basis as they are linearly independent and have degree $n$.
+> Let $V$ be any finite dimensional inner product space. Take a basis of $V$, say $\{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$. From this, we will construct an orthonormal set of $n$ vectors.
+> 
+> Let $\mathbf{u}_{1}\equiv \mathbf{v}_{1}$. Define
+> $$
+> \mathbf{w}_{1} \equiv \frac{\mathbf{u}_{1}}{\lVert \mathbf{u}_{1} \rVert},
+> $$
+> which gives us $\langle \mathbf{w}_{1}, \mathbf{w}_{1}\rangle = 1$. Now, $\mathbf{u}_{2}$ defined as
+> $$
+> \mathbf{u}_{2} \equiv \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1}\rangle \mathbf{w}_{1}
+> $$
+> is orthogonal to $\mathbf{w}_{1}$. Note that $\mathbf{u}_{2}\neq \mathbf{0}$ as $\mathbf{v}_{2}$ and $\mathbf{w}_{1}$ are linearly independent. Now we can define $\mathbf{w}_{2}$ as
+> $$
+> \mathbf{w}_{2} = \frac{\mathbf{u}_{2}}{\lVert \mathbf{u}_{2} \rVert }.
+> $$
+> Continuing this process, we get
+> $$
+> \begin{align}
+> \mathbf{u}_{1} &= \mathbf{v}_{1}  & \mathbf{w}_{1} = \hat{\mathbf{u}}_{1}\\
+> \mathbf{u}_{2} &= \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1} \rangle \mathbf{w}_{1}  & \mathbf{w}_{2} = \hat{\mathbf{u}}_{2}\\
+> \mathbf{u}_{3} &= \mathbf{v}_{3} - \langle \mathbf{v}_{3}, \mathbf{w}_{1} \rangle \mathbf{w}_{1} - \langle \mathbf{v}_{3}, \mathbf{w}_{2}\rangle \mathbf{w}_{2}  & \mathbf{w}_{3} = \hat{\mathbf{u}}_{3}\\
+>  & \ \ \vdots  & \vdots \quad \ \ \\
+> \mathbf{u}_{k} &= \mathbf{v}_{k}-\langle \mathbf{v}_{k}, \mathbf{w}_{1}\rangle \mathbf{w}_{1} - \langle \mathbf{v}_{k}, \mathbf{w}_{2}\rangle \mathbf{w}_{2} - \dots - \langle \mathbf{v}_{k} , \mathbf{w}_{k-1}\rangle \mathbf{w}_{k-1} & \mathbf{w}_{k} = \hat{\mathbf{u}}_{k} 
+> \end{align}
+> $$
+> where $\hat{\mathbf{u}}$ represents the normalized vector $\mathbf{u}/\lVert \mathbf{u} \rVert$. Thus, $\{ \mathbf{w}_{i} \}$ is an orthonormal set, and hence a linearly independent set. Since a linearly independent set of size $n=\dim V$ is a basis, $\{ \mathbf{w}_{i} \}$ is a basis of $V$. ❏

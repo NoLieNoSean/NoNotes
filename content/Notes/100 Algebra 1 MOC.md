@@ -55,7 +55,8 @@ Proper lecture notes start here.
 	- Diagonalization
 - [[Algebra1_L20]] ✅
 	- Dual spaces, canonical isomorphisms, introduction to inner product spaces
-- [[Algebra1_L21]]
+- [[Algebra1_L21]] ✅
+	- Inner product spaces, normed spaces, orthogonal vectors, Gram-Schmidt orthogonalization process
 - [[Algebra1_L22]]
 
 >[!Excalidraw]-

@@ -76,7 +76,7 @@ This is a vector space over $\mathbb{F}$ with point-wise addition and scalar mul
 > \implies & \beta_{k 1} = \beta_{k 2} = \dots = \beta_{k n} = 0
 > \end{align} 
 > $$
-> Therefore all $\beta_{ij} = 0$ ❏
+> Therefore all $\beta_{ij} = 0$. ❏
 
 >[!Theorem] Corollary
 > A basis for the set of all $m \times n$ matrices is given by matrices $\{ M_{ij} \}$ with $1$ in the $(i, j)^{th}$ position and $0$s everywhere else.
@@ -138,7 +138,7 @@ $$
   \implies& \mathbf{v}  & = 0 &\because \text{ if }\mathbf{v}\ne 0, \text{ then }\exists f\in \hat{V}\text{ s.t } f(\mathbf{v})\ne 0 
 \end{array}
 $$
-Now, from the rank nullity theorem, $\dim \mathrm{Im}\ \psi=\dim V$. Note that $\dim V= \dim\hat{V}=\dim \hat{\hat{V}}$. Hence, $\psi$ is surjective. Therefore, $\psi$ is bijective, i.e, an isomorphism.
+Now, from the [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]], $\dim \mathrm{Im}\ \psi=\dim V$. Note that $\dim V= \dim\hat{V}=\dim \hat{\hat{V}}$. Hence, $\psi$ is surjective. Therefore, $\psi$ is bijective, i.e, an isomorphism.
 $$
 \psi: V \overset{\sim}\longrightarrow \hat{\hat{V}}
 $$
@@ -151,28 +151,3 @@ $$
 $$
 \hat{V}\cong \hat{\hat{\hat{V}}}\cong \hat{\hat{\hat{\hat{\hat{V}}}}}\cong\dots.
 $$
----
-## Inner Product Spaces
-
-The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
-
->[!Definition]
-> A vector space $V$ over $\mathbb{F} = \mathbb{R}, \mathbb{C}$ is an inner product space if for any two $\mathbf{v}, \mathbf{w} \in V$, there is defined an element $\langle \mathbf{v},\mathbf{w} \rangle \in \mathbb{F}$ such that it satisfies the following properties:
->  - $\langle \mathbf{v},\mathbf{w} \rangle$ = $\overline{\langle \mathbf{w},\mathbf{v} \rangle}$;
->  - $\langle \mathbf{v},\mathbf{v} \rangle \geq 0$;
->  - $\langle \mathbf{v},\mathbf{v} \rangle = 0 \iff \mathbf{v} = 0$;
->  - $\langle \alpha \mathbf{u} + \beta \mathbf{v},\mathbf{w} \rangle$ = $\alpha\langle \mathbf{u},\mathbf{w} \rangle + \beta\langle \mathbf{v},\mathbf{w} \rangle$.
-
->[!error] Hermitian Dot Product
-> For vectors $\mathbf{v}, \mathbf{w} \in \mathbb{C}^n$, let $\mathbf{v} = (v_{1}, v_{2}, \dots, v_{n})$ and $\mathbf{w} =(w_{1}, w_{2}, \dots, w_{n})$. Define the inner product of $\mathbf{v}$ and $\mathbf{w}$ as
-> $$
-> \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}\overline{w}_{1} + v_{2}\overline{w}_{2} + \dots + v_{n}\overline{w}_{n}
-> $$
-> where $\overline z$ denotes the complex conjugate.
-> >[!info]- Motivation
-> >
-> >If we used the _naïve_ definition of the inner product, that is
-> > $$
-> > \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}w_{1} + v_{2}w_{2}+\dots+v_{n}w_{n}
-> > $$
-> > Then for the example of $(1, i) \in \mathbb{C}^2$, we have $\langle (1, i),(1, i)\rangle = 1\cdot 1 + i \cdot i = 0$. This is somewhat of a problem as we expect this to be positive. If we use the Hermitian dot product, we get a nicer answer: $\langle (1, i),(1, i)\rangle = 1\cdot \bar{1} + i \cdot \bar{i} = 2$. The Hermitian dot product in fact guarantees $\langle\mathbf{v}, \mathbf{v}\rangle\geq 0$ and $\langle\mathbf{v}, \mathbf{v}\rangle= 0 \iff \mathbf{v}=0$ along with the other two properties, as you can easily verify.  
