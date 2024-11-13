@@ -42,12 +42,12 @@ A linear map is a homomorphism of vector spaces.
 $\hom(V,W) \equiv \{ \text{all linear maps} \ T: V \to W \}$.
 ### Relation to Matrices
 
-For two vector spaces $V$ and $W$ with dimensions $p$ and $q$ and $T:v\to W$, $\mathcal{M}_{B_{V}, B_{W}}(T)$ is a $q \times p$ matrix, as we have [[Algebra1_L12#Matrices of linear maps in fdvsp|seen]]. As every $T$ has a single matrix for a fixed set of bases,  $\mathcal{M}_{B_{V}, B_{W}}(T)$ is a function. That is,
+For two vector spaces $V$ and $W$ with dimensions $p$ and $q$ and $T:V\to W$, $\mathcal{M}_{B_{V}, B_{W}}(T)$ is a $q \times p$ matrix, as we have [[Algebra1_L12#Matrices of linear maps in fdvsp|seen]]. As every $T$ has a single matrix for a fixed set of bases,  $\mathcal{M}_{B_{V}, B_{W}}$ is a function. That is,
 $$
-\mathcal{M}_{B_{V}, B_{W}}(T):\hom(V, W)\to \{ q\times p \text{ matrices} \}.
+\mathcal{M}_{B_{V}, B_{W}}:\hom(V, W)\to \{ q\times p \text{ matrices} \}.
 $$
-**Exercise:** Prove that $\mathcal{M}_{B_{V}, B_{W}}$ is an isomorphism of vector spaces.
-Thus, $\hom(V,W) \cong \{ q \times p \ \text{matrices} \}$. Therefore $\dim \hom(V,W) = p\times q$.
+**Exercise:** Prove that $\mathcal{M}_{B_{V}, B_{W}}$ is an isomorphism of vector spaces. [[Algebra1_L20#Recall|Solution here]]
+Thus, $\hom(V,W) \cong \{ q \times p \ \text{matrices} \}$. Therefore $\dim \hom(V,W) = pq$.
 
 ---
 ## Change of basis

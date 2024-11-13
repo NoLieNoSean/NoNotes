@@ -132,5 +132,3 @@ Given a vector $\mathbf{y}$ in the codomain $\mathbb{F}^{n}$, analyzing the augm
 
 >[!Theorem]
 >Any two bases in a vector space $V$ have the same number of vectors in them.
-
-I get to say "obviously" here, right?

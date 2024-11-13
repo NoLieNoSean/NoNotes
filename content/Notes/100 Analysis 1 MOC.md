@@ -84,6 +84,8 @@ Proper lecture notes start here.
 	- Integration of vector valued functions, rectifiable curves
 - [[Analysis1_L30]]
 - [[Analysis1_L31]]
+- [[Analysis1_L32]]
+- [[Analysis1_L33]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.

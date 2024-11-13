@@ -53,8 +53,10 @@ Proper lecture notes start here.
 	- Finding Eigenstuff of matrices and abstract operators, characteristic polynomial
 - [[Algebra1_L19]] ✅
 	- Diagonalization
-- [[Algebra1_L20]]
+- [[Algebra1_L20]] ✅
+	- Dual spaces, canonical isomorphisms, introduction to inner product spaces
 - [[Algebra1_L21]]
+- [[Algebra1_L22]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
