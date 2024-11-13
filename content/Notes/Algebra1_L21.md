@@ -54,7 +54,7 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > where $\overline z$ denotes the complex conjugate.
 > >[!info]- Motivation
 > >
-> >If we used the _naïve_ definition of the inner product, that is
+> >If we used the naïve definition of the inner product, that is
 > > $$
 > > \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}w_{1} + v_{2}w_{2}+\dots+v_{n}w_{n}
 > > $$
@@ -217,8 +217,8 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > $$
 > As $1 \leq k \leq n$, we have all $\beta_{i}= 0$. Hence $\{ v_{i} \}$ is linearly independent. ❏
 
- >[!Important] 
- > For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
+> [!Important] 
+> For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
 
 >[!Important]
 > For an orthonormal set $\{ \mathbf{v}_{i} \}$ in $V$ and any $\mathbf{w} \in V$,
@@ -232,6 +232,7 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 >[!Theorem] Theorem
 >Every finite dimensional inner product space has an orthonormal basis.
 
+> **Proof**
 > Let $V$ be any finite dimensional inner product space. Take a basis of $V$, say $\{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$. From this, we will construct an orthonormal set of $n$ vectors.
 > 
 > Let $\mathbf{u}_{1}\equiv \mathbf{v}_{1}$. Define
