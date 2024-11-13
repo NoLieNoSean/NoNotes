@@ -3,8 +3,8 @@ tags:
   - ALG1
   - Lecture
   - Processed
-date: 2024-11-10
-time: 17:58
+date: 2024-11-07
+time: 14:00
 ---
 ## Inner Product Spaces
 
