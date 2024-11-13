@@ -1,6 +1,4 @@
 # English Assignment 2
-> Vasudeva S Nanjangud
-
 
 ## Ozymandias 
 

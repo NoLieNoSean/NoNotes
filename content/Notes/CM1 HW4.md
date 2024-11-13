@@ -1,4 +1,3 @@
-`Vasudeva S Nanjangud`
 ## 4.23
 ### Part a
 ![[Pasted image 20240913212450.png|600]]

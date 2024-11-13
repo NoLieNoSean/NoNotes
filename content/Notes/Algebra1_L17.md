@@ -39,11 +39,12 @@ If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we 
 >Consider a rotation map $R_{\theta}$ on $\mathbb{R}^2$ that rotates a vector by an angle $\theta \neq n\pi, n\in \mathbb{Z}$.
 >In this case we can see geometrically that no eigenvectors exist.
 
+### Eigenvectors with distinct eigenvalues are linearly independent
+
 >[!Theorem]
->Eigenvectors with distinct eigenvalues are linearly independent.
+>Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{k}$ be *distinct* eigenvalues of $A$, and $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{k}$ be corresponding eigenvectors. Then, $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{k}$ are linearly independent.
 
 >**Proof**
->Suppose eigenvectors $\mathbf{v}_1,\mathbf{v}_2,...,\mathbf{v}_k$ of $A$ have distinct eigenvalues $\lambda_1,\lambda_2,..,\lambda_k$.
 >FTSOC, assume $\mathbf{v}_1,\mathbf{v}_2,...,\mathbf{v}_k$ are linearly dependent. Then, for some $j$, $\mathbf{v}_{j}$ is in the span of $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{j-1}$. Choose smallest such $j$. This ensures $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{j-1}$ are linearly independent. Since eigenvectors cannot be zero, $j> 1$. 
 > $$
 > \begin{align}

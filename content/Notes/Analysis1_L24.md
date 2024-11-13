@@ -95,7 +95,7 @@ Notice that plugging $g(x)=x$ gives us the mean value theorem.
 > $$
 > ❏
 
->[!Info]
+>[!Info] Remark
 >A simpler version of $h(x)$ that can be used instead:
 >$$
 >h(x)\equiv(f(b)-f(a))g(x)-(g(b)-g(a))f(x)
@@ -122,10 +122,10 @@ Not all functions can be derivatives. While every derivative certainly need not 
 Rudin, 5.12
 
 > [!Theorem]
-> Suppose $f$ is a real differentiable function on $[a, b]$ and suppose $f'(a)<\lambda<f'(b)$. Then there is a point $x\in(a, b)$ such that $f'(x)=\lambda$. 
+> Suppose $f$ is a real differentiable function on $[a, b]$ and suppose WLOG $f'(a)<\lambda<f'(b)$. Then there is a point $x\in(a, b)$ such that $f'(x)=\lambda$. 
 
 > **Proof**
-> Define $g(x)\equiv f(x)-\lambda t$. Notice that $g'(a)<0$ and $g'(b)>0$. This implies that there exist $t_{1}, t_{2}\in(a, b)$ such that $g(t_{1})<g(a)$ and $g(t_{2})<g(b)$. Thus, $g$ attains its minimum value at some $t\in(a, b)$. Since the derivative is zero at local maxima, we have $g'(t)=0$, which gives us $f'(t)=\lambda$. ❏
+> Define $g(t)\equiv f(t)-\lambda t$. Notice that $g'(a)<0$ and $g'(b)>0$. This implies that there exist $t_{1}, t_{2}\in(a, b)$ such that $g(t_{1})<g(a)$ and $g(t_{2})<g(b)$. Thus, $g$ attains its minimum value at some $x\in(a, b)$. Since the derivative is zero at local extrema, we have $g'(x)=0$, which gives us $f'(x)=\lambda$. ❏
 
 > [!Info]
 > How does $g'(a)<0$ imply the existence of $t_{1}\in(a, b)$ such that $g(t_{1})<g(a)$? Recall the definition of [[Analysis1_L10#Definition of limit of a function in R|limit of a function]]. We know that $\lim_{ x \to a }  \frac{{g(x)-g(a)}}{x-a}<0$. Choose $\epsilon$ to be $|g'(a)|$, and obtain the corresponding $\delta$. So, for all $x\in(a, a+\delta)$, $\frac{{g(x)-g(a)}}{x-a}\in(-2g'(a), 0)$, i.e, $g(x)<g(a)$. Note that we arrived at stronger statement than we required: $g'(a)<0$ not only implies the existence of $t_{1}\in(a, b)$, but also the existence of an entire interval $(a, a+\delta)$ satisfying the same condition.
@@ -133,4 +133,37 @@ Rudin, 5.12
 > [!Theorem] Corollary
 > If $f$ is differentiable on $[a, b]$, then $f'$ cannot have any [[Analysis1_L19#Discontinuous functions|discontinuities]] of the first kind on $[a, b]$.
 
+> **Proof**
+> We will prove more generally that any real function $f$ that satisfies the intermediate value property on $[a, b]$ cannot have discontinuities of the first kind. FTSOC, assume $f$ has such a discontinuity at $p\in[a, b]$. Let the left hand limit at $p$ be $L$, and the right hand limit at $p$ be $R$. Either $L\ne R$, or $L=R$ but $f(p)\ne L$. 
+> In the first case, let $d=|L-R|$. Let $\epsilon=d/2$. Find $\delta_{1}$ and $\delta_{2}$ such that $x\in(p-\delta_{1}, p)$ $\implies$ $f(x)\in(L-\epsilon, L+\epsilon)$ and $x\in(p, p+\delta_{2})$ $\implies$ $f(x)\in(R-\epsilon, R+\epsilon)$. Pick $t_{1}\in(p-\delta_{1}, p)$ and $t_{2}\in(p, p+\delta_{2})$. Now, $f$ satisfies the intermediate value property on $[t_{1}, t_{2}]$. WLOG, $f(t_{1})< \frac{{L+R}}{2}<f(t_{2})$. But, $\not\exists$ $t\in(t_{1}, t_{2})$ such that $f(t)=\frac{{L+R}}{2}$ (If it happens that $f(p)=\frac{{L+R}}{2}$, one can easily find another such point that $f(p)$ now cannot be equal to). $\Rightarrow \Leftarrow$ 
+> In the second case, let $d=|L-f(p)|$. Let $\epsilon=d/2$. Find $\delta$ such that $x\in(p-\delta, p+\delta)$ $\implies$ $f(x)\in(L-\epsilon, L+\epsilon)$. Choose $t_{1}\in(p-\delta, p)$. $f$ satisfies the intermediate value property on $[t_{1}, p]$. WLOG, $f(t_{1})<L+\epsilon<f(p)$. But, $\not\exists$ $t\in(t_{1}, p)$ such that $f(t)=L=\epsilon$. $\Rightarrow \Leftarrow$ ❏
+
 $f'$ may have discontinuities of the second kind, though.
+
+---
+## Epilogue
+
+**Find a differentiable function $f$ and a point $p$ such that $f'(p)>0$ but the function is not increasing in any interval containing $p$.**
+
+Consider 
+$$
+f(x) = \begin{cases}x + 2x^2\sin\left(\frac1x\right),& x\ne 0\\0& x = 0\;.\end{cases}
+$$
+It can be shown that $f$ is differentiable on $\mathbb{R}$ and $f'(0)=1$. The derivative when $x\ne 0$ is
+$$
+f'(x) = 1+4x\sin\left(\frac1x\right)−2\cos\left(\frac1x\right).
+$$
+Now, we know that
+$$
+\lim_{ x \to 0 } 4x\sin\left( \frac{1}{x} \right)=0.
+$$
+Consider any interval $[t_{1}, t_{2}]$ containing $0$. Let $\epsilon=1$. Find $\delta>0$ such that $(-\delta, \delta)\subset[t_{1}, t_{2}]$ and $x\in(-\delta, \delta)\implies 4x\sin\left( \frac{1}{x} \right)\in(-1, 1)$. Find an integer $n$ such that 
+$$
+\frac{1}{2n\pi}\in(-\delta, \delta).
+$$
+Thus, we have
+$$
+f'\left( \frac{1}{2n\pi} \right)<1+1-2=0.
+$$
+
+Thus, $f$ is not increasing on $[t_{1}, t_{2}]$.

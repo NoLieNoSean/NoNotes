@@ -1,6 +1,3 @@
-`Vasudeva S Nanjangud`
-
----
 ## 5.49
 By conserving total energy between the bob being released and the string being cut, we can compute the velocity of the bob when the string is cut.
 $$

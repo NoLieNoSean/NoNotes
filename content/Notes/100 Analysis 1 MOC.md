@@ -35,7 +35,6 @@ Reference Material:
 - [[Metric spaces]]
 ## Sequences and series
 - [[Sequences and convergence]]
-- [[Convergence of a series]]
 - [[Subsequences]]
 - [[Cauchy sequences]]
 - [[LimSup and LimInf]]
@@ -69,7 +68,7 @@ Proper lecture notes start here.
 	- Topological spaces, homeomorphisms, 4.17
 - [[Analysis1_L22]] ✅ <- *Quiz 2 syllabus ends here*
 	- Connected sets, Intermediate value theorem, connected components, allied theorems. 
-- [[Analysis1_L23]] ✅
+- [[Analysis1_L23]] ✅ Differentiation!
 	- Derivatives, Algebra of derivatives, chain rule
 - [[Analysis1_L24]] ✅
 	- Mean value theorems, properties of derivatives

@@ -9,7 +9,7 @@ For vector spaces $V$ and $W$ over a field $\mathbb{F}$, we define
 $$
 \hom_{\mathbb{F}}(V,W) = \{ \text{All linear transformations $V \to W$} \}
 $$
-This is a vector space over $\mathbb{F}$ with pointwise addition and scalar multiplication
+This is a vector space over $\mathbb{F}$ with point-wise addition and scalar multiplication
 
 > [!Theorem] Theorem
 > If $\dim_{\mathbb{F}}V=m$ and $\dim_{\mathbb{F}}W=n$ then $\dim_{\mathbb{F}}\hom_{\mathbb{F}}(V,W)=mn$
