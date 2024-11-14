@@ -5,7 +5,8 @@ tags:
 **TAs:** Harsh, Kaustav, Aleek
 
 # Notes
-[[Lagrangian Mechanics]]
+
+heh
 
 # Homework
 [[CM1 HW2]]
