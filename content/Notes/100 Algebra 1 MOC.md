@@ -58,6 +58,7 @@ Proper lecture notes start here.
 - [[Algebra1_L21]] ✅
 	- Inner product spaces, normed spaces, orthogonal vectors, Gram-Schmidt orthogonalization process
 - [[Algebra1_L22]]
+- [[Algebra1_L23]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.

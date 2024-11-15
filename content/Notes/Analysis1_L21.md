@@ -50,7 +50,7 @@ In a topological space, the structure is defined by $T$, the set of all open set
 
 Note: Since all metric spaces are topological spaces, homeomorphisms can exist between metric spaces. 
 
-### Continuous maps on compact sets are homeomorphisms
+### Continuous bijective maps on compact sets are homeomorphisms
 
 However, If the domain is compact, it is in fact true that a bijective continuous map is a homeomorphism. 
 

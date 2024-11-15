@@ -86,6 +86,8 @@ Proper lecture notes start here.
 - [[Analysis1_L31]]
 - [[Analysis1_L32]]
 - [[Analysis1_L33]]
+- [[Analysis1_L34]]
+- [[Analysis1_L35]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.

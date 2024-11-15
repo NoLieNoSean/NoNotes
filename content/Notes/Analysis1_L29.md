@@ -40,7 +40,7 @@ Rudin, 6.25
 > $$
 
 > **Proof**
-> $|\mathbf{f}|=\sqrt{ f_{1}^{2}+f_{2}^{2}+\dots f_{k}^{2} }$. By definition, each $f_{i}\in\mathscr{R}$. It [[Analysis1_L27#Compositions of integrable functions with continuous functions|follows]] that $f_{i}^{2}$ is integrable for each $i$, since $x^{2}$ is continuous (alternatively, the [[Analysis1_L28#Product of integrable functions is integrable|product of two integrable functions is integrable]]). Also, note that $x^{2}$ is bijective and continuous on $[0, \infty)$. Thus, $\sqrt{ x }$ is continuous on $[0, \infty)$. It [[Analysis1_L21#Continuous maps on compact sets are homeomorphisms|follows]] that $|\mathbf{f}|\in\mathscr{R}$.
+> $|\mathbf{f}|=\sqrt{ f_{1}^{2}+f_{2}^{2}+\dots f_{k}^{2} }$. By definition, each $f_{i}\in\mathscr{R}$. It [[Analysis1_L27#Compositions of integrable functions with continuous functions|follows]] that $f_{i}^{2}$ is integrable for each $i$, since $x^{2}$ is continuous (alternatively, the [[Analysis1_L28#Product of integrable functions is integrable|product of two integrable functions is integrable]]). Also, note that $x^{2}$ is bijective and continuous on $[0, \infty)$. Thus, $\sqrt{ x }$ is continuous on $[0, \infty)$. It [[Analysis1_L21#Continuous bijective maps on compact sets are homeomorphisms|follows]] that $|\mathbf{f}|\in\mathscr{R}$.
 > 
 > Now, let $\mathbf{y}\equiv \int_{a}^{b} \mathbf{f} \, dx=(y_{1}, y_{2}, \dots, y_{n})$. 
 > $$

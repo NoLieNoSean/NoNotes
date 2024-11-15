@@ -123,6 +123,7 @@ If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVer
 >$$
 >{\left\lvert  \int_{0}^1 f(t)g(t) \, dt \right\rvert}^2 \leq \left( \int_{0}^{1} \lvert f^2(t) \rvert  \, dt  \right)\left( \int_{0}^{1} \lvert g^2(t) \rvert  \, dt  \right)
 >$$
+>Average velocity over time has to be less than or equal to average velocity over distance, with equality only for constant velocity.
 
 Now, bow before the almighty...
 ### The Triangle Inequality
