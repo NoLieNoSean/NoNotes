@@ -174,7 +174,25 @@ Rudin, 6.12
 > 
 
 > **Proof**
-> Let $\epsilon>0$. Find partitions $P_{1}$ and $P_{2}$ which satisfy the criterion for integrability for $f_{1}$ and $f_{2}$ respectively for $\epsilon$. Let $P=P_{1}\cup P_{2}$ be their common refinement. Note that
+> Let $\epsilon>0$. Find partitions $P_{1}$ and $P_{2}$ which satisfy the criterion for integrability for $f_{1}$ and $f_{2}$ respectively for $\epsilon$. Let $P=P_{1}\cup P_{2}$ be their common refinement. 
+>
+> >[!important] Note
+> > For $f_{1}$ and $f_{2}$ defined on $X \subset \mathbb{R}$, we have
+> >$$
+> >\inf_{x \in X} f_{1}(x) + \inf_{x \in X} f_{1}(x) \leq \inf_{x \in X} (f_{1} + f_{2})(x)
+> >$$
+> >**Proof:**
+> > For any $x \in X$ we have
+> > $$
+> > \inf_{t \in X} f_{1}(t) \leq f_{1}(x) \qquad\qquad \inf_{t \in X} f_{2}(t) \leq f_{2}(x)
+> > $$
+> > Adding these we get
+> > $$
+> > \inf_{t \in X} f_{1}(t)+\inf_{t \in X} f_{2}(t) \leq (f_{1}+f_{2})(x)
+> > $$
+> > Taking the infimum over all $x$ on the RHS, we get our desired result.
+>
+> Using the above result we can write
 > $$
 > \begin{align}
 > U(P, f_{1}+f_{2}, \alpha)\leq U(P, f_{1}, \alpha)+U(P, f_{2}, \alpha), \\
