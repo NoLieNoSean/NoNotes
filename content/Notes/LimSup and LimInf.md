@@ -62,7 +62,7 @@ $$
 >
 >**Case 1:** $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) < \sup \{ x\ |\ p_{n_{k}}\to x \}$.
 >
->Let $\epsilon=\frac{{B-A}}{2}$. There exists $N$ such that for all $n\ge N$, $|a_{n}-A|<\epsilon$. Thus, for all $n\ge N$, $p_{n}\le A+\epsilon$. However, this implies no subsequence of $(p_{n})$ can converge to any point greater than $A+\epsilon$. Thus, $A+\epsilon$ is an upper bound for $\{ x\ |\ p_{n_{k}}\to x \}$. This contradicts our hypothesis that $B$ is the supremum of all subsequential limits.
+>Let $\epsilon=\frac{{B-A}}{2}$. There exists $N$ such that for all $n\ge N$, $|a_{n}-A|<\epsilon$. Thus, for all $n\ge N$, $p_{n}< A+\epsilon$. However, this implies no subsequence of $(p_{n})$ can converge to any point greater than $A+\epsilon$. Thus, $A+\epsilon$ is an upper bound for $\{ x\ |\ p_{n_{k}}\to x \}$. This contradicts our hypothesis that $B$ is the supremum of all subsequential limits.
 >
 >**Case 2:** $\lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) > \sup \{ x\ |\ p_{n_{k}}\to x \}$.
 >
@@ -94,6 +94,17 @@ These will be using Kulkarni's definitions.
 >\limsup _{ n \to \infty } s_{n} & \le \limsup _{ n \to \infty } t_{n}.
 >\end{align}
 >$$
+
+The above result is rather intuitive once you internalize what limsup and liminf mean:
+
+> [!Important]
+> Let $\lim\sup_{ n \to \infty }t_{n}=p$. Then,
+> - for all $q>p$, there exists $N$ such for all $n>N$, we have $t_{n}<q$. 
+> - for all $q<p$, for all $N$, there exists $n>N$ such that $t_{n}>q$.
+> 
+> Let $\lim\inf_{ n \to \infty }t_{n}=p$. Then,
+> - for all $q>p$, for all $N$, there exists $n>N$ such that $t_{n}<q$.
+> - for all $q<p$, there exists $N$ such for all $n>N$, we have $t_{n}>q$. 
 
 ### Limsup = Liminf iff the sequence converges
 

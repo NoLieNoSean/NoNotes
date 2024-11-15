@@ -82,7 +82,8 @@ Proper lecture notes start here.
 	- Fundamental theorem of calculus, integration by parts
 - [[Analysis1_L29]] ✅
 	- Integration of vector valued functions, rectifiable curves
-- [[Analysis1_L30]]
+- [[Analysis1_L30]] ✅
+	- Series, convergence tests, the number $e$.
 - [[Analysis1_L31]]
 - [[Analysis1_L32]]
 - [[Analysis1_L33]]
