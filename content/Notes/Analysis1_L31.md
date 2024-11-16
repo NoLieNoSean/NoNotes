@@ -7,17 +7,91 @@ time: 14:08
 ---
 ![[1730581827131.jpg]]
 
-$\sum |a_{k}|$ converges $\implies$ $\sum a_{k}$ converges.
+## Prologue
 
-We say $\sum a_{k}$ "converges absolutely" if $\sum |a_{k}|$ converges.
+> [!Definition]
+> We say $\sum a_{k}$ *converges absolutely* if $\sum |a_{k}|$ converges.
 
-for example, $1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots$ converges (by 3.43), but not absolutely.
-For a first principle proof, consider even and odd groupings of 2 consecutive terms. Noted that both individually converged. saw proof that both limits are the same. 
+For example, $\sum a_{k}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots$ converges (by 3.43), but not absolutely. For a first principle proof, consider even and odd groupings of 2 consecutive terms, and see that they individually converge (recall the [[Analysis1_L30#Comparison test|comparison test]]):
+$$
+\begin{align}
+s_{2n}= \sum_{k=1}^{2n} a_{k}  & =\left( 1-\frac{1}{2} \right)+\left( \frac{1}{3}-\frac{1}{4} \right)+\dots+\left( \frac{1}{2n-1}-\frac{1}{2n} \right) \\ 
+ & \leq \frac{1}{1^{2}} +\frac{1}{3^{2}}+\dots+\frac{1}{(2n-1)^{2}} \leftarrow \text{this converges} \\ \\
+
+s_{2n+1}= \sum_{k=1}^{2n+1} a_{k} & =1 -\left( \frac{1}{2}-\frac{1}{3} \right)-\dots-\left( \frac{1}{2n}-\frac{1}{2n+1} \right) \\
+ & \leq 1-\left( \frac{1}{3^{2}}+\frac{1}{5^{2}}+\dots+\frac{1}{(2n+1)^{2}} \right)\leftarrow \text{this converges} 
+\end{align}
+$$
+Let $(s_{2n})\to l_{1}$ and $(s_{2n+1})\to l_{2}$. Now, triangle inequality to the rescue:
+$$
+\begin{align}
+|l_{1}-l_{2}| & =|l_{1}-s_{2n}|+|s_{2n}-s_{2n+1}|+|s_{2n+1}-l_{2}| \\
+& =|l_{1}-s_{2n}|+ \frac{1}{2n+1}+|s_{2n+1}-l_{2}|
+
+\end{align}
+$$
+The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\equiv l$. So, the sequence $s_{1}, s_{2}, s_{3}, \dots$ must also converge to $l$ (which is $\ln 2$, btw).
+
+---
+## More convergence tests
 
 ### Root test
 
-for convergence of $\sum a_{n}$:
-$$
-\alpha\equiv \limsup _{n\to \infty}\sqrt[n]{ |a_{n}| }
-$$
+Rudin, 3.33
+
+> [!Theorem]
+> Given $\sum a_{n}$, define
+> $$
+> \alpha\equiv \limsup _{n\to \infty}\sqrt[n]{ |a_{n}| }.
+> $$
+> Then, 
+> 1. if $\alpha<1$, $\sum a_{n}$ converges;
+> 2. if $\alpha>1$, $\sum a_{n}$ diverges;
+> 3. if $\alpha=1$, the test is inconclusive.
+
+> **Proof**
+> If $\alpha<1$, pick $\alpha<\beta<1$. [[LimSup and LimInf#Important result|We know]] that there exists $N$ such that $n\geq N$ implies $\sqrt[n]{ |a_{n}| }<\beta$.
+> $$
+> \begin{align}
+> |a_{n}| & <\beta^{n} \\
+> |a_{n+1}| & <\beta^{n+1}  \\
+>  & \vdots
+> \end{align}
+> $$
+> So, for $n>N$, $|a_{n}|<\beta^{n}$. We know $\sum \beta^{n}$ converges. Hence, from the comparison test, $\sum |a_{n}|$ converges. This implies $\sum a_{n}$ converges. 
+> 
+> If $\alpha>1$, we know that for all $N$, there exists $n>N$ such that $\sqrt[n]{ |a_{n }| }>1$, i.e, $|a_{n}|>1$. So, $\lim_{ n \to \infty }|a_{n}|\ne 0$. 
+> 
+> To prove (3), consider series $\sum \frac{1}{n}$ and $\sum \frac{1}{n^{2}}$. Both have $\alpha=1$ (Rudin, 3.20), but the first diverges, while the second converges. ❏
+
+### Ratio test
+
+Rudin, 3.34
+
+> [!Theorem]
+> The series $\sum a_{n}$
+> 1. converges if $\limsup| \frac{a_{n+1}}{a_{n}}|<1$,
+> 2. diverges if $| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$, where $N_{0}$ is some fixed integer.
+
+> **Proof**
+> If (1) holds, in the same manner as in the previous proof, we can pick $\limsup| \frac{a_{n+1}}{a_{n}}|<\beta<1$ such that there exists $N$ such that for all $n> N$, $| \frac{a_{n+1}}{a_{n}}|<\beta$. In particular, 
+> $$
+> \begin{align}
+> |a_{N+1}| & <\beta |a_{N}| \\
+> |a_{N+2}| & <\beta |a_{N+1}|<\beta^{2} |a_{N}| \\
+>  & \vdots \\
+> |a_{N+p}| & <\beta^{p}|a_{N}|
+> \end{align}
+> $$
+> So, $|a_{n}|<(|a_{N}|\beta^{-N})\beta^{n}$ for all $n\geq N$. The result follows from the comparison test.
+> 
+> (2) prevents the limit of individual terms of the sequence from being 0. ❏ 
+
+> [!Warning] 
+> Note that $\limsup| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$ for some fixed $N_{0}$ does not guarantee divergence. A counter example can be easily constructed by interlacing two appropriate convergent series.
+
+Read examples at 3.35.
+
+---
+## Power series
 

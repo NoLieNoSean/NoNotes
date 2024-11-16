@@ -96,6 +96,7 @@ These will be using Kulkarni's definitions.
 >$$
 
 The above result is rather intuitive once you internalize what limsup and liminf mean:
+### Important result
 
 > [!Important]
 > Let $\lim\sup_{ n \to \infty }t_{n}=p$. Then,

@@ -159,7 +159,7 @@ Rudin, 6.6
 > $f:[a, b]\to \mathbb{R}\in\mathscr{R}(\alpha)$ $\iff$ $\forall\epsilon>0$ $\exists$ partition $P$ of $[a, b]$ such that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$. 
 
 > **Proof of $\Longleftarrow$**
-> If $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for some $P$, then $\inf U(P, f, \alpha)-\sup L(P, f, \alpha)<\epsilon$ for some $P$. Combined with 6.5, this gives us
+> If $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for some $P$, then $\inf U(P, f, \alpha)-\sup L(P, f, \alpha)<\epsilon$. Combined with 6.5, this gives us
 > $$
 > 0\leq \overline{\int_{a}^{b}} f \, d\alpha-\underline{\int_{a}^{b}} f \, d\alpha \leq \epsilon
 > $$

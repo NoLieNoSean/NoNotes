@@ -177,6 +177,7 @@ Rudin, 6.12
 > Let $\epsilon>0$. Find partitions $P_{1}$ and $P_{2}$ which satisfy the criterion for integrability for $f_{1}$ and $f_{2}$ respectively for $\epsilon$. Let $P=P_{1}\cup P_{2}$ be their common refinement. 
 >
 > >[!important] Note
+> >
 > > For $f_{1}$ and $f_{2}$ defined on $X \subset \mathbb{R}$, we have
 > >$$
 > >\inf_{x \in X} f_{1}(x) + \inf_{x \in X} f_{1}(x) \leq \inf_{x \in X} (f_{1} + f_{2})(x)
