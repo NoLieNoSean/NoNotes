@@ -57,7 +57,7 @@ Rudin, 6.20
 > $$
 
 > **Proof**
-> For $f\in\mathscr R$ to be true, $f$ must be bounded. Suppose $|f(t)|\leq M$ in $[a, b]$. We will prove that $f$ is [[Analysis1_L20#Uniform continuity|uniformly continuous]] (uniform continuity implies continuity). Let $a\leq x<y\leq b$. Let $\epsilon>0$. Then, if $y-x < \frac{\epsilon}{M}$, we have
+> For $f\in\mathscr R$ to be true, $f$ must be bounded. Suppose $|f(t)|\leq M$ in $[a, b]$. We will prove that $F$ is [[Analysis1_L20#Uniform continuity|uniformly continuous]] (uniform continuity implies continuity). Let $a\leq x<y\leq b$. Let $\epsilon>0$. Then, if $y-x < \frac{\epsilon}{M}$, we have
 > $$
 > |F(y)-F(x)|=\left|\int_{x}^{y} f(t) \, dt \right|<M(y-x)=\epsilon.
 > $$

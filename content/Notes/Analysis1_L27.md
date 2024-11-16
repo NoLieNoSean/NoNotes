@@ -46,8 +46,7 @@ Rudin, 6.8
 > $$
 > Thus, $f\in\mathscr R(\alpha)$. ❏
 
-Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attains these extrema in $[x_{i-1}, x_{i}]$ due to the [[Analysis1_L16#Extreme value theorem|extreme value theorem]]. 
-
+Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attains these extrema in $[x_{i-1}, x_{i}]$ due to the [[Analysis1_L16#Extreme value theorem|extreme value theorem]] (this doesn't impact the proof in any way; just an observation). 
 ### Monotonic functions
 
 >[!Theorem]
@@ -235,7 +234,7 @@ Rudin, 6.12
 > $$
 
 > **Proof**
-> Let $\epsilon>0$. Pick $P$ such $c\in P$ and $U(P, f, \alpha)_{[a, b]}-L(P, f, \alpha)_{[a, b]}<\epsilon$. The definitions of $U$ and $L$ tell us that this implies
+> Let $\epsilon>0$. Pick partition $P$ of $[a, b]$ such that $c\in P$ and $U(P, f, \alpha)_{[a, b]}-L(P, f, \alpha)_{[a, b]}<\epsilon$. The definitions of $U$ and $L$ tell us that this implies
 > $$
 > \begin{align}
 >  & (U(P, f, \alpha)_{[a, c]}-L(P, f, \alpha)_{[a, c]})+ \\
