@@ -29,7 +29,7 @@ leftovers:
 Note that a partition has finitely many points.
 ### Riemann integrals
 
-> [!Definition]
+> [!Definition] Rudin, 6.1
 > Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Corresponding to each partition $P$ of $[a, b]$, define
 > $$
 > \begin{array}{cc}
@@ -72,6 +72,8 @@ Since $L(P, f)$ is bounded above and $U(P, f)$ is bounded below, we can be sure 
 
 ### Riemann-Stieltjes integrals
 
+Rudin, 6.2
+
 Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Let $\alpha$ be a monotone increasing function on $[a, b]$. For a partition $P$ of $[a, b]$, define $\Delta\alpha_{i}\equiv\alpha(x_{i})-\alpha(x_{i-1})$. Define
 
 $$
@@ -104,14 +106,12 @@ Observe that
 ---
 ## Lower integrals, upper integrals and integrability
 
-> [!Definition]
+> [!Definition] Definition Rudin, 6.3
 > A partition $P^{*}$ is called a *refinement* of $P$ if $P^{*}\supset P$. Given two partitions $P_{1}$ and $P_{2}$, we say $P^{*}$ is their *common refinement* if $P^{*}=P_{1}\cup P_{2}$.
 
 ### Effect of refinement on upper and lower sums
 
-Rudin, 6.4
-
-> [!Theorem]
+> [!Theorem] Theorem Rudin, 6.4
 > $P^{*}$ is a refinement of $P$ $\implies$ $L(P, f, \alpha)\leq L(P^{*}, f, \alpha)$ and $U(P, f, \alpha)\geq U(P^{*}, f, \alpha)$. 
 
 > **Proof**
@@ -137,9 +137,7 @@ Rudin, 6.4
 
 ### Relation between upper and lower integrals
 
-Rudin, 6.5
-
-> [!Theorem]
+> [!Theorem] Theorem Rudin, 6.5
 > $$
 > \underline{\int_{a}^{b}} f \, d\alpha \leq \overline{\int_{a}^{b}} f \, d\alpha .
 > $$
@@ -153,9 +151,7 @@ Rudin, 6.5
 
 ### A criterion for integrability
 
-Rudin, 6.6
-
-> [!Theorem]
+> [!Theorem] Theorem Rudin, 6.6
 > $f:[a, b]\to \mathbb{R}\in\mathscr{R}(\alpha)$ $\iff$ $\forall\epsilon>0$ $\exists$ partition $P$ of $[a, b]$ such that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$. 
 
 > **Proof of $\Longleftarrow$**

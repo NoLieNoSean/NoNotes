@@ -146,6 +146,76 @@ Rudin, 6.11
 > [!Theorem]
 > Suppose $f\in\mathscr R(\alpha)$ on $[a, b]$, $m\leq f \leq M$, $\phi$ is continuous on $[m, M]$, and $h(x)=\phi(f(x))$ on $[a, b]$. Then, $h\in\mathscr{R}(\alpha)$ on $[a, b]$.  
 
+> **Proof**
+> Let $\epsilon>0$. We have to show that there exists a partition $P'$ of $[a, b]$ such that 
+> $$
+> \begin{align}
+> U(P', h, \alpha)-L(P', h, \alpha)<\epsilon \\ 
+> \end{align}
+> $$
+> Since $\phi$ is uniformly continuous on $[m, M]$, there exists $\delta>0$ such that $|s-t|<\delta$ $\implies$ $|\phi(s)-\phi(t)|<\boxed{\epsilon_{1}}$ for any $\epsilon_{1}>0$.  
+> 
+> Since $f\in\mathscr{R}$ on $[a, b]$, there exists a partition $P=\{ x_{1}, x_{2}, \dots, x_{n} \}$ such that 
+> $$
+> \begin{align}
+> U(P, f, \alpha)-L(P, f, \alpha)<\boxed{\epsilon_{2}}
+> \end{align}
+> $$
+> for any $\epsilon_{2}>0$ (we will choose $\epsilon_{1}$ and $\epsilon_{2}$ to fit our needs later). Now, 
+> $$
+> \begin{align}
+> U(P, f, \alpha)-L(P, f, \alpha)=\sum_{i=1}^{n} (M_{i}-m_{i})\Delta\alpha_{i}
+> \end{align}
+> $$
+> where $M_{i}=\sup f([x_{i-1}, x_{i}])$ and $m_{i}=\inf f([x_{i-1}, x_{i}])$. Let us try to use this partition $P$ for $h$ and see what comes out of it. 
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)=\sum_{i=1}^{n} (M_{i}'-m_{i}')\Delta\alpha_{i}
+> \end{align}
+> $$
+> where $M'_{i}=\sup h([x_{i-1}, x_{i}])$ and $m'_{i}=\inf h([x_{i-1}, x_{i}])$. Notice that if $M_{i}-m_{i}<\delta$ for some $i$, $|f(x)-f(y)|<\delta$ for all $x, y\in[x_{i-1}, x_{i}]$, so $|\phi(f(x))-\phi(f(y))|<\epsilon_{1}$, i.e, $M_{i}'-m_{i}'<\epsilon_{1}$. Of course, this is not going to happen for all $i$. Let the set $A$ contain all $i's$ for which $M_{i}-m_{i}<\delta$, and $B$ contain all $i$'s for which $M_{i}-m_{i}\geq \delta$. Then, 
+> $$
+> \begin{align}
+> \sum_{i=1}^{n} (M_{i}'-m_{i}')\Delta\alpha_{i} & =\sum_{i\in A}(M_{i}'-m_{i}')\Delta\alpha_{i}+\sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} \\ 
+>  & < \epsilon_{1}(\alpha(b)-\alpha(a))+\sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} \\ 
+> \end{align}
+> $$
+> Halfway there! Since we cannot make $M_{i}-m_{i}$ arbitrarily small for $i\in B$, let us instead focus on $\sum_{i\in B}\Delta\alpha_{i}$. Since $\delta\leq M_{i}-m_{i}$, we have
+> $$
+> \delta \sum_{i\in B}\Delta\alpha_{i}\leq \sum_{i\in B}(M_{i}-m_{i})\Delta\alpha_{i}<\epsilon_{2} 
+> 
+> $$
+> $$
+> \implies \sum_{i\in B}\Delta\alpha_{i}< \frac{\epsilon_{2}}{\delta}
+> $$
+> $\phi$, being continuous on a closed interval, is bounded. Thus, we can put $M'_{i}-m_{i}'<K$ for all $i$ for some positive constant $K$. This gets us 
+> $$
+> \begin{align}
+> \sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} <\frac{K\epsilon_{2}}{\delta}
+> \end{align}
+> $$
+> Thus, we have
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a))+ \frac{K\epsilon_{2}}{\delta}
+> \end{align}
+> $$
+> In hindsight, choosing $\epsilon_{2}=\delta^{2}$ would have been advantageous. Say we had done that. This gets us
+> $$
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a))+ K\delta
+> $$
+> In hindsight, choosing $\delta$ such that $\delta<\epsilon_{1}$ would have been great. Let's pretend we did that.
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a)+K)
+> \end{align}
+> $$
+> In hindsight, choosing $\epsilon_{1}=\epsilon/(\alpha(a)-\alpha(b)+K)$ would have been super smart. Say we were super smart. This finally gets us
+> $$
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon
+> $$
+> 🎉🎉🎉 ❏
+
 >[!Info]
 >The most general characterization of integrability goes like $f\in\mathscr R$ iff it is almost everywhere continuous.
 
