@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-10-30
 time: 14:08
 ---
@@ -95,3 +96,25 @@ Read examples at 3.35.
 ---
 ## Power series
 
+> [!Definition]
+> The *power series* of a sequence $(c_{n})$ of complex numbers is the series
+> $$
+> \sum_{n=0}^{\infty}c_{n}z^{n}.
+> $$
+
+> [!Theorem]
+> Given the power series $\sum c_{n}z^{n}$, define
+> $$
+> \alpha\equiv\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}, \ \ \ \ R\equiv \frac{1}{\alpha}
+> $$
+> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$. and diverges if $|z|>R$.
+
+> **Proof**
+> Use the root test:
+> $$
+> \begin{align}
+> \limsup_{ n \to \infty } \sqrt[n]{|c_{n}z^{n}| }=|z|\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}= \frac{|z|}{R}
+> \end{align}
+> $$
+
+$R$ is called the *convergence radius* of $\sum c_{n}z^{n}$.

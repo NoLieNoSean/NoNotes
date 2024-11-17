@@ -84,7 +84,8 @@ Proper lecture notes start here.
 	- Integration of vector valued functions, rectifiable curves
 - [[Analysis1_L30]] ✅
 	- Series, convergence tests, the number $e$.
-- [[Analysis1_L31]]
+- [[Analysis1_L31]] ✅
+	- Root test, ratio test, power series
 - [[Analysis1_L32]]
 - [[Analysis1_L33]]
 - [[Analysis1_L34]]
