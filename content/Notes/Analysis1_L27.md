@@ -155,7 +155,7 @@ Rudin, 6.11
 > $$
 > Since $\phi$ is uniformly continuous on $[m, M]$, there exists $\delta>0$ such that $|s-t|<\delta$ $\implies$ $|\phi(s)-\phi(t)|<\boxed{\epsilon_{1}}$ for any $\epsilon_{1}>0$.  
 > 
-> Since $f\in\mathscr{R}$ on $[a, b]$, there exists a partition $P=\{ x_{1}, x_{2}, \dots, x_{n} \}$ such that 
+> Since $f\in\mathscr{R}$ on $[a, b]$, there exists a partition $P=\{x_{0}, x_{1}, x_{2}, \dots, x_{n} \}$ such that 
 > $$
 > \begin{align}
 > U(P, f, \alpha)-L(P, f, \alpha)<\boxed{\epsilon_{2}}

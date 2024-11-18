@@ -115,9 +115,9 @@ Rudin, 5.11
 > For (1), Let $x_{2}, x_{1}\in(a, b)$, $x_{1}<x_{2}$. Then, $f(x_{2})-f(x_{1})=(x_{2}-x_{1})f'(x)$ for some $x\in(x_{1}, x_{2})$. Thus, $f(x_{2})-f(x_{1})\geq 0$. Similar proofs for (2) and (3). ❏
 
 ---
-## Properties of derivatives
+## Darboux's Theorem
 
-Not all functions can be derivatives. While every derivative certainly need not be continuous (for example, $x^{2}\sin\left( \frac{1}{x} \right)$ is differentiable at every point in $\mathbb{R}$, but its derivative is not continuous at $0$), every derivative satisfies a property of continuous functions, namely, the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]].
+Not all functions can be derivatives. While every derivative certainly need not be continuous (for example, $x^{2}\sin\left( \frac{1}{x} \right)$ is differentiable at every point in $\mathbb{R}$, but its derivative is not continuous at $0$), every derivative shares a property with continuous functions, namely, the intermediate value property.
 
 Rudin, 5.12
 
