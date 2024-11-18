@@ -86,7 +86,7 @@ Rudin, 6.9
 > \forall n\in \mathbb{N}, \forall {0}\leq i\leq n, \exists x_{i}\in[a, b] \text{ such that } \alpha(x_{i})=\alpha(a)+ \frac{i}{n}(\alpha(b)-\alpha(a)).
 > $$
 > 
-> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a very specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. We can ensure this by requiring $\alpha$ to be continuous (If a monotone function has IVP, then it must be continuous), as done in the hypothesis of this theorem. So, we can proceed to write
+> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. We can ensure this by requiring $\alpha$ to be continuous (If a monotone function has IVP, then it must be continuous), as done in the hypothesis of this theorem. So, we can proceed to write
 > $$
 > U(P, f, \alpha)-L(P, f, \alpha )=(f(x_{n})-f(x_{0})) \frac{{\alpha(b)-\alpha(a)}}{n},
 > $$
