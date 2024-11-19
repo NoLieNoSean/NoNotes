@@ -57,7 +57,7 @@ Proper lecture notes start here.
 	- Dual spaces, canonical isomorphisms, introduction to inner product spaces
 - [[Algebra1_L21]] ✅
 	- Inner product spaces, normed spaces, orthogonal vectors, Gram-Schmidt orthogonalization process
-- [[Algebra1_L22]]
+- [[Algebra1_L22]] <- **Do not expect the following notes to appear before the endsem exam.**
 - [[Algebra1_L23]]
 
 >[!Excalidraw]-
