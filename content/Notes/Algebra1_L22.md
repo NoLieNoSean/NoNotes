@@ -121,3 +121,9 @@ $$
 \Pi(\mathbf{v})=\sum_{i=1}^{k} \langle \mathbf{w}_{i}, \mathbf{v} \rangle \mathbf{w}_{i}.
 $$
 Note that $\mathbf{v}-\Pi(\mathbf{v})\in W^{\perp}$. If $W$ happened to be $V$, then $W^{\perp}=\{ 0 \}$. So, $\mathbf{v}=\Pi(\mathbf{v})$.
+
+---
+## Bilinear forms
+
+
+

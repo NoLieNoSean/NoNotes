@@ -7,7 +7,7 @@ tags:
 **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
 
 Reference Material:
-- Principles of Mathematical Analysis, Rudin
+- Principles of Mathematical Analysis, Rudin (Primary)
 - Understanding Analysis, Abbot
 - Analysis 1, Tao
 - Introduction to Real Analysis, Bartle & Sherbert
@@ -60,7 +60,7 @@ Proper lecture notes start here.
 	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
-- [[Analysis1_L19]] ✅ <- *Mid term syllabus ends here.*
+- [[Analysis1_L19]] ✅ <- *Midsem syllabus ends here*
 	- Infinite limits and limits at infinity, discontinuities, monotonic functions. 4.25, 4.26, 4.27, 4.28, 4.29, 4.30, 4.32, 4.33, 4.34
 - [[Analysis1_L20]] ✅
 	- Uniform continuity
@@ -80,19 +80,19 @@ Proper lecture notes start here.
 	- 6.8 through 6.12
 - [[Analysis1_L28]] ✅
 	- Fundamental theorem of calculus, integration by parts
-- [[Analysis1_L29]] ✅
+- [[Analysis1_L29]] ✅ <- *Midsem 2 syllabus ends here*
 	- Integration of vector valued functions, rectifiable curves
-- [[Analysis1_L30]] ✅
-	- Series, convergence tests, the number $e$.
+- [[Analysis1_L30]] ✅ 
+	- Series, convergence tests, the number $e$
 - [[Analysis1_L31]] ✅
-	- Root test, ratio test, power series
-- [[Analysis1_L32]]
+	- Root test, ratio   test, power series
+- [[Analysis1_L32]] <- **Do not expect the following notes to appear before the endsem exam.**
 - [[Analysis1_L33]]
 - [[Analysis1_L34]]
 - [[Analysis1_L35]]
 
 >[!Excalidraw]-
->These notes are either in excalidraw (which is not rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
+>These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Analysis1_L1]] ✅
 >- [[Analysis1_L2]] ✅
 >- [[Analysis1_L3]] ✅
@@ -109,6 +109,7 @@ Proper lecture notes start here.
 - [[Analysis1_HW3.pdf]]
 - [[Analysis1_HW4.pdf]]
 - [[Analysis1_HW5.pdf]]
+- [[Analysis1_HW6_P1.pdf]], [[Analysis1_HW6_P2.pdf]]
 # Tutorials
 - [[Analysis1_T2]]
 - [[Analysis1_T3]]

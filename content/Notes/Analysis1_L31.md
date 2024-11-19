@@ -96,18 +96,18 @@ Read examples at 3.35.
 ---
 ## Power series
 
-> [!Definition]
+> [!Definition] Definition (Rudin, 3.38)
 > The *power series* of a sequence $(c_{n})$ of complex numbers is the series
 > $$
 > \sum_{n=0}^{\infty}c_{n}z^{n}.
 > $$
 
-> [!Theorem]
+> [!Theorem] Theorem (Rudin, 3.39)
 > Given the power series $\sum c_{n}z^{n}$, define
 > $$
 > \alpha\equiv\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}, \ \ \ \ R\equiv \frac{1}{\alpha}
 > $$
-> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$. and diverges if $|z|>R$.
+> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$ and diverges if $|z|>R$.
 
 > **Proof**
 > Use the root test:
@@ -118,3 +118,9 @@ Read examples at 3.35.
 > $$
 
 $R$ is called the *convergence radius* of $\sum c_{n}z^{n}$.
+
+%% [!Example] Examples
+1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.
+2. The series $\sum \frac{z^{n}}{n^{n}}$ has $R=\infty$, i.e, it converges for every $z$. 
+3. The above theorem is not easily applicable on the series $\sum \frac{z^{n}}{n!}$. 
+ %%
