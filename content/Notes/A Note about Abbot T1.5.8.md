@@ -9,7 +9,7 @@ In Abbot, two versions of the theorem are supplied:
 >If $A_{1}, A_{2},\dots A_{m}$ are each countable sets, then the union $A_{1}\cup A_{2}\cup\dots\cup A_{m}$ is countable.
 
 >[!Theorem]
->If $A_{n}$ is a countable set for each $n\in \mathbb{N}$, then $\bigcup_{n=1}^{\infty}A_{n}$ is countable.
+>If $A_{n}$ is a countable set for each $n\in \mathbb{N}$, then $\displaystyle\bigcup_{n=1}^{\infty}A_{n}$ is countable.
 
 Only the second one is mentioned [[Finite, countable, and uncountable sets#Combining countable sets|here]]. 
 

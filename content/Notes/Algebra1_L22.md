@@ -12,11 +12,11 @@ time: 14:00
 Recall that If $V$ is a finite dimensional inner product space, it has an orthonormal set as a basis. 
 
 > [!Example]
-> Let $V$ be the set of all polynomials with real coefficients and degree $\leq 2$. We defined the inner product on $V$ by
+> Let $V$ be the set of all polynomials with real coefficients and degree $\leq 2$. Define
 > $$
-> \langle f, g \rangle =\int_{-1}^{1} f(t)g(t) \, dt.
+> \langle f, g \rangle =\int_{-1}^{1} f(t)g(t) \, dt
 > $$
-> Now, we know that $\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3} \}\equiv\{ 1, t, t^{2} \}$ is a basis of $V$. Let us use the [[Algebra1_L21#Gram-Schmidt Orthogonalization Process|Gram-Schmidt Orthogonalization Process]] to construct an orthonormal basis. 
+> The standard basis of $V$ is $( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3} )\equiv( 1, t, t^{2})$. Applying the [[Algebra1_L21#Gram-Schmidt Orthogonalization Process|Gram-Schmidt Orthogonalization Process]], we get 
 > $$
 > \begin{align} \\
 > \mathbf{w}_{1} & = \frac{\mathbf{v}_{1}}{\lVert \mathbf{v}_{1} \rVert}= \frac{1}{\sqrt{ \int_{-1}^{1}  \, dt  }}=\frac{1}{\sqrt{ 2 }}. \\
@@ -39,22 +39,25 @@ Recall that If $V$ is a finite dimensional inner product space, it has an orthon
 ### The Orthogonal Decomposition Theorem
 
 >[!Theorem]
->If $V$ is a finite dimensional inner product space and $W$ is a subspace of $V$, then $V=W\oplus W^{\perp}$.
+>If $V$ is a finite dimensional inner product space and $W$ is a subspace of $V$, then
+>$$
+>V=W\oplus W^{\perp}
+>$$
 
-> **Proof 1**
+> **Proof #1**
 > Note that $W$ itself is an inner product space. So, $W$ has an orthonormal basis $\mathbf{w}_{1}, \mathbf{w}_{2}, \dots, \mathbf{w}_{r}$. For any $\mathbf{v}\in V$, define
 > $$
 > \begin{align}
 > \mathbf{v}_{0}\equiv\mathbf{v} -\sum_{i=1}^{r} \langle \mathbf{v}, \mathbf{w}_{i} \rangle \mathbf{w}_{i}. 
 > \end{align}
 > $$
-> Notice that $\mathbf{v}_{0}$ is orthogonal to each $\mathbf{w}_{i}$. Hence, $\mathbf{v}_{0}$ is orthogonal to $W$, i.e, $\mathbf{v}_{0}\in W^{\perp}$. We can now write
+> Notice that $\mathbf{v}_{0}$ is orthogonal to each $\mathbf{w}_{i}$. Hence, $\mathbf{v}_{0}$ is orthogonal to $W$, i.e., $\mathbf{v}_{0}\in W^{\perp}$. We can now write
 > $$
 > \mathbf{v}=\underbrace{ \mathbf{v}_{0} }_{ \in W^{\perp} } +\underbrace{ \sum_{i=1}^{r} \langle \mathbf{v}, \mathbf{w}_{i} \rangle \mathbf{w}_{i} }_{ \in W }. 
 > $$
 > So, $\mathbf{v}\in V$ $\implies$ $\mathbf{v}\in W\oplus W^{\perp}$. We have already shown that $W\cap W^{\perp}=\emptyset$, so this decomposition is unique. Thus, $V=W\oplus W^{\perp}$. ❏ 
 
-> **Proof 2**
+> **Proof #2**
 > Assume $\mathbb{F}=\mathbb{R}$ for simplicity. Let $\mathbf{v}\in V$. 
 > 
 > > [!Theorem] Claim 1
@@ -121,3 +124,9 @@ $$
 \Pi(\mathbf{v})=\sum_{i=1}^{k} \langle \mathbf{w}_{i}, \mathbf{v} \rangle \mathbf{w}_{i}.
 $$
 Note that $\mathbf{v}-\Pi(\mathbf{v})\in W^{\perp}$. If $W$ happened to be $V$, then $W^{\perp}=\{ 0 \}$. So, $\mathbf{v}=\Pi(\mathbf{v})$.
+
+---
+## Bilinear Forms
+
+Let $v$ be a Real Vector Space.
+A Bilinear form on $V$ is a real valued function $V \times V \to \mathbb{R}$ where $(v,w) \mapsto \langle v, w\rangle$.
