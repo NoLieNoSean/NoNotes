@@ -46,8 +46,7 @@ Rudin, 6.8
 > $$
 > Thus, $f\in\mathscr R(\alpha)$. ❏
 
-Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attains these extrema in $[x_{i-1}, x_{i}]$ due to the [[Analysis1_L16#Extreme value theorem|extreme value theorem]]. 
-
+Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attains these extrema in $[x_{i-1}, x_{i}]$ due to the [[Analysis1_L16#Extreme value theorem|extreme value theorem]] (this doesn't impact the proof in any way; just an observation). 
 ### Monotonic functions
 
 >[!Theorem]
@@ -87,7 +86,7 @@ Rudin, 6.9
 > \forall n\in \mathbb{N}, \forall {0}\leq i\leq n, \exists x_{i}\in[a, b] \text{ such that } \alpha(x_{i})=\alpha(a)+ \frac{i}{n}(\alpha(b)-\alpha(a)).
 > $$
 > 
-> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a very specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. We can ensure this by requiring $\alpha$ to be continuous (If a monotone function has IVP, then it must be continuous), as done in the hypothesis of this theorem. So, we can proceed to write
+> This is similar to the conclusion of the [[Analysis1_L22#Intermediate value theorem|intermediate value theorem]], but there is a key difference in that we only require $x_{i}$ to exist for a specific subset of rational numbers, and not all numbers in $[\alpha(a), \alpha(b)]$. However, the intermediate value theorem holding would suffice. We can ensure this by requiring $\alpha$ to be continuous (If a monotone function has IVP, then it must be continuous), as done in the hypothesis of this theorem. So, we can proceed to write
 > $$
 > U(P, f, \alpha)-L(P, f, \alpha )=(f(x_{n})-f(x_{0})) \frac{{\alpha(b)-\alpha(a)}}{n},
 > $$
@@ -147,6 +146,76 @@ Rudin, 6.11
 > [!Theorem]
 > Suppose $f\in\mathscr R(\alpha)$ on $[a, b]$, $m\leq f \leq M$, $\phi$ is continuous on $[m, M]$, and $h(x)=\phi(f(x))$ on $[a, b]$. Then, $h\in\mathscr{R}(\alpha)$ on $[a, b]$.  
 
+> **Proof**
+> Let $\epsilon>0$. We have to show that there exists a partition $P'$ of $[a, b]$ such that 
+> $$
+> \begin{align}
+> U(P', h, \alpha)-L(P', h, \alpha)<\epsilon \\ 
+> \end{align}
+> $$
+> Since $\phi$ is uniformly continuous on $[m, M]$, there exists $\delta>0$ such that $|s-t|<\delta$ $\implies$ $|\phi(s)-\phi(t)|<\boxed{\epsilon_{1}}$ for any $\epsilon_{1}>0$.  
+> 
+> Since $f\in\mathscr{R}$ on $[a, b]$, there exists a partition $P=\{x_{0}, x_{1}, x_{2}, \dots, x_{n} \}$ such that 
+> $$
+> \begin{align}
+> U(P, f, \alpha)-L(P, f, \alpha)<\boxed{\epsilon_{2}}
+> \end{align}
+> $$
+> for any $\epsilon_{2}>0$ (we will choose $\epsilon_{1}$ and $\epsilon_{2}$ to fit our needs later). Now, 
+> $$
+> \begin{align}
+> U(P, f, \alpha)-L(P, f, \alpha)=\sum_{i=1}^{n} (M_{i}-m_{i})\Delta\alpha_{i}
+> \end{align}
+> $$
+> where $M_{i}=\sup f([x_{i-1}, x_{i}])$ and $m_{i}=\inf f([x_{i-1}, x_{i}])$. Let us try to use this partition $P$ for $h$ and see what comes out of it. 
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)=\sum_{i=1}^{n} (M_{i}'-m_{i}')\Delta\alpha_{i}
+> \end{align}
+> $$
+> where $M'_{i}=\sup h([x_{i-1}, x_{i}])$ and $m'_{i}=\inf h([x_{i-1}, x_{i}])$. Notice that if $M_{i}-m_{i}<\delta$ for some $i$, $|f(x)-f(y)|<\delta$ for all $x, y\in[x_{i-1}, x_{i}]$, so $|\phi(f(x))-\phi(f(y))|<\epsilon_{1}$, i.e, $M_{i}'-m_{i}'<\epsilon_{1}$. Of course, this is not going to happen for all $i$. Let the set $A$ contain all $i's$ for which $M_{i}-m_{i}<\delta$, and $B$ contain all $i$'s for which $M_{i}-m_{i}\geq \delta$. Then, 
+> $$
+> \begin{align}
+> \sum_{i=1}^{n} (M_{i}'-m_{i}')\Delta\alpha_{i} & =\sum_{i\in A}(M_{i}'-m_{i}')\Delta\alpha_{i}+\sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} \\ 
+>  & < \epsilon_{1}(\alpha(b)-\alpha(a))+\sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} \\ 
+> \end{align}
+> $$
+> Halfway there! Since we cannot make $M_{i}-m_{i}$ arbitrarily small for $i\in B$, let us instead focus on $\sum_{i\in B}\Delta\alpha_{i}$. Since $\delta\leq M_{i}-m_{i}$, we have
+> $$
+> \delta \sum_{i\in B}\Delta\alpha_{i}\leq \sum_{i\in B}(M_{i}-m_{i})\Delta\alpha_{i}<\epsilon_{2} 
+> 
+> $$
+> $$
+> \implies \sum_{i\in B}\Delta\alpha_{i}< \frac{\epsilon_{2}}{\delta}
+> $$
+> $\phi$, being continuous on a closed interval, is bounded. Thus, we can put $M'_{i}-m_{i}'<K$ for all $i$ for some positive constant $K$. This gets us 
+> $$
+> \begin{align}
+> \sum_{i\in B}(M_{i}'-m_{i}')\Delta\alpha_{i} <\frac{K\epsilon_{2}}{\delta}
+> \end{align}
+> $$
+> Thus, we have
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a))+ \frac{K\epsilon_{2}}{\delta}
+> \end{align}
+> $$
+> In hindsight, choosing $\epsilon_{2}=\delta^{2}$ would have been advantageous. Say we had done that. This gets us
+> $$
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a))+ K\delta
+> $$
+> In hindsight, choosing $\delta$ such that $\delta<\epsilon_{1}$ would have been great. Let's pretend we did that.
+> $$
+> \begin{align}
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon_{1}(\alpha(b)-\alpha(a)+K)
+> \end{align}
+> $$
+> In hindsight, choosing $\epsilon_{1}=\epsilon/(\alpha(a)-\alpha(b)+K)$ would have been super smart. Say we were super smart. This finally gets us
+> $$
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon
+> $$
+> 🎉🎉🎉 ❏
+
 >[!Info]
 >The most general characterization of integrability goes like $f\in\mathscr R$ iff it is almost everywhere continuous.
 
@@ -177,6 +246,7 @@ Rudin, 6.12
 > Let $\epsilon>0$. Find partitions $P_{1}$ and $P_{2}$ which satisfy the criterion for integrability for $f_{1}$ and $f_{2}$ respectively for $\epsilon$. Let $P=P_{1}\cup P_{2}$ be their common refinement. 
 >
 > >[!important] Note
+> >
 > > For $f_{1}$ and $f_{2}$ defined on $X \subset \mathbb{R}$, we have
 > >$$
 > >\inf_{x \in X} f_{1}(x) + \inf_{x \in X} f_{1}(x) \leq \inf_{x \in X} (f_{1} + f_{2})(x)
@@ -234,7 +304,7 @@ Rudin, 6.12
 > $$
 
 > **Proof**
-> Let $\epsilon>0$. Pick $P$ such $c\in P$ and $U(P, f, \alpha)_{[a, b]}-L(P, f, \alpha)_{[a, b]}<\epsilon$. The definitions of $U$ and $L$ tell us that this implies
+> Let $\epsilon>0$. Pick partition $P$ of $[a, b]$ such that $c\in P$ and $U(P, f, \alpha)_{[a, b]}-L(P, f, \alpha)_{[a, b]}<\epsilon$. The definitions of $U$ and $L$ tell us that this implies
 > $$
 > \begin{align}
 >  & (U(P, f, \alpha)_{[a, c]}-L(P, f, \alpha)_{[a, c]})+ \\

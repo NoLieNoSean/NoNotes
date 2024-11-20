@@ -55,7 +55,7 @@ Rudin, 6.25
 > $$
 > Thus, we have
 > $$
-> |\mathbf{y}|^{2}=\int_{a}^{b} \mathbf{y}\cdot \mathbf{f} \, d \leq \int_{a}^{b} |\mathbf{y}||\mathbf{f}| \, dx  = |\mathbf{y}|\int_{a}^{b} |\mathbf{f}| \, dx .
+> |\mathbf{y}|^{2}=\int_{a}^{b} \mathbf{y}\cdot \mathbf{f} \, dx \leq \int_{a}^{b} |\mathbf{y}||\mathbf{f}| \, dx  = |\mathbf{y}|\int_{a}^{b} |\mathbf{f}| \, dx .
 > $$
 > If $|\mathbf{y}|=0$, the result is trivial. If $|\mathbf{y}|\ne 0$, divide both sides by $|\mathbf{y}|$ to obtain the result. ❏
 

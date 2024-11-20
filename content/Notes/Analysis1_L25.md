@@ -67,9 +67,9 @@ Rudin, 5.15
 > $$
 > Define 
 > $$
-> g(x+k)\equiv r_{m-1}(k)k^{m-1}-Mk^{m}
+> g(x+k)\equiv r_{m-1}(k)k^{m-1}-Mk^{m},
 > $$
-> $x+k\in[a, b]$. Note that $g(x)=0$, and $g(x+h)=0$. Also note that $g^{(1)}(x), g^{(2)}(x),\dots, g^{(m-1)}(x)$ are zero.
+> where $x+k\in[a, b]$. Note that $g(x)=0$, and $g(x+h)=0$. Also note that $g^{(1)}(x), g^{(2)}(x),\dots, g^{(m-1)}(x)$ are zero.
 > 
 > On differentiating both sides $m$ times with respect to $k$ we get
 > $$
