@@ -46,7 +46,7 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > *Method 2: (~~used only by the utterly deranged~~)*
 > Consider the linear map $T: V \to \mathbb{F}$ where $\mathbf{u} \mapsto \langle \mathbf{u}, \mathbf{v} \rangle$ for a fixed $\mathbf{v} \in V$. We know that $T(0) = 0$. Hence $\langle 0, \mathbf{u}\rangle = 0$. As $\mathbf{v}$ was arbitrary, the proposition holds for any $\mathbf{v} \in V$. ❏
 
->[!Example] Hermitian Dot Product
+>[!Example] Hermitian Dot Product / Standard Hermitian form
 > For vectors $\mathbf{v}, \mathbf{w} \in \mathbb{C}^n$, let $\mathbf{v} = (v_{1}, v_{2}, \dots, v_{n})$ and $\mathbf{w} =(w_{1}, w_{2}, \dots, w_{n})$. The inner product of $\mathbf{v}$ and $\mathbf{w}$ is defined as
 > $$
 > \langle \mathbf{v}, \mathbf{w} \rangle = v_{1}\overline{w}_{1} + v_{2}\overline{w}_{2} + \dots + v_{n}\overline{w}_{n},
@@ -95,7 +95,7 @@ If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVer
 > \lambda^2 \langle \mathbf{u}, \mathbf{u} \rangle + 2\lambda\langle \mathbf{u} , \mathbf{v}\rangle + \langle \mathbf{v}, \mathbf{v}\rangle  & \geq 0 .
 > \end{align}
 > $$
-> As this hold for all $\lambda$, we have
+> As this holds for all $\lambda$, we have
 > $$
 > \begin{align}
 > 4\langle u, v\rangle^2 & \leq 4\langle u, u\rangle \langle v, v\rangle \\
@@ -104,7 +104,7 @@ If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVer
 > $$
 > *Case 2:* $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$
 > 
-> Note that $\langle \mathbf{u}, \mathbf{v}\rangle \neq 0$ as as $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$.
+> Note that $\langle \mathbf{u}, \mathbf{v}\rangle \neq 0$ as $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$.
 > Let $\alpha = \langle \mathbf{u}, \mathbf{v}\rangle$. Observe that
 > $$
 > \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle = \frac{1}{\alpha}\langle \mathbf{u}, \mathbf{v}\rangle =1 \in \mathbb{R}
@@ -156,7 +156,7 @@ We have shown that the norm $\lVert \mathbf{v} \rVert$ derived from the inner pr
 3. Non-negativity: $\lVert \mathbf{v} \rVert\geq 0$ for all $\mathbf{v}\in V$.
 4. Non-degeneracy: $\lVert \mathbf{v} \rVert=0 \iff \mathbf{v}=\mathbf{0}$. 
 
-Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfies. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a *norm*. 
+Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfied. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a *norm*. 
 
 >[!Definition]
 >A vector space equipped with a norm is called a *normed space*.
@@ -181,7 +181,7 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > $W^\perp$ is a subspace of $V$.
 
 > **Proof**
-> 1) $\mathbf{0} \in W^\perp$ as $\langle \mathbf{0}, w\rangle = 0\ \forall \ \mathbf{w} \in W$.
+> 1) $\mathbf{0} \in W^\perp$ as $\langle \mathbf{0}, \mathbf{w}\rangle = 0\ \forall \ \mathbf{w} \in W$.
 > 2) For any $\mathbf{u}, \mathbf{v} \in W^\perp$, we have
 > $$
 > \langle \alpha \mathbf{u} + \beta \mathbf{v}, \mathbf{w}\rangle = \alpha \langle \mathbf{u}, \mathbf{w}\rangle +\beta\langle \mathbf{v}, \mathbf{w}\rangle = 0.
@@ -189,7 +189,7 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > So, $W^\perp$ is closed under addition and scalar multiplication. ❏
 
 >[!theorem]
->$W \, \cap \, W^\perp = \emptyset.$
+>$W \, \cap \, W^\perp = \{ \mathbf{0} \}.$
 
 > **Proof**
 > If $\mathbf{w} \in W \, \cap \, W^\perp$ then $\langle \mathbf{w}, \mathbf{w}\rangle = 0 \implies \mathbf{w} = 0$. ❏
@@ -216,7 +216,7 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > 0=\langle \mathbf{0}, \mathbf{v}_{k}\rangle =\left\langle  \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}, \mathbf{v}_{k} \right\rangle=\sum_{i=1}^{n} \beta_{i}\langle \mathbf{v}_{i}, \mathbf{v}_{k}\rangle =\beta_{k}.
 > \end{align}
 > $$
-> As $1 \leq k \leq n$, we have all $\beta_{i}= 0$. Hence $\{ v_{i} \}$ is linearly independent. ❏
+> As $1 \leq k \leq n$, we have all $\beta_{k}= 0$. Hence $\{ \mathbf{v}_{i} \}$ is linearly independent. ❏
 
 > [!Important] 
 > For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
@@ -227,7 +227,16 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > \mathbf{u} \equiv \mathbf{w} - \langle \mathbf{w}, \mathbf{v}_{1} \rangle \mathbf{v}_{1} - \langle \mathbf{w}, \mathbf{v}_{2}\rangle \mathbf{v}_{2} - \dots - \langle \mathbf{w}, \mathbf{v}_{n}\rangle \mathbf{v}_{n} 
 > $$
 > is orthogonal to each of $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots,\mathbf{v}_{n}$.
+### Orthogonal matrices
 
+> [!Definition]
+> A real $n\times n$ matrix $A$ is *orthogonal* if $A^{T}A=I$, which is to say $A$ is invertible and $A^{-1}=A^{T}$. 
+
+> [!Theorem]
+> An $n\times n$ matrix $A$ is orthogonal if and only if its columns form an orthonormal basis of $\mathbb{R}^{n}$.
+
+> **Proof**
+> Let $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ be the column vectors of $A$. Then, the $i,j$-entry of $A^{T}A$ is given by $\mathbf{v}_{i}^{T}\mathbf{v}_{j}$, which is $\langle \mathbf{v}_{i}, \mathbf{v}_{j} \rangle$. Thus, if $A^{T}A=I$, the column vectors must be orthonormal, and if the column vectors are orthonormal, $A^{T}A=I$. 
 ### Gram-Schmidt Orthogonalization Process
 
 >[!Theorem] Theorem

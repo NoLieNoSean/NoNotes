@@ -86,7 +86,7 @@ This is a vector space over $\mathbb{F}$ with point-wise addition and scalar mul
 > \dim_{\mathbb{F}}\hom_{\mathbb{F}}(V, \mathbb{F}) = \dim_{\mathbb{F}} V.
 > $$
 
-So, if $V$ is a finite dimensional vector space, then $V\cong \hom(V, \mathbb{F})$, since $V \cong \mathbb{F}^{\dim V} \cong \hom(V,\mathbb{F})$. There is no universal construction for an isomorphism $\phi:V\to\hom(V, \mathbb{F})$, though, because defining such an isomorphism requires us to pick a basis. More on this in a bit.
+So, if $V$ is a finite dimensional vector space, then $V\cong \hom(V, \mathbb{F})$, since $V \cong \mathbb{F}^{\dim V} \cong \hom(V,\mathbb{F})$. There is no universal construction for an isomorphism $\phi:V\to\hom(V, \mathbb{F})$ though, because defining such an isomorphism requires us to pick a basis. More on this in a bit.
 ### Notation
 
 >[!Definition]
@@ -138,7 +138,7 @@ $$
   \implies& \mathbf{v}  & = 0 &\because \text{ if }\mathbf{v}\ne 0, \text{ then }\exists f\in \hat{V}\text{ s.t } f(\mathbf{v})\ne 0 
 \end{array}
 $$
-Now, from the [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]], $\dim \mathrm{Im}\ \psi=\dim V$. Note that $\dim V= \dim\hat{V}=\dim \hat{\hat{V}}$. Hence, $\psi$ is surjective. Therefore, $\psi$ is bijective, i.e, an isomorphism.
+Now, from the [[Algebra1_L11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]], $\dim \mathrm{Im}\ \psi=\dim V$. Note that $\dim V= \dim\hat{V}=\dim \hat{\hat{V}}$. Hence, $\psi$ is surjective. Therefore, $\psi$ is a bijective linear map, i.e, an isomorphism.
 $$
 \psi: V \overset{\sim}\longrightarrow \hat{\hat{V}}
 $$

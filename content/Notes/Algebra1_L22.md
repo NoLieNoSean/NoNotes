@@ -2,6 +2,7 @@
 tags:
   - ALG1
   - Lecture
+  - Processed
 date: 2024-11-12
 time: 14:00
 ---
@@ -52,7 +53,7 @@ Recall that If $V$ is a finite dimensional inner product space, it has an orthon
 > $$
 > \mathbf{v}=\underbrace{ \mathbf{v}_{0} }_{ \in W^{\perp} } +\underbrace{ \sum_{i=1}^{r} \langle \mathbf{v}, \mathbf{w}_{i} \rangle \mathbf{w}_{i} }_{ \in W }. 
 > $$
-> So, $\mathbf{v}\in V$ $\implies$ $\mathbf{v}\in W\oplus W^{\perp}$. We have already shown that $W\cap W^{\perp}=\emptyset$, so this decomposition is unique. Thus, $V=W\oplus W^{\perp}$. ❏ 
+> So, $\mathbf{v}\in V$ $\implies$ $\mathbf{v}\in W\oplus W^{\perp}$. We have already shown that $W\cap W^{\perp}=\{ \mathbf{0} \}$, so this decomposition is unique. Thus, $V=W\oplus W^{\perp}$. ❏ 
 
 > **Proof 2**
 > Assume $\mathbb{F}=\mathbb{R}$ for simplicity. Let $\mathbf{v}\in V$. 
@@ -111,7 +112,6 @@ Recall that If $V$ is a finite dimensional inner product space, it has an orthon
 > \mathbf{v}=\underbrace{ (\mathbf{v}-\mathbf{w}_{0}) }_{ \in W^{\perp} }+\underbrace{ \mathbf{w}_{0} }_{ \in W }
 > $$
 > ❏
-
 ### Orthogonal projections
 
 We have seen that every $\mathbf{v}\in V$ can be written uniquely as $\mathbf{v}=\mathbf{w}+\mathbf{u}$, where $\mathbf{w}\in W$ and $\mathbf{u}\in W^{\perp}$. The *orthogonal projection* from $V$ to $W$ is the map $\Pi:V\to W$ defined by $\mathbf{v}\to \mathbf{w}$. Note that $\Pi$ is a linear map. Note that $\Pi(\mathbf{w})=\mathbf{w}$ if $\mathbf{w}\in W$, and $\Pi(\mathbf{w})=0$ if $\mathbf{w}\in W^{\perp}$. 
@@ -121,9 +121,3 @@ $$
 \Pi(\mathbf{v})=\sum_{i=1}^{k} \langle \mathbf{w}_{i}, \mathbf{v} \rangle \mathbf{w}_{i}.
 $$
 Note that $\mathbf{v}-\Pi(\mathbf{v})\in W^{\perp}$. If $W$ happened to be $V$, then $W^{\perp}=\{ 0 \}$. So, $\mathbf{v}=\Pi(\mathbf{v})$.
-
----
-## Bilinear forms
-
-
-
