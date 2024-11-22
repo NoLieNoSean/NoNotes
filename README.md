@@ -7,4 +7,3 @@ Here are my notes from the first semester at CMI, with additional contributions 
 These were written primarily for personal use; I make no claims about their quality, completeness, or accuracy. 
 
 Pull requests are welcome!
-
