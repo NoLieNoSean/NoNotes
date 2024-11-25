@@ -92,5 +92,8 @@ Proper lecture notes start here.
 >- [[Algebra1_T2]]
 
 
+The vandermonde matrix: https://www.youtube.com/watch?v=Cov_kLatdlc
+
+
 %% [[Hofmann Kunze select theorems and definitions]] %%
 

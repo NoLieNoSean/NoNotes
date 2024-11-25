@@ -107,11 +107,9 @@ We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that
 > 2. Linear in the second variable
 > 3. Hermitian symmetric
 
-Because of Hermitian symmetry, $\langle \mathbf{v}, \mathbf{v} \rangle=\overline{\langle \mathbf{v}, \mathbf{v} \rangle}$, so $\langle \mathbf{v}, \mathbf{v} \rangle\in \mathbb{R}$ for all $\mathbf{v}\in V$. 
+- Because of Hermitian symmetry, $\langle \mathbf{v}, \mathbf{v} \rangle=\overline{\langle \mathbf{v}, \mathbf{v} \rangle}$, so $\langle \mathbf{v}, \mathbf{v} \rangle\in \mathbb{R}$ for all $\mathbf{v}\in V$. 
+- The transpose operation is replaced by the adjoint here: $A^{*}=\overline{A^{T}}$. 
+- The standard hermitian form is the complex analogue of the the dot product: $\langle \mathbf{v}, \mathbf{w} \rangle =\mathbf{v}^{*}\mathbf{w}$.
 
-The transpose operation is replaced by the adjoint here: $A^{*}=\overline{A^{T}}$.
-
-The standard hermitian form is the complex analogue of the the dot product: $\langle \mathbf{v}, \mathbf{w} \rangle =\mathbf{v}^{*}\mathbf{w}$.
-
-
+The matrix of a Hermitian form with respect to a basis is defined as for bilinear forms. The matrix of the standard hermitian form on $\mathbb{C}^{n}$ is the identity matrix. 
 

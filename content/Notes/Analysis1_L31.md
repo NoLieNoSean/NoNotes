@@ -46,7 +46,7 @@ Rudin, 3.33
 > \alpha\equiv \limsup _{n\to \infty}\sqrt[n]{ |a_{n}| }.
 > $$
 > Then, 
-> 1. if $\alpha<1$, $\sum a_{n}$ converges;
+> 1. if $\alpha<1$, $\sum a_{n}$ converges (in fact, it converges absolutely);
 > 2. if $\alpha>1$, $\sum a_{n}$ diverges;
 > 3. if $\alpha=1$, the test is inconclusive.
 
@@ -119,8 +119,9 @@ Read examples at 3.35.
 
 $R$ is called the *convergence radius* of $\sum c_{n}z^{n}$.
 
-%% [!Example] Examples
-1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.
-2. The series $\sum \frac{z^{n}}{n^{n}}$ has $R=\infty$, i.e, it converges for every $z$. 
-3. The above theorem is not easily applicable on the series $\sum \frac{z^{n}}{n!}$. 
- %%
+> [!Example] Examples
+> 1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.
+> 2. The series $\sum \frac{z^{n}}{n^{n}}$ has $R=\infty$, i.e, it converges for every $z$. 
+> 3. The above theorem is not easily applicable on the series $\sum \frac{z^{n}}{n!}$, since showing $\lim\sup \sqrt[n]{ 1/n! } = 0$ takes some work. It is much easier to use the ratio test: $\lim\sup |z|/(n+1) =0$, for all $z$. Thus, $R=\infty$. 
+> 4. The series $\sum z^{n}$ has $R=1$. If $|z|=1$, the series diverges, since $z^{n}$ does not tend to $0$ as $n\to \infty$.
+> 5. Thanks to the limits we proved [[Analysis1_L12|here]], it follows that $\sum z^{n}/n$ and $\sum z^{n}/n^{2}$ have $R=1$. The former converges for all $z$ with magnitude 1 except $z=1$ (TBP). The latter converges for all $z$ with magnitude 1 by the comparison test, since $|z^{n}/n^{2}|=1/n^{2}$ ($1/n^{2}$ converges since it is a [[Analysis1_L30#The p-series|p-series]] with $p>1$).
