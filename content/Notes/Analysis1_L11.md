@@ -8,10 +8,7 @@ time: 15:30
 ---
 ![[1726055561814.jpg]]
 ![[1726055561810.jpg]]
-
----
-
-## Recall and orient
+## Recall
 
 >[!Recall]
 >- High school definition of continuity: $f$ is continuous at $x=p$ iff $\lim_{ x \to p }f(x)=f(p)$. This will be modified. 

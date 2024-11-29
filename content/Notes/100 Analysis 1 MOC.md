@@ -57,7 +57,7 @@ Proper lecture notes start here.
 - [[Analysis1_L16]] ✅
 	- Sequential/limit point compactness and their equivalence. Intrinsic property of compactness. Examples of compact sets: closed boxes in $\mathbb{R}^{k}$ are bounded. A few proofs using sequential/limit point compactness. Heine Borel.
 - [[Analysis1_L17]] ✅
-	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC. 
+	- Open cover compactness, equivalence of all three versions of compactness. Proofs using OCC.
 - [[Analysis1_L18]] ✅
 	- More proofs using OCC. 2.36, 3.10 b, 2.42
 - [[Analysis1_L19]] ✅ <- *Midsem syllabus ends here*
@@ -89,8 +89,11 @@ Proper lecture notes start here.
 - [[Analysis1_L32]] ✅
 	- Real analytic functions
 - [[Analysis1_L33]] ✅
-- [[Analysis1_L34]] <- **Do not expect the following notes to appear before the endsem exam.**
+- [[Analysis1_L34]] 
 - [[Analysis1_L35]]
+- [[Analysis1_L36]]
+- [[Analysis1_L37]]
+- [[Analysis1_L38]]
 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
@@ -111,10 +114,6 @@ Proper lecture notes start here.
 - [[Analysis1_HW4.pdf]]
 - [[Analysis1_HW5.pdf]]
 - [[Analysis1_HW6_P1.pdf]], [[Analysis1_HW6_P2.pdf]]
-# Tutorials
-- [[Analysis1_T2]]
-- [[Analysis1_T3]]
-- [[Analysis1_T4]]
 
 %% 
 # To-do
@@ -135,83 +134,3 @@ Proper lecture notes start here.
       It is easy to see that at most one fixed point can exist for $T$ given the distance inequality.
 
 %%
-
-# Rudin sections
-2. Basic topology
-	1. Definition of function
-	2. allied definitions to 1
-	3. equivalence relation
-	4. Definitions of finite, countable, etc 
-	5. $\mathbb{Z}$ is countable
-	6. A finite set cannot be equivalent to one of its proper subsets
-	7. Definition of sequence
-	8. Theorem: Every infinite subset of a countable set A is countable
-	9. Arbitrary unions and intersections
-	10. Examples for 9
-	11. Properties of unions and intersections
-	12. Infinite union of countable sets in countable
-	13. $\mathbb{Q}$ is countable
-	14. Set of all binary sequences is uncountable
-	15. **Metric spaces**
-	16. Examples for 15
-	17. segments, intervals, and balls
-	18. the plethora of definitions this chapter is known for
-	19. Theorem. Every neighborhood is an open set.
-	20. Theorem. If p is a limit point of a set E, then every neighborhood of p contains infinitely many points of E.
-	21. Examples of closed, open, perfect and bounded sets.
-	22. Complement of infinite union is intersection of complements
-	23. A set E is open if and only if its complement is closed.
-	24. Theorems on unions and intersections of open and closed sets.
-	25. Emphasis of finiteness of some collections in 24
-	26. Definition of closure
-	27. Theorems about closure
-	28. Closed sets in R contain their suprema and infima
-	29. Openness is relative
-	30. Subspace topology
-	31. Definition: open cover
-	32. Definition: open cover compactness
-	33. Compactness is intrinsic
-	34. Theorem: Compact sets are closed.
-	    [[Analysis1_L16#Characterization of compact sets]] 
-	35. Theorem: Closed subsets of compact sets are compact. 
-	    [[Analysis1_L16#Closed subsets of compact sets are compact]]
-	    [[Analysis1_L17#Closed subsets of compact sets are compact]]
-	36. Theorem: If {Kα} is a collection of compact subsets of a metric space X such that the intersection of every finite sub-collection of {Kα} is nonempty, then $\cap$ Kα is nonempty.
-	37. Theorem: If E is an infinite subset of a compact set K, then E has a limit point in K.
-	38. Nested interval property
-	39. Nested k-cell property
-	40. Every k-cell is compact
-	41. Heine-Borel
-	42. Every bounded infinite subset of Rk has a limit point in Rk. 
-3. Numerical sequences and series
-	1. **Definition. Convergence**
-	2. Basic theorems about convergent sequences in metric spaces
-	3. Algebraic limit theorem
-	4. Slot-wise convergence, ALT for vectors
-	5. definition. subsequence
-	6. Theorems. bounded sequence in $\mathbb{R}^{k}$ contains convergent subsequence, sequence in compact metric space contains convergent subsequence
-	7. Theorem. The subsequential limits of a sequence (pn) in a metric space form a closed subset of X.
-	8. **Definition. Cauchy sequence**
-	9. Definition. Diameter
-	10. Theorems. $E$ and closure of $E$ have same diameter. Something like the NIP, but for metric spaces.
-	11. Theorems about convergence and Cauchy sequences
-	12. Definition. Complete metric space
-	13. Definition. Monotonically increasing/decreasing sequences.
-	14. Theorem. If monotonic, convergent $\iff$ bounded.
-	15. Definition of a sequence converging to $±\infty$
-	16. Definition of limsup and liminf
-	17. Theorems about limsup and liminf
-	18. examples for 16
-	19. Theorem. inequality retention for limsup and liminf
-	20. Some limits proved using the sandwich theorem and clever estimations
-4. Continuity
-	1. Definition of limit of a function
-	2. Recasting 4.1 in terms of sequences
-	3. Definitions of function algebra
-	4. Algebra of limits of functions
-	5. Continuity
-	6. Special case of 4.5 (when p is a limit point)
-	7. Composition of continuous functions
-	8. Alternate definition of continuity using open sets + corollary
-	9. 
-

@@ -143,9 +143,6 @@ Now we are ready to watch uniform convergence deliver on its promises.
 > - there exists some $x_{0}\in[a, b]$ such that $f_{n}(x_{0})$ converges.
 > 
 > Then, $f_{n}\rightrightarrows\text{a function }f$ and $f'(x)=g(x)$ for all $x\in[a, b]$.
-
-
-
 ### Another way to understand uniform convergence
 
 Let $X$ be a metric space. Define

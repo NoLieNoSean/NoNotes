@@ -7,9 +7,6 @@ date: 2024-09-20
 time: 14:00
 ---
 ![[1726947785622.jpg]]
-
----
-
 ## Open cover compactness
 
 ### Open covers and subcovers
