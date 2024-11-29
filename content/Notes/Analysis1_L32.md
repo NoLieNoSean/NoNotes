@@ -2,6 +2,7 @@
 tags:
   - ANA1
   - Lecture
+  - Processed
 date: 2024-11-13
 time: 11:50
 ---
@@ -82,7 +83,8 @@ $$
 $$
 This tells us that if a function is analytic, it must have a unique power series representation! Additionally, we only need the derivatives at a single point to construct this power series about that point.
 
-This raises a question. We have shown that an analytic function on $(-R, R)$ is infinitely differentiable on $(-R, R)$. This allows us to calculate all derivatives $f^{(0)}(t), f^{(1)}(t), f^{(2)}(t), \dots$ at any point $t\in(-R, R)$. There's nothing stopping us from defining
+This raises a question. We have shown that an analytic function on $(-R, R)$ is infinitely differentiable on $(-R, R)$. This allows us to calculate all derivatives $f^{(0)}(t), f^{(1)}(t), f^{(2)}(t), \dots$ at any point $t\in(-R, R)$. So, we can calculate the Taylor polynomial of the function at $t$ to any degree. But do these converge? If they do, do they converge to $f$?
 $$
-g(x)=\sum_{n=0}^{\infty}\left( \frac{f^{(n)}(t)}{n!} \right) (x-t)^{n}
+g(x)=\sum_{n=0}^{\infty}\left( \frac{f^{(n)}(t)}{n!} \right) (x-t)^{n}.
 $$
+In other words, is $g=f$? We will see that this is indeed the case. If a function is analytic on $(-R, R)$, is is also analytic on any subinterval of $(-R, R)$. 

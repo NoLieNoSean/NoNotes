@@ -95,7 +95,7 @@ Consider the following properties of a real $n\times n$ matrix:
 2. There is an invertible matrix $P$ such that $A=P^{T}{P}$.
 3. The matrix $A$ is symmetric and positive definite.
 
-We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that 3 implies 1. 
+We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that 3 implies 1 in a bit. So, the above statements are equivalent.
 
 ---
 
@@ -113,3 +113,28 @@ We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that
 
 The matrix of a Hermitian form with respect to a basis is defined as for bilinear forms. The matrix of the standard hermitian form on $\mathbb{C}^{n}$ is the identity matrix. 
 
+
+$A$ is a hermitian matrix $\iff$ the form defined by $A$ is a hermitian form.
+Change of basis: $A'=P^{*}AP$.
+
+Eigenvalues (and so trace and determinant) of a Hermitian matrix are real numbers.
+Cor: eigenvalues of real symmetric matrix are real numbers.
+
+P is a unitary matrix (analog to orthogonal matrices): $P^{*}P=I$. It's columns are orthonormal with respect to the standard hermitian form.
+
+Change of basis in $\mathbb{R}^{n}$ preserves dot product if and only if the change of basis matrix is orthogonal. Similarly, a change of basis in $\mathbb{C}^{n}$ preserves the standard Hermitian form $X^{*}Y$ if and only if the change of basis matrix is unitary.
+
+A form may be degenerate on a subspace, though it is nondegenerate on the whole space, and vice versa. Example:
+$$
+\begin{bmatrix}
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0
+\end{bmatrix}
+$$
+non degenerate on R3. Degenerate on the span of $[1, 0, 0]$.
+
+A vector $\mathbf{v}$ is a null vector iff its coordinate vector $Y$ solves the homogeneous equaiton $AY=0$.
+The form in nondegenerate iff the matrix mKA is invertible.
+
+Let $\langle \,, \rangle$ be a symmetric form on a re

@@ -86,9 +86,10 @@ Proper lecture notes start here.
 	- Series, convergence tests, the number $e$
 - [[Analysis1_L31]] ✅
 	- Root test, ratio   test, power series
-- [[Analysis1_L32]] <- **Do not expect the following notes to appear before the endsem exam.**
-- [[Analysis1_L33]]
-- [[Analysis1_L34]]
+- [[Analysis1_L32]] ✅
+	- Real analytic functions
+- [[Analysis1_L33]] ✅
+- [[Analysis1_L34]] <- **Do not expect the following notes to appear before the endsem exam.**
 - [[Analysis1_L35]]
 
 >[!Excalidraw]-
