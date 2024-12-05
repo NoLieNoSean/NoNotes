@@ -6,7 +6,7 @@ tags:
 date: 2024-10-25
 time: 14:00
 ---
-![[7.jpeg]]
+%% ![[7.jpeg]] %%
 ## Using Sample points instead of M and m
 
 Rudin, 6.7

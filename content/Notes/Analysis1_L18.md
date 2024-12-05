@@ -6,7 +6,7 @@ tags:
 date: 2024-09-25
 time: 15:37
 ---
-![[IMG_20240925_164725.jpg]]
+%% ![[IMG_20240925_164725.jpg]] %%
 ## Proof of Rudin, 2.34 using open cover compactness
 
 Alternate proof of [[Analysis1_L16#Characterization of compact sets|compact sets being closed]] using open cover compactness (we [[Analysis1_L17#An exercise in working with open cover compactness|proved boundedness]] using OCC in L17). 

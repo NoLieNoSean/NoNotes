@@ -6,7 +6,7 @@ tags:
 date: 2024-10-08
 time: 14:09
 ---
-![[1728577113536.jpg]]
+%% ![[1728577113536.jpg]] %%
 ## Recall
 
 Let $T:V\to W$ is a linear map, with $B_{V}$ and $B_{W}$ being bases of $V$ and $W$ respectively. The matrix of $T$ in the given bases is the matrix whose columns are coordinate vectors of $T(B_{V})$ with respect to the basis $B_{W}$.

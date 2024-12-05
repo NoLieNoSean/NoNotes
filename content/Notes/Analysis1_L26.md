@@ -6,7 +6,7 @@ tags:
 date: 2024-10-23
 time: 15:30
 ---
-![[1729684704658.jpg]]
+%% ![[1729684704658.jpg]] %%
 ## Definition of the integral
 
 ### Partitions

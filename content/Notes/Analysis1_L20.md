@@ -6,7 +6,7 @@ tags:
 date: 2024-09-27
 time: 14:02
 ---
-![[1728577113539.jpg]]
+%% ![[1728577113539.jpg]] %%
 
 To do:
 - [x] uniform continuity
