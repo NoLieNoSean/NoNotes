@@ -6,16 +6,16 @@ tags:
 A *field* is a set $\mathbb{F}$ with two operations, called addition and multiplication, which satisfy the following field axioms:
 - **Axioms for addition**
 	- Closure: $x\in \mathbb{F}$ and $y\in \mathbb{F}$ $\implies$ $x+y\in \mathbb{F}$.
-	- Commutativity: $x+y=y+x$ for all $x,y\in \mathbb{F}$.
 	- Associativity: $(x+y)+z = x+(y+z)$ for all $x, y,z\in \mathbb{F}$.
 	- Identity: $\mathbb{F}$ contains an element $0$ such that $0+x = x$ for all $x\in \mathbb{F}$.
 	- Inverse: To every $x\in \mathbb{F}$ corresponds an element $-x\in \mathbb{F}$ such that $x+(-x)=0$.
+	- Commutativity: $x+y=y+x$ for all $x,y\in \mathbb{F}$.
 - **Axioms for multiplication**
 	- Closure: If $x\in \mathbb{F}$ and $y\in F$, then their product $xy\in \mathbb{F}$.
-	- Commutativity: $xy=yx$ for all $x,y\in \mathbb{F}$.
 	- Associativity: $(xy)z = x(yz)$ for all $x,y,z \in \mathbb{F}$.
 	- Identity: $\mathbb{F}$ contains an element $1\ne 0$ such that $1x=x$ for every $x\in \mathbb{F}$.
 	- Inverse: If $x\in \mathbb{F}$ and $x\ne 0$ then there exists an element $\frac{1}{x}\in \mathbb{F}$ such that $x (\frac{1}{x})=1$.
+	- Commutativity: $xy=yx$ for all $x,y\in \mathbb{F}$.
 - **Distributive Law**
 	- $x(y+z) = xy+xz$ holds for all $x,y,z\in \mathbb{F}$.
 

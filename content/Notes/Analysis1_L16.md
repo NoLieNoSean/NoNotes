@@ -163,4 +163,3 @@ Rudin, 2.35
 
 >[!Important]
 >While stated for $\mathbb{R}$, the Heine Borel theorem is valid for $\mathbb{R}^{k}$. It is easy to show.
-

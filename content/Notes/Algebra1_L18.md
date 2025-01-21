@@ -194,7 +194,7 @@ Note that the determinants of similar matrices are equal. $\det PBP^{-1}=\det P\
 
 One should think of two similar matrices as representing the same abstract linear operator $T:V\to V$ in different bases. For example, if $B$ and $B'$ are bases of $V$, then $[T]_{BB}$ and $[T]_{B'B'}$ are similar matrices, related by $[T]_{BB}=[I]_{BB'}[T]_{B'B'}[I]_{B'B}$. 
 
-From the previous section, we know how to find the eigenvalues of a matrix. How do we find the eigenvalues of an abstract linear operator $T:V\to V$? We pick an arbitrary basis, and compute the eigenvalues of the matrix of the operator in that basis. We can do this because similar matrices have the same characteristic polynomial:
+From the previous section, we know how to find the eigenvalues of a matrix. How do we find the eigenvalues of an abstract linear operator $T:V\to V$? We pick an arbitrary basis, and compute the eigenvalues of the matrix of the operator in that basis. We can do this because *similar matrices have the same characteristic polynomial*:
 
 >Let $A=SBS^{-1}$.
 >$A-\lambda I=SBS^{-1}-\lambda SIS^{-1}=S(B-{\lambda I})S^{-1}$.

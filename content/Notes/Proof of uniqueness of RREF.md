@@ -5,7 +5,7 @@ E_{1}E_{2}\dots E_{a}A  & =R_{1} \\
 E_{1}'E_{2}'\dots E_{b}'A  & =R_{2},
 \end{align}
 $$
-where $R_{1}$ and $R_{2}$ are in reduced row echelon form. Since performing row operations does not change the solution set of a given system, we have $A\mathbf{x}=\mathbf{0}$, $R_{1}\mathbf{x}=\mathbf{0}$ and $R_{2}\mathbf{x}=\mathbf{0}$ must have the SAME solutions. We first consider the case when $R_{1}$ and $R_{2}$ have different pivot variables.
+where $R_{1}$ and $R_{2}$ are in reduced row echelon form. Since performing row operations does not change the solution set of a given system, $A\mathbf{x}=\mathbf{0}$, $R_{1}\mathbf{x}=\mathbf{0}$ and $R_{2}\mathbf{x}=\mathbf{0}$ must have the SAME solutions. We first consider the case when $R_{1}$ and $R_{2}$ have different pivot variables.
 
 **Different positions of pivot columns**
 

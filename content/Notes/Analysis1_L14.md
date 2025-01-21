@@ -13,7 +13,7 @@ time: 14:03
 >- Definition of open sets and closed sets.
 
 ---
-## Proof of $\Longleftarrow$ from the [[Analysis1_L13#Halfway through to a new definition of continuity|last claim]] (Rudin, 4.8) in L13
+## Proof of the backward implication from the [[Analysis1_L13#Halfway through to a new definition of continuity|last claim]] (Rudin, 4.8) in L13
 
 >**Proof of $\Longleftarrow$**
 >Given an arbitrary $\epsilon$ challenge, we want $\delta>0$ such that $d(x, p)<\delta$ $\implies d(f(x), f(p))<\epsilon$. This is the same as saying we want $\delta>0$ such that $x\in B_{\delta}(p)\implies f(x)\in B_{\epsilon}(f(p))$. 
@@ -101,6 +101,11 @@ Defined perfect sets, and noted that they are not important for this course.
 >$E$ is *perfect* if $E$ is closed and every point of $E$ is a limit point of $E$. 
 
 For example, the Cantor set is a perfect set.
+
+### Dense subsets
+
+> [!Definition]
+> $E$ is dense in $X$ if every point of $X$ is either a member of $E$ or a limit point of $E$ (or both).
 
 ---
 ## Open and closed sets under intersections and unions

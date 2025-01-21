@@ -28,7 +28,7 @@ If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we 
 >[!Example] Example: Reflection
 >Let $T:\mathbb{R}^2\mapsto\mathbb{R}^2$ be the linear map that reflects over the line $L :y = -x$
 >Consider vectors $w$ and $w'$, perpendicular to $L$ and parallel to $L$ respectively. 
->Notice that $w$ is an eigenvector with eigenvalue $-1$ and $w$ is an eigenvector with value $1$.
+>Notice that $w$ is an eigenvector with eigenvalue $-1$ and $w'$ is an eigenvector with value $1$.
 >
 >![[Screenshot 2024-10-16 at 10.12.49 PM.png|300]]
 

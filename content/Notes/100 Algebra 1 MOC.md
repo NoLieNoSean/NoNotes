@@ -61,7 +61,7 @@ Proper lecture notes start here.
 	- Gram-Schmidt example, orthogonal decomposition theorem
 - [[Algebra1_L23]] 
 
->[!Excalidraw]-
+>[!Excalidraw]
 >These notes are either in excalidraw (which is not rendered by Quartz) or uncompiled. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[Algebra1_L1]] Intro, Vector spaces, Fields.
 >- [[Algebra1_L2]] Matrices, Variables vs equations table
@@ -94,6 +94,7 @@ Proper lecture notes start here.
 
 The vandermonde matrix: https://www.youtube.com/watch?v=Cov_kLatdlc
 
+[[LADW quick notes]]
 
 %% [[Hofmann Kunze select theorems and definitions]] %%
 

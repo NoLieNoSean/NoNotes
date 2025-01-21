@@ -46,7 +46,7 @@ Isomorphic spaces can be considered as different representations of the same spa
 >\begin{align}
 >&\sum_{i=1}^{n} \beta_{i}(A\mathbf{v}_{i}) = \sum_{i=1}^{n} \gamma_{i}(A\mathbf{v}_{i}) \\
 >\implies& A\left( \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}  \right)= A\left( \sum_{i=1}^{n}\gamma_{i}\mathbf{v}_{i} \right) \\
->\implies &\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}= \sum_{i=1}^{n}\gamma_{i}\mathbf{v}_{i}, &\text{A is invertible} \\
+>\implies &\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}= \sum_{i=1}^{n}\gamma_{i}\mathbf{v}_{i}, &\text{A is injective} \\
 >\implies& \beta_{i}=\gamma_{i}\ \  \forall 1\le i\le n,  & \text{S is a basis in V}
 >\end{align}
 >$$
@@ -75,7 +75,7 @@ Also, If $A$ is an isomorphism, so is $A^{-1}$. Therefore, in the above theorem 
 >- $M^{\mathbb{F}}_{m\times n}\cong \mathbb{F}^{mn}$
 
 
-Thus, to show two sets are isomorphic, it is sufficient to construct a LT which maps the basis of one set onto another.
+Thus, to show two vector spaces are isomorphic, it is sufficient to construct a LT which maps the basis of one vector space onto another.
 
 ### Putting it all together
 
