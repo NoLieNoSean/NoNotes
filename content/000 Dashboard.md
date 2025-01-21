@@ -13,6 +13,3 @@
 - [[200 Probability Theory MOC]]
 - [[200 Electromagnetism 1]]
 
-# Other stuff
-
-[[A classical introduction to modern number theory]]
