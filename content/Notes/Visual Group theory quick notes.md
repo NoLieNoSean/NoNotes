@@ -21,4 +21,3 @@ If $gH=Hg$ for some $g\in G$, is it true for all $g\in G$?
 ---
 
 Factors in any direct product group are normal subgroups
-

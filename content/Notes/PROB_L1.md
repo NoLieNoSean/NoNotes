@@ -5,6 +5,22 @@ tags:
 date: 2025-01-13
 time: 16:55
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Sample space ($\Omega$) is the set of all possible outcomes. An event is a subset if $\Omega$. 
 
 finite probability space

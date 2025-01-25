@@ -20,8 +20,12 @@ Books:
 # Lecture Notes
 
 - [[Algebra2_L1]] ✅
-- [[Algebra2_L2]]
-- [[Algebra2_L3]]
+	- Groups, examples of groups, subgroups
+- [[Algebra2_L2]] ✅
+	- Symmetric groups, homomorphisms
+- [[Algebra2_L3]] ✅
+	- Cosets, Quotient groups, normal subgroups
+- [[Algebra2_L4]]
 
 # Others
 

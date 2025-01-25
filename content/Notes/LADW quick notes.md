@@ -330,3 +330,10 @@ The inner product we just defined has the following properties:
 - Non negativity and Non degeneracy.
 
 More generally, for any complex or real vector space $V$, an inner product on $V$ is a function from $V\times V\to \mathbb{R}/\mathbb{C}$ such that the above properties are satisfied. A space $V$ together with an inner product is called an inner product space. An inner product induces a norm. 
+
+Properties of the inner product:
+- Conjugate linear in the second slot
+- $(0, x)=(x, 0)=0$
+
+The CS inequality
+Triangle inequality
