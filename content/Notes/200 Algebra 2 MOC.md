@@ -24,9 +24,10 @@ Books:
 	- Symmetric groups, homomorphisms
 - [[ALG2_L3]] ✅
 	- Cosets, Lagrange's theorem, quotient groups, normal subgroups
-- [[ALG2_L4]]
-	- Isomorphisms, automorphisms and conjugation, correspondence theorem, first isomorphism theorem
+- [[ALG2_L4]] ✅
+	- Isomorphisms, automorphisms and conjugation, first isomorphism theorem
 - [[ALG2_L5]]
+	- Correspondence Theorem
 - [[ALG2_L6]]
 
 

@@ -2,6 +2,7 @@
 tags:
   - ALG2
   - Lecture
+  - Processed
 date: 2025-01-23
 time: 9:10
 ---
@@ -48,13 +49,6 @@ Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in 
 
 > [!Theorem] Corollary
 > If a group $G$ has just one subgroup $H$ of order $r$, then that subgroup is normal.
-
----
-
-## The Correspondence Theorem
-
-
-
 
 ---
 ## Projection maps
