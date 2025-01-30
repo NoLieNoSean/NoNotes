@@ -8,7 +8,7 @@ If a [[Sequences and convergence#Sequences|sequence]] in $\mathbb{R}$ fails to [
 ---
 ## Preliminaries
 
-To allow limits to be potentially infinite, we must define what it means to converge to $±\infty$. 
+To allow limits to be infinity, we must define what it means to converge to $±\infty$. 
 
 >[!Definition]
 >We write $P_{n}\to +\infty$ if $\forall M\in \mathbb{R}$ there exists an integer $N$ such that $\forall n\geq N, p_{n}>M$. 
@@ -84,7 +84,7 @@ These will be using Kulkarni's definitions.
 >Let $(p_{n})$ be a sequence. Then, $\liminf_{ n \to \infty } (p_{n})\le \limsup_{ n \to \infty } (p_{n})$.
 
 >**Proof**
->Pick any $s_{k}$. $i_{m}\le s_{k}$ for all $m$. Thus, $s_{k}$ is an upper bound for the set of all infima. Thus, $\lim\inf_{ n \to \infty }p_{n}=\sup \{ i_{m} \}\le s_{k}$. Since $s_{k}$ was arbitrary, the preceding statement is valid for all $k$. Thus, $\lim\inf_{ n \to \infty }p_{n}$ is a lower bound for the set of all suprema. Thus, $\lim\inf_{ n \to \infty }\le \inf \{ s_{k} \}=\lim\sup_{ n \to \infty }p_{n}$. ❏
+>Pick any $s_{k}$. $i_{m}\le s_{k}$ for all $m$. Thus, $s_{k}$ is an upper bound for the set of all infima. Thus, $\lim\inf_{ n \to \infty }p_{n}=\sup \{ i_{m} \}\le s_{k}$. Since $s_{k}$ was arbitrary, the preceding statement is valid for all $k$. Thus, $\lim\inf_{ n \to \infty }p_{n}$ is a lower bound for the set of all suprema. Thus, $\lim\inf_{ n \to \infty }p_{n}\le \inf \{ s_{k} \}=\lim\sup_{ n \to \infty }p_{n}$. ❏
 
 >[!Theorem]
 >If $s_{n}\le t_{n}$ for $n\ge N$, where $N$ is fixed, then

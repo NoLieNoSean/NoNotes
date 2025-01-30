@@ -85,7 +85,7 @@ Proper lecture notes start here.
 - [[Analysis1_L30]] ✅ 
 	- Series, convergence tests, the number $e$
 - [[Analysis1_L31]] ✅
-	- Root test, ratio   test, power series
+	- Root test, ratio test, power series
 - [[Analysis1_L32]] ✅
 	- Real analytic functions
 - [[Analysis1_L33]] ✅
@@ -119,7 +119,7 @@ Proper lecture notes start here.
 # To-do
 - [ ] Review quiz 1 solutions
 - [ ] Review HW 1 solutions
-- [ ] Cauchy functional equaitons
+
 - [ ] note 3.11 b, 4.3
 - [ ] 3.21, Thm 3.7, 3.17 
 - [ ] Cantor-like set on $[\sqrt{ 2 }, 2\sqrt{ 2 }]$ has no rationals.

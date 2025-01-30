@@ -64,7 +64,7 @@ Rudin, 2.28
 Rudin, 4.9
 
 >[!Theorem]
->Let $f, g:X\to \mathbb{C}$, where $X$ is a metric space. Then, $f+g$, $fg$, and $\frac{f}{g}$ (assuming $g(x)\ne 0$ for all $x$) are continuous on $X$. 
+>Let $f, g:X\to \mathbb{C}$ be continuous, where $X$ is a metric space. Then, $f+g$, $fg$, and $\frac{f}{g}$ (assuming $g(x)\ne 0$ for all $x$) are continuous on $X$. 
 
 >**Proof**
 >Every function defined on $X$ is continuous at isolated points of $X$. So we only need to consider the case when $p\in X$ is not an isolated point of $X$, i.e, a limit point of $X$. Since $f$ and $g$ are continuous, this gives us $\lim_{ x \to p }f(x)=f(p)$ and $\lim_{ x \to p }g(x)=g(p)$, which gives us $\lim_{ x \to p }(f(x)+g(x))=f(p)+g(p)$. ❏
@@ -80,7 +80,7 @@ Rudin, 4.10
 >Let $f_{1}, f_{2}, \dots, f_{k}:X\to \mathbb{R}$. Let $\mathbf{f}:X\to \mathbb{R}^{k}$ be defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))^{T}$. Then, $\mathbf{f}$ is continuous $\iff$ each $f_{i}$ is continuous.
 
 >**Proof**
->We only need to consider $p\in X$ which are limit points of $X$. Consider the forward implication. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. Note the similarity to the proof of the forward implication of [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot wise convergence]]. The proof of the backward implication of this theorem is also essentially the same as its counterpart, with $N$'s replaced with $\delta$'s, the maximum of all $N$'s replaced with the minimum of all $\delta$'s, and other tiny appropriate contextual changes. ❏
+>We only need to consider $p\in X$ which are limit points of $X$. Consider the forward implication. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. Note the similarity to the proof of the forward implication of [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot wise convergence]]. The proof of the backward implication of this theorem is also essentially the same as its counterpart, with $N$'s replaced with $\delta$'s, the maximum of all $N$'s replaced with the minimum of all $\delta$'s, and other tiny contextual changes. ❏
 
 >[!Theorem]
 >If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\mathbb{R}^{k}$, $\mathbf{f}+\mathbf{g}$ and $\mathbf{f}\cdot \mathbf{g}$ are continuous.
@@ -116,6 +116,8 @@ Rudin, 2.30
 >
 >**Proof of $\Longleftarrow$**
 >Let $E=Y\cap G$ for some open subset $G$ in $X$. For every $p \in E$, there exists $r_{p}>0$ such that $B_{r_{p}}(p, X)\subset G$ $\implies$ $B_{r_{p}}(p, X)\cap Y\subset G\cap Y$ $\implies$ $B_{r_{p}}(p, Y)\subset E$. ❏
+
+An analogue for closed sets:
 
 >[!Theorem] Corollary
 >Suppose $Y\subset X$. A subset $E$ of $Y$ is closed relative to $Y$ if  and only if $E=Y\cap C$ for some closed subset $C$ in $X$.

@@ -40,7 +40,8 @@ Proof can be adapted to show the same for metric spaces. Thus, in any metric spa
 Here's how we'll go about proving this:
 1. We will show that being Cauchy implies being bounded.
 2. We will show that given any sequence, a [[Sequences and convergence#Monotone convergence theorem|monotone]] [[Subsequences|subsequence]] can be extracted.
-3. Thus, we should be able to extract a monotone subsequence from a Cauchy sequence, which will be bounded since Cauchy sequences are bounded. From the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]], the subsequence must converge. Then we will show that the limit of the subsequence must equal the limit of the Cauchy sequence.
+3. Thus, we should be able to extract a monotone subsequence from a Cauchy sequence, which will be bounded since Cauchy sequences are bounded. From the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]], the subsequence must converge. 
+4. We will then we will show that the limit of the subsequence must equal the limit of the Cauchy sequence.
 
 ##### Step 1: Cauchy $\implies$ bounded
 
@@ -76,7 +77,7 @@ Recall that a monotone sequence has no meaning in a metric space. Thus, this seq
 >If a subsequence of a Cauchy sequence converges to $l$, the Cauchy sequence also converges to $l$.
 
 >**Proof**
->Let $a_{i_{k}}\to l$ be a subsequence of a Cauchy sequence $(a_{n})$. Let $\epsilon>0$ be arbitrary. We have $|a_{i_{k}}-l|< \frac{\epsilon}{2}$ for all $k\geq N_{1}$, for some $N_{1}$. Also, we have $|a_{i_{k}}-a_{n}|< \frac{\epsilon}{2}$, for all $n, k\ge N_{2}$ (since $i_{k}\ge k$). As usual, let $N=\max\{ N_{1}, N_{2} \}$. Triangle inequality gives us $|a_{n}-l|<\epsilon$ for all $n\ge N$. ❏
+>Let $(a_{i_{k}})\to l$ be a subsequence of a Cauchy sequence $(a_{n})$. Let $\epsilon>0$ be arbitrary. We have $|a_{i_{k}}-l|< \frac{\epsilon}{2}$ for all $k\geq N_{1}$, for some $N_{1}$. Also, we have $|a_{i_{k}}-a_{n}|< \frac{\epsilon}{2}$, for all $n, k\ge N_{2}$ (since $i_{k}\ge k$). As usual, let $N=\max\{ N_{1}, N_{2} \}$. Triangle inequality gives us $|a_{n}-l|<\epsilon$ for all $n\ge N$. ❏
 
 Again, this argument can be made for any metric space.
 

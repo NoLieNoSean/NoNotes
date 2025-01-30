@@ -29,7 +29,7 @@ First, we need to establish what it means for a sequence of vectors to converge.
 >\implies &|\alpha_{j,n}-\alpha_{j}|<\epsilon \ \ \forall 1\le j \le k
 >\end{align}
 >$$
->for all $n\ge N$ for some $N$. Thus, $\lim_{ n \to \infty }a_{j,n} = a_{j}$ for all $1\le j \le k$. 
+>for all $n\ge N$ for some $N$. Thus, $\lim_{ n \to \infty }\alpha_{j,n} = \alpha_{j}$ for all $1\le j \le k$. 
 >
 >Backward direction:
 >Let $\epsilon>0$ be arbitrary. Choose $N_{1}, N_{2}, \dots, N_{k}$ such that

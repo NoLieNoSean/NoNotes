@@ -43,7 +43,7 @@ Rudin, 2.19
 >[!Theorem]
 >In a metric space $X$, any ball is a neighborhood of each point in it, i.e, 
 >$$
->q\in B_{r}(p)\implies \exists s\text{ such that } B_{s}(q)\subset B_{r(p)}
+>q\in B_{r}(p)\implies \exists s\text{ such that } B_{s}(q)\subset B_{r}(p)
 >$$
 
 >**Proof**
@@ -79,7 +79,7 @@ It follows from the first theorem that ($f$ is continuous $\implies$ $f^{-1}$ of
 ### Open sets
 
 >[!Definition]
->Subset $U$ of a metric space $X$ is called *open* $\boxed{\text{ in }X}$ if $U$ is a union of balls (or, equivalently, $U$ contains a ball around each point in $U$).
+>Subset $U$ of a metric space $X$ is called *open* $\boxed{\text{ in }X}$ if $U$ is a union of balls in $X$(or, equivalently, $U$ contains a ball in $X$ around each point in $U$).
 
 >[!Example] (counter)Examples of open sets
 >- Any open interval in $\mathbb{R}$ is an open set.

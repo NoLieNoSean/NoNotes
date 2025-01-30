@@ -127,7 +127,7 @@ This proof can be easily rephrased in terms of open balls to prove the theorem f
 >A sequence $(a_{n})$ is *increasing* if $a_{n}\le a_{n+1}$ for all $n\in \mathbb{N}$ and *decreasing* if $a_{n}\ge a_{n+1}$ for all $n\in \mathbb{N}$. A sequence is *monotone* if it is either increasing or decreasing.
 
 >[!Info]
->Note that this only applies to spaces in which an [[Ordered sets|order]] is defined. Does not make sense in vanilla metric spaces. We will stick with $\mathbb{R}$. 
+>Note that this only applies to spaces in which an [[Ordered sets|order]] is defined. Does not make sense in vanilla metric spaces. We will stick to $\mathbb{R}$. 
 
 >[!Theorem]
 >If a sequence is monotone and bounded, it converges.
@@ -165,7 +165,7 @@ So, just to recap:
 >If $(x_{n})\to a$, $(z_{n})\to a$ and $x_{n}<y_{n}<z_{n}$ for all sufficiently large $n$, then $(y_{n})\to a$. 
 
 >**Proof**
->Let $\epsilon>0$ be arbitrary. Then, where must exist an $N_{1}$ such that for all $n\ge N_{1}$, $|x_{n}-a|<\epsilon$, which implies $x_{n}>a-\epsilon$. Similarly, there must exist an $N_{2}$ such that for all $n\ge N_{2}$,  $|z_{n}-a|<\epsilon$, which implies $z_{n}<a+\epsilon$. Thus, $a-\epsilon<y_{n}<a+\epsilon$, i.e, $|y_{n}-a|<\epsilon$. ❏
+>Let $\epsilon>0$ be arbitrary. Then, there must exist an $N_{1}$ such that for all $n\ge N_{1}$, $|x_{n}-a|<\epsilon$, which implies $x_{n}>a-\epsilon$. Similarly, there must exist an $N_{2}$ such that for all $n\ge N_{2}$,  $|z_{n}-a|<\epsilon$, which implies $z_{n}<a+\epsilon$. Thus, $a-\epsilon<y_{n}<a+\epsilon$, i.e, $|y_{n}-a|<\epsilon$. ❏
 
 ---
 ## Limits of some special sequences

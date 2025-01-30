@@ -4,6 +4,9 @@ Grading:
 - Endsem, 40
 - class assignment, 10
 
+References:
+- Mathematical Analysis, TM Apostle
+- 
 # Lecture notes
 
 [[CAL1_L1]] ✅

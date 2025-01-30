@@ -23,17 +23,15 @@ time: 14:00
 
 ### Absolute and relative definitions of open cover compactness
 
-#### Absolute definition for a metric space $E$
-
->[!Definition] Definition 1
+>[!Definition] Absolute definition for a metric space $E$
 >$E$ is *open cover compact* if every open cover of $E$ has a finite subcover.
 
-#### Relative defintion for $E\subset X$
-
->[!Definition] Definition 2
+>[!Definition] Relative defintion for $E\subset X$
 >$E$ is *open cover compact* in $X$ is every open cover of $E$ in $X$ has a finite subcover.
 
-#### Equivalence 
+Emphasis on "every" in both definitions.
+
+**Equivalence** 
 
 $E$ is open cover compact as per definition 1 as a metric space in its own right $\iff$ $E$ is an open cover compact subset of $X$ as per 2.
 
@@ -112,6 +110,8 @@ In the previous lecture, [[Analysis1_L16#Characterization of compact sets|we pro
 
 >**Proof**
 >Let $\{ C_{\alpha} \ |\  {\alpha \in I}\}$ be a collection of compact sets in $X$. Let $C\equiv \bigcap_{\alpha \in I} C_{\alpha}$. Note [[Analysis1_L16#Characterization of compact sets|that]] every $C_{\alpha}$ is closed in $X$ and bounded, and [[Analysis1_L14#Open and closed sets under intersections and unions|that]] an arbitrary intersection of closed sets is closed. Thus, $C$ is closed in $X$. Now, consider an open cover $\{ V_{\alpha}\ |\ {\alpha \in J} \}$ of $C$. Pick any $C_{\alpha}$. Since $X\setminus C$ is open in $X$, and $C_{\alpha}\setminus C\subset X\setminus C$, every element $p \in C_{\alpha}\setminus C$ has a neighborhood $W_{p}\subset X\setminus C$. It follows that $\Omega= \{ V_{\alpha} \ | \ {\alpha \in J}\}\cup \{ W_{p}\ |\ {p \in C_{\alpha} \setminus C}\}$ is an open cover of $C_{\alpha}$. Since $C_{\alpha}$ is compact, $\Omega$ must have a finite subcover $\Omega'\subset \Omega$. Since the $W_{p}$'s do not contain any points from $C$, it must be that $\Lambda= \Omega'\cap \{ V_{\alpha}\ |\ \alpha \in J \}$ must cover $C$. Observe that $|\Lambda|$ is finite and $\Lambda \subset \{ V_{\alpha}\ |\ \alpha \in J \}$, and we are done. ❏
+
+Alternatively, notice that $X\setminus C$ is open in $X$, and use it instead of $\{ W_{p}\ |\ p\in C_{\alpha}\setminus C \}$. 
 
 ---
 ## Equivalence of the three versions of compactness

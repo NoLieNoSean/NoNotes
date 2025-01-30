@@ -6,11 +6,6 @@ tags:
 date: 2025-01-07
 time: 09:13
 ---
-
-Quiz next week on ALG 1 syllabus.
-
----
-
 ## Groups
 
 Refer the last section of [[Analysis1_L2]].
@@ -28,8 +23,10 @@ Abelian examples:
 - The multiplicative group of nonzero rational numbers $(\mathbb{Q}^{\times}, \cdot)$.
 - Addition mod $n$: the residues modulo $n$ for some $n>0$ form a group $(\mathbb{Z}/n\mathbb{Z}, +)$ under addition. Each element of $\mathbb{Z}/n\mathbb{Z}$ is an equivalence class. For example, $\overline{1}=\{ 1+kn : k\in \mathbb{Z} \}\in \mathbb{Z}/n\mathbb{Z}$. Thus, $\mathbb{Z}/n\mathbb{Z}=\{ \overline{0}, \overline{1}, \dots, \overline{n-1} \}$. 
 - Multiplication mod $p$: Let $p$ be a prime. Consider the nonzero residues modulo $p$, which we denote by $(\mathbb{Z}/p\mathbb{Z})^{\times}$. Then, $((\mathbb{Z}/p\mathbb{Z})^{\times}, \times)$ is a group. 
+
   > [!Question]- Why does $p$ need to be prime?
   > If $p$ is prime and $\gcd (p, a)=1$, it follows from [[Bézout’s lemma]] that there exist integers $x$ and $y$ such that $ax+py =1$. So, there exists a number $1\leq r<p$ such that $ar\equiv 1 \mod p$. If $p$ were not prime, say $p=mn$, we would have $mn\equiv0 \mod p$, making it impossible for $m$ and $n$ to have inverses. Can also be explained by [[Fermat's little theorem]].
+
 - The set of all positive integers less than a given positive integer $n$ and co-prime to $n$ form a group under multiplication modulo $n$, which is denoted by $U(n)$.
   Proof: Let $a, b\in U(n)$. By definition,  $(a, n)=(b, n)=1$. To prove closure, we have to show that $ab\equiv c\mod n$, where $c\in U(n)$. Assume $c\not\in U(n)$, i.e, $(c, n)\ne 1$. Then, $ab-c=kn$ for some integer $k$, which implies $ab-c$ (and therefore $ab$) must be divisible by $(c, n)$. Contradiction! The existence of an identity is evident. To prove the existence of inverses, we invoke [[Euler's theorem]], which tells us that the order of every $a\in U(n)$ is less than or equal to the order (size) of $U(n)$, i.e, every element generates a cyclic subgroup. This is great, since we know that there always exists $k$ every every $a\in U(n)$ such that $a^{k}=1$, so the inverse of $a$ will just be $a^{k-1}$. 
 
@@ -44,15 +41,6 @@ Let $G$ be a group.
 - For any $g\in G$, $(g^{-1})^{-1}=g$.
 - If $a, b\in G$, then $(ab)^{-1}=b^{-1}a^{-1}$.
 - Pick a $g\in G$. Then the map $G\to G$ given by $x\mapsto gx$ is a bijection. The map is injective, since if $x_{1}\mapsto y$ and $x_{2}\mapsto y$, we have $gx_{1}=gx_{2}\implies x_{1}=x_{2}$. The map is surjective, since for any $y\in G$, $g^{-1}y\mapsto y$. 
-
-### Isomorphic groups
-
-> [!Definition]
-> Let $G=(G, \star)$ and $H=(H, *)$ be groups. A bijection $\phi:G\to H$ is called an *isomorphism* if 
-> $$
-> \phi(g_{1}\star g_{2})=\phi(g_{1})*\phi(g_{2})\ \ \forall g_{1}, g_{2}\in G.
-> $$
-> If there exists an isomorphism from $G$ to $H$, we say $G$ and $H$ are isomorphic and write $G\cong H$. 
 
 ### Subgroups
 

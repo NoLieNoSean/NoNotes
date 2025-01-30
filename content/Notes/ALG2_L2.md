@@ -6,7 +6,6 @@ tags:
 date: 2025-01-09
 time: 9:10
 ---
-
 ## Symmetric groups
 
 The set of all permutations of $(1, 2, \dots, n)$ form a group, denoted by $S_{n}$. A *cycle* is a special type of permutation. For example, $(1 ~2)$ is what is called a 2-cycle, and represents swapping $1$ and $2$. $(1~2~3)$ is a 3-cycle, and maps 1 to 2, 2 to 3, and 3 to 1. The group operation is composition. Starting from $S_{3}$, they are not abelian.
@@ -51,3 +50,19 @@ The kernel of $\phi$ is the set of all elements in $G$ that it maps to the ident
 > 
 > **Proof of 3**
 > Let $h_{1}, h_{2}\in \mathrm{Im}~\phi$. There must exist $g_{1}, g_{2}\in G$ such that $\phi(g_{1})=h_{1}$ and $\phi(g_{2})=h_{2}$. Then, $\phi(g_{1}g_{2})=\phi(g_{1})\phi(g_{2})=h_{1}h_{2}$. Thus, $h_{1}h_{2}\in \mathrm{Im}~\phi$. Obviously, $1_{H}\in \mathrm{Im}~\phi$. Also, it can be seen from the proof of statement 2 that $h^{-1}=\phi(g_{1})^{-1}=\phi(g_{1}^{-1})\in \mathrm{Im}~\phi$. Thus, $\mathrm{Im}~\phi<H$. 
+
+Note: Actually, $\ker \phi\triangleleft G$, as seen in the next lecture.
+
+> [!Theorem] Proposition
+> Let $\psi:G\to G'$ be a homomorphism of groups, and let $a$ and $b$ be elements of $G$. Let $K$ be the kernel of $\psi$. Then, the following are equivalent:
+> - $\psi(a)=\psi(b)$
+> - $a^{-1}b$ is in $K$
+> - $b$ is in the coset $aK$
+> - The cosets $bK$ and $aK$ are equal.
+
+The last point can be proved by showing that $aK$ and $bK$ are subsets of each other.
+
+> [!Theorem] Proposition
+> Let $K$ be the kernel of a homomorphism $\phi:G\to G$. The fibre of $\phi$ that contains an element $a$ of $G$ is the coset $aK$ of $K$. These cosets partition $G$, and they correspond to elements of the image of $\phi$. 
+> 
+> ![[Pasted image 20250130164743.png]]

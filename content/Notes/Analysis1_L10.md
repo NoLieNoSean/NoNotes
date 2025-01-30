@@ -6,7 +6,7 @@ tags:
 date: 2024-09-06
 time: 10:30
 ---
-## What does $\lim_{ x \to p }f(x) = p$ mean?
+## What does $\lim_{ x \to p }f(x)$ mean?
 
 ### First stab at a definition
 
@@ -14,7 +14,7 @@ time: 10:30
 >Let $f: \mathbb{R}\to \mathbb{R}$.
 >$\lim_{ x \to p }f(x) = q$ means for any $\epsilon>0$, there exists a $\delta>0$, such that  $0<|x-p|<\delta$ implies $|f(x)-q|<\epsilon$. 
 
-Note that if we edited the definition to say $\delta\ge 0$ such that $|x-p|<\delta$, $f(p)$ would (always) be a limit, as we can have $\delta=0$. Not a good idea. Besides, we do not want to make any assertion about $f(p)$.
+Note that if we edited the definition to say $\delta\ge 0$ such that $|x-p|\leq\delta$, $f(p)$ would (always) be a limit, as we can have $\delta=0$. Not a good idea. Besides, we do not want to make any assertion about $f(p)$.
 
 Also note that we do NOT want to say $0<|f(x)-q|<\epsilon$, since $f(x)$ may be a constant function around $x=p$. 
 

@@ -12,20 +12,23 @@ Grading:
 - endsem: 50%
 
 Books:
-- Basic Algebra, Chug (ig)
 - Artin
 - Visual Group Theory
 - Napkin
 
 # Lecture Notes
 
-- [[Algebra2_L1]] ✅
+- [[ALG2_L1]] ✅
 	- Groups, examples of groups, subgroups
-- [[Algebra2_L2]] ✅
+- [[ALG2_L2]] ✅
 	- Symmetric groups, homomorphisms
-- [[Algebra2_L3]] ✅
-	- Cosets, Quotient groups, normal subgroups
-- [[Algebra2_L4]]
+- [[ALG2_L3]] ✅
+	- Cosets, Lagrange's theorem, quotient groups, normal subgroups
+- [[ALG2_L4]]
+	- Isomorphisms, automorphisms and conjugation, correspondence theorem, first isomorphism theorem
+- [[ALG2_L5]]
+- [[ALG2_L6]]
+
 
 # Others
 

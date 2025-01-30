@@ -25,7 +25,7 @@ $$
 $$
 This can be interpreted as saying the dot product of two vectors in $\mathbb{R}^n$ is less than or equal to the product of their magnitudes:
 $$
-|\mathbf{v}\cdot \mathbf{w}|\le |\mathbf{v}||\mathbf{w}|
+|\mathbf{v}\cdot \mathbf{w}|\le \lVert \mathbf{v} \rVert \lVert \mathbf{w} \rVert 
 $$
 If we apply the same definition to vectors over $\mathbb{C}$, we get the CS inequality in complex numbers.
 $$
@@ -34,15 +34,7 @@ $$
 Proof on Rudin, p14.
 
 **Neat proof by Mohak:**
-From the CS inequality for real numbers and the triangle inequality, we have
+From the CS inequality for real numbers and the triangle inequality for complex numbers, we have
 $$
-\underbrace{ \left|\sum_{i=1}^na_ib_i\right|^2\le\left( \sum_{i=1}^{n} |a_{i}b_{i}| \right)^{2} }_{\text{triangle inequality} }=\underbrace{ \left( \sum_{i=1}^{n} |a_{i}||b_{i}| \right)^{2}\le\sum_{i=1}^n\left|a_i\right|^2\sum_{i=1}^n\left|b_i\right|^2 }_{\text{CS inequality for reals} }.
+\underbrace{ \left|\sum_{i=1}^na_i \overline{{b_i}}\right|^2\le\left( \sum_{i=1}^{n} |a_{i}\overline{{b_i}}| \right)^{2} }_{\text{triangle inequality} }=\underbrace{ \left( \sum_{i=1}^{n} |a_{i}||b_{i}| \right)^{2}\le\sum_{i=1}^n\left|a_i\right|^2\sum_{i=1}^n\left|b_i\right|^2 }_{\text{CS inequality for reals} }.
 $$
-
->[!Question]
->Why is it $\overline{b}_{j}$ and not $b_{j}$?
-
->[!Question]
->Why is the CS inequality relevant here?
-
-
