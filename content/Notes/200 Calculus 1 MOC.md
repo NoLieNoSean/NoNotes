@@ -9,7 +9,10 @@ References:
 - 
 # Lecture notes
 
-[[CAL1_L1]] ✅
-[[CAL1_L2]] ✅
-[[CAL1_L3]] ✅
-[[CAL1_L4]]
+- [[CAL1_L1]] ✅
+	- The p-norm
+- [[CAL1_L2]] ✅
+	- Equivalence of p-norms
+- [[CAL1_L3]] ✅
+	- Equivalence of all norms on a finite dimensional normed linear space
+- [[CAL1_L4]]

@@ -57,3 +57,5 @@ All the properties except the triangle inequality are trivial to show. The only 
 > \end{align}
 > $$
 > ◻️
+
+Quick exercise: verify the triangle inequality for the infinity norm.

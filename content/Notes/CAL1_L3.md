@@ -8,7 +8,7 @@ time: 11:50
 ---
 ## Equivalence of norms
 
-We will prove that all norms on a finite dimensional vector space are equivalent.
+We will prove that all norms on a finite dimensional normed linear space are equivalent.
 
 > [!Theorem] Lemma
 > A norm is a continuous function.

@@ -22,6 +22,7 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 - [[DMAT_L6]]
 	- Picking objects, counting functions, Cayley's theorem on trees
 - [[DMAT_L7]]
+- [[DMAT_L8]]
 
 # Tutorials
 

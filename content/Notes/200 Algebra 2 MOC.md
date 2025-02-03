@@ -31,6 +31,10 @@ Books:
 - [[ALG2_L6]]
 
 
+
+[[Normalizers and Conjugacy]]
+[[Finding all subgroups of S4]]
+[[Dummit and Foote Solutions]]
 # Others
 
 [[ALG2 Quiz 1]]

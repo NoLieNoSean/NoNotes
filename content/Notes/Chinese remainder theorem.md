@@ -1,7 +1,7 @@
 The Chinese Remainder Theorem is a tool for solving systems of linear congruences of the following form: $a_1x \equiv b_1 \pmod {m_1}, ....,a_{n-1}x \equiv \pmod{m_{n-1}}, a_nx \equiv b_n \pmod {m_n}$.
 
 > [!Theorem] Chinese remainder theorem
-> Let m$_1$, . . . , m$_n$ be positive integers different from 1 and pairwise relatively prime. Then for any nonzero integers a$_1$, . . . , a$_r$ the system of linear congruences$x \equiv a_1 \pmod{m_1}, ..., x \equiv a_r \pmod{m_r}$ has integer solutions, with any one of the solutions being congruent modulo $gcd(m_1, m_2 ...m_n)$ (since they are relatively prime, this will simply evaluate to their product).
+> Let m$_1$, . . . , m$_r$ be positive integers different from 1 and pairwise relatively prime. Then for any nonzero integers a$_1$, . . . , a$_r$ the system of linear congruences$x \equiv a_1 \pmod{m_1}, ..., x \equiv a_r \pmod{m_r}$ has integer solutions, with any one of the solutions being congruent modulo $gcd(m_1, m_2 ...m_r)$ (since they are relatively prime, this will simply evaluate to their product).
 
 Proof
 Let there exist a solution $X$ for the system of modular congruences

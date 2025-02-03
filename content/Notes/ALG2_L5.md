@@ -23,5 +23,15 @@ Let $\phi:G\to \mathcal{G}$ be a homomorphism, and let $H<G$. Consider the restr
 > **Proof of 3**
 > Let $a\in \mathcal{H}$, $b\in \mathcal{G}$. Since $\phi$ is surjective, there exist $x\in H$, $g\in G$ such that $\phi(x)=a$ and $\phi(g)=b$. Since $H$ is normal, $gxg^{-1}\in H$, so $\phi(gxg^{-1})=bab^{-1}\in \mathcal{H}$. 
 
-[!Theorem] The correspondence theorem
-Let $\phi:G\to \mathcal{G}$ be a surjective group homomorphism with kernel $K$. There is a bijective correspondence between subgroups of $\mathcal{G}$ and subgroups of $G$ that contain $K$:
+> [!Theorem] The correspondence theorem
+> Let $\phi:G\to \mathcal{G}$ be a surjective group homomorphism with kernel $K$. There is a bijective correspondence between subgroups of $\mathcal{G}$ and subgroups of $G$ that contain $K$:
+> 
+> A subgroup $H<G$ that contains $K$ $~~\leftrightarrow~~$ its image $\phi(H)$ in $\mathcal{G}$
+> A subgroup $\mathcal{H}<\mathcal{G}$ $~~\leftrightarrow~~$ its inverse image $\phi ^{-1}(\mathcal{H})$ in $G$. 
+> 
+> If $H$ and $\mathcal{H}$ are corresponding subgroups, then $H\triangleleft G\iff \mathcal{H}\triangleleft \mathcal{G}$. Also, $|H|=|\mathcal{H}||K|$.
+
+**Proof**
+Note that if $H<G$ containing $K$ (and for any subgroup in general), $\phi(H)<\mathcal{G}$, and for any $\mathcal{H}<\mathcal{G}$, $\phi ^{-1}(\mathcal{H})<G$ and contains $K$, from the previous proposition. We now have to show the bijectivity of the correspondence. $\phi(\phi ^{-1}(\mathcal{H}))=\mathcal{H}$ is true for any surjective map, so is $H\subset \phi ^{-1}(\phi(H))$. It remains to be shown that $H\supset \phi ^{-1}(\phi(H))$.  
+
+
