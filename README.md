@@ -2,8 +2,8 @@
 
 https://nolienosean.github.io/NoNotes/
 
-Here are my notes from the first semester at CMI, with additional contributions from Karan and Anirudha.
+Notes from my undergraduate studies at CMI, with additional contributions from Karan and Anirudha.
 
-These were written primarily for personal use; I make no claims about their quality, completeness, or accuracy. 
+These are written primarily for personal use; I make no claims about their quality, completeness, or accuracy. 
 
 Pull requests are welcome!
