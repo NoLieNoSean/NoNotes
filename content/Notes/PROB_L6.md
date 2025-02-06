@@ -2,7 +2,7 @@
 tags:
   - PROB
   - Lecture
-date: 2025-01-21
-time: 17:00
+date: 2025-02-03
+time: 15:30
 ---
 

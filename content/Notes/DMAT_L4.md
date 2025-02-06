@@ -45,7 +45,7 @@ Now we're equipped to have a crack at these.
 
 > **Proof of 1**
 > 
-> We have to construct a bijection from $(A\times \{ 1 \})\cup(A\times \{ 2 \})\to A$. Define $A_{1}\equiv A\times \{ 1 \}$, $A_{2}\equiv A\times \{ 2 \}$. Let $A$ have a disjoint covering $A=\bigcup D_{i}$. This gives us disjoint coverings for $A_{1}$ and $A_{2}$: $A_{1}=\bigcup (D_{i}\times \{ 1 \})$, $A_{1}=\bigcup (D_{i}\times \{ 2 \})$.
+> We have to construct a bijection from $(A\times \{ 1 \})\cup(A\times \{ 2 \})\to A$. Define $A_{1}\equiv A\times \{ 1 \}$, $A_{2}\equiv A\times \{ 2 \}$. Let $A$ have a disjoint covering $A=\bigcup D_{i}$. This gives us disjoint coverings for $A_{1}$ and $A_{2}$: $A_{1}=\bigcup (D_{i}\times \{ 1 \})$, $A_{2}=\bigcup (D_{i}\times \{ 2 \})$.
 > 
 > Define $\phi:\{ D_{i}\times \{ 1 \} \}\cup \{ D_{i}\cup \{ 2 \} \}\to \{ D_{i} \}$ such that it maps the elements of $(D_{k}\times \{ 1 \})\cup(D_{k}\times\{ 2 \})$ to $D_{k}$ alternatively, i.e, if the elements of $D_{k}$ were $d_{1}, d_{2}, \dots$, $\phi$ would map $(d_{1}, 1)\mapsto d_{1}$, $(d_{1}, 2)\mapsto d_{2}$, $(d_{2}, 1)\mapsto d_{3}$, and so on. Note that $\phi$ is a bijection. Thus, $|A\times \{ 1 \}\cup A\times \{ 2 \}|=|A|$, i.e, $|A|+|A|=|A|$.
 > 

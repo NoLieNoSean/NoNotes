@@ -31,7 +31,7 @@ Let $\phi:G\to \mathcal{G}$ be a homomorphism, and let $H<G$. Consider the restr
 > 
 > If $H$ and $\mathcal{H}$ are corresponding subgroups, then $H\triangleleft G\iff \mathcal{H}\triangleleft \mathcal{G}$. Also, $|H|=|\mathcal{H}||K|$.
 
-**Proof**
-Note that if $H<G$ containing $K$ (and for any subgroup in general), $\phi(H)<\mathcal{G}$, and for any $\mathcal{H}<\mathcal{G}$, $\phi ^{-1}(\mathcal{H})<G$ and contains $K$, from the previous proposition. We now have to show the bijectivity of the correspondence. $\phi(\phi ^{-1}(\mathcal{H}))=\mathcal{H}$ is true for any surjective map, so is $H\subset \phi ^{-1}(\phi(H))$. It remains to be shown that $H\supset \phi ^{-1}(\phi(H))$.  
-
-
+> **Proof**
+> Note that if $H<G$ containing $K$ (and for any subgroup in general), $\phi(H)<\mathcal{G}$, and for any $\mathcal{H}<\mathcal{G}$, $\phi ^{-1}(\mathcal{H})<G$ and contains $K$, from the previous proposition. We now have to show the bijectivity of the correspondence. $\phi(\phi ^{-1}(\mathcal{H}))=\mathcal{H}$ is true for any surjective map, so is $H\subset \phi ^{-1}(\phi(H))$. It remains to be shown that $H\supset \phi ^{-1}(\phi(H))$. Let $x$ be an element of $\phi ^{-1}(\phi(H))$. By definition of the inverse image, $\phi(x)\in \phi(H)$, say $\phi(x)=\phi(a)$. Then, $a^{-1}x$ is in the kernel $K$, and since $H$ contains $K$, $a^{-1}x$ is in $H$. Since both $a$ and $a^{-1}x$ are in $H$, $x$ is in $H$ too.
+> 
+> The remaining assertion follows from the previous proposition.

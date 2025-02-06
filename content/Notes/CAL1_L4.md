@@ -3,7 +3,7 @@ tags:
   - CAL1
   - Lecture
 date: 2025-01-17
-time: 23:14
+time: 11:50
 ---
 Recall what an [[Algebra1_L21#Inner Product Spaces|inner product space]] is. Now, define $C[a, b]\equiv \{ f:[a, b]\to \mathbb{C}:f\text{ is continuous} \}$. Define
 $$

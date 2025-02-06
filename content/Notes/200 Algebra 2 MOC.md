@@ -26,15 +26,28 @@ Books:
 	- Cosets, Lagrange's theorem, quotient groups, normal subgroups
 - [[ALG2_L4]] ✅
 	- Isomorphisms, automorphisms and conjugation, first isomorphism theorem
-- [[ALG2_L5]]
+- [[ALG2_L5]] ✅
 	- Correspondence Theorem
 - [[ALG2_L6]]
+	- Product of groups, third isomorphism theorem
+- [[ALG2_L7]]
+	- More on product groups, Double cosets, group actions
 
 
 
 [[Normalizers and Conjugacy]]
 [[Finding all subgroups of S4]]
+[[Group of units mod n is cyclic]]
+
+
 [[Dummit and Foote Solutions]]
+
 # Others
 
 [[ALG2 Quiz 1]]
+[[ALG2 Quiz 2]]
+
+
+
+---
+

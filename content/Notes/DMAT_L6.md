@@ -1,12 +1,10 @@
 ---
-tags: 
+tags:
+  - DMAT
+  - Lecture
+  - Processed
 date: 2025-01-27
 time: 11:58
----
-
-Quiz 1 - Feb 5
-Assignment 1 - Feb 1/2
-
 ---
 ## Picking objects
 
@@ -23,6 +21,7 @@ $$
 \end{array}
 $$
 
+---
 ## Counting functions
 
 Let $f:A\to B$, $|A|=m$, $|B|=n$.
@@ -48,7 +47,7 @@ $$
 = & \sum_{i=1}^{n-1} (-1)^{i+1}\binom n i (n-i)^{m}
 \end{align}
 $$
-Subtracting it away from $n^{m}$, we get (Note that setting the upper to $n$ or $n-1$ is the same)
+Subtracting it away from $n^{m}$, we get (Note that setting the upper limit to $n$ or $n-1$ is the same)
 $$
 \begin{align}
  \text{Total number of surjections}& =n^{m}-\sum_{i=1}^{n-1} (-1)^{i+1}\binom n i (n-i)^{m} \\
@@ -60,8 +59,22 @@ Incidentally, the Sterling number of the second kind, which counts the number of
 $$
 S(m, n)=\frac{1}{n!} \sum_{i=0}^{n} (-1)^{i}\binom n i (n-i)^{m}
 $$
-
-
-
-
 ---
+
+## Basic properties of the binomial coefficient
+
+$$
+\binom nr+ \binom{n}{r+1}=\binom{n+1}{r+1}
+$$
+$$
+\sum_{r=o}^{n} \binom{n}{r}=2^{n}
+$$
+$$
+\binom{k}{k}+\binom{k+1}k+\binom{k+2}{k}+\dots+\binom{k+n}{k}=\binom{k+n+1}{k+1}
+$$
+$$
+\binom{n}{r}=\frac{n}{r}\binom{n-1}{r-1}
+$$
+$$
+\binom{n_{1}}{r}\binom{n_{2}}{0}+\binom{n_{1}}{r-1}\binom{n_{2}}{1}+\dots+\binom{n_{1}}{0}\binom{n_{2}}{r}=\binom{n_{1}+n_{2}}{r}
+$$

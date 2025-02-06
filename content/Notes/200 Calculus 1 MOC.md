@@ -6,7 +6,6 @@ Grading:
 
 References:
 - Mathematical Analysis, TM Apostle
-- 
 # Lecture notes
 
 - [[CAL1_L1]] ✅
@@ -16,3 +15,8 @@ References:
 - [[CAL1_L3]] ✅
 	- Equivalence of all norms on a finite dimensional normed linear space
 - [[CAL1_L4]]
+- [[CAL1_L5]]
+- [[CAL1_L6]]
+- [[CAL1_L7]]
+- [[CAL1_L8]]
+- [[CAL1_L9]]

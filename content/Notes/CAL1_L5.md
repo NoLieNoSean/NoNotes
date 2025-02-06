@@ -1,8 +1,8 @@
 ---
 tags:
-  - PROB
+  - CAL1
   - Lecture
 date: 2025-01-21
-time: 17:00
+time: 11:50
 ---
 

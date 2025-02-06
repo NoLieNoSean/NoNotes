@@ -74,7 +74,7 @@ Note that the image of one map is the kernel of the following map in the chain.
 ## First isomorphism theorem
 
 > [!Theorem]
-> Let $\phi:G\to G'$ be a homomorphism, and let $\psi:G\to G/\ker\phi$ be a projection map. Then, there exists a unique injective homomorphism $\overline{\phi}:G/\ker\phi\to G'$ such that $\phi=\psi\circ \overline{\phi}$.
+> Let $\phi:G\to G'$ be a homomorphism, and let $\psi:G\to G/\ker\phi$ be a projection map. Then, there exists a unique injective homomorphism $\overline{\phi}:G/\ker\phi\to G'$ such that $\phi=\psi\circ \overline{\phi}$. In other words, $G/\ker \phi\cong\mathrm{Im}~G$.
 > 
 >  ![[Pasted image 20250130111100.png]]
 

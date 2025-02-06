@@ -19,10 +19,12 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 	- Disjoint coverings, more properties of infinite cardinals
 - [[DMAT_L5]] ✅
 	- Graph colorings: another application of Zorn's lemma
-- [[DMAT_L6]]
-	- Picking objects, counting functions, Cayley's theorem on trees
-- [[DMAT_L7]]
+- [[DMAT_L6]] ✅
+	- Picking objects, counting functions
+- [[DMAT_L7]] ✅
+	- Proof of Cayley's theorem on trees using Zorn's lemma
 - [[DMAT_L8]]
+	- The twelve fold way, generating functions
 
 # Tutorials
 
@@ -31,3 +33,4 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 # Assignments
 
 [[DMAT_PS1]]
+[[DMAT_AS1]]

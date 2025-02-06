@@ -6,8 +6,6 @@ tags:
 date: 2025-01-15
 time: 11:50
 ---
-
-
 ## Zorn's lemma
 
 An chain is a subset of a [[Analysis1_L2|partial order]] in which any two elements are comparable (basically, a totally ordered subset). Zorn's lemma is equivalent to the axiom of choice.
@@ -15,7 +13,7 @@ An chain is a subset of a [[Analysis1_L2|partial order]] in which any two elemen
 > [!Theorem] Zorn's Lemma
 > Let $(S, \leq)$ be any partially ordered set such that every chain $C$ has an upper bound. Then, $S$ has a maximal element.
 
-A maximal element has no element greater or equal to it. It is NOT greater or equal to than every element in the set.
+A maximal element has no element greater or equal to it. It is NOT greater that or equal to every element in the set.
 
 ---
 ## Properties of infinite cardinals

@@ -1,5 +1,7 @@
 ---
-tags: 
+tags:
+  - DMAT
+  - Lecture
 date: 2025-02-03
 time: 11:53
 ---
@@ -7,10 +9,10 @@ time: 11:53
 
 Placement of $m$ balls in $n$ boxes.
 
-unrestricted
-- labeled, unlabeled: $n^{m}$
+Unrestricted
+- labeled, labeled: $n^{m}$
 - unlabeled, labeled: $\binom{n+m-1}{n-1}$
-- labeled, unlabeled: $\sum_{i=1}^{n}\hat{S}(m, i)$, where $\hat{S}(m, i)=\frac{S(m, i)}{i!}$.
+- labeled, unlabeled: $\sum_{i=1}^{n}{S}(m, i)$.
 - unlabeled, unlabeled: $P_{n}=\sum_{i=1}^{n}P(m, i)$. where $P(m, i)$ is the number of ways to split $m$ into $i$ parts. No closed for $P_{n}$. 
 
 Generating function for $P_{n}$:
@@ -19,22 +21,23 @@ $$
 $$
 Generating function for (unlabeled, labeled): $(1+x+x^{2}+\dots)^{n}=\frac{1}{(1-x)^{n}}=(1-x)^{-n}$.
 
-injective
+Injective
 - labeled, labeled: $(n)_{m}$
 - unlabeled, labeled : $\binom nm$
 - labeled, unlabeled: 0 or 1
 - unlabeled, unlabeled: 0 or 1
 
 Surjective
-- labeled, labeled: $S(m, n)$
+- labeled, labeled: $S(m, n)n!$
 - unlabeled, labeled: $\binom{m-1}{n-1}$
-- labeled, unlabeled: $\hat{S}(m, n)$
+- labeled, unlabeled: $S(m, n)$
 - unlabeled, unlabeled: $P(m, n)$. 
 
 
 ---
-
 ## Recurrence relations and generating functions
+
+### Number of subsets
 
 Let $F(n)=$ number of subsets of $[n]$.
 
@@ -49,7 +52,7 @@ $$
 so, $\phi(x)=\frac{1}{1-2x}=1+2x+(2x)^{2}+(2x)^{3}+\dots$
 
 
----
+### The Fibonacci sequence
 
 Let $F(n)$ be the Fibonacci sequence.
 
@@ -81,7 +84,7 @@ We know $a+b=1$ and $a\beta+b\alpha=0$.
 We can solve for $a$ and $b$: $a=\frac{{\sqrt{ 5 }-1}}{2\sqrt{ 5 }}$, $b=\frac{{\sqrt{ 5 }+1}}{2\sqrt{ 5 }}$.
 Thus, we have $F(n)=a\alpha^{n}+ b\beta^{n}$.
 
----
+### Derangements
 
 $D_{n}$ is the number of derangements of size $n$.
 
