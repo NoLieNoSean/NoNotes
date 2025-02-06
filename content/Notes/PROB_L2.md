@@ -93,11 +93,4 @@ P(R_{2}) & =P(R_{2}/R_{1})P(R_{1})+P(R_{2}/B_{1})P(B_{1}) \\
 
 \end{align}
 $$
----
 
-## Independent events
-
-We say two events are independent if $P(A\cap B)=P(A)P(B)$.
-Events $A_{1}, \dots, A_{n}$ are said to be independent if $P(A_{1}\cap A_{2}\cap\dots \cap A_{n})=P(A_{1})P(A_{2})\dots P(A_{n})$ and any subcollection of $\{ A_{i} \}$ containing at least two but fewer than $n$ events to be mutually independent. 
-
-Note that if $A_{1}, \dots, A_{n}$ are pairwise independent, they need not be independent as a collection. For example, let $\Omega=\{ a, b, c, d \}$ and let the probability function assign a probability of $\frac{1}{4}$ for each element in $\Omega$. Consider the events $A_{1}=\{ b, c \}$, $A_{2}=\{ b, d \}$, and $A_{3}=\{ c, d \}$. $P(A_{i})=\frac{1}{2}$, $P(A_{i}\cap A_{j})=\frac{1}{4}$. Thus, the $A_{i}$s are pairwise independent. But, $P(A\cap B\cap C)=0$. 

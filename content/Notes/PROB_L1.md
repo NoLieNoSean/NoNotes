@@ -56,6 +56,9 @@ In a *continuous probability space* $(\Omega, \mathcal{F}, \mathbf{P})$, the eve
 
 We will mostly be working with finite and discrete probability spaces in this course.
 
+> [!Important]
+> When working with finite and discrete probability spaces, the event space is almost always the power set of $\Omega$, since we are able to assign probabilities to the elementary events and all events can be expressed as at most countable unions of elementary events. So, the probability space presentation is usually shortened from $(\Omega, P(\Omega), \mathbf{P})$ to $(\Omega, \mathbf{P})$.
+
 ---
 
 ## Properties of the probability function
