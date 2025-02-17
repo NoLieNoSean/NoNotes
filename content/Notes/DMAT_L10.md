@@ -48,5 +48,7 @@ Size of the largest antichain(may not be unique) = number of chains required to 
 Example, in any set of 6 people, there are either 3 people who mutually know each other or 3 people who don't mutually know each other.
 6 vertex complete graph. edge is red if know, blue if not not know. Total of 15 edges. For any arbitrary coloring of these edges, we have to show that either there is a red triangle or a blue triangle.
 
-Example: Consider a 9 vertex graph and 2-color all edges. Either there exists a red 
+Example: Consider a 9 vertex graph and 2-color all edges. Either there exists a red complete graph on 3 vertices or a blue complete graph on 4 vertices.
+
+Geometric application: for all $n$ there exists $f(n)$ such that given $f(n)$ points on the plane (no 3 collinear) there exists a convex $n$ gon.
 
