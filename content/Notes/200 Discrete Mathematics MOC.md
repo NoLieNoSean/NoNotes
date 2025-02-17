@@ -26,11 +26,14 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 - [[DMAT_L8]]
 	- The twelve fold way, generating functions
 - [[DMAT_L9]]
+	- Catalan numbers
 - [[DMAT_L10]]
+	- Pigeon hole principle
 
 # Tutorials
 
 [[DMAT_T1]] ✅
+[[DMAT_Tn1]] (where $(n_{k})$ is a subsequence of $2, 3, \dots$)
 
 # Assignments
 
