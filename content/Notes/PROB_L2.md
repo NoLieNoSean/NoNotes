@@ -93,4 +93,4 @@ P(R_{2}) & =P(R_{2}/R_{1})P(R_{1})+P(R_{2}/B_{1})P(B_{1}) \\
 
 \end{align}
 $$
-
+You can [[2023Probnotes13.pdf#page=22|prove]] that $P(R_{n})=\frac{r}{r+b}$ using induction.

@@ -6,7 +6,7 @@ tags:
 date: 2025-01-22
 time: 11:51
 ---
-## Graph colorings: another application of Zorn's lemma
+## De Bruijn–Erdős theorem: another application of Zorn's lemma
 
 A graph $G=(V, E)$ is $k-$colorable if it can be colored using $k$ colors such that no two connected vertices have the same color.
 

@@ -107,6 +107,8 @@ $$
 >$$
 >Similarly, $c_{i}=0$ for all $i$. Thus, $B\cup C$ is linearly independent. ❏
 
+
+!!!! this seems sus. Take 3 lines in $\mathbb{R}^{2}$.
 >[!Theorem] Corollary
 > $$
 > \dim \left( \sum_{i=1}^n W_{i} \right) = \sum_{i=1}^{n} (-1)^{n+1} \left(\sum_{1 \leq i_{1}<\dots<i_{k} \leq n} \dim(W_{i_{1}} \cap \dots \cap W_{i_{k}})\right)

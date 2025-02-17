@@ -25,6 +25,8 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 	- Proof of Cayley's theorem on trees using Zorn's lemma
 - [[DMAT_L8]]
 	- The twelve fold way, generating functions
+- [[DMAT_L9]]
+- [[DMAT_L10]]
 
 # Tutorials
 

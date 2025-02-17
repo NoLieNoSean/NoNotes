@@ -20,7 +20,7 @@ time: 9:10
 
 Note that $\phi ^{-1}$ is well defined because $\phi$ is a bijection.
 
-This lemma shows that when $\phi$ is an isomorphism, we can make a computation in either group,  then use $\phi$ or $\phi ^{-1}$ to carry it over to the other. So, for computation with the group law, the two groups have identical properties. For example, if $g\in G$ has order $k$, then $\phi(g)\in H$ also has order $k$. Similarly, if $G'$ is a subgroup of $G$, then $\phi(G')$ is a subgroup of $H$. 
+This lemma shows that when $\phi$ is an isomorphism, we can make a computation in either group,  then use $\phi$ or $\phi ^{-1}$ to carry it over to the other. So, for computation with the group law, the two groups have identical properties. For example, if $g\in G$ has order $k$, then $\phi(g)\in H$ also has order $k$. Similarly, if $G'$ is a subgroup of $G$, then $\phi(G')$ is a subgroup of $H$ (this is also true for vanilla homomorphisms, but $\phi$ being an isomorphism also guarantees $|G'|=|\phi(G')|$).
 ### Automorphisms
 
 Recall that, if $\phi:G_{1}\to G_{2}$ is a [[ALG2_L2#Homomorphisms|homomorphism]],
@@ -39,13 +39,13 @@ $\phi$ is called an *automorphism* if $G_{1}=G_{2}$. The set of all automorphism
 
 The most important type of automorphism is *conjugation*: let $g$ be a fixed element of a group $G$. Conjugation by $g$ is the map $\phi:G\to G$ defined by $x\mapsto gxg^{-1}$. This is an automorphism because, first of all, it is a homomorphism, and second, it is bijective because it have an inverse function: conjugation by $g^{-1}$. 
 
-Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in G$. Conjugates behave similar algebraic behavior, since they are the images of each other under an automorphism.  
+Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in G$. Conjugates have similar algebraic behavior, since they are the images of each other under an isomorphism.  
 
 > [!Theorem] Lemma
 > If $H<G$, $g\in G$, then $gHg^{-1}<G$. 
 
 > **Proof**
-> $gHg^{-1}$ is the image of a subgroup under an automorphism.
+> $gHg^{-1}$ is the image of a group under an homomorphism. Additionally, $|H|=|gHg^{-1}|$, since conjugation is an isomorphism.
 
 > [!Theorem] Corollary
 > If a group $G$ has just one subgroup $H$ of order $r$, then that subgroup is normal.

@@ -78,3 +78,7 @@ $$
 $$
 \binom{n_{1}}{r}\binom{n_{2}}{0}+\binom{n_{1}}{r-1}\binom{n_{2}}{1}+\dots+\binom{n_{1}}{0}\binom{n_{2}}{r}=\binom{n_{1}+n_{2}}{r}
 $$
+$$
+\binom{n}{k}-\binom{n}{k-1}+\dots\mp \binom{n}{1}\pm 1=\binom{n-1}{k}
+$$
+^ easy proof by induction

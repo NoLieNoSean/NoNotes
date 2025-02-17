@@ -12,3 +12,6 @@
 - [[PROB_L6]]
 
 
+---
+[[PROB Quiz 1]]
+[[PROB Quiz 3]]

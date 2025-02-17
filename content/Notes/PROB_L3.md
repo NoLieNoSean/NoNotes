@@ -50,7 +50,7 @@ Also, for any function $f:\mathbb{R}\to[0, 1]$ satisfying the above properties, 
 Consider $n$ independent repetitions of a simple success-failure experiment, like the coin tossing one discussed above. Let $S_{n}$ denote the number of successes in $n$ trials. Then, $S_{n}$ is a random variable that can only assume the values $0, 1, \dots, n$. The probability density for such an experiment is called the binomial density.
 $$
 f(x)=\begin{cases}
-\binom{n}{x}p^{x}(1-p)^{x} & x\in \{ 0, 1, \dots, n \} \\
+\binom{n}{x}p^{x}(1-p)^{n-x} & x\in \{ 0, 1, \dots, n \} \\
 0 & \text{otherwise.} 
 \end{cases}
 $$

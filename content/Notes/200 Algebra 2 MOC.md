@@ -29,9 +29,13 @@ Books:
 - [[ALG2_L5]] ✅
 	- Correspondence Theorem
 - [[ALG2_L6]]
-	- Product of groups, third isomorphism theorem
-- [[ALG2_L7]]
-	- More on product groups, Double cosets, group actions
+	- Product of groups ✅, third isomorphism theorem ✅, Chinese remainder theorem
+- [[ALG2_L7]] ✅
+	- Double cosets, group actions
+- [[ALG2_L8]] ✅
+	- More on group actions, orbit, stabilizer
+- [[ALG2_L9]]
+	- Orbit-stabilizer theorem, semidirect product
 
 
 
@@ -47,7 +51,13 @@ Books:
 [[ALG2 Quiz 1]]
 [[ALG2 Quiz 2]]
 
+[[ALG2_T4]]
 
 
 ---
 
+to-do:
+- [ ] Parse all lectures
+- [ ] Group actions
+- [ ] Both tutorials
+- [ ] 
