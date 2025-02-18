@@ -32,9 +32,9 @@ $$
 
 Consider a complete graph $K_{n}$ on $n$ vertices, where $n=2^{2k}$ for some $k\in \mathbb{Z}$. Color the edges red or blue. Show that there exists either a red clique or a blue clique of size $\frac{1}{2}\log_{2}n=k$.
 
-[!Solution]
-This is an algorithmic proof. Initialize $R\equiv \{  \}$ and $B\equiv \{  \}$. Pick $v_{1}\in K_{n}$. Let $v_{1}$ have $r$ red edges and $b$ blue edges. If $r\geq b$, append $v_{1}$ to $R$ and delete all the $b$ vertices it was connected to through blue edges. Else, append $v_{1}$ to $B$ and delete all the $r$ vertices it was connected to through red edges. Note that after the first step, the number of vertices in the graph is bounded below by $2^{2k-1}$. 
-Pick another $v_{2}\in K_{n}$, and repeat. After the $m$th step, the number of vertices in the graph will be at least $2^{2k-m}$. This guarantees that we will be able to perform $2k$ steps before we run out of vertices. After $2k$ steps, $|R|\geq k$ or $|B|\geq k$. Take a subset of size $k$ from the larger one. 
+> [!Solution]-
+> This is an algorithmic proof. Initialize $R\equiv \{  \}$ and $B\equiv \{  \}$. Pick $v_{1}\in K_{n}$. Let $v_{1}$ have $r$ red edges and $b$ blue edges. If $r\geq b$, append $v_{1}$ to $R$ and delete all the $b$ vertices it was connected to through blue edges. Else, append $v_{1}$ to $B$ and delete all the $r$ vertices it was connected to through red edges. Note that after the first step, the number of vertices in the graph is bounded below by $2^{2k-1}$. 
+> Pick another $v_{2}\in K_{n}$, and repeat. After the $m$th step, the number of vertices in the graph will be at least $2^{2k-m}$. This guarantees that we will be able to perform $2k$ steps before we run out of vertices. After $2k$ steps, $|R|\geq k$ or $|B|\geq k$. Take a subset of size $k$ from the larger one. 
 
 ---
 

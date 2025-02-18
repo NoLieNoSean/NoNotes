@@ -4,18 +4,13 @@ tags:
   - MOC
 ---
 
-Grading:
-- attendance: 5%
-- tutorials: 5%
-- quizzes: 15%
-- midterm: 25%
-- endsem: 50%
-
-Books:
-- Artin
-- Visual Group Theory
-- Napkin
-
+> [!Info]-
+> Grading:
+> - attendance: 5%
+> - tutorials: 5%
+> - quizzes: 15%
+> - midterm: 25%
+> - endsem: 50%
 # Lecture Notes
 
 - [[ALG2_L1]] ✅
@@ -37,27 +32,17 @@ Books:
 - [[ALG2_L9]]
 	- Orbit-stabilizer theorem, semidirect product
 
-
+# Other notes
 
 [[Normalizers and Conjugacy]]
 [[Finding all subgroups of S4]]
 [[Group of units mod n is cyclic]]
-
-
 [[Dummit and Foote Solutions]]
 
-# Others
+# Quizzes
 
-[[ALG2 Quiz 1]]
-[[ALG2 Quiz 2]]
+[[ALG2_Q1]]
+[[ALG2_Q2]]
+# Tutorials
 
 [[ALG2_T4]]
-
-
----
-
-to-do:
-- [ ] Parse all lectures
-- [ ] Group actions
-- [ ] Both tutorials
-- [ ] 

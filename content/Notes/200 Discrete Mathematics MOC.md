@@ -3,12 +3,14 @@ tags:
   - DMAT
   - MOC
 ---
-References
-- Combinatorics: Topics, Techniques, Algorithms, Peter Cameron (Main)
-- Combinatorial Math, Douglass West
-- Enumerative combinatorics vol1, by Richard Stanley
+> [!Info]-
+> References
+> - Combinatorics: Topics, Techniques, Algorithms, Peter Cameron (Main)
+> - Combinatorial Math, Douglass West
+> - Enumerative combinatorics vol1, by Richard Stanley
+> 
+> Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating functions, IEP, Mobius inversions, permutation groups, Polya's enumeration theorem, infinitorial combinatorics, graph theory, finite fields.
 
-Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating functions, IEP, Mobius inversions, permutation groups, Polya's enumeration theorem, infinitorial combinatorics, graph theory, finite fields.
 # Lecture notes
 
 - [[DMAT_L2]] ✅
@@ -39,3 +41,7 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 
 [[DMAT_PS1]]
 [[DMAT_AS1]]
+
+# Quizzes
+
+[[DMAT_Q1]]

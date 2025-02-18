@@ -11,7 +11,7 @@
 - [[PROB_L5]]
 - [[PROB_L6]]
 
+# Quizzes
 
----
-[[PROB Quiz 1]]
-[[PROB Quiz 3]]
+[[PROB_Q1]]
+[[PROB_Q3]]

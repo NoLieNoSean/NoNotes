@@ -1,4 +1,3 @@
-Vasudeva S N
 [[Quiz 1 Probability Theory 2025.pdf]]
 
 # Problem 1
@@ -31,7 +30,7 @@ $$
 $$
 \mathbb{P}(\liminf _{ n \to \infty } A_{n})=\mathbb{P}\left( \bigcup_{n=1}^{\infty}\left( \bigcap_{k=n}^{\infty}A_{k} \right) \right)=\lim_{ n \to \infty } \mathbb{P}\left( \bigcap_{k=n}^{\infty}A_{k} \right)=\sup \{ \mathbb{P}(A_{n}\cap A_{n+1}\cap\dots)\ | \  n\in \mathbb{Z} \},
 $$
-%% where [[PROB_L1#Properties of the probability function|this]] property has been used. Results from [[LimSup and LimInf|here]] have also been used. %%
+where [[PROB_L1#Properties of the probability function|this]] property has been used. Results from [[LimSup and LimInf|here]] have also been used. 
 $$
 \liminf_{ n \to \infty }\mathbb{P}(A_{n})=\lim_{ n \to \infty } \inf \{\mathbb{P}(A_{n}), \mathbb{P}(A_{n+1}), \dots\}=\sup \{ \inf \{\mathbb{P}(A_{n}), \mathbb{P}(A_{n+1}), \dots\}\ | \  n\in \mathbb{Z}\}
 $$
