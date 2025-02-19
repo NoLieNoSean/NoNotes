@@ -31,6 +31,8 @@ This property fails for open intervals. Consider the sequence of nested open int
 >In the above theorem, the intersection is a singleton set if and only if $\lim_{ n \to \infty }(a_{n}-b_{n})=0$.
 
 [[Analysis1_HW3.pdf#page=2|Refer]] 2(b) for proof.
+
+Note that the nested interval property is equivalent to the LUB property, and could have been used in place of it to establish the completeness of $\mathbb{R}$, with the LUB property being derived from it.
 ### The Archimedean property
 
 >[!Theorem]

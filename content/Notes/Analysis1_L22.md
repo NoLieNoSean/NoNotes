@@ -10,8 +10,6 @@ time: 10:30
 
 ## Connected sets
 
-### Definition
-
 >[!Definition]
 >For a metric space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both [[Analysis1_L13#Open sets|open]] in $X$. 
 
