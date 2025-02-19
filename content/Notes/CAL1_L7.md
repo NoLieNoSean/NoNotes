@@ -2,6 +2,7 @@
 tags:
   - CAL1
   - Lecture
+  - Processed
 date: 2025-01-31
 time: 11:50
 ---
@@ -39,15 +40,34 @@ Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}
 - triangle inequality holds
 
 However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x)_{n}\sim (y)_{n}$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. Note that $\tilde{d}$ is well defined, and that $(\tilde{X}, \tilde{d})$ is a metric space.
+#### $(\tilde{X}, \tilde{d})$ is complete
 
-We will now show that $(\tilde{X}, \tilde{d})$ is complete. Consider a Cauchy sequence in $\tilde{X}$: $([(x_{*, 1})], [(x_{*, 2})], \dots)$. By passing to subsequences if necessary, we can assume that given $n$, $\tilde{d}([(x_{*, k})], [(x_{*, l})])< 2^{-n}$ for all $l, k\geq n$. Similarly, by passing to subsequences if necessary, we can assume that for all $n$, given $a$, $d(x_{b, n}, x_{c, n})< 2^{-a}$ for all $b, c\geq a$.
+Consider a Cauchy sequence in $\tilde{X}$: $([(x_{n, 1})], [(x_{n, 2})], \dots)$. By passing to subsequences if necessary, we can assume that given $m$, $\tilde{d}([(x_{n, k})], [(x_{n, l})])< 2^{-m}$ for all $l, k\geq m$. Similarly, by passing to subsequences if necessary, we can assume that for all $k$, given $c$, $d(x_{a, k}, x_{b, k})< 2^{-c}$ for all $a, b\geq c$.
 
-Let $(z_{k})\equiv(x_{k, k})$. We will first show that $(z_{k})$ is a Cauchy sequence in $X$, and then that $([(x_{*, k})])\to[(z_{k})]$. 
+Let $(z_{n})\equiv(x_{n, n})$. We will first show that $(z_{n})$ is a Cauchy sequence in $X$, and then that $([(x_{*, n})])\to[(z_{n})]$. 
 
 Let $\epsilon> 0$. Choose $N$ such that $2^{-N}<\epsilon/3$. Now, for all $n, m\geq N$, $d(z_{n}, z_{m})  =d(x_{n, n}, x_{m, m})$. Since $\tilde{d}([(x_{*, n})], [(x_{*, m})])< {2}^{-N}$, $\lim_{ k \to \infty }d(x_{k, n}, x_{k, m})< 2^{-N}$, so there exists $M$ such that $d(x_{k, n}, x_{k, m})< 2^{-N}$ when $k\geq M$. Take $M'=\max\{ M, n, m \}$. Now, 
 $$
 \begin{align}
-d(x_{n, n}, x_{m, m}) & =d(x_{n, n}, x_{M, n})+d(x_{M, n}, x_{M, m})+d(x_{M, m}, x_{m, m}) \\
- & < 2^{-n}+2^{-N}
+d(x_{n, n}, x_{m, m}) & =d(x_{n, n}, x_{M', n})+d(x_{M', n}, x_{M', m})+d(x_{M', m}, x_{m, m}) \\
+ & < 2^{-n}+2^{-N}+2^{-m} \\
+ & < 3\cdot 2^{-N} \\
+ & <\epsilon.
 \end{align}
 $$
+Thus, $d(z_{n}, z_{m})<\epsilon$ for all $n, m\geq N$, and $(z_{n})$ is a Cauchy sequence in $X$.
+
+Let $\epsilon> 0$. Choose $N$ such that $2^{-N}<\epsilon/3$. Let $k> N$. $\tilde{d}([(x_{n, k})], [(z_{n})])  =\lim_{ n \to \infty } d(x_{n, k}, x_{n, n})$. For $n> k$, we can always find $M\geq n$ such that $d(x_{M, k}, x_{M, n})< 2^{-N}$. So, we have $d(x_{n, k}, x_{n, n})\leq d(x_{n, k}, x_{M, k})+d(x_{M, k}, x_{M, n})+d(x_{M, n}, x_{n, n})$ $< 2^{-k}+2^{-N}+2^{-k}< 3\cdot 2^{-N}<\epsilon$. Thus,  
+$$
+\begin{align}
+\tilde{d}([(x_{n, k})], [(z_{n})]) & =\lim_{ n \to \infty } d(x_{n, k}, x_{n, n}) \\
+ & <\epsilon.
+\end{align}
+$$
+Thus, $([(x_{*, n})])\to[(z_{n})]$ and $(\tilde{X}, \tilde{d})$ is complete.
+
+#### $(\tilde{X}, \tilde{d})$ is the completion of $(X, d)$
+
+For each $p\in X$, there is a Cauchy sequence all of whose terms are $p$. Let $P_{p}$ be the element of $\tilde{X}$ which contains this sequence. Define the map $\phi:X\to \tilde{X}$ by $\phi(p)=P_{p}$. It is easy to see that $\phi$ is an *isometry*, $i$.$e$, $\tilde{d}(P_{p}, P_{q})=d(p, q)$ for all $p, q\in X$. 
+
+We will now show that $\phi(X)$ is dense in $\tilde{X}$. Let $[(x_{n})]\in \tilde{X}$ such that $[(x_{n})]\not\in \phi(X)$. Consider the sequence $(P_{x_{1}}, P_{x_{2}}, \dots)$ in $\tilde{X}$. Since $(x_{n})$ is a Cauchy sequence in $X$ and $\tilde{d}(P_{x_{k}}, P_{x_{m}})=d(x_{k}, x_{m})$, $(P_{x_{n}})$ is also a Cauchy sequence. Let $\epsilon> 0$. There exists $N$ such that for all $k, m> N$, $d(x_{k}, x_{m})<\epsilon$. Thus, for $k> N$, $\tilde{d}(P_{x_{k}}, [(x_{n})])=\lim_{ m \to \infty }d(x_{k}, x_{m})<\epsilon$. Therefore, $(P_{x_{n}})\to[(x_{n})]$, proving that $\phi(X)$ is dense in $\tilde{X}$.

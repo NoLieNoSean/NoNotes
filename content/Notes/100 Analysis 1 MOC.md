@@ -3,15 +3,16 @@ tags:
   - ANA1
   - MOC
 ---
-**Prof:** Upendra Kulkarni
-**TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
-
-Reference Material:
-- Principles of Mathematical Analysis, Rudin (Primary)
-- Understanding Analysis, Abbot
-- Analysis 1, Tao
-- Introduction to Real Analysis, Bartle & Sherbert
-- Analysis 1, Amann & Escher
+> [!Info]-
+> **Prof:** Upendra Kulkarni
+> **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
+> 
+> Reference Material:
+> - Principles of Mathematical Analysis, Rudin (Primary)
+> - Understanding Analysis, Abbot
+> - Analysis 1, Tao
+> - Introduction to Real Analysis, Bartle & Sherbert
+> - Analysis 1, Amann & Escher
 
 >[!Info]- Notation
 >- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 

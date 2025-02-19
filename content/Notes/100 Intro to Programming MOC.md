@@ -2,11 +2,7 @@
 tags:
   - MOC
 ---
-
-
 TAs: Aadrita Paul, Arpan Kumar Bag, Harsh Sharma, Ryan Hota
-
-Note: I stopped maintaining Haskell notes a long time ago.
 # Compiled Notes
 [[Using ghc(i)]]
 [[Types]]

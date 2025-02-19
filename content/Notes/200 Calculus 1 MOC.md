@@ -18,10 +18,10 @@
 	- Examples of finding limits in $\mathbb{R}^{2}$
 - [[CAL1_L6]] ✅
 	- Absolutely nothing.
-- [[CAL1_L7]]
+- [[CAL1_L7]] ✅
 	- Cantor intersection theorem, constructing the completion of a metric space
-- [[CAL1_L8]]
-	- Totally bounded sets and their relation to completeness, compactness, and sequential compactness
+- [[CAL1_L8]] ✅
+	- Finite intersection property, total boundedness, characterization of compact sets
 - [[CAL1_L9]]
 	- Extreme value theorem, Lebesgue covering theorem
 - [[CAL1_L10]]
