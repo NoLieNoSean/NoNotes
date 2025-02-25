@@ -24,6 +24,9 @@ time: 11:50
 > [!Theorem]
 > A metric space is separable iff it is second-countable.
 
+
+
+
 > [!Theorem]
 > Every subset of a separable metric space is separable.
 

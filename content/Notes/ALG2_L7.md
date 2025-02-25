@@ -53,9 +53,9 @@ If $\phi$ is injective, then it is said to be *faithful* or *effective*.
 ### Cayley's theorem
 
 > [!Theorem]
-> Any group $G$ is isomorphic to a subgroup of $S_{n!}$.
+> Any group $G$ of order $n$ is isomorphic to a subgroup of $S_{n}$.
 
 > **Proof**
-> Let $G$ act on itself by left multiplication. That is, define $\phi:G\to(G\to G)$ by $\phi(g)=\phi_{g}$, $\phi_{g}(g')=gg'$. Note that $\phi_{1_{G}}$ is the identity on $G$, and $\phi_{g_{1}}\phi_{g_{2}}(g)=g_{1}g_{2}g=\phi_{g_{1}g_{2}}(g)$. Thus, $\phi$ is a group action. If $\phi_{g_{1}}=\phi_{g_{2}}$, then $g_{1}g=g_{2}g$ for all $g\in G$, which implies $g_{1}=g_{2}$, making $\phi$ injective. Note $\phi$ being a homomorphism makes $\mathrm{Im}~\phi$ is a subgroup of $\text{Sym}(G)$. So, $\phi':G\to \mathrm{Im}~\phi$ defined by $\phi'(g)=\phi(g)$ is a bijective homomorphism, or an isomorphism. Thus, $G\cong \mathrm{Im}~\phi<\text{Sym(G)}\cong S_{n!}$. 
+> Let $G$ act on itself by left multiplication. That is, define $\phi:G\to(G\to G)$ by $\phi(g)=\phi_{g}$, $\phi_{g}(g')=gg'$. Note that $\phi_{1_{G}}$ is the identity on $G$, and $\phi_{g_{1}}\phi_{g_{2}}(g)=g_{1}g_{2}g=\phi_{g_{1}g_{2}}(g)$. Thus, $\phi$ is a group action. If $\phi_{g_{1}}=\phi_{g_{2}}$, then $g_{1}g=g_{2}g$ for all $g\in G$, which implies $g_{1}=g_{2}$, making $\phi$ injective. Note $\phi$ being a homomorphism makes $\mathrm{Im}~\phi$ is a subgroup of $\text{Sym}(G)$. So, $\phi':G\to \mathrm{Im}~\phi$ defined by $\phi'(g)=\phi(g)$ is a bijective homomorphism, or an isomorphism. Thus, $G\cong \mathrm{Im}~\phi<\text{Sym(G)}\cong S_{n}$. 
 
 

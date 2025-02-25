@@ -55,8 +55,13 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
 > 1. $f$ is injective iff $H\cap K=\{ 1 \}$.
 > 2. $f$ is a homomorphism iff elements of $K$ commute with elements of $H$.
-> 3. If $H\triangleleft G$, then $HK<G$.
+> 3. $HK<G$ iff $HK=KH$. Useful to note here that
+> 	1. $H\leq N_{G}(K)$$\implies$$HK=KH$.
+> 	2. In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
 > 4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
+
+> [!Warning]
+> Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
 
 > **Proof of 1**
 > Let $H\cap K=\{ 1 \}$. Then, $f(h, k)=f(h', k')\implies$ $hk=h'k'\implies$ $h'^{-1}h=k'k^{-1}$. Notice that since $h'^{-1}h\in H$ and $k'k^{-1}\in K$, it must be that both are equal to $1$. Thus, $h'^{-1}h=1\implies h'=h$ and $k'k^{-1}=1 \implies k'=k$.
@@ -72,10 +77,25 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > $$
 > 
 > **Proof of 3**
-> Since $H$ is normal, $kH=Hk$ for all $k\in K$, hence $KH=KH$. The closure of $HK$ under multiplication follows, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. 
+> 3.1 and 3.2 should be obvious. Given, $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. The reverse implication is also easy to prove.
 > 
 > **Proof of 4**
 > The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
+
+> [!Theorem] Proposition
+> $$
+> |HK|= \frac{|H||K|}{|H\cap K|}.
+> $$
+
+> **Proof**
+> Notice that $HK$ is the union of left cosets of $K$:
+> $$
+> HK=\bigcup_{h\in h}^{} hK.
+> $$
+> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$$\iff$$h_{2}^{-1}h_{1}\in k$$\iff$$h_{2}^{-1}h_{1}\in H\cap K$$\iff$$h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
+> $$
+> |HK|= \left( \frac{{|H|}}{|H\cap K|} \right)|K|.
+> $$
 
 ---
 ## Example: Chinese remainder theorem

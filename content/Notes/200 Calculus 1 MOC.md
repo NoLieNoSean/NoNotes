@@ -39,4 +39,3 @@ to-do:
 - [ ] Fitzpat, C9, 10
 - [ ] Rudin, C7, 8
 - [ ] Apostol, CV2, C8
-

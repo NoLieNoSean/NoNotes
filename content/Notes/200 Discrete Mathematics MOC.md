@@ -25,14 +25,15 @@ tags:
 	- Picking objects, counting functions
 - [[DMAT_L7]] ✅
 	- Proof of Cayley's theorem on trees using Zorn's lemma
-- [[DMAT_L8]]
+- [[DMAT_L8]] ✅
 	- The twelve fold way, generating functions
-- [[DMAT_L9]]
+- [[DMAT_L9]] ✅
 	- Catalan numbers
 - [[DMAT_L10]]
 	- Pigeon hole principle
 - [[DMAT_L11]]
 	- Ramsey theory
+- [[DMAT_L12]]
 
 # Tutorials
 
