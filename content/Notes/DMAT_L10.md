@@ -12,7 +12,10 @@ time: 11:52
 
 More general formulation of PHP: $r$ colors, $m$ pigeons. The minimum value of $m$ such that there exist $c$ monochromatic pigeons is $r(c-1)+1$.
 
-disk coloring
+> [!Example]
+> Given two disks, one smaller than the other. Each disk is divided into 200 congruent sectors. In the larger disk 100 sectors are chosen arbitrarily and painted red; the other 100 sectors are painted blue. In the smaller disk each sector is painted either red or blue with no stipulation on the number of red and blue sectors. The smaller disk is placed on the larger disk so that the centers and sectors coincide. Show that it is possible to align the two disks so that the number of sectors of the smaller disk whose color matches the corresponding sector of the larger disk is at least 100.
+> 
+> Let a single match between a sector on the smaller disk and a sector on the larger disk for a given alignment be a pigeon. If the smaller disk has $r$ red sectors and $b$ blue sectors, then the total number of pigeons will be $100r+100b=20,000$. There are a total of 200 alignments, which correspond to holes. Thus, there is at least one alignment with at least $20000/200=100$ matches.
 
 ---
 ## Erdos Szekeres problem

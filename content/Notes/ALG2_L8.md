@@ -51,13 +51,13 @@ Let $G$ be a group, and $X=G$. Standard group actions include
 3. [[ALG2_L4#Conjugation|Conjugation]]: $\phi(g, x)=gx\equiv g\circ x\circ g^{-1}$. The stabilizer of $x$ under conjugation, also denoted by $Z(x)$, is called the *centralizer* of $x$. It is the set of all $g\in G$ which commute with $x$. Note that the orbit of $x$, $\{ \phi_{g}(x)\ | \ g\in G \}$, is the [[Normalizers and Conjugacy#Conjugacy|conjugacy class]] of $X$. The centralizer of any subset $A\subset G$ is similarly defined. 
 
 
-$G$ can also act on $G/H$ for some $H<G$: $\phi(g, aH)=gaH$.
+$G$ can also act on $G/H$ for some $H<G$: $\phi_{g}(aH)=(ga)H$.
 
 > [!Theorem]
 > Let $G$ be a group, let $H< G$, let $G$ act by left multiplication on $G/H$. Let $\pi_{H}$ be the permutation representation. Then, 
 > 1. $G$ acts transitively on $A$
 > 2. the stabilizer of $aH\in G/H$ is $G_{aH}=aHa^{-1}$.
-> 3. the kernel of the action is $\bigcap_{x\in G}xH^{-1}x$, and $\ker \pi_{H}$ is the largest normal subgroup of $G$ contained in $H$. 
+> 3. the kernel of the action is $\bigcap_{x\in G}xHx ^{-1}$, and $\ker \pi_{H}$ is the largest normal subgroup of $G$ contained in $H$. 
 
 > **Proof**
 > To see (1), observe that for any two cosets $aH, bH\in G/H$, $(ba^{-1})aH=bH$. Thus, any two arbitrary elements of $G/H$ lie in the same orbit.
@@ -80,6 +80,13 @@ $G$ can also act on $G/H$ for some $H<G$: $\phi(g, aH)=gaH$.
 > $$
 > Thus, $\ker \pi_{H}$ is the largest normal subgroup of $G$ contained in $H$.
 
+> [!Theorem] Corollary
+> Let $p$ be the smallest prime dividing the order of a group $G$. Then, any subgroup of $G$ of index $p$ is a normal subgroup.
+
+> **Proof**
+> Suppose $H\leq G$ and $[G:H]=p$. Let $\pi_{H}$ be the permutation representation of $G$ acting on $G/H$ by multiplication (just to be clear, $\pi_{H}:G\to S_{G/H}$). Let $K=\ker \pi_{H}$. Then, $K\leq H$ and $K\triangleleft G$. Let $[H:K]=k$. Then, $[G:K]=pk$. 
+> 
+> From the [[ALG2_L4#First isomorphism theorem|first isomorphism theorem]], $G/K\cong \mathrm{Im}~\pi_{H}$. Since $\mathrm{Im}~\pi_{H}\leq S_{G/H}\cong S_{p}$, $|\mathrm{Im}~\pi_{H}|$ divides $p!$. So, $|G/K|=pk$ divides $p!$. Thus $k\ | \ (p-1)!$. But, since $K$ is a subgroup of $G$, $k\ | \ |G|$, and so all prime divisors of $k$ are greater than or equal to $p$, forcing $k$ to be $1$. So, $H=K\triangleleft G$. 
 
 ---
 ## Centralizer and normalizer

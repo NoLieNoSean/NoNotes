@@ -34,6 +34,9 @@ tags:
 - [[DMAT_L11]]
 	- Ramsey theory
 - [[DMAT_L12]]
+	- PIE
+- [[DMAT_L13]]
+	- More PIE
 
 # Tutorials
 
@@ -44,6 +47,7 @@ tags:
 
 [[DMAT_PS1]]
 [[DMAT_AS1]]
+[[DMATH_AS2]]
 
 # Quizzes
 

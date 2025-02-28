@@ -1,3 +1,10 @@
+---
+tags:
+  - DMAT
+  - Lecture
+date: 2025-02-26
+time: 11:51
+---
 ## Edge Reconstruction Conjecture
 ### Statement:
 Let $G$,$H$ be two graphs on $n$ vertices with $m$ edges
@@ -113,4 +120,93 @@ then it is easily verified that
 
 >**Proof** 
 >call the product function on the right hand side $r$. Let $i$ be the incidence function of $P$. it is easily verified that $r\cdot i = i\cdot r = e$ and since inverses are unique, we have that the two functions are identical
+
+
+
+
+
+
+
+---
+
+## Edge reconstruction conjecture
+
+Let $G$ and $H$ be two graphs on $n$ vertices with $m$ edges, $m\geq 4$ (trivial counter example for $m=3$).
+$E(G)=\{ e_{1}, e_{2}, \dots, e_{m} \}$.
+$E(H)=\{ f_{1}, f_{2}, \dots, f_{m} \}$.
+Suppose $G\setminus e_{i}\cong H\setminus f_{i}$ for all $1\leq i\leq m$. Two graphs are said to be isomorphic if there exists a bijection $\phi$ between the vertex sets such that ...
+Then, $G\cong H$.
+
+> [!Theorem] Lovasz's theorem
+> If $m> \frac{1}{2}\binom{n}{2}$, then the conjecture is true.
+
+**Proof**
+Let $\hat{G}\to \hat{H}$ (where $\hat{G}$ and $\hat{H}$ have the same number of vertices) represent the set of all bijections $\phi:V(G)\to V(H)$ such that every edge of $\hat{G}$ is mapped to an edge in $\hat{H}$. 
+
+Now, let $A_{i}$ be the set of all bijections $\phi$ from $V(G)$ to $V(H)$ such that $\phi(e_{i})\in E(\overline{H})$ (note that the domain of $\phi$ has been overloaded here). 
+
+We want $\left| X\setminus \bigcup_{i=1}^{m}A_{i} \right|$. From the PIE, 
+$$
+\begin{align}
+\left| X\setminus \bigcup_{i=1}^{m} A_{i} \right| =\sum_{I\subseteq[m]}(-1)^{|I|}A_{I}.
+\end{align}
+$$
+Recall that $A_{I}\equiv \bigcap_{x\in I}A_{i}$, $A_{\emptyset}\equiv X$, the set of all bijections that map $e_{i}$ to $\overline{H}$ for all $i\in I$. 
+
+
+
+---
+## Posets
+
+We want to generalize [[DMAT_L12#Linear algebraic formulation|this]] to posets.
+
+Let $(P, \leq)$ be a finite poset. $|P|=n$. Consider the set of all functions $I(P)$, called the incidence algebra of $P$, $f:P\times P\to \mathbb{R}$ such that $f(x, y)=0$ unless $x\leq y$. Define addition and scalar multiplication in the usual way, and observe that $I(P)$ is closed under these operations. Define multiplication like so:
+
+$$
+fg(x, y)\equiv\sum_{x\leq z\leq y}f(x, z)g(z, y).
+$$
+and note that $I(P)$ is closed under this operation. Thus, $I(P)$ is an algebra (A vector space equipped with vector multiplication).
+
+### Matrix representation for the algebra $I(P)$
+
+Let $x_{1}\leq x_{2}\leq \dots\leq x_{n}$ be a *linear extension*(a total order of $P$ which respects the partial order) of $P$. Let $M_{n}(\mathbb{R})$ be the algebra of $n\times n$ real matrices. Let $\phi:I(P)\to M_{n}(\mathbb{R})$ map $f$ to a matrix $M_{f}$ whose $i$, $j$ th entry is $f(x_{i}, x_{j})$. Note that $M_{f}$ is upper triangular for all $f\in I(P)$. $\phi$ is an injective homomorphism, because
+$$
+fg(x_{i}, x_{j})=\sum_{k=1}^{n} f(x_{i}, x_{k})g(x_{k}, x_{j}).
+$$
+Note that $\mathrm{Im}~\phi$ is NOT the set of all upper triangular matrices (it would be if $P$ was a total order). 
+
+The *incidence function* of $P$ is defined to be 
+$$
+i(x, y)=\begin{cases}
+1 & x\leq y (\text{in the partial order!})\\
+0 &  \text{otherwise}
+\end{cases}
+$$
+If $f\ne 0$ and $f$ is integral and the diagonal of $M_{f}$ is all ones, then $f^{-1}$ is integral.
+The inverse of the incidence function is called the *Mobius function*. The mobius function is unique. For any $P$, its mobius function is uniquely defined by
+- $\mu(x, x)=1$ for all $x$ and
+- $\sum_{x\leq z\leq y}\mu(x, y)=0$ for all $x\ne y$.
+
+- Mobius function for total order
+- The mobius inversion formula
+- power set poset is isomorphic to cartesian product poset
+- Lemma: Mobius function of cartesian product of posets is the product of Mobius functions of posets
+- mobius function for the power set poset, relation to what we covered in the prev lec
+- 
+
+---
+
+## Chains and antichains in posets
+
+> [!Theorem] 
+> If $r$ is the maximum chain length in a poset $P$, then $P$ can be covered by $r$ antichains (and no fewer).
+
+Since A chain and an antichain can intersect at most 1 point, the no fewer part should be clear.
+
+> [!Theorem] Dilworth's theoem
+> If $r$ is the maximum antichain length in $P$, then $P$ can be covered by $r$ antichains (and no fewer).
+
+**Proof**
+by induction.   
+
 

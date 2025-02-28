@@ -28,9 +28,9 @@ tags:
 - [[ALG2_L7]] ✅
 	- Double cosets, group actions
 - [[ALG2_L8]] ✅
-	- More on group actions, orbit, stabilizer, centralizer, normalizer
+	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer
 - [[ALG2_L9]]
-	- Orbit-stabilizer theorem, semidirect product
+	- Orbit-stabilizer theorem, the class equation, semidirect product
 
 # Other notes
 
