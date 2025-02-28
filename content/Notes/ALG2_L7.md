@@ -37,7 +37,7 @@ Remarks:
 > 
 
 It is easy to see that $\phi_{g}$ is a bijection for all $g\in G$:
-- $gx_{1}=gx_{2}$ $\implies$$\phi_{g}(x_{1})=\phi_{g}(x_{2})$$\implies$$\phi_{g^{-1}}(\phi_{g}(x_{1}))=\phi_{g^{-1}}(\phi_{g}(x_{2}))$$\implies$$\phi_{g^{-1}g}(x_{1})=\phi_{g^{-1}g}(x_{2})$$\implies$$x_{1}=x_{2}$.
+- $gx_{1}=gx_{2}$ $\implies$ $\phi_{g}(x_{1})=\phi_{g}(x_{2})$ $\implies$ $\phi_{g^{-1}}(\phi_{g}(x_{1}))=\phi_{g^{-1}}(\phi_{g}(x_{2}))$ $\implies$ $\phi_{g^{-1}g}(x_{1})=\phi_{g^{-1}g}(x_{2})$ $\implies$ $x_{1}=x_{2}$.
 - for all $x\in X$, $g(g^{-1}x)=x$, $i$.$e$, $\phi_{g}(g^{-1}x)=x$.
 
 Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X)$, the group of all bijections from $X$ to $X$. This along with the defining properties of a group action makes $\phi$ a group homomorphism. 

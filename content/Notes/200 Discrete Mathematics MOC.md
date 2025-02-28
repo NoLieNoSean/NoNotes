@@ -47,7 +47,7 @@ tags:
 
 [[DMAT_PS1]]
 [[DMAT_AS1]]
-[[DMATH_AS2]]
+[[DMAT_AS2]]
 
 # Quizzes
 

@@ -1,9 +1,9 @@
 ---
 tags:
   - DMAT
-  - "#draft"
 date: 2025-02-26
 time: 18:00
+draft: true
 ---
 
 [[assignment2.pdf]]
@@ -13,7 +13,7 @@ time: 18:00
 Let $\mathcal{F}$ be a forest. Define a relation by $a\sim b$ if a path exists between $a$ and $b$. $\sim$ is an equivalence relation:
 - $a\sim a$ for all $a\in \mathcal{F}$
 - $a\sim b\implies b\sim a$
-- $a\sim b$ and $b\sim c$ $\implies$$a\sim c$, where the path from $a$ to $c$ is the concatenation of the paths form $a$ to $b$ and from $b$ to $c$.
+- $a\sim b$ and $b\sim c$ $\implies$ $a\sim c$, where the path from $a$ to $c$ is the concatenation of the paths form $a$ to $b$ and from $b$ to $c$.
 
 Let $\mathcal{F}_{\sim}$ be the partition of $\mathcal{F}$ induced by $\sim$. Let $[a]\in \mathcal{F}_{\sim}$. Clearly, $[a]$ is connected. $[a]$ inherits the property of having no cycles from $\mathcal{F}$. Thus, $[a]$ is a tree. Thus, we can conclude that a forest is a disjoint union of trees. 
 

@@ -51,14 +51,14 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 
 > **Proof** $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
 
-> [!Theorem]
-> Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
-> 1. $f$ is injective iff $H\cap K=\{ 1 \}$.
-> 2. $f$ is a homomorphism iff elements of $K$ commute with elements of $H$.
-> 3. $HK<G$ iff $HK=KH$. Useful to note here that
-> 	1. $H\leq N_{G}(K)$$\implies$$HK=KH$.
-> 	2. In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
-> 4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
+[!Theorem]
+Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
+1. $f$ is injective iff $H\cap K=\{ 1 \}$.
+2. $f$ is a homomorphism iff elements of $K$ commute with elements of $H$.
+3. $HK<G$ iff $HK=KH$. Useful to note here that
+	1. $H\leq N_{G}(K)$ $\implies$ $HK=KH$.
+	2. In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
+4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
 
 > [!Warning]
 > Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
@@ -92,7 +92,7 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > $$
 > HK=\bigcup_{h\in h}^{} hK.
 > $$
-> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$$\iff$$h_{2}^{-1}h_{1}\in k$$\iff$$h_{2}^{-1}h_{1}\in H\cap K$$\iff$$h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
+> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in k$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
 > $$
 > |HK|= \left( \frac{{|H|}}{|H\cap K|} \right)|K|.
 > $$
