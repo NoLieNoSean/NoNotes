@@ -49,6 +49,36 @@ The fact that the orbits partition the set being acted upon yields the following
 
 Note that all summands on the RHS of the class equation are divisors of $|G|$.
 
+### p-groups
+
+Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-groups. 
+
+> [!Theorem]
+> If $P$ is a p-group, $Z(P)$ is non-trivial.
+
+> [!Theorem]
+> If $|P|=p^{n}$, then $|Z(P)|\ne p^{n-1}$.
+
+> [!Theorem]
+> If $|P|=p^{2}$ for some prime $p$, then $P$ is abelian. More precisely, either $P\cong \mathbb{Z}_{p^{2}}$ or $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$.
+
+---
+
+## Conjugacy in Sn
+
+
+> Let $\sigma, \tau$ be elements of $S_{n}$, and suppose $\sigma$ has cycle decomposition
+> $$
+> (a_{1} ~a_{2}~\dots~a_{n})(b_{1} ~b_{2}~\dots~b_{n})\dots.
+> $$
+> Then, $\tau\sigma\tau ^{-1}$ has cycle decomposition
+> $$
+> (\tau(a_{1}) ~\tau(a_{2})~\dots~\tau(a_{n}))(\tau(b_{1}) ~\tau(b_{2})~\dots~\tau(b_{n}))\dots.
+> $$
+
+> Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type.
+
+
 ---
 
 ## Semidirect product

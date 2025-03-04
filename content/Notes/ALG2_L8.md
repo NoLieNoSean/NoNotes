@@ -106,6 +106,7 @@ It follows that $Z(G)< G$.
 
 It can be shown that $N_{G}(A)< G$ for all $A\subseteq G$.
 More details [[Normalizers and Conjugacy|here]].
+Examples of how to find these [[Abstract Algebra Third Edition (David S. Dummit, Richard M. Foote).pdf#page=63|here]].
 
 Note the crucial difference between the centralizer and the normalizer:
 $$

@@ -213,3 +213,10 @@ Finally, we've got everything. If $\phi_{1}$ is an isomorphism, $\ker\phi_{2}=\m
 Conversely, if $\text{gcd}(m, n)=1$, then $\frac{\mathbb{Z}}{m\mathbb{Z}+n\mathbb{Z}}$ is the trivial group, and $\mathrm{Im}~\phi_{1}=\ker\phi_{2}=\frac{\mathbb{Z}}{m\mathbb{Z}}\times \frac{\mathbb{Z}}{n\mathbb{Z}}$, making $\phi_{1}$ an isomorphism.
 
 (Note that what we proved here is a slightly different version of the theorem:)
+
+
+---
+
+> [!Theorem] Cauchy's theorem
+> If $G$ is a finite group and $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
+

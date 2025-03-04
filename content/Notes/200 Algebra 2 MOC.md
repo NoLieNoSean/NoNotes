@@ -31,6 +31,7 @@ tags:
 	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer
 - [[ALG2_L9]]
 	- Orbit-stabilizer theorem, the class equation, semidirect product
+- [[ALG2_L10]]
 
 # Other notes
 
