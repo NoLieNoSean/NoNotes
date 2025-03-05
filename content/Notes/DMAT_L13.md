@@ -15,40 +15,53 @@ time: 11:51
 
 The conjecture does not hold when $m=3$. The graphs $G=(V, E_{1})$ and $H=(V, E_{2})$ with $V=\{ 1, 2, 3 , 4\}$, $E_{1}=\{ \{ 1, 2 \} , \{ 2, 3 \}, \{ 3, 1 \}\}$ and $E_{2}=\{ \{ 1, 2 \}, \{ 1, 3 \}, \{ 1, 4 \}\}$ are a counterexample.
 
+> [!Theorem] Lemma
+> Let $G$ be a graph with $E(G)=\{ e_{1}, e_{2}, \dots, e_{m} \}$. Then, it is sufficient to know the set of all maximal proper subgraphs of $G$, that is, $S=\{ G\setminus e_{i}\ | \ i\in[m] \}$ to compute the number of edge-proper subgraphs of $G$ that are isomorphic to a given graph $T$. 
+
+> **Proof**
+> Let $T$ be a graph with $j$ edges, $1\leq j< m$. Let $\alpha$ be the number of subgraphs of $G$ that are isomorphic to $T$. Let $\alpha_{i}$ be the number of subgraphs of $G$ that are isomorphic to $T$ and contain the edge $e_{i}$. Then, $\alpha-\alpha_{i}$ is known since it is the number of subgraphs of $G\setminus e_{i}$ that are isomorphic to $T$. Thus from $S$ and $T$ we know $m$, $j$, and $\alpha-\alpha_{i}$. So, we also know 
+> $$
+> M=\sum_{i=1}^{m} (\alpha-\alpha_{i})=m\alpha-\sum_{i=1}^{m} \alpha_{i}.
+> $$
+> Note here that $\sum_{i=1}^{m}\alpha_{i}=j\alpha$, since every subgraph of $G$ that is isomorphic to $T$ is counted $j$ times in the sum. Thus, we have $M=(m-j)\alpha$. Since $m\ne j$, we have $\alpha=M/(m-j)$. Thus, the knowledge of $S$ an $T$ are sufficient to determine $\alpha$.
+
+
 > [!Theorem] Theorem (Lovasz)
-> The conjecture is true when $m > \frac{1}{2}\binom{n}{2}$.
+> The Edge Reconstruction Conjecture is true when $m > \frac{1}{2}\binom{n}{2}$.
 
 [Original paper](https://www.sciencedirect.com/science/article/pii/0095895672900688) by Lovasz
 
-**Proof**
+> **Proof**
+> 
+> Let $\hat{G}\to \hat{H}$ (where $\hat{G}$ and $\hat{H}$ have the same number of vertices) represent the set of all isomorphisms from $\hat{G}$ to $\hat{H}$. We have to show that $G\to H$ is non-empty. 
+> 
+> Let $A_{i}$ be the set of all bijections $\phi$ from $V(G)$ to $V(H)$ such that if $e_{i}=\{ x_{i_{1}}, x_{i_{2}} \}\in E(G)$ then $\{ \phi(x_{i_{1}}), \phi(x_{i_{2}}) \}\in E(\overline{H})$, that is, $\phi$ maps edge $e_{i}$ of $G$ to a non-edge of $H$. We want $|G\to H|=\left| X\setminus \bigcup_{i=1}^{m}A_{i} \right|$.By the [[DMAT_L12#Principle of inclusion and exclusion|principle of inclusion and exclusion]], we have
+> $$
+> \left| X\setminus \bigcup_{i=1}^{m} A_{i} \right| =\sum_{I\subseteq[m]}(-1)^{|I|}A_{I}.
+> $$
+> For any $I\subseteq[m]$, define $\hat{G}_{I} = (V(\hat{G}), \{ e_{i}\ | \ i\in I \})$. $A_{I}$ is the set of all bijections that map $e_{i}$ into $\overline{H}$ for all $i\in I$. So, $|A_{I}| = |G_{I}\rightarrow \overline{H}|$. Thus,
+> $$
+> \begin{align}
+> |G\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|G_{I}\rightarrow \overline{H}|. & (1)
+> \end{align}
+> $$
+> Similarly considering $H\rightarrow H$ we get
+> $$
+> \begin{align}
+> |H\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|H_{I}\rightarrow \overline{H}|. & (2)
+> \end{align}
+> $$
+> Denote the number of edge-proper subgraphs of $G$ which are isomorphic to a graph $T$ by $\mathcal{S}_{G}(T)$. Note from the preceding lemma that for any given graph $T$ with $1\leq E(T)< m$, $\mathcal{S}_{G}(T)$ is completely determined by $\{ G\setminus e_{i}\ | \ i\in[m] \}$. Similarly, $\mathcal{S}_{H}(T)$ is completely determined by $\{ H\setminus f_{i}\ | \ i\in[m] \}$. From our hypothesis, we know that $\{ G\setminus e_{i}\ | \ i\in[m] \}=\{ H\setminus f_{i}\ | \ i\in[m] \}$, up to isomorphism. Thus, $\mathcal{S}_{G}(T)=\mathcal{S}_{H}(T)$ for all $T$. 
+> 
+> Now, let $\mathcal{T}$ be the set of all graphs possessing $j$ edges, where $1\leq j< m$. Then,
+> $$
+> \begin{align}
+> \sum_{I\subset[m]}(-1)^{|I|}|G_{I}\to \overline{H}|=\sum_{T\in \mathcal{T}}(-1)^{|E(T)|}\mathcal{S}_{G}(T)|T\to \overline{H}|\\ \\ 
+> \sum_{I\subset[m]}(-1)^{|I|}|H_{I}\to \overline{H}|=\sum_{T\in \mathcal{T}}(-1)^{|E(T)|}\mathcal{S}_{H}(T)|T\to \overline{H}|
+> \end{align}
+> $$
+> Thus, the terms in $(1)$ and $(2)$ with $I\ne[m]$ are equal. For $I=[m]$, note that $|G\to \overline{H}|=0$ and $|H\to \overline{H}|=0$ since $m> \frac{1}{2}\binom{n}{2}$. Hence, $|G\to H|=|H\to H|> 0$ (the identity isomorphism!), and we are done.
 
-Let $\hat{G}\to \hat{H}$ (where $\hat{G}$ and $\hat{H}$ have the same number of vertices) represent the set of all isomorphisms from $\hat{G}$ to $\hat{H}$. We have to show that $G\to H$ is non-empty. 
-
-Let $A_{i}$ be the set of all bijections $\phi$ from $V(G)$ to $V(H)$ such that if $e_{i}=\{ x_{i_{1}}, x_{i_{2}} \}\in E(G)$ then $\{ \phi(x_{i_{1}}), \phi(x_{i_{2}}) \}\in E(\overline{H})$, that is, $\phi$ maps edge $e_{i}$ of $G$ to a non-edge of $H$. We want $|G\to H|=\left| X\setminus \bigcup_{i=1}^{m}A_{i} \right|$.By the [[DMAT_L12#Principle of inclusion and exclusion|principle of inclusion and exclusion]], we have
-$$
-\left| X\setminus \bigcup_{i=1}^{m} A_{i} \right| =\sum_{I\subseteq[m]}(-1)^{|I|}A_{I}.
-$$
-For any $I\subseteq[m]$, define $\hat{G}_{I} = (V(\hat{G}), \{ e_{i}\ | \ i\in I \})$. $A_{I}$ is the set of all bijections that map $e_{i}$ into $\overline{H}$ for all $i\in I$. So, $|A_{I}| = |G_{I}\rightarrow \overline{H}|$. Thus,
-$$
-\begin{align}
-|G\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|G_{I}\rightarrow H^{c}|. & (1)
-\end{align}
-$$
-Similarly considering $H\rightarrow H$ we get
-$$
-\begin{align}
-|H\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|H_{I}\rightarrow \overline{H}|. & (2)
-\end{align}
-$$
-
-
-
-
-
-%% 
-since every proper subgraph of $G$ is isomorphic to one and only one proper subgraph of $H$ (obtained from the hypothesis), the sum of terms in (1) and (2) with $I\neq [m]$ are equal. Since $m > \frac{1}{2}\binom{n}{2}$, $|G_{[m]}\rightarrow H^{c}| =|H_{[m]}\rightarrow H^{c}|= 0$ hence we get $|G\rightarrow H| = |H\rightarrow H|$ and the latter term is certainly greater than 0, proving that $|G\rightarrow H|$ is nonempty, our desired conclusion.
-
- %%
 
 ---
 ## Posets
