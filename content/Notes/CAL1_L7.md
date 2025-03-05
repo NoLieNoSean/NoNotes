@@ -15,7 +15,7 @@ For a non empty subset $E$ of a metric space $(X, d)$, we say $E$ is bounded pro
 
 Note the similarity between the Cantor intersection property (of a metric space) and the [[The real field#Nested interval property|nested interval property]] (of $\mathbb{R}$).
 
-> [!Theorem]
+> [!Theorem] Cantor Intersection Theorem
 > A metric space $X$ has the Cantor intersection property if and only if it is [[Cauchy sequences#Complete metric space|complete]]. 
 
 > **Proof of $\implies$**
@@ -39,7 +39,7 @@ Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}
 - $\rho$ is symmetric
 - triangle inequality holds
 
-However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x)_{n}\sim (y)_{n}$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. Note that $\tilde{d}$ is well defined, and that $(\tilde{X}, \tilde{d})$ is a metric space.
+However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. Note that $\tilde{d}$ is well defined, and that $(\tilde{X}, \tilde{d})$ is a metric space.
 #### $(\tilde{X}, \tilde{d})$ is complete
 
 Consider a Cauchy sequence in $\tilde{X}$: $([(x_{n, 1})], [(x_{n, 2})], \dots)$. By passing to subsequences if necessary, we can assume that given $m$, $\tilde{d}([(x_{n, k})], [(x_{n, l})])< 2^{-m}$ for all $l, k\geq m$. Similarly, by passing to subsequences if necessary, we can assume that for all $k$, given $c$, $d(x_{a, k}, x_{b, k})< 2^{-c}$ for all $a, b\geq c$.

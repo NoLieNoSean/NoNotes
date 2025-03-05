@@ -18,6 +18,15 @@ Recall what a [[Algebra1_L21#Normed spaces|normed vector space]] is. We say that
 > c_{1}\lVert \cdot \rVert^{\times} \leq \lVert \cdot \rVert ^{\circ}\leq c_{2}\lVert \cdot \rVert ^{\times}.
 > $$
 
+> [!Info]- An aside
+> Two metrics $\rho$ and $\sigma$ on a set $X$ are said to be *equivalent* if there exist positive numbers $c_{1}$ and $c_{2}$ such that for all $x_{1}, x_{2}\in X$, 
+> $$
+> c_{1}\sigma(x_{1}, x_{2})\leq \rho(x_{1}, x_{2})\leq c_{2} \sigma(x_{1}, x_{2}).
+> $$
+> It can be shown that a subset of $X$ is open in the metric space $(X, \rho)$ if and only if it is open in $(X, \sigma)$.
+> 
+> Note that if two norms are equivalent, the metrics induced by them are also equivalent for the same $c_{1}$ and $c_{2}$.
+
 ## The p-norm
 
 The p-norm generalizes the euclidean norm in $\mathbb{R}^{n}$. 

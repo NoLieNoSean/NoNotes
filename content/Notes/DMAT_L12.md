@@ -75,34 +75,45 @@ $$
 
 ### Linear algebraic formulation
 
-Let $X=[n]$.
-Consider all functions $V=\{f:\mathcal{P}([n])\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$. 
-Then, for $f, g\in V$, the following two statements are equivalent.
+Let $X=[n]$. Consider all functions $V=\{f:\mathcal{P}(X)\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$.  Then, for $f, g\in V$, the following two statements are equivalent.
 $$
 \begin{align}
- & 1.~g(I)=\sum_{J\supseteq I} f(J), \\
- & 2.~f(I)=\sum_{J\supseteq I} (-1)^{|J\setminus I|}g(J). 
+ & 1.~g(I)=\sum_{J\supseteq I} f(J) &  \forall I\subseteq \mathcal{P}(X), \\
+ & 2.~f(I)=\sum_{J\supseteq I} (-1)^{|J\setminus I|}g(J) &  \forall I\subseteq \mathcal{P}(X). 
 \end{align}
 $$
 Think of it this way: Let the elements of $X$ be different "properties" of elements of another set $G$. An element of $G$ can have any number of properties $x\in X$. For $I\subset X$, Let $A_{I}$ be the set of all $g\in G$ which have each property $i\in I$ (Note that all the properties of $g\in A_{I}$ may be a super set of $I$). Then, $g(I)= |A_{I}|$, the number of elements in $G$ which have properties $I$, and $f(I)=|A_{I}\setminus \bigcup_{i\in \overline{I}}A_{i}|$, the number of elements in $G$ which have exactly the properties $I$ satisfy the above equalities. 
 
-Proof of $1\implies2$:
-$$
-\begin{align}
-\sum_{J\supseteq I}(-1)^{|J\setminus I|}g(J) & =\sum_{J\supseteq I}(-1)^{|J\setminus I|}\left( \sum_{K\supseteq J }f(K) \right) \\
-	 & =\sum_{K\supseteq I}f(K)\sum_{K\supseteq J\supseteq I}(-1)^{|J\setminus I|} \\
-	 & =f(I)+ \sum_{K\supset I}f(K)\cancelto{ \huge{~0} }{ \sum_{K\supseteq J\supseteq I}(-1)^{|J\setminus I|} } & (*) \\
- & =f(I).
-\end{align}
-$$
+> Proof of $1\implies2$:
+> $$
+> \begin{align}
+> \sum_{J\supseteq I}(-1)^{|J\setminus I|}g(J) & =\sum_{J\supseteq I}(-1)^{|J\setminus I|}\left( \sum_{K\supseteq J }f(K) \right) \\
+> 	 & =\sum_{K\supseteq I}f(K)\sum_{K\supseteq J\supseteq I}(-1)^{|J\setminus I|} \\
+> 	 & =f(I)+ \sum_{K\supset I}f(K) \underbrace{ \sum_{K\supseteq J\supseteq I}(-1)^{|J\setminus I|} }_{ =~0 }  & (*) \\
+>  & =f(I).
+> \end{align}
+> $$
+> 
+> $(*)$ is true since for any finite set, the number of subsets of off cardinality is equal to the number of subsets of even cardinality.
+> 
+> Proof of $2\implies 1$:
+> 
+> $$
+> \begin{align}
+> \sum_{J \supseteq I} f(J) & =\sum_{J\supseteq I}\sum_{K\supseteq J}(-1)^{|K\setminus J|}g(K) \\
+>  & = \sum_{K\supseteq I}g(K)\sum_{K\supseteq J\supseteq I}(-1)^{|K\setminus J|} \\
+>  & =g(I)+ \sum_{K\supset I}g(K)\underbrace{ \sum_{K\supseteq J\supseteq I}(-1)^{|K\setminus J|} }_{ =~0 } \\
+>  & =g(I)
+> \end{align}
+> $$
 
-$(*)$ is true since for any finite set, the number of subsets of off cardinality is equal to the number of subsets of even cardinality.
 
-Proof of $2\implies 1$:
 
-$$
-\begin{align}
-\sum_{J \supseteq I} f(J) & =\sum_{J\supseteq I}\sum_{K\supseteq J}(-1)^{|K\setminus J|}g(K) \\
- & =
-\end{align}
-$$
+Let $\phi$ be a map from $V$ to $V$ which maps $f$ to $g$. 
+
+
+It can be represented by a $2^{n}\times 2^{n}$ matrix. Let Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a *linear extension* of the poset $\mathcal{P}(X)$.  
+
+>[!info] What is a linear extension?
+>A linear extension $X'$ of a partial order $X=(P,\leq)$ is a total order on $P$ that respects the poset structure. That is, if $x,y\in X$ such that $x\leq y$ , then in $X'$ , we have $x\leq y$ (abuse of notation).
+

@@ -6,45 +6,54 @@ date: 2025-02-26
 time: 11:51
 ---
 ## Edge Reconstruction Conjecture
-### Statement:
-Let $G$,$H$ be two graphs on $n$ vertices with $m$ edges
-say $E(G) = \{e_1,...,e_m\}$
-and $E(H) = \{f_1,...,f_m\}$
-suppose $G\backslash e_i \cong H\backslash f_i\quad\forall i=1,2,...,m$
-then  $G\cong H$ $\quad\forall m\geq 4$
 
-note the bound $m\geq 4$. this is because the conjecture does not hold true when, say $m=3$. Indeed, the graph $G = (V,E)$ where $V=\{1,2,3\}$ and  $E= \{\{1,2\}, \{2,3\}\}$ stands as a counterexample
+> [!Theorem] Conjecture
+> Let $G$,$H$ be two graphs on $n$ vertices with $m$ edges, with $m\geq 4$. Let the edge sets of $G$ and $H$ be $E(G) = \{e_1,...,e_m\}$ and $E(H) = \{f_1,...,f_m\}$. Suppose $G\setminus e_{i}\cong H\setminus f_{i}$ for all $1\leq i\leq m$. Then,  $G\cong H$.
 
-> [!Theorem] Theorem(Lovasz)
-> If $m > \frac{1}{2}\binom{n}{2}$ then the conjecture holds.
+> [!Info]
+> Recall that a "homomorphism" is a structure preserving map, which in this context means mapping edges to edges. So, any map $\phi$ which preserves edges is called a homomorphism. Just like in group theory, a bijective homomorphism is called an isomorphism, and two graphs are said to be isomorphic if there exists an isomorphism between them. Isomorphic graphs have the same structure up to relabelling of vertices.
 
->**Proof**
->
->original paper by Lovasz can be found here: https://www.sciencedirect.com/science/article/pii/0095895672900688
->
->Let $X$ be the set of all bijections $V(G)\rightarrow V(H)$
-> If $G$ and $H$ are two graphs, denote by $G\rightarrow H$ the set $\{f | f:V(G)\rightarrow V(H) \text{ is a bijection such that } f(e_i)\in V(H)\quad\forall i = 1,2,...,m\}$.
-> 
-> We want to show that this set is nonempty.
-> for any $S\subseteq E(G)$, define $G_{S} = (V(G), S)$
-> now we will apply the principe of inclusion and exclusion.
-> 
-> Define $A_{i} = \{\phi | \phi : V(G) \rightarrow V(H) \text{ is a bijection such that }\phi(e_i) \in E(H^{c})\}$
-> 
-> (note that $\phi$ is a function on vertices.  $\phi(e_i)$ is the image of the set $e_{i} \subseteq V(G)$)
-> 
-> by the principle of inclusion and exclusion, we have
-> $$\left|X\backslash \left(\bigcup_{i=1}^{m}A_{i}\right)\right| = \sum_{I\subseteq [m]}(-1)^{|I|}|A_{I}|$$
-> the left hand side counts all bijections that dont map any edge $e_i$ of $G$ into $H^c$. So it is equal to $|G\rightarrow H|$. in the right hand side, $A_{I}$ is the set of all bijections that map $e_{i}$ into $H^{c}\quad\forall i\in I$  
-> that is, $|A_{I}| = |G_{I}\rightarrow H^{c}|$
-> substituting into our equation, we have
-> $$|G\rightarrow H| = \sum_{I\subseteq [m]}(-1)^{|I|}|G_{I}\rightarrow H^{c}|\quad\quad\quad\cdots(1)$$
->similarly considering $H\rightarrow H$ we get the equation
->$$|H\rightarrow H| = \sum_{I\subseteq [m]}(-1)^{|I|}|H_{I}\rightarrow H^c|\quad\quad\quad\cdots(2)$$
->since every proper subgraph of $G$ is isomorphic to one and only one proper subgraph of $H$ (obtained from the hypothesis), the sum of terms in (1) and (2) with $I\neq [m]$ are equal. Since $m > \frac{1}{2}\binom{n}{2}$, $|G_{[m]}\rightarrow H^{c}| =|H_{[m]}\rightarrow H^{c}|= 0$ hence we get $|G\rightarrow H| = |H\rightarrow H|$ and the latter term is certainly greater than 0, proving that $|G\rightarrow H|$ is nonempty, our desired conclusion.
-##  Posets
+The conjecture does not hold when $m=3$. The graphs $G=(V, E_{1})$ and $H=(V, E_{2})$ with $V=\{ 1, 2, 3 , 4\}$, $E_{1}=\{ \{ 1, 2 \} , \{ 2, 3 \}, \{ 3, 1 \}\}$ and $E_{2}=\{ \{ 1, 2 \}, \{ 1, 3 \}, \{ 1, 4 \}\}$ are a counterexample.
 
-In order to further generalise the principle of inclusion and exclusion, we will develop some more theory on posets
+> [!Theorem] Theorem (Lovasz)
+> The conjecture is true when $m > \frac{1}{2}\binom{n}{2}$.
+
+[Original paper](https://www.sciencedirect.com/science/article/pii/0095895672900688) by Lovasz
+
+**Proof**
+
+Let $\hat{G}\to \hat{H}$ (where $\hat{G}$ and $\hat{H}$ have the same number of vertices) represent the set of all isomorphisms from $\hat{G}$ to $\hat{H}$. We have to show that $G\to H$ is non-empty. 
+
+Let $A_{i}$ be the set of all bijections $\phi$ from $V(G)$ to $V(H)$ such that if $e_{i}=\{ x_{i_{1}}, x_{i_{2}} \}\in E(G)$ then $\{ \phi(x_{i_{1}}), \phi(x_{i_{2}}) \}\in E(\overline{H})$, that is, $\phi$ maps edge $e_{i}$ of $G$ to a non-edge of $H$. We want $|G\to H|=\left| X\setminus \bigcup_{i=1}^{m}A_{i} \right|$.By the [[DMAT_L12#Principle of inclusion and exclusion|principle of inclusion and exclusion]], we have
+$$
+\left| X\setminus \bigcup_{i=1}^{m} A_{i} \right| =\sum_{I\subseteq[m]}(-1)^{|I|}A_{I}.
+$$
+For any $I\subseteq[m]$, define $\hat{G}_{I} = (V(\hat{G}), \{ e_{i}\ | \ i\in I \})$. $A_{I}$ is the set of all bijections that map $e_{i}$ into $\overline{H}$ for all $i\in I$. So, $|A_{I}| = |G_{I}\rightarrow \overline{H}|$. Thus,
+$$
+\begin{align}
+|G\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|G_{I}\rightarrow H^{c}|. & (1)
+\end{align}
+$$
+Similarly considering $H\rightarrow H$ we get
+$$
+\begin{align}
+|H\rightarrow H|  & = \sum_{I\subseteq [m]}(-1)^{|I|}|H_{I}\rightarrow \overline{H}|. & (2)
+\end{align}
+$$
+
+
+
+
+
+%% 
+since every proper subgraph of $G$ is isomorphic to one and only one proper subgraph of $H$ (obtained from the hypothesis), the sum of terms in (1) and (2) with $I\neq [m]$ are equal. Since $m > \frac{1}{2}\binom{n}{2}$, $|G_{[m]}\rightarrow H^{c}| =|H_{[m]}\rightarrow H^{c}|= 0$ hence we get $|G\rightarrow H| = |H\rightarrow H|$ and the latter term is certainly greater than 0, proving that $|G\rightarrow H|$ is nonempty, our desired conclusion.
+
+ %%
+
+---
+## Posets
+
+In order to further generalize the principle of inclusion and exclusion, we will develop some more theory on posets
 
 ### Posets as Algebras: Incidence Algebra
 
@@ -63,9 +72,6 @@ with these definitions, the incidence algebra is indeed verified to be an algebr
 ### Matrix Representation for the Algebra
 
 Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a $\textit{linear extension}$ of the poset $X$. 
-
->[!info] What is a linear extension?
->A linear extension $X'$ of a partial order $X=(P,\leq)$ is a total order on $P$ that respects the poset structure. That is, if $x,y\in X$ such that $x\leq y$ , then in $X'$ , we have $x\leq y$ (abuse of notation).
 
 
 Note that  $\varphi: I(P) \rightarrow M_{n}(\mathbb{R})$  given by $f \mapsto M_{f}$ where $M_{f} = [a_{ij}]_{n\times n} = [f(x_{i},x_{j})]_{n\times n}$
@@ -125,33 +131,6 @@ then it is easily verified that
 
 
 
-
-
----
-
-## Edge reconstruction conjecture
-
-Let $G$ and $H$ be two graphs on $n$ vertices with $m$ edges, $m\geq 4$ (trivial counter example for $m=3$).
-$E(G)=\{ e_{1}, e_{2}, \dots, e_{m} \}$.
-$E(H)=\{ f_{1}, f_{2}, \dots, f_{m} \}$.
-Suppose $G\setminus e_{i}\cong H\setminus f_{i}$ for all $1\leq i\leq m$. Two graphs are said to be isomorphic if there exists a bijection $\phi$ between the vertex sets such that ...
-Then, $G\cong H$.
-
-> [!Theorem] Lovasz's theorem
-> If $m> \frac{1}{2}\binom{n}{2}$, then the conjecture is true.
-
-**Proof**
-Let $\hat{G}\to \hat{H}$ (where $\hat{G}$ and $\hat{H}$ have the same number of vertices) represent the set of all bijections $\phi:V(G)\to V(H)$ such that every edge of $\hat{G}$ is mapped to an edge in $\hat{H}$. 
-
-Now, let $A_{i}$ be the set of all bijections $\phi$ from $V(G)$ to $V(H)$ such that $\phi(e_{i})\in E(\overline{H})$ (note that the domain of $\phi$ has been overloaded here). 
-
-We want $\left| X\setminus \bigcup_{i=1}^{m}A_{i} \right|$. From the PIE, 
-$$
-\begin{align}
-\left| X\setminus \bigcup_{i=1}^{m} A_{i} \right| =\sum_{I\subseteq[m]}(-1)^{|I|}A_{I}.
-\end{align}
-$$
-Recall that $A_{I}\equiv \bigcap_{x\in I}A_{i}$, $A_{\emptyset}\equiv X$, the set of all bijections that map $e_{i}$ to $\overline{H}$ for all $i\in I$. 
 
 
 

@@ -100,7 +100,7 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 ## Image of a compact set under a continuous function
 
 >[!Theorem]
->if $f:X\to Y$ is continuous, and $X$ is compact, $f(X)$ is compact.
+>If $f:X\to Y$ is continuous, and $X$ is compact, $f(X)$ is compact.
 
 >**Proof**
 >Consider a sequence $f(x_{1}), f(x_{2}), \dots$ in $f(X)$. $x_{1}, x_{2}, \dots$ is a sequence in $X$. Since $X$ is compact, $x_{1}, x_{2}, \dots$ has a subsequence $(x_{k_{n}})\to p\in X$. Since $f$ is continuous, it [[Analysis1_L15#Continuous functions map convergent sequences to convergent sequences|follows]] that $f(x_{k_{n}})\to f(p)\in f(X)$. ❏

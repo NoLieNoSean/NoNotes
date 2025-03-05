@@ -22,7 +22,7 @@
 	- Cantor intersection theorem, constructing the completion of a metric space
 - [[CAL1_L8]] ✅
 	- Finite intersection property, total boundedness, characterization of compact sets
-- [[CAL1_L9]]
+- [[CAL1_L9]] ✅
 	- Extreme value theorem, Lebesgue covering theorem
 - [[CAL1_L10]]
 	- Separable metric spaces, Lindelöf covering theorem, Baire category theorem.
