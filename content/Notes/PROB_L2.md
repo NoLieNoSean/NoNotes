@@ -79,7 +79,7 @@ Notes:
 - $P(A\cap B)=P(A)P(B/A)=P(B)P(A/B)$.
 - $P(C)=P(C/A)P(A)+P(C/A^{c})P(A^{c})$. 
 - If $A_{1}, A_{2}, \dots, A_{n}$ are disjoint and cover $\Omega$, $P(C)=\sum_{i=1}^{n}P(C/A_{i})P(A_{i})$.
-  Also, $P(A_{i}/C)=\frac{P(C/A_{i})P(A_{i})}{\sum_{j=1}^{n}P(C/A_{j})P(A_{j})}$. <-- Bayes' Formula
+  Also, $P(A_{i}/C)=\frac{P(C/A_{i})P(A_{i})}{\sum_{j=1}^{n}P(C/A_{j})P(A_{j})}$. <- Bayes' Formula
 
 ### Example: Polya's Urn scheme
 
