@@ -56,10 +56,10 @@ Proof by induction (assignment).
 > \begin{align}
 > P(A_{i}) & =P(B_{i}\sqcup(A_{i}\setminus B_{i})) \\
 >  & =P(B_{i})+P(A_{i}\setminus B_{i}) \\
-> 	 & =P(B_{i})+P\left( \bigcup_{i\ne j} (A_{i}\cap A_{j}) \right) \\
->  & \leq P(B_{i})+\sum_{i\ne j}P(A_{i}\cap A_{j}) \\ \\
+> 	 & \leq P(B_{i})+P\left( \bigcup_{j\ne i} (A_{i}\cap A_{j}) \right) \\
+>  & \leq P(B_{i})+\sum_{j\ne i}P(A_{i}\cap A_{j}) \\ \\
 > 
->  \implies   & P(B_{i})\geq P(A_{i})-\sum_{i\ne j}P(A_{i}\cap A_{j}) 
+>  \implies   & P(B_{i})\geq P(A_{i})-\sum_{j\ne i}P(A_{i}\cap A_{j}) 
 > \end{align}
 > $$
 > Summing both sides from $i=1$ to $n$ yields the property.

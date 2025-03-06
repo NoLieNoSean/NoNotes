@@ -113,7 +113,3 @@ Let $\phi$ be a map from $V$ to $V$ which maps $f$ to $g$.
 
 
 It can be represented by a $2^{n}\times 2^{n}$ matrix. Let Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a *linear extension* of the poset $\mathcal{P}(X)$.  
-
->[!info] What is a linear extension?
->A linear extension $X'$ of a partial order $X=(P,\leq)$ is a total order on $P$ that respects the poset structure. That is, if $x,y\in X$ such that $x\leq y$ , then in $X'$ , we have $x\leq y$ (abuse of notation).
-

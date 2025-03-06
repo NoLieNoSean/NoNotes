@@ -15,3 +15,27 @@
 
 [[PROB_Q1]]
 [[PROB_Q3]]
+
+---
+
+Probability
+1) Introduction to probability spaces - discrete and continuous, monotone convergence theorem.
+2) Inclusion exclusion, conditional probability, independence. 
+3) random variables on discrete framework: examples such as Bernoulli trials. 
+4) Probability mass functions, independence, introduction to expectation
+5) Convolution product of random variables (hoel port)
+6) Properties of expectation, moment generating functions
+7) Covariance, Correlation. 
+8) Weak Law of Large Numbers, Convergence of rvs, then Strong Law of Large numbers
+9) Conditional expectation and its properties.
+
+Assignments:
+Proof of Inclusion exclusion in probability 
+Bon fironi inequality
+Polya Urn Scheme
+
+(1) E(aY+Z/X) = a E(Y/X) + aE(Z/X)
+(2) Y >= 0, E(Y | X)  >= 0
+(3) E(g(X) Y/ X) = g(X) E(Y/X)
+(4) E(c/X) = c
+(5) E(E(Y/X,Z) | X) = E(Y|X) = E(E(Y/X)/X,Z)

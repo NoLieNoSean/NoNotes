@@ -62,71 +62,97 @@ The conjecture does not hold when $m=3$. The graphs $G=(V, E_{1})$ and $H=(V, E_
 > $$
 > Thus, the terms in $(1)$ and $(2)$ with $I\ne[m]$ are equal. For $I=[m]$, note that $|G\to \overline{H}|=0$ and $|H\to \overline{H}|=0$ since $m> \frac{1}{2}\binom{n}{2}$. Hence, $|G\to H|=|H\to H|> 0$ (the identity isomorphism!), and we are done.
 
-
 ---
-## Posets
+## Generalizing the Inclusion Exclusion Principle
 
-In order to further generalize the principle of inclusion and exclusion, we will develop some more theory on posets
+In order to further generalize the principle of inclusion and exclusion, we will develop some more theory on posets.
+### The Incidence Algebra of a Poset
 
-### Posets as Algebras: Incidence Algebra
+> [!Info]
+> An *algebra* over a field $F$ is a vector space over $F$ that is also equipped with a bilinear multiplication operation $\cdot:V\times V\to V$. 
 
-suppose that $X = (P, \leq)$ is a poset and $|P|=n$.
-Define the Incidence algebra of $P$ by 
-$I(P) := \{f:P\times P\rightarrow \mathbb{R}$ such that $f(x,y) = 0$ unless $x \leq y\}$
+Suppose that $P=(X, \leq)$ is a poset and $|X|=n$. Define the *incidence algebra* of $P$ by
+$$
+I(P)\equiv \{ f\ : \  X\times X\to \mathbb{R} \ | \  f(x, y)=0\text{ unless }x\leq y\}.
+$$
+For $f,g\in I(P)$, define $(f+g)(x,y) \equiv f(x,y) + g(x,y)$ for all $x, y\in X$. Clearly, $f + g\in I(P)$. 
+For $\alpha\in\mathbb{R}\text{ and }f\in I(P)$, define $(\alpha\cdot f)(x,y) = \alpha f(x,y)$  for all $x, y\in X$ so that $\alpha \cdot f\in I(P)$. 
+For $f,g\in I(P)$, define 
+$$
+(f\cdot g)(x,y) \equiv \sum_{x \leq z \leq y}f(x,z)g(z,y) \quad\forall x, y\in X,
+$$
+and note that $(f\cdot g)\in I(P)$. Bilinearity is easily verified. Thus, with these definitions, the incidence algebra is indeed an algebra. 
+### Matrix Representation of the Algebra
 
-for $f,g\in I(P)$, define $(f+g)(x,y) = f(x,y) + g(x,y)$ so that $f + g\in I(P)$
+>[!Info] 
+>A *linear extension* of a poset $P=(X,\leq)$ is a totally ordered set $P'=(X, \leq')$ that respects the poset's structure. That is, if $x, y\in X$, $x\leq y$ $\implies$ $x\leq'y$. 
 
-for $\alpha\in\mathbb{R}\text{ and }f\in I(P)$, define $(\alpha\cdot f)(x,y) = \alpha f(x,y)$ so that $\alpha f\in I(P)$
+Let $P' = \{x_1 \leq' x_2\leq' \cdots \leq' x_n\}$ be a linear extension of $P$. Let $\mathcal{M}_{n}(\mathbb{R})$ denote the algebra of $n\times n$ real matrices. Define a map $\varphi:I(P)\to \mathcal{M}_{n}(\mathbb{R})$ by $f\mapsto M_{f}\equiv [f(x_{i}, x_{j})]_{n\times n}$. 
 
-for $f,g\in I(P)$, define $$(f\cdot g)(x,y) = \sum_{x \leq z \leq y}f(x,z)g(z,y)$$so that $f\cdot g\in I(P)$
+We claim that $\varphi$ is an injective homomorphism. The injective part being obvious and trivial properties being easily proved, we will only check that $\varphi(fg)=\varphi(f)\varphi(g)$. Let $M_{(i, j)}$ denote the $i,j$th entry of $M$.
+$$
+\begin{align}
+\varphi(fg)_{(i, j)} =(fg)(x_{i}, x_{j}) & =\sum_{x_{i} \leq z \leq x_{j}}f(x_{i},z)g(z,x_{j}). \\ \\
 
-with these definitions, the incidence algebra is indeed verified to be an algebra (a vector space with a bilinear product operation between vectors)
+(\varphi(f)\varphi(g))_{(i, j)} & = \sum_{k=1}^{n} f(x_{i}, x_{k})g(x_{k}, x_{j}) \\
+	 & = \sum_{x_{i}\leq x_{k}\leq x_{j}} f(x_{i}, x_{k})g(x_{k}, x_{j}).
+\end{align}
+$$
+Note that $M_{f}$ is always upper triangular, and that the set of all upper triangular matrices in $\mathcal{M}_{n}(\mathbb{R})$ forms a subalgebra of $\mathcal{M}_{n}(\mathbb{R})$. Since $\varphi$ is an injective homomorphism, $I(P)\cong\mathrm{Im}~\varphi$, so $I(P)$ is isomorphic to a subalgebra of the algebra of upper triangular $n\times n$ matrices.
 
-### Matrix Representation for the Algebra
+Now we shall have a look at a few important functions in $I(P)$. 
+### Invertible elements in I(P)
 
-Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a $\textit{linear extension}$ of the poset $X$. 
+The identity element of $I(P)$ is
+$$
+e(x,y) = \begin{cases}1, & x=y\\0 & \text{otherwise.}\end{cases}
+$$
+It is easy to verify that for any $f\in I(P)$, we have $f\cdot e = e\cdot f = f$. Note that the identity is unique, since the identity matrix is unique in $\varphi(I(P))$. Having defined the identity, we can talk about invertible elements.
 
+Clearly,
+$$
+\begin{align}
+ & f\text{ is invertible } \\
+\iff & M_{f}=\varphi(f) \text{ is invertible} \\
+\iff & \text{All diagonal entries of }M_{f}\text{ are nonzero} \\
+\iff & f(x, x)\ne 0\quad\forall x\in X.
+\end{align}
+$$
+Since $I(P)\cong \mathrm{Im}~\varphi$, $f^{-1}$ is given by $M_{f}^{-1}$. Indeed, $ff^{-1}=e$. If the $f(x, x)=1$ for all $x\in X$ and $f(x, y)\in \mathbb{Z}$ for all $x, y\in X$, then $f^{-1}$ is also integer valued for all $x, y\in X$. This is because if a upper triangular matrix $M$ has integer valued entries and all diagonal entries equal to 1, $M^{-1}$ is also diagonal with integer valued entries. We have $M = I - N$ for a strictly upper triangular (and hence nilpotent) matrix $N$. Thus, $M^{-1}  = I + N +N^2 + \cdots + N^{k}$ for some $k\in \mathbb{N}$.
+### The Möbius function
 
-Note that  $\varphi: I(P) \rightarrow M_{n}(\mathbb{R})$  given by $f \mapsto M_{f}$ where $M_{f} = [a_{ij}]_{n\times n} = [f(x_{i},x_{j})]_{n\times n}$
-is an injective homomorphism of algebras. The trivial properties are easily verified.
-We will only check that  $M_{fg} = \varphi(f\cdot g) = \varphi(f)\varphi(g) = M_{f}M_{g}$ 
-before we verify said property, if $T$ is a matrix, let $T(i,j)$ denote the $ij$-th entry of $T$.
-now indeed, $$M_{fg}(i,j) = \varphi(f\cdot g)(i,j) = \sum_{x_{i}\leq x_{k}\leq x_{j}}f(x_i,x_k)g(x_k,x_j) = \sum_{k=0}^{n}f(x_i,x_k)g(x_{k},x_{j})=\sum_{k=1}^{n}M_{f}(i,k)M(k,j)=(\varphi(f)\varphi(g))(i,j)$$
-as desired. Thus the incidence algebra may be viewed as a subalgebra of the algebra of $n\times n$ matrices. Due to the isomorphism, we will be identifying the functions with their corresponding matrices without comment whenever necessary.
+Define the *incidence function* $i$ of $I(P)$ to be 
+$$
+i(x,y) = \begin{cases}1 & x\leq y\\ 0 & \text{otherwise.}\end{cases}
+$$
+The *Möbius function* is defined to be the inverse $\mu$ of the incidence function $i$. From the previous section, we know that $\mu$ must be integer valued. Since $\mu i=e$, we know that for all $x\in X$,
+$$
+\begin{align}
+ & \mu i(x, x)=1 \\
+\implies & \mu(x, x)i(x, x)=1 \\ 
+ \implies & \mu(x, x)=1 .
+\end{align}
+$$
+If $x\ne y$, 
+$$
+\begin{align}
+ & \mu i(x, y)=0 \\
+\implies & \sum_{x\leq z\leq y}\mu(x, z)i(z, y)=0 \\
+ \implies & \sum_{x\leq z\leq y}\mu(x, z)=0 \\
+\implies & \mu(x, y)=-\sum_{x\leq z< y}\mu(x, z).
+\end{align}
+$$
+Thus, we get an inductive definition for $\mu$:
+$$
+\mu(x,y) = \begin{cases}1 & \text{if } x=y\\-\sum_{x\leq z<y}\mu(x,z) & \text{if } x\neq y.\end{cases}
+$$
 
-now we will investigate some important functions in $I(P)$
-
-#### Identity Element
-$\textit{The}$ identity element of $I(P)$ is $e(x,y) = \begin{cases}1, & x=y\\0 & \text{else}\end{cases}$
-
-indeed, one may verify that for any $f\in I(P)$, we have $f\cdot e = e\cdot f = f$
-note that this identity is unique, since the identity matrix is unique in $\varphi(I(P))$.
-having defined the identity, we can talk about invertible elements
-#### Invertible Elements
-**Condition for invertibility**
-note that $f$ is invertible $\iff$ $M_{f} = \varphi(f)$ is invertible $\iff$ All diagonal entries are nonzero $\iff$ $f(x,x) \neq 0\quad \forall x\in P$
-
-**Finding the inverse**
-From linear algebra, if $f$ is diagonal and integral then $f^{-1}$ is diagonal and integral.
-we have $M_{f} = I - N$ for some strictly upper triangular matrix (thus nilpotent)
-note that the inverse is therefore $M_{f}^{-1}  = I + N +N^2 + \cdots + N^{k}$ for some $k\in \mathbb{N}$
-note that inverses are also unique
-
-#### The Incidence Function
-
-define the incidence function $i$ of $I(P)$ to be $i(x,y) = \begin{cases}1 & \text{if } x\leq y \text{ (}\leq\text{ taken in the partial order})\\ 0 & \text{otherwise}\end{cases}$
-
-#### The Möbius function of $P$
-
-The Möbius function is defined to be the inverse of the incidence function $i$.
-by solving the equation $$\mu\cdot i = e$$ we get an inductive definition of the Möbius function $\mu$:
-$$\mu(x,y) = \begin{cases}1 & \text{if } x=y\\-\sum_{x\leq z<y}\mu(x,z) & \text{if } x\neq y\end{cases}$$
-
-suppose $P$ is a total order $a_1 < a_2 < \cdots < a_r$
-then it is easily verified that
-	 $\mu(x,x) = 1 \quad\forall x\in P$
-	 $\mu(a_i,a_{i+1}) = -1 \quad\forall 1 \leq i \leq r-1$ and that
-	 $\mu(a_i,a_j) = 0\quad\forall j > i+1$
+> [!Example] The Möbius function of a total order
+> Suppose $P$ is a total order $a_1 < a_2 < \cdots < a_r$.
+> Then it is easily verified that
+> - $\mu(a_{i},a_{i}) = 1 \quad\forall 1\leq i\leq r$
+> - $\mu(a_i,a_{i+1}) = -\mu(a_{i}, a_{i})= -1 \quad\forall 1 \leq i \leq r-1$ 
+> - $\mu(a_i,a_j) = 0\quad\forall j > i+1$
 
 >[!Lemma]
 >The power set $\mathcal{P}([n])$ is order isomorphic to the cartesian product $\prod_{i=1}^{n}P_{i}$ where $P_{i} = \{a_i,b_i\}$ such that $a_i < b_i$
@@ -140,58 +166,12 @@ then it is easily verified that
 >**Proof** 
 >call the product function on the right hand side $r$. Let $i$ be the incidence function of $P$. it is easily verified that $r\cdot i = i\cdot r = e$ and since inverses are unique, we have that the two functions are identical
 
-
-
-
-
-
-
-
----
-## Posets
-
-We want to generalize [[DMAT_L12#Linear algebraic formulation|this]] to posets.
-
-Let $(P, \leq)$ be a finite poset. $|P|=n$. Consider the set of all functions $I(P)$, called the incidence algebra of $P$, $f:P\times P\to \mathbb{R}$ such that $f(x, y)=0$ unless $x\leq y$. Define addition and scalar multiplication in the usual way, and observe that $I(P)$ is closed under these operations. Define multiplication like so:
-
-$$
-fg(x, y)\equiv\sum_{x\leq z\leq y}f(x, z)g(z, y).
-$$
-and note that $I(P)$ is closed under this operation. Thus, $I(P)$ is an algebra (A vector space equipped with vector multiplication).
-
-### Matrix representation for the algebra $I(P)$
-
-Let $x_{1}\leq x_{2}\leq \dots\leq x_{n}$ be a *linear extension*(a total order of $P$ which respects the partial order) of $P$. Let $M_{n}(\mathbb{R})$ be the algebra of $n\times n$ real matrices. Let $\phi:I(P)\to M_{n}(\mathbb{R})$ map $f$ to a matrix $M_{f}$ whose $i$, $j$ th entry is $f(x_{i}, x_{j})$. Note that $M_{f}$ is upper triangular for all $f\in I(P)$. $\phi$ is an injective homomorphism, because
-$$
-fg(x_{i}, x_{j})=\sum_{k=1}^{n} f(x_{i}, x_{k})g(x_{k}, x_{j}).
-$$
-Note that $\mathrm{Im}~\phi$ is NOT the set of all upper triangular matrices (it would be if $P$ was a total order). 
-
-The *incidence function* of $P$ is defined to be 
-$$
-i(x, y)=\begin{cases}
-1 & x\leq y (\text{in the partial order!})\\
-0 &  \text{otherwise}
-\end{cases}
-$$
-If $f\ne 0$ and $f$ is integral and the diagonal of $M_{f}$ is all ones, then $f^{-1}$ is integral.
-The inverse of the incidence function is called the *Mobius function*. The mobius function is unique. For any $P$, its mobius function is uniquely defined by
-- $\mu(x, x)=1$ for all $x$ and
-- $\sum_{x\leq z\leq y}\mu(x, y)=0$ for all $x\ne y$.
-
-- Mobius function for total order
-- The mobius inversion formula
-- power set poset is isomorphic to cartesian product poset
-- Lemma: Mobius function of cartesian product of posets is the product of Mobius functions of posets
-- mobius function for the power set poset, relation to what we covered in the prev lec
-- 
-
 ---
 
 ## Chains and antichains in posets
 
 > [!Theorem] 
-> If $r$ is the maximum chain length in a poset $P$, then $P$ can be covered by $r$ antichains (and no fewer).
+> If $r$ is the maximum chain length in a poset $P$, then $P$ can be covered by $r$ chains (and no fewer).
 
 Since A chain and an antichain can intersect at most 1 point, the no fewer part should be clear.
 
