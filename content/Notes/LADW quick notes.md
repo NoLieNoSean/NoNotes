@@ -259,7 +259,7 @@ $\det AB=\det A\det B$
 
 ### Formal definition and uniqueness
 
-[[Algebra1_L16]]
+[[ALG1_L16]]
 
 ### Cofactor expansions
 

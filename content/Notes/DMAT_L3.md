@@ -8,7 +8,7 @@ time: 11:50
 ---
 ## Zorn's lemma
 
-An chain is a subset of a [[Analysis1_L2|partial order]] in which any two elements are comparable (basically, a totally ordered subset). Zorn's lemma is equivalent to the axiom of choice.
+An chain is a subset of a [[ANA1_L2|partial order]] in which any two elements are comparable (basically, a totally ordered subset). Zorn's lemma is equivalent to the axiom of choice.
 
 > [!Theorem] Zorn's Lemma
 > Let $(S, \leq)$ be any partially ordered set such that every chain $C$ has an upper bound. Then, $S$ has a maximal element.
@@ -65,4 +65,4 @@ Now, several non-trivial conclusions can be drawn using [[DMAT_L2#Cardinal arith
 - That is about as far as we can stretch it, since [[Cantor's Theorem]] forces the cardinality of the power set of $\mathbb{R}$ to be greater than $\mathbb{R}$.
 - $|\mathbb{R}^{\mathbb{R}}|=2^{\aleph_{0}c}=2^{c}$.
 
-Interesting note: while the set of all functions from $\mathbb{R}$ to $\mathbb{R}$ has cardinality $2^{c}$, the set of all continuous functions from $\mathbb{R}$ to $\mathbb{R}$ has cardinality $c$. This is because a continuous function is fully determined by the values it takes on a [[Analysis1_L14#Dense subsets|dense]] subset of its domain (Rudin, 4.4 [[Analysis1_HW4.pdf#page=3]]). So the cardinality of the set is equal to $\mathbb{R}^{\mathbb{Q}}$, and hence to $\mathbb{R}$. 
+Interesting note: while the set of all functions from $\mathbb{R}$ to $\mathbb{R}$ has cardinality $2^{c}$, the set of all continuous functions from $\mathbb{R}$ to $\mathbb{R}$ has cardinality $c$. This is because a continuous function is fully determined by the values it takes on a [[ANA1_L14#Dense subsets|dense]] subset of its domain (Rudin, 4.4 [[ANA1_HW4_sub.pdf#page=3]]). So the cardinality of the set is equal to $\mathbb{R}^{\mathbb{Q}}$, and hence to $\mathbb{R}$. 

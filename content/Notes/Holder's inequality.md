@@ -48,7 +48,7 @@ $$
 
 ---
 
-Note how Holder's generalizes the [[Algebra1_L21#The Cauchy-Schwarz Inequality|Cauchy Schwarz inequality]]: for $p=q=\frac{1}{2}$, we have
+Note how Holder's generalizes the [[ALG1_L21#The Cauchy-Schwarz Inequality|Cauchy Schwarz inequality]]: for $p=q=\frac{1}{2}$, we have
 $$
 \begin{align}
 \left| \sum_{j=1}^{n} x_{j}y_{j} \right| & \leq\sum_{j=1}^{n} |x_{j}y_{j}|\leq\left( \sum_{j=1}^{n} |x_{j}|^{2} \right)^{1/2}\left( \sum_{j=1}^{n} |y_{j}|^{2} \right)^{1/2} \\

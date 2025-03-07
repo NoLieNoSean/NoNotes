@@ -19,7 +19,7 @@ If $T$ is a collection of open subsets of a metric space $X$, then the collectio
 
 ## Characterization of compact sets
 
-Recall definitions of [[Analysis1_L17#Absolute and relative definitions of open cover compactness|open cover compactness]] (referred to as just compactness), [[Analysis1_L16#Sequential compactness|sequential compactness]], and [[Analysis1_L16#Limit point compactness|limit point compactness]]. In Analysis 1, we [[Analysis1_L16#Equivalence of sequential and limit point compactness|showed]] that sequential and limit point compactness are equivalent. We stated but didn't show that this equivalence extends to open cover compactness. We will prove this. Also recall that we [[Analysis1_L16#Characterization of compact sets|showed]] that all compact sets are closed and bounded (with the [[Analysis1_L16#Heine Borel Theorem|converse]] being true for $\mathbb{R}^{n}$). We will introduce a stronger characterization, which says that a set is compact if and only if it is complete and totally bounded.
+Recall definitions of [[ANA1_L17#Absolute and relative definitions of open cover compactness|open cover compactness]] (referred to as just compactness), [[ANA1_L16#Sequential compactness|sequential compactness]], and [[ANA1_L16#Limit point compactness|limit point compactness]]. In Analysis 1, we [[ANA1_L16#Equivalence of sequential and limit point compactness|showed]] that sequential and limit point compactness are equivalent. We stated but didn't show that this equivalence extends to open cover compactness. We will prove this. Also recall that we [[ANA1_L16#Characterization of compact sets|showed]] that all compact sets are closed and bounded (with the [[ANA1_L16#Heine Borel Theorem|converse]] being true for $\mathbb{R}^{n}$). We will introduce a stronger characterization, which says that a set is compact if and only if it is complete and totally bounded.
 
 > [!Definition]
 > A metric space $X$ is said to be *totally bounded* if for each $\epsilon> 0$, $X$ can be covered by a finite number of open balls of radius $\epsilon$. A subset $E$ of $X$ is said to be totally bounded if $E$ is bounded as a metric space. 
@@ -36,8 +36,8 @@ A totally bounded metric space is always bounded. However, being bounded does no
 > [!Theorem] Characterization of compactness for a metric space
 > For a metric space $X$, the following assertions are equivalent:
 > - $X$ is [[Cauchy sequences#Complete metric space|complete]] and totally bounded
-> - $X$ is [[Analysis1_L17#Absolute and relative definitions of open cover compactness|compact]]
-> - $X$ is [[Analysis1_L16#Sequential compactness|sequentially compact]].
+> - $X$ is [[ANA1_L17#Absolute and relative definitions of open cover compactness|compact]]
+> - $X$ is [[ANA1_L16#Sequential compactness|sequentially compact]].
 
 > **Complete and totally bounded $\implies$ compact**
 > 

@@ -2,11 +2,8 @@
 tags:
   - MOC
 ---
+**Prof:** Amitabh Virmani
 **TAs:** Harsh, Kaustav, Aleek
-
-# Notes
-
-heh
 
 # Homework
 [[CM1 HW2]]

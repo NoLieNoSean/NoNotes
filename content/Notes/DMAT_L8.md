@@ -54,7 +54,7 @@ $$
 $$
 so, $\phi(x)=\frac{1}{1-2x}=1+2x+(2x)^{2}+(2x)^{3}+\dots$
 
-Observe that $\phi$ has a [[Analysis1_L31#Power series|radius of convergence]] of $\frac{1}{2}$, so our manipulations are justified by analysis. This does not always need to be the case.
+Observe that $\phi$ has a [[ANA1_L31#Power series|radius of convergence]] of $\frac{1}{2}$, so our manipulations are justified by analysis. This does not always need to be the case.
 
 ### The Fibonacci sequence
 
@@ -99,7 +99,7 @@ X^n
 0
 \end{pmatrix}.
 $$
-It would be beneficial to [[Algebra1_L19#Diagonalization|diagonalize]] $X$, since powers of a diagonal matrix are easy to compute. The characteristic polynomial of $X$ is the same as the characteristic equation we obtained in the previous method, so $\phi, \psi=\frac{1}{2}(1\pm \sqrt{ 5 })$ are the eigenvalues of $X$. We can find and normalize the eigenvectors corresponding to these eigenvalues to obtain the change of basis matrix
+It would be beneficial to [[ALG1_L19#Diagonalization|diagonalize]] $X$, since powers of a diagonal matrix are easy to compute. The characteristic polynomial of $X$ is the same as the characteristic equation we obtained in the previous method, so $\phi, \psi=\frac{1}{2}(1\pm \sqrt{ 5 })$ are the eigenvalues of $X$. We can find and normalize the eigenvectors corresponding to these eigenvalues to obtain the change of basis matrix
 $$
 P =
 \begin{pmatrix}

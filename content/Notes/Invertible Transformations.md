@@ -5,7 +5,7 @@ tags:
 
 ## Left and right invertibility
 
-For more on left and right inverses, look up exercise 1 [[Analysis1_HW1.pdf|here]].
+For more on left and right inverses, look up exercise 1 [[ANA1_HW1_sub.pdf|here]].
 ### Left inverse
 Let $A:V\to W$ be a [[Linear Transformations|linear transformation]]. It is said to be *left invertible* if there exists a linear transformation $B:W \to V$ such that $BA = I_{V}$. $A$ must be injective for $B$ to exist.
 

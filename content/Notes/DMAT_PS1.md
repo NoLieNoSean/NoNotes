@@ -1,23 +1,23 @@
 [[probsheet1.pdf|Problem sheet 1]].
 
-# 1
+## 1
 
 The binary sequences in $\{ 0, 1 \}^{\mathbb{N}}$ can be represented as subsets of $\mathbb{N}$, with the nth bit deciding on whether $n$ is in the subset. 
-## a
+### 1 a
 
 $\{ \{ 1 \}, \{ 1, 2 \}, \{ 1, 2, 3 \}, \dots \}$
 
-## b
+### 1 b
 
 $\{ \{ 1 \}, \{ 2 \}, \{ 3 \} , \dots\}$
 
-## c
+### 1 c
 
 Find an uncountable antichain in $\{ 0, 1 \}^{\mathbb{N}}$
 
 Let $a$ represent $01$, and $b$ represent $10$. Let $A$ be the set of all sequences of $a$s and $b$s. Note that a bijection between $A$ and $\{ 0, 1 \}^{\mathbb{N}}$ exists, so $A$ is uncountable. Also, no two elements in $A$ are comparable.
 
-## d
+### 1 d
 
 **Solution using Dedekind cuts**
 
@@ -42,7 +42,7 @@ $$
   & \}
 \end{align}
 $$
-## e
+### 1 e
 
 **Solution using a tree structure**
 
@@ -63,7 +63,7 @@ $$
 ---
 ## 2
 
-### a
+### 2 a
 
 Consider all the functions which have $f(0)=k$. Then, the function can decrease its value by 1 at most $k$ times. Thus, we can associate the function with a k-tuple which records when the function performs the k-th drop. If the function settles at a constant value $v>0$, then we can fill the unused $v$ spots with zeroes. For example, the function
 $$
@@ -76,11 +76,11 @@ f(x)=\begin{cases}
 $$
 would be associated with the tuple $(6, 11, 11, 100, 0 )$. Note that $\bigcup_{n\in \mathbb{N}}\mathbb{N}^{n}$ is countable. We have an injection from the set of all non increasing functions from $\mathbb{N}$ to $\mathbb{N}$ to $\bigcup_{n\in \mathbb{N}}\mathbb{N}^{n}$. Thus, the set in question is countable.
 
-### b
+### 2 b
 
 A non decreasing function from $\mathbb{N}$ to $\mathbb{N}$ can be bijected to $\mathbb{N}^{\mathbb{N}}$. Associate each such function $f$ with the infinite tuple $(f(0), f(1)-f(0), f(2)-f(1), \dots)$. Thus, the set is uncountable.
 
-### c
+### 2 c
 
 Let $S$ be the set of all injective functions form $\mathbb{N}$ to $\mathbb{N}$. We can construct an injection from $\mathbb{N}^{\mathbb{N}}$ to $S$ like so: with $(a_{1}, a_{2}, a_{3}, \dots)\in \mathbb{N}^{\mathbb{N}}$, associate the function
 $$
@@ -93,7 +93,7 @@ $$
 $$
 $f$ is clearly injective, and unique to $(a_{1}, a_{2}, a_{3}, \dots)$. Thus, $|S|\geq |\mathbb{N}^{\mathbb{N}}|$, i.e, $S$ is uncountable.
 
-### d
+### 2 d
 
 Let $S$ be the set of all surjective functions from $\mathbb{N}$ to $\mathbb{N}$. We can construct an injection from $\mathbb{N}^{\mathbb{N}}$ to $S$ like so: with $(a_{1}, a_{2}, a_{3}, \dots)\in \mathbb{N}^{\mathbb{N}}$ associate a function like so:
 
@@ -108,7 +108,7 @@ f(x)= \begin{cases}
 $$
 Thus, $|S|\geq |\mathbb{N}^{\mathbb{N}}|$, i.e, $S$ is uncountable.
 
-### e
+### 2 e
 
 A Cantor diagonalization argument is a simple way to show that the set of all bijections from $\mathbb{N}$ to $\mathbb{N}$ is uncountable. 
 
@@ -121,8 +121,6 @@ $$
 \sum_{n=1}^{\infty} a_{\sigma_{r}(n)}=r.
 $$
 Thus, the set of all bijections from $\mathbb{N}$ to $\mathbb{N}$ is uncountable.
-
-
 
 ---
 

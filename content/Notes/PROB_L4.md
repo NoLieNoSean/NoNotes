@@ -26,27 +26,36 @@ $$
 
 You have a collection $N$ objects, $n$ of which are of type 1, and $N-n$ of which are of type 2. You randomly pick $k$ objects from the collection (these are the elementary events). Let the random variable $X$ map $\omega$ to the number of objects of type 1 that were picked in $\omega$. The probability mass function of $X$ is called a hypergeometric distribution:
 $$
-f(r)=P(X=r)=\frac{{\binom{n}{r}\binom{N-n}{k-r}}}{\binom{N}{k}},
+f(r)=P(X=r)=\begin{dcases}
+\frac{{\binom{n}{r}\binom{N-n}{k-r}}}{\binom{N}{k}} & x=0, 1, \dots, n \\
+0 & \text{otherwise.}
+\end{dcases}
 $$
-where $f$ is defined to be $0$ at any $r$ which results in undefined behavior. 
-
 ### Geometric distribution
 
-Consider the space $\Omega=\{ 0, 1 \}^{\mathbb{N}}$. Let $X$ be a random variable which denotes the iteration where the first 1 is obtained (technically, $X$ is not defined for the tuple $(0, 0, \dots)$, but lets ignore that), with the iterations indexed starting from 0. Then, $f(n)=P(X=n)=p(1-p)^{n}$. 
-
+Consider the space $\Omega=\{ 0, 1 \}^{\mathbb{N}}\setminus \{ 0 \}^{\mathbb{N}}$. Let $X$ be a random variable which denotes the iteration where the first 1 is obtained, with the iterations indexed starting from 0. Then, 
+$$
+f(x)=P(X=x)=\begin{cases}
+p(1-p)^{x} & x=0, 1, 2, \dots \\
+0 & \text{otherwise.}
+\end{cases}
+$$
 You can also see that $P(X\leq n)=\sum_{i=0}^{n}f(i)=1-(1-p)^{n+1}$ and $P(X>n)=1-P(X\leq n)=(1-p)^{n+1}$.  
 Additionally, $P(X>m+n/X>n)=P(X>m)$. 
 
 ### Negative binomial distribution
 
-Imagine a sequence of independent Bernoulli trials: each trial has two potential outcomes called "success" and "failure." In each trial the probability of success is $p$ and of failure is $1-p$. We observe this sequence until a predefined number $r$ of successes occurs. Then the random number of observed failures, $X$, follows the negative binomial (or Pascal) distribution:
-
+Imagine a sequence of independent Bernoulli trials: each trial has two potential outcomes called "success" and "failure." In each trial the probability of success is $p$ and of failure is $1-p$. We observe this sequence until $r$ successes occur. Then the number of observed failures, $X$, follows the negative binomial (or Pascal) distribution with parameters $r$ and $p$:
 $$
-f(k)=\binom{k+r-1}{k}(1-p)^{k}p^{r}.
+f(x)=\begin{dcases}
+\binom{x+r-1}{x}(1-p)^{x}p^{r} & x= 0, 1, 2, \dots\\
+0& \text{otherwise.}\\
+\end{dcases}
+
 $$
 Can also be written as
 $$
-f(k)=(-1)^{k}\binom{-r}{k}(1-p)^{k}p^{r}.
+f(x)=(-1)^{x}\binom{-r}{x}(1-p)^{x}p^{r}.
 $$
 We know from Taylor's theorem that ($-1<t<1$)
 $$
@@ -64,15 +73,20 @@ $$
 $$
 Thus, $\sum_{i=0}^{\infty}f(i)=1$. The other property being easily verified, we can conclude that $f$ is a legitimate probability mass function. 
 
+Observe that the geometric density with parameter $p$ is a negative binomial density with parameters $r=1$ and $p$.
+
 $f$ is a probability mass distribution even when $r$ is any positive real number.
 
 ### Poisson distribution
 
 Let $\lambda>0$. 
 $$
-f(n)= \frac{\lambda^{n}}{n!}e^{ -\lambda }
+f(x)=\begin{dcases}
+\frac{\lambda^{n}}{n!}e^{ -\lambda } & x=0, 1, 2, \dots \\
+0 & \text{otherwise.}
+\end{dcases}
 $$
-when $n\in \{ 0, 1, 2, \dots \}$ and zero otherwise. Note that
+Note that
 $$
 \begin{align}
 \sum_{i=0}^{\infty} f(i)=e^{-\lambda}\sum_{i=0}^{\infty} \frac{\lambda^{i}}{i!}=1 .

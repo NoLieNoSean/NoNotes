@@ -99,7 +99,7 @@ A \text{ is invertible}  \underset{ \text{defn} }{ \iff } &(\text{Left inverse e
 \underset{ \text{defn} }{ \iff } & A(S)\text{ is a basis in }W
 \end{align}
 $$
-(\*) is easy to show. Refer [[Analysis1_HW1.pdf|this]].
+(\*) is easy to show. Refer [[ANA1_HW1_sub.pdf|this]].
 (\*\*) is important. Proof goes exactly like the proof of the [[#^Theorem1|first theorem]]. 
 
 Speaking in terms of matrices, we get the following corollary to the two theorems:

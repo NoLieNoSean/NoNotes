@@ -7,7 +7,7 @@ date: 2025-01-21
 time: 11:50
 ---
 > [!Theorem]
-> Let $S\subset \mathbb{R}^{n}$ such that $\overline{S}=\mathbb{R}^{n}$ ($i$.$e$, $S$ is dense in $\mathbb{R}^{n}$). Let $\Omega$ be an open subset of $\mathbb{R}^{n}$. Then, $S\cap \Omega$ is [[Analysis1_L14#Dense subsets|dense]] in $\Omega$.
+> Let $S\subset \mathbb{R}^{n}$ such that $\overline{S}=\mathbb{R}^{n}$ ($i$.$e$, $S$ is dense in $\mathbb{R}^{n}$). Let $\Omega$ be an open subset of $\mathbb{R}^{n}$. Then, $S\cap \Omega$ is [[ANA1_L14#Dense subsets|dense]] in $\Omega$.
 
 > **Proof**
 > Let $\omega\in \Omega$. If $\omega\in S\cap \Omega$, we are done.

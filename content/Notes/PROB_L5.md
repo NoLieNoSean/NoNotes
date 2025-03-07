@@ -5,8 +5,6 @@ tags:
 date: 2025-02-28
 time: 15:30
 ---
-Note that if $X$ is a random variable on $(\Omega, \mathcal{F}, P)$ and $f:\mathbb{R}\to \mathbb{R}$ is any function, then $f\circ X$ is also a random variable, since $( f\circ X=c )=\bigcup_{x\in f^{-1}(c)}(X=x)$.
-
 ## Random vector
 
 > [!Definition]
@@ -27,36 +25,31 @@ If $f:\mathbb{R}^{n}\to \mathbb{R}^{m}$ is any function and $\mathbf{X}:\Omega\t
 > which is in the $\sigma$ algebra since it is closed under countable intersections.
 
 > [!Definition]
-> Let $\mathbf{X}:\Omega\to \mathbb{R}^{n}$ be a random vector. Then, $f_{\mathbf{X}}:\mathbb{R}^{n}\to[0, 1]$ defined by $f_{\mathbf{X}}(\mathbf{x})=P(\mathbf{X}=\mathbf{x})$ is called a *joint probability mass function* of $\mathbf{X}$.
+> Let $\mathbf{X}=(X_{1}, X_{2}, \dots, X_{n}):\Omega\to \mathbb{R}^{n}$ be a random vector. Then, $f_{\mathbf{X}}:\mathbb{R}^{n}\to[0, 1]$ defined by $f_{\mathbf{X}}(\mathbf{x})=P(\mathbf{X}=\mathbf{x})$ is called a *joint probability mass function* of the random variables $X_{1}, X_{2}, \dots, X_{n}$.
 
 > [!Theorem]
-> Let $f_{\mathbf{X}}$ be a joint probability mass function of $\mathbf{X}$ on $(\Omega, \mathcal{F}, P)$. If $\mathbf{X}=(X_{1}, X_{2}, \dots, X_{n})$, we know that each $X_{i}$ is a random variable. The probability mass functions $f_{X_{i}}$ can be expressed in terms of $f_{\mathbf{X}}$ like so:
+> Let $f_{\mathbf{X}}$ be the density function of a random vector $\mathbf{X}$ defined on $(\Omega, \mathcal{F}, P)$. If $\mathbf{X}=(X_{1}, X_{2}, \dots, X_{n})$, we know that each $X_{i}$ is a random variable. The probability mass functions $f_{X_{i}}$ can be expressed in terms of $f_{\mathbf{X}}$ like so:
 > $$
 > f_{X_{i}}(c)=P\left( \bigcup_{\mathbf{x}\in \mathrm{Im}~\mathbf{X}\ | \  x_{i}=c}(\mathbf{X}=\mathbf{x}) \right)=\sum_{\mathbf{x}\in \mathrm{Im}~\mathbf{X}\ | \  x_{i}=c}P(\mathbf{X}=\mathbf{x}). 
 > $$
 
-> [!Definition]
-> If $X$ is a random variable on $\Omega$, define $F(x)=P(X\leq x)=P(X\in (-\infty, x])$.
+---
 
-> [!Theorem] Proposition
-> - $F$ is increasing.
-> - $\lim_{ x \to \infty }F(x)=1$
-> - $\lim_{ x \to -\infty }F(x)=0$
-> - $\lim_{ x \to x_{0}^{+} }F(x)=F(x_{0})$ (right continuity).
+## Independent random variables
 
-The fourth point is shown by considering any monotone decreasing sequence $(\epsilon_{n})$ converging to $0$, and observing that 
-$$
-\begin{align}
-F(x_{0}) & =P(X\leq x_{0}) \\
- & =P((-\infty, x_{0}]) \\
- & =\lim_{ n \to \infty } P((-\infty, x_{0}+ \epsilon_{n}] ) \\
- & =\lim_{ n \to \infty } F(x_{0}+\epsilon_{n})
-\end{align}
-$$
-Note that for discrete random variables, $F$ may not be left continuous.
+The concept of independent random variables is very similar to independent events. Recall that two events $A$ and $B$ are independent if $P(A\cap B)=P(A)P(B)$. We say discrete random variables $X$ and $Y$ are independent if $P(\{ X=x \}\cap \{ Y=y \})=P(X=x)P(Y=y)$ for all $x, y$. In other words, the joint density of $X$ and $Y$ should be given by $f(x, y)=f_{X}(x)f_{Y}(y)$. 
 
 > [!Definition]
-> Let $X$ and $Y$ be discrete random variables on $(\Omega, \mathcal{F}, P)$. We say $X$ and $Y$ are independent if $P(\{ X=x \}\cap \{ Y=y \})=P(X=x)P(Y=y)$ for all $x, y$.
+> Let $X_{1}, X_{2}, \dots, X_{r}$ be $r$ discrete random variables having densities $f_{1}, f_{2}, \dots, f_{r}$ respectively. These random variables are said to be mutually independent if their joint density function $f$ is given by
+> $$
+> f(x_{1}, x_{2}, \dots, x_{r})=f_{1}(x_{1})f_{2}(x_{2})\dots f_{r}(x_{r}).
+> $$
+> 
+
+If $A_{1}, A_{2}, \dots, A_{r}$ are any $r$ subsets of $R$, then
+$$
+P(X_{1}\in A_{1}, \dots, X_{r}\in A_{r})=P(X_{1}\in A_{1})\dots P(X_{r}\in A_{r}).
+$$
 
 > [!Remark]
 > The above definition implies, when $X$ and $Y$ are independent, $f_{(X, Y)}((x, y))=f_{X}(x)f_{Y}(y)$.

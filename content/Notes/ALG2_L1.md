@@ -8,7 +8,7 @@ time: 09:13
 ---
 ## Groups
 
-Refer the last section of [[Analysis1_L2]].
+Refer the last section of [[ANA1_L2]].
 
 > [!Definition]
 > A Group is a pair $G=(G, \star)$ consisting of a set of elements $G$, and a binary operation $\star$ on $G$, such that

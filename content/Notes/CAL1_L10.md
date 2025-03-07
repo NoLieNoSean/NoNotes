@@ -11,7 +11,7 @@ time: 11:50
 > A metric space $X$ is said to be *separable* provided there is a countable subset of $X$ that is dense in $X$
 
 > [!Warning]
-> Note that the term **“separable”** for a metric space with a dense countable subset has **nothing to do with connectedness** or the concept of [[Analysis1_L22#Connected sets|separations]] in topology.
+> Note that the term **“separable”** for a metric space with a dense countable subset has **nothing to do with connectedness** or the concept of [[ANA1_L22#Connected sets|separations]] in topology.
 
 > [!Theorem] 
 > A compact metric space is separable.
@@ -35,7 +35,7 @@ time: 11:50
 > Every subset of a separable metric space is separable.
 
 > **Proof**
-> Let $E$ be a subset of a separable metric space $X$. From the previous theorem, we know that $X$ has a countable base $\mathcal{A}=\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$. Now, every element in $\mathcal{B}=\{ \mathcal{O}_{n}\cap E \}_{n=1}^{\infty}$ is open in $E$ due to [[Analysis1_L15#Subspace topology|subspace topology]], and $\mathcal{B}$ is countable. Also, any open set $\mathcal{O}$ in $E$ can be expressed as $\mathcal{O}'\cap E$, where $\mathcal{O}'$ is open in $X$. Since $\mathcal{O}'$ can be expressed as a countable union of elements in $\mathcal{A}$, it follows that $\mathcal{O}$ can be expressed as a countable union of elements in $\mathcal{B}$. 
+> Let $E$ be a subset of a separable metric space $X$. From the previous theorem, we know that $X$ has a countable base $\mathcal{A}=\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$. Now, every element in $\mathcal{B}=\{ \mathcal{O}_{n}\cap E \}_{n=1}^{\infty}$ is open in $E$ due to [[ANA1_L15#Subspace topology|subspace topology]], and $\mathcal{B}$ is countable. Also, any open set $\mathcal{O}$ in $E$ can be expressed as $\mathcal{O}'\cap E$, where $\mathcal{O}'$ is open in $X$. Since $\mathcal{O}'$ can be expressed as a countable union of elements in $\mathcal{A}$, it follows that $\mathcal{O}$ can be expressed as a countable union of elements in $\mathcal{B}$. 
 
 ### Lindelöf covering theorem
 

@@ -11,7 +11,7 @@ time: 11:50
 > [!Theorem] Extreme value theorem
 > Let $X$ be a metric space. Then $X$ is compact if and only if every continuous real valued function on $X$ takes a maximum and a minimum value.
 
-We have already shown the forward implication [[Analysis1_L16#Extreme value theorem|here]].
+We have already shown the forward implication [[ANA1_L16#Extreme value theorem|here]].
 
 > **Proof of $\impliedby$**
 > Assume every real valued function on $X$ takes a minimum and maximum value. To show that $X$ is compact, it is [[CAL1_L8#Characterization of compact sets|necessary and sufficient]] to show that it is complete and totally bounded.

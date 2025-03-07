@@ -8,7 +8,7 @@ time: 11:50
 ---
 ## Preliminaries
 
-Recall what a [[Algebra1_L21#Normed spaces|normed vector space]] is. We say that $V$ is a complete normed linear space if $(V, \lVert \cdot \rVert)$ is a [[Cauchy sequences#Complete metric space|complete metric space]] with respect to the metric induced by the norm.
+Recall what a [[ALG1_L21#Normed spaces|normed vector space]] is. We say that $V$ is a complete normed linear space if $(V, \lVert \cdot \rVert)$ is a [[Cauchy sequences#Complete metric space|complete metric space]] with respect to the metric induced by the norm.
 
 ### Equivalence of norms
 

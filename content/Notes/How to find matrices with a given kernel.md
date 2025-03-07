@@ -50,7 +50,7 @@ $$
 is one possible solution for $A$. Since performing row operations does not change the kernel of a matrix, any matrix obtained by performing row operations on the above matrix is also a solution.
 
 ## Method 2
-Let $A$ be in RREF. Recall how we found the null space of a matrix [[Algebra1_L9#Example 3|here]]. We will reverse engineer it. Note that given the three basis vectors we derived there, it is possible to write the matrix we started with. Also note that those three vectors are in a specific form - if you combine them to form a matrix, and take its transpose, they seem to be in a kind of "reverse reduced row echelon form":
+Let $A$ be in RREF. Recall how we found the null space of a matrix [[ALG1_L9#Example 3|here]]. We will reverse engineer it. Note that given the three basis vectors we derived there, it is possible to write the matrix we started with. Also note that those three vectors are in a specific form - if you combine them to form a matrix, and take its transpose, they seem to be in a kind of "reverse reduced row echelon form":
 $$
 \begin{bmatrix}
 1 & 0 & 0 & 0 & 0 & 0 \\
