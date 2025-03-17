@@ -3,7 +3,7 @@ tags:
   - DMAT
 date: 2025-02-26
 time: 18:00
-draft: true
+draft: false
 ---
 
 [[assignment2.pdf]]

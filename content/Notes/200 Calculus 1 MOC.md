@@ -29,4 +29,4 @@
 - [[CAL1_L11]]
 	- Banach contraction principle.
 - [[CAL1_L12]]
-	- Intro to partial derivatives
+	- Intro to partial derivatives.

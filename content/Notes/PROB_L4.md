@@ -82,7 +82,7 @@ $f$ is a probability mass distribution even when $r$ is any positive real number
 Let $\lambda>0$. 
 $$
 f(x)=\begin{dcases}
-\frac{\lambda^{n}}{n!}e^{ -\lambda } & x=0, 1, 2, \dots \\
+\frac{\lambda^{x}}{x!}e^{ -\lambda } & x=0, 1, 2, \dots \\
 0 & \text{otherwise.}
 \end{dcases}
 $$
