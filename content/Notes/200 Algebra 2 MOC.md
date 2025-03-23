@@ -23,15 +23,18 @@ tags:
 	- Isomorphisms, automorphisms and conjugation, first isomorphism theorem
 - [[ALG2_L5]] ✅
 	- Correspondence Theorem
-- [[ALG2_L6]]
-	- Product of groups ✅, third isomorphism theorem ✅, Chinese remainder theorem
+- [[ALG2_L6]] ✅
+	- Product of groups, third isomorphism theorem, Chinese remainder theorem
 - [[ALG2_L7]] ✅
 	- Double cosets, group actions
 - [[ALG2_L8]] ✅
-	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer
+	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer, second isomorphism theorem
 - [[ALG2_L9]]
 	- Orbit-stabilizer theorem, the class equation, semidirect product
 - [[ALG2_L10]]
+	- Sylow's theorems
+
+
 
 # Other notes
 

@@ -1,11 +1,3 @@
----
-tags:
-  - PROB
-  - Lecture
-  - Processed
-date: 2025-01-27
-time: 15:30
----
 ## More examples of probability mass functions
 
 ### Random walks
@@ -27,7 +19,7 @@ $$
 You have a collection $N$ objects, $n$ of which are of type 1, and $N-n$ of which are of type 2. You randomly pick $k$ objects from the collection (these are the elementary events). Let the random variable $X$ map $\omega$ to the number of objects of type 1 that were picked in $\omega$. The probability mass function of $X$ is called a hypergeometric distribution:
 $$
 f(r)=P(X=r)=\begin{dcases}
-\frac{{\binom{n}{r}\binom{N-n}{k-r}}}{\binom{N}{k}} & x=0, 1, \dots, n \\
+\frac{{\binom{n}{r}\binom{N-n}{k-r}}}{\binom{N}{k}} & r=0, 1, \dots, n \\
 0 & \text{otherwise.}
 \end{dcases}
 $$
@@ -40,8 +32,16 @@ p(1-p)^{x} & x=0, 1, 2, \dots \\
 0 & \text{otherwise.}
 \end{cases}
 $$
-You can also see that $P(X\leq n)=\sum_{i=0}^{n}f(i)=1-(1-p)^{n+1}$ and $P(X>n)=1-P(X\leq n)=(1-p)^{n+1}$.  
-Additionally, $P(X>m+n/X>n)=P(X>m)$. 
+Note that
+$$
+\begin{align}
+1. \quad& P(X\leq n)=\sum_{i=0}^{n}f(i)=1-(1-p)^{n+1}, \\
+2.\quad & P(X>n)=1-P(X\leq n)=(1-p)^{n+1}, \\
+3.\quad & P(X\geq n)=P(X> n)+P(X=n)=(1-p)^{n}, \\ 
+4.\quad & P(X< n)=1-P(X\geq n)=1-(1-p)^{n}.
+\end{align}
+$$
+Additionally, $P(X\geq m+n/X\geq n)=P(X\geq m)$, as one would expect.
 
 ### Negative binomial distribution
 

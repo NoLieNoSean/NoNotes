@@ -1,11 +1,3 @@
----
-tags:
-  - PROB
-  - Lecture
-  - Processed
-date: 2025-01-21
-time: 17:00
----
 ## Independent events
 
 We say two events are independent if $P(A\cap B)=P(A)P(B)$.

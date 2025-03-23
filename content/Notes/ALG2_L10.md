@@ -1,24 +1,28 @@
 ## Sylow's theorems
 
-> [!Lemma]
+Note that the following lemma is a special case of [[ALG2_L3#Cauchy's Theorem|Cauchy's theorem]], which we have already proved.
+
+> [!Theorem] Lemma
 > If $G$ is a finite abelian group and $p$ is a prime dividing $|G|$, then $G$ contains an element of order $p$.
 
-Fix a prime $p$. Complete induction on $|G|$. Vacuously true for $|G|< p$. If $|G|=p$, $G$ is cyclic, and has an element of order $p$. 
+> **Alternate proof using induction**
+> Fix a prime $p$. Complete induction on $|G|$. Vacuously true for $|G|< p$. If $|G|=p$, $G$ is cyclic, and has an element of order $p$. 
+> 
+> For $|G|> p$, pick $x\ne e$ in $G$. If $|x|=pn$, $x^{n}$ is an element of order $p$. 
+> 
+> Thus, assume $p$ does not divide $|x|$. Since $G$ is abelian, $\langle x \rangle\triangleleft G$. Now, $|G|=|G/\langle x \rangle||\langle x \rangle|$. Since $p$ does not divide $|\langle x \rangle|$, it must divide $|G/\langle x \rangle|$. Since $x\ne e$, $|G/\langle x \rangle|< |G|$. By the induction hypothesis, $G/\langle x \rangle$ has an element $y\langle x \rangle$ of order $p$. Note that $y\not\in \langle x \rangle$, since that would make $y\langle x \rangle$ the identity in $G/\langle x \rangle$. Now, since $y^{p}\langle x \rangle=\langle x \rangle$, $y^{p}\in \langle x \rangle$. Clearly, then, $\langle y \rangle\ne \langle y^{p} \rangle$. This forces $|y^{p}|< |y|$, which in turn implies $p$ divides $|y|$. This takes us back to the previous case, so there exists a power of $y$ which has order $p$. 
 
-For $|G|> p$, pick $x\ne e$ in $G$. If $|x|=pn$, $x^{n}$ is an element of order $p$. 
-
-Thus, assume $p$ does not divide $|x|$. Since $G$ is abelian, $\langle x \rangle\triangleleft G$. Now, $|G|=|G/\langle x \rangle||\langle x \rangle|$. Since $p$ does not divide $|\langle x \rangle|$, it must divide $|G/\langle x \rangle|$. Since $x\ne e$, $|G/\langle x \rangle|< |G|$. By the induction hypothesis, $G/\langle x \rangle$ has an element $y\langle x \rangle$ of order $p$. Note that $y\not\in \langle x \rangle$, since that would make $y\langle x \rangle$ the identity in $G/\langle x \rangle$. Now, since $y^{p}\langle x \rangle=\langle x \rangle$, $y^{p}\in \langle x \rangle$. Clearly, then, $\langle y \rangle\ne \langle y^{p} \rangle$. This forces $|y^{p}|< |y|$, which in turn implies $p$ divides $|y|$. This takes us back to the previous case, so there exists a power of $y$ which has order $p$. 
-
-> [!Lemma]
+> [!Theorem] Lemma
 > Let $P\in\text{Syl}_{p}(G)$. If $Q$ is any p-subgroup of $G$, then $Q\cap N_{G}(P)=Q\cap P$.
 
-Recall that $N_{G}(P)\leq G$, and $P\leq N_{G}(P)$. Also recall that the intersection of two subgroups is a subgroup. It follows then that $Q\cap P\leq Q\cap N_{G}(P)$. It remains to show that $Q\cap N_{G}(P)\leq Q\cap P$. This is equivalent to showing $Q\cap N_{G}(P)\leq P$. Let $H\equiv Q\cap N_{G}(P)$. Note that $H\leq N_{G}(P)$, so $PH\leq G$. Also, $H\leq PH$ and $P\leq PH$. If we show that $PH\leq P$, we will be done. We know that 
-$$
-\begin{align}
-|PH|= \frac{|P||H|}{|P\cap H|}.
-\end{align}
-$$
-Now, $H\leq Q$, so $p$ divides $|H|$. Similarly, $p$ divides $|P\cap H|$. So, $PH$ is a p-subgroup. Moreover, $P\leq PH$ and $P$ being a Sylow p-subgroup forces $P=PH$. Thus, $H\leq P$. 
+> **Proof**
+> Recall that $N_{G}(P)\leq G$, and $P\leq N_{G}(P)$. Also recall that the intersection of two subgroups is a subgroup. It follows then that $Q\cap P\leq Q\cap N_{G}(P)$. It remains to show that $Q\cap N_{G}(P)\leq Q\cap P$. This is equivalent to showing $Q\cap N_{G}(P)\leq P$. Let $H\equiv Q\cap N_{G}(P)$. Note that $H\leq N_{G}(P)$, so $PH\leq G$. Also, $H\leq PH$ and $P\leq PH$. If we show that $PH\leq P$, we will be done. We know that 
+> $$
+> \begin{align}
+> |PH|= \frac{|P||H|}{|P\cap H|}.
+> \end{align}
+> $$
+> Now, $H\leq Q$, so $p$ divides $|H|$. Similarly, $p$ divides $|P\cap H|$. So, $PH$ is a p-subgroup. Moreover, $P\leq PH$ and $P$ being a Sylow p-subgroup forces $P=PH$. Thus, $H\leq P$. 
 
 > [!Theorem]
 > Let $G$ be a group of order $p^{\alpha}m$, where $p$ is a prime not dividing $m$. Then, 

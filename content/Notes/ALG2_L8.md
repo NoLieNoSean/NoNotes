@@ -14,7 +14,7 @@ time: 9:10
 > \theta_{x}\equiv \{ gx\ | \  g\in X \}.
 > $$
 
-Note that $\theta_{x}\subset X$, and does not necessarily have a group structure.
+Note that $\theta_{x}\subset X$, and does not have any group structure.
 
 > [!Definition]
 > Let $\phi:G\times X\to X$ be a group action. For $x\in X$, define the *stabilizer of $x$* by
@@ -55,7 +55,7 @@ $G$ can also act on $G/H$ for some $H<G$: $\phi_{g}(aH)=(ga)H$.
 
 > [!Theorem]
 > Let $G$ be a group, let $H< G$, let $G$ act by left multiplication on $G/H$. Let $\pi_{H}$ be the permutation representation. Then, 
-> 1. $G$ acts transitively on $A$
+> 1. this action is transitive.
 > 2. the stabilizer of $aH\in G/H$ is $G_{aH}=aHa^{-1}$.
 > 3. the kernel of the action is $\bigcap_{x\in G}xHx ^{-1}$, and $\ker \pi_{H}$ is the largest normal subgroup of $G$ contained in $H$. 
 
@@ -74,9 +74,9 @@ $G$ can also act on $G/H$ for some $H<G$: $\phi_{g}(aH)=(ga)H$.
 > \end{align}
 > $$
 > 
-> For (3), we already know that the kernel of a group action is the intersection of all stabilizers, so $\ker \pi_{H}=\bigcap_{x\in G}xHx ^{-1}$. We know that $\ker \pi_{H}\triangleleft G$. Further, if $g\not\in H$, then $g(1H)=gH\ne 1H$, so $g\not\in \ker \pi_{H}$. Thus, $\ker \pi_{H}\leq H$. If now $N$ is a normal subgroup of $G$ contained in $H$. For every $x\in G$, conjugation by $x$ is a automorphism, so $N\leq H$ implies $xNx ^{-1}\leq xHx ^{-1}$. But, $xNx ^{-1}=N$, so we have $N\leq xHx ^{-1}$ for all $x\in G$. This implies
+> For (3), we already know that the kernel of a group action is the intersection of all stabilizers, so $\ker \pi_{H}=\bigcap_{x\in G}xHx ^{-1}$. We know that $\ker \pi_{H}\triangleleft G$. Further, if $g\not\in H$, then $g(1H)=gH\ne 1H$, so $g\not\in \ker \pi_{H}$. Thus, $\ker \pi_{H}\leq H$. Let $N$ be a normal subgroup of $G$ contained in $H$. For every $x\in G$, conjugation by $x$ is an automorphism, so $N\leq H$ implies $xNx ^{-1}\leq xHx ^{-1}$. But $xNx ^{-1}=N$, so we have $N\leq xHx ^{-1}$ for all $x\in G$. This implies
 > $$
-> N\leq \bigcap_{g\in G}xHx ^{-1}=\ker \pi_{H}.
+> N\leq \bigcap_{x\in G}xHx ^{-1}=\ker \pi_{H}.
 > $$
 > Thus, $\ker \pi_{H}$ is the largest normal subgroup of $G$ contained in $H$.
 
@@ -84,7 +84,7 @@ $G$ can also act on $G/H$ for some $H<G$: $\phi_{g}(aH)=(ga)H$.
 > Let $p$ be the smallest prime dividing the order of a group $G$. Then, any subgroup of $G$ of index $p$ is a normal subgroup.
 
 > **Proof**
-> Suppose $H\leq G$ and $[G:H]=p$. Let $\pi_{H}$ be the permutation representation of $G$ acting on $G/H$ by multiplication (just to be clear, $\pi_{H}:G\to S_{G/H}$). Let $K=\ker \pi_{H}$. Then, $K\leq H$ and $K\triangleleft G$. Let $[H:K]=k$. Then, $[G:K]=pk$. 
+> Suppose $H\leq G$ and $[G:H]=p$. Let $\pi_{H}$ be the permutation representation of $G$ acting on the set of all left cosets of $H$ in $G$ by left multiplication (just to be clear, $\pi_{H}:G\to S_{G/H}$). Let $K=\ker \pi_{H}$. Then, $K\leq H$ and $K\triangleleft G$. Let $[H:K]=k$. Then, $[G:K]=pk$. 
 > 
 > From the [[ALG2_L4#First isomorphism theorem|first isomorphism theorem]], $G/K\cong \mathrm{Im}~\pi_{H}$. Since $\mathrm{Im}~\pi_{H}\leq S_{G/H}\cong S_{p}$, $|\mathrm{Im}~\pi_{H}|$ divides $p!$. So, $|G/K|=pk$ divides $p!$. Thus $k\ | \ (p-1)!$. But, since $K$ is a subgroup of $G$, $k\ | \ |G|$, and so all prime divisors of $k$ are greater than or equal to $p$, forcing $k$ to be $1$. So, $H=K\triangleleft G$. 
 
@@ -141,3 +141,22 @@ $$
 g\xmapsto{\chi_{h}}hgh^{-1}, g\in G, h\in C_{G}(A).
 $$
 Under this action, the center of $G$ is the kernel: $Z(G)=\ker \chi$. So, we have $Z(G)\leq C_{G}(A)\leq N_{G}(A)\leq G$. 
+
+---
+## Second isomorphism theorem
+
+> [!Theorem]
+> Let $G$ be a group, let $A$ and $B$ be subgroups of $G$ and assume $A\leq N_{G}(B)$. Then,
+> 1. $AB\leq G$,
+> 2. $B\trianglelefteq AB$,
+> 3. $A\cap B\trianglelefteq A$, and
+> 4. $AB/B\cong A/A\cap B$.
+
+> **Proof**
+> $(1)$ follows from [[ALG2_L6#Product groups|here]]. Since $A\leq N_{G}(B)$ and $B\leq N_{G}(B)$, $AB\leq N_{G}(B)$, so $B\trianglelefteq AB$. This allows us to define the homomorphism
+> $$
+> \phi:A\to AB/B, a\mapsto aB.
+> $$
+> It is easy to see that $\phi$ is a homomorphism: $\phi (ab)=abB=(aB)(bB)=\phi(a)\phi(b)$. Clearly, $\ker \phi=A\cap B$. Thus, $A\cap B\trianglelefteq A$. Additionally, since $\phi$ is surjective, the first isomorphism theorem gives $AB/B\cong A/A\cap B$. 
+
+

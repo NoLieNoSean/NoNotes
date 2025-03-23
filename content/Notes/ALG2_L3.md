@@ -105,13 +105,13 @@ Note that all left/right cosets of a subgroup $H$ of $G$ are of the same cardina
 > A subgroup $N<G$ is called a *normal subgroup* if $gNg^{-1}=N$ for all $g\in G$. In other words, the left coset and right coset of $N$ for any given $g$ coincide. Denoted by $N\triangleleft G$.
 
 > [!Theorem] Lemma
-> $N\triangleleft G$ $\iff$ the group operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ can be defined on $G/N$ where $g_{1}, g_{2}\in G$ . 
+> $N\triangleleft G$ $\iff$ the group operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ can be defined on $G/N$ where $g_{1}, g_{2}\in G$, $i$.$e$, $G/N$ is a group.
 
 > **Proof of $\implies$**
 > Let $N$ be a normal subgroup of $G$. It must be that $g_{1}g_{2}N$ does not depend on the choice of representatives $g_{1}$ and $g_{2}$ of each left coset, $g_{1}N$ and $g_{2}N$. To prove this, suppose $xN=g_{1}N$ and $yN=g_{2}N$ for some $x, y\in G$. Then, 
 > $$
 > \begin{align}
-> (xN)(yN)=xyN=x(g_{2}N)=x(Ng_{2})=(xN)g_{2}=(g_{1}N)g_{2}=g_{1}(Ng_{2})=g_{1}g_{2}N
+>  & (xN)(yN)=xyN=x(g_{2}N)=\\ &  x(Ng_{2})=  (xN)g_{2}=(g_{1}N)g_{2}=\\  & g_{1}(Ng_{2})=g_{1}g_{2}N
 > \end{align}
 > $$
 > 
@@ -119,9 +119,35 @@ Note that all left/right cosets of a subgroup $H$ of $G$ are of the same cardina
 > Let it be given that the operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ is well defined on $G/N$, i.e, for all $x, y, a, b\in G$ such that $xN=aN$ and $yN=bN$, we have $(ab)N=(xy)N$. Let $n\in N$ and $g\in G$. We have $gN=(eg)N=(eN)(gN)=(nN)(gN)=ngN$. Thus, $gN=ngN\implies N=g^{-1}ngN$, i.e, $g^{-1}ng\in N$, for all $n\in N$. It follows that $g^{-1}Ng=N$, or $Ng=gN$. 
 
 > [!Theorem]
-> The kernel of a homomorphism is a normal subgroup.
+> A subgroup $N\leq G$ is normal iff it is the kernel of some homomorphism.
 
-> **Proof**
+> **Proof of $\impliedby$**
 > Let $\phi$ be a homomorphism between two groups $G$ and $H$. Let $n\in \ker \phi$. Then, $\phi(gng^{-1})=\phi(g)\phi(n)\phi(g^{-1})=\phi(g)1_{H}\phi(g^{-1})=\phi(1_{G})=1_{H}$. Thus, $gng^{-1}\in\ker \phi$. Also, $gn_{1}g^{-1}=gn_{2}g^{-1}\implies n_{1}=n_{2}$. Thus, $gNg^{-1}=N$.
+> 
+> Proof of $\implies$
+> Let $N\trianglelefteq G$. Let $H=G/N$. Then, $N$ is the kernel of the projection map $a\mapsto aN$. 
 
 An immediate corollary of the above lemma is that the alternating group of $n$ elements $A_{n}$ is a normal subgroup of $S_{n}$, since $A_{n}$ is the kernel of the homomorphism $\phi:S_{n}\to \mathbb{Z}_{2}$, $\phi(\tau)=\text{sgn }\tau$.
+
+> [!Warning]
+> The property "is a normal subgroup of" is not transitive. For example, $\langle s \rangle\triangleleft\langle s, r^{2} \rangle\triangleleft D_{8}$, but $\langle s \rangle$ is not normal in $D_{8}$.
+
+### Cauchy's Theorem
+
+> [!Theorem]
+> If $G$ is a finite group and $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
+
+> **Proof**
+> Define
+> $$
+> \mathcal{S}=\left\{  (x_{1}, \dots, x_{p})\ | \  x_{i}\in G , x_{1}x_{2}\dots x_{p}=1\right\}.
+> $$
+> Note that $\mathcal{S}$ has $|G|^{p-1}$ elements (we are free to choose the first $p-1$ entries in the tuple, the last one must be the inverse of their product). Also note that any cyclic permutation of an element of $\mathcal{S}$ is also an element of $\mathcal{S}$:
+> $$
+> \begin{align}
+>  & x_{1}x_{2}\dots x_{p}=1 \\
+> \implies  & x_{2}\dots x_{p}=x_{1}^{-1} \\
+> \implies & x_{2}\dots x_{p}x_{1}=1.
+> \end{align}
+> $$
+> Define the relation $\sim$ on $S$ by $\alpha\sim\beta$ if $\alpha$ is a cyclic permutation of $\beta$. Clearly, $\sim$ is an equivalence relation. Next, observe that every equivalence class in $S/\sim$ has order $1$ or $p$, since $p$ is prime. Moreover, equivalence classes of size $1$ are of the form $\{ (x, x, \dots, x) \}$ with $x^{p}=1$. Thus, $|G|^{p-1}=k+pd$, where $k$ is the number of equivalence classes of size $1$ and $d$ is the number of equivalence classes of size $p$. It follows that $p$ must divide $k$. Now, $\{ (1, 1, \dots, 1) \}$ is an equivalence class of size $1$. This forces the existence of a non-identity element of order $p$.

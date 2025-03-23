@@ -80,4 +80,3 @@ Note that the image of one map is the kernel of the following map in the chain.
 
 > **Proof**
 > Define $\overline{\phi}(g\ker\phi)=\phi(g)$. Note that $\overline{\phi}$ is a unique, well defined, injective homomorphism. 
-

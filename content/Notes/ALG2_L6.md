@@ -14,6 +14,7 @@ time: 9:10
 > $$
 
 > **Proof**
+> First, observe that $H\triangleleft G$ and $H< K< G$ implies $H\triangleleft K$. So, $K/H$ is a group.
 > Consider $kH\in K/H$, $gH\in G/H$. 
 > $$
 > \begin{align}
@@ -51,14 +52,14 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 
 > **Proof** $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
 
-[!Theorem]
-Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
-1. $f$ is injective iff $H\cap K=\{ 1 \}$.
-2. $f$ is a homomorphism iff elements of $K$ commute with elements of $H$.
-3. $HK<G$ iff $HK=KH$. Useful to note here that
-	1. $H\leq N_{G}(K)$ $\implies$ $HK=KH$.
-	2. In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
-4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
+> [!Theorem]
+> Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
+> 1. $f$ is injective iff $H\cap K=\{ 1 \}$.
+> 2. $f$ is a homomorphism iff elements of $K$ commute with elements of $H$.
+> 3. $HK<G$ iff $HK=KH$. Useful to note here that
+> 	-  $H\leq N_{G}(K)$ $\implies$ $HK=KH$.
+> 	-  In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
+> 1. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
 
 > [!Warning]
 > Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
@@ -77,7 +78,7 @@ Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the m
 > $$
 > 
 > **Proof of 3**
-> 3.1 and 3.2 should be obvious. Given, $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. The reverse implication is also easy to prove.
+> 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. The reverse implication is also easy to prove.
 > 
 > **Proof of 4**
 > The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
@@ -88,11 +89,11 @@ Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the m
 > $$
 
 > **Proof**
-> Notice that $HK$ is the union of left cosets of $K$:
+> Notice that $HK$ is a union of a subset of the left cosets of $K$:
 > $$
 > HK=\bigcup_{h\in h}^{} hK.
 > $$
-> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in k$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
+> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in K$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
 > $$
 > |HK|= \left( \frac{{|H|}}{|H\cap K|} \right)|K|.
 > $$
@@ -147,7 +148,9 @@ $$
 > \end{align}
 > $$
 
-For the forward implication, since the size of the domain and codomain are equal, we only have to show either surjectivity or injectivity to have bijectivity. We can injectivity right here: if $\text{lcm}(m, n)=mn$, $\ker \phi=\{ 1 \}$.
+For the forward implication, since the size of the domain and codomain are equal, we only have to show either surjectivity or injectivity to have bijectivity. We can show injectivity right here: if $\text{lcm}(m, n)=mn$, $\ker \phi=\{ 1 \}$.
+
+Alternatively, we can first prove a more general result:
 
 > [!Note]- Establishing that $\mathbb{Z}/\text{lcm}(m, n)\mathbb{Z}\cong \mathrm{Im}~\phi$
 > From the first isomorphism theorem,
@@ -165,12 +168,8 @@ For the forward implication, since the size of the domain and codomain are equal
 
 We can now show surjectivity by noting that $\mathrm{Im}~\phi$ must be isomorphic to a subgroup of $\mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$ (which has order $mn$) of order $\text{lcm}(m, n)$. If $\text{lcm}(m, n)=mn$, the only subgroup $\mathrm{Im}~\phi$ can be isomorphic to is the entire codomain, making $\phi$ surjective, and hence an isomorphism.
 
-Conversely, if it is given that $\phi$ is an isomorphism, $|\mathrm{Im}~\phi|=mn$, forcing $\text{lcm}(m, n)=mn$. Note that we didn't have to explicitly construct any of $\overline{\phi}$, $\tilde{\phi}$, or $\phi_{1}$ for this argument.
-
-
-
 ---
-... or you could proceed like Clare did. We have the exact sequence
+... or you could proceed like Claire did. We have the exact sequence
 $$
 1_{\frac{\mathbb{Z}}{\text{lcm(m, n)}\mathbb{Z}}}\to \frac{\mathbb{Z}}{\text{lcm}(m, n)\mathbb{Z}}\xrightarrow{\phi_{1}} \frac{\mathbb{Z}}{m\mathbb{Z}}\times \frac{\mathbb{Z}}{n\mathbb{Z}}
 $$
@@ -211,12 +210,3 @@ $\mathrm{Im}~\phi_{1} \subseteq\ker\phi_{2}$ should be obvious. If $(a+m\mathbb{
 Finally, we've got everything. If $\phi_{1}$ is an isomorphism, $\ker\phi_{2}=\mathrm{Im}~\phi_{1}=\mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$, so $\mathrm{Im}~\phi_{2}=\left\{  1_{\frac{\mathbb{Z}}{m\mathbb{Z}+n\mathbb{Z}}}  \right\}$. Since $\phi_{2}$ is surjective, $\frac{\mathbb{Z}}{m\mathbb{Z}+n\mathbb{Z}}=\mathrm{Im}~\phi_{2}$. This implies $m$ and $n$ generate $\mathbb{Z}$, which implies $\text{gcd}(m, n)=1$ or $\text{lcm}(m, n)=mn$.
 
 Conversely, if $\text{gcd}(m, n)=1$, then $\frac{\mathbb{Z}}{m\mathbb{Z}+n\mathbb{Z}}$ is the trivial group, and $\mathrm{Im}~\phi_{1}=\ker\phi_{2}=\frac{\mathbb{Z}}{m\mathbb{Z}}\times \frac{\mathbb{Z}}{n\mathbb{Z}}$, making $\phi_{1}$ an isomorphism.
-
-(Note that what we proved here is a slightly different version of the theorem:)
-
-
----
-
-> [!Theorem] Cauchy's theorem
-> If $G$ is a finite group and $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
-

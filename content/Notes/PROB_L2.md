@@ -1,10 +1,3 @@
----
-tags:
-  - PROB
-  - Lecture
-date: 2025-01-20
-time: 17:00
----
 ## More properties of the probability function
 
 $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.

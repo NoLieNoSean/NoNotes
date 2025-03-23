@@ -120,7 +120,7 @@ For $g \in G$, define $\text{fix}(g) \equiv \ | \  \{ x \in X \ | \  x^{g}=x \}\
 > \text{\#orbits} = \frac{1}{|G|} \sum_{g\in G}\text{fix}(g).
 > $$
 
-### An example: 2-colouring of a cube
+### An example: 2-colourings of a cube
 
 Consider a cube with faces $R,L,F,B,U,D$ which correspond to Right, Left, Front, Back, Up and Down respectively. 
 

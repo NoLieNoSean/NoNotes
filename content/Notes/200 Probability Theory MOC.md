@@ -1,16 +1,30 @@
+> [!Info]-
+> References:
+> - Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone)
+> - [Lecture recordings](https://www.youtube.com/playlist?list=PL7kSnJf1y6KRyT6HjSOGklUPuKBOZVSct)
+> 
+
 # Lecture notes
 
-- [[PROB_L1]] ✅
-	- Probability spaces
-- [[PROB_L2]] ✅
-	- Properties of the probability measure, Conditional probability
-- [[PROB_L3]] ✅
-	- Independent events, discrete random variables
-- [[PROB_L4]] ✅
-	- Examples of probability mass distributions
-- [[PROB_L5]]
-- [[PROB_L6]]
+These notes have been reorganised because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
 
+- [[PROB_L1]] ✅
+	- Probability spaces, some properties of the probability measure
+- [[PROB_L2]] ✅
+	- More properties of the probability measure, Conditional probability
+- [[PROB_L3]] ✅
+	- Independent events, discrete random variables, binomial distribution
+- [[PROB_L4]] ✅
+	- Examples of probability mass distributions: Geometric, hypergeometric, negative binomial, poisson
+- [[PROB_L5]]
+	- Random vectors, independent random variables
+- [[PROB_L6]]
+	- Infinite sequences of Bernoulli trials, Sums of independent random variables, The probability generating function
+- [[PROB_L7]]
+
+
+[[Properties of conditional expectation proofs]]
+[[Proof of poisson approximation]]
 # Quizzes
 
 [[PROB_Q1]]
@@ -19,16 +33,21 @@
 # Assignments
 
 [[PROB_AS1]]
+[[PROB_Midsem_PartB]]
+[[PROB_ClassAssignments]]
 
 ---
 
 Assignments:
 Proof of Inclusion exclusion in probability 
-Bon fironi inequality
-Polya Urn Scheme
 
-(1) E(aY+Z/X) = a E(Y/X) + aE(Z/X)
-(2) Y >= 0, E(Y | X)  >= 0
-(3) E(g(X) Y/ X) = g(X) E(Y/X)
-(4) E(c/X) = c
-(5) E(E(Y/X,Z) | X) = E(Y|X) = E(E(Y/X)/X,Z)
+
+
+
+
+
+Jacobian
+Cauchy distribution
+$\Gamma$ func, dist
+Poisson distribution for continuous random variables
+$e^{-\lambda x}$ something
