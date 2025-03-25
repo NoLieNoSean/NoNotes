@@ -67,20 +67,59 @@ Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-g
 ## Conjugacy in Sn
 
 
-> Let $\sigma, \tau$ be elements of $S_{n}$, and suppose $\sigma$ has cycle decomposition
-> $$
-> (a_{1} ~a_{2}~\dots~a_{n})(b_{1} ~b_{2}~\dots~b_{n})\dots.
-> $$
-> Then, $\tau\sigma\tau ^{-1}$ has cycle decomposition
-> $$
-> (\tau(a_{1}) ~\tau(a_{2})~\dots~\tau(a_{n}))(\tau(b_{1}) ~\tau(b_{2})~\dots~\tau(b_{n}))\dots.
-> $$
+Let $\sigma, \tau$ be elements of $S_{n}$, and suppose $\sigma$ has cycle decomposition
+$$
+(a_{1} ~a_{2}~\dots~a_{n})(b_{1} ~b_{2}~\dots~b_{n})\dots.
+$$
+Then, $\tau\sigma\tau ^{-1}$ has cycle decomposition
+$$
+(\tau(a_{1}) ~\tau(a_{2})~\dots~\tau(a_{n}))(\tau(b_{1}) ~\tau(b_{2})~\dots~\tau(b_{n}))\dots.
+$$
 
-> Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type.
+Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type.
 
 
 ---
 
+## More on Automorphisms
+
+> [!Theorem]
+> Let $H\triangleleft G$. Then, $G$ acts by conjugation on $H$ as automorphisms of $H$. The permutation representation of this action is a homomorphism of $G$ into $\text{Aut}(H)$ with kernel $C_{G}(H)$. In particular, $G/C_{G}(H)$ is isomorphic to a subgroup of $\text{Aut}(H)$.
+
+It follows that for any subgroup $H$ of $G$, the quotient group $N_{G}(H)/C_{G}(H)$ is isomorphic to a subgroup of $\text{Aut}(H)$ (take $G=N_{G}(H)$ in the above theorem).
+Thus, any information we have about $\text{Aut}(H)$ for $H\leq G$ translates to information about ${N_{G}(H)}/{C_{G}(H)}$. 
+
+
+> [!Definition]
+> Let $G$ be a group and let $g\in G$. Conjugation by $g$ is called an *inner automorphism* of $G$ and the subgroup of $\text{Aut}(G)$ consisting of all inner automorphisms is denoted by $\text{Inn}(G)$.
+
+Note that if $H=G$ in the above theorem, we get that $G/C_{G}(G)=G/Z(G)$ is isomorphic to $\text{Inn}(G)$. 
+
+> [!Theorem] Corollary
+> $G/Z(G)\cong\text{Inn}(G)$.
+
+So, a group $G$ is abelian iff every inner automorphism is trivial. 
+
+> [!Theorem] Corollary
+> If $H$ is an abelian normal subgroup of $G$ and $H$ is not contained in $Z(G)$, then there is some $g\in G$ such that conjugation by $g$ restricted to $H$ is not an inner automorphism of $H$. 
+
+### Characteristic groups
+
+> [!Definition]
+> A subgroup $H$ of a group $G$ is called *characteristic* in $G$, denoted $H\blacktriangleleft B$, if every automorphism of $G$ maps $H$ to itself. 
+
+Note that this definition is stronger than that of a normal subgroup, which only requires every inner automorphism of $G$ to map $H$ to itself.
+
+It should be obvious that characteristic subgroups are normal. Also, if $H$ is the unique subgroup of $G$ of a given order, then $H\blacktriangleleft G$, since every $\sigma\in \text{Aut}(G)$ must map $H$ to another subgroup of $G$ that is isomorphic to $H$, and only one such group exists, namely $H$ itself.
+
+> [!Theorem]
+> If $K\blacktriangleleft H$ and $H\triangleleft G$, then $K\triangleleft G$. 
+
+> **Proof**
+> Let $g\in G$. Let $\phi_{g}\in \text{Aut}(H)$ be the conjugation $x\mapsto gxg^{-1}$ restricted to $H$. Note that this may not be an inner automorphism of $H$; this is why $K\triangleleft H$ does not suffice. Since $K\blacktriangleleft H$, $\phi_{g}(K)=K$. Thus, $gKg^{-1}=K$ for all $g\in G$, and $K\triangleleft G$. 
+
+
+---
 ## Semidirect product
 
 > [!Definition]

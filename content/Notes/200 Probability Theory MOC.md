@@ -6,7 +6,7 @@
 
 # Lecture notes
 
-These notes have been reorganised because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
+These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
 
 - [[PROB_L1]] ✅
 	- Probability spaces, some properties of the probability measure
@@ -16,15 +16,15 @@ These notes have been reorganised because I lost count of the lectures at some p
 	- Independent events, discrete random variables, binomial distribution
 - [[PROB_L4]] ✅
 	- Examples of probability mass distributions: Geometric, hypergeometric, negative binomial, poisson
-- [[PROB_L5]]
+- [[PROB_L5]] ✅
 	- Random vectors, independent random variables
 - [[PROB_L6]]
 	- Infinite sequences of Bernoulli trials, Sums of independent random variables, The probability generating function
 - [[PROB_L7]]
+	- Expectation: Properties of expectation, moments, variance, correlation coefficient, Schwarz inequality, Chebyshev's inequality, Weak and Strong laws of large numbers, conditional expectation
+- [[PROB_L8]]
+	- Continuous random variables:
 
-
-[[Properties of conditional expectation proofs]]
-[[Proof of poisson approximation]]
 # Quizzes
 
 [[PROB_Q1]]

@@ -42,10 +42,10 @@ The most important type of automorphism is *conjugation*: let $g$ be a fixed ele
 Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in G$. Conjugates have similar algebraic behavior, since they are the images of each other under an isomorphism.  
 
 > [!Theorem] Lemma
-> If $H<G$, $g\in G$, then $gHg^{-1}<G$. 
+> If $H<G$, $g\in G$, then $gHg^{-1}<G$, and $gHg^{-1}\cong H$. 
 
 > **Proof**
-> $gHg^{-1}$ is the image of a group under an homomorphism. Additionally, $|H|=|gHg^{-1}|$, since conjugation is an isomorphism.
+> $gHg^{-1}$ is the image of a group under an homomorphism. 
 
 > [!Theorem] Corollary
 > If a group $G$ has just one subgroup $H$ of order $r$, then that subgroup is normal.

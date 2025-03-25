@@ -16,10 +16,10 @@ $$
 
 ### Hypergeometric distribution
 
-You have a collection $N$ objects, $n$ of which are of type 1, and $N-n$ of which are of type 2. You randomly pick $k$ objects from the collection (these are the elementary events). Let the random variable $X$ map $\omega$ to the number of objects of type 1 that were picked in $\omega$. The probability mass function of $X$ is called a hypergeometric distribution:
+You have a collection $N$ objects, $K$ of which are of type 1, and $N-K$ of which are of type 2. You randomly pick $n$ objects from the collection (these are the elementary events). Let the random variable $X$ map $\omega$ to the number of objects of type 1 that were picked in $\omega$. The probability mass function of $X$ is called a hypergeometric distribution:
 $$
 f(r)=P(X=r)=\begin{dcases}
-\frac{{\binom{n}{r}\binom{N-n}{k-r}}}{\binom{N}{k}} & r=0, 1, \dots, n \\
+\frac{{\binom{K}{r}\binom{N-K}{n-r}}}{\binom{N}{n}} & r=0, 1, \dots, K \\
 0 & \text{otherwise.}
 \end{dcases}
 $$
@@ -92,3 +92,16 @@ $$
 \sum_{i=0}^{\infty} f(i)=e^{-\lambda}\sum_{i=0}^{\infty} \frac{\lambda^{i}}{i!}=1 .
 \end{align}
 $$
+
+---
+
+| Distribution          | Parameters                                | $EX$                    | $\text{Var}(X)$                               | Support                | PGF                                          |
+| --------------------- | ----------------------------------------- | ----------------------- | --------------------------------------------- | ---------------------- | -------------------------------------------- |
+| **Binomial**          | $n$(trials),$p$(success prob.)            | $np$                    | $np(1-p)$                                     | $\{ 0,1,\dots, n \}$   | $(pt+1-p)^{n}$                               |
+| **Hypergeometric**    | $N$(population),$K$(successes),$n$(draws) | $n \frac{K}{N}$         | $n \frac{K}{N} \frac{N-K}{N} \frac{N-n}{N-1}$ | $\{ 0, 1, \dots, K \}$ |                                              |
+| **Geometric**         | $p$(success prob.)                        | $\frac{1-p}{p}$         | $\frac{1-p}{p^2}$                             | $\mathbb{Z}_{\geq 0}$  | $\frac{p}{1-t(1-p)}$                         |
+| **Negative Binomial** | $\alpha$(successes),$p$(success prob.)    | $\frac{\alpha(1-p)}{p}$ | $\frac{\alpha(1-p)}{p^2}$                     | $\mathbb{Z}_{\geq 0}$  | $\left( \frac{p}{1-t(1-p)} \right)^{\alpha}$ |
+| **Poisson**           | $\lambda$(rate)                           | $\lambda$               | $\lambda$                                     | $\mathbb{Z}_{\geq 0}$  | $e^{\lambda(t-1)}$                           |
+
+
+

@@ -5,14 +5,6 @@ draft: true
 
 Below is a table summarizing the expectation (mean) and variance expressions for the binomial, negative binomial, Poisson, geometric, and hypergeometric distributions. These are all discrete random variables, and I’ll define each distribution’s parameters clearly to avoid ambiguity. All expressions are derived from standard probability theory definitions, assuming discrete random variables with finite or countably infinite support.
 
-| **Distribution**       | **Parameters**                          | **Expectation (\( \mathbb{E}(X) \))** | **Variance (\( \text{Var}(X) \))**       |
-|-------------------------|-----------------------------------------|---------------------------------------|------------------------------------------|
-| **Binomial**           | \( n \) (trials), \( p \) (success prob.) | \( np \)                             | \( np(1-p) \)                           |
-| **Negative Binomial**  | \( r \) (successes), \( p \) (success prob.) | \( \frac{r(1-p)}{p} \)              | \( \frac{r(1-p)}{p^2} \)                |
-| **Poisson**            | \( \lambda \) (rate)                    | \( \lambda \)                        | \( \lambda \)                           |
-| **Geometric**          | \( p \) (success prob.)                 | \( \frac{1-p}{p} \)                  | \( \frac{1-p}{p^2} \)                   |
-| **Hypergeometric**     | \( N \) (population), \( K \) (successes), \( n \) (draws) | \( n \frac{K}{N} \)         | \( n \frac{K}{N} \frac{N-K}{N} \frac{N-n}{N-1} \) |
-
 ### Notes on Definitions and Derivations
 
 1. **Binomial (\( X \sim \text{Binomial}(n, p) \))**:

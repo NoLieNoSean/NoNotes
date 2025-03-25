@@ -28,6 +28,7 @@ $$
 $\{ \omega\ | \ X(\omega)=x \}$ is usually shortened to $(X=x)$. In the previous example, $(X=3)$ would be the event corresponding to getting $3$ ones.
 
 Note that if $X$ is a random variable on $(\Omega, \mathcal{F}, P)$ and $f:\mathbb{R}\to \mathbb{R}$ is any function, then $f\circ X$ is also a random variable, since $( f\circ X=c )=\bigcup_{x\in f^{-1}(c)}(X=x)$.
+### Discrete density functions
 
 > [!Definition]
 > The real valued function $f:\mathbb{R}\to[0, 1]$ defined by $f(x)=P(X=x)$ is called the *discrete density function* or *discrete mass function* of $X$. A number $x$ is called a possible value of $X$ if $f(x)>0$.

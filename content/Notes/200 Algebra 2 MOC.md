@@ -35,6 +35,7 @@ tags:
 	- Sylow's theorems
 
 
+[[ALG2_L11]]
 
 # Other notes
 

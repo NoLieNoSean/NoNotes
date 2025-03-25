@@ -20,7 +20,7 @@ time: 11:50
 > [!Theorem] Cayley's Theorem
 > The number of labelled trees on $n$ vertices is $n^{n-2}$. 
 
-Refer [[Combinatorics Topics, Techniques, Algorithms (Peter J. Cameron) (Z-Library).pdf#page=48|Cameron]].
+Refer [[Combinatorics Topics, Techniques, Algorithms (Peter J. Cameron).pdf#page=48|Cameron]].
 
 Alternate proof exists using [Prüfer sequences](https://en.wikipedia.org/wiki/Pr%C3%BCfer_sequence).
 
