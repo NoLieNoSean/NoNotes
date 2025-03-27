@@ -1,36 +1,47 @@
-A proof that $F(X)$ is uniquely determined by $|X|$:
-$\text{Hom}(F(X), \mathbb{F}_{2})=|X|$, where $X$ is finite. $\phi_{x_{i}}(x_{j})=\delta_{i, j}$. Follows that if $F(X_{1})\cong F(X_{2})$, then $|X_{1}|=|X_{2}|$.
+## Sylow's theorems
 
-Corollary:
-If $G$ is any group, and $X$ is a subset of $G$ which generates $G$, then there exists surjective homomorphism $\phi: F(X)\to G$. 
+Note that the following lemma is a special case of [[ALG2_L3#Cauchy's Theorem|Cauchy's theorem]], which we have already proved.
 
-Proof by the universal property.
+> [!Theorem] Lemma
+> If $G$ is a finite abelian group and $p$ is a prime dividing $|G|$, then $G$ contains an element of order $p$.
 
-Remark: $\ker \phi$ is the set $o$$f$ all words on relations. $i$.$e$, all words that $\phi$ maps to $1$ in $G$. 
+> **Alternate proof using induction**
+> Fix a prime $p$. Complete induction on $|G|$. Vacuously true for $|G|< p$. If $|G|=p$, $G$ is cyclic, and has an element of order $p$. 
+> 
+> For $|G|> p$, pick $x\ne e$ in $G$. If $|x|=pn$, $x^{n}$ is an element of order $p$. 
+> 
+> Thus, assume $p$ does not divide $|x|$. Since $G$ is abelian, $\langle x \rangle\triangleleft G$. Now, $|G|=|G/\langle x \rangle||\langle x \rangle|$. Since $p$ does not divide $|\langle x \rangle|$, it must divide $|G/\langle x \rangle|$. Since $x\ne e$, $|G/\langle x \rangle|< |G|$. By the induction hypothesis, $G/\langle x \rangle$ has an element $y\langle x \rangle$ of order $p$. Note that $y\not\in \langle x \rangle$, since that would make $y\langle x \rangle$ the identity in $G/\langle x \rangle$. Now, since $y^{p}\langle x \rangle=\langle x \rangle$, $y^{p}\in \langle x \rangle$. Clearly, then, $\langle y \rangle\ne \langle y^{p} \rangle$. This forces $|y^{p}|< |y|$, which in turn implies $p$ divides $|y|$. This takes us back to the previous case, so there exists a power of $y$ which has order $p$. 
 
-So, every group is isomorphic to $F(X)/N$ for some set $X$ and some $N$. 
+> [!Theorem] Lemma
+> Let $P\in\text{Syl}_{p}(G)$. If $Q$ is any p-subgroup of $G$, then $Q\cap N_{G}(P)=Q\cap P$.
 
----
+> **Proof**
+> Recall that $N_{G}(P)\leq G$, and $P\leq N_{G}(P)$. Also recall that the intersection of two subgroups is a subgroup. It follows then that $Q\cap P\leq Q\cap N_{G}(P)$. It remains to show that $Q\cap N_{G}(P)\leq Q\cap P$. This is equivalent to showing $Q\cap N_{G}(P)\leq P$. Let $H\equiv Q\cap N_{G}(P)$. Note that $H\leq N_{G}(P)$, so $PH\leq G$. Also, $H\leq PH$ and $P\leq PH$. If we show that $PH\leq P$, we will be done. We know that 
+> $$
+> \begin{align}
+> |PH|= \frac{|P||H|}{|P\cap H|}.
+> \end{align}
+> $$
+> Now, $H\leq Q$, so $p$ divides $|H|$. Similarly, $p$ divides $|P\cap H|$. So, $PH$ is a p-subgroup. Moreover, $P\leq PH$ and $P$ being a Sylow p-subgroup forces $P=PH$. Thus, $H\leq P$. 
 
-**Free abelian groups**
+> [!Theorem]
+> Let $G$ be a group of order $p^{\alpha}m$, where $p$ is a prime not dividing $m$. Then, 
+> 1. Sylow p-subgroups of $G$ exist.
+> 2. If $P$ is a Sylow p-subgroup of $G$ and $Q$ is any p-subgroup of $G$, then there exists $g\in G$ such that $Q\leq gPg^{-1}$, that is, $Q$ is contained in some conjugate of $P$. In particular, any two Sylow p-subgroups of $G$ are conjugate in $G$. 
+> 3. The number of Sylow p-subgroups of $G$ is of the form $1+kp$. Further, $n_{p}$ is the index of the normalizer $N_{G}(P)$ in $G$, for any Sylow p-subgroup $P$, hence, $n_{p}$ divides $m$. 
 
-The commutator subgroup of a group $G$, denoted by $[G, G]$, is defined to be $\langle aba^{-1}b ^{-1}\ | \ a, b\in G \rangle$. 
+**Proof of 1**
+Induction on $|G|$. If $|G|=1$, there is nothing to prove. Assume inductively the existence of sylow p-subgroups for all groups of order less than $|G|$. 
 
-Corollary:
-If $F$ is a free group, then $F/[F, F]$ is abelian. Also called a free abelian group.
+Let $G=p^{\alpha}m$, $p$ does not divide $m$. If $p$ divides $|Z(G)|$, since $Z(G)$ is abelian, it has an element $x$ of order $p$. Since $\langle x \rangle\leq Z(G)$, $\langle x \rangle\triangleleft G$. It follows that $G/\langle x \rangle$ is a group, which has order $p^{\alpha-1}m$. Form the inductive hypothesis, $G/\langle x \rangle$ must have a sylow p-subgroup of order $p^{\alpha-1}$. From the correspondence theorem, this subgroup corresponds to a subgroup of $G$ of order $p^{\alpha}$, completing the proof for this case.
 
-Exercise: For any group $G$, $[G, G]$ is a normal subgroup.
+Consider the case when $p$ does not divide $|Z(G)|$. The class equation of $G$ is
+$$
+|G|=|Z(G)|+\sum_{i=1}^{n} [G:C_{G}(g_{i})],
+$$
+where $g_{i}$, $1\leq i\leq n$ are representatives of the conjugacy classes of $G$. There must exist $g_{i}$ such that $p$ does not divide $[G:C_{G}(g_{i})]$. We know form the orbit-stabilizer theorem that $|C_{G}(x)||\theta_{x}|=|G|$. In this context, the equation would read $|C_{G}(g_{i})||G:C_{G}(g_{i})|=|G|$. It follows that $p^{\alpha}$ must divide $|C_{G}(g_{i})|$. $g_{i}\not\in Z(G)$, so $|C_{G}(g_{i})|\leq |G|$. From the inductive hypothesis, $C_{G}(g_{i})$ must have a sylow p-subgroup of order $p^{\alpha}$, which is of course a subgroup of $G$, completing the proof.
 
-Lemma:
-Let $F$ be a finitely generated free group. Then $F/[F, F]$ is a finitely generated free abelian group. Also, $F/[F, F]\cong \mathbb{Z}^{r}$ for some $r$.
 
-First, show that $F/[F, F]$ is abelian (easy).
-Induct on the length of the word to show the second part.
+**Proof of 2** 
 
----
-
-Corollary:Every finitely generated abelian group is isomorphic to $\mathbb{Z}^{r}$ for some $r$.
-
----
-
-Every subgroup of a finitely generated abelian group $G$ is generated by $\{ d_{1}e_{1}, d_{2}e_{2}, \dots, d_{r}e_{r} \}$ where $\{ e_{1}, e_{2}, \dots, e_{r} \}$ is a basis of $G$ and $d_{1}\ | \ d_{2}\ | \ \dots\ | \ d_{r}$. 
+Let $P$ be a Sylow-$p$ subgroup. Let $S=\{ P_{1}, P_{2}, \dots, P_{r} \}$ be the set of all conjugates of $P$. Let $Q$ be any p-subgroup of $G$. 

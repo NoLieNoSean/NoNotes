@@ -6,7 +6,7 @@
 
 # Lecture notes
 
-These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
+These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence or breadth of topics covered in class.
 
 - [[PROB_L1]] ✅
 	- Probability spaces, some properties of the probability measure

@@ -49,35 +49,90 @@ The fact that the orbits partition the set being acted upon yields the following
 
 Note that all summands on the RHS of the class equation are divisors of $|G|$.
 
-### p-groups
+---
+## p-groups
 
 Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-groups. 
 
 > [!Theorem]
 > If $P$ is a p-group, $Z(P)$ is non-trivial.
 
+> **Proof** 
+> Follows directly from the class equation: $p^{\alpha}=|Z(G)|+kp$ (each non-trivial conjugacy class must be a multiple of $p$)
+
 > [!Theorem]
 > If $|P|=p^{n}$, then $|Z(P)|\ne p^{n-1}$.
+
+> **Proof**
+> FTSOC, assume $|P|=p^{n}$ and $|Z(P)|=p^{n-1}$. Then, $|P/Z(P)|=p$, so $P/Z(P)$ is cyclic. Thus, $P$ is abelian. But this implies $|Z(P)|=p^{n}$, a contradiction.
 
 > [!Theorem]
 > If $|P|=p^{2}$ for some prime $p$, then $P$ is abelian. More precisely, either $P\cong \mathbb{Z}_{p^{2}}$ or $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$.
 
----
+> **Proof**
+> It follows directly from the two preceding theorems that $P$ is abelian. Let $x\in P$. If $P$ has an element $x$ of order $p^{2}$, $P=\langle x \rangle$, and $P\cong\mathbb{Z}_{p^{2}}$. Else, $P$ must have two elements $x$ and $y$ such that $|x|=|y|=p$ and $\langle x \rangle\ne \langle y \rangle$. 
+> Lagrange's theorem forces $\langle x \rangle\cap \langle y \rangle=\{ 1 \}$. Thus, $|\langle x \rangle\langle y \rangle|=p^{2}$, so $\langle x \rangle\langle y \rangle=P$. These facts along with $\langle x \rangle\triangleleft P$ and $\langle y \rangle\triangleleft P$ [[ALG2_L6#Product groups|allow us]] to write $P=\langle x \rangle\times \langle y \rangle$. Thus, $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$. 
 
+[[ALG2_L11#Sylow's theorems|Sylow's theorems]] have a lot more to say about p-groups and subgroups.
+
+---
 ## Conjugacy in Sn
 
+### Cycle decomposition of conjugates
 
-Let $\sigma, \tau$ be elements of $S_{n}$, and suppose $\sigma$ has cycle decomposition
-$$
-(a_{1} ~a_{2}~\dots~a_{n})(b_{1} ~b_{2}~\dots~b_{n})\dots.
-$$
-Then, $\tau\sigma\tau ^{-1}$ has cycle decomposition
-$$
-(\tau(a_{1}) ~\tau(a_{2})~\dots~\tau(a_{n}))(\tau(b_{1}) ~\tau(b_{2})~\dots~\tau(b_{n}))\dots.
-$$
+> [!Definition]
+> Define an action $*$ of $S_{n}$ on the set $\mathcal{A}$ of all $n$-tuples with distinct entries form $[n]$, $\{ (a_{1}, \dots, a_{n})\ | \ a_{i}\in[n], a_{i}\ne a_{j} \text{ for }i\ne j \}$ as 
+> $$
+> \mathbf{a}=(a_{1}, \dots, a_{n})\xmapsto{\sigma}\sigma*\mathbf{a}=(\sigma(a_{1}), \dots, \sigma(a_{n})).
+> $$
+> $\sigma *\mathbf{a}$ is called an *entry permutation* of $\mathbf{a}$.
+> 
+> Define a map $\star:S_{n}\times \mathcal{A}\to \mathcal{A}$ by
+> $$
+> \sigma \star(a_{1}, \dots, a_{n})=(a_{\sigma(1)}, \dots, a_{\sigma(n)}).
+> $$
+> $\sigma\star \mathbf{a}$ is called a *place permutation* of $\mathbf{a}$. Note that $\star$ is NOT an action of $S_{n}$ on $\mathcal{A}$. 
 
-Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type.
+Since the action $*$ is transitive, it makes sense to ask: given $\sigma\in S_{n}$ and $\mathbf{a}\in \mathcal{A}$, which $\pi\in S_{n}$ satisfies $\pi*\mathbf{a}=\sigma \star \mathbf{a}$? 
 
+Let $\mathbf{e}$ denote the tuple $(1, 2, \dots, n)\in \mathcal{A}$. Observe that $\omega*\mathbf{e}=\omega \star \mathbf{e}$ for all $\omega \in S_{n}$. Thus, there exists $\tau\in S_{n}$ such that $\mathbf{a}=\tau*\mathbf{e}=\tau \star \mathbf{e}$. So, the equation reduces to $\pi*(\tau*\mathbf{e})=\sigma \star(\tau \star \mathbf{e})$, and since $*$ is a group action, it reduces further to $\pi \tau*\mathbf{e}=\sigma \star(\tau \star \mathbf{e})$. Now, let $\mathbf{b}=\tau \star \mathbf{e}$. Since $\tau \star \mathbf{e}=\tau*\mathbf{e}$, $b_{i}=\tau(e_{i})=\tau(i)$. 
+$$
+\begin{align}
+\sigma \star \mathbf{b} & =(b_{\sigma(1)}, \dots, b_{\sigma(n)}) \\
+ & =(\tau(\sigma(1)), \dots, \tau(\sigma(n))) \\
+ & = \tau \sigma*\mathbf{e}.
+\end{align}
+$$
+Therefore, we have
+$$
+\begin{align}
+ & \pi \tau *\mathbf{e}=\tau\sigma*\mathbf{e}
+ \\
+\implies  & \pi \tau=\tau\sigma \\
+\implies  & \pi=\tau\sigma \tau ^{-1}.
+\end{align}
+$$
+Therefore, given $\sigma\in S_{n}$ and $\mathbf{a}=\tau*\mathbf{e}\in \mathcal{A}$, conjugating $\sigma$ by $\tau$ gives us the entry permutation equivalent to the place permutation $\sigma \star \mathbf{a}$. The following theorem follows.
+
+> [!Theorem]
+> Let $\sigma, \tau\in S_{n}$. Let the cycle decomposition of $\sigma$ be (what follow are NOT tuples)
+> $$
+> (a_{1} ~a_{2}~\dots~a_{n})(b_{1} ~b_{2}~\dots~b_{n})\dots.
+> $$
+> Then $\tau\sigma\tau ^{-1}$ has cycle decomposition
+> $$
+> (\tau(a_{1}) ~\tau(a_{2})~\dots~\tau(a_{n}))(\tau(b_{1}) ~\tau(b_{2})~\dots~\tau(b_{n}))\dots.
+> $$
+
+This should be reminiscent of how [[ALG1_L13#Change of basis|change of basis]] works in linear algebra: If $A\mathbf{a}=\mathbf{b}$, then $PAP^{-1}(P\mathbf{a})=P\mathbf{b}$. 
+
+### Conjugacy classes of Sn
+
+> [!Definition]
+> If $\sigma\in S_{n}$ is the product of disjoint cycles of lengths $n_{1}, n_{2}, \dots, n_{r}$ with $n_{1}\leq n_{2}\leq\dots\leq n_{r}$ (including its 1-cycles) then the integers $n_{1}, n_{2}, \dots, n_{r}$ are called the *cycle type* of $\sigma$.
+
+> [!Theorem]
+> Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type. The number of conjugacy classes of $S_{n}$ equals the number of partitions of $n$.
 
 ---
 
@@ -88,7 +143,6 @@ Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle ty
 
 It follows that for any subgroup $H$ of $G$, the quotient group $N_{G}(H)/C_{G}(H)$ is isomorphic to a subgroup of $\text{Aut}(H)$ (take $G=N_{G}(H)$ in the above theorem).
 Thus, any information we have about $\text{Aut}(H)$ for $H\leq G$ translates to information about ${N_{G}(H)}/{C_{G}(H)}$. 
-
 
 > [!Definition]
 > Let $G$ be a group and let $g\in G$. Conjugation by $g$ is called an *inner automorphism* of $G$ and the subgroup of $\text{Aut}(G)$ consisting of all inner automorphisms is denoted by $\text{Inn}(G)$.
@@ -102,6 +156,14 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 
 > [!Theorem] Corollary
 > If $H$ is an abelian normal subgroup of $G$ and $H$ is not contained in $Z(G)$, then there is some $g\in G$ such that conjugation by $g$ restricted to $H$ is not an inner automorphism of $H$. 
+
+### Automorphism groups
+
+> [!Theorem]
+> $\text{Aut}(\mathbb{Z}_{n})\cong U_{n}$, where $U_{n}$ is the group of units modulo $n$.
+
+
+
 
 ### Characteristic groups
 
@@ -117,13 +179,4 @@ It should be obvious that characteristic subgroups are normal. Also, if $H$ is t
 
 > **Proof**
 > Let $g\in G$. Let $\phi_{g}\in \text{Aut}(H)$ be the conjugation $x\mapsto gxg^{-1}$ restricted to $H$. Note that this may not be an inner automorphism of $H$; this is why $K\triangleleft H$ does not suffice. Since $K\blacktriangleleft H$, $\phi_{g}(K)=K$. Thus, $gKg^{-1}=K$ for all $g\in G$, and $K\triangleleft G$. 
-
-
----
-## Semidirect product
-
-> [!Definition]
-> Given any two groups $H$ and $K$ and a group homomorphism $\phi:K\to\text{Aut}(H)$, we can construct a new group $H\rtimes_{\phi}K$, called the *semidirect product* of $H$ and $K$ with respect to $\phi$, defined as follows:
-> 1. As a set, $H\rtimes_{\phi}K$ is the same as $H\times K$. 
-> 2. $(h_{1}, k_{1})\circ(h_{2}, k_{2})\equiv(h_{1}\phi_{k_{1}}(h_{2}), k_{1}k_{2})$.
 

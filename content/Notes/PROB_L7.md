@@ -218,27 +218,36 @@ Another useful fact is that $\text{Var}(aX)=a^{2}\text{Var}(X)$.
 
 **Proof**
 If $P(Y=0)=1$ or $P(X=aY)=1$ equality holds trivially. 
-
-[!Note]- Sorry, I'm stupid
-If $P(X=aY)=1$, then
-$$
-\begin{align}
-E(XY) & =\sum_{x, y}xyP(X=x, Y=y) \\
- & =\sum_{y}y\sum_{x}xP(X=x, Y=y) \\
- & =\sum_{y}y\left(ayP(X=ay, Y=y)+ \sum_{x\ne ay}xP(X=x, Y=y) \right)
-\end{align}
-$$
-Now, $\{ X=x, Y=y \}$ where $x\ne ay$ is a subset of $\{ X\ne aY \}$. $1=P(\{ X=aY \}\sqcup\{ X\ne aY \})=P(X=aY)+P(X\ne aY)$ so $P(X\ne aY)=0$. Now, $P(X=x, Y=y)\leq P(X\ne aY)$ when $x\ne ay$ so it follows that $P(X=x, Y=y)=0$ when $x\ne ay$. Therefore, 
-$$
-\begin{align}
-E(XY) & =\sum_{y}ay^{2}P(X=ay, Y=y)
-\end{align}
-$$
-Now, $P(Y=y)=P(Y=y, X=ay)+P(Y=y, X\ne ay)=P(Y=y, X=ay)$. Thus, 
-$$
-E(XY)=\sum_{y}ay^{2}P(Y=y)=aE(Y^{2}).
-$$
-
+  
+> [!Note]- Sorry, I'm stupid (Not you, **I** am stupid)
+> If $P(X=aY)=1$, then
+> $$
+> \begin{align}
+> E(XY) & =\sum_{x, y}xyP(X=x, Y=y) \\
+>  & =\sum_{y}y\sum_{x}xP(X=x, Y=y) \\
+>  & =\sum_{y}y\left(ayP(X=ay, Y=y)+ \sum_{x\ne ay}xP(X=x, Y=y) \right)
+> \end{align}
+> $$
+> Now, $\{ X=x, Y=y \}$ where $x\ne ay$ is a subset of $\{ X\ne aY \}$. $1=P(\{ X=aY \}\sqcup\{ X\ne aY \})=P(X=aY)+P(X\ne aY)$ so $P(X\ne aY)=0$. Now, $P(X=x, Y=y)\leq P(X\ne aY)$ when $x\ne ay$ so it follows that $P(X=x, Y=y)=0$ when $x\ne ay$. Therefore, 
+> $$
+> \begin{align}
+> E(XY) & =\sum_{y}ay^{2}P(X=ay, Y=y)
+> \end{align}
+> $$
+> Now, $P(Y=y)=P(Y=y, X=ay)+P(Y=y, X\ne ay)=P(Y=y, X=ay)$. Thus, 
+> $$
+> E(XY)=\sum_{y}ay^{2}P(Y=y)=aE(Y^{2}).
+> $$
+> Also, 
+> $$
+> \begin{align}
+> E(X^{2}) & =\sum_{x}x^{2}P(X=x) \\
+>  & =\sum_{ay}(ay)^{2}P(X=ay) \\
+>  & =\sum_{ay}(ay)^{2}P(Y=y) \\
+>  & =a^{2}E(Y^{2})
+> \end{align}
+> $$
+> 
 
 ### The correlation coefficient
 

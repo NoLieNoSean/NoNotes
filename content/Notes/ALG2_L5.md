@@ -63,7 +63,7 @@ Let $\phi:G\to \mathcal{G}$ be a homomorphism, and let $H<G$. Consider the restr
 > $$
 > such that $G_{i+1}/G_{i}$ is abelian for $0\leq i\leq s-1$. 
 
-The following generalization of [[ALG2_L10#Sylow's theorems|Sylow's theorem]] characterizes finite solvable groups:
+The following generalization of [[ALG2_L11#Sylow's theorems|Sylow's theorem]] characterizes finite solvable groups:
 
 > [!Theorem]
 > The finite group $G$ is solvable iff for every divisor $n$ of $|G|$ such that $\left( n, \frac{|G|}{n} \right)=1$, $G$ has a subgroup of order $n$.

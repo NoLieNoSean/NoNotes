@@ -92,7 +92,13 @@ A\mathbf{c} &= AP{\mathbf{c'}}\\
 \mathbf{c} &= P\mathbf{c'}
 \end{align*}
 $$
-That is **Old coordinates = (Change of Basis Matrix) New coordinates**
+Thus, 
+$$
+\begin{align}
+\text{old coordinates} & =(\text{change of basis matrix})(\text{new coordinates}), \\
+\text{new basis} & =(\text{old basis})(\text{change of basis matrix}).
+\end{align}
+$$
 
 >[!Example]
 >Let $T:V\to W$ be a linear transformation. We aim to find $\mathcal{M}_{B'_{V}, B'_{W}}(T)$ given that $\mathcal{M}_{B_{V}, B_{W}}(T) = A$.

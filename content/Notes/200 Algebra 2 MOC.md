@@ -13,6 +13,8 @@ tags:
 > - endsem: 50%
 # Lecture Notes
 
+These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence or breadth of topics covered in class.
+
 - [[ALG2_L1]] ✅
 	- Groups, examples of groups, subgroups
 - [[ALG2_L2]] ✅
@@ -30,12 +32,18 @@ tags:
 - [[ALG2_L8]] ✅
 	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer, second isomorphism theorem
 - [[ALG2_L9]]
-	- Orbit-stabilizer theorem, the class equation, semidirect product
+	- Orbit-stabilizer theorem, the class equation, p-groups, conjugacy in $S_{n}$, more on automorphisms
 - [[ALG2_L10]]
+	- Semidirect product
+- [[ALG2_L11]]
 	- Sylow's theorems
+- [[ALG2_L12]]
+	- Simplicity of $A_{n}$
+- [[ALG2_L13]]
+	- Free groups
 
 
-[[ALG2_L11]]
+
 
 # Other notes
 
@@ -51,3 +59,12 @@ tags:
 # Tutorials
 
 [[ALG2_T4]]
+
+
+---
+
+1) Free groups definition 
+(Universal property)
+2) Existence of a free group
+(Constructing the set of reduced words from of a given set. Then proving that it is a group)
+3) |S1| = |S2| <=> F(S1) isomorphic to F(S2). She skipped =>
