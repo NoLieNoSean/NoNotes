@@ -163,3 +163,4 @@ $$
 $$
 Thus, there are $10$ distinct ways to 2-colour a cube. 
 
+[[A note on the symmetries of a rigid solid]]

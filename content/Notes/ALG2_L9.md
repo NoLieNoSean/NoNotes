@@ -64,14 +64,14 @@ Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-g
 > If $|P|=p^{n}$, then $|Z(P)|\ne p^{n-1}$.
 
 > **Proof**
-> FTSOC, assume $|P|=p^{n}$ and $|Z(P)|=p^{n-1}$. Then, $|P/Z(P)|=p$, so $P/Z(P)$ is cyclic. Thus, $P$ is abelian. But this implies $|Z(P)|=p^{n}$, a contradiction.
+> FTSOC, assume $|P|=p^{n}$ and $|Z(P)|=p^{n-1}$. Then, $|P/Z(P)|=p$, so $P/Z(P)$ is cyclic. [[ALG2_L8#Some theorems|Thus]], $P$ is abelian. But this implies $|Z(P)|=p^{n}$, a contradiction.
 
 > [!Theorem]
 > If $|P|=p^{2}$ for some prime $p$, then $P$ is abelian. More precisely, either $P\cong \mathbb{Z}_{p^{2}}$ or $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$.
 
 > **Proof**
 > It follows directly from the two preceding theorems that $P$ is abelian. Let $x\in P$. If $P$ has an element $x$ of order $p^{2}$, $P=\langle x \rangle$, and $P\cong\mathbb{Z}_{p^{2}}$. Else, $P$ must have two elements $x$ and $y$ such that $|x|=|y|=p$ and $\langle x \rangle\ne \langle y \rangle$. 
-> Lagrange's theorem forces $\langle x \rangle\cap \langle y \rangle=\{ 1 \}$. Thus, $|\langle x \rangle\langle y \rangle|=p^{2}$, so $\langle x \rangle\langle y \rangle=P$. These facts along with $\langle x \rangle\triangleleft P$ and $\langle y \rangle\triangleleft P$ [[ALG2_L6#Product groups|allow us]] to write $P=\langle x \rangle\times \langle y \rangle$. Thus, $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$. 
+> Lagrange's theorem forces $\langle x \rangle\cap \langle y \rangle=\{ 1 \}$. Thus, $|\langle x \rangle\langle y \rangle|=p^{2}$, so $\langle x \rangle\langle y \rangle=P$. These facts along with $\langle x \rangle\triangleleft P$ and $\langle y \rangle\triangleleft P$ [[ALG2_L6#Direct products|allow us]] to write $P=\langle x \rangle\times \langle y \rangle$. Thus, $P\cong \mathbb{Z}_{p}\times \mathbb{Z}_{p}$. 
 
 [[ALG2_L11#Sylow's theorems|Sylow's theorems]] have a lot more to say about p-groups and subgroups.
 
@@ -135,7 +135,6 @@ This should be reminiscent of how [[ALG1_L13#Change of basis|change of basis]] w
 > Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type. The number of conjugacy classes of $S_{n}$ equals the number of partitions of $n$.
 
 ---
-
 ## More on Automorphisms
 
 > [!Theorem]
@@ -162,6 +161,22 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 > [!Theorem]
 > $\text{Aut}(\mathbb{Z}_{n})\cong U_{n}$, where $U_{n}$ is the group of units modulo $n$.
 
+> **Proof**
+> Let $x$ be a generator of $\mathbb{Z}_{n}$. If $\phi\in \text{Aut}(\mathbb{Z}_{n})$, then $\phi(x)=x^{a}$ for some $a\in \mathbb{Z}$, and $a$ uniquely determines $\phi$. Denote this automorphism by $\phi_{a}$. Since $\phi_{a}$ is an automorphism, $x$ and $x^{a}$ must have the same order, so $(a, n)=1$. Furthermore, for every $a$ relatively prime to $n$, the map $x\mapsto x^{a}$ is an automorphism of $\mathbb{Z}_{n}$. Hence we have a bijective map
+> $$
+> \begin{align}
+> \Phi: \text{Aut}(\mathbb{Z}_{n}) &  \to U_{n}\\
+> \phi_{a} & \mapsto a \mod n
+> \end{align}
+> $$
+> which is a homomorphism because
+> $$
+> \phi_{a}\circ \phi_{b}(x)=\phi_{a}(x^{b})=x^{ab}=\phi_{ab}(x)
+> $$
+> for all $\phi_{a}, \phi_{b}\in \text{Aut}(\mathbb{Z}_{n})$, so that
+> $$
+> \Phi(\phi_{a}\circ \phi_{b})=\Phi(\phi_{ab})=ab\mod n=\Phi(\phi_{a})\Phi(\phi_{b}).
+> $$
 
 
 

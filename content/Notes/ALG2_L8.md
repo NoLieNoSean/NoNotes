@@ -142,6 +142,14 @@ g\xmapsto{\chi_{h}}hgh^{-1}, g\in G, h\in C_{G}(A).
 $$
 Under this action, the center of $G$ is the kernel: $Z(G)=\ker \chi$. So, we have $Z(G)\leq C_{G}(A)\leq N_{G}(A)\leq G$. 
 
+### Some theorems
+
+> [!Theorem]
+> If $G/Z(G)$ is cyclic, then $G$ is abelian.
+
+> **Proof**
+> Let $G/Z(G)=\langle aZ(G) \rangle$ for some $a\in G$. Then, any $g\in G$ can be expressed as $a^{k}z$ for some integer $k$ and $z\in Z(G)$. Let $g_{1}, g_{2}\in G$, $g_{1}=a^{k_{1}}z_{1}$, $g_{2}=a^{k_{2}}z_{2}$. Then, $g_{1}g_{2}=a^{k_{1}}z_{1}a^{k_{2}}z_{2}=a^{k_{1}+k_{2}}z_{1}z_{2}$, and $g_{2}g_{1}=a^{k_{2}+k_{1}}z_{2}z_{1}=a^{k_{1}+k_{2}}z_{1}z_{2}$. Therefore, $G$ is abelian.
+
 ---
 ## Second isomorphism theorem
 
@@ -153,7 +161,7 @@ Under this action, the center of $G$ is the kernel: $Z(G)=\ker \chi$. So, we hav
 > 4. $AB/B\cong A/A\cap B$.
 
 > **Proof**
-> $(1)$ follows from [[ALG2_L6#Product groups|here]]. Since $A\leq N_{G}(B)$ and $B\leq N_{G}(B)$, $AB\leq N_{G}(B)$, so $B\trianglelefteq AB$. This allows us to define the homomorphism
+> $(1)$ follows from [[ALG2_L6#Direct products|here]]. Since $A\leq N_{G}(B)$ and $B\leq N_{G}(B)$, $AB\leq N_{G}(B)$, so $B\trianglelefteq AB$. This allows us to define the homomorphism
 > $$
 > \phi:A\to AB/B, a\mapsto aB.
 > $$

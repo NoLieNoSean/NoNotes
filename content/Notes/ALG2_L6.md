@@ -33,7 +33,7 @@ time: 9:10
 Note that if only $H<G$, $K<G$, and $H<K$ are true, we can still define $\phi:G/H\to G/K$ as we did above, but as a set theoretic function. Note that $G/H$ and $G/K$ are only sets of cosets here, not groups. Our reasoning that $\phi$ is well defined did not use the normality of $H$ or $K$, and thus is still valid.
 
 ---
-## Product groups
+## Direct products
 
 > [!Definition]
 > Let $G$ and $G'$ be two groups. The product set $G\times G'$, the set of pairs of elements $(a, a')$ with $a$ in $G$ and $a'$ in $G'$, can be made into a group, known as the *product group*, by component wise multiplication:
@@ -51,6 +51,8 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > $\mathbb{Z}_{mn}\cong \mathbb{Z}_{m}\times \mathbb{Z}_{n}$ when $(m, n)=1$.
 
 > **Proof** $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
+
+### Recongnizing direct products
 
 > [!Theorem]
 > Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 

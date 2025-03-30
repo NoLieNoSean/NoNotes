@@ -31,12 +31,12 @@ These notes have been reorganized because I lost count of the lectures at some p
 	- Double cosets, group actions
 - [[ALG2_L8]] ✅
 	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer, second isomorphism theorem
-- [[ALG2_L9]]
+- [[ALG2_L9]] ✅
 	- Orbit-stabilizer theorem, the class equation, p-groups, conjugacy in $S_{n}$, more on automorphisms
 - [[ALG2_L10]]
 	- Semidirect product
 - [[ALG2_L11]]
-	- Sylow's theorems
+	- Sylow's theorems, proofs from Herstein
 - [[ALG2_L12]]
 	- Simplicity of $A_{n}$
 - [[ALG2_L13]]
@@ -68,3 +68,6 @@ These notes have been reorganized because I lost count of the lectures at some p
 2) Existence of a free group
 (Constructing the set of reduced words from of a given set. Then proving that it is a group)
 3) |S1| = |S2| <=> F(S1) isomorphic to F(S2). She skipped =>
+
+free abelian groups
+structure theorem for finitely generated abelian groups
