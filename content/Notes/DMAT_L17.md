@@ -26,7 +26,6 @@ The tree growing procedure:
 The proof of this supplied in the reference exemplifies the use of the [[DMAT_L16#Template for Proof by Induction on Number of Vertices|template for proof by induction on number of vertices]] from the previous lecture.
 
 ---
-
 ## Linear algebraic methods in combinatorics
 
 A town has 32 residents, any two clubs have an even number of residents in common, and any cub has an of number of residents. Show that the town cannot have 33 clubs.

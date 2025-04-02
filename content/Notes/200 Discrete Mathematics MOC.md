@@ -68,6 +68,8 @@ tags:
 	- Matrix tree theorem
 - [[DMAT_L19]]
 	- Minimum spanning trees, matroids
+- [[DMAT_L20]]
+	- Connectivity, ear decomposition
 
 ---
 # Tutorials

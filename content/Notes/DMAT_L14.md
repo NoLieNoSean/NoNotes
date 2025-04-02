@@ -115,7 +115,7 @@ For $g \in G$, define $\text{fix}(g) \equiv \ | \  \{ x \in X \ | \  x^{g}=x \}\
 >  & = |G|\sum_{k=1}^{l}\sum_{x \in \mathcal{O}_{k}} \frac{1}{|\mathcal{O}(x)|}.
 > \end{align}
 > $$
-> The inner sum will be $1$ since we are adding the term $\frac{1}{|\mathcal{O}_{k}|}$  an $\mathcal{O}_{k}$ number of times. Hence the $RHS$ will be $|G|$ times the number of orbits. Rearranging, we get
+> The inner sum will be $1$ since the term $\frac{1}{|\mathcal{O}_{k}|}$ is being added $\mathcal{O}_{k}$ number of times. Hence the $RHS$ will be $|G|$ times the number of orbits. Rearranging, we get
 > $$
 > \text{\#orbits} = \frac{1}{|G|} \sum_{g\in G}\text{fix}(g).
 > $$
