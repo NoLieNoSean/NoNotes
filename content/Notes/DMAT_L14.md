@@ -12,20 +12,20 @@ We want to count the number of distinct  $r$-colourings of an object. Let $X$ 
 
 The [[ALG2_L2#Symmetric groups|symmetric group]] on $X$, denoted $\text{Sym}(X)$, consists of all possible permutations of $X$. However, not all elements of $\text{Sym}(X)$ correspond to physically realisable transformations of the object. Typically, we restrict our attention to a subgroup $G$ of rigid transformations, such as rotations. More generally, any subgroup of $\text{Sym}(X)$ can be considered, depending on the context.
 
->[!example] Equilateral Triangle
->Consider an equilateral triangle and a colour set of $\{ R,B \}$. We wish to colour the vertices here, so $X$ will be the vertex set $\{ 1, 2, 3 \}$. $\text{Sym}(X)\cong S_{3}$. Whether we take $G\cong S_{3}$ (flipping is allowed) or $G\cong C_{3}$ (can't flip the triangle) doesn't make a difference when we are working with only two colours. The possible colourings and transformations between them are as follows:
+> [!example] Equilateral Triangle
+> Consider an equilateral triangle and a colour set of $\{ R,B \}$. We wish to colour the vertices here, so $X$ will be the vertex set $\{ 1, 2, 3 \}$. $\text{Sym}(X)\cong S_{3}$. Whether we take $G\cong S_{3}$ (flipping is allowed) or $G\cong C_{3}$ (can't flip the triangle) doesn't make a difference when we are working with only two colours. The possible colourings and transformations between them are as follows:
 > $$
-\begin{align}
-& RRR \\
-& RRB \overset{(1\ 2\ 3)}\longrightarrow RBR \overset{(1\ 2\ 3)}\longrightarrow BRR \overset{(1\ 2 \ 3)}\longrightarrow RRB\\
-& BBR \overset{(1\ 2 \ 3)}\longrightarrow RBB \overset{(1\ 2\ 3)}\longrightarrow BRB \overset{(1\ 2\ 3)}\longrightarrow RRB\\
-& BBB
-\end{align} 
+> \begin{align}
+> & RRR \\
+> & RRB \overset{(1\ 2\ 3)}\longrightarrow RBR \overset{(1\ 2\ 3)}\longrightarrow BRR \overset{(1\ 2 \ 3)}\longrightarrow RRB\\
+> & BBR \overset{(1\ 2 \ 3)}\longrightarrow RBB \overset{(1\ 2\ 3)}\longrightarrow BRB \overset{(1\ 2\ 3)}\longrightarrow RRB\\
+> & BBB
+> \end{align} 
 > $$
 > There are four equivalence classes. Hence, there are four distinct ways of colouring the triangle.
+> 
 
-
-### Formalisation using Group Actions
+### Formalization using Group Actions
 
 Let $X$ be a finite set that is to be coloured with $r$ colours. Let $G\leqslant\text{Sym}(X)$ be a finite group [[ALG2_L7#Group actions|acting]] on $X$.
 
@@ -40,13 +40,12 @@ c^{\pi} = c' \quad \text{such that} \quad c'(x) = c(x^{\pi ^{-1}}).
 $$
 (The inverse is technically required to make this a valid action, but is also easy to intuitively validate).
 
-
->[!Proof that this is a group action]-
->1) For any $c \in \mathbb{C}$, $c^{1}=c'$ where $c'\in \mathbb{C}$ and $c'(x)=c(x^{1})=c(x)$, that is $c^{1} = c$.
->2) For any $c \in \mathbb{C}$ and $\pi_{1}, \pi_{2} \in G$, we have
->$$
-c^{\pi_{1}} \equiv c' \quad \text{and} \quad (c')^{\pi_{2}}\equiv c''
->$$
+> [!Note]- Proof that this is a group action
+> 1) For any $c \in \mathbb{C}$, $c^{1}=c'$ where $c'\in \mathbb{C}$ and $c'(x)=c(x^{1})=c(x)$, that is $c^{1} = c$.
+> 2) For any $c \in \mathbb{C}$ and $\pi_{1}, \pi_{2} \in G$, we have
+> $$
+> c^{\pi_{1}} \equiv c' \quad \text{and} \quad (c')^{\pi_{2}}\equiv c''
+> $$
 > where $c'(x) = c(x^{\pi_{1}^{-1}})$ and $c''(x)=c'(x^{\pi_{2}^{-1}})$. Now
 > $$
 > \begin{align}
@@ -55,9 +54,12 @@ c^{\pi_{1}} \equiv c' \quad \text{and} \quad (c')^{\pi_{2}}\equiv c''
 > &= c'(x^{\pi_{2}^{-1}}) \\
 > &= c((x^{\pi_{2}^{-1}})^{\pi_{1}^{-1}}) \\
 > &= c(x^{(\pi_{1}\pi_{2})^{-1}}) \\
-> &= c^{\pi_{1}\pi_{2}}(x)
+> &= c^{\pi_{1}\pi_{2}}(x).
 > \end{align}
 > $$
+> 
+> 
+
 #### Orbits
 
 Recall that the action of $G$ defines an equivalence relation on $X$ as
@@ -71,7 +73,7 @@ $$
 G_{x} & = \{ g \in G\ | \  x^{g}=x \}. \\
 \end{align}
 $$
-Note that counting the number of distinct colourings is equivalent to counting the number of orbits in the action of $G$ on $\mathbb{C}$. 
+Note that counting the number of distinct colorings is equivalent to counting the number of orbits in the action of $G$ on $\mathbb{C}$. 
 
 From the [[ALG2_L9#Orbit-stabilizer theorem|Orbit-stabilizer theorem]], we have
 $$
