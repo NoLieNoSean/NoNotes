@@ -50,16 +50,24 @@ tags:
 > [!Info]-
 > References:
 > - [Misha Lavrov's Math 3322 notes](https://facultyweb.kennesaw.edu/mlavrov/courses/3322-fall-2024.php)
+> - [Mark Muldoon's MATH20902 notes](https://personalpages.manchester.ac.uk/staff/mark.muldoon/Teaching/DiscreteMaths/LectureNotes/AllNotes.pdf)
+> - [https://arxiv.org/pdf/2308.04512](https://arxiv.org/pdf/2308.04512)
 > - Introduction to Graph Theory (Douglass B. West)
 > - A First Course in Graph Theory (Gary Chartrand, Ping Zhang)
 > - Discrete Mathematics Elementary and Beyond (L. Lovász, J. Pelikán, K. Vesztergombi)
+> - Graphs, Networks and Algorithms (Dieter Jungnickel)
+> - An invitation to discrete mathematics (Matousek J., Nesetril J.)
 > 
 > Stuff to cover: Graph theory, discrete probability, number theory, finite fields, applications to error correcting codes
 
-- [[DMAT_L16]]
-- [[DMAT_L17]]
+- [[DMAT_L16]] ✅
+	- Induction trap, bipartite graphs
+- [[DMAT_L17]] ✅
+	- Growing trees
 - [[DMAT_L18]]
+	- Matrix tree theorem
 - [[DMAT_L19]]
+	- Minimum spanning trees, matroids
 
 ---
 # Tutorials
@@ -72,6 +80,7 @@ tags:
 [[DMAT_PS1]]
 [[DMAT_AS1]]
 [[DMAT_AS2]]
+[[DMAT_AS3]]
 
 # Quizzes
 

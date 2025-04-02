@@ -1,36 +1,33 @@
 ---
-tags: 
-date: "2025-03-19"
-time: "11:58"
+tags:
+  - DMAT
+  - Lecture
+  - Processed
+date: 2025-03-19
+time: 11:58
 ---
+## How to grow trees
+
+[[Discrete Mathematics Elementary and Beyond (Lovasz-Pelican-Vestzergombi).pdf#page=153|ref]]
 
 > [!Theorem]
-> A graph is bipartite iff it does not contain any odd cycles.
+> Every tree with at least $2$ nodes has at least $2$ nodes of degree $1$.
 
-bipartite $\implies$ no odd cycles is easy
+The tree growing procedure:
+1. Start with a single node.
+2. Repeat any number of times: If you have a graph $G$, create a new node and connect it by a new edge to any node of $G$.
 
-no odd cycles $\implies$ bipartite
-Assume $G$ is connected. This doesn't hurt, since if $G$ isn't connected, we can make the same argument for the connected components of $G$ and take unions later. Let $u\in G$. Define $X=\{ v\in G\ | \ \text{the shortest path from u to v is of odd length} \}$, $Y=\{ v\in G\ | \ \text{the shortest path from u to v is of even length} \}$. We will show that $X$ and $Y$ are independent sets. Let $v, w\in X$. Let $w_{1}$ be the vertex after which there is no common vertex in the shortest paths from $u$ to $v$ and $w$ (it always exists!). Note that the path from $u$ to $w_{1}$ in both paths must have the same length. Thus, if there were an edge between $u$ and $v$, $u-v-w_{1}$ would form an odd cycle.
+> [!Theorem]
+> Every graph obtained from the tree growing procedure is a tree, and every tree can be obtained in this way.
 
----
+> [!Theorem]
+> Every tree on $n$ nodes has $n-1$ edges.
 
-definition of cut edge
-
----
-
-every tree on $n$ nodes has exactly n-1 edges.
-
-lovasz, how to grow trees
+The proof of this supplied in the reference exemplifies the use of the [[DMAT_L16#Template for Proof by Induction on Number of Vertices|template for proof by induction on number of vertices]] from the previous lecture.
 
 ---
 
-If we delete a node $v$ from a tree, we get a graph whose connected components are trees. We call these branches of the node $v$.
+## Linear algebraic methods in combinatorics
 
-Prove that every tree has a node such that every branch of this node contains at most half the nodes of the tree.
-
----
-
-linear algebraic methods in combinatorics
-
-A town has 32 residents, any two clubs have an even number of residents in common, and any cub has an od number of residents. Show that the town cannot have 33 clubs.
+A town has 32 residents, any two clubs have an even number of residents in common, and any cub has an of number of residents. Show that the town cannot have 33 clubs.
 

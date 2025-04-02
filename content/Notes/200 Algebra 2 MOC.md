@@ -71,3 +71,4 @@ These notes have been reorganized because I lost count of the lectures at some p
 
 free abelian groups
 structure theorem for finitely generated abelian groups
+invariant factor theorem

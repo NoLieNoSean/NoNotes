@@ -1,9 +1,13 @@
 ---
-tags: 
-date: "2025-03-24"
-time: "11:54"
+tags:
+  - DMAT
+  - Lecture
+date: 2025-03-24
+time: 11:54
 ---
 ## Matrix tree theorem
+
+[[Introduction to Graph Theory (Douglas B. West).pdf#page=104|ref]]
 
 Counting number of spanning trees in a graph.
 A spanning subgraph of a graph $G$ is a graph $H$ that has the same vertex set as $G$ and every edge of $H$ is an edge of $G$.
@@ -11,7 +15,6 @@ A spanning subgraph of a graph $G$ is a graph $H$ that has the same vertex set a
 A graph $G$ has a spanning tree iff it is connected. A spanning subgraph which is a tree is called a spanning tree of $G$. 
 
 For example $K_{4}\setminus \{ \text{any edge} \}$ has 8 spanning trees.
-
 ### Graphs and matrices
 
 #### Adjacency matrix

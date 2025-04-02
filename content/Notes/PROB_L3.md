@@ -53,6 +53,8 @@ $$
 The outcome of performing $n$ Bernoulli trials with fixed parameter $p$ can be given by the [[PROB_L5#Random vector|random vector]] $\mathbf{X}=(X_{1}, X_{2}, \dots, X_{n})$, with $X_{i}=1$ and $X_{i}=0$ signaling success and failure in the $i$th trial respectively. We know that the random variable $S_{n}=X_{1}+X_{2}+\dots+X_{n}$ is binomially distributed with parameters $n$ and $p$, as shown above. Turning this around, we can say that any random variable $Y$ that is binomially distributed with these same parameters can be thought of as the sum of $n$ independent Bernoulli random variables $X_{1}, \dots, X_{n}$ each having parameter $p$.
 ### The distribution function
 
+What follows is valid for all probability spaces.
+
 > [!Definition]
 > If $X$ is a random variable on $\Omega$, define its *distribution function* by $F(x)=P(X\leq x)=P(X\in (-\infty, x])$.
 
@@ -68,7 +70,15 @@ $$
 F(x_{0}) & =P(X\leq x_{0}) \\
  & =P((-\infty, x_{0}]) \\
  & =\lim_{ n \to \infty } P((-\infty, x_{0}+ \epsilon_{n}] ) \\
- & =\lim_{ n \to \infty } F(x_{0}+\epsilon_{n})
+ & =\lim_{ n \to \infty } F(x_{0}+\epsilon_{n}),
 \end{align}
 $$
-Note that for discrete random variables, $F$ may not be left continuous. If $F$ we defined as $F(x)=P(X< x)$, then $F$ would be left continuous. 
+where [[PROB_L1#Properties of the probability function|these]] properties have been used. A closely related result is $F(x_{0}-)=P(X< x_{0})$:
+
+$$
+\begin{align}
+P(X< x) & =\lim_{ n \to \infty } P(X\leq x-\epsilon_{n}) \\
+ & =\lim_{ n \to \infty } F(x_{0}-\epsilon _{n}).
+\end{align}
+$$
+It follows that $F(x+)-F(x-)=P(X=x)$. This will be important when we discuss continuous random variables.

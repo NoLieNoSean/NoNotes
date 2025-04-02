@@ -13,7 +13,7 @@ These notes have been reorganized because I lost count of the lectures at some p
 - [[PROB_L2]] ✅
 	- More properties of the probability measure, Conditional probability
 - [[PROB_L3]] ✅
-	- Independent events, discrete random variables, binomial distribution
+	- Independent events, discrete random variables, binomial distribution, the distribution function
 - [[PROB_L4]] ✅
 	- Examples of probability mass distributions: Geometric, hypergeometric, negative binomial, poisson
 - [[PROB_L5]] ✅
@@ -23,7 +23,7 @@ These notes have been reorganized because I lost count of the lectures at some p
 - [[PROB_L7]]
 	- Expectation: Properties of expectation, moments, variance, correlation coefficient, Schwarz inequality, Chebyshev's inequality, Weak and Strong laws of large numbers, conditional expectation
 - [[PROB_L8]]
-	- Continuous random variables:
+	- Continuous random variables
 
 # Quizzes
 

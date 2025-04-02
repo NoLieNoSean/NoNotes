@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-03-26"
-time: "11:53"
+tags:
+  - DMAT
+  - Lecture
+date: 2025-03-26
+time: 11:53
 ---
 
 ## Minimum spanning trees
