@@ -120,16 +120,17 @@ For $g \in G$, define $\text{fix}(g) \equiv \ | \  \{ x \in X \ | \  x^{g}=x \}\
 > \text{\#orbits} = \frac{1}{|G|} \sum_{g\in G}\text{fix}(g).
 > $$
 
-### An example: 2-colourings of a cube
+### An example: 2-colorings of a cube
 
 Consider a cube with faces $R,L,F,B,U,D$ which correspond to Right, Left, Front, Back, Up and Down respectively. 
 
-Let $G$ denote the set of all orientations of a cube obtained through rotations. The cardinality of $X$ will be $24$.
+Let $G$ denote the set of all orientations of a cube obtained through rotations. The cardinality of $G$ will be $24$.
 
 >[!proof]-
 >There are $6$ choices for the front face and $4$ for the side one; these uniquely determine an orientation.
 >Alternatively, you can embed a tetrahedron in the cube such that its edges correspond with a set of pairwise non-adjacent edges of the cube (there are two such sets of edges). It will have two orientations upon rotating the cube. This will give a isomorphism to $S_{4}$.
 >![[Pasted image 20250316144333.png|500]]
+>The pink colored vertices form one tetrahedron, and the grey colored ones form another.
 
 There are four types of symmetries present here. 
 
@@ -151,7 +152,7 @@ There are four types of symmetries present here.
 4) Vertex Symmetries - 8
 	- $(F\ U\ R)(L\ B\ D)$ and its inverse
 	- $(F\ R\ D)(U\ B\ L)$ and its inverse
-	- $(R\ U\ B)(F\ L\ D)$ and its inverse
+	- $(R\ U\ B)(F\ L\ D)$ and its [[0001-0060.mkv|inverse]]
 	- $(R\ D\ B)(F\ U\ L)$ and its inverse
 5) The identity symmetry - 1
 	-  $(R)(L)(F)(B)(U)(D)$
@@ -161,6 +162,6 @@ All together, we have 24 symmetries, as expected. Note that for a symmetry $g$, 
 $$
 \#\text{orbits}=\frac{1}{24}\left( 3\times 2^{4}+6\times 2^{3}+6\times 2^{3}+8\times 2^{2}+ 1 \times 2^{6} \right)= \frac{240}{24}=10.
 $$
-Thus, there are $10$ distinct ways to 2-colour a cube. 
+Thus, there are $10$ distinct ways to 2-color a cube. 
 
 [[A note on the symmetries of a rigid solid]]
