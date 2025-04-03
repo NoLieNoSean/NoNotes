@@ -44,7 +44,6 @@ tags:
 - [[DMAT_L15]]
 	- Polya's Enumeration Theorem
 
-
 ## Prof. Sinhababu's Lectures
 
 > [!Info]-
@@ -61,7 +60,7 @@ tags:
 > Stuff to cover: Graph theory, discrete probability, number theory, finite fields, applications to error correcting codes
 
 - [[DMAT_L16]] ✅
-	- Induction trap, bipartite graphs
+	- Induction trap, induction on number of vertices, bipartite graphs
 - [[DMAT_L17]] ✅
 	- Growing trees
 - [[DMAT_L18]]

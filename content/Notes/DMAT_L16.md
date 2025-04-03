@@ -71,7 +71,7 @@ Assume that all graphs on $n - 1$ vertices satisfying property $A$ also satisfy 
 > A *bipartite graph* $G$ is a graph whose vertex set $V$ can be partitioned into two nonempty subsets $A$ and $B$ such that each edge of $G$ has one endpoint in $A$ and one endpoint in $B$.
 
 > [!Theorem]
-> A graph is a bipartite graph if it doesn't have any odd cycles.
+> A graph is a bipartite graph iff it doesn't have any odd cycles.
 
 > **Proof**
 > One direction is very easy: if $G$ is bipartite with vertex sets $V_1$ and $V_2$, every step along a walk takes you either from $V_1$ to $V_2$ or from $V_2$ to $V_1$. To end up where you started, therefore, you must take an even number of steps.

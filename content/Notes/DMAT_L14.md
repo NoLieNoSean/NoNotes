@@ -154,7 +154,7 @@ There are four types of symmetries present here.
 4) Vertex Symmetries - 8
 	- $(F\ U\ R)(L\ B\ D)$ and its inverse
 	- $(F\ R\ D)(U\ B\ L)$ and its inverse
-	- $(R\ U\ B)(F\ L\ D)$ and its [[0001-0060.mkv|inverse]]
+	- $(R\ U\ B)(F\ L\ D)$ and its [[Untitled.gif|inverse]]
 	- $(R\ D\ B)(F\ U\ L)$ and its inverse
 5) The identity symmetry - 1
 	-  $(R)(L)(F)(B)(U)(D)$
@@ -164,6 +164,6 @@ All together, we have 24 symmetries, as expected. Note that for a symmetry $g$, 
 $$
 \#\text{orbits}=\frac{1}{24}\left( 3\times 2^{4}+6\times 2^{3}+6\times 2^{3}+8\times 2^{2}+ 1 \times 2^{6} \right)= \frac{240}{24}=10.
 $$
-Thus, there are $10$ distinct ways to 2-color a cube. 
+Thus, there are $10$ distinct ways to 2-color a cube.
 
 [[A note on the symmetries of a rigid solid]]
