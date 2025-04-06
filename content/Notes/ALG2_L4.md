@@ -86,7 +86,7 @@ Note that the image of one map is the kernel of the following map in the chain.
 ## Mapping property of quotient groups
 
 > [!Theorem]
-> Let $\varphi:G'\to G$ be a homomorphism, and let $N\trianglelefteq  G'$ such that $N\subseteq \ker\varphi$. Let $\overline{G}'=G'/N$, and let $\pi:G'\to \overline{G}'$ be the canonical projection map $a\mapsto \overline{a}$. The rule $\overline{\varphi}(\overline{a})=\varphi(a)$ defined a homomorphism $\overline{\varphi}:\overline{G}'\to G$, and $\overline{\varphi}\circ \pi=\varphi$. 
+> Let $\varphi:G'\to G$ be a homomorphism, and let $N\trianglelefteq  G'$ such that $N\subseteq \ker\varphi$. Let $\overline{G}'=G'/N$, and let $\pi:G'\to \overline{G}'$ be the canonical projection map $a\mapsto \overline{a}$. The rule $\overline{\varphi}(\overline{a})=\varphi(a)$ defines a homomorphism $\overline{\varphi}:\overline{G}'\to G$, and $\overline{\varphi}\circ \pi=\varphi$. 
 >![[Pasted image 20250330164452.png|200]]
 
 This mapping property generalizes the first isomorphism theorem. The hypothesis that $N$ be contained in $\ker\varphi$ is essential, of course.

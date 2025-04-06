@@ -59,10 +59,10 @@ What follows is valid for all probability spaces.
 > If $X$ is a random variable on $\Omega$, define its *distribution function* by $F(x)=P(X\leq x)=P(X\in (-\infty, x])$.
 
 > [!Theorem] Proposition
-> - $F$ is increasing.
+> - $F$ is non decreasing.
 > - $\lim_{ x \to \infty }F(x)=1$
 > - $\lim_{ x \to -\infty }F(x)=0$
-> - $\lim_{ x \to x_{0}^{+} }F(x)=F(x_{0})$ (right continuity).
+> - $\lim_{ x \to x_{0}^{+} }F(x)=F(x_{0})$ for all $x$ (right continuity).
 
 The fourth point is shown by considering any monotone decreasing sequence $(\epsilon_{n})$ converging to $0$, and observing that 
 $$
@@ -82,3 +82,5 @@ P(X< x) & =\lim_{ n \to \infty } P(X\leq x-\epsilon_{n}) \\
 \end{align}
 $$
 It follows that $F(x+)-F(x-)=P(X=x)$. This will be important when we discuss continuous random variables.
+
+Also, any function satisfying the four properties in the proposition above is called a distribution function.

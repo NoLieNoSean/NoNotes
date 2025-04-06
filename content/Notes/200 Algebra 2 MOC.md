@@ -39,8 +39,9 @@ These notes have been reorganized because I lost count of the lectures at some p
 	- Sylow's theorems, proofs from Herstein
 - [[ALG2_L12]]
 	- Simplicity of $A_{n}$
-- [[ALG2_L13]]
+- [[ALG2_L13]] ✅
 	- Free groups
+- [[ALG2_L14]]
 
 
 

@@ -41,7 +41,7 @@ $$
 4.\quad & P(X< n)=1-P(X\geq n)=1-(1-p)^{n}.
 \end{align}
 $$
-Additionally, $P(X\geq m+n/X\geq n)=P(X\geq m)$, as one would expect.
+Additionally, $P(X\geq m+n)=P(X\geq m)P(X\geq n)$, or, equivalently, $P(X\geq m+n/X\geq n)=P(X\geq m)$. 
 
 ### Negative binomial distribution
 

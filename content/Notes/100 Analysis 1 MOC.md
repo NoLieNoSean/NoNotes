@@ -3,7 +3,7 @@ tags:
   - ANA1
   - MOC
 ---
- > [!Info]-
+ >[!Info]-
 > **Prof:** Upendra Kulkarni
 > **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
 > 

@@ -34,9 +34,9 @@ is a continuous function (follows from a generalization of [[ANA1_L28#Integratio
 
 Given a distribution function $F$, we say that it admits a density if there exists a function $f:\mathbb{R}\to \mathbb{R}$ satisfying $(1)$. Note that if $F$ admits a density, $(1)$ does not uniquely determine $f$, as one can always change the value of $f$ at finitely many points and not affect the integral. 
 
-Consider the special case when $F$ is differentiable. Then, $f=F'$ satisfies $(1)$ due to the [[ANA1_L28#The fun theorem|fundamental theorem of calculus]].
+Given a distribution function $F$, consider the case when $F$ is differentiable. Then, $f=F'$ satisfies $(1)$ due to the [[ANA1_L28#The fun theorem|fundamental theorem of calculus]] (But isn't that only on finite intervals?)  (How do we know that $f$ is integrable here?). 
 
-Not all continuous distribution functions have densities. A continuous distribution function $F$ admits a density iff $F$ is *absolutely continuous* (ANA 3 stuff).
+Not all continuous distribution functions have densities. A continuous distribution function $F$ admits a density iff $F$ is *absolutely continuous* (ANA 3 stuff). (So does differentiability imply absolute continuity?)
 
 If $X$ is a random variable having density $f$, then
 $$
@@ -55,7 +55,7 @@ $$
 >  & =F(\sqrt{ y })-F(-\sqrt{ y }).
 > \end{align}
 > $$
-> Differentiate.
+> Everything till this point is totally rigorous. Now, differentiate.
 > $$
 > G'(y)=\frac{1}{2\sqrt{ y }}(F'(\sqrt{ y })+F'(-\sqrt{ y })).
 > $$
@@ -66,10 +66,10 @@ $$
 > 0 & y\leq 0.
 > \end{dcases}
 > $$
-> Note that $F$ may not be differentiable at all points. To rigorously establish the validity of the above result, integrate $g$ to obtain $G$.
+> Note that $G$ and $F$ may not be differentiable at all points. To rigorously establish the validity of the above result, define $g$ as above, and integrate it to obtain $F(\sqrt{ y })-F(-\sqrt{ y })$ (subtleties: show that $g$ is a density function: non negativity and integrability. Showing that $\int_{-\infty}^{y} g(x) \, dx=F(\sqrt{ y })-F(-\sqrt{ y })$ shows that $\int_{-\infty}^{\infty} g(x) \, dx=1$ and that $g$ is indeed a density of $G$). 
 
 > [!Example]
-> Take $Y=\sigma X+\mu$, $\sigma, \mu\in \mathbb{R}$ in the previous example. If we let $F$ and $G$ denote the distributions of $X$ and $Y$, 
+> Take $Y=\sigma X+\mu$, $\sigma, \mu\in \mathbb{R}$ , $\sigma> 0$ in the previous example. If we let $F$ and $G$ denote the distributions of $X$ and $Y$, 
 > $$
 > \begin{align}
 > G(y) & =P(Y\leq y) \\
@@ -94,7 +94,14 @@ The following theorem provides a general solution for some functions of $X$.
 
 [[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=131|proof]]
 
+#### Symmetric densities
 
+> [!Definition]
+> A density function $f$ is called *symmetric* if $f(x)=f(-x)$ for all $x$.
+> A random variable $X$ is called *symmetric* if $X$ and $-X$ have the same distribution function.
+
+> [!Theorem]
+> Let $X$ be a random variable that has a density. Then $X$ has a symmetric density iff $X$ is a symmetric random vairable.
 #### Uniform density
 
 > [!Definition]
@@ -108,17 +115,65 @@ The following theorem provides a general solution for some functions of $X$.
 
 #### Normal density
 
+> [!Definition]
+> The *standard normal density* is usually denoted by $\varphi$, and is defined by
+> $$
+> \varphi(x)=\frac{1}{\sqrt{ 2\pi }}e^{-x^{2}/2}.
+> $$
+> Its distribution is denoted by $\Phi$.
+
+Let $X$ be a random variable having the standard normal density $\varphi$ and let $Y=\mu+\sigma X$, where $\sigma> 0$. Then, by the preceding example, $Y$ has the density $g$ given by
+$$
+g(y)=\frac{1}{\sigma}\varphi\left( \frac{{y-\mu}}{\sigma} \right).
+$$
+$g$ is called the normal density with mean $\mu$ and variance $\sigma^{2}$, and is denoted by $n(\mu, \sigma^{2})$. From the same example, we know that the distribution function of $Y$ is given by 
+$$
+P(Y\leq y)=\Phi\left( \frac{y-\mu}{\sigma} \right).
+$$
+So, If $Y$ is distributed as $n(\mu, \sigma^{2})$ and $a\leq b$, then
+$$
+P(a\leq Y\leq b)=\Phi\left( \frac{b-\mu}{\sigma} \right)-\Phi\left( \frac{a-\mu}{\sigma} \right).
+$$
+If a random variable $Y$ is distributed as $n(\mu, \sigma^{2})$, then the random variable $a+bY$, $b\ne 0$ is distributed as
+$$
+a+b(\mu+\sigma X)=(a+b\mu)+b\sigma X\sim n(a+b\mu, b^{2}\sigma^{2})
+$$
+
+where $X\sim n(0, 1)$. 
 #### Exponential density
 
 > [!Definition]
 > The *exponential density with parameter $\lambda$* is the density $f$ defined by
 > $$
 > f(x)=\begin{cases}
-> \lambda e^{-\lambda y} & y> 0 \\
-> 0 & y\leq 0.
+> \lambda e^{-\lambda x} & x\geq 0 \\
+> 0 & x< 0.
 > \end{cases}
 > $$
 
+The corresponding distribution function is
+$$
+F(x)=\begin{cases}
+1-e^{ -\lambda x } & x\geq 0 \\
+0 & x< 0. 
+\end{cases}
+$$
+An important property of exponentially distributed random variables is that if $X$ is such a variable, then
+$$
+P(X> a)P(X> b)=P(X> a+b),\quad a\geq 0\text{ and }b\geq 0,
+$$
+or, equivalently,   
+$$
+P(X\geq a+b\ | \  X> a)=P(X> b),\quad a\geq 0\text{ and }b\geq 0.
+$$
+This result is similar to the one obtained [[PROB_L4#Geometric distribution|here]] for geometrically distributed random variables.
+
+The above property actually characterizes the family of exponential distributions:
+
+> [!Theorem]
+> Let $X$ be random variable such that $P(X> a)P(X> b)=P(X> a+b)$ holds. Then either $P(X\geq 0)=0$ or $X$ is exponentially distributed.
+
+[[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=138|proof]]
 #### Cauchy density
 
 > [!Definition]
