@@ -52,7 +52,7 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 
 > **Proof** $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
 
-### Recongnizing direct products
+### Recognizing direct products
 
 > [!Theorem]
 > Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 

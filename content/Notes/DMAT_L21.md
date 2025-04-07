@@ -1,0 +1,35 @@
+---
+tags: 
+date: "2025-04-07"
+time: "11:56"
+---
+
+> [!Definition]
+> A *matching* $M$ is a subset of edges of a graph $G=(V, E)$ such that there is no vertex $v$ that is adjacent to two different edges in $M$.
+> Given a matching $M$ in $G$ a vertex $v$ is *free/open/unmatched* if no edge in $M$ is incident to $v$. Otherwise it is called *closed/matched/covered*.
+> A matching $M$ in $G$ such that every vertex is matched is called a *perfect matching*.
+
+For a perfect matching to exist, the graph must have an even number of vertices. 
+A maximum matching is a matching with largest possible cardinality.
+$M$ is a maximal matching if it is no longer a matching after adding any additional edge.
+
+## Perfect matching in bipartite graphs
+
+Let $A$ and $B$ be two parts of a bipartite graph. A matching for this graph is a subset  of $A\times B$. 
+
+Hall's condition is a necessary condition for the existence of a PM. A bipartite graph graph satisfies the Hall condition if for every $U\subset A$, $|N(U)|\geq |U|$, where $N(U)$ is the neighborhood of $U$.
+
+This also happens to be a sufficient condition.
+
+> [!Theorem] Hall's marriage theorem
+> There exists a perfect matching saturating $L$ in a bipartite graph $\{ L\cup R, E \}$ iff for every subset $U\subseteq L$, $|N(U)|\leq |U|$.
+
+Proof of $\impliedby$
+By induction on $|L|$. Base case: $L$ has only one vertex. Induction step: let $a\in L$. $a$ must have some neighbor $b$ in $R$. 
+
+
+---
+
+number of PM in a bipartite graph $G$= permanent of its adjacency matrix.
+
+If $G$ is a bipartite graph with $|L|=|R|=n$, then the adjacency matrix here is $n\times n$. 

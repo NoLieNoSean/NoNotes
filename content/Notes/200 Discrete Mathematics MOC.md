@@ -69,6 +69,7 @@ tags:
 	- Minimum spanning trees, matroids
 - [[DMAT_L20]]
 	- Connectivity, ear decomposition
+- [[DMAT_L21]]
 
 ---
 # Tutorials
