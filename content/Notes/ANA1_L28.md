@@ -115,8 +115,6 @@ Rudin, 6.13a
 > **Proof**
 > We know that $f+g$ and $f-g$ are integrable on $[a, b]$, from [[ANA1_L27#a|6.12a]]. We can [[ANA1_L27#Compositions of integrable functions with continuous functions|compose]] these with $x^{2}$ to obtain integrable functions $(f+g)^{2}$ and $(f-g)^{2}$. It follows that $(f+g)^{2}+(f-g)^{2}=4fg$ is integrable. ❏
 
-### Integration by parts
-
 Rudin, 6.22
 
 > [!Theorem]

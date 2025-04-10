@@ -16,7 +16,7 @@ If the support of $X$ is finite, we are good. In the general discrete case, the 
 It should be evident that $X$ has finite expectation iff $|X|$ has finite expectation.
 ### Properties of expectation
 
-> [!Theorem] Property 1
+> [!Theorem] Property 1 (LOTUS)
 > Let $\mathbf{X}$ be a discrete $r$-dimensional random vector having density $f$ and let $\varphi$ be a real valued function on $\mathbb{R}^{r}$. Then, the random variable $Z=\varphi(\mathbf{X})$ has finite expectation iff
 > $$
 > \sum_{\mathbf{x}}|\varphi(\mathbf{x})|f(\mathbf{x})< \infty.

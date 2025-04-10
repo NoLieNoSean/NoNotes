@@ -32,4 +32,19 @@ By induction on $|L|$. Base case: $L$ has only one vertex. Induction step: let $
 
 number of PM in a bipartite graph $G$= permanent of its adjacency matrix.
 
-If $G$ is a bipartite graph with $|L|=|R|=n$, then the adjacency matrix here is $n\times n$. 
+If $G$ is a bipartite graph with $|L|=|R|=n$, then the adjacency matrix here is $n\times n$. (called Edmund's matrix)
+
+A simpler claim: a PM in bipartite $G$ exists $\iff$ the determinant of $G$'s edmund matrix is nonzero.
+
+The tutte matrix has the same condition for general graphs.
+
+There is a natural correspondence between perfect matchings and permutations. 
+
+The term in the determinant corresponding to a permutation $\sigma$ gives a non-zero monomial iff all the edges $(i, \sigma(i))$ are in $E$.
+
+
+
+
+---
+
+tut - maximum number of edges possible in a graph which does not have a triangle in it??

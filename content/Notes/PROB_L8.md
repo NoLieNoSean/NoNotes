@@ -102,6 +102,26 @@ The following theorem provides a general solution for some functions of $X$.
 
 > [!Theorem]
 > Let $X$ be a random variable that has a density. Then $X$ has a symmetric density iff $X$ is a symmetric random vairable.
+
+We prove this for continuous random variables; the proof for discrete random variables is similar.
+
+> Proof of $\implies$
+> Let $X$ have a symmetric density $f$. Then, 
+> $$
+> \begin{align}
+> P(-X\leq x) & =P(X\geq -x) \\
+>  & =\int_{-x}^{\infty} f(t) \, dt \\
+>   & =\int_{-\infty}^{x} f(-t) \, dt \\
+>   & =\int_{-\infty}^{x} f(t) \, dt \\
+>   & =P(X\leq x).
+> \end{align}
+> $$
+> Thus, $F_{{-X}}=F_{X}$. 
+> 
+> Proof of $\impliedby$
+> Let $X$ be a symmetric random variable, that is, $X$ and $-X$ have the same distribution function. Now, if $g$ is a density of $X$, it follows that $g$ is also a density of $-X$. From the previous theorem, we have $g(x)=g(-x)$.
+
+If a continuous distribution function $F$ has a symmetric density $f$, then $f(0)=1/2$. The values of negative $x$s can be calculated using the values of positive $x$s : $F(-x)=1-F(x)$. 
 #### Uniform density
 
 > [!Definition]
@@ -112,7 +132,6 @@ The following theorem provides a general solution for some functions of $X$.
 > 0  & \text{otherwise}.
 > \end{dcases}
 > $$
-
 #### Normal density
 
 > [!Definition]
@@ -121,6 +140,23 @@ The following theorem provides a general solution for some functions of $X$.
 > \varphi(x)=\frac{1}{\sqrt{ 2\pi }}e^{-x^{2}/2}.
 > $$
 > Its distribution is denoted by $\Phi$.
+
+If $g$ is any non-negative function such that
+$$
+0< \int_{-\infty}^{\infty} g(t) \, dt < \infty,
+$$
+Then $g$ can be normalized by dividing by the value of the above integral to yield a density function. For example, if $g(x)=e^{-x^{2}/2}$, 
+
+$$
+\begin{align}
+\int_{-\infty}^{\infty} e^{-x^{2}/2} \, dx  & =\sqrt{ \int_{-\infty}^{\infty} e^{-x^{2}/2}\,dx\int_{-\infty}^{\infty} e^{-y^{2}/2} \,dy} \\
+ & =\sqrt{\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^{2}+y^{2})/2} \, dx  \, dy   } \\
+ & =\sqrt{ \int_{0}^{\infty} \int_{-\pi}^{\pi} e^{-r^{2}/2} \, rdr  \, d\theta  } \\
+ & =\sqrt{ 2\pi \int_{0}^{\infty} r e^{ -r^{2}/2 }  \, dr  } \\
+ & = \sqrt{ 2\pi },
+\end{align}
+$$
+so the function $e^{-x^{2}/2}/\sqrt{ 2\pi }$ is a density function. (Nobody seems to know a way to evaluate the above integral besides this whacky trick). 
 
 Let $X$ be a random variable having the standard normal density $\varphi$ and let $Y=\mu+\sigma X$, where $\sigma> 0$. Then, by the preceding example, $Y$ has the density $g$ given by
 $$
@@ -138,8 +174,7 @@ If a random variable $Y$ is distributed as $n(\mu, \sigma^{2})$, then the random
 $$
 a+b(\mu+\sigma X)=(a+b\mu)+b\sigma X\sim n(a+b\mu, b^{2}\sigma^{2})
 $$
-
-where $X\sim n(0, 1)$. 
+where $X\sim n(0, 1)$.  
 #### Exponential density
 
 > [!Definition]
@@ -180,5 +215,67 @@ The above property actually characterizes the family of exponential distribution
 > The *Cauchy density* is the density $f$ given by
 > $$
 > f(x)=\frac{1}{\pi(1+x^{2})},\quad x\in \mathbb{R}.
+> $$
+
+---
+
+## Expectation of continuous random variables
+
+> [!Definition]
+> Let $X$ be a continuous random variable with density $f$. $X$ is said to have *finite expectation* if
+> $$
+> \int_{-\infty}^{\infty} |t|f(t) \, dt< \infty, 
+> $$
+> in which case $E(X)$ is defined to be
+> $$
+> E(X)=\int_{-\infty}^{\infty} tf(t) \, dt.
+> $$
+
+> [!Theorem] Proposition
+> Let $X$ be a positive continuous random variable with distribution $F$ and density $f$. Then $X$ has finite expectation iff $\int_{0}^{\infty} P(X\geq x) \, dx< \infty$, in which case, 
+> $$
+> \begin{align}
+> E(X) & =\int_{0}^{\infty} P(X\geq x) \, dx \\
+>  & =\int_{0}^{\infty} (1-F(x)) \, dx 
+> \end{align}
+> $$
+
+> **Proof**
+> Our proof is not going to be analytically rigorous.
+> $$
+> \begin{align}
+> \int_{0}^{\infty} (1-F(x)) \, dx  & =\int_{0}^{\infty} \left( \int_{x}^{\infty} f(t) \, dt \right)  \, dx 
+> \end{align}
+> $$
+> You can think of the integral on the right as integrating the function $f(t, x)=f(t)$ on the region $\{ (x, t):0\leq x\leq \infty, x\leq t\leq \infty \}$. This region can also be expressed as $\{ (x, t): 0\leq t\leq \infty, 0\leq x\leq t \}$. Thus, the integral becomes
+> $$
+> \begin{align}
+> \int_{0}^{\infty} \left( \int_{0}^{t} f(t) \, dx \right)  \, dt
+> \end{align}=\int_{0}^{\infty} tf(t) \, dt =E(X).
+> $$
+
+> [!Example]
+> Let $X\sim n(0,  1)$. Clearly, 
+> $$
+> \int_{-\infty}^{\infty} |t|e^{-t^{2}/2} \, dt=2< \infty.
+> $$
+> Thus,
+> $$
+> E(X)=\frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty}te^{ -t^{2}/2 }  \, dt=0 ,
+> $$
+> since the integrand is an odd function.
+
+Since integration is a linear operator, it follows that $E(X+Y)=E(X)+E(Y)$, as with discrete random variables. We can now define variance to be $E[(X-\mu)^{2}]$, which simplifies to $E(X^{2})-\mu^{2}$.
+
+> [!Example]
+> Let $X\sim n(0, 1)$. $\text{Var}(X)=E(X^{2})-\mu=E(X^{2})$. Note that
+> $$
+> \frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty} |t^{2}|e^{-t^{2}/2} \, dt =1< \infty.
+> $$
+> Using a generalization of the first property [[PROB_L7#Properties of expectation|here]] with $\varphi(x)=x^{2}$, we have
+> $$
+> \begin{align}
+> E(X^{2})=\frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty} t^{2}e^{ -t^{2}/2 } \, dt=1. 
+> \end{align}
 > $$
 

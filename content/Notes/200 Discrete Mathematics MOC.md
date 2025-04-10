@@ -70,6 +70,7 @@ tags:
 - [[DMAT_L20]]
 	- Connectivity, ear decomposition
 - [[DMAT_L21]]
+- [[DMAT_L22]]
 
 ---
 # Tutorials

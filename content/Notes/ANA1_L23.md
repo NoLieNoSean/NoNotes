@@ -42,8 +42,9 @@ and as $t\to 0$, $u(t)\to 0$.
 
 Rudin, 5.2
 
->[!Theorem]
+>[!Theorem] 
 >$f'(x)$ exists $\implies$ $f$ is continuous at $x$.
+>
 
 >**Proof**
 >$$

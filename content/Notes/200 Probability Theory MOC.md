@@ -25,6 +25,8 @@ These notes have been reorganized because I lost count of the lectures at some p
 - [[PROB_L8]]
 	- Continuous random variables
 
+
+[[stash]]
 # Quizzes
 
 [[PROB_Q1]]
