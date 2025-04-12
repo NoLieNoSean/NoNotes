@@ -47,7 +47,7 @@ Proper lecture notes start here.
 - [[ANA1_L10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
 - [[ANA1_L11]] ✅
-	- Continuity (4.5, 4.6, 4.7, 4.12). The sequence criterion (4.2). Algebra of limits of functions (4.4). 
+	- Continuity (4.5, 4.6, 4.7, 4.12). The sequence criterion (4.2). Algebra of limits of functions (4.4).
 - [[ANA1_L12]] skip for now
 	- ~~NEED to FINISH THIS STUFF!~~ forget it. not gonna happen.
 - [[ANA1_L13]] ✅

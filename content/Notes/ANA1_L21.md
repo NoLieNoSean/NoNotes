@@ -6,7 +6,7 @@ tags:
 date: 2024-10-8
 time: 15:45
 ---
-%% ![[1728577113525.jpg]] %%
+![[1728577113525.jpg]]
 ## Topological spaces
 
 >[!Definition]

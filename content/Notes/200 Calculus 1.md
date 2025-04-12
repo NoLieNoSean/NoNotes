@@ -51,7 +51,7 @@ Ref: Ghorpade & Limaye
 
 ## Multivariable calculus
 
-Ref: Ghorpade & Limaye
+Ref: MA, Apostol
 
 - [[CAL1_L16]]
 	- Partial, directional and total derivatives

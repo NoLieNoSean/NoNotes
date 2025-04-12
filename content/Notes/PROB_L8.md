@@ -93,7 +93,6 @@ The following theorem provides a general solution for some functions of $X$.
 > $$
 
 [[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=131|proof]]
-
 #### Symmetric densities
 
 > [!Definition]
@@ -132,6 +131,44 @@ If a continuous distribution function $F$ has a symmetric density $f$, then $f(0
 > 0  & \text{otherwise}.
 > \end{dcases}
 > $$
+
+Note that proving the existence of a uniformly distributed random variable requires measure theory.
+
+> [!Theorem] Proposition
+> Let $X$ be a continuous random variable with differentiable strictly increasing distribution $F$ and density $f=F'$. Then $F(X)$ and $1-F(X)$ have the uniform distribution $[0, 1]$. 
+
+> **Proof**
+> $f_{F(X)}(y)=0$ for $y$ not in $(0, 1)$. If $y\in(0, 1)$,
+> $$
+> \begin{align}
+> f_{F(X)}(y) & = f(F^{-1}(y))\left| \frac{d}{dy}F^{-1}(y) \right| \\
+>  & = F'(F^{-1}(y))\left| \frac{d}{dy}F^{-1}(y) \right|  \\
+>  & = \frac{d}{dy}F(F^{-1}(y)) \\
+>  & =1.
+> \end{align}
+> $$
+> The fact that $F^{-1}$ is an increasing function has been used.
+
+This can also be proved without using the density (and thus without assuming $F$ is differentiable): for $y\in(0, 1)$,
+$$
+\begin{align}
+F_{F(X)}(y) & =P(F(X)\leq y)\\
+ & =P(X\leq F^{-1}(y)) \\
+ & =F(F^{-1}(y)) \\
+ & =y.
+\end{align}
+$$
+It follows from monotonicity that if $y\leq 0$, $F_{F(X)}(y)=0$, and if $y\geq 1$, $F_{F(X)}(y)=1$. 
+
+Next, let $F$ again be a continuous strictly increasing distribution function, and let $Y\sim\text{Unif}(0, 1)$. Then, $F^{-1}(Y)$ is a random variable with distribution function $F$: for all $x\in \mathbb{R}$,
+$$
+\begin{align}
+F_{F^{-1}(Y)}(x) & =P(F^{-1}(Y)\leq x) \\
+ & =P(Y\leq F(x)) \\
+ & =F(x).
+\end{align}
+$$
+Thus, given any continuous strictly increasing distribution function, there exists a random variable with that distribution. 
 #### Normal density
 
 > [!Definition]
@@ -160,7 +197,7 @@ so the function $e^{-x^{2}/2}/\sqrt{ 2\pi }$ is a density function. (Nobody seem
 
 Let $X$ be a random variable having the standard normal density $\varphi$ and let $Y=\mu+\sigma X$, where $\sigma> 0$. Then, by the preceding example, $Y$ has the density $g$ given by
 $$
-g(y)=\frac{1}{\sigma}\varphi\left( \frac{{y-\mu}}{\sigma} \right).
+g(y)=\frac{1}{\sigma}\varphi\left( \frac{{y-\mu}}{\sigma} \right)=\frac{1}{\sigma \sqrt{ 2\pi}}e^{ ^{-(y-\mu)^{2}/2\sigma^{2}}}.
 $$
 $g$ is called the normal density with mean $\mu$ and variance $\sigma^{2}$, and is denoted by $n(\mu, \sigma^{2})$. From the same example, we know that the distribution function of $Y$ is given by 
 $$
@@ -206,7 +243,7 @@ This result is similar to the one obtained [[PROB_L4#Geometric distribution|here
 The above property actually characterizes the family of exponential distributions:
 
 > [!Theorem]
-> Let $X$ be random variable such that $P(X> a)P(X> b)=P(X> a+b)$ holds. Then either $P(X\geq 0)=0$ or $X$ is exponentially distributed.
+> Let $X$ be random variable such that $P(X> a)P(X> b)=P(X> a+b)$ holds for all $a, b\in \mathbb{R}$. Then either $P(X\geq 0)=0$ or $X$ is exponentially distributed.
 
 [[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=138|proof]]
 #### Cauchy density
@@ -216,6 +253,116 @@ The above property actually characterizes the family of exponential distribution
 > $$
 > f(x)=\frac{1}{\pi(1+x^{2})},\quad x\in \mathbb{R}.
 > $$
+ 
+> [!Theorem] Proposition
+> If $X\sim\text{Cauchy}$, then $\frac{1}{X}\sim\text{Cauchy}$.
+
+It can be easily shown that if $X\sim\text{Cauchy}$, $X$ does not have finite expectation. 
+#### Gamma density
+
+Consider functions $g$ of the form
+$$
+g(x)=\begin{cases}
+x^{\alpha-1}e^{-\lambda x} & x> 0 \\
+0 & x\leq 0.
+\end{cases}
+$$
+Here, we require $\alpha> 0$ and $\lambda> 0$ in order that $g$ be integrable (how do I show that $g$ is integrable under these conditions?). In normalizing $g$ to make it a density we must evaluate 
+$$
+c=\int_{0}^{\infty} x^{\alpha-1}e^{ -\lambda x } \, dx. 
+$$
+On making the change of variable $y=\lambda x$, we get
+$$
+c=\frac{1}{\lambda^{\alpha}}\int_{0}^{\infty} y^{\alpha-1}e^{ -y } \, dy.
+$$
+There is no simple formula for this integral. Instead, it is used to define what is called the *Gamma function*:
+
+> [!Definition]
+> $$
+> \Gamma(\alpha)\equiv\int_{0}^{\infty} x^{\alpha-1}e^{ -x } \, dx , \quad\alpha> 0.
+> $$
+
+So, $c=\Gamma(\alpha)/\lambda^{\alpha}$. Note the formula
+$$
+\int_{0}^{\infty} x^{\alpha-1}e^{ -\lambda x } \, dx= \frac{\Gamma(\alpha)}{\lambda^{\alpha}}.
+$$
+The normalized function $g/c$ is called the *gamma density* with parameters $\alpha$ and $\lambda$, denoted by $\Gamma(\alpha, \lambda)$. 
+
+> [!Definition]
+> The *gamma density* is defined as follows.
+> $$
+> \Gamma(x;\alpha, \lambda)\equiv \begin{dcases}
+> \frac{\lambda^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{ -\lambda x } &  x> 0 \\
+> 0 & x\leq 0.
+> \end{dcases}
+> $$
+
+The exponential densities are special cases of gamma densities. Specifically, the exponential density with parameter $\lambda$ is the same as the gamma density $\Gamma(1, \lambda)$. 
+
+> [!Note] Properties of the gamma function
+> $$
+> \begin{align}
+>  & 1.\ \ \Gamma(1)=1 \\
+>  & 2.\ \ \Gamma(1/2)=\sqrt{ \pi } \\
+>  & 3.\ \ \Gamma(\alpha+1)=\alpha\Gamma(\alpha) \\
+>  & 4.\ \ \Gamma(n)=(n-1)!, \quad n\in \mathbb{N} \\
+>  & 5.\ \ \Gamma\left( \frac{n}{2} \right)=\frac{\sqrt{ \pi }(n-1)!}{2^{n-1} \left( \frac{n-1}{2} \right)!}, \quad n\in \mathbb{N}, n\text{ is odd}
+> \end{align}
+> $$
+> 
+> ---
+> 
+> Let $X\sim n(0, 1)$. If $d$ is the density of $X^{2}$, using the formula we derived previously, we get $d$ to be
+> $$
+> d(x)= \frac{1}{\sqrt{ 2\pi x }}e^{-x/2},\quad x> 0
+> $$
+> Note that 
+> $$
+> d(x)=\frac{1}{\sqrt{ 2\pi }} g(x),
+> $$
+> with $\alpha=1/2$ and $\lambda=1/2$. Since $d$ is a density, it follows that the normalization constant for $g$ is equal to $\sqrt{ 2\pi }$. Thus, 
+> $$
+> \begin{align}
+>    & \frac{1}{\sqrt{ 2\pi }} =\frac{\lambda^{\alpha}}{\Gamma(\alpha)}= \frac{1}{\Gamma(1/2)\sqrt{ 2 }} \\
+> \implies & \Gamma(1/2) =\sqrt{ \pi }.
+> \end{align}
+> $$
+> ---
+> The third property can be derived by integrating by parts:
+> $$
+> \begin{align}
+> \Gamma(\alpha+1) & =\int_{0}^{\infty} x^{\alpha}e^{ -x } \, dx  \\
+>  & =-x^{\alpha}e^{ -x } {\Huge\ |  }^{\infty}_{0}+\int_{0}^{\infty} \alpha x^{\alpha-1}e^{ -x } \, dx  \\
+>  & =\alpha\Gamma(\alpha).
+> \end{align}
+> $$
+
+There is no simple formula for the distribution function corresponding to $\Gamma(\alpha, \lambda)$ except when $\alpha=m$ is a positive integer $\geq 2$, in which case
+$$
+\begin{align}
+\int_{0}^{x} \frac{\lambda^{m}}{(m-1)!}y^{m-1}e^{ -\lambda y } \, dy  & = \left[ -\frac{(\lambda y)^{m-1}e^{ -\lambda y }}{(m-1)!} \right] _{0}^{x}+\int_{0}^{x} \frac{\lambda^{m-1}y^{m-2}e^{ -\lambda y }}{(m-2)!}\, dy \\
+ & =\int_{0}^{x} \frac{\lambda^{m-1}y^{m-2}e^{ -\lambda y }}{(m-2)!}\, dy -\frac{(\lambda x)^{m-1}e^{ -\lambda x }}{(m-1)!}.
+\end{align}
+$$
+On repeating $m-1$ times, we get
+$$
+\int_{0}^{x} \frac{\lambda^{m}}{(m-1)!}y^{m-1}e^{ -\lambda y } \, dy=1-e^{ -\lambda x }\sum_{i=0}^{m-1} \frac{(\lambda x)^{i}}{i!}.
+$$
+This formula provides a connection between a random variable $X\sim\Gamma(m, \lambda)$ and a random variable $Y\sim\text{Poisn}(\lambda x)$ having a [[PROB_L4#Poisson distribution|Poisson distribution]] with parameter $\lambda x$:
+$$
+P(X\leq x)=P(Y\geq m).
+$$
+ 
+> [!Note] Expectation of the gamma distribution
+> Let $X\sim\Gamma(\alpha, \lambda)$. Then, 
+> $$
+> \begin{align}
+> \frac{\lambda^{\alpha}}{\Gamma(\alpha)}\int_{0}^{\infty} x^{\alpha}e^{ -\lambda x } \, dx  & =\frac{\lambda^{\alpha}}{\Gamma(\alpha)} \frac{\Gamma(\alpha+1)}{\lambda^{\alpha+1}} \\
+>   &  =\frac{\alpha}{\lambda}< \infty.
+> \end{align}
+> $$
+> Thus, $X$ has finite expectation, and $E(X)=\alpha/\lambda$. 
+> 
 
 ---
 
@@ -254,6 +401,21 @@ The above property actually characterizes the family of exponential distribution
 > \end{align}=\int_{0}^{\infty} tf(t) \, dt =E(X).
 > $$
 
+More generally, if $X$ is not positive, 
+$$
+EX=\int_{0}^{\infty}(1-F(x))  \, dx -\int_{-\infty}^{0} F(x) \, dx 
+$$
+
+> [!Theorem]
+> Let $X, Y$ be continuous random variables with joint distribution $f$. Let $g:\mathbb{R}\to[0, \infty)$ such that $g(X, Y)$ is a continuous random variable. Then, 
+> $$
+> E(g(X, Y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y)f(x, y) \, dx  \, dy.
+> $$
+> 
+
+Even works when $g:\mathbb{R}\to \mathbb{R}$.
+
+
 > [!Example]
 > Let $X\sim n(0,  1)$. Clearly, 
 > $$
@@ -278,4 +440,35 @@ Since integration is a linear operator, it follows that $E(X+Y)=E(X)+E(Y)$, as w
 > E(X^{2})=\frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty} t^{2}e^{ -t^{2}/2 } \, dt=1. 
 > \end{align}
 > $$
+
+> [!Theorem] LOTUS
+> Let $X$ be a continuous random variable with density $f$. Let $g:\mathbb{R}\to [0, \infty)$ be such that $g(X)$ is a continuous random variable. Then,
+> $$
+> E(g(X))=\int_{-\infty}^{\infty} g(x)f(x) \, dx.
+> $$
+
+---
+
+## Moments of continuous random variables
+
+Defined in the same way as moments of discrete random variables are defined.
+
+> [!Example]
+> If $X\sim\Gamma(\alpha, \lambda)$, 
+> $$
+> \begin{align}
+> EX^{n} & =\frac{\lambda^{\alpha}}{\Gamma(\alpha)}\int_{0}^{\infty} x^{n+\alpha-1}e^{ -\lambda x } \, dx  \\
+>  & =\frac{\lambda^{\alpha}\Gamma(n+\alpha)}{\Gamma(\alpha)\lambda^{n+\alpha}} \\
+>  & = \frac{(n+\alpha-1)!}{\lambda^{n}(\alpha-1)!}
+> \end{align}
+> $$
+> If $X\sim\text{Exp}(\lambda)$, $X\sim\Gamma(1, \lambda)$, so
+> $$
+> EX^{n}= \frac{n!}{\lambda^{n}}.
+> $$
+> If $X\sim n(0, \sigma^{2})$, $X^{2}\sim\Gamma(1/2, 1/2\sigma^{2})$. Thus, we can compute all even moments of $X$, and hence all odd moments of $X$ also exist.
+
+---
+
+## Independent continuous random variables
 

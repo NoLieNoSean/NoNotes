@@ -7,5 +7,6 @@ Pull requests are welcome!
 !!@!@!@!!!@!@!@@!@!@!@@
 
 **Start here:**
-[[000 Dashboard]]
+[[000 Courses|Courses]]
+
 
