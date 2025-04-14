@@ -38,7 +38,7 @@ tags:
 - [[DMAT_L12]] ✅
 	- PIE
 - [[DMAT_L13]] 
-	- More PIE, Edge Reconstruction Conjecture, The Möbius inversion, Dilworth's theorem
+	- Edge Reconstruction Conjecture, Möbius inversion, Dilworth's theorem
 - [[DMAT_L14]] ✅
 	- Burnside's Lemma
 - [[DMAT_L15]]
@@ -70,14 +70,12 @@ tags:
 - [[DMAT_L20]] ✅
 	- Connectivity, blocks, ear decomposition
 - [[DMAT_L21]]
-	- Matching in bipartite graphs, Hall's matching theorem, counting perfect matchings
+	- Matchings in bipartite graphs, Hall's marriage theorem, counting perfect matchings
 - [[DMAT_L22]]
 	- Proof of Hall's using M-alternating paths, some matroid stuff
 - [[DMAT_L23]]
 	- Probabilistic methods in graph theory, Konig's theorem, matching in non-bipartite graphs, finite fields
 
-
-block decomposition?
 
 ---
 # Tutorials
@@ -95,3 +93,8 @@ block decomposition?
 # Quizzes
 
 [[DMAT_Q1]]
+
+
+---
+
+tut - maximum number of edges possible in a graph which does not have a triangle in it??
