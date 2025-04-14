@@ -40,7 +40,7 @@ Therefore we only need to consider the case when all the $i_k$ are pairwise dist
 >\text{sign}(\sigma) = {(-1)}^{l(\sigma)}
 >$$ 
 
-From our study above, we see that 
+Observe that 
 $$
 \det(e_{\sigma_1},e_{\sigma_2},...,e_{\sigma_{n}})= (-1)^{l(\sigma)}.
 $$

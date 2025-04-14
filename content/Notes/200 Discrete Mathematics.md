@@ -22,7 +22,7 @@ tags:
 - [[DMAT_L4]] ✅
 	- Disjoint coverings, more properties of infinite cardinals
 - [[DMAT_L5]] ✅
-	- Graph colourings: another application of Zorn's lemma
+	- Graph colorings: another application of Zorn's lemma
 - [[DMAT_L6]] ✅
 	- Picking objects, counting functions
 - [[DMAT_L7]] ✅
@@ -35,7 +35,7 @@ tags:
 	- Pigeon hole principle
 - [[DMAT_L11]]
 	- Ramsey theory
-- [[DMAT_L12]]
+- [[DMAT_L12]] ✅
 	- PIE
 - [[DMAT_L13]] 
 	- More PIE, Edge Reconstruction Conjecture, The Möbius inversion, Dilworth's theorem
@@ -63,18 +63,21 @@ tags:
 	- Induction trap, induction on number of vertices, bipartite graphs
 - [[DMAT_L17]] ✅
 	- Growing trees
-- [[DMAT_L18]]
-	- Matrix tree theorem
-- [[DMAT_L19]]
-	- Minimum spanning trees, matroids
-- [[DMAT_L20]]
-	- Connectivity, ear decomposition
+- [[DMAT_L18]] ✅
+	- Spanning trees, Matrix tree theorem
+- [[DMAT_L19]] ✅ 
+	- Minimum spanning trees, ~~matroids~~
+- [[DMAT_L20]] ✅
+	- Connectivity, blocks, ear decomposition
 - [[DMAT_L21]]
 	- Matching in bipartite graphs, Hall's matching theorem, counting perfect matchings
 - [[DMAT_L22]]
-	- Proof of Hall's using M-alternating paths, some matroid stuff, 
+	- Proof of Hall's using M-alternating paths, some matroid stuff
 - [[DMAT_L23]]
 	- Probabilistic methods in graph theory, Konig's theorem, matching in non-bipartite graphs, finite fields
+
+
+block decomposition?
 
 ---
 # Tutorials

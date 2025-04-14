@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-04-12"
-time: "12:00"
+tags:
+  - DMAT
+  - Lecture
+date: 2025-04-12
+time: 12:00
 ---
 
 ## Probabilistic methods

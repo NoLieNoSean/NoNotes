@@ -170,15 +170,43 @@ $$
 
 ## Chains and antichains in posets
 
-> [!Theorem] 
-> If $r$ is the maximum chain length in a poset $P$, then $P$ can be covered by $r$ chains (and no fewer).
+Note that if $C$ is a chain and $A$ is an antichain in a poset, then $|C\cap A|\leq 1$. From this, we immediately see:
 
-Since A chain and an antichain can intersect at most 1 point, the no fewer part should be clear.
+> [!Theorem] Lemma
+> 1. If a poset $P$ has a chain of size $r$, then it cannot be partitioned into fewer than $r$ antichains.
+> 2. If a poset $P$ has an antichain of size $r$, then it cannot be partitioned into fewer than $r$ chains.
+
+So, if $r$ is the size of the longest chain in $P$, we know that $P$ cannot be partitioned into fewer than $r$ antichains. Can $P$ be partitioned into $r$ antichains?
+
+> [!Theorem] 
+> If $r$ is the maximum chain length in a poset $P$, then $P$ can be partitioned into $r$ antichains (and no fewer).
+
+> **Proof**
+> Define the height of an element $x\in P$ to be the greatest number of elements in a chain whose greatest member is $x$. Let $A_{i}$ be the set of elements of height $i$. Then, by hypothesis, $A_{i}=\emptyset$ for $i> r$, so $P=A_{1}\sqcup\dots\sqcup A_{r}$; and each $A_{i}$ is an antichain, since if $x\in A$ and $x< y$, then there is a chain $x_{0}<\dots< x_{i}=x< y$, so $y$ has a height greater than $i$. The no fewer part follows from the previous lemma.
+
+The proof of the dual result is more involved.
 
 > [!Theorem] Dilworth's theoem
-> If $r$ is the maximum antichain length in $P$, then $P$ can be covered by $r$ antichains (and no fewer).
+> If $r$ is the maximum antichain length in $P$, then $P$ can be partitioned into $r$ chains (and no fewer).
 
 **Proof**
-by induction.   
+The proof is by induction on $|P|$. Clearly, the result holds for singleton posets. So suppose that it is true for all posets with fewer points than $P$. Let $x$ be a minimal element of $P$ (recall that a minimal element is one which is not greater than any other element in the poset).
+
+*Case 1*: $x$ is incomparable with everything else in $P$. Then the largest antichain in $P\setminus \{ x \}$ has size $r-1$, since adjoining $x$ gives a larger antichain. By induction, $P\setminus \{ x \}$ can be partitioned into $r-1$ chains; we add the singleton chain $\{ x \}$ to produce the required partition.
+
+*Case 2*: Some other points are comparable with $x$. 
 
 
+
+Note that the length of the longest antichain in $P\setminus \{ x \}$ will remain $r$, since if required $x$ can be replaced with any other element it is comparable to. By induction, we can partition $P\setminus \{ x \}$ into $r$ chains $C_{1}, \dots, C_{r}$. For each $i$, let $T_{i}$ be the set of elements of $C_{i}$ which are comparable to $x$., and define $B_{i}\equiv C_{i}\setminus T_{i}$. Note that every element in $T_{i}$ is greater than $x$ for all $i$, since $x$ is a minimal element. Also, $T_{i}$ must be above $B_{i}$ for all $i$, since otherwise the elements of $B_{i}$ would be comparable to $x$. Color the elements of $B_{i}$ with color $c_{i}$. 
+
+Next, define $B\equiv B_{1}\sqcup\dots\sqcup B_{r}$. $B$ is the set of all elements incomparable with $x$. By the argument in Case 1, $B$ can be written as the union of $r-1$ chains $C_{1}', \dots, C_{r-1}'$. 
+
+
+---
+
+
+Let $\phi$ be a map from $V$ to $V$ which maps $f$ to $g$. 
+
+
+It can be represented by a $2^{n}\times 2^{n}$ matrix. Let Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a *linear extension* of the poset $\mathcal{P}(X)$.  

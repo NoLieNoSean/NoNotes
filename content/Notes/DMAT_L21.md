@@ -1,8 +1,18 @@
 ---
-tags: 
-date: "2025-04-07"
-time: "11:56"
+tags:
+  - Lecture
+  - DMAT
+date: 2025-04-07
+time: 11:56
 ---
+## Matching in a graph
+
+Hall's marriage theorem
+
+For a bipartite graph $G$, we can construct a matrix $M$ such that $G$ has a perfect matching iff $M$ has non-zero determinant.
+
+There is a formula for counting perfect matchings.
+
 
 > [!Definition]
 > A *matching* $M$ is a subset of edges of a graph $G=(V, E)$ such that there is no vertex $v$ that is adjacent to two different edges in $M$.

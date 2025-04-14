@@ -2,6 +2,7 @@
 tags:
   - DMAT
   - Lecture
+  - Processed
 date: 2025-02-24
 time: 11:59
 ---
@@ -12,7 +13,7 @@ $A_{1}, A_{2}, \dots, A_{n}\subset X$.
 Let $I\subseteq[n]$ be an index set.
 $A_{I}\equiv \bigcap_{x\in I}A_{i}$, $A_{\emptyset}\equiv X$.
 
-> [!Theorem]
+> [!Theorem] Principle of inclusion and exclusion
 > $$
 > \left| X\setminus \bigcup_{i=1}^{n} A_{i} \right| =\sum_{I\subseteq[n]}(-1)^{|I|}|A_{I}|.
 > $$
@@ -23,8 +24,7 @@ $A_{I}\equiv \bigcap_{x\in I}A_{i}$, $A_{\emptyset}\equiv X$.
 > - $x\in \bigcup A_{i}$ $\implies$ $x$ contributes 0
 > - $x\not\in \bigcup A_{i}$ $\implies$ $x$ contributes 1.
 > 
-> 
-> Let $J$ be the largest index set such that that $x\in A_{J}$ (observe that such a set is unique). Let $|J|=j$. Then, contribution of $x$ to the RHS is equal to
+> Let $J$ be the largest index set such that that $x\in A_{J}$ (observe that such a set is unique). Let $j=|J|$. Then, contribution of $x$ to the RHS is equal to
 > $$
 > \sum_{I\subseteq J}(-1)^{|I|}=\sum_{i=0}^{j} (-1)^{i}\binom{j}{i}=\begin{cases}
 > (1-1)^{j}=0 & j> 0 ~\left(\iff x\in \bigcup A_{i}\right)\\
@@ -75,14 +75,14 @@ $$
 
 ### Linear algebraic formulation
 
-Let $X=[n]$. Consider all functions $V=\{f:\mathcal{P}(X)\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$.  Then, for $f, g\in V$, the following two statements are equivalent.
+Let $X=[n]$. Consider the collection $V=\{f:\mathcal{P}(X)\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$.  Then, for $f, g\in V$, the following two statements are equivalent.
 $$
 \begin{align}
- & 1.~g(I)=\sum_{J\supseteq I} f(J) &  \forall I\subseteq \mathcal{P}(X), \\
- & 2.~f(I)=\sum_{J\supseteq I} (-1)^{|J\setminus I|}g(J) &  \forall I\subseteq \mathcal{P}(X). 
+ & 1.~g(I)=\sum_{J\supseteq I} f(J) &  \forall I\in \mathcal{P}(X), \\
+ & 2.~f(I)=\sum_{J\supseteq I} (-1)^{|J\setminus I|}g(J) &  \forall I\in \mathcal{P}(X). 
 \end{align}
 $$
-Think of it this way: Let the elements of $X$ be different "properties" of elements of another set $G$. An element of $G$ can have any number of properties $x\in X$. For $I\subset X$, Let $A_{I}$ be the set of all $g\in G$ which have each property $i\in I$ (Note that all the properties of $g\in A_{I}$ may be a super set of $I$). Then, $g(I)= |A_{I}|$, the number of elements in $G$ which have properties $I$, and $f(I)=|A_{I}\setminus \bigcup_{i\in \overline{I}}A_{i}|$, the number of elements in $G$ which have exactly the properties $I$ satisfy the above equalities. 
+Think of it this way: Let the elements of $X$ be different "properties" of elements of another set $S$. An element of $S$ can have any number of properties $x\in X$. For $I\subset X$, Let $A_{I}$ be the set of all $s\in S$ which have each property $i\in I$ (Note that all the properties of $s\in A_{I}$ may be a super set of $I$). Think of $g$ as counting the number of elements in $S$ which have properties $I$ ($g(I)\equiv |A_{I}|$), and $f$ as counting the number of elements in $G$ which have exactly the properties $I$ ($f(I)\equiv|A_{I}\setminus \bigcup_{i\in \overline{I}}A_{i}|$).
 
 > Proof of $1\implies2$:
 > $$
@@ -94,7 +94,7 @@ Think of it this way: Let the elements of $X$ be different "properties" of eleme
 > \end{align}
 > $$
 > 
-> $(*)$ is true since for any finite set, the number of subsets of off cardinality is equal to the number of subsets of even cardinality.
+> $(*)$ is true since for any finite set, the number of subsets of odd cardinality is equal to the number of subsets of even cardinality.
 > 
 > Proof of $2\implies 1$:
 > 
@@ -106,10 +106,3 @@ Think of it this way: Let the elements of $X$ be different "properties" of eleme
 >  & =g(I)
 > \end{align}
 > $$
-
-
-
-Let $\phi$ be a map from $V$ to $V$ which maps $f$ to $g$. 
-
-
-It can be represented by a $2^{n}\times 2^{n}$ matrix. Let Let $X' = \{x_1 \leq x_2\leq \cdots \leq x_n\}$ be a *linear extension* of the poset $\mathcal{P}(X)$.  

@@ -2,6 +2,7 @@
 tags:
   - DMAT
   - Lecture
+  - Processed
 date: 2025-03-24
 time: 11:54
 ---
@@ -31,7 +32,19 @@ time: 11:54
 > Also, the graph $T'+e$ contains a unique cycle $C$. Since $T$ is acyclic, $E_{2}\equiv E(C)\setminus E(T)$ is nonempty. Now, since $e\in E(C)$, and $e$ connects $U$ and $U'$, there must be another edge $e'\in E(C)$ which connects $U$ and $U'$. Note that $e$ is the only edge in $T$ connecting $U$ and $U'$. Thus, $e'\in E_{1}\cap E_{2}$, and $T-e+e'$ and $T'+e-e'$ are both spanning trees of $G$.
 
 ---
-## Matrix tree theorem
+## Spanning trees
+
+> [!Definition]
+> A *spanning tree* of a connected graph $G$ is a subgraph of $G$ which contains all the vertices of $G$, and is, of course, a tree.
+
+> [!Theorem] 
+> Every connected graph $G$ has a spanning tree.
+
+> **Proof**
+> Algorithmic constructive proof. Let $G=(V, E)$. $n$ vertices, $m$ edges. Let $E_{0}=\emptyset$, $V_{0}=\{ v_{0} \}$, where $v_{0}$ is an arbitrary vertex. Having constructed $V_{i-1}$ and $E_{i-1}$ find an edge $e_{i}=\{ x_{i}, y_{i} \}$ such that $x_{i}\in V_{i-1}$ and $y_{i}\in V\setminus V_{i-1}$. Then, $V_{i}=V_{i-1}\cup \{ y_{i} \}$ and $E_{i}=E_{i-1}\cup \{ e_{i} \}$. If no such edge exists, stop. If the algorithm returns $n-1$ edges, then the resulting subgraph is a spanning tree. Otherwise, $G$ is disconnected.
+
+---
+## Counting spanning trees
 
 [[Introduction to Graph Theory (Douglas B. West).pdf#page=104|ref]]
 
@@ -43,6 +56,9 @@ Given a graph $G$, we desire to count the number of spanning trees in $G$.
 
 > [!Theorem] Lemma
 > Let $\tau(G)$ denote the number of spanning trees of a graph $G$. If $e\in E(G)$ is not a loop, then $\tau(G)=\tau(G-e)+\tau(G\cdot e)$.
+
+> [!Theorem] Lemma
+> If $G$ is a connected loopless graph with no cycle of length greater than 2, then $\tau(G)$ is the product of the edge multiplicities.
 
 ### Graphs and matrices
 
@@ -64,37 +80,50 @@ Note that each row sum/column sum of $\mathcal{L}$ is $0$.
 
 $Q[i]$ denotes the matrix obtained on deleting the $i$th row and $i$th column from $Q$.
 
-> [!Theorem] Lemma
-> If $B$ is a square matrix such that its row sums and column sums are zero, then $\det B[i]=\det B[j]$ for all $i, j$. 
+The following lemma should be clear:
 
 > [!Theorem] Lemma
 > For any square matrix $A$, $\det(A+E_{ii})=\det(A)+\det A[i]$.
 
+### Matrix tree theorem
+
 > [!Theorem] Matrix tree theorem
-> Given a loopless graph $G$ with vertex set $v_{1}, \dots, v_{n}$, let $Q$ be its Laplacian matrix. If $Q^{*}$ is a matrix obtained by deleting row $s$ and column $t$ of $Q$, then $\tau(G)=(-1)^{s+t}\det Q^{*}$.
+> Given a loopless graph $G$ with vertex set $v_{1}, \dots, v_{n}$, let $\mathcal{L}$ be its Laplacian matrix. If $\mathcal{L}^{*}$ is a matrix obtained by deleting row $s$ and column $t$ of $\mathcal{L}$, then $\tau(G)=(-1)^{s+t}\det \mathcal{L}^{*}$.
 
-We will prove this for when $s=t$: $\tau(G)=\det Q[i]$ for any $i$. 
-Proof idea: use permutation definition of determinants.
+We will prove this for when $s=t$: $\tau(G)=\det \mathcal{L}[i]$ for any $i$.
 
-**Proof**
-Induction on number of edges of $G$. Let $\tau(G)$ be the number of spanning trees in $G$. If $G$ is not connected, let $v_{i}$ be an isolated vertex of $G$. Since the $i$th row and $i$th column of $Q$ are zero, $Q[i]$ retains the property of having zero row sum and column sum, and hence has determinant $0$. Checks out.
+> **Proof**
+> If $G$ is not connected, let $v_{i}$ be an isolated vertex of $G$. Since the $i$th row and $i$th column of $\mathcal{L}$ are zero, $\mathcal{L}[i]$ retains the property of having zero row sum and column sum, and hence has determinant $0$. $\mathcal{L}[j]$ for $j\ne i$ would have a zero row, and hence have determinant zero. Checks out.
+> 
+> Now, let $G$ be connected. We induct on the number of edges of $G$. If $G$ has one edge, it must have exactly two vertices in order to not have loops and remain connected. The Laplacian matrix for $G$ would be
+> $$
+> \begin{bmatrix}
+> 1 & -1 \\
+> -1 & 1
+> \end{bmatrix}.
+> $$
+> Clearly, $\det\mathcal{L}[1]=\det\mathcal{L}[2]=1$, in agreement with the fact that $G$ has only one spanning tree.
+> 
+> Next, let $G$ have $k$ edges, and assume the theorem holds for all graphs with $k-1$ edges. Let $i\in[n]$, and let $e=\{ v_{i}, v_{j} \}$ be an edge of $G$. Let $\mathcal{L}_{G-e}$ be the Laplacian matrix of $G-e$. Note that $\mathcal{L}[i]=\mathcal{L}_{G-e}[i]+E_{j, j}$. So, 
+> $$
+> \begin{align}
+> \det(\mathcal{L}[i]) & =\det(\mathcal{L}_{G-e}[i]+E_{jj}) \\
+>  & =\det(\mathcal{L}_{G-e}[i])+ \det (\mathcal{L}_{G-e}[i][j]) \\
+>  & =\det(\mathcal{L}_{G-e}[i])+ \det (\mathcal{L}[i][j]).
+> \end{align}
+> $$
+> Depending on which vertex remains after a contraction, either $\mathcal{L}_{G\cdot e}[j]=\mathcal{L}[i][j]$ or $\mathcal{L}_{G\cdot e}[i]=\mathcal{L}[i][j]$. WLOG, assume the former. Note that both $G-e$ and $G\cdot e$ have one fewer edge than $G$.
+> $$
+> \begin{align}
+> \det(\mathcal{L}[i]) & =\det(\mathcal{L}_{G-e}[i])+\det(\mathcal{L}_{G\cdot e}[j]) \\
+>  & = \tau(G-e)+\tau(G\cdot e) \\
+>  & =\tau(G).
+> \end{align}
+> $$
 
-If $G$ is connected, $\tau(G)=\tau(G-e)+\tau(G\cdot e)$. Observe that $\tau(G-e)$ has one fewer edge, and $\tau(G\setminus e)$ has one fewer vertex.
 
-Let $Q_{G-e}$ be the Laplacian matrix of $G-e$. Note that for $e=\{ v_{i}, v_{j} \}$,  $Q[i]=Q_{G-e}[i]+E_{j, j}$. So, 
-$$
-\begin{align}
-\det(Q[i]) & =\det(Q_{G-e}[i]+E_{jj}) \\
- & =\det(Q_{G-e}[i])+ \det (Q_{G-e}[i][j]) \\
- & =\det(Q_{G-e}[i])+ \det (Q[i][j]).
-\end{align}
-$$
-After a contraction of an edge $e=\{ i, j \}$, 
-Next, depending which vertex remains after a contraction, either $Q_{G\cdot e}[j]=Q[i][j]$ or $Q_{G\cdot e}[i]=Q[i][j]$. WLOG, assume the former. 
-$$
-\begin{align}
-\det(Q[i]) & =\det(Q_{G-e}[i])+\det(Q_{G\cdot e}[j]) \\
- & = \tau(G-e)+\tau(G\cdot e) \\
- & =\tau(G).
-\end{align}
-$$
+%% 
+> [!Theorem] Lemma
+> If $B$ is a square matrix such that its row sums and column sums are zero, then $\det B[i]=\det B[j]$ for all $i, j$. 
+ 
+%%
