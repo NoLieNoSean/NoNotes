@@ -75,6 +75,8 @@ tags:
 	- Proof of Hall's using M-alternating paths, some matroid stuff
 - [[DMAT_L23]]
 	- Probabilistic methods in graph theory, Konig's theorem, matching in non-bipartite graphs, finite fields
+- [[DMAT_L24]]
+	- Proper 2-coloring of hypergraphs, planar graphs, greedy algorithm to color graphs, chromatic polynomial
 
 
 ---

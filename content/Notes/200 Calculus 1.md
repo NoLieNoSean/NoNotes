@@ -28,13 +28,13 @@ Ref: Royden & Fitzpatrick
 - [[CAL1_L7]] ✅
 	- Cantor intersection theorem, constructing the completion of a metric space
 - [[CAL1_L8]] ✅
-	- Finite intersection property, total boundedness, characterisation of compact sets
+	- Finite intersection property, total boundedness, characterization of compact sets
 - [[CAL1_L9]] ✅
 	- Extreme value theorem, Lebesgue covering theorem
 - [[CAL1_L10]]
-	- Separable metric spaces, Lindelöf covering theorem, Baire category theorem.
+	- Separable metric spaces, Lindelöf covering theorem, Baire category theorem
 - [[CAL1_L11]]
-	- Banach contraction principle.
+	- Banach contraction principle
 
 ## Multivariable functions
 
@@ -51,7 +51,21 @@ Ref: Ghorpade & Limaye
 
 ## Multivariable calculus
 
-Ref: MA, Apostol
+Ref: Apostol (Mathematical Analysis) ch12 & ch13, Rudin ch9
 
 - [[CAL1_L16]]
-	- Partial, directional and total derivatives
+	- Partial and directional derivatives
+- [[CAL1_L17]]
+	- Total derivatives, the Jacobian matrix
+- [[CAL1_L18]]
+	- The chain rule
+- [[CAL1_L19]]
+	- The mean value theorem for differentiable functions
+- [[CAL1_L20]]
+	- Sufficient conditions for differentiability and equality of mixed partial derivatives
+- [[CAL1_L21]]
+	- Taylor's formula for functions from $\mathbb{R}^{n}$ to $\mathbb{R}$
+- [[CAL1_L22]]
+	- Inverse function theorem
+- [[CAL1_L23]]
+	- Implicit function theorem

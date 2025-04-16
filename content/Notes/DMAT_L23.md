@@ -35,9 +35,8 @@ Recall: a vertex cover is a set of vertices such that each edge has at least one
 **Proof**
 Let $M$ be a matching in $G$ of maximum cardinality. From every edge in $M$ let us choose one of its ends: the end in $B$ if some alternating path ends in that vertex, and its end in $A$ otherwise. We'll prove that the set $U$ of these $|M|$ vertices covers $E$.
 
-
 Note that if an alternating path $P$ ends in a vertex $b\in B$, then $b\in U$ ($i$.$e$, $b$ is matched). (Why?)
-
+        
 As $M$ is a lergest matching, $P$ is not an augmenting path, $b$ is matched to some $a\in A$.
 
 We have to show that $U$ covers $E$. Let an edge $ab\in E$ be given. If $a\in U$, we are done. so assume $a\not\in U$. To prove $b\in U$. 

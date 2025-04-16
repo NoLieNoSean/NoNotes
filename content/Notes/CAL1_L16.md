@@ -1,13 +1,13 @@
 ## Partial derivatives
 
+[[Mathematical Analysis (Tom A. Apostol) (Z-Library).pdf#page=127|ref]]
+
+[!Definition]
+Let $S$ be an open set in $\mathbb{R}^{n}$, and let $f:S\to \mathbb{R}$ be a real
+
+---
 ## Directional derivatives
 
-[!Theorem] Bivariate mean value theorem
-$f(x_{1}, y_{1})-f(x_{0}, y_{0})=r\mathbf{D}_{\mathbf{u}}f(c, d)$.
 
-## Higher order partial derivatives
-
-[!Theorem] Mixed partials theorem
-
-
+### Directional derivatives and continuity
 

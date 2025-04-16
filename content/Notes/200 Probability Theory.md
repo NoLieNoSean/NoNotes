@@ -23,10 +23,11 @@ These notes have been reorganized because I lost count of the lectures at some p
 - [[PROB_L7]]
 	- Expectation: Properties of expectation, moments, variance, correlation coefficient, Schwarz inequality, Chebyshev's inequality, Weak and Strong laws of large numbers, conditional expectation
 - [[PROB_L8]]
-	- Continuous random variables
+	- Continuous random variables, symmetric, uniform, normal, exponential, and gamma densities.
+- [[PROB_L9]]
+	- Expectation and moments of continuous random variables
 
 
-[[stash]]
 # Quizzes
 
 [[PROB_Q1]]
@@ -37,19 +38,3 @@ These notes have been reorganized because I lost count of the lectures at some p
 [[PROB_AS1]]
 [[PROB_Midsem_PartB]]
 [[PROB_ClassAssignments]]
-
----
-
-Assignments:
-Proof of Inclusion exclusion in probability 
-
-
-
-
-
-
-Jacobian
-Cauchy distribution
-$\Gamma$ func, dist
-Poisson distribution for continuous random variables
-$e^{-\lambda x}$ something

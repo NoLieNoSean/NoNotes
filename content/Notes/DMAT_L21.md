@@ -29,6 +29,9 @@ Interestingly, it also happens to be a sufficient condition.
 
 When the sets of the bipartition have the same size, Hall's Theorem is called **Hall's Marriage Theorem**. 
 
+**Proof of $\impliedby$**
+We induct on $|L|$. The implication trivially holds for $|L|=1$. For $|L|=k> 1$, choose an arbitrary vertex $a\in L$. Since $|N(\{ a \})|\geq 1$, there exists a neighbor of $a$ in $R$, which we'll call $b$. 
+
 ### Counting perfect matchings in bipartite graphs
 
 A bipartite graph $G=(L\sqcup R, E)$ is called **balanced** if $|L|=|R|$.
@@ -68,9 +71,6 @@ c & d
 \end{bmatrix}.
 $$
 However, for $3\times 3$ and larger matrices, a permanent cannot be expressed as a determinant (prove this!). The best known deterministic algorithm to calculate the permanent (Ryser's formula) takes $n 2^{n}$ steps (reduced from $n!$ by [[DMAT_L12#Principle of inclusion and exclusion|PIE]]).
-
-> [!Note]
-> A simpler claim was stated in class: A perfect matching in a balanced bipartite graph $G$ exists $\iff$ the determinant of $G$'s Edmonds matrix is nonzero. This is true, but only when the the determinant is in indeterminates. If we plug all $x_{ij}=1$, the determinant may evaluate to zero. For example, consider $K_{2, 2}$. Its Edmonds matrix is $\begin{bmatrix}x_{11}&x_{12}\\x_{21}&x_{22}\end{bmatrix}$. The determinant, $x_{11}x_{22}-x_{21}x_{12}$, while indeed a nonzero polynomial, evaluates to $0$ when all $x_{ij}$ are set to $1$.
 
 As stated before, if we only wish to know whether a perfect matching exists or not, it suffices to compute the determinant of the Edmonds matrix and check if it is identically zero. In order to avoid symbolic computation (which is expensive), one may ask: is it possible to substitute numerical values into $x_{ij}$ in the Edmonds matrix and construe any useful information from the resulting determinant? It turns out that this works with high probability. The key tool that enables this is the **Schwartz–Zippel Lemma**, which gives a probabilistic bound on when a multivariate polynomial evaluates to zero.
 
