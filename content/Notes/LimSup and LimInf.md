@@ -25,10 +25,10 @@ It should be noted that we now use the symbol $\to$ for certain types of diverge
 >[!Definition]
 >Given a sequence $(p_{n})$ in $\mathbb{R}$, define
 >$$
->\limsup_{ n \to \infty } p_{n} := \lim_{ n \to \infty } (\sup\underbrace{ \{{p_{n}, p_{n+1}, \dots} \}}_{ \text{tail of a given sequence} }),
+>\limsup_{ n \to \infty } p_{n} := \lim_{ n \to \infty } (\sup\underbrace{ \{{p_{n}, p_{n+1}, \dots} \}}_{ \text{called a tail of }(p_{n}) }),
 >$$
 >$$
->\liminf_{ n \to \infty } p_{n} := \lim_{ n \to \infty } (\inf\underbrace{ \{{p_{n}, p_{n+1}, \dots} \}}_{ \text{tail of a given sequence} }).
+>\liminf_{ n \to \infty } p_{n} := \lim_{ n \to \infty } (\inf{ \{{p_{n}, p_{n+1}, \dots} \}}).
 >$$
 >Both values may be infinite.
 

@@ -44,14 +44,7 @@ $$
 > E(g(X))=\int_{-\infty}^{\infty} g(x)f(x) \, dx.
 > $$
 
-Note that Vasanth slipped here; $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$. 
-
-> [!Theorem]
-> Let $X, Y$ be continuous random variables with joint distribution $f$. Let $g:\mathbb{R}\to \mathbb{R}$ such that $g(X, Y)$ is a continuous random variable. Then, 
-> $$
-> E(g(X, Y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y)f(x, y) \, dx  \, dy.
-> $$
-> 
+Note that Vasanth erred here; $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$. 
 
 > [!Example]
 > Let $X\sim n(0,  1)$. Clearly, 
@@ -78,8 +71,19 @@ Since integration is a linear operator, it follows that $E(X+Y)=E(X)+E(Y)$, as w
 > \end{align}
 > $$
 
----
+> [!Theorem]
+> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$. Then, $E(X)=E(X^{+})-E(X^{-})$.
 
+> **Proof**
+> $$
+> \begin{align}
+> E(X) & =\int_{-\infty}^{\infty} xf(x) \, dx 
+>  \\ & =\int_{-\infty}^{\infty} \max(x, 0)f(x)\,dx-\int_{-\infty}^{\infty}\max(-x, 0)f(x) \, dx \\
+>  & =E(X^{+})-E(X^{-}).
+> \end{align}
+> $$
+
+---
 ## Moments of continuous random variables
 
 Defined analogously to [[PROB_L7#Moments|moments of discrete random variables]].
@@ -131,9 +135,48 @@ $$
 \end{align}
 $$
 
+> [!Theorem]
+> Let $X, Y$ be continuous random variables with joint distribution $f$. Let $g:\mathbb{R}^{2}\to [0, \infty)$ such that $g(X, Y)$ is a continuous random variable. Then, 
+> $$
+> E(g(X, Y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y)f(x, y) \, dx  \, dy.
+> $$
+> 
+
+> **Proof**
+> Let $F\equiv F_{g(X, Y)}$ and $f\equiv f_{X, Y}$, the joint density of $X$ and $Y$.
+> $$
+> \begin{align}
+> E(g(X, Y)) & =\int_{0}^{\infty} (1-F(z)) \, dz  \\
+>  & = \int_{0}^{\infty} P(g(X, Y)\geq z) \, dz \\
+>   & = \int_{0}^{\infty} {\iint _{B}}f(x, y) \,dx\,dy \,\,\, dz,\quad B={\{ (x, y)\ | \  g(x, y)\geq z \}} \\
+>  & =\iint_{\mathbb{R}^{2}}\int_{0}^{g(x, y)} f(x, y) \, dz\,\,\,dx\,dy  \\
+>  & = \iint_{\mathbb{R}^{2}}g(x, y)f(x, y)\,dx\,dy.
+> \end{align}
+> $$
+
+If $g:\mathbb{R}^{2}\to \mathbb{R}$, we can write $E(g(X, Y))=E(g^{+}(X, Y))-E(g^{-}(X, Y))$, where $g^{+}\equiv \max(g, 0)$ and $g^{-}\equiv\max(-g, 0)$ are both non negative functions, and apply the previous theorem.
+
+This allows us to prove the linearity of expectation.
+
+> [!Theorem] Linearity of expectation
+> Let $X$ and $Y$ be continuous random variables with finite expectation. Then, $E(X+Y)=E(X)+E(Y)$.
+
+> **Proof**
+> Let $g:\mathbb{R}^{2}\to \mathbb{R}$ be defined by $(x, y)\mapsto x+y$. Let $f$ be the joint density of $X$ and $Y$. Then, 
+> $$
+> \begin{align}
+>  & E(g(X, Y))=E(X+Y) \\
+>  & =\iint_{\mathbb{R}^{2}}(x+y)f(x, y)\,dx\,dy \\
+>  & =\int_{-\infty}^{\infty} x\int_{-\infty}^{\infty} f(x, y) \, dy  \, dx +\int_{-\infty}^{\infty} y\int_{-\infty}^{\infty} f(x, y) \, dx  \, dy  \\
+>  & = \int_{-\infty}^{\infty} xf_{X}(x) \, dx +\int_{-\infty}^{\infty} yf_{Y}(y) \, dy \\
+>   & =E(X)+E(Y).
+> \end{align}
+> $$
+
 ---
 ## Independent continuous random variables
 
 > [!Definition]
 > Random variables $X$ and $Y$ are **independent** if the events $\{ X\leq x \}$ and $\{ Y\leq y \}$ are independent, that is, $F(x, y)=F_{X}(x)F_{Y}(y)$. 
 
+If $X$ and $Y$ are independent iff $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$.

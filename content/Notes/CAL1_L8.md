@@ -3,53 +3,42 @@ tags:
   - CAL1
   - Lecture
   - Processed
-date: 2025-02-04
+date: 2025-02-06
 time: 11:50
 ---
-## Finite intersection property
+## Converse of the extreme value theorem
 
-> [!Definition]
-> A collection $F$ of sets in $X$ is said to have the *finite intersection property* if any finite subcollection of $F$ has a nonempty intersection.
+> [!Theorem] Extreme value theorem
+> Let $X$ be a metric space. Then $X$ is compact if and only if every continuous real valued function on $X$ takes a maximum and a minimum value.
 
-If $T$ is a collection of open subsets of a metric space $X$, then the collection $F$ of complements of sets in $T$ is a collection of closed sets. Moreover, $T$ is a cover of $X$ if and only if $F$ has empty intersection. Now, $X$ is compact if $T$ being an open cover implies a finite subcover of $T$ exists. Taking the contrapositive, we get that $X$ is compact if no finite subcover of $T$ implies $T$ is not an open cover. 
+We have already shown the forward implication [[ANA1_L16#Extreme value theorem|here]].
 
-> [!Theorem]
-> A metric space $X$ is compact if and only if every collection $F$ of closed subsets of $X$ with the finite intersection property has nonempty intersection.
+> **Proof of $\impliedby$**
+> Assume every real valued function on $X$ takes a minimum and maximum value. To show that $X$ is compact, it is [[CAL1_L7#Characterization of compact sets|necessary and sufficient]] to show that it is complete and totally bounded.
+> 
+> Argue by contradiction to show $X$ is totally bounded. If $X$ is not totally bounded, there exists $r> 0$ and a countably infinite subset of $X$ which we may enumerate as $\{ x_{n} \}_{n=1}^{\infty}$, for which the collection of open balls $\{ B_{r}(x_{n}) \}$ is disjoint. For each natural number $n$, define $f_{n}$ by
+> $$
+> f_{n}=\begin{cases}
+> r/2 -d(x, x_{n}) & d(x, x_{n})\leq r/2 \\
+> 0 & \text{otherwise}.
+> \end{cases}
+> $$
+> Define the function $f:X\to \mathbb{R}$ by 
+> $$
+> f(x)= \sum_{n=1}^{\infty} nf_{n}(x) \text{ for all }x\in X.
+> $$
+> Since each $f_{n}$ is continuous and vanishes outside $B_{r/2}(x_{n})$ and the collection $\{ B_{r}(x_{n}) \}$ is disjoint, $f$ is well-defined and continuous. But for each natural number $n$, $f(x_{n})=nr/2$, and hence $f$ is unbounded above. This is a contradiction.
+> 
+> It remains to show that $X$ is complete. Let $(x_{n})$ be a Cauchy sequence in $X$. For each $x\in X$, we infer form the triangle inequality that $\{ d(x, x_{n}) \}$ is a Cauchy sequence in $\mathbb{R}$, which converges since $\mathbb{R}$ is complete. Thus, we can define $f:X\to \mathbb{R}$ by 
+> $$
+> f(x)=\lim_{ n \to \infty } d(x, x_{n}).
+> $$
+> $f$ is continuous: $d(x, y)<\epsilon$ $\implies$ $|d(x, x_{n})-d(y, y_{n})|\leq d(x, y)<\epsilon$ $\implies$ $|f(x)-f(y)|<\epsilon$. By assumption, there is a point $x\in X$ at which $f$ takes a minimum value. Since $(x_{n})$ is Cauchy, the infimum of $f$ on $X$ is $0$. Therefore $f(x)=0$ and hence $(x_{n})\to x$. Thus $X$ is complete.
 
-
-## Characterization of compact sets
-
-Recall definitions of [[ANA1_L17#Absolute and relative definitions of open cover compactness|open cover compactness]] (referred to as just compactness), [[ANA1_L16#Sequential compactness|sequential compactness]], and [[ANA1_L16#Limit point compactness|limit point compactness]]. In Analysis 1, we [[ANA1_L16#Equivalence of sequential and limit point compactness|showed]] that sequential and limit point compactness are equivalent. We stated but didn't show that this equivalence extends to open cover compactness. We will prove this. Also recall that we [[ANA1_L16#Characterization of compact sets|showed]] that all compact sets are closed and bounded (with the [[ANA1_L16#Heine Borel Theorem|converse]] being true for $\mathbb{R}^{n}$). We will introduce a stronger characterization, which says that a set is compact if and only if it is complete and totally bounded.
-
-> [!Definition]
-> A metric space $X$ is said to be *totally bounded* if for each $\epsilon> 0$, $X$ can be covered by a finite number of open balls of radius $\epsilon$. A subset $E$ of $X$ is said to be totally bounded if $E$ is bounded as a metric space. 
-
-A totally bounded metric space is always bounded. However, being bounded does not imply being totally bounded. For example, consider $\mathbb{R}$ with the discrete metric. $\mathbb{R}$ is bounded under the discrete metric, but is not totally bounded since a finite covering of $\epsilon$-balls does not exist for $\epsilon< 1$. But, under any metric induced by a norm, a subset of $\mathbb{R}^{n}$ is bounded iff it is totally bounded.
-
-> [!Theorem]
-> A subset of $\mathbb{R}^{n}$ is bounded iff it is totally bounded under any metric induced by a norm.
+> [!Theorem] Lebesgue covering Lemma
+> Let $\{ \mathcal{O}_{\lambda} \}_{\lambda\in\Lambda}$ be an open cover of a compact metric space $X$. Then there exists $\epsilon> 0$, called a *Lebesgue number* for the cover, such that for each $x\in X$, the ball $B_{\epsilon}(x, X)$ is contained in some member of the cover.
 
 > **Proof**
-> Since we have [[CAL1_L3#Equivalence of norms|shown]] that all norms on $\mathbb{R}^{n}$ are equivalent, it will suffice to prove the theorem for the metric induced by the euclidean norm. 
-> Let $E$ be a bounded subset of $\mathbb{R}^{n}$. Since $E$ is bounded, we may take $a$ large enough such that $E\subset[-a, a]^{n}$. Choose $k$ such that $\sqrt{ n }a/k<\epsilon$. Let $P_{k}$ be a partition of $[-a, a]$ for which each partition has length less than $\frac{1}{k}$. Then $P_{k}^{n}$ induces a partition of $[-a, a]^{n}$ into $n$-cuboids of diameter less than $\sqrt{ n }a/k$. Consider the finite collection of balls of radius $\epsilon$ with centers $(x, y)$ where $x$ and $y$ are the partition points of $P_{k}$. Then this finite collection of balls of radius $\epsilon$ covers $[-a, a]^{n}$, and hence covers $E$.
+> Assume there is no such Lebesgue number. Then for every $\epsilon> 0$, there exists $x\in X$ such that $B_{\epsilon}(x)$ is not contained in any $\mathcal{O}_{\lambda}$. Let $(x_{n})$ be the sequence of such points generated by the $\epsilon$ sequence $\left( \frac{1}{n} \right)$. Since $X$ is compact, there exists a subsequence $(x_{n_{k}})$ of $(x_{n})$ which converges, say to a point $x_{0}\in X$. Now there exists some $\lambda_{0}\in\Lambda$ for which $x_{0}\in \mathcal{O}_{\lambda_{0}}$. Since $\mathcal{O}_{\lambda_{0}}$ is open, there exists an open ball $B_{r_{0}}(x_{0})\subseteq \mathcal{O}_{\lambda_{0}}$. We may choose an index $k$ such that $d(x_{0}, x_{n_{k}})< r_{0}/2$ and $1/n_{k}< r_{0}/2$. Then, $B_{1/n_{k}}(x_{n_{k}})\subseteq \mathcal{O}_{\lambda_{0}}$, which is a contradiction. 
 
-> [!Theorem] Characterization of compactness for a metric space
-> For a metric space $X$, the following assertions are equivalent:
-> - $X$ is [[Cauchy sequences#Complete metric space|complete]] and totally bounded
-> - $X$ is [[ANA1_L17#Absolute and relative definitions of open cover compactness|compact]]
-> - $X$ is [[ANA1_L16#Sequential compactness|sequentially compact]].
 
-> **Complete and totally bounded $\implies$ compact**
-> 
-> We argue by contradiction. Let $\mathcal{O}=\{ \mathcal{O}_{\lambda} \}_{\lambda\in\Lambda}$ be an open cover of $X$ with no finite subcover. Since $X$ is totally bounded, there exists a cover of $X$ which consists of open balls of radius $\epsilon=\frac{1}{2}$. At least one of these open balls must not have an open subcover in $\mathcal{O}$. Select one such ball and label its closure $F_{1}$. Now take a cover of $F_{1}$ consisting of open balls of radius $\epsilon=\frac{1}{4}$. The intersection of at least one such ball with $F_{1}$ must not have an open subcover in $\mathcal{O}$. Select one such ball and label the closure of its intersection with $F_{1}$ as $F_{2}$. Then $F_{1}$ and $F_{2}$ are closed, $F_{2}\subseteq F_{1}$, and $\text{diam}(F_{1})< 1$, $\text{diam}(F_{2})< \frac{1}{2}$. Continuing in this way we obtain a contracting sequence of nonempty closed sets $(F_{n})$ with the property that each $F_{n}$ does not have a finite subcover in $\mathcal{O}$. Since $X$ is complete, it has the [[CAL1_L7#Cantor intersection theorem|Cantor intersection property]], which implies $\bigcap_{n=1}^{\infty}F_{n}=\{ x \}$, where $x\in X$. 
-> 
-> Now, $x\in \mathcal{O}_{\lambda}$ for some $\lambda\in\Lambda$. Since $(F_{n})$ is a contracting sequence and $\mathcal{O}_{\lambda}$ is open, $F_{n}\subseteq \mathcal{O}_{\lambda}$ for some $n$. This contradicts the choice of $F_{n}$ as being a set that does not have a finite subcover in $\mathcal{O}$.
-> 
-> **Compact $\implies$ sequentially compact**
-> 
-> Let $(x_{n})$ be a sequence in $X$. For each index $n$, let $F_{n}$ be the closure of $\{ x_{k}\ | \ k\geq n  \}$. Note that the collection $\{ F_{n} \}_{n=1}^{\infty}$ has the finite intersection property. Since $X$ is compact, it follows that $\bigcap_{n=1}^{\infty}F_{n}\ne \emptyset$. Let $p\in \bigcap_{n=1}^{\infty}F_{n}$. Now, either $p$ is a limit point of $( x_{n} )$, or $p\in F_{n}$ for all $n$. In both cases, we can extract a subsequence of $(x_{n})$ which converges to $p$. Therefore, $X$ is sequentially compact.
-> 
-> **Sequentially compact $\implies$ complete and totally bounded**
-> 
-> Sequentially compact $\implies$ complete is obvious. 
-> Assume $X$ is not totally bounded. Then for some $\epsilon> 0$, we cannot cover $X$ with a finite number of $\epsilon$-balls. Pick $x_{1}\in X$, $x_{2}\in X\setminus B_{\epsilon}(x_{1})$, $x_{3}\in X\setminus B_{\epsilon}(x_{1})\setminus B_{\epsilon}(x_{2})$, and so on. The sequence $(x_{n})$ does not have a convergent subsequence since the distance between any two of its points is $\epsilon$ or greater.

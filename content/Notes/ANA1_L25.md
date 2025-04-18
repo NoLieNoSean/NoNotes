@@ -14,7 +14,7 @@ Let $f:[a,b]\to \mathbb{R}$ be twice differentiable. Fix $x\in[a, b]$. Consider 
 $$
 f(x+h)=\underbrace{ f(x) }_{ E_{0}(h) }+r_{0}(h)
 $$
-Here, $E_{0}(h)$ is our constant polynomial approximation, and $r_{0}(h)$ is the error. Note that $\lim_{ h \to 0 }r_{0}(h)=0$. Now, we can try to refine our approximation by siphoning information from the error function. Consider the limit
+Here, $E_{0}(h)$ is a constant polynomial approximation, and $r_{0}(h)$ is the error. Note that $\lim_{ h \to 0 }r_{0}(h)=0$. Now, we can try to refine our approximation by siphoning information from the error function. Consider the limit
 $$
 \begin{align}
 \lim_{ h \to 0 } \frac{r_{0}(h)}{h}=\lim_{ h \to 0 } \frac{{f(x+h)-f(x)}}{h}=f'(x).
@@ -24,7 +24,7 @@ Let
 $$
 r_{1}(h)\equiv \frac{{r_{0}(h)}}{h}-f'(x).
 $$
-Clearly, $\lim_{ h \to 0 }r_{1}(h)=0$. Plugging in the value of $r_{0}(h)$ in terms of $r_{1}(h)$ in the zero degree approximation (or in this case just rearranging the terms in the definition of $r_{1}$) gives the first degree approximation $E_{1}(h)$ at $x$.
+Clearly, $\lim_{ h \to 0 }r_{1}(h)=0$. Plugging in the value of $r_{0}(h)$ in terms of $r_{1}(h)$ in the zero degree approximation gives the first degree approximation $E_{1}(h)$ at $x$.
 $$
 f(x+h)=\underbrace{ f(x)+f'(x)h }_{ E_{1}(h) }+r_{1}(h)h,
 $$

@@ -1,1 +1,1 @@
-## Implicit function theorem
+## Lagrange multipliers

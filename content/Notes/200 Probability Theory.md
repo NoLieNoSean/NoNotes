@@ -26,6 +26,7 @@ These notes have been reorganized because I lost count of the lectures at some p
 	- Continuous random variables, symmetric, uniform, normal, exponential, and gamma densities.
 - [[PROB_L9]]
 	- Expectation and moments of continuous random variables
+- [[PROB_L10]]
 
 
 # Quizzes

@@ -3,71 +3,53 @@ tags:
   - CAL1
   - Lecture
   - Processed
-date: 2025-01-31
+date: 2025-02-04
 time: 11:50
 ---
-## Cantor intersection theorem
-
-For a non empty subset $E$ of a metric space $(X, d)$, we say $E$ is bounded provided it has finite [[Metric spaces#Diameter|diameter]]. A descending sequence $(E_{n})$ of non empty subsets of $X$ is called a *contracting sequence* if $\lim_{ n \to \infty }\text{diam}(E_{n})=0$. 
+## Finite intersection property
 
 > [!Definition]
-> A metric space $X$ is said to have the *Cantor intersection property* if whenever $(F_{n})$ is a contracting sequence of non empty closed subsets of $X$, $\bigcap_{n=1}^{\infty}F_{n}=\{ x \}$, $x\in X$.
+> A collection $F$ of sets in $X$ is said to have the *finite intersection property* if any finite subcollection of $F$ has a nonempty intersection.
 
-Note the similarity between the Cantor intersection property (of a metric space) and the [[The real field#Nested interval property|nested interval property]] (of $\mathbb{R}$).
+If $T$ is a collection of open subsets of a metric space $X$, then the collection $F$ of complements of sets in $T$ is a collection of closed sets. Moreover, $T$ is a cover of $X$ if and only if $F$ has empty intersection. Now, $X$ is compact if $T$ being an open cover implies a finite subcover of $T$ exists. Taking the contrapositive, we get that $X$ is compact if no finite subcover of $T$ implies $T$ is not an open cover. 
 
-> [!Theorem] Cantor Intersection Theorem
-> A metric space $X$ has the Cantor intersection property if and only if it is [[Cauchy sequences#Complete metric space|complete]]. 
+> [!Theorem]
+> A metric space $X$ is compact if and only if every collection $F$ of closed subsets of $X$ with the finite intersection property has nonempty intersection.
 
-> **Proof of $\implies$**
-> Let $(s_{n})$ be a Cauchy sequence. For each index $n$ define $F_{n}$ to be $\{ s_{i}\ | \ i\geq n \}$. For all $\epsilon> 0$, there exists $N$ such that for all $n, m> N$, $|s_{n}-s_{m}|<\epsilon$. Thus, $\text{diam}(F_{N})\leq \epsilon$, from which it follows that $\text{diam}(\overline{F_{N}})\leq\epsilon$ (for all $N'> N$ too, since the diameters are decreasing). Thus, $\lim_{ n \to \infty }\text{diam}(\overline{F_{n}})=0$, and $(\overline{F_{n}})$ is a contracting sequence. Thus, $\bigcap_{n=1}^{\infty}\overline{F_{n}}=\{ s \}$, $s\in X$. For all $F_{n}$, $s\in F_{n}$ or $s$ is a limit point of $F_{n}$ (or both). In any case, $B_{\frac{1}{k}}(s)\cap F_{n}\ne \emptyset$ for all $k, n$.  This allows us to select a subsequence of $(s_{n})$ which converges to $s$. If a subsequence of a Cauchy sequence converges to a point, the entire sequence [[Cauchy sequences#Step 3 Persuasive subsequence|converges]] to said point. Thus, $(s_{n})\to s$, every Cauchy sequence converges, and $X$ is complete.
+
+## Characterization of compact sets
+
+Recall definitions of [[ANA1_L17#Absolute and relative definitions of open cover compactness|open cover compactness]] (referred to as just compactness), [[ANA1_L16#Sequential compactness|sequential compactness]], and [[ANA1_L16#Limit point compactness|limit point compactness]]. In Analysis 1, we [[ANA1_L16#Equivalence of sequential and limit point compactness|showed]] that sequential and limit point compactness are equivalent. We stated but didn't show that this equivalence extends to open cover compactness. We will prove this. Also recall that we [[ANA1_L16#Characterization of compact sets|showed]] that all compact sets are closed and bounded (with the [[ANA1_L16#Heine Borel Theorem|converse]] being true for $\mathbb{R}^{n}$). We will introduce a stronger characterization, which says that a set is compact if and only if it is complete and totally bounded.
+
+> [!Definition]
+> A metric space $X$ is said to be *totally bounded* if for each $\epsilon> 0$, $X$ can be covered by a finite number of open balls of radius $\epsilon$. A subset $E$ of $X$ is said to be totally bounded if $E$ is bounded as a metric space. 
+
+A totally bounded metric space is always bounded. However, being bounded does not imply being totally bounded. For example, consider $\mathbb{R}$ with the discrete metric. $\mathbb{R}$ is bounded under the discrete metric, but is not totally bounded since a finite covering of $\epsilon$-balls does not exist for $\epsilon< 1$. But, under any metric induced by a norm, a subset of $\mathbb{R}^{n}$ is bounded iff it is totally bounded.
+
+> [!Theorem]
+> A subset of $\mathbb{R}^{n}$ is bounded iff it is totally bounded under any metric induced by a norm.
+
+> **Proof**
+> Since we have [[CAL1_L3#Equivalence of norms|shown]] that all norms on $\mathbb{R}^{n}$ are equivalent, it will suffice to prove the theorem for the metric induced by the euclidean norm. 
+> Let $E$ be a bounded subset of $\mathbb{R}^{n}$. Since $E$ is bounded, we may take $a$ large enough such that $E\subset[-a, a]^{n}$. Choose $k$ such that $\sqrt{ n }a/k<\epsilon$. Let $P_{k}$ be a partition of $[-a, a]$ for which each partition has length less than $\frac{1}{k}$. Then $P_{k}^{n}$ induces a partition of $[-a, a]^{n}$ into $n$-cuboids of diameter less than $\sqrt{ n }a/k$. Consider the finite collection of balls of radius $\epsilon$ with centers $(x, y)$ where $x$ and $y$ are the partition points of $P_{k}$. Then this finite collection of balls of radius $\epsilon$ covers $[-a, a]^{n}$, and hence covers $E$.
+
+> [!Theorem] Characterization of compactness for a metric space
+> For a metric space $X$, the following assertions are equivalent:
+> - $X$ is [[Cauchy sequences#Complete metric space|complete]] and totally bounded
+> - $X$ is [[ANA1_L17#Absolute and relative definitions of open cover compactness|compact]]
+> - $X$ is [[ANA1_L16#Sequential compactness|sequentially compact]].
+
+> **Complete and totally bounded $\implies$ compact**
 > 
-> **Proof of $\impliedby$**
-> Let $(F_{n})$ be a contracting sequence of nonempty closed subsets of $X$. Pick $s_{n}\in F_{n}$ for each $n\in \mathbb{N}$. For any $\epsilon> 0$, there exists $F_{N}$ such that $\text{diam}(F_{N})<\epsilon$, $i$.$e$, $d(s_{n}, s_{m})<\epsilon$ for all $n, m > N$. This makes $(s_{n})$ a Cauchy sequence. Since $X$ is complete, it must converge, say to a point $s$. Then, $s$ is a limit point of each $F_{n}$. Since $F_{n}$ is closed for all $n$, $s\in F_{n}$ for all $n$. Thus, $s\in \bigcap_{n=1}^{\infty}F_{n}$. The intersection does not contain more than one point, since if it did, then $\lim_{ n \to \infty }\text{diam}(F_{n})\ne 0$.
-
----
-## Completion of a metric space
-
-> [!Definition]
-> Let $(X, d)$ be a metric space. Then there is a complete metric space $(\tilde{X}, \tilde{d})$ called the *completion* of $(X, d)$ for which $X$ is a dense subset of $\tilde{X}$ and $d(u, v)=\tilde{d}(u, v)$ for all $u, v\in X$.
-
-### Constructing the completion of a metric space
-
-Let $(X, d)$ be a metric space.
-
-Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}, y_{n}))$ is a Cauchy sequence in $\mathbb{R}$. Let $S$ be the space of all Cauchy sequences in $X$. Define $\rho((x_{n}), (y_{n}))\equiv\lim_{ n \to \infty }d(x_{n}, y_{n})$. It is easy to see that
-- $\rho\geq 0$, and $(x_{n})=(y_{n})$ implies $\rho((x_{n}), (y_{n}))=0$. 
-- $\rho$ is symmetric
-- triangle inequality holds
-
-However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. Note that $\tilde{d}$ is well defined, and that $(\tilde{X}, \tilde{d})$ is a metric space.
-#### $(\tilde{X}, \tilde{d})$ is complete
-
-Consider a Cauchy sequence in $\tilde{X}$: $([(x_{n, 1})], [(x_{n, 2})], \dots)$. By passing to subsequences if necessary, we can assume that given $m$, $\tilde{d}([(x_{n, k})], [(x_{n, l})])< 2^{-m}$ for all $l, k\geq m$. Similarly, by passing to subsequences if necessary, we can assume that for all $k$, given $c$, $d(x_{a, k}, x_{b, k})< 2^{-c}$ for all $a, b\geq c$.
-
-Let $(z_{n})\equiv(x_{n, n})$. We will first show that $(z_{n})$ is a Cauchy sequence in $X$, and then that $([(x_{*, n})])\to[(z_{n})]$. 
-
-Let $\epsilon> 0$. Choose $N$ such that $2^{-N}<\epsilon/3$. Now, for all $n, m\geq N$, $d(z_{n}, z_{m})  =d(x_{n, n}, x_{m, m})$. Since $\tilde{d}([(x_{*, n})], [(x_{*, m})])< {2}^{-N}$, $\lim_{ k \to \infty }d(x_{k, n}, x_{k, m})< 2^{-N}$, so there exists $M$ such that $d(x_{k, n}, x_{k, m})< 2^{-N}$ when $k\geq M$. Take $M'=\max\{ M, n, m \}$. Now, 
-$$
-\begin{align}
-d(x_{n, n}, x_{m, m}) & =d(x_{n, n}, x_{M', n})+d(x_{M', n}, x_{M', m})+d(x_{M', m}, x_{m, m}) \\
- & < 2^{-n}+2^{-N}+2^{-m} \\
- & < 3\cdot 2^{-N} \\
- & <\epsilon.
-\end{align}
-$$
-Thus, $d(z_{n}, z_{m})<\epsilon$ for all $n, m\geq N$, and $(z_{n})$ is a Cauchy sequence in $X$.
-
-Let $\epsilon> 0$. Choose $N$ such that $2^{-N}<\epsilon/3$. Let $k> N$. $\tilde{d}([(x_{n, k})], [(z_{n})])  =\lim_{ n \to \infty } d(x_{n, k}, x_{n, n})$. For $n> k$, we can always find $M\geq n$ such that $d(x_{M, k}, x_{M, n})< 2^{-N}$. So, we have $d(x_{n, k}, x_{n, n})\leq d(x_{n, k}, x_{M, k})+d(x_{M, k}, x_{M, n})+d(x_{M, n}, x_{n, n})$ $< 2^{-k}+2^{-N}+2^{-k}< 3\cdot 2^{-N}<\epsilon$. Thus,  
-$$
-\begin{align}
-\tilde{d}([(x_{n, k})], [(z_{n})]) & =\lim_{ n \to \infty } d(x_{n, k}, x_{n, n}) \\
- & <\epsilon.
-\end{align}
-$$
-Thus, $([(x_{*, n})])\to[(z_{n})]$ and $(\tilde{X}, \tilde{d})$ is complete.
-
-#### $(\tilde{X}, \tilde{d})$ is the completion of $(X, d)$
-
-For each $p\in X$, there is a Cauchy sequence all of whose terms are $p$. Let $P_{p}$ be the element of $\tilde{X}$ which contains this sequence. Define the map $\phi:X\to \tilde{X}$ by $\phi(p)=P_{p}$. It is easy to see that $\phi$ is an *isometry*, $i$.$e$, $\tilde{d}(P_{p}, P_{q})=d(p, q)$ for all $p, q\in X$. 
-
-We will now show that $\phi(X)$ is dense in $\tilde{X}$. Let $[(x_{n})]\in \tilde{X}$ such that $[(x_{n})]\not\in \phi(X)$. Consider the sequence $(P_{x_{1}}, P_{x_{2}}, \dots)$ in $\tilde{X}$. Since $(x_{n})$ is a Cauchy sequence in $X$ and $\tilde{d}(P_{x_{k}}, P_{x_{m}})=d(x_{k}, x_{m})$, $(P_{x_{n}})$ is also a Cauchy sequence. Let $\epsilon> 0$. There exists $N$ such that for all $k, m> N$, $d(x_{k}, x_{m})<\epsilon$. Thus, for $k> N$, $\tilde{d}(P_{x_{k}}, [(x_{n})])=\lim_{ m \to \infty }d(x_{k}, x_{m})<\epsilon$. Therefore, $(P_{x_{n}})\to[(x_{n})]$, proving that $\phi(X)$ is dense in $\tilde{X}$.
+> We argue by contradiction. Let $\mathcal{O}=\{ \mathcal{O}_{\lambda} \}_{\lambda\in\Lambda}$ be an open cover of $X$ with no finite subcover. Since $X$ is totally bounded, there exists a cover of $X$ which consists of open balls of radius $\epsilon=\frac{1}{2}$. At least one of these open balls must not have an open subcover in $\mathcal{O}$. Select one such ball and label its closure $F_{1}$. Now take a cover of $F_{1}$ consisting of open balls of radius $\epsilon=\frac{1}{4}$. The intersection of at least one such ball with $F_{1}$ must not have an open subcover in $\mathcal{O}$. Select one such ball and label the closure of its intersection with $F_{1}$ as $F_{2}$. Then $F_{1}$ and $F_{2}$ are closed, $F_{2}\subseteq F_{1}$, and $\text{diam}(F_{1})< 1$, $\text{diam}(F_{2})< \frac{1}{2}$. Continuing in this way we obtain a contracting sequence of nonempty closed sets $(F_{n})$ with the property that each $F_{n}$ does not have a finite subcover in $\mathcal{O}$. Since $X$ is complete, it has the [[CAL1_L6#Cantor intersection theorem|Cantor intersection property]], which implies $\bigcap_{n=1}^{\infty}F_{n}=\{ x \}$, where $x\in X$. 
+> 
+> Now, $x\in \mathcal{O}_{\lambda}$ for some $\lambda\in\Lambda$. Since $(F_{n})$ is a contracting sequence and $\mathcal{O}_{\lambda}$ is open, $F_{n}\subseteq \mathcal{O}_{\lambda}$ for some $n$. This contradicts the choice of $F_{n}$ as being a set that does not have a finite subcover in $\mathcal{O}$.
+> 
+> **Compact $\implies$ sequentially compact**
+> 
+> Let $(x_{n})$ be a sequence in $X$. For each index $n$, let $F_{n}$ be the closure of $\{ x_{k}\ | \ k\geq n  \}$. Note that the collection $\{ F_{n} \}_{n=1}^{\infty}$ has the finite intersection property. Since $X$ is compact, it follows that $\bigcap_{n=1}^{\infty}F_{n}\ne \emptyset$. Let $p\in \bigcap_{n=1}^{\infty}F_{n}$. Now, either $p$ is a limit point of $( x_{n} )$, or $p\in F_{n}$ for all $n$. In both cases, we can extract a subsequence of $(x_{n})$ which converges to $p$. Therefore, $X$ is sequentially compact.
+> 
+> **Sequentially compact $\implies$ complete and totally bounded**
+> 
+> Sequentially compact $\implies$ complete is obvious. 
+> Assume $X$ is not totally bounded. Then for some $\epsilon> 0$, we cannot cover $X$ with a finite number of $\epsilon$-balls. Pick $x_{1}\in X$, $x_{2}\in X\setminus B_{\epsilon}(x_{1})$, $x_{3}\in X\setminus B_{\epsilon}(x_{1})\setminus B_{\epsilon}(x_{2})$, and so on. The sequence $(x_{n})$ does not have a convergent subsequence since the distance between any two of its points is $\epsilon$ or greater.

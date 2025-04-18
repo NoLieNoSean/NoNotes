@@ -1,4 +1,2 @@
-## A sufficient condition for differentiability
+## Taylor's formula for functions from Rn to R
 
----
-## A sufficient condition for equality of mixed partial derivatives

@@ -1,1 +1,1 @@
-## Inverse function theorem
+## Implicit function theorem
