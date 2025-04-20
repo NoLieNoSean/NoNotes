@@ -39,7 +39,7 @@
 > $$
 > \mathbf{E}(\mathbf{y})=\mathbf{f}'(\mathbf{b})[\mathbf{E}_{\mathbf{a}}(\mathbf{y})]+\frac{\lVert \mathbf{v} \rVert }{\lVert \mathbf{y} \rVert }\mathbf{E}_{\mathbf{b}}(\mathbf{v})
 > $$
-> if $\mathbf{y}\ne \mathbf{0}$. To complete the proof we need to show that $\mathbf{E}(\mathbf{y})\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. The first term clearly tends to $\mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$, and $\mathbf{E}_{\mathbf{b}}(\mathbf{0})\to \mathbf{0}$ since $\mathbf{v}\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. We will be done if we show that $\lVert \mathbf{v} \rVert/\lVert \mathbf{y} \rVert$ is bounded. From results obtained [[CAL1_L16#Total derivatives in terms of partial derivatives|here]],
+> if $\mathbf{y}\ne \mathbf{0}$. To complete the proof we need to show that $\mathbf{E}(\mathbf{y})\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. The first term clearly tends to $\mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$, and $\mathbf{E}_{\mathbf{b}}(\mathbf{0})\to \mathbf{0}$ since $\mathbf{v}\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. We will be done if we show that $\lVert \mathbf{v} \rVert/\lVert \mathbf{y} \rVert$ is bounded. From results obtained [[CAL1_L16#Bounding the total derivative|here]],
 > $$
 > \begin{align}
 > \lVert \mathbf{v} \rVert \leq \lVert \mathbf{g}'(\mathbf{a})(\mathbf{y}) \rVert +\lVert \mathbf{y} \rVert \lVert \mathbf{E}_{\mathbf{a}}(\mathbf{y}) \rVert \leq \lVert \mathbf{y}   \rVert (M+\lVert \mathbf{E}_{\mathbf{a}}(\mathbf{y}) \rVert ),
@@ -79,31 +79,31 @@ In particular, if $p=m=1$, $h'(a)=\nabla f(\mathbf{b})\cdot\mathbf{D}\mathbf{g}(
 
 Note that [[ANA1_L27#Continuous functions|continuous functions are integrable]], and hence the above integrals are well defined.
 
-**Proof**
-Consider the maps $\mathbf{h}:[c, d]\to [a, b]\times[a, b]\times[c, d]$ and $g:[a, b]\times[a, b]\times[c, d]\to \mathbb{R}$ defined by $y\mapsto \begin{bmatrix}p(y)&q(y)&y\end{bmatrix}^{\intercal}$ and $\begin{bmatrix}x_{1}&x_{2}&x_{3}\end{bmatrix}\mapsto \int_{x_{1}}^{x_{2}} f(t, x_{3}) \, dt$. Then, $F=g\circ \mathbf{h}$, and
-$$
-\begin{align}
-F'(y) & =\nabla g(\mathbf{h}(y))\cdot \mathbf{D}\mathbf{h}(y) \\
- & =D_{1}g(\mathbf{h}(y))p'(y)+D_{2}g(\mathbf{h}(y))q'(y)+D_{3}g(\mathbf{h}(y)) \\
-\end{align}
-$$
-We know from [[ANA1_L28#Integration and differentiation|here]] that
-$$
-\begin{align}
-D_{1}g(\mathbf{h}(y))  & =\left( \frac{d}{dx_{1}}\int_{x_{1}}^{x_{2}} f(t, x_{3}) \, dt  \right)(\mathbf{h}(y)) \\
- & = (-f(x_{1}, x_{3}))(\mathbf{h}(y)) \\
- & = -f(p(y), y), \\
- \\
-D_{2}g(\mathbf{h}(y)) & =(f(x_{2}, x_{3}))(\mathbf{h}(y)) \\
- & =f(q(y), y).
-\end{align}
-$$
-Also, 
-$$
-\begin{align}
-D_{3}g(\mathbf{h}(y)) & =\left( \int_{x_{1}}^{x_{2}} D_{2}f(t, x_{3}) \, dt  \right)(\mathbf{h}(y)) \\
- & = \int_{p(y)}^{q(y)} D_{2}f(t, y) \, dt.
-\end{align}
-$$
-
+> **Proof**
+> Consider the maps $\mathbf{h}:[c, d]\to [a, b]\times[a, b]\times[c, d]$ and $g:[a, b]\times[a, b]\times[c, d]\to \mathbb{R}$ defined by $y\mapsto \begin{bmatrix}p(y)&q(y)&y\end{bmatrix}^{\intercal}$ and $\begin{bmatrix}x_{1}&x_{2}&x_{3}\end{bmatrix}\mapsto \int_{x_{1}}^{x_{2}} f(t, x_{3}) \, dt$. Then, $F=g\circ \mathbf{h}$, and
+> $$
+> \begin{align}
+> F'(y) & =\nabla g(\mathbf{h}(y))\cdot \mathbf{D}\mathbf{h}(y) \\
+>  & =D_{1}g(\mathbf{h}(y))p'(y)+D_{2}g(\mathbf{h}(y))q'(y)+D_{3}g(\mathbf{h}(y)) \\
+> \end{align}
+> $$
+> We know from [[ANA1_L28#Integration and differentiation|here]] that
+> $$
+> \begin{align}
+> D_{1}g(\mathbf{h}(y))  & =\left( \frac{d}{dx_{1}}\int_{x_{1}}^{x_{2}} f(t, x_{3}) \, dt  \right)(\mathbf{h}(y)) \\
+>  & = (-f(x_{1}, x_{3}))(\mathbf{h}(y)) \\
+>  & = -f(p(y), y), \\
+>  \\
+> D_{2}g(\mathbf{h}(y)) & =(f(x_{2}, x_{3}))(\mathbf{h}(y)) \\
+>  & =f(q(y), y).
+> \end{align}
+> $$
+> Also, 
+> $$
+> \begin{align}
+> D_{3}g(\mathbf{h}(y)) & =\left( \int_{x_{1}}^{x_{2}} D_{2}f(t, x_{3}) \, dt  \right)(\mathbf{h}(y)) \\
+>  & = \int_{p(y)}^{q(y)} D_{2}f(t, y) \, dt.
+> \end{align}
+> $$
+> 
 

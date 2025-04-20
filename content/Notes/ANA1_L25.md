@@ -77,7 +77,7 @@ Rudin, 5.15
 > $$
 > Now, since $g(x)=0$ and $g(x+h)=0$, there must exist $x+t_{1}$ between $x$ and $x+h$ such that $g'(x+t_{1})=0$, thanks to the [[ANA1_L24#Mean value theorem|mean value theorem]]. Again, since $g'(x)=0$ and $g'(x+t_{1})=0$, there must exist $x+t_{2}$ between $x$ and $x+t_{1}$ such that $g''(x+t_{2})=0$. After $m$ steps, we obtain $x+t_{m}\in(x, x+h)$ such that $g^{(m)}(x+t_{m})=0$. Therefore, $M=\frac{f^{(m)}(x+t_{m})}{m!}$. ❏
 
-Thus, if we know that bounds on $|f^{(m)}(x)|$, we can bound the error!
+If we know that bounds on $|f^{(m)}(x)|$, we can bound the error!
 
 ---
 ## MVT analogue for vector valued functions

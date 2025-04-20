@@ -63,6 +63,7 @@ $$
 \mathbf{f}'(\mathbf{c})(\mathbf{v})=\sum_{k=1}^{m}(\nabla f_{k}(\mathbf{c})\cdot \mathbf{v} )~ \mathbf{e}_{k}.
 \end{align}
 $$
+#### Bounding the total derivative
 
 > [!Important]
 > The above equation yields
@@ -77,7 +78,9 @@ $$
 > $$
 > where $M=\sum_{k=1}^{m}\lVert \nabla f_{k}(\mathbf{c}) \rVert$.
 
-The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point $\mathbf{c}\in \mathbb{R}^{n}$ where all the partial derivatives $D_{k}f_{i}(\mathbf{c})$ exist. However, recall that the existence of all partial derivatives does not guarantee that the total derivative exists (given that a function is differentiable at a point, its derivative is given by the Jacobian matrix, of course). So, when is a function differentiable? A simple criterion for differentiability can be stated as follows:
+#### When does the total derivative exist?
+
+The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point $\mathbf{c}\in \mathbb{R}^{n}$ where all the partial derivatives $D_{k}f_{i}(\mathbf{c})$ exist. However, recall that the existence of all partial derivatives does not guarantee that the total derivative exists (given that a function is differentiable at a point, its derivative must be given by the Jacobian matrix, of course). So, when is a function differentiable? A simple criterion for differentiability can be stated as follows:
 
 > [!Definition]
 > A function is **continuously differentiable** on $U\subseteq \mathbb{R}^{n}$ if all of its partial derivatives exist and are continuous on $U$. Such a function is called a $C^{1}$ function.

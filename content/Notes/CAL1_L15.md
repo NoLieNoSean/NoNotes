@@ -52,5 +52,8 @@ Note that a function of $n$ variables can have partial derivatives at a point wi
 
 If $\mathbf{u}=\mathbf{e}_{k}$, then $\mathbf{f}'(\mathbf{c};\mathbf{e}_{k})$ is called a **partial derivative** and is denoted by $D_{k}\mathbf{f}(\mathbf{c})$. When $\mathbf{f}$ is real valued this agrees with the definition given in the previous section.
 
+> [!Important]
+> If $\mathbf{F}(t)=\mathbf{f}(\mathbf{c}+t\mathbf{u})$, then $\mathbf{F}'(t)=\mathbf{f}'(\mathbf{c}+t\mathbf{u};\mathbf{u})$ if either derivative exists.
+
 A function can have a finite directional derivative $\mathbf{f}'(\mathbf{c};\mathbf{u})$ for every $\mathbf{u}$ but may fail to be continuous at $\mathbf{c}$. The [[CAL1_L16#Total derivatives|total derivative]], a more suitable generalization, does guarantee continuity, and also extends the principal theorems of the one-dimensional derivative.
 

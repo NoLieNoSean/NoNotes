@@ -55,11 +55,11 @@ Ref: Apostol (Mathematical Analysis) ch12 & ch13, Rudin ch9
 	- Partial and directional derivatives
 - [[CAL1_L16]] ✅
 	- Total derivatives, the Jacobian matrix
-- [[CAL1_L17]]
+- [[CAL1_L17]] ✅
 	- The chain rule
-- [[CAL1_L18]]
+- [[CAL1_L18]] ✅
 	- The mean value theorem for differentiable functions
-- [[CAL1_L19]]
+- [[CAL1_L19]] ✅
 	- Sufficient conditions for differentiability and equality of mixed partial derivatives
 - [[CAL1_L20]]
 	- Taylor's formula for functions from $\mathbb{R}^{n}$ to $\mathbb{R}$
