@@ -77,6 +77,7 @@ tags:
 	- Probabilistic methods in graph theory, Konig's theorem, matching in non-bipartite graphs, finite fields
 - [[DMAT_L24]]
 	- Proper 2-coloring of hypergraphs, planar graphs, greedy algorithm to color graphs, chromatic polynomial
+- [[DMAT_L25]]
 
 
 ---

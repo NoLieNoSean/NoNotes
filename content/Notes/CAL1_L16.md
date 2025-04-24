@@ -16,6 +16,20 @@ $$
 where $\mathbf{E}_{\mathbf{c}}(\mathbf{v})\to \mathbf{0}$ as $\mathbf{v}\to \mathbf{0}$. The above equation is called a **first order Taylor formula**.
 
 > [!Theorem]
+> If $\mathbf{f}$ is differentiable at $\mathbf{c}$, then $\mathbf{T}_{\mathbf{c}}$ is uniquely determined.
+
+> **Proof**
+> Let $\mathbf{A}$ and $\mathbf{A}'$ both satisfy the equation in the above definition. Then, 
+> $$
+> \lim_{ \mathbf{v} \to 0 } \frac{1}{\lVert \mathbf{v} \rVert }(\mathbf{A}-\mathbf{A}')(\mathbf{v})=\mathbf{0}.
+> $$
+> For a fixed $\mathbf{v}$,
+> $$
+> \lim_{ t \to 0 } \frac{1}{\lVert t\mathbf{v} \rVert }(\mathbf{A}-\mathbf{A}')(t\mathbf{v})=\lim_{ t \to 0 } \frac{1}{\lVert \mathbf{v} \rVert}(\mathbf{A}-\mathbf{A}')(\mathbf{v})=\mathbf{0},
+> $$
+> so $(\mathbf{A}-\mathbf{A}')(\mathbf{v})=\mathbf{0}$ for every $\mathbf{v}$. It follows that $\mathbf{A}=\mathbf{A}'$.
+
+> [!Theorem]
 > Assume $\mathbf{f}$ is differentiable at $\mathbf{c}$ with total derivative $\mathbf{T}_{\mathbf{c}}$. Then the [[CAL1_L15#Directional derivatives|directional derivative]] $\mathbf{f}'(\mathbf{c};\mathbf{u})$ exists for every $\mathbf{u}\in \mathbb{R}^{n}$ and $\mathbf{T}_{\mathbf{c}}(\mathbf{u})=\mathbf{f}'(\mathbf{c};\mathbf{u})$.
 
 > **Proof**
@@ -86,6 +100,6 @@ The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point 
 > A function is **continuously differentiable** on $U\subseteq \mathbb{R}^{n}$ if all of its partial derivatives exist and are continuous on $U$. Such a function is called a $C^{1}$ function.
 
 > [!Theorem] Theorem (Criterion for differentiability)
-> If $U$ is an open subset of $\mathbb{R}^{n}$, and $\mathbf{f}:U\to \mathbb{R}^{m}$ is a $C_{1}$ mapping, then $\mathbf{f}$ is differentiable on $U$, and its derivative is given by its Jacobian matrix.
+> If $U$ is an open subset of $\mathbb{R}^{n}$, and $\mathbf{f}:U\to \mathbb{R}^{m}$ is a $C^{1}$ mapping, then $\mathbf{f}$ is differentiable on $U$, and its derivative is given by its Jacobian matrix.
 
 This is a special case of a [[CAL1_L19#A sufficient condition for differentiability|more general criterion]] which relaxes the hypothesis slightly.

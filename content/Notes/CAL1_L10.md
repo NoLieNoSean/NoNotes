@@ -20,3 +20,4 @@ time: 12:22
 > [!Theorem] Banach contraction principle
 > Let $X$ be a complete metric space and the mapping $T:X\to X$ be a contraction. Then $T$ has exactly one fixed point.
 
+

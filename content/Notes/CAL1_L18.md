@@ -40,10 +40,35 @@ $$
 \lVert \mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x}) \rVert \leq A\lVert \mathbf{y}-\mathbf{x} \rVert 
 $$
 for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[CAL1_L10#The Banach contraction principle|Lipschitz condition]], with the requirement that $\mathbf{f}$ map between the same spaces being relaxed).
-### Functions with zero total derivative
+### Functions with bounded and zero total derivative
+
+> [!Theorem]
+> Suppose $\mathbf{f}$ maps a convex open set $E\subseteq \mathbb{R}^{n}$ in $\mathbb{R}^{m}$, $\mathbf{f}$ is differentiable in $E$, and there is a real number $M$ such that for every $\mathbf{x}\in E$,
+> $$
+> \lVert \mathbf{f}'(\mathbf{x}) (\mathbf{v})\rVert \leq M\lVert \mathbf{v} \rVert 
+> $$
+> for every $\mathbf{v}\in \mathbb{R}^{n}$. Then
+> $$
+> \lVert \mathbf{f}(\mathbf{b})-\mathbf{f}(\mathbf{a}) \rVert \leq M\lVert \mathbf{b}-\mathbf{a} \rVert 
+> $$
+> for all $\mathbf{a}\in E$, $\mathbf{b}\in E$.
+
+> **Proof**
+> Since $E$ is convex, we can define $\mathbf{g}(t)\equiv \mathbf{f}(\mathbf{a}+t(\mathbf{b}-\mathbf{a}))$ for $t\in[0, 1]$. Now, $\mathbf{g}'(t)=\mathbf{f}'(\mathbf{a}+t(\mathbf{b}-\mathbf{a});\mathbf{b}-\mathbf{a})$, so that
+> $$
+> \lVert \mathbf{g}'(t) \rVert =\lVert \mathbf{f}'(\mathbf{a}+t(\mathbf{b}-\mathbf{a}))(\mathbf{b}-\mathbf{a}) \rVert \leq M\lVert \mathbf{b}-\mathbf{a} \rVert 
+> $$
+> for all $t\in[0, 1]$. It follows from the [[ANA1_L25#MVT analogue for vector valued functions|mean value theorem]] that for some $x\in[0, 1]$,
+> $$
+> \begin{align}
+> \lVert \mathbf{g}(1) -\mathbf{g}(0)\rVert \leq \lVert \mathbf{g}'(x) \rVert\leq M\lVert \mathbf{b}-\mathbf{a} \rVert .
+> \end{align}
+> $$
 
 > [!Theorem]
 > Let $S$ be an open connected subset of $\mathbb{R}^{n}$, and let $\mathbf{f}:S\to \mathbb{R}^{m}$ be differentiable at each point of $S$. If $\mathbf{f}'(\mathbf{c})=\mathbf{0}$ for each $\mathbf{c}$ in $S$, then $\mathbf{f}$ is constant on $S$.
+
+Follows as a corollary of the previous theorem by plugging $M=0$. Here's another proof.
 
 > **Proof**
 > Since $S$ is open and connected, it is polygonally connected, $i$.$e$, every pair of points $\mathbf{x}$ and $\mathbf{y}$ in $S$ can be joined by a polygonal arc lying in $S$. Denote the vertices of this arc by $\mathbf{p}_{1}, \dots, \mathbf{p}_{r}$, where $\mathbf{p}_{1}=\mathbf{x}$ and $\mathbf{p}_{r}=\mathbf{y}$. Since each segment $L(\mathbf{p}_{i+1}, \mathbf{p}_{i})\subseteq S$, the mean value theorem shows that

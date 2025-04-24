@@ -61,11 +61,13 @@ Ref: Apostol (Mathematical Analysis) ch12 & ch13, Rudin ch9
 	- The mean value theorem for differentiable functions
 - [[CAL1_L19]] ✅
 	- Sufficient conditions for differentiability and equality of mixed partial derivatives
-- [[CAL1_L20]]
+- [[CAL1_L20]] ✅
 	- Taylor's formula for functions from $\mathbb{R}^{n}$ to $\mathbb{R}$
 - [[CAL1_L21]]
 	- Inverse function theorem
 - [[CAL1_L22]]
 	- Implicit function theorem
 - [[CAL1_L23]]
-	- Lagrange multipliers
+	- Extrema of real valued functions
+- [[CAL1_L24]]
+	- Extremum problems with side conditions
