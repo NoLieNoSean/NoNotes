@@ -1,7 +1,7 @@
 ## Extremum problems with side conditions
 
 > [!Theorem]
-> Let $f$ be a real valued function such that $f\in C'$ on an open set $S$ in $\mathbb{R}^{n}$. Let $g_{1}, \dots, g_{m}$ be $m$ real valued functions such that $\mathbf{g}=(g_{1}, \dots, g_{m})\in C_{1}$ on $S$, and assume that $m\leq n$. Let $X_{0}$ be that subset of $S$ on which $\mathbf{g}$ vanished, that is, 
+> Let $f$ be a real valued function such that $f\in C'$ on an open set $S$ in $\mathbb{R}^{n}$. Let $g_{1}, \dots, g_{m}$ be $m$ real valued functions such that $\mathbf{g}=(g_{1}, \dots, g_{m})\in C_{1}$ on $S$, and assume that $m\leq n$. Let $X_{0}$ be that subset of $S$ on which $\mathbf{g}$ vanishes, that is, 
 > $$
 > X_{0}=\{ \mathbf{x}\ | \  \mathbf{x}\in S, \mathbf{g}(\mathbf{x})=\mathbf{0} \}.
 > $$
@@ -29,8 +29,17 @@ f'(\mathbf{x}) & =\begin{bmatrix}
 
  & =(A\mathbf{x}+A^{T}\mathbf{x})^{T} \\
  & =(2A\mathbf{x})^{T}.\\\\\\ 
-g'(x) & =[]
+g'(x) & =2\mathbf{x}^{T}
 \end{align}
 $$
-Clearly, $f$ is a $C^{1}$ mapping, and so is $g$.
-
+Clearly, $f$ is a $C^{1}$ mapping, and so is $g$. For $x_{1}\ne 0$, $\det[2x_{1}]\ne 0$. Let $\mathbf{p}$ be the point on $L$ where $f$ attains its maximum value. Then, there exists $\lambda$ such that
+$$
+\begin{align}
+ & 2A\mathbf{p}=\lambda 2\mathbf{p} \\
+ \implies & A\mathbf{p}=\lambda \mathbf{p}
+\end{align}
+$$
+So, $\lambda$ is an eigenvalue of $A$. Now, 
+$$
+f(\mathbf{p})=\mathbf{p}^{T}A\mathbf{p}=\lambda\mathbf{p}^{T}\mathbf{p}=\lambda.
+$$

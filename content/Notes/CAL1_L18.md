@@ -19,7 +19,7 @@ Recall the [[ANA1_L24#Mean value theorem|mean value theorem]] for functions from
 > $$
 > where $\mathbf{z}\equiv \mathbf{x}+\theta \mathbf{u}\in L(\mathbf{x}, \mathbf{y})$. Note that $F(1)-F(0)=\mathbf{a}\cdot \{ \mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x}) \}$ and we are done.
 
-We can now easily prove the weaker generalization stated [[ANA1_L25#MVT analogue for vector valued functions|here]]. Let $\mathbf{f}:S\to \mathbb{R}^{m}$ where $S\subseteq \mathbb{R}$ and $[x, y]\subseteq S$ be differentiable. Take $\boldsymbol{\alpha}$ to be $\mathbf{f}(y)-\mathbf{f}(x)$:
+We can now easily prove the weaker version stated [[ANA1_L25#MVT analogue for vector valued functions|here]]. Let $\mathbf{f}:S\to \mathbb{R}^{m}$ where $S\subseteq \mathbb{R}$ and $[x, y]\subseteq S$ be differentiable. Take $\boldsymbol{\alpha}$ to be $\mathbf{f}(y)-\mathbf{f}(x)$:
 $$
 \begin{align}
 \lVert \mathbf{f}(y)-\mathbf{f}(x) \rVert ^{2} & =(\mathbf{f}(y)-\mathbf{f}(x))\cdot(\mathbf{f}'(z)(y-x)) \\
@@ -77,6 +77,6 @@ Follows as a corollary of the previous theorem by plugging $M=0$. Here's another
 > $$
 > for every $\mathbf{a}\in \mathbb{R}^{m}$. Adding these equations for $i=1, 2, \dots, r-1$, we get
 > $$
-> \mathbf{a}(\mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x}))=0,
+> \mathbf{a}\cdot(\mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x}))=0,
 > $$
 > for every $\mathbf{a}$. Taking $\mathbf{a}=\mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x})$, we find $\mathbf{f}(\mathbf{x})=\mathbf{f}(\mathbf{y})$, so $\mathbf{f}$ is constant on $S$.

@@ -31,7 +31,7 @@
 > where $\mathbf{E}_{\mathbf{b}}(\mathbf{v})\to \mathbf{0}$ as $\mathbf{v}\to \mathbf{0}$. Using $(1)$, 
 > $$
 > \begin{align}
-> \mathbf{f}(\mathbf{b}-\mathbf{v})-\mathbf{f}(\mathbf{b}) & =\mathbf{f}'(\mathbf{b})[\mathbf{g}'(\mathbf{a})(\mathbf{y})]+\lVert \mathbf{y} \rVert \mathbf{f}'(\mathbf{b})[\mathbf{E}_{\mathbf{a}}(\mathbf{y})]+\lVert \mathbf{v} \rVert \mathbf{E}_{\mathbf{b}}(\mathbf{v}) \\
+> \mathbf{f}(\mathbf{b}+\mathbf{v})-\mathbf{f}(\mathbf{b}) & =\mathbf{f}'(\mathbf{b})[\mathbf{g}'(\mathbf{a})(\mathbf{y})]+\lVert \mathbf{y} \rVert \mathbf{f}'(\mathbf{b})[\mathbf{E}_{\mathbf{a}}(\mathbf{y})]+\lVert \mathbf{v} \rVert \mathbf{E}_{\mathbf{b}}(\mathbf{v}) \\
 >  & =\mathbf{f}'(\mathbf{b})[\mathbf{g}'(\mathbf{a})(\mathbf{y})]+\lVert \mathbf{y} \rVert \mathbf{E}(\mathbf{y}),
 > \end{align}
 > $$
@@ -53,7 +53,7 @@
 > $$
 > where $\mathbf{E}(\mathbf{y})\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. Thus, $\mathbf{h}$ is differentiable at $\mathbf{a}$, with derivative $\mathbf{f}'(\mathbf{b})\circ \mathbf{g}'(\mathbf{a})$.
 
-The matrix of $\mathbf{h}'(\mathbf{a})$ is given by
+The matrix of $\mathbf{h}'(\mathbf{a})$ is given by   
 $$
 \mathbf{D}\mathbf{h}(\mathbf{a})=\mathbf{D}\mathbf{f}(\mathbf{b})\mathbf{D}\mathbf{g}(\mathbf{a}).
 $$

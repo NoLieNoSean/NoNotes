@@ -30,7 +30,7 @@ Note that this is not a necessary condition.
 > **Proof**
 > The existence of $D_{j}\mathbf{f}$ implies the existence of every $D_{j}f_{k}$ and the continuity of $D_{j}\mathbf{f}$ [[ANA1_L15#Vector valued functions whose components are continuous|implies]] the continuity of each $D_{j}f_{k}$. Thus, thanks to the preceding lemma, it suffices to prove the theorem when $\mathbf{f}$ is real valued.
 > 
-> WLOG, assume that $D_{1}f(\mathbf{c})$ exists and that $D_{2}f, \dots, D_{n}f$ exist in $B(\mathbf{c})$ and are continuous at $\mathbf{c}$. [[CAL1_L16#Total derivatives in terms of partial derivatives|We know]] that if $f$ is differentiable at $\mathbf{c}$, then its derivative is given by the Jacobian matrix, which in this case is the gradient $\nabla f(\mathbf{c})$. Thus, we only have to prove that
+> WLOG, assume that $D_{1}f(\mathbf{c})$ exists at $\mathbf{c}$ and that $D_{2}f, \dots, D_{n}f$ exist in $B(\mathbf{c})$ and are continuous at $\mathbf{c}$. [[CAL1_L16#Total derivatives in terms of partial derivatives|We know]] that if $f$ is differentiable at $\mathbf{c}$, then its derivative is given by the Jacobian matrix, which in this case is the gradient $\nabla f(\mathbf{c})$. Thus, we only have to prove that
 > $$
 > f(\mathbf{c}+\mathbf{v})-f(\mathbf{c})=\nabla f(\mathbf{c})\cdot \mathbf{v}+\lVert \mathbf{v} \rVert E_{\mathbf{c}}(\mathbf{v})
 > $$

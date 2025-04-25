@@ -5,8 +5,7 @@ tags:
 date: 2025-04-12
 time: 12:00
 ---
-
-## Probabilistic methods
+# Probabilistic methods in DM: Example 1
 
 > [!Theorem] Claim
 > Every graph can be converted to a bipartite graph by deleting edges. Moreover, every graph with $m$ edges has a bipartite graph with at least $m/2$ edges (so one has to remove at most $m/2$ edges to make the graph bipartite.)
@@ -25,9 +24,14 @@ What is the expected number of edges who's terminals are colored red and blue? E
 
 ---
 
-## Back to matching problems
+# Back to matching problems: Konig's theorem
 
 Recall: a vertex cover is a set of vertices such that each edge has at least one endpoint in the set. An edge cover is similarly defined. 
+
+> [!Theorem] Claim
+> If $M$ is a [[DMAT_L21#Matchings|matching]] and $U$ is a vertex cover of $G$, then $|M|\leq |U|$.
+
+Thus, we can use vertex covers to get an upper bound on the size of a maximum matching in a graph. The smallest vertex cover would provide us with the best upper bound. We can do one better for bipartite graphs, where the minimum vertex cover size is actually equal to the maximum matching size.
 
 > [!Theorem] Konig's theorem
 > The maximum cardinality of a matching in a bipartite graph $G$ is equal to the minimum cardinality of a vertex cover of its edges.
@@ -47,22 +51,34 @@ An alternating path is a path which starts in $A$ at an unmatched vertex, then a
 
 
 ---
-## Matching in general graphs
+# Matching in general graphs
 
-> [!Definition]
-> A 1-factor is a spanning 1 regular subgraph (its edge set is a perfect matching).
+## Tutte's theorem
 
-In a graph $H$, let $o(H)$ be the number of odd components (odd number of vertices). In a graph $G$, a necessary condition for a 1-factor is the following: $o(G\setminus S)\leq |S|$ whenever $S\subseteq V(G)$. Tutte's condition claims that this is also a sufficient condition.
+We will now characterize all graphs with perfect matchings. Observe that the following is clearly a necessary condition for a perfect matching to exist in a graph $G$:
 
+>For every vertex subset $U$ in $G$, the graph $G\setminus U$ has at most $|U|$ odd connected components (connected components having an odd number of vertices).
 
+Tutte's condition claims that this is also a sufficient condition.
+
+> [!Theorem] Tutte's theorem
+> A graph $G=(V, E)$ has a prefect matching if and only if for every subset $U$ of $V$, the subgraph $G\setminus U$ has at most $|U|$ odd connected components.
+
+## The Tutte matrix
+
+The Tutte matrix provides an algebraic method to check for the existence of perfect matchings, much like the [[DMAT_L21#Perfect matchings in bipartite graphs|Edmonds matrix]]. 
+
+If the set of vertices is $V=\{ 1, 2, \dots, n \}$, the the Tutte matrix is an $n\times n$ skew-symmetric matrix $A$ with entries
+$$
+A=\begin{cases}
+x_{ij} & (i, j)\in E\text{ and }i< j \\
+-x_{i, j} & (i, j)\in E \text{ and }i> j \\
+0 & \text{otherwise}
+\end{cases}
+$$
+where $x_{ij}$ are indeterminates. The determinant $A$ is a polynomial in the $x_{ij}$s and is non-zero (as a polynomial) iff a perfect matching exists.
 
 ---
 references
 - The probabilistic method by noga alon and spencer (chapter 1)
 - handout: pairwise-indepdendence, k-wise independence, inequalities (Markov, Chebyshev, cherwff smth)
-- 
-
----
-## Finite fields
-
-[[Finite fields]]

@@ -1,7 +1,7 @@
-## Expectation of continuous random variables
+# Expectation of continuous random variables
 
 > [!Definition]
-> Let $X$ be a continuous random variable with density $f$. $X$ is said to have *finite expectation* if
+> Let $X$ be a continuous random variable with density $f$. $X$ is said to have **finite expectation** if
 > $$
 > \int_{-\infty}^{\infty} |t|f(t) \, dt< \infty, 
 > $$
@@ -20,7 +20,7 @@
 > $$
 
 > **Proof**
-> Our proof is not going to be analytically rigorous.
+> Our proof is not analytically rigorous.
 > $$
 > \begin{align}
 > \int_{0}^{\infty} (1-F(x)) \, dx  & =\int_{0}^{\infty} \left( \int_{x}^{\infty} f(t) \, dt \right)  \, dx 
@@ -84,7 +84,7 @@ Since integration is a linear operator, it follows that $E(X+Y)=E(X)+E(Y)$, as w
 > $$
 
 ---
-## Moments of continuous random variables
+# Moments of continuous random variables
 
 Defined analogously to [[PROB_L7#Moments|moments of discrete random variables]].
 
@@ -107,7 +107,7 @@ Defined analogously to [[PROB_L7#Moments|moments of discrete random variables]].
 > $$
 
 ---
-## Joint distributions 
+# Joint distributions 
 
 We say the random vector $(X, Y)$ has density $f_{X, Y}$ if
 $$
@@ -174,7 +174,7 @@ This allows us to prove the linearity of expectation.
 > $$
 
 ---
-## Independent continuous random variables
+# Independent continuous random variables
 
 > [!Definition]
 > Random variables $X$ and $Y$ are **independent** if the events $\{ X\leq x \}$ and $\{ Y\leq y \}$ are independent, that is, $F(x, y)=F_{X}(x)F_{Y}(y)$. 

@@ -70,15 +70,25 @@ tags:
 - [[DMAT_L20]] ✅
 	- Connectivity, blocks, ear decomposition
 - [[DMAT_L21]]
-	- Matchings in bipartite graphs, Hall's marriage theorem, counting perfect matchings
+	- Matchings in bipartite graphs, Hall's marriage theorem, Edmonds matrix
 - [[DMAT_L22]]
 	- Proof of Hall's using M-alternating paths, some matroid stuff
 - [[DMAT_L23]]
-	- Probabilistic methods in graph theory, Konig's theorem, matching in non-bipartite graphs, finite fields
+	- Probabilistic proof example 1, Konig's theorem, Tutte's theorem
 - [[DMAT_L24]]
-	- Proper 2-coloring of hypergraphs, planar graphs, greedy algorithm to color graphs, chromatic polynomial
+	- Probabilistic proof example 2, planar graphs
 - [[DMAT_L25]]
+	- Greedy coloring algorithm, chromatic polynomial, coloring planar graphs, tournaments
 
+
+Probabilisitc methods (handout)
+Planar graphs (handout)
+Matching problems
+Greedy coloring algorithm
+Chromatic polynomial
+coloring planar graphs
+tournaments
+Sunaina's handout
 
 ---
 # Tutorials

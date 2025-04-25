@@ -1,9 +1,9 @@
-## Continuous random variables
+# Continuous random variables
 
 What follows is the general definition of a random variable.
 
 > [!Definition]
-> Let $(\Omega, \mathcal{A}, P)$ be a probability space. A function $X:\Omega\to \mathbb{R}$ is a random variable if $\{ X\leq x \}\in \mathcal{A}$ for all $x\in \mathbb{R}$.
+> Let $(\Omega, \mathcal{A}, P)$ be a probability space. A function $X:\Omega\to \mathbb{R}$ is a **random variable** if $\{ X\leq x \}\in \mathcal{A}$ for all $x\in \mathbb{R}$.
 
 It follows from the definition that for all intervals of the form $(a, b]$, $a< b$, $X^{-1}(a, b]$ is in $\mathcal{A}$. Since $\mathcal{A}$ is closed under countable intersections, it follows that the preimages of all intervals of all types are in $\mathcal{A}$ (including singletons). Additionally, since every open set in $\mathbb{R}$ is an [[ANA1_HW4_sub.pdf|at most countable disjoint union of open intervals]], the preimage of every open set is in $\mathcal{A}$. It follows that the preimage of every closed set is also in $\mathcal{A}$. 
 
@@ -12,14 +12,15 @@ Note that this definition is compatible with our earlier definition of a [[PROB_
 Recall our definition of the [[PROB_L3#The distribution function|distribution function]] $F$ of a random variable $X$ and its properties. In particular, we showed that $F(x+)-F(x-)=P(X=x)$. We motivate the definition of a continuous random variable by our desire for the distribution function to be continuous:
 
 > [!Definition]
-> A random variable $X$ is called a *continuous random variable* if $P(X=x)=0$ for all $x\in \mathbb{R}$.
+> A random variable $X$ is called a **continuous random variable** if $P(X=x)=0$ for all $x\in \mathbb{R}$.
 
 Observe that $X$ is a continuous random variable iff its distribution function is continuous at every $x$. 
 
-### Densities of continuous random variables
+---
+# Densities of continuous random variables
 
 > [!Definition]
-> A *density function with respect to integration* is a nonnegative integrable function $f$ such that 
+> A **density function with respect to integration** is a nonnegative integrable function $f$ such that 
 > $$
 > \int_{-\infty}^{\infty} f(x) \, dx =1.
 > $$
@@ -42,7 +43,7 @@ If $X$ is a random variable having density $f$, then
 $$
 P(a\leq X\leq b)=\int_{a}^{b} f(x) \, dx\quad a\leq b.
 $$
-#### Densities of functions of continuous random variables
+## Densities of functions of continuous random variables
 
 > [!Example]
 > Let $X$ be a continuous random variable having density $f$. Let $Y=X^{2}$. What is the density of $Y$? 
@@ -93,7 +94,8 @@ The following theorem provides a general solution for some functions of $X$.
 > $$
 
 [[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=131|proof]]
-#### Symmetric densities
+## Common density functions
+### Symmetric densities
 
 > [!Definition]
 > A density function $f$ is called *symmetric* if $f(x)=f(-x)$ for all $x$.
@@ -121,7 +123,7 @@ We prove this for continuous random variables; the proof for discrete random var
 > Let $X$ be a symmetric random variable, that is, $X$ and $-X$ have the same distribution function. Now, if $g$ is a density of $X$, it follows that $g$ is also a density of $-X$. From the previous theorem, we have $g(x)=g(-x)$.
 
 If a continuous distribution function $F$ has a symmetric density $f$, then $f(0)=1/2$. The values of negative $x$s can be calculated using the values of positive $x$s : $F(-x)=1-F(x)$. 
-#### Uniform density
+### Uniform density
 
 > [!Definition]
 > Let a and $b$ be constants with $a\leq b$. The *uniform density* on the interval $(a, b)$ is the density $f$ defined by 
@@ -168,11 +170,11 @@ F_{F^{-1}(Y)}(x) & =P(F^{-1}(Y)\leq x) \\
  & =F(x).
 \end{align}
 $$
-Thus, given any continuous strictly increasing distribution function, there exists a random variable with that distribution. 
-#### Normal density
+Thus, *given any continuous strictly increasing distribution function, there exists a random variable with that distribution*. 
+### Normal density
 
 > [!Definition]
-> The *standard normal density* is usually denoted by $\varphi$, and is defined by
+> The **standard normal density** is usually denoted by $\varphi$, and is defined by
 > $$
 > \varphi(x)=\frac{1}{\sqrt{ 2\pi }}e^{-x^{2}/2}.
 > $$
@@ -212,10 +214,10 @@ $$
 a+b(\mu+\sigma X)=(a+b\mu)+b\sigma X\sim n(a+b\mu, b^{2}\sigma^{2})
 $$
 where $X\sim n(0, 1)$.  
-#### Exponential density
+### Exponential density
 
 > [!Definition]
-> The *exponential density with parameter $\lambda$* is the density $f$ defined by
+> The **exponential density with parameter $\lambda$** is the density $f$ defined by
 > $$
 > f(x)=\begin{cases}
 > \lambda e^{-\lambda x} & x\geq 0 \\
@@ -230,7 +232,7 @@ F(x)=\begin{cases}
 0 & x< 0. 
 \end{cases}
 $$
-An important property of exponentially distributed random variables is that if $X$ is such a variable, then
+An important property of exponentially distributed random variables is the following:
 $$
 P(X> a)P(X> b)=P(X> a+b),\quad a\geq 0\text{ and }b\geq 0,
 $$
@@ -246,10 +248,10 @@ The above property actually characterizes the family of exponential distribution
 > Let $X$ be random variable such that $P(X> a)P(X> b)=P(X> a+b)$ holds for all $a, b\in \mathbb{R}$. Then either $P(X\geq 0)=0$ or $X$ is exponentially distributed.
 
 [[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=138|proof]]
-#### Cauchy density
+### Cauchy density
 
 > [!Definition]
-> The *Cauchy density* is the density $f$ given by
+> The **Cauchy density** is the density $f$ given by
 > $$
 > f(x)=\frac{1}{\pi(1+x^{2})},\quad x\in \mathbb{R}.
 > $$
@@ -258,7 +260,7 @@ The above property actually characterizes the family of exponential distribution
 > If $X\sim\text{Cauchy}$, then $\frac{1}{X}\sim\text{Cauchy}$.
 
 It can be easily shown that if $X\sim\text{Cauchy}$, $X$ does not have finite expectation. 
-#### Gamma density
+### Gamma density
 
 Consider functions $g$ of the form
 $$
@@ -289,7 +291,7 @@ $$
 The normalized function $g/c$ is called the *gamma density* with parameters $\alpha$ and $\lambda$, denoted by $\Gamma(\alpha, \lambda)$. 
 
 > [!Definition]
-> The *gamma density* is defined as follows.
+> The **gamma density** is defined as follows.
 > $$
 > \Gamma(x;\alpha, \lambda)\equiv \begin{dcases}
 > \frac{\lambda^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{ -\lambda x } &  x> 0 \\
@@ -297,7 +299,8 @@ The normalized function $g/c$ is called the *gamma density* with parameters $\al
 > \end{dcases}
 > $$
 
-The exponential densities are special cases of gamma densities. Specifically, the exponential density with parameter $\lambda$ is the same as the gamma density $\Gamma(1, \lambda)$. 
+> [!Important]
+> The exponential density is a special case of the gamma density. Specifically, the exponential density with parameter $\lambda$ is the same as the gamma density $\Gamma(1, \lambda)$. 
 
 > [!Note] Properties of the gamma function
 > $$
@@ -352,7 +355,7 @@ This formula provides a connection between a random variable $X\sim\Gamma(m, \la
 $$
 P(X\leq x)=P(Y\geq m).
 $$
- 
+
 > [!Note] Expectation of the gamma distribution
 > Let $X\sim\Gamma(\alpha, \lambda)$. Then, 
 > $$

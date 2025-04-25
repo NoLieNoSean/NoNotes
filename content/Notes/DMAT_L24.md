@@ -5,14 +5,13 @@ tags:
 date: 2025-04-16
 time: 11:58
 ---
-## More on probabilistic methods
-### Proper 2-coloring of hypergraphs
+# Probabilistic methods in DM: Example 2
 
-A hypergraph is made of hyperedges, which may connect more than two vertices.
+A **hypergraph** is made of **hyperedges**, which may connect more than two vertices.
 
-A hypergraph is properly 2-colorable if its vertices can be assigned one of two colors (typically red and blue) in such a way that no hyperedge is entirely composed of vertices of the same color. 
+A hypergraph is properly **2-colorable** if its vertices can be assigned one of two colors (typically red and blue) in such a way that no hyperedge is entirely composed of vertices of the same color.
 
-A hypergraph is k-uniform if every hyperedge has $k$ vertices.
+A hypergraph is **k-uniform** if every hyperedge has $k$ vertices.
 
 > [!Theorem]
 > If $H$ is a $k$-uniform hypergraph with less than $2^{k-1}$ hyperedges, then $H$ is 2-colorable.
@@ -34,18 +33,15 @@ A hypergraph is k-uniform if every hyperedge has $k$ vertices.
 > $$
 
 ---
-
-## Planar graphs
+# Planar graphs 
 
 $K_{4}$ is easily shown to be planar. $K_{5}$ and $K_{3, 3}$ are famous examples of non-planar graphs.
-
-
 
 > [!Definition]
 > A **region** is an open set $U$ that contains a polygonal $u$-$v$ path for every $u, v\in U$. 
 > The **faces** of a planar graph are maximal regions of the plane that are disjoint (when the planar graph is drawn without any crossings, of course).
 
-The jordan curve theorem says that any closed polygonal path divides the plane into two regions. 
+The Jordan curve theorem says that any closed polygonal path divides the plane into two regions. 
 
 > [!Theorem] Euler's formula
 > If a connected planar graph $G$ has exactly $n$ vertices, $e$ edges, and $f$ faces, $n-e+f=2$.
@@ -63,19 +59,5 @@ If $e(G)\geq n$, then $G$ contains a cycle $C$. Choose an edge $g$ in $C$ such t
 exercise, by induction
 
 Moreover, if $G$ is triangle free, then $e(G)\leq 2|G|-4$.
-
----
-## Graph coloring
-
-> [!Definition]
-> The **chromatic number**, denoted by $\chi(G)$, of a graph is the minimum number of colors required to color it.
-
-looked at a greedy algorithm to assign colors. uses at most $d(G)+1$ colors. does not always yield chromatic number. Bipartite graphs (which are 2-colorable) can be constructed for which the algo used $n/2$ colors. 
-
----
-
-Look this up: chromatic polynomial
-
-$C_{G}(\lambda)=C_{G-e}(\lambda)+C_{G\cdot e}(\lambda)$.
 
 

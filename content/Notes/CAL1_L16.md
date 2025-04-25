@@ -103,3 +103,17 @@ The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point 
 > If $U$ is an open subset of $\mathbb{R}^{n}$, and $\mathbf{f}:U\to \mathbb{R}^{m}$ is a $C^{1}$ mapping, then $\mathbf{f}$ is differentiable on $U$, and its derivative is given by its Jacobian matrix.
 
 This is a special case of a [[CAL1_L19#A sufficient condition for differentiability|more general criterion]] which relaxes the hypothesis slightly.
+
+
+---
+
+## Euler's theorem
+
+[!Theorem]
+Let $f$ be defined on an open set $S$ in $\mathbb{R}^{n}$.  Assume $f$ is homogeneous of degree $p$ over $S$. If $f$ is differentiable at $\mathbf{x}$, 
+$$
+\mathbf{x}\cdot \nabla f(\mathbf{x})=pf(\mathbf{x}).
+$$
+
+**Proof**
+For fixed $\mathbf{x}$, define $g(\lambda)\equiv f(\lambda \mathbf{x})$. $g'(\lambda)=f'(\lambda \mathbf{x})\mathbf{x}$, so $g'(1)=f'(\mathbf{x})\mathbf{x}=\nabla f(\mathbf{x})\cdot \mathbf{x}$. Also, $g(\lambda)=\lambda^{p}f(\mathbf{x})$, so $g'(\lambda)=p\lambda^{p-1}f(\mathbf{x})$, and $g'(1)=pf(\mathbf{x})$.

@@ -6,7 +6,7 @@
 > - class assignment, 10
 # Lecture notes
 
-These notes have been reorganised because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
+These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
 
 - [[CAL1_L1]] ✅
 	- The p-norm

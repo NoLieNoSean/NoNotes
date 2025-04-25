@@ -5,7 +5,7 @@ tags:
 date: 2025-04-07
 time: 11:56
 ---
-## Matchings
+# Matchings
 
 > [!Definition]
 > 1. A **matching** $M$ is a subset of edges of a graph $G=(V, E)$ such that there is no vertex $v$ that is adjacent to two different edges in $M$.
@@ -18,7 +18,7 @@ For a perfect matching to exist, the graph must have an even number of vertices.
 > 1. A **maximum matching** covers the largest possible number of vertices.
 > 2. A matching $M$ is called a **maximal matching** if it is no longer a matching after the addition of any edge.
 
-### Perfect matchings in bipartite graphs
+## Perfect matchings in bipartite graphs
 
 **Hall's condition** is an easy to verify necessary condition for the existence of a perfect matching in a bipartite graph. A bipartite graph with bipartition $L\sqcup R$ satisfies Hall's condition if for every $U\subseteq L$, $|N(U)|\geq |U|$, where $N(U)$ is the neighborhood of $U$.
 
@@ -32,7 +32,7 @@ When the sets of the bipartition have the same size, Hall's Theorem is called **
 **Proof of $\impliedby$**
 We induct on $|L|$. The implication trivially holds for $|L|=1$. For $|L|=k> 1$, choose an arbitrary vertex $a\in L$. Since $|N(\{ a \})|\geq 1$, there exists a neighbor of $a$ in $R$, which we'll call $b$. 
 
-### Counting perfect matchings in bipartite graphs
+## Counting perfect matchings in bipartite graphs
 
 A bipartite graph $G=(L\sqcup R, E)$ is called **balanced** if $|L|=|R|$.
 
@@ -92,4 +92,4 @@ So, to test if a perfect matching exists, you
 
 If the result is nonzero, then a perfect matching *definitely exists*. If the result is zero, there’s a small chance you hit a root; repeat with new random values to reduce error probability.
 
-The **Tutte matrix** generalizes the Edmonds matrix to arbitrary (not necessarily bipartite) graphs.
+The [[DMAT_L23#Matching in general graphs|Tutte matrix]] generalizes the Edmonds matrix to arbitrary (not necessarily bipartite) graphs.
