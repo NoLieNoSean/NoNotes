@@ -5,14 +5,12 @@ tags:
 date: 2025-02-19
 time: 11:50
 ---
-
-
 ## PHP and Ramsey theory
 
 > [!Theorem] General form of PHP
 > Let $X$ be a finite set. You have $r$ colors $\{ 1,2,\dots, r \}$. $|X|\geq \sum_{i=1}^{r}a_{i}-r+1$ guarantees existence of $a_{1}$ points colored $1$ or $a_{2}$ points colored 2, or so on.
 
-Now, Let $X$ be the vertex set of a graph. $r$ color all edges (subsets of size 2). What is the condition on $|X|$ such that, given positive integers $\{ a_{1}, a_{2}, \dots, a_{r} \}$, for some $i$, there exists a subset of $X$ of size $a_{i}$ all of whose edges have the same color.
+Now, Let $X$ be the vertex set of a graph. $r$ color all edges (subsets of size 2). What is the condition on $|X|$ such that, given positive integers $\{ a_{1}, a_{2}, \dots, a_{r} \}$, for some $i$, there exists a subset of $X$ of size $a_{i}$ all of whose edges have the same color?
 
 Notation: $R^{*}(\text{no. of colors}, \text{subset size}; a_{1}, a_{2}, \dots, a_{r})$ is the minimum number of $|X|$ such that the above property is satisfied. For example, $R^{*}(2, 2; 3, 3)=6$, $R^{*}(2, 2; 3, 4)=9$. We know that $43\leq R^{*}(2, 2; 5, 5)\leq 46$, but do not know its exact value.
 

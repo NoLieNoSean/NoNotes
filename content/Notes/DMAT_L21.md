@@ -32,6 +32,9 @@ When the sets of the bipartition have the same size, Hall's Theorem is called **
 **Proof of $\impliedby$**
 We induct on $|L|$. The implication trivially holds for $|L|=1$. For $|L|=k> 1$, choose an arbitrary vertex $a\in L$. Since $|N(\{ a \})|\geq 1$, there exists a neighbor of $a$ in $R$, which we'll call $b$. 
 
+> [!Corollary]
+> For $k> 0$, every $k$-regular bipartite graph has a perfect matching.
+
 ## Counting perfect matchings in bipartite graphs
 
 A bipartite graph $G=(L\sqcup R, E)$ is called **balanced** if $|L|=|R|$.

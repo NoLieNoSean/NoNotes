@@ -46,7 +46,7 @@ $$
 Claim: the chromatic polynomial of a graph can be computed using $(*)$ repeatedly as a sum of chromatic polynomials of complete graphs. This also justifies why $M_{G}(\lambda)$ is a polynomial, since $M_{K_{k}}(\lambda)$ is clearly a polynomial in $\lambda$ for all $k$.
 ## Coloring planar graphs
 
-Exercise: Prove using Euler's theorem that (every planar graph has at least one vertex with degree at most $5$)
+Exercise: Prove using Euler's theorem (every planar graph has at least one vertex with degree at most $5$)
 
 > [!Claim]
 > Every planar graph is $6$-colorable.
@@ -57,7 +57,11 @@ Induction on number of vertices of $G$. Let $G$ be a planar graph with $k+1$ ver
 ---
 # Tournaments
 
-Exercise: every tournament contains a Hamiltonian path.
+> [!Definition]
+> A **tournament** is an orientation of an undirected complete graph.
+
+> [!Claim]
+> Every tournament contains a Hamiltonian path.
 
 There are tournaments with only one hamiltonian path (think of an example)
 
@@ -83,7 +87,4 @@ There are tournaments with only one hamiltonian path (think of an example)
 > $$
 > then there exists a tournament $T_{n}$ with property $S_{k}$.
 
-
-
----
 

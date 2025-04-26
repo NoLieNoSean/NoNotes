@@ -79,6 +79,7 @@ tags:
 	- Probabilistic proof example 2, planar graphs
 - [[DMAT_L25]]
 	- Greedy coloring algorithm, chromatic polynomial, coloring planar graphs, tournaments
+- [[DMAT_L26]]
 
 
 Probabilisitc methods (handout)
@@ -111,3 +112,7 @@ Sunaina's handout
 ---
 
 tut - maximum number of edges possible in a graph which does not have a triangle in it??
+
+$3F\leq {2}E$
+Combine with euler to get $3V-E\geq 6$, or $E\leq 3V-6$. This easily proves that every planar graph
+

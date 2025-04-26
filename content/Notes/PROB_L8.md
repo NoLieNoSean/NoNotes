@@ -195,7 +195,7 @@ $$
  & = \sqrt{ 2\pi },
 \end{align}
 $$
-so the function $e^{-x^{2}/2}/\sqrt{ 2\pi }$ is a density function. (Nobody seems to know a way to evaluate the above integral besides this whacky trick). 
+so the function $e^{-x^{2}/2}/\sqrt{ 2\pi }$ is a density function. (Nobody seems to know a way to evaluate the above integral besides this whacky trick).
 
 Let $X$ be a random variable having the standard normal density $\varphi$ and let $Y=\mu+\sigma X$, where $\sigma> 0$. Then, by the preceding example, $Y$ has the density $g$ given by
 $$

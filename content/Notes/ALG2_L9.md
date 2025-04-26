@@ -156,6 +156,9 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 > [!Theorem] Corollary
 > If $H$ is an abelian normal subgroup of $G$ and $H$ is not contained in $Z(G)$, then there is some $g\in G$ such that conjugation by $g$ restricted to $H$ is not an inner automorphism of $H$. 
 
+> **Proof**
+> If for all $g\in G$, conjugation by $g$ restricted to $H$ is an inner automorphism of $H$ (note that since $H$ is abelian, all inner automorphisms of $H$ are trivial), $ghg^{-1}=h$ for all $h\in H$. This would imply $H\leq Z(G)$, a contradiction.
+
 ### Automorphism groups
 
 > [!Theorem]
@@ -177,9 +180,6 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 > $$
 > \Phi(\phi_{a}\circ \phi_{b})=\Phi(\phi_{ab})=ab\mod n=\Phi(\phi_{a})\Phi(\phi_{b}).
 > $$
-
-
-
 ### Characteristic groups
 
 > [!Definition]

@@ -10,25 +10,22 @@ time: 12:00
 > [!Theorem] Claim
 > Every graph can be converted to a bipartite graph by deleting edges. Moreover, every graph with $m$ edges has a bipartite graph with at least $m/2$ edges (so one has to remove at most $m/2$ edges to make the graph bipartite.)
 
-**Probabilistic Proof**
-The lemma is equivalent to showing "every graph vertex set can be partitioned into two parts such that there are at least $m/2$ edges between the two parts". 
-
-Assign every vertex a color (R/B) uniformly and independently at random. Let $E'$ denote the subset of edges whose terminals are colored red and blue. We want to find $\mathbb{E}(|E'|)$.
-
-What is the expected number of edges who's terminals are colored red and blue? Every edge in $E$ occurs in $E'$ with probability $1/2$. Let $X_{1}, \dots, X_{m}$ be indicator variables such that $|E'|=\sum X_{i}$. Then, $\mathbb{E}(|E'|)=\mathbb{E}\left( \sum X_{i} \right)=\frac{m}{2}$. Thus, there must exist a coloring where $|E'|\geq m/2$.
-
-
-**Algorithmic proof**
-
-...
+> **Probabilistic Proof**
+> The lemma is equivalent to showing "every graph vertex set can be partitioned into two parts such that there are at least $m/2$ edges between the two parts". 
+> 
+> Assign every vertex a color (R/B) uniformly and independently at random. Let $E'$ denote the subset of edges whose terminals are colored red and blue. We want to find $\mathbb{E}(|E'|)$.
+> 
+> Every edge in $E$ occurs in $E'$ with probability $1/2$. Let $X_{1}, \dots, X_{m}$ be indicator variables such that $|E'|=\sum X_{i}$. Then, $\mathbb{E}(|E'|)=\mathbb{E}\left( \sum X_{i} \right)=\frac{m}{2}$. Thus, there must exist a coloring where $|E'|\geq m/2$.
 
 ---
-
 # Back to matching problems: Konig's theorem
 
-Recall: a vertex cover is a set of vertices such that each edge has at least one endpoint in the set. An edge cover is similarly defined. 
+> [!Definition]
+> A **vertex cover** is a set of vertices such that each edge has at least one endpoint in the set. An edge cover is similarly defined. 
 
-> [!Theorem] Claim
+Since no vertex can cover two edges of a matching, the size of every vertex cover is at least the size of every matching.
+
+> [!Theorem] Observation
 > If $M$ is a [[DMAT_L21#Matchings|matching]] and $U$ is a vertex cover of $G$, then $|M|\leq |U|$.
 
 Thus, we can use vertex covers to get an upper bound on the size of a maximum matching in a graph. The smallest vertex cover would provide us with the best upper bound. We can do one better for bipartite graphs, where the minimum vertex cover size is actually equal to the maximum matching size.

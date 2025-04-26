@@ -3,7 +3,7 @@
 Note that the following lemma is a special case of [[ALG2_L3#Cauchy's Theorem|Cauchy's theorem]], which we have already proved.
 
 > [!Theorem] Lemma
-> If $G$ is a finite abelian group and $p$ is a prime dividing $|G|$, then $G$ contains an element of order $p$.
+> If $G$ is a finite abelian group and $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
 
 > **Alternate proof using induction**
 > Fix a prime $p$. Complete induction on $|G|$. Vacuously true for $|G|< p$. If $|G|=p$, $G$ is cyclic, and has an element of order $p$. 

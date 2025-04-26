@@ -18,33 +18,58 @@
 >  & =\int_{0}^{\infty} (1-F(x)) \, dx 
 > \end{align}
 > $$
-
-> **Proof**
-> Our proof is not analytically rigorous.
-> $$
-> \begin{align}
-> \int_{0}^{\infty} (1-F(x)) \, dx  & =\int_{0}^{\infty} \left( \int_{x}^{\infty} f(t) \, dt \right)  \, dx 
-> \end{align}
-> $$
-> You can think of the integral on the right as integrating the function $f(t, x)=f(t)$ on the region $\{ (x, t):0\leq x\leq \infty, x\leq t\leq \infty \}$. This region can also be expressed as $\{ (x, t): 0\leq t\leq \infty, 0\leq x\leq t \}$. Thus, the integral becomes
-> $$
-> \begin{align}
-> \int_{0}^{\infty} \left( \int_{0}^{t} f(t) \, dx \right)  \, dt
-> \end{align}=\int_{0}^{\infty} tf(t) \, dt =E(X).
-> $$
+> 
+> > [!Proof]-
+> > This proof is not analytically rigorous.
+> > $$
+> > \begin{align}
+> > \int_{0}^{\infty} (1-F(x)) \, dx  & =\int_{0}^{\infty} \left( \int_{x}^{\infty} f(t) \, dt \right)  \, dx 
+> > \end{align}
+> > $$
+> > You can think of the integral on the right as integrating the function $f(t, x)=f(t)$ on the region $\{ (x, t):0\leq x\leq \infty, x\leq t\leq \infty \}$. This region can also be expressed as $\{ (x, t): 0\leq t\leq \infty, 0\leq x\leq t \}$. Thus, the integral becomes
+> > $$
+> > \begin{align}
+> > \int_{0}^{\infty} \left( \int_{0}^{t} f(t) \, dx \right)  \, dt
+> > \end{align}=\int_{0}^{\infty} tf(t) \, dt =E(X).
+> > $$
+> 
 
 More generally, if $X$ is not positive, 
 $$
 EX=\int_{0}^{\infty}(1-F(x))  \, dx -\int_{-\infty}^{0} F(x) \, dx 
 $$
+(Yes, the sign ahead of the second integral in negative, not positive. Check your integration limits.)
 
 > [!Theorem] LOTUS
 > Let $X$ be a continuous random variable with density $f$. Let $g:\mathbb{R}\to \mathbb{R}$ be such that $g(X)$ is a continuous random variable. Then,
 > $$
 > E(g(X))=\int_{-\infty}^{\infty} g(x)f(x) \, dx.
 > $$
+> 
+> > [!Proof]-
+> > $$
+> > E(g(X))=\int_{0}^{\infty}(1-F_{g(X)}(u))  \, du -\int_{-\infty}^{0} F_{g(X)}(u) \, du
+> > $$
+> > 
+> > $$
+> > \begin{align}
+> > & \int_{0}^{\infty} (1-F_{g(X)}(u)) \, du \\
+> >   & =\int_{0}^{\infty} P(g(X)> u) \, du \\
+> >   & =\int_{0}^{\infty} \int_{B}f_{X}(y)\,dy \, du  & B=\{ y\ | \  g(y)> u \}  \\
+> >  & = \int_{0}^{\infty} \int_{0}^{g(y)} f_{X}(y) \, du  \, dy \\
+> >  & =\int_{0}^{\infty} g(y)f_{X}(y) \, dy   \\
+> >  \\
+> >  & \int_{-\infty}^{0} F_{g(X)}(u) \, du \\
+> >  & =\int_{-\infty}^{0} P(g(X)\leq u) \, du \\
+> >  & =\int_{-\infty}^{0} \int_{B}f_{X}(y)\,dy \, du  & B=\{ y\ | \  g(y)< u \} \\
+> >  & =\int_{-\infty}^{0} \int_{g(y)}^{0} f_{X}(y) \, du  \, dy  \\
+> >  & =-\int_{-\infty}^{0} g(y)f_{X}(y)  \, dy
+> > \end{align}
+> > $$
+> > 
+> 
 
-Note that Vasanth erred here; $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$. 
+Note that Vasanth erred here; if $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$.
 
 > [!Example]
 > Let $X\sim n(0,  1)$. Clearly, 
@@ -57,29 +82,19 @@ Note that Vasanth erred here; $g$ is form $\mathbb{R}$ to $[0, \infty)$, the int
 > $$
 > since the integrand is an odd function.
 
-Since integration is a linear operator, it follows that $E(X+Y)=E(X)+E(Y)$, as with discrete random variables. We can now define variance to be $E[(X-\mu)^{2}]$, which simplifies to $E(X^{2})-\mu^{2}$.
+## Variance
+
+We can now define **variance** to be $E[(X-\mu)^{2}]$, which simplifies to $E(X^{2})-\mu^{2}$ (assume linearity of expectation for the moment).
 
 > [!Example]
 > Let $X\sim n(0, 1)$. $\text{Var}(X)=E(X^{2})-\mu=E(X^{2})$. Note that
 > $$
 > \frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty} |t^{2}|e^{-t^{2}/2} \, dt =1< \infty.
 > $$
-> Using a generalization of the first property [[PROB_L7#Properties of expectation|here]] with $\varphi(x)=x^{2}$, we have
+> Using the LOTUS property with $\varphi(x)=x^{2}$ yields
 > $$
 > \begin{align}
 > E(X^{2})=\frac{1}{\sqrt{ 2\pi }}\int_{-\infty}^{\infty} t^{2}e^{ -t^{2}/2 } \, dt=1. 
-> \end{align}
-> $$
-
-> [!Theorem]
-> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$. Then, $E(X)=E(X^{+})-E(X^{-})$.
-
-> **Proof**
-> $$
-> \begin{align}
-> E(X) & =\int_{-\infty}^{\infty} xf(x) \, dx 
->  \\ & =\int_{-\infty}^{\infty} \max(x, 0)f(x)\,dx-\int_{-\infty}^{\infty}\max(-x, 0)f(x) \, dx \\
->  & =E(X^{+})-E(X^{-}).
 > \end{align}
 > $$
 

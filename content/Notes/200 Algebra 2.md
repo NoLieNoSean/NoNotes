@@ -3,7 +3,6 @@ tags:
   - ALG2
   - MOC
 ---
-
 > [!Info]-
 > Grading:
 > - attendance: 5%
@@ -42,8 +41,13 @@ These notes have been reorganized because I lost count of the lectures at some p
 - [[ALG2_L13]] ✅
 	- Free groups
 - [[ALG2_L14]]
+	- Free abelian groups
+- [[ALG2_L15]]
+	- Linear operators
+- [[ALG2_L16]]
+	- Symmetries
 
-
+[[Group theory questions]]
 
 
 # Other notes
@@ -64,12 +68,15 @@ These notes have been reorganized because I lost count of the lectures at some p
 
 ---
 
-1) Free groups definition 
-(Universal property)
-2) Existence of a free group
-(Constructing the set of reduced words from of a given set. Then proving that it is a group)
-3) |S1| = |S2| <=> F(S1) isomorphic to F(S2). She skipped =>
+to do
+- ~~Review midsem~~
+- Review all tuts
+- Review all notes
+- Solve Sunaina's PS
+- ~~Ask Titan for probs (proof using Cayley)~~
+- Dummit: CHapter 4 and 5
+- Artin: relevant stuff from chapter 5, 6
+- past endsems
 
-free abelian groups
-structure theorem for finitely generated abelian groups
-invariant factor theorem
+???
+- midsem $q$ 10
