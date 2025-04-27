@@ -1,7 +1,4 @@
 
-> [!Theorem]
-> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$. Then, $E(X)=E(X^{+})-E(X^{-})$.
-
 > **Proof**
 > $$
 > \begin{align}

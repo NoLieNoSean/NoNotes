@@ -146,8 +146,16 @@ Also note that
 $$
 \begin{align}
 \lim_{ x \to \infty } F_{X, Y}(x, y)=F_{Y}(y), \\
-\lim_{ y \to \infty } F_{X, Y}(x, y)=F_{X}(x). \\
+\lim_{ y \to \infty } F_{X, Y}(x, y)=F_{X}(x), \\
 \end{align}
+$$
+and
+$$
+\begin{align}
+\int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx =f_{Y}(y), \\
+\int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dy =f_{X}(x),
+\end{align}
+
 $$
 
 > [!Theorem]
@@ -156,18 +164,24 @@ $$
 > E(g(X, Y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y)f(x, y) \, dx  \, dy.
 > $$
 > 
+> 
+> > [!Proof]-
+> > Let $F\equiv F_{g(X, Y)}$ and $f\equiv f_{X, Y}$, the joint density of $X$ and $Y$.
+> > $$
+> > \begin{align}
+> > E(g(X, Y)) & =\int_{0}^{\infty} (1-F(z)) \, dz  \\
+> >  & = \int_{0}^{\infty} P(g(X, Y)\geq z) \, dz \\
+> >   & = \int_{0}^{\infty} {\iint _{B}}f(x, y) \,dx\,dy \,\,\, dz,\quad B={\{ (x, y)\ | \  g(x, y)\geq z \}} \\
+> >  & =\iint_{\mathbb{R}^{2}}\int_{0}^{g(x, y)} f(x, y) \, dz\,\,\,dx\,dy  \\
+> >  & = \iint_{\mathbb{R}^{2}}g(x, y)f(x, y)\,dx\,dy.
+> > \end{align}
+> > $$
+> 
 
-> **Proof**
-> Let $F\equiv F_{g(X, Y)}$ and $f\equiv f_{X, Y}$, the joint density of $X$ and $Y$.
-> $$
-> \begin{align}
-> E(g(X, Y)) & =\int_{0}^{\infty} (1-F(z)) \, dz  \\
->  & = \int_{0}^{\infty} P(g(X, Y)\geq z) \, dz \\
->   & = \int_{0}^{\infty} {\iint _{B}}f(x, y) \,dx\,dy \,\,\, dz,\quad B={\{ (x, y)\ | \  g(x, y)\geq z \}} \\
->  & =\iint_{\mathbb{R}^{2}}\int_{0}^{g(x, y)} f(x, y) \, dz\,\,\,dx\,dy  \\
->  & = \iint_{\mathbb{R}^{2}}g(x, y)f(x, y)\,dx\,dy.
-> \end{align}
-> $$
+> [!Theorem]
+> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$. Then, $E(X)=E(X^{+})-E(X^{-})$.
+
+(we have to prove this without using linearity of expectation, since we'll be using this to prove linearity of expectation.)
 
 If $g:\mathbb{R}^{2}\to \mathbb{R}$, we can write $E(g(X, Y))=E(g^{+}(X, Y))-E(g^{-}(X, Y))$, where $g^{+}\equiv \max(g, 0)$ and $g^{-}\equiv\max(-g, 0)$ are both non negative functions, and apply the previous theorem.
 
@@ -175,18 +189,19 @@ This allows us to prove the linearity of expectation.
 
 > [!Theorem] Linearity of expectation
 > Let $X$ and $Y$ be continuous random variables with finite expectation. Then, $E(X+Y)=E(X)+E(Y)$.
-
-> **Proof**
-> Let $g:\mathbb{R}^{2}\to \mathbb{R}$ be defined by $(x, y)\mapsto x+y$. Let $f$ be the joint density of $X$ and $Y$. Then, 
-> $$
-> \begin{align}
->  & E(g(X, Y))=E(X+Y) \\
->  & =\iint_{\mathbb{R}^{2}}(x+y)f(x, y)\,dx\,dy \\
->  & =\int_{-\infty}^{\infty} x\int_{-\infty}^{\infty} f(x, y) \, dy  \, dx +\int_{-\infty}^{\infty} y\int_{-\infty}^{\infty} f(x, y) \, dx  \, dy  \\
->  & = \int_{-\infty}^{\infty} xf_{X}(x) \, dx +\int_{-\infty}^{\infty} yf_{Y}(y) \, dy \\
->   & =E(X)+E(Y).
-> \end{align}
-> $$
+> 
+> > [!Proof]-
+> > Let $g:\mathbb{R}^{2}\to \mathbb{R}$ be defined by $(x, y)\mapsto x+y$. Let $f$ be the joint density of $X$ and $Y$. Then, 
+> > $$
+> > \begin{align}
+> >  & E(g(X, Y))=E(X+Y) \\
+> >  & =\iint_{\mathbb{R}^{2}}(x+y)f(x, y)\,dx\,dy \\
+> >  & =\int_{-\infty}^{\infty} x\int_{-\infty}^{\infty} f(x, y) \, dy  \, dx +\int_{-\infty}^{\infty} y\int_{-\infty}^{\infty} f(x, y) \, dx  \, dy  \\
+> >  & = \int_{-\infty}^{\infty} xf_{X}(x) \, dx +\int_{-\infty}^{\infty} yf_{Y}(y) \, dy \\
+> >   & =E(X)+E(Y).
+> > \end{align}
+> > $$
+> 
 
 ---
 # Independent continuous random variables
@@ -195,3 +210,55 @@ This allows us to prove the linearity of expectation.
 > Random variables $X$ and $Y$ are **independent** if the events $\{ X\leq x \}$ and $\{ Y\leq y \}$ are independent, that is, $F(x, y)=F_{X}(x)F_{Y}(y)$. 
 
 If $X$ and $Y$ are independent iff $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$.
+
+> [!Example]
+> Let the joint distribution of $(X, Y)$ be given by
+> $$
+> f_{(X, Y)}(x, y)=\begin{cases}
+> 1 & (x, y)\in[0, 1]\times[0, 1] \\
+> 0 & \text{otherwise.}
+> \end{cases}
+> $$
+> We can compute $f_{X}$ and $f_{Y}$:
+> $$
+> \begin{align}
+> f_{X}(x) & =\int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dy \\
+>  & =\begin{cases}
+> 1 & x\in[0, 1] \\
+> 0 & \text{otherwise.}
+> \end{cases} \\
+>  \\
+> f_{Y}(y) & =\int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx \\
+>  & =\begin{cases}
+> 1 & y\in[0, 1] \\
+> 0 & \text{otherwise.}
+> \end{cases}
+> \end{align}
+> $$
+> Notice that $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$. Thus, $X$ and $Y$ are independent.
+
+> [!Example]
+> Let the joint distribution of $(X, Y)$ be given by
+> $$
+>  f_{(X, Y)}(x, y)=\begin{cases}
+>  2 & 0\leq x\leq 1, 0\leq y\leq 1, x+y\leq 1 \\
+>  0 & \text{otherwise.}
+>  \end{cases}
+> $$
+> Verify that this is indeed a density. Again, we can compute the marginals:
+> $$
+> \begin{align}
+> f_{X}(x) 
+>  & =\begin{cases}
+> 2(1-x) & x\in[0, 1] \\
+> 0 & \text{otherwise.}
+> \end{cases} \\
+>  \\
+> f_{Y}(y) & =\int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx \\
+>  & =\begin{cases}
+> 2(1-y) & y\in[0, 1] \\
+> 0 & \text{otherwise.}
+> \end{cases}
+> \end{align}
+> $$
+> Notice that $f_{X, Y}(x, y)\ne f_{X}(x)f_{Y}(y)$. $X$ and $Y$ are not independent.
