@@ -22,11 +22,12 @@ These notes have been reorganized because I lost count of the lectures at some p
 	- Infinite sequences of Bernoulli trials, Sums of independent random variables, The probability generating function
 - [[PROB_L7]]
 	- Expectation: Properties of expectation, moments, variance, correlation coefficient, Schwarz inequality, Chebyshev's inequality, Weak and Strong laws of large numbers, conditional expectation
-- [[PROB_L8]]
+- [[PROB_L8]] ✅
 	- Continuous random variables, symmetric, uniform, normal, exponential, and gamma densities.
-- [[PROB_L9]]
+- [[PROB_L9]] ✅
 	- Expectation and moments of continuous random variables
 - [[PROB_L10]]
+	- Distributions of sums and quotients, Characteristic functions
 
 
 # Quizzes

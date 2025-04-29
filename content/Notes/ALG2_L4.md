@@ -37,7 +37,7 @@ $\phi$ is called an *automorphism* if $G_{1}=G_{2}$. The set of all automorphism
 
 #### Conjugation
 
-The most important type of automorphism is *conjugation*: let $g$ be a fixed element of a group $G$. Conjugation by $g$ is the map $\phi:G\to G$ defined by $x\mapsto gxg^{-1}$. This is an automorphism because, first of all, it is a homomorphism, and second, it is bijective because it have an inverse function: conjugation by $g^{-1}$. 
+The most important type of automorphism is *conjugation*: let $g$ be a fixed element of a group $G$. Conjugation by $g$ is the map $\phi:G\to G$ defined by $x\mapsto gxg^{-1}$. This is an automorphism because, first of all, it is a homomorphism, and second, it is bijective because it have an inverse function: conjugation by $g^{-1}$.
 
 Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in G$. Conjugates have similar algebraic behavior, since they are the images of each other under an isomorphism.  
 

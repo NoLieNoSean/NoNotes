@@ -158,6 +158,18 @@ $$
 
 $$
 
+> [!Example]
+> Here's now you compute normalization factors:
+> 
+> $$
+> \begin{align}
+>  & \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{ -(x^{2}-xy+y^{2})/2 } \, dx  \, dy \\
+>  & = \int_{-\infty}^{\infty}e^{ -3y^{2}/8  } \int_{-\infty}^{\infty} e^{ -(x-y/2)^{2}/2 } \, dx  \, dy  \\
+>  & =\sqrt{ 2\pi }\int_{-\infty}^{\infty}e^{ -(\sqrt{ 3 }y/2)^{2}/2}   \, dy   \\
+>  & =\frac{4\pi}{\sqrt{ 3 }}.
+> \end{align}
+> $$
+
 > [!Theorem]
 > Let $X, Y$ be continuous random variables with joint distribution $f$. Let $g:\mathbb{R}^{2}\to [0, \infty)$ such that $g(X, Y)$ is a continuous random variable. Then, 
 > $$
@@ -178,13 +190,41 @@ $$
 > > $$
 > 
 
+We will now prove linearity of expectation for a specific case. The result will be used to prove linearity of expectation generally.
+
 > [!Theorem]
-> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$. Then, $E(X)=E(X^{+})-E(X^{-})$.
+> Let $X$ be a continuous random variable with finite expectation. Define $X^{+}\equiv \max(X, 0)$ and $X^{-}\equiv\max(-X, 0)$ (Clearly, $X=X^{+}-X^{-}$ and $|X|=X^{+}+X^{-}$). Then, $E(X)=E(X^{+})-E(X^{-})$.
+> 
+> > [!Proof]-
+> > Note that $X^{+}$ and $X^{-}$ are not continuous random variables - they have non zero density at $0$. However, since $0$ does not contribute to the expectation, we are (sort of) justified in writing
+> > $$
+> > \begin{align}
+> > E(X^{+}) & =\int_{0}^{\infty} P(X^{+}\geq x) \, dx  \\
+> >  &=\int_{0}^{\infty} P(X\geq x) \, dx  \\
+> >  &=\int_{0}^{\infty} (1-F_{X}(x)) \, dx \\\\ \\
+> > E(X^{-}) & =\int_{0}^{\infty} P(X^{-}\geq x) \, dx  \\
+> >  & =\int_{0}^{\infty} P(X\leq -x) \, dx  \\
+> >  & =\int_{0}^{\infty} F_{X}(-x) \, dx  \\
+> >  & =\int_{-\infty}^{0} F_{X}(x) \, dx 
+> > \end{align}
+> > $$
+> > It follows that
+> > $$
+> > \begin{align}
+> > E(X^{+})-E(X^{-}) & =E(X).
+> > \end{align}
+> > $$
+> > 
+> 
 
-(we have to prove this without using linearity of expectation, since we'll be using this to prove linearity of expectation.)
+So, if $g:\mathbb{R}^{2}\to \mathbb{R}$, we can write $E(g(X, Y))=E(g^{+}(X, Y))-E(g^{-}(X, Y))$, where $g^{+}\equiv \max(g, 0)$ and $g^{-}\equiv\max(-g, 0)$ are both non negative functions, and apply the previous theorem to obtain the general LOTUS property:
 
-If $g:\mathbb{R}^{2}\to \mathbb{R}$, we can write $E(g(X, Y))=E(g^{+}(X, Y))-E(g^{-}(X, Y))$, where $g^{+}\equiv \max(g, 0)$ and $g^{-}\equiv\max(-g, 0)$ are both non negative functions, and apply the previous theorem.
-
+$$
+\begin{align}
+E(g(X, Y)) & = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g^{+}(x, y)f(x, y) \, dx  \, dy -\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g^{-}(x, y)f(x, y) \, dx  \, dy \\
+ & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y)f(x, y) \, dx  \, dy.
+\end{align}
+$$
 This allows us to prove the linearity of expectation.
 
 > [!Theorem] Linearity of expectation
@@ -207,9 +247,18 @@ This allows us to prove the linearity of expectation.
 # Independent continuous random variables
 
 > [!Definition]
-> Random variables $X$ and $Y$ are **independent** if the events $\{ X\leq x \}$ and $\{ Y\leq y \}$ are independent, that is, $F(x, y)=F_{X}(x)F_{Y}(y)$. 
+> Random variables $X$ and $Y$ are **independent** if the events $\{ X\leq x \}$ and $\{ Y\leq y \}$ are independent for all $x$ and $y$, that is, $F(x, y)=F_{X}(x)F_{Y}(y)$. 
 
-If $X$ and $Y$ are independent iff $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$.
+It follows from the definition that $X$ and $Y$ are independent iff $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$.
+
+If $X$ and $Y$ are independent, it follows that
+$$
+P(X\in[a, b], Y\in[c, d])=P(X\in[a, b])P(Y\in[c, d]).
+$$
+This implies, that for any two "reasonable" (I suppose [[Measure theory 101#Measures and spaces|measurable]]) sets $A$ and $B$, 
+$$
+P(X\in A, Y\in B)=P(X\in A)P(Y\in B).
+$$
 
 > [!Example]
 > Let the joint distribution of $(X, Y)$ be given by
@@ -262,3 +311,33 @@ If $X$ and $Y$ are independent iff $f_{X, Y}(x, y)=f_{X}(x)f_{Y}(y)$.
 > \end{align}
 > $$
 > Notice that $f_{X, Y}(x, y)\ne f_{X}(x)f_{Y}(y)$. $X$ and $Y$ are not independent.
+
+> [!Example] Example: $n$ dimensional standard Gaussian
+> The two dimensional standard Gaussian (which just means [[PROB_L8#Normal density|normal]], btw), which is denoted by $\mathcal{N}(\mathbf{0}, I_{2\times 2})$, is defined like so:
+> $$
+> \begin{align}
+> f(x, y)=\frac{1}{2\pi}e^{ -(x^{2}+y^{2})/2 }, \quad (x, y)\in \mathbb{R}^{^{2}}.
+> \end{align}
+> $$
+> Its marginal densities are
+> $$
+> \begin{align}
+> f_{Y}(y)=\frac{1}{2\pi}e^{ -y^{2}/2 }\int_{-oo}^{\infty}  e^{ -x^{2}/2 }\, dx =\frac{1}{\sqrt{ 2\pi }}e^{ -y^{2}/2 }\sim n(0, 1), \\
+> f_{X}(x)=\frac{1}{2\pi}e^{ -x^{2}/2 }\int_{-oo}^{\infty}  e^{ -y^{2}/2 }\, dx =\frac{1}{\sqrt{ 2\pi }}e^{ -x^{2}/2 }\sim n(0, 1).
+> \end{align}
+> $$
+> Note that $f(x, y)=f_{X}(x)f_{Y}(y)$, so if $(X, Y)\sim \mathcal{N}(\mathbf{0}, I_{2\times 2})$, $X$ and $Y$ are independent.
+
+> [!Example]
+> Let $X\sim\text{Exp}(\lambda)$, $Y\sim\text{Exp}(\mu)$, $X$ and $Y$ are independent. Find $P(X\leq Y)$.
+> $$
+> \begin{align}
+>  & P(X\leq Y)=E (1_{\{ X\leq Y \}}) \\
+>  & =\iint_{\{ (x, y)\ | \  x\leq y \}} f(x, y)\,dy\,dx \\
+>  & = \int_{0}^{\infty} \int_{0}^{y} f(x, y) \, dx  \, dy \\
+>   & = \int_{0}^{\infty} f(y)\int_{0}^{y} f(x) \, dx  \, dy \\
+>  & =\lambda \mu\int_{0}^{\infty}  e^{-\lambda y}\int_{0}^{y}  e^{ -\mu x } \, dx  \, dy  \\
+>  & =\lambda \int_{0}^{\infty} e^{ -\lambda y }(1-e^{ -\mu y }) \, dy \\
+>  & = \frac{\lambda}{\lambda+\mu}.
+> \end{align}
+> $$

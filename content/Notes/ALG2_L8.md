@@ -30,7 +30,7 @@ It is easy to verify that $G_{x}<G$ for all $x\in X$.
 > \ker \phi=\{ g\in G\ | \  \phi_{g}(s)=s~\forall s\in S \}.
 > $$
 
-Note that $\ker \phi=\bigcap_{x\in X}G_{x}$. It follows that $\ker \phi< G$, which is equivalent to $\ker \phi \triangleleft G$ since $\phi$ is a homomorphism.
+Note that $\ker \phi=\bigcap_{x\in X}G_{x}\triangleleft G$.
 
 > [!Example]
 > In [[ALG2_L7#Group actions|this]] example, $\theta_{\Pi_{1}}=\theta_{\Pi_{2}}=\theta_{\Pi_{3}}=X$, and $G_{\Pi_{1}}=\{  e, (12)(34), (13)(24), (14)(23),  (1324), (1423), (12), (34) \}$, which is just the union of the inverse images of $(\Pi_{1}, \Pi_{2}, \Pi_{3})$ and $(\Pi_{1}, \Pi_{3}, \Pi_{2})$. Ditto for $G_{\Pi_{2}}$ and $G_{\Pi_{3}}$. The kernel is $\{ e, (12)(34), (13)(24), (14)(23) \}$.

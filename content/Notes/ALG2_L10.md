@@ -5,8 +5,8 @@ For two groups $H$ and $K$, the most basic construction of a group that contains
 We can also use the direct product to decompose groups not initially constructed as a direct product. Given a group $G$ with subgroups $H$ and $K$, to recognize whether $G$ can be written as the direct product of $H$ and $K$, we first observe some properties of the embeddings of $H$ and $K$ into their direct product $H\times K$:
 - they generate $H\times K$: $(h, k)=(h, 1)(1, k)$,
 - they intersect trivially: $(h, 1)=(1, k)\implies h=1, k=1$,
-- they commute element-wise: $(h, 1)(k, 1)=(1, k)(h, 1)$.
-These properties can be turned around to craft a recognition theorem for a group $G$ to look like a direct product of two subgroups $H$ and $K$, as we did previously:
+- they commute element-wise: $(h, 1)(1, k)=(1, k)(h, 1)$.
+These properties can be turned around to craft a recognition theorem for a group $G$ to look like a direct product of two subgroups $H$ and $K$, as we did previously: 
 
 > [!Theorem]
 > Let $G$ be a group with subgroups $H$ and $K$ where

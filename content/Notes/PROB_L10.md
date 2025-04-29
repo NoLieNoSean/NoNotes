@@ -1,19 +1,8 @@
-> [!Example]
-> Let $X\sim\text{Exp}(\lambda)$, $Y\sim\text{Exp}(\mu)$, $X$ and $Y$ are independent. Find $P(X\leq Y)$.
-> $$
-> \begin{align}
->  & P(X\leq Y)=E (1_{\{ X\leq Y \}}) \\
->  & =\iint_{\{ (x, y)\ | \  x\leq y \}} f(x, y)\,dy\,dx \\
->  & = \int_{0}^{\infty} \int_{0}^{y} f(x, y) \, dx  \, dy \\
->   & = \int_{0}^{\infty} f(y)\int_{0}^{y} f(x) \, dx  \, dy \\
->  & =\lambda \mu\int_{0}^{\infty}  e^{-\lambda y}\int_{0}^{y}  e^{ -\mu x } \, dx  \, dy  \\
->  & =\lambda \int_{0}^{\infty} e^{ -\lambda y }(1-e^{ -\mu y }) \, dy \\
->  & = \frac{\lambda}{\lambda+\mu}.
-> \end{align}
-> $$
 
 
-## distribution of X+Y
+# Distributions of sums and quotients
+
+## Distribution of X+Y
 
 Let $X, Y$ be random variables (not necessarily independent) with joint distribution $f_{X,Y}$. We want to find $F_{X+Y}(z)$.
 $$
@@ -49,7 +38,7 @@ The above expression is analogous to the convolution product defined for densiti
 > $$
 
 ---
-## Characteristic functions
+# Characteristic functions
 
 > [!Definition]
 > $X:\Omega\to \mathbb{C}$ is a **complex random variable** if $\mathrm{Re}~X$ and $\mathrm{Im}~X$ are both real random variables.
@@ -91,14 +80,14 @@ Note the following facts for all $z\in \mathbb{C}$, which are also easy to verif
 > [!Definition]
 > Let $X:\Omega\to \mathbb{R}$ be a random variable. Define the **characteristic function** of $X$ by
 > $$
-> \varphi_{X}(t)\equiv Ee^{itx},\quad t\in \mathbb{R}.
+> \varphi_{X}(t)\equiv Ee^{itX},\quad t\in \mathbb{R}.
 > $$
 
 If $X$ is continuous, we have
 $$
 \varphi_{X}(t)=\int_{-\infty}^{\infty} e^{itx}f_{X}(x) \, dx.
 $$
-It is clear that $|\varphi_{X}|\leq 1$. ZZxX
+It is clear that $|\varphi_{X}|\leq 1$. 
 
 [!Example] Examples
 Let $X\sim\text{Unif}(a, b)$. 
