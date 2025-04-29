@@ -1,5 +1,3 @@
-
-
 # Distributions of sums and quotients
 
 ## Distribution of X+Y

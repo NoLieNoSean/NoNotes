@@ -1,4 +1,4 @@
-# Expectation of continuous random variables
+ # Expectation of continuous random variables
 
 > [!Definition]
 > Let $X$ be a continuous random variable with density $f$. $X$ is said to have **finite expectation** if
