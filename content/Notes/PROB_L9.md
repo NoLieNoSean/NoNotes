@@ -41,10 +41,25 @@ $$
 (Yes, the sign ahead of the second integral in negative, not positive. Check your integration limits.)
 
 > [!Theorem] LOTUS
-> Let $X$ be a continuous random variable with density $f$. Let $g:\mathbb{R}\to \mathbb{R}$ be such that $g(X)$ is a continuous random variable. Then,
+> Let $X$ be a continuous random variable with density $f$. Let $g:\mathbb{R}\to [0, \infty)$ be such that $g(X)$ is a continuous random variable. Then,
 > $$
 > E(g(X))=\int_{-\infty}^{\infty} g(x)f(x) \, dx.
 > $$
+> 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > E(g(X)) & =\int_{0}^{\infty}(1-F_{g(X)}(u))  \, du\\
+> >   & =\int_{0}^{\infty} P(g(X)> u) \, du \\
+> >   & =\int_{0}^{\infty} \int_{B}f_{X}(y)\,dy \, du  & B=\{ y\ | \  g(y)> u \}  \\
+> >  & = \int_{-\infty}^{\infty} \int_{0}^{g(y)} f_{X}(y) \, du  \, dy \\
+> >  & =\int_{-\infty}^{\infty} g(y)f_{X}(y) \, dy   \\
+> > \end{align}
+> > $$
+> 
+
+> [!Error] Vasanth's proof is incorrect!
+> Vasanth stated the theorem for a general function $g:\mathbb{R}\to \mathbb{R}$, and supplied the following proof:
 > 
 > > [!Proof]-
 > > $$
@@ -56,20 +71,21 @@ $$
 > > & \int_{0}^{\infty} (1-F_{g(X)}(u)) \, du \\
 > >   & =\int_{0}^{\infty} P(g(X)> u) \, du \\
 > >   & =\int_{0}^{\infty} \int_{B}f_{X}(y)\,dy \, du  & B=\{ y\ | \  g(y)> u \}  \\
-> >  & = \int_{0}^{\infty} \int_{0}^{g(y)} f_{X}(y) \, du  \, dy \\
+> >  & = \boxed{\int_{0}^{\infty} \int_{0}^{g(y)} f_{X}(y) \, du  \, dy} \\
 > >  & =\int_{0}^{\infty} g(y)f_{X}(y) \, dy   \\
 > >  \\
 > >  & \int_{-\infty}^{0} F_{g(X)}(u) \, du \\
 > >  & =\int_{-\infty}^{0} P(g(X)\leq u) \, du \\
 > >  & =\int_{-\infty}^{0} \int_{B}f_{X}(y)\,dy \, du  & B=\{ y\ | \  g(y)< u \} \\
-> >  & =\int_{-\infty}^{0} \int_{g(y)}^{0} f_{X}(y) \, du  \, dy  \\
+> >  & =\boxed{\int_{-\infty}^{0} \int_{g(y)}^{0} f_{X}(y) \, du  \, dy}  \\
 > >  & =-\int_{-\infty}^{0} g(y)f_{X}(y)  \, dy
 > > \end{align}
 > > $$
 > > 
 > 
+> The boxed steps are incorrect; the limits of the first integral in both cases must be $-\infty$ and $\infty$. The way to remedy this is to prove the theorem for a positive function $g$, and then to use the result $E(X)=E(X^{+})-E(X^{-})$ to prove the theorem for general $g$.
 
-Note that Vasanth erred here; if $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$.
+Note that Vasanth erred here on another point; if $g$ is form $\mathbb{R}$ to $[0, \infty)$, the integration bounds still remain $-\infty$ and $\infty$.
 
 > [!Example]
 > Let $X\sim n(0,  1)$. Clearly, 
@@ -341,3 +357,33 @@ $$
 >  & = \frac{\lambda}{\lambda+\mu}.
 > \end{align}
 > $$
+
+If $X$ and $Y$ are independent and $f$ and $g$ are functions form $\mathbb{R}$ to $\mathbb{R}$, then $f(X)$ and $g(X)$ are independent.
+
+## Expectation of independent random variables
+
+> [!Theorem]
+> $X$ and $Y$ are independent iff $E(XY)=E(X)(Y)$.
+> 
+> > [!Proof]-
+> > If $X$ and $Y$ are independent, then
+> > $$
+> > \begin{align}
+> > E(XY) & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} xyf_{X, Y}(x, y) \, dx  \, dy  \\
+> >  & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} xyf_{X}(X)f_{Y}(y) \, dx  \, dy \\
+> >   & =\left( \int_{-\infty}^{\infty} xf_{X}(x) \, dx  \right) \left( \int_{-\infty}^{\infty} yf_{Y}(y) \, dy  \right)  \\
+> >  & =E(X)E(Y).
+> > \end{align}
+> > $$
+> > Conversely, if $E(XY)=E(X)(Y)$, observe that
+> > $$
+> > \begin{align}
+> > F_{X, Y}(x, y) & =P(X\leq x, Y\leq y)\\
+> >  & = E~1_{\{ X\leq x, Y\leq y \}} \\
+> >  & =E~(1_{\{ X\leq x \}}1_{\{ Y\leq y \}}) \\
+> >  & =(E~1_{\{ X\leq x \}})(E~1_{\{ Y\leq y \}}) \\
+> >  & =F_{X}(x)F_{Y}(y).
+> > \end{align}
+> > $$
+> > 
+
