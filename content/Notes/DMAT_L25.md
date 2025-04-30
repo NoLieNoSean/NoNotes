@@ -32,7 +32,7 @@ Further, a coloring of $G$ of type $(2)$ will be a coloring of $G''$ obtained fr
 $G''$ looks like this:
 ![[Drawing 2025-04-21 12.06.34.excalidraw|100]]
 
-conversely, any coloring of $G''$ corresponds to a type-2 colorings of $G$.
+conversely, any coloring of $G''$ corresponds to a type-2 coloring of $G$.
 
 Thus, we have
 $$
@@ -46,19 +46,26 @@ $$
 Claim: the chromatic polynomial of a graph can be computed using $(*)$ repeatedly as a sum of chromatic polynomials of complete graphs. This also justifies why $M_{G}(\lambda)$ is a polynomial, since $M_{K_{k}}(\lambda)$ is clearly a polynomial in $\lambda$ for all $k$.
 ## Coloring planar graphs
 
-Exercise: Prove using Euler's theorem (every planar graph has at least one vertex with degree at most $5$)
+> [!Theorem] Euler's Theorem
+> Every planar graph has at least one vertex with degree at most $5$.
+
+> **Proof**
+> [[DMAT_L24#Planar graphs|We know]] that for a planar graph, $e\leq 3n-6$. If every vertex had degree 6 or higher, we would have at least $3n$ edges, a contradiction.
 
 > [!Claim]
 > Every planar graph is $6$-colorable.
 
-**Proof**
-Induction on number of vertices of $G$. Let $G$ be a planar graph with $k+1$ vertices. Let $S$ be a vertex with degree at most $5$. Remove $S$ from $G$ to obtain $G'$. By induction hypothesis, $G'$ is $6$-colorable. Now, let's add $S$ back to $G'$. At most $5$ colors are used in coloring the neighbors of $S$, so we have at least one color left to color $S$ with. Thus, $G$ is $6$-colorable.
+> **Proof**
+> Induction on number of vertices of $G$. Let $G$ be a planar graph with $k+1$ vertices. Let $S$ be a vertex with degree at most $5$. Remove $S$ from $G$ to obtain $G'$. By induction hypothesis, $G'$ is $6$-colorable. Now, let's add $S$ back to $G'$. At most $5$ colors are used in coloring the neighbors of $S$, so we have at least one color left to color $S$ with. Thus, $G$ is $6$-colorable.
 
 ---
 # Tournaments
 
 > [!Definition]
 > A **tournament** is an orientation of an undirected complete graph.
+
+> [!Definition]
+> A **Hamiltonian path** is a path in an undirected or directed graph that visits each vertex exactly once.
 
 > [!Claim]
 > Every tournament contains a Hamiltonian path.

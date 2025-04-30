@@ -71,32 +71,25 @@ tags:
 	- Connectivity, blocks, ear decomposition
 - [[DMAT_L21]]
 	- Matchings in bipartite graphs, Hall's marriage theorem, Edmonds matrix
-- [[DMAT_L22]]
+- [[DMAT_L22]] ✅
 	- Proof of Hall's using M-alternating paths, some matroid stuff
-- [[DMAT_L23]]
+- [[DMAT_L23]] ✅
 	- Probabilistic proof example 1, Konig's theorem, Tutte's theorem
-- [[DMAT_L24]]
+- [[DMAT_L24]] ✅
 	- Probabilistic proof example 2, planar graphs
-- [[DMAT_L25]]
+- [[DMAT_L25]] ✅
 	- Greedy coloring algorithm, chromatic polynomial, coloring planar graphs, tournaments
 - [[DMAT_L26]]
-
-
-Probabilisitc methods (handout)
-Planar graphs (handout)
-Matching problems
-Greedy coloring algorithm
-Chromatic polynomial
-coloring planar graphs
-tournaments
-Sunaina's handout
 
 ---
 # Tutorials
 
 [[DMAT_T1]] ✅
 [[DMAT_Tn1]] (where $(n_{k})$ is a subsequence of $2, 3, \dots$)
-
+[[DMAT_PS_Krutarth]]
+[[DMAT_PS_Sunaina]]
+[[DMAT_PS3b]]
+[[DMAT_MatchingProblems]]
 # Assignments
 
 [[DMAT_PS1]]
@@ -112,7 +105,3 @@ Sunaina's handout
 ---
 
 tut - maximum number of edges possible in a graph which does not have a triangle in it??
-
-$3F\leq {2}E$
-Combine with euler to get $3V-E\geq 6$, or $E\leq 3V-6$. This easily proves that every planar graph
-

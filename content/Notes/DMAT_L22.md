@@ -2,6 +2,7 @@
 tags:
   - DMAT
   - Lecture
+  - Processed
 date: 2025-04-09
 time: 11:56
 ---
@@ -27,12 +28,3 @@ We will now give an alternate proof for [[DMAT_L21#Perfect matchings in bipartit
 
 > **Proof**
 > To prove the sufficiency of Hall's condition, we will prove the contrapositive, that is, if there does not exist a matching saturating $L$, then there exists a set $S\subseteq L$ such that $|S|> |N(S)|$. Consider any maximum matching $M$ in $G$. By hypothesis, $M$ does not saturate $L$. Let $l\in L$ not be saturated by $M$. Among all the vertices reachable from $u$ by $M$-augmenting paths in $G$, let $S$ consist of those in $X$, and let $T$ consist of those in $Y$. Note that $l\in S$. It is easy to see that $M$ matches $T$ with $S\setminus \{ u \}$, so $|T|+1=|S|$. Next, observe that $N(S)=T$, since if $r\not\in T$ were in $N(S)$, it would be possible to construct an $M$-augmenting path, contradicting the maximality of $M$. Thus, $|N(S)|=|T|=|S|-1< |S|$, and we are done.
-
----
-
-# Matroid related to a matching
-
----
-
-
-Coming up: Menger's theorem

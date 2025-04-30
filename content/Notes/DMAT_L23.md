@@ -17,6 +17,9 @@ time: 12:00
 > 
 > Every edge in $E$ occurs in $E'$ with probability $1/2$. Let $X_{1}, \dots, X_{m}$ be indicator variables such that $|E'|=\sum X_{i}$. Then, $\mathbb{E}(|E'|)=\mathbb{E}\left( \sum X_{i} \right)=\frac{m}{2}$. Thus, there must exist a coloring where $|E'|\geq m/2$.
 
+> **Algorithmic proof**
+> ![[Pasted image 20250430173521.png]]
+> 
 ---
 # Back to matching problems: Konig's theorem
 
@@ -34,18 +37,17 @@ Thus, we can use vertex covers to get an upper bound on the size of a maximum ma
 > The maximum cardinality of a matching in a bipartite graph $G$ is equal to the minimum cardinality of a vertex cover of its edges.
 
 **Proof**
-Let $M$ be a matching in $G$ of maximum cardinality. From every edge in $M$ let us choose one of its ends: the end in $B$ if some alternating path ends in that vertex, and its end in $A$ otherwise. We'll prove that the set $U$ of these $|M|$ vertices covers $E$.
+Let $G=A\sqcup B$. Let $M$ be a maximum matching. By maximality, no augmenting path exists. From each unmatched vertex in $A$, explore alternating paths (start with a non-$M$ edge, then alternate between edges in $M$ and outside $M$). Let 
+$$ 
+R \;=\;\{\text{vertices reached by such paths}\}. 
+$$
+Note that every vertex in $A$ that is not matched by $M$ is reachable trivially, so every vertex in $A\setminus R$ is matched. If a vertex is in $B$ but not matched, it cannot be reachable, since that would imply the existence of an augmenting path. Thus, every vertex in $B\cap R$ is matched.
 
-Note that if an alternating path $P$ ends in a vertex $b\in B$, then $b\in U$ ($i$.$e$, $b$ is matched). (Why?)
-        
-As $M$ is a lergest matching, $P$ is not an augmenting path, $b$ is matched to some $a\in A$.
-
-We have to show that $U$ covers $E$. Let an edge $ab\in E$ be given. If $a\in U$, we are done. so assume $a\not\in U$. To prove $b\in U$. 
-
-An alternating path is a path which starts in $A$ at an unmatched vertex, then alternatively between edges from $E\setminus M$ and $M$. If $a$ is unmatched, then $ab$ itself is an alternating path. If not, then $ab'\in M$ for some $b'\in B$.
-
-...
-
+Define the candidate cover 
+$$ 
+U \;=\;(A\setminus R)\;\cup\;(B\cap R). 
+$$
+it is now easy to show that $|U|=|M|$, and that $U$ is indeed a vertex cover of $G$.
 
 ---
 # Matching in general graphs
