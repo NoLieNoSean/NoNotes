@@ -36,7 +36,9 @@ The above expression is analogous to the convolution product defined for densiti
 > $$
 
 ---
-# The dominated convergence theorem
+
+# Tools
+## The dominated convergence theorem
 
 We will use the DCT frequently in the coming proofs.
 
@@ -84,6 +86,18 @@ Here, integrable means [[Measure theory 101#Lebesgue Integration|Lebesgue integr
 > 
 
 A random variable is said to be integrable if it has finite expectation.
+
+## Fubini's Theorem
+
+Used to justify swapping integrals.
+
+> [!Theorem] Fubini's Theorem
+> For a function $g(t, y)$ defined on $\mathbb{R}\times \mathbb{R}$, if
+> $$
+> \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |g(t, y)| \, dy \, dt< \infty 
+> $$
+> then the double integral equals the iterated integrals in either order.
+
 
 ---
 # Characteristic functions
@@ -291,6 +305,8 @@ We will now prove that this map is injective.
 > $$
 > f_{X}(k)=\frac{1}{2\pi}\int_{-\pi}^{\pi} e^{ -itk }\varphi_{X}(t) \, dt.
 > $$
+> 
+> 
 > > [!Proof]-
 > > 
 > > Compute:
@@ -299,32 +315,6 @@ We will now prove that this map is injective.
 > >  & \frac{1}{2\pi}\int_{-\pi}^{\pi} e^{ -itk } \left[ \sum_{j=-\infty}^{\infty} e^{ijt}f_{X}(j) \right] \, dt
 > > \end{align}
 > > $$
-> > > [!Info]- Justifying swapping the sum and integral
-> > > 
-> > > Now, we need to justify swapping the sum and the integral (see [here](https://math.stackexchange.com/questions/83721/when-can-a-sum-and-integral-be-interchanged) for more). From Tonelli's theorem, we have $\int \sum f_{n}=\sum \int f_{n}$ if $f_{n}\geq 0$ for all $n, x$, without any further conditions needed. Then Fubini's theorem says that for general $f_{n}$, if $\sum \int |f_{n}|< \infty$ or $\int \sum |f_{n}|< \infty$ (by Tonelli the two are equivalent), then $\int \sum f_{n}=\sum \int f_{n}$. This can also be proven using [[#The dominated convergence theorem|DCT]]: Consider the functions 
-> > > $$
-> > > \begin{align}
-> > >  f_{n}(t) & = \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \quad\text{ for }n\in \mathbb{N}, \\
-> > >  \\
-> > > f(t) & =\sum_{j=-\infty}^{\infty} e^{ it(j-k) }f_{X}(j).
-> > > \end{align}
-> > > $$
-> > > Clearly, $f_{n}\to f$ pointwise. Now, 
-> > > $$
-> > > \begin{align}
-> > > |f_{n}|\leq \sum_{j=-n}^{n} |e^{ -itk }e^{ ijt }f_{X}(j)|=\sum_{j=-n}^{n} f_{X}(j)< 1.
-> > > \end{align}
-> > > $$
-> > > The constant function $1$ is integrable on the bounded interval $[-\pi, \pi]$. Thus,
-> > > $$
-> > > \begin{align}
-> > >  & \int_{-\pi}^{\pi} \sum_{j=-\infty}^{\infty} e^{ it(j-k) }f_{X}(j) \, dt \\
-> > >  & = \int_{-\pi}^{\pi} \lim_{ n \to \infty } \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \, dt \\
-> > >  & =\lim_{ n \to \infty }\int_{-\pi}^{\pi}  \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \, dt \\
-> > >  & =\lim_{ n \to \infty }\sum_{j=-n}^{n}\int_{-\pi}^{\pi}   e^{ it(j-k) }f_{X}(j) \, dt \\
-> > >  & =\sum_{j=-\infty}^{\infty}\int_{-\pi}^{\pi}   e^{ it(j-k) }f_{X}(j) \, dt.
-> > > \end{align}
-> > > $$
 > > 
 > > $$
 > > \begin{align}
@@ -333,6 +323,36 @@ We will now prove that this map is injective.
 > >  & =f_{X}(k).
 > > \end{align}
 > > $$
+> > 
+> 
+> > [!Info]- Justifying swapping the sum and integral
+> > 
+> > Now, we need to justify swapping the sum and the integral (see [here](https://math.stackexchange.com/questions/83721/when-can-a-sum-and-integral-be-interchanged) for more). From Tonelli's theorem, we have $\int \sum f_{n}=\sum \int f_{n}$ if $f_{n}\geq 0$ for all $n, x$, without any further conditions needed. Then Fubini's theorem says that for general $f_{n}$, if $\sum \int |f_{n}|< \infty$ or $\int \sum |f_{n}|< \infty$ (by Tonelli the two are equivalent), then $\int \sum f_{n}=\sum \int f_{n}$. This can also be proven using [[#The dominated convergence theorem|DCT]]: Consider the functions 
+> > $$
+> > \begin{align}
+> >  f_{n}(t) & = \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \quad\text{ for }n\in \mathbb{N}, \\
+> >  \\
+> > f(t) & =\sum_{j=-\infty}^{\infty} e^{ it(j-k) }f_{X}(j).
+> > \end{align}
+> > $$
+> > Clearly, $f_{n}\to f$ pointwise. Now, 
+> > $$
+> > \begin{align}
+> > |f_{n}|\leq \sum_{j=-n}^{n} |e^{ -itk }e^{ ijt }f_{X}(j)|=\sum_{j=-n}^{n} f_{X}(j)< 1.
+> > \end{align}
+> > $$
+> > The constant function $1$ is integrable on the bounded interval $[-\pi, \pi]$. Thus,
+> > $$
+> > \begin{align}
+> >  & \int_{-\pi}^{\pi} \sum_{j=-\infty}^{\infty} e^{ it(j-k) }f_{X}(j) \, dt \\
+> >  & = \int_{-\pi}^{\pi} \lim_{ n \to \infty } \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \, dt \\
+> >  & =\lim_{ n \to \infty }\int_{-\pi}^{\pi}  \sum_{j=-n}^{n} e^{ it(j-k) }f_{X}(j) \, dt \\
+> >  & =\lim_{ n \to \infty }\sum_{j=-n}^{n}\int_{-\pi}^{\pi}   e^{ it(j-k) }f_{X}(j) \, dt \\
+> >  & =\sum_{j=-\infty}^{\infty}\int_{-\pi}^{\pi}   e^{ it(j-k) }f_{X}(j) \, dt.
+> > \end{align}
+> > $$
+> 
+
 
 ### Inverse theorem for discrete random variables
 
@@ -360,3 +380,59 @@ We will now prove that this map is injective.
 
 ### Inverse theorem for continuous random variables
 
+[!Theorem] Proposition
+Let $X$ be a continuous random variable with continuous density $f$ and integrable characteristic function $\varphi$ ($\int_{-\infty}^{\infty} |\varphi(t)| \, dt< \infty$). Then, 
+$$
+f(x)=\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
+$$
+
+[!Proof]-
+Notice that
+$$
+\begin{align}
+\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} \underbrace{ e^{ -\epsilon^{2}t^{2}/2 } e^{ -itx }\varphi(t) }_{ |\cdot|\leq |\varphi(t)| }\, dt =\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
+\end{align}
+$$
+Let's compute the limit on the left.
+$$
+\begin{align}
+ & \lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx } \left( \int_{-\infty}^{\infty} e^{ iyt }f(y) \, dy  \right) \, dt  \\
+ & =\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ iyt }f(y) \, dy  \, dt 
+\end{align}
+$$
+
+To use [[#Fubini's Theorem]] to swap the integrals, we must show that the integrand is absolutely integrable.
+$$
+\begin{align}
+ & \iint_{\mathbb{R}^{2}}|e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ -iyt }f(y)|\,dy\,dt \\
+ & =\iint_{\mathbb{R}^{2}}e^{ -\epsilon^{2}t^{2}/2 }f(y)\,dy\,dt \\
+ & =\left( \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 } \, dt  \right) \left( \int_{-\infty}^{\infty} f(y) \, dy  \right)  \\
+ & = \frac{\sqrt{ 2\pi }}{\epsilon}.
+\end{align}
+$$
+Now, we can swap those pesky integrals:
+$$
+\begin{align}
+\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ it(y-x) } \, dt  \, dy.
+\end{align}
+$$
+Substitute $u=\epsilon t$.
+$$
+\begin{align}
+\lim_{ \epsilon \to 0 } \frac{1}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -u^{2}/2 }e^{ iu(y-x)/\epsilon } \, du  \, dy.
+\end{align}
+$$
+If we dress the expression nicely, we'll see that the inner integral is the characteristic function of the normal distribution evaluated at $(y-x)/\epsilon$, which we have [[#Characteristic functions of common distributions|already computed]]:
+$$
+\begin{align}
+ & \lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} \frac{1}{\sqrt{ 2\pi }}e^{ i\left( \frac{y-x}{\epsilon} \right)u }e^{ -u^{2}/2 } \, du  \, dy \\
+ & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~~~\varphi_{n(0, 1)}\left( \frac{y-x}{\epsilon} \right)  \, dy  \\
+ & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~e^{ -(y-x)^{2}/2\epsilon^{2} } \, dy.
+\end{align}
+$$
+Substitute $v=(y-x)/\epsilon$.
+$$
+\begin{align}
+\lim_{ \epsilon \to 0 } \sqrt{ 2\pi }\int_{-\infty}^{\infty}f(\epsilon v+x)~e^{-v^{2}/2} \, dv.
+\end{align}
+$$
