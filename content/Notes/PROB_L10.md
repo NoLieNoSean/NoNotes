@@ -67,6 +67,7 @@ Here, integrable means [[Measure theory 101#Lebesgue Integration|Lebesgue integr
 > $$
 > 
 > > [!Proof]-
+> > 
 > > Treat each $X_{n}$, $X$ and $Y$ as measurable functions (they are measurable by the [[PROB_L8#Continuous random variables|definition]] of a random variable)
 > > $$
 > > X_{n}, X, Y:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}),
@@ -106,6 +107,7 @@ It is easy to verify that $E(\alpha X+Y)=\alpha E(X)+E(Y)$ for complex random va
 > Let $X$ be a complex random variable. Then, $|E(X)|\leq E(|X|)$.
 > 
 > > [!Proof]-
+> > 
 > > Since $E(X)=e^{ i\theta }|E(X)|$ for some $\theta$, we have
 > > $$
 > > \begin{align}
@@ -198,6 +200,7 @@ $$
 > $$
 > 
 > > [!Proof]-
+> > 
 > > $$
 > > \begin{align}
 > > \varphi_{X+Y}(t) & =Ee^{ it(X+Y) } \\
@@ -215,6 +218,7 @@ Property 0: $\varphi_{X}(0)=1$, $|\varphi_{X}(t)|\leq 1$.
 > A characteristic function is [[ANA1_L20#Uniform continuity|uniformly continuous]].
 > 
 > > [!Proof]-
+> > 
 > > Let $\varphi$ be the characteristic function of $X$.
 > > $$
 > > \begin{align}
@@ -245,6 +249,7 @@ Property 0: $\varphi_{X}(0)=1$, $|\varphi_{X}(t)|\leq 1$.
 > A characteristic function is positive definite.
 > 
 > > [!Proof]-
+> > 
 > > $$
 > > \begin{align}
 > > \sum_{i, j=1}^{n}z_{i}\overline{z_{j}}~\varphi(t_{i}-t_{j}) & =\sum_{i, j=1}^{n}z_{i}\overline{z_{j}}~Ee^{ it_{i}X-it_{j}X } \\
@@ -281,11 +286,13 @@ We will now prove that this map is injective.
 ### Inverse theorem for integer valued random variables
 
 > [!Theorem] Proposition
+> 
 > Let $X$ be an integer valued random variable. Let $f_{X}$ be the mass function of $X$, and let $\varphi_{X}$ be the characteristic function of $X$. Then, 
 > $$
 > f_{X}(k)=\frac{1}{2\pi}\int_{-\pi}^{\pi} e^{ -itk }\varphi_{X}(t) \, dt.
 > $$
 > > [!Proof]-
+> > 
 > > Compute:
 > > $$
 > > \begin{align}
@@ -330,12 +337,14 @@ We will now prove that this map is injective.
 ### Inverse theorem for discrete random variables
 
 > [!Theorem] Proposition
+> 
 > Let $X$ be a discrete random variable with density $f_{X}$ and characteristic function $\varphi_{X}$. Then,
 > $$
 > f_{X}(x)=\lim_{ T \to \infty } \frac{1}{2T}\int_{-T}^{T} e^{ -itx }\varphi_{X}(t) \, dt.
 > $$
 > 
 > > [!Proof]-
+> > 
 > > Note that the support of $X$ is countable.
 > > $$
 > > \begin{align}
