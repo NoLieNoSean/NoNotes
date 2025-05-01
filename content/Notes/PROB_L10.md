@@ -50,7 +50,7 @@ We will use the DCT frequently in the coming proofs.
 To put it simply, if a sequence of sequences is bounded by a summable sequence and converges pointwise to a sequence, then the limit of its sum is the sum of its limit. Here, summable means [[ANA1_L31#Prologue|absolutely convergent]]. Note that the conclusion that each $f_{n}$ is summable follows from the hypothesis that it is bounded by a summable sequence.
 
 > [!Theorem] DCT (for sequences of functions)
-> Let $f_{n}:\mathbb{N}\to \mathbb{R}$ be a measurable function for $n\in N$. Assume an integrable positive function $r:\mathbb{N}\to [0, \infty)$ exists such that $|f_{n}|\leq r$ for all $n$. Let the sequence of functions $(f_{n})$ converge to a function $f$ pointwise. Then, $f_{n}$ is integrable, $f$ is integrable, and
+> Let $f_{n}:\mathbb{R}\to \mathbb{R}$ be a measurable function for $n\in N$. Assume an integrable positive function $r:\mathbb{N}\to [0, \infty)$ exists such that $|f_{n}|\leq r$ for all $n$. Let the sequence of functions $(f_{n})$ converge to a function $f$ pointwise. Then, $f_{n}$ is integrable, $f$ is integrable, and
 > $$
 > \lim_{ n \to \infty } \int_{-\infty}^{\infty} f_{n}(\mu)\,d\mu= \int_{-\infty}^{\infty} \lim_{ n \to \infty } f_{n}(\mu)\,d\mu=\int_{-\infty}^{\infty} f(\mu)\,d\mu.
 > $$
@@ -62,6 +62,7 @@ Here, integrable means [[Measure theory 101#Lebesgue Integration|Lebesgue integr
 
 
 
+---
 # Characteristic functions
 
 > [!Definition]
@@ -113,8 +114,6 @@ $$
 \varphi_{X}(t)=\int_{-\infty}^{\infty} e^{itx}f_{X}(x) \, dx.
 $$
 It is clear that $|\varphi_{X}|\leq 1$.
-
-
 
 > [!Theorem] Properties of the characteristic function
 > The characteristic function is [[ANA1_L20#Uniform continuity|uniformly continuous]].

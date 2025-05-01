@@ -79,7 +79,7 @@ $G$ also has an induced action on the set of all $k$-tuples of distinct elements
 
 Generalizing the previous example, consider a collection $\Phi$ of figures $\phi_{1}, \phi_{2}, \dots$, each of which has a non-negative integral weight $w(\phi_{i})$. The set of figures needn't be finite, but there must be finitely many figures of a given weight. Let $a_{n}$ be the number of figures $\phi_{i}$ of weight $n$. Let $a(t)\equiv\sum_{n\geq 0} a_{n}t^{n}$. This is called the *figure generating series*.
 
-Let $G\leq\text{Sym}(X)$, and let $G$ act on $X$. $X$ is finite, and $|X|=k$. We want to count the number of ways of associating a figure with each point of $X$, with two such configurations being considered as identical if they are in the same orbit (think of the figures as colors; we want to count the number of inequivalent colorings). Consider functions $f:X\to\Phi$. Define the weight of $f$ by 
+Let $G\leq\text{Sym}(X)$, and let $G$ act on $X$. $X$ is finite, and $|X|=k$. We want to count the number of ways of associating a figure with each point of $X$, with two such configurations being considered as identical if they are in the same orbit (think of the figures as colors; we want to count the number of non-equivalent colorings). Consider functions $f:X\to\Phi$. Define the weight of $f$ by 
 $$
 w(f)\equiv\sum_{x\in X}w(f(x)).
 $$

@@ -76,7 +76,7 @@ There are tournaments with only one hamiltonian path (think of an example)
 > There is a tournament $T$ with $n$ players and at least $\frac{n!}{2^{n-1}}$ Hamiltonian paths.
 
 > **Proof**
-> Consider a random tournament $T$ where the direction of each edge is determined by a fair coin flip. Let $X$ be the number of Hamiltonian paths in it. Now, there are $n!$ many Hamiltonian paths. For each Hamiltonian path $\Pi$, let $X_{_{\Pi}}$ be the indicator rv corresponding to the event that $\Pi$ is a hampath in $T$, and $E(X_{\Pi})=\frac{1}{2^{n-1}}$. So, 
+> Consider a random tournament $T$ where the direction of each edge is determined by a fair coin flip. Let $X$ be the number of Hamiltonian paths in it. Now, there are $n!$ many paths. For each Hamiltonian path $\Pi$, let $X_{_{\Pi}}$ be the indicator rv corresponding to the event that $\Pi$ is a hampath in $T$, and $E(X_{\Pi})=\frac{1}{2^{n-1}}$. So, 
 > $$
 > E(X)=E\left( \sum X_{\Pi}\right)=\sum E(X_{\Pi})=\frac{n!}{2^{n-1}}.
 > $$

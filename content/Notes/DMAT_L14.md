@@ -8,7 +8,7 @@ time: 11:55
 ---
 ## Counting with Symmetries
 
-We want to count the number of distinct  $r$-colourings of an object. Let $X$ be the set of elements being coloured (e.g., faces or vertices). A colouring is a function $c: V \to [r]$. Two colourings are considered the same if one can be transformed into the other by applying a symmetry of the object, such as a rotation.
+We want to count the number of distinct  $r$-colorings of an object. Let $X$ be the set of elements being colored (e.g., faces or vertices). A coloring is a function $c: V \to [r]$. Two colorings are considered the same if one can be transformed into the other by applying a symmetry of the object, such as a rotation.
 
 The [[ALG2_L2#Symmetric groups|symmetric group]] on $X$, denoted $\text{Sym}(X)$, consists of all possible permutations of $X$. However, not all elements of $\text{Sym}(X)$ correspond to physically realisable transformations of the object. Typically, we restrict our attention to a subgroup $G$ of rigid transformations, such as rotations. More generally, any subgroup of $\text{Sym}(X)$ can be considered, depending on the context.
 
