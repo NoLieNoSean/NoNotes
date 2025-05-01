@@ -31,7 +31,7 @@ f=\lim_{ n \to \infty } f_{n}=\begin{cases}
 1 & x=1,
 \end{cases}
 $$
-which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called uniform convergence, does preserve these properties.
+which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called **uniform convergence**, does preserve these properties.
 
 > [!Important] Remark
 > To say $f$ is continuous at a limit point $x$ means 

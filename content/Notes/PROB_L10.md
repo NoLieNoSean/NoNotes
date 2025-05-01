@@ -380,59 +380,75 @@ We will now prove that this map is injective.
 
 ### Inverse theorem for continuous random variables
 
-[!Theorem] Proposition
-Let $X$ be a continuous random variable with continuous density $f$ and integrable characteristic function $\varphi$ ($\int_{-\infty}^{\infty} |\varphi(t)| \, dt< \infty$). Then, 
-$$
-f(x)=\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
-$$
+> [!Theorem] Proposition
+> Let $X$ be a continuous random variable with continuous density $f$ and integrable characteristic function $\varphi$ ($\int_{-\infty}^{\infty} |\varphi(t)| \, dt< \infty$). Then, 
+> $$
+> f(x)=\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
+> $$
+> 
+> > [!Proof]-
+> > Notice that
+> > $$
+> > \begin{align}
+> > \lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} \underbrace{ e^{ -\epsilon^{2}t^{2}/2 } e^{ -itx }\varphi(t) }_{ |\cdot|\leq |\varphi(t)| }\, dt =\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
+> > \end{align}
+> > $$
+> > Let's compute the limit on the left.
+> > $$
+> > \begin{align}
+> >  & \lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx } \left( \int_{-\infty}^{\infty} e^{ iyt }f(y) \, dy  \right) \, dt  \\
+> >  & =\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ iyt }f(y) \, dy  \, dt 
+> > \end{align}
+> > $$
+> > 
+> > To use [[#Fubini's Theorem]] to swap the integrals, we must show that the integrand is absolutely integrable.
+> > $$
+> > \begin{align}
+> >  & \iint_{\mathbb{R}^{2}}|e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ -iyt }f(y)|\,dy\,dt \\
+> >  & =\iint_{\mathbb{R}^{2}}e^{ -\epsilon^{2}t^{2}/2 }f(y)\,dy\,dt \\
+> >  & =\left( \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 } \, dt  \right) \left( \int_{-\infty}^{\infty} f(y) \, dy  \right)  \\
+> >  & = \frac{\sqrt{ 2\pi }}{\epsilon}.
+> > \end{align}
+> > $$
+> > Now, we can swap those pesky integrals:
+> > $$
+> > \begin{align}
+> > \lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ it(y-x) } \, dt  \, dy.
+> > \end{align}
+> > $$
+> > Substitute $u=\epsilon t$.
+> > $$
+> > \begin{align}
+> > \lim_{ \epsilon \to 0 } \frac{1}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -u^{2}/2 }e^{ iu(y-x)/\epsilon } \, du  \, dy.
+> > \end{align}
+> > $$
+> > If we dress the expression nicely, we'll see that the inner integral is the characteristic function of the normal distribution evaluated at $(y-x)/\epsilon$, which we have [[#Characteristic functions of common distributions|already computed]]:
+> > $$
+> > \begin{align}
+> >  & \lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} \frac{1}{\sqrt{ 2\pi }}e^{ i\left( \frac{y-x}{\epsilon} \right)u }e^{ -u^{2}/2 } \, du  \, dy \\
+> >  & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~~~\varphi_{n(0, 1)}\left( \frac{y-x}{\epsilon} \right)  \, dy  \\
+> >  & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~e^{ -(y-x)^{2}/2\epsilon^{2} } \, dy.
+> > \end{align}
+> > $$
+> > Substitute $v=(y-x)/\epsilon$.
+> > $$
+> > \begin{align}
+> >  & \lim_{ \epsilon \to 0 } \sqrt{ 2\pi }\int_{-\infty}^{\infty}f(\epsilon v+x)~e^{-v^{2}/2} \, dv.
+> > \end{align}
+> > $$
+> > Passing the limit inside is tricky; since $f$ may not be bounded and $\epsilon$ does not vanish on taking absolute value, using the DCT directly is difficult. Instead, we use the DCT on an compact interval $[-R, R]$ (where $f$ is bounded) to show that in $[-R, R]$, we can take the limit inside. We then show that as we increase $R$, the integral on $[-R, R]^{c}$ vanishes (requires justification I don't have time for now).
+> > $$
+> > \begin{align}
+> > \sqrt{ 2\pi }\underbrace{ \int_{-R}^{R} \lim_{ \epsilon \to 0 } f(\epsilon v+x)~e^{ -v^{2}/2 } \, dv }_{ f\text{ bounded; DCT applicable} }+\underbrace{ \lim_{ \epsilon \to 0 }  \int_{[-R, R]^{c}}f(\epsilon v+x)~e^{ -v^{2}/2 }\,dv }_{ \to 0\text{ as }R\to \infty }.
+> > \end{align}
+> > $$
+> > 
+> > Thus, the expression becomes
+> > $$
+> > \begin{align}
+> >  &  f(x)\sqrt{ 2\pi }\int_{-\infty}^{\infty}~e^{-v^{2}/2} \, dv=f(x).
+> > \end{align}
+> > $$
+> > 
+> 
 
-[!Proof]-
-Notice that
-$$
-\begin{align}
-\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} \underbrace{ e^{ -\epsilon^{2}t^{2}/2 } e^{ -itx }\varphi(t) }_{ |\cdot|\leq |\varphi(t)| }\, dt =\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
-\end{align}
-$$
-Let's compute the limit on the left.
-$$
-\begin{align}
- & \lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx } \left( \int_{-\infty}^{\infty} e^{ iyt }f(y) \, dy  \right) \, dt  \\
- & =\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ iyt }f(y) \, dy  \, dt 
-\end{align}
-$$
-
-To use [[#Fubini's Theorem]] to swap the integrals, we must show that the integrand is absolutely integrable.
-$$
-\begin{align}
- & \iint_{\mathbb{R}^{2}}|e^{ -\epsilon^{2}t^{2}/2 }e^{ -itx }   e^{ -iyt }f(y)|\,dy\,dt \\
- & =\iint_{\mathbb{R}^{2}}e^{ -\epsilon^{2}t^{2}/2 }f(y)\,dy\,dt \\
- & =\left( \int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 } \, dt  \right) \left( \int_{-\infty}^{\infty} f(y) \, dy  \right)  \\
- & = \frac{\sqrt{ 2\pi }}{\epsilon}.
-\end{align}
-$$
-Now, we can swap those pesky integrals:
-$$
-\begin{align}
-\lim_{ \epsilon \to 0 } \int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -\epsilon^{2}t^{2}/2 }e^{ it(y-x) } \, dt  \, dy.
-\end{align}
-$$
-Substitute $u=\epsilon t$.
-$$
-\begin{align}
-\lim_{ \epsilon \to 0 } \frac{1}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} e^{ -u^{2}/2 }e^{ iu(y-x)/\epsilon } \, du  \, dy.
-\end{align}
-$$
-If we dress the expression nicely, we'll see that the inner integral is the characteristic function of the normal distribution evaluated at $(y-x)/\epsilon$, which we have [[#Characteristic functions of common distributions|already computed]]:
-$$
-\begin{align}
- & \lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)\int_{-\infty}^{\infty} \frac{1}{\sqrt{ 2\pi }}e^{ i\left( \frac{y-x}{\epsilon} \right)u }e^{ -u^{2}/2 } \, du  \, dy \\
- & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~~~\varphi_{n(0, 1)}\left( \frac{y-x}{\epsilon} \right)  \, dy  \\
- & =\lim_{ \epsilon \to 0 } \frac{\sqrt{ 2\pi }}{\epsilon}\int_{-\infty}^{\infty}f(y)~e^{ -(y-x)^{2}/2\epsilon^{2} } \, dy.
-\end{align}
-$$
-Substitute $v=(y-x)/\epsilon$.
-$$
-\begin{align}
-\lim_{ \epsilon \to 0 } \sqrt{ 2\pi }\int_{-\infty}^{\infty}f(\epsilon v+x)~e^{-v^{2}/2} \, dv.
-\end{align}
-$$

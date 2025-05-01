@@ -91,6 +91,7 @@ Proper lecture notes start here.
 - [[ANA1_L32]] ✅
 	- Real analytic functions
 - [[ANA1_L33]] ✅
+	- Uniform convergence
 - [[ANA1_L34]] 
 - [[ANA1_L35]]
 - [[ANA1_L36]]
