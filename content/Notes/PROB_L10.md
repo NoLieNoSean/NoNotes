@@ -1,4 +1,4 @@
-# Distributions of sums and quotients
+ # Distributions of sums and quotients
 
 ## Distribution of X+Y
 
@@ -42,7 +42,7 @@ The above expression is analogous to the convolution product defined for densiti
 
 We will use the DCT frequently in the coming proofs.
 
-> [!Theorem] DCT (for sequences of sequences)
+> [!Theorem] DCT for sequences of sequences
 > Let $f_{n}:\mathbb{N}\to \mathbb{R}$ be a sequence for $n\in N$. Assume a summable positive sequence $r:\mathbb{N}\to \mathbb{R}_{\geq 0}$ exists such that $\ | \ f_{n}(i)\ | \ \leq r(i)$ for all $n$ and $i$, that is, $|f_{n}|\leq r$ for all $n$. Let the sequence of sequences $(f_{n})$ converge to a sequence $f$ pointwise, that is $f_{n}(i)\to f(i)$ for all $i$. Then, each $f_{n}$ is summable, $f$ is summable, and
 > $$
 > \lim_{ n \to \infty } \sum_{i=1}^{\infty} f_{n}(i)= \sum_{i=1}^{\infty} \lim_{ n \to \infty } f_{n}(i)=\sum_{i=1}^{\infty} f(i).
@@ -51,7 +51,7 @@ We will use the DCT frequently in the coming proofs.
 
 To put it simply, if a sequence of sequences is bounded by a summable sequence and converges pointwise to a sequence, then the limit of its sum is the sum of its limit. Here, summable means [[ANA1_L31#Prologue|absolutely convergent]]. Note that the conclusion that each $f_{n}$ is summable follows from the hypothesis that it is bounded by a summable sequence.
 
-> [!Theorem] DCT (for sequences of functions)
+> [!Theorem] DCT for sequences of functions
 > Let $f_{n}:\mathbb{R}\to \mathbb{R}$ be a measurable function for $n\in \mathbb{N}$. Assume an integrable positive function $r:\mathbb{R}\to [0, \infty)$ exists such that $|f_{n}|\leq r$ for all $n$. Let the sequence of functions $(f_{n})$ converge to a function $f$ pointwise. Then, $f_{n}$ is integrable, $f$ is integrable, and
 > $$
 > \lim_{ n \to \infty } \int_{-\infty}^{\infty} f_{n}(\mu)\,d\mu= \int_{-\infty}^{\infty} \lim_{ n \to \infty } f_{n}(\mu)\,d\mu=\int_{-\infty}^{\infty} f(\mu)\,d\mu.
@@ -68,25 +68,24 @@ Here, integrable means [[Measure theory 101#Lebesgue Integration|Lebesgue integr
 > EX_{n}\to EX.
 > $$
 > 
-> > [!Proof]-
-> > 
-> > Treat each $X_{n}$, $X$ and $Y$ as measurable functions (they are measurable by the [[PROB_L8#Continuous random variables|definition]] of a random variable)
-> > $$
-> > X_{n}, X, Y:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}),
-> > $$
-> > where $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. The probability measure $P$ on $\Omega$ plays the role of the Lebesgue measure. We are given that $|X_{n}|\leq Y$, and that
-> > $$
-> > EY=\int_{\Omega}Y(\omega)~dP(\omega)< \infty.
-> > $$
-> > So, we have all the hypotheses of the DCT, which enables us to write
-> > $$
-> > \lim_{ n \to \infty } EX_{n}=\lim_{ n \to \infty } \int_{\Omega}X_{n}(\omega)~dP(\omega)=\int_{\Omega}X(\omega)~dP(\omega)=EX.
-> > $$
-> > 
-> 
+
+`\begin{proof}`
+Treat each $X_{n}$, $X$ and $Y$ as measurable functions (they are measurable by the [[PROB_L8#Continuous random variables|definition]] of a random variable)
+$$
+X_{n}, X, Y:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}),
+$$
+where $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. The probability measure $P$ on $\Omega$ plays the role of the Lebesgue measure. We are given that $|X_{n}|\leq Y$, and that
+$$
+EY=\int_{\Omega}Y(\omega)~dP(\omega)< \infty.
+$$
+So, we have all the hypotheses of the DCT, which enables us to write
+$$
+\lim_{ n \to \infty } EX_{n}=\lim_{ n \to \infty } \int_{\Omega}X_{n}(\omega)~dP(\omega)=\int_{\Omega}X(\omega)~dP(\omega)=EX.
+$$
+.`\end{proof}`
+
 
 A random variable is said to be integrable if it has finite expectation.
-
 ## Fubini's Theorem
 
 Used to justify swapping integrals.
@@ -98,14 +97,13 @@ Used to justify swapping integrals.
 > $$
 > then the double integral equals the iterated integrals in either order.
 
-
 ---
 # Characteristic functions
 
-> [!Definition]
+> [!definition]
 > $X:\Omega\to \mathbb{C}$ is a **complex random variable** if $\mathrm{Re}~X$ and $\mathrm{Im}~X$ are both real random variables.
 
-> [!Definition]
+> [!definition]
 > Let $X$ be a complex random variable. $X$ has **finite expectation** if $\mathrm{Re}~X$ and $\mathrm{Im}~X$ have finite expectation, in which case we define
 > $$
 > E(X)=E(\mathrm{Re}~X)+iE(\mathrm{Im}~X).
@@ -299,7 +297,7 @@ We will now prove that this map is injective.
 
 ### Inverse theorem for integer valued random variables
 
-> [!Theorem] Proposition
+> [!theorem] 
 > 
 > Let $X$ be an integer valued random variable. Let $f_{X}$ be the mass function of $X$, and let $\varphi_{X}$ be the characteristic function of $X$. Then, 
 > $$
@@ -356,7 +354,7 @@ We will now prove that this map is injective.
 
 ### Inverse theorem for discrete random variables
 
-> [!Theorem] Proposition
+> [!theorem] 
 > 
 > Let $X$ be a discrete random variable with density $f_{X}$ and characteristic function $\varphi_{X}$. Then,
 > $$
@@ -380,7 +378,7 @@ We will now prove that this map is injective.
 
 ### Inverse theorem for continuous random variables
 
-> [!Theorem] Proposition
+> [!Theorem] 
 > Let $X$ be a continuous random variable with continuous density $f$ and integrable characteristic function $\varphi$ ($\int_{-\infty}^{\infty} |\varphi(t)| \, dt< \infty$). Then, 
 > $$
 > f(x)=\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ -itx }\varphi(t) \, dt. 
@@ -451,4 +449,5 @@ We will now prove that this map is injective.
 > > $$
 > > 
 > 
+^3092aa
 
