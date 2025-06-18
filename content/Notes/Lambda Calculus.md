@@ -154,10 +154,13 @@ The following lemma is clear from the principal axiom:
 > \mathbf{Y}\equiv\lambda f.(\lambda x.f(xx))(\lambda x.f(xx))
 > $$
 > such that $F(\mathbf{Y}F)=\mathbf{Y}F$. 
+> 
+> > [!Proof]-
+> > 
+> > Define $W\equiv\lambda x.F(xx)$ and $X\equiv WW$. Then, $X\equiv WW=(\lambda x.F(xx))W=F(WW)=FX.$
+> 
 
 ^d18faf
-
-`\begin{proof}` Define $W\equiv\lambda x.F(xx)$ and $X\equiv WW$. Then, $X\equiv WW=(\lambda x.F(xx))W=F(WW)=FX.$`\end{proof}`
 
 > [!Example]
 > Show that there exists $G$ such that for all $X$, $GX=\mathbf{S}GX$.
@@ -229,6 +232,7 @@ The following lemma is clear from the principal axiom:
 > [!Definition] Church numerals
 > The **Church numerals** $c_{0}, c_{1}, \dots,$ are defined by $c_{n}\equiv\lambda fx.f^{n}(x)$.
 
+
 > [!Theorem] Arithmetic on Church numerals
 > Define
 > $$
@@ -248,66 +252,68 @@ The following lemma is clear from the principal axiom:
 > \end{align}
 > $$
 > 
+> > [!Lemma]
+> > 1. $(c_{n}f)^{m}x=f^{nm}x$
+> > 2. $(c_{n})^{m}f=c_{n^{m}}f$, for $m> 0$.
+> > 
+> > > [!Proof]-
+> > > 
+> > > Proof by induction. Note that for $m=0$, $x=x$, and for $m=1$, $(c_{n}f)x=f^{n}x$. Assume that $(1)$ holds for $m=k$, that is, $(c_{n}f)^{k}x=f^{nk}x$. Then, we have
+> > > $$
+> > > \begin{align}
+> > > (c_{n}f)^{k+1}x & =c_{n}f(f^{nk}x) \\
+> > >  & =f^{n}(f^{nk}x) \\
+> > >  & =f^{n(k+1)}x.
+> > > \end{align}
+> > > $$
+> > > Similarly, note that $(2)$ holds for $m=1$. Assume that it holds for $m=k$. Then, 
+> > > $$
+> > > \begin{align}
+> > > (c_{n})^{k+1}f & =c_{n}(c_{n^{k}}f) \\
+> > >  & =\lambda x.(c_{n^{k}}f)^{n}x \\
+> > >  & = \lambda x.f^{n^{k+1}}x \\
+> > >  & =c_{n^{k+1}}f.
+> > > \end{align}
+> > > $$
+> > > 
+> > 
+> ^ec2774
+> 
+> > [!Proof]-
+> > test test
+> > $$
+> > \begin{align}
+> > \mathbf{A}_{+}c_{a}c_{b} & =\lambda fx.c_{a}f(c_{b}fx) \\
+> >  & =\lambda fx.(\lambda x.f^{a}(x))(f^{b}(x))  \\
+> >  & =\lambda fx.f^{a}(f^{b}(x)) \\     
+> >  & =\lambda fx.f^{a+b}(x) \\
+> >  & =c_{a+b}
+> > \end{align}
+> > $$
+> > Using [[#^ec2774]] $(1)$, 
+> > $$
+> > \begin{align}
+> > \mathbf{A}_{*}c_{a}c_{b} & =\lambda f.c_{a}(c_{b}f) \\
+> >  & = \lambda fx.(c_{b}f)^{a}x \\
+> >  & =\lambda fx.f^{ab}x \\
+> >  & =c_{ab}.
+> > \end{align}
+> > $$
+> > Using [[#^ec2774]] $(2)$, 
+> > $$
+> > \begin{align}
+> > \mathbf{A}_{\exp}c_{a}c_{b} & =c_{b}c_{a} \\
+> >  & =\lambda x.c_{a}^{b}x \\
+> >  & =\lambda x.c_{a^{b}}x \\
+> >  & =\lambda x.(\lambda fy.f^{a^{b}}y)x \\
+> >  & =\lambda xy.x^{a^{b}}y \\
+> >  & =c_{a^{b}}.
+> > \end{align}
+> > $$
+> > Note that in general, $M=\lambda x.Mx$ if $M=\lambda y.M'[y]$ and $x\not\in FV(M')$.
+> 
 
-^a682eb
 
-> [!Lemma]
-> 1. $(c_{n}f)^{m}x=f^{nm}x$
-> 2. $(c_{n})^{m}f=c_{n^{m}}f$, for $m> 0$.
-
-^ec2774
-
-`\begin{proof}`
-Proof by induction. Note that for $m=0$, $x=x$, and for $m=1$, $(c_{n}f)x=f^{n}x$. Assume that $(1)$ holds for $m=k$, that is, $(c_{n}f)^{k}x=f^{nk}x$. Then, we have
-$$
-\begin{align}
-(c_{n}f)^{k+1}x & =c_{n}f(f^{nk}x) \\
- & =f^{n}(f^{nk}x) \\
- & =f^{n(k+1)}x.
-\end{align}
-$$
-Similarly, note that $(2)$ holds for $m=1$. Assume that it holds for $m=k$. Then, 
-$$
-\begin{align}
-(c_{n})^{k+1}f & =c_{n}(c_{n^{k}}f) \\
- & =\lambda x.(c_{n^{k}}f)^{n}x \\
- & = \lambda x.f^{n^{k+1}}x \\
- & =c_{n^{k+1}}f.
-\end{align}
-$$
-.`\end{proof}`
-
-`\begin{proof}` [[#^a682eb]]
-$$
-\begin{align}
-\mathbf{A}_{+}c_{a}c_{b} & =\lambda fx.c_{a}f(c_{b}fx) \\
- & =\lambda fx.(\lambda x.f^{a}(x))(f^{b}(x))  \\
- & =\lambda fx.f^{a}(f^{b}(x)) \\     
- & =\lambda fx.f^{a+b}(x) \\
- & =c_{a+b}
-\end{align}
-$$
-Using [[#^ec2774]] $(1)$, 
-$$
-\begin{align}
-\mathbf{A}_{*}c_{a}c_{b} & =\lambda f.c_{a}(c_{b}f) \\
- & = \lambda fx.(c_{b}f)^{a}x \\
- & =\lambda fx.f^{ab}x \\
- & =c_{ab}.
-\end{align}
-$$
-Using [[#^ec2774]] $(2)$, 
-$$
-\begin{align}
-\mathbf{A}_{\exp}c_{a}c_{b} & =c_{b}c_{a} \\
- & =\lambda x.c_{a}^{b}x \\
- & =\lambda x.c_{a^{b}}x \\
- & =\lambda x.(\lambda fy.f^{a^{b}}y)x \\
- & =\lambda xy.x^{a^{b}}y \\
- & =c_{a^{b}}.
-\end{align}
-$$
-Note that in general, $M=\lambda x.Mx$ if $M=\lambda y.M'[y]$ and $x\not\in FV(M')$.`\end{proof}`
 
 ---
 # Booleans and conditionals
@@ -352,17 +358,19 @@ We can use the pairing construction for an alternative representation of natural
 > \mathbf{Z}[n+1] & =\textsf{false}.
 > \end{align}
 > $$
-
-`\begin{proof}`
-Take
-$$
-\begin{align}
-\mathbf{S}^{+} & \equiv\lambda x.[\textsf{false}, x] \\
-\mathbf{P}^{-} & \equiv\lambda x.x~\textsf{false} \\
-\mathbf{Z} & \equiv\lambda x.x~\textsf{true}.
-\end{align}
-$$
-.`\end{proof}`
+> 
+> > [!Proof]-
+> > 
+> > Take
+> > $$
+> > \begin{align}
+> > \mathbf{S}^{+} & \equiv\lambda x.[\textsf{false}, x] \\
+> > \mathbf{P}^{-} & \equiv\lambda x.x~\textsf{false} \\
+> > \mathbf{Z} & \equiv\lambda x.x~\textsf{true}.
+> > \end{align}
+> > $$
+> > 
+> 
 
 > [!Definition] Lambda definability
 > A **numeric function** is a map $\varphi:\mathbb{N}^{p}\to \mathbb{N}$ for some $p$. In this case, $\varphi$ is called $p$-ary.
@@ -372,5 +380,5 @@ $$
 > $$
 > for all $n_{1}, \dots, n_{p}\in \mathbb{N}$, in which case, $\varphi$ is said to be **$\lambda$-defined** by $F$.
 
-[!Definition] Initial functions
+
 

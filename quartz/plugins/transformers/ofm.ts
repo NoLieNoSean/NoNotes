@@ -18,7 +18,7 @@ import { PhrasingContent } from "mdast-util-find-and-replace/lib"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
 import tex2svg from 'node-tikzjax';
-console.log(tex2svg);
+import { Blockquote } from "mdast-util-to-hast/lib/handlers/blockquote"
 
 
 export interface Options {
@@ -221,17 +221,14 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           visit(tree, "code", (node: Code) => {
             if (node.lang === "tikz") {
               node.value = "\\usepackage{amsmath, amstext, amsfonts, amssymb}\n" + node.value
-              // console.log(node.value)
-              // console.log("-------------------------------")
               tikzNodes.push(node)
             }
           })
-          // console.log("-------------------------------\n\n\n\n\n\n\n\n\n\n\n\npushing promises")
           const svgs = [];
           for (const node of tikzNodes) {
             try {
-              let svg = await tex2svg.default(node.value, { 
-                showConsole: true,
+              let svg = await tex2svg.default(node.value, {
+                // showConsole: true,
                 embedFontCss: true,
                 fontCssUrl: 'https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css',
               });
@@ -245,11 +242,35 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               console.error(`Failed to process TikZ block: ${error}`);
             }
           }
-          // console.log(svgs)
         }
       })
 
+      //proof envs
+      plugins.push(() => {
+        return async (tree: Root, _file) => {
+          visit(tree, "blockquote", (node) => {
 
+            try {
+              if (node.children[0].children[0].value.slice(0, 8).toLowerCase() === "[!proof]") {
+                if (node.children[node.children.length - 1].type === "paragraph") {
+                  node.children[node.children.length - 1].children.push({
+                    type: "html",
+                    value: "<span class='qed'>□</span>"
+                  })
+                }
+                else {
+                  node.children.push({
+                    type: "html",
+                    value: "<span class='qed'>□</span>"
+                  })
+                }
+              }
+            }
+            catch { }
+
+          })
+        }
+      })
 
       // regex replacements
       plugins.push(() => {
@@ -560,8 +581,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
-
-
       return plugins
     },
     htmlPlugins() {
@@ -698,6 +717,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
+
       //numbered definitions and theorems!
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
@@ -713,6 +733,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   childNode.properties.className &&
                   (childNode.properties.className as string).includes("callout-title-inner")
                 ) {
+
+
                   //childNode.children[0] is a <p> tag. I want to change the tagname of this to span, and wrap it in a new <p> tag.
                   let pTag = childNode.children[0];
 
@@ -775,39 +797,68 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         }
       })
 
+
       //assign classes to tikz svgs
       plugins.push(() => {
-          return (tree: HtmlRoot, _file) => {
-            visit(tree, "element", (node) => {
-              if (node.tagName === "svg" && node.properties.dataTikzSvg === "true") {
-                console.log(node)
-                if(node.properties.className) node.properties.className.append("TikzSvg")
-                  else node.properties.className = ["TikzSvg"]
-              }
-            })
-          }
-        })
-      
+        return (tree: HtmlRoot, _file) => {
+          visit(tree, "element", (node) => {
+            if (node.tagName === "svg" && node.properties.dataTikzSvg === "true") {
+              if (node.properties.className) node.properties.className.append("TikzSvg")
+              else node.properties.className = ["TikzSvg"]
+            }
+          })
+        }
+      })
 
-      //render proof environments
+      //add period after title for proof envs
       plugins.push(() => {
-          return (tree: HtmlRoot, _file) => {
-            visit(tree, "element", (node) => {
-              if (node.tagName === "code" && node.children[0].type === "text" && node.children[0].value === "\\begin{proof}") {
-                console.log(node)
-                node.tagName = "span"
-                node.properties.className = ["proofEnvStart"]
-                node.children[0].value = "Proof."
+        return (tree: HtmlRoot, _file) => {
+          visit(tree, "element", (node) => {
+            if (node.tagName === "blockquote" && node.properties.className && node.properties.className.includes("proof")) {
+              visit(node, "element", (child) => {
+                if (child.properties.className && child.properties.className.includes("callout-title-inner"))
+                  child.children[0].children[0].value += "."
+              })
+            }
+          })
+        }
+      })
+
+      //internal link naming
+      plugins.push(() => {
+        return (tree: HtmlRoot, _file) => {
+          const NumberNodeDict = new Map();
+
+          visit(tree, "element", (node) => {
+            let countedCallouts = ["definition", "lemma", "theorem", "example", "claim"]
+            if (node.tagName === "blockquote" && countedCallouts.includes(node.properties.dataCallout as string) && node.properties.id) {
+              NumberNodeDict.set(node.properties.id, node)
+            }
+          })
+
+          console.log(NumberNodeDict)
+
+
+          visit(tree, "element", (node) => {
+            if (node.tagName === "a" &&
+              node.properties.href.slice(0, 4) === "#%5E") {
+
+              console.log(node)
+              let callout = NumberNodeDict.get(node.properties.href.slice(4))
+              let dataCallout = callout.properties.dataCallout
+
+              console.log(node.children[0].value[0], node.children[0].value[0]!="^")
+
+
+              if(node.children[0].value[0]==="^"){
+                node.children[0].value = dataCallout[0].toUpperCase() +dataCallout.slice(1) + " " +callout.properties.calloutNumber 
               }
-              if (node.tagName === "code" && node.children[0].type === "text" && node.children[0].value === "\\end{proof}") {
-                console.log(node)
-                node.tagName = "span"
-                node.properties.className = ["proofEnvEnd"]
-                node.children[0].value = "□"
-              }
-            })
-          }
-        })
+              node.properties.href = `#${node.properties.href.slice(4)}`
+
+            }
+          })
+        }
+      })
 
       return plugins
     },

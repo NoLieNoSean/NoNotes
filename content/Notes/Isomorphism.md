@@ -20,7 +20,9 @@ Isomorphic spaces can be considered as different representations of the same spa
 >Let $A:V\to W$ be an isomorphism, and let $S = \{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n} \}$ be a [[bases|basis]] in $V$. Then  $S' = \{ A\mathbf{v}_{1}, A\mathbf{v}_{2}, \dots A\mathbf{v}_{n} \}$ is a basis in $W$.
 >
 >LADW, 6.6
->^Theorem1
+
+^bf9c8b
+
 
 >**Proof**
 >
@@ -62,7 +64,9 @@ Also, If $A$ is an isomorphism, so is $A^{-1}$. Therefore, in the above theorem 
 >Let $A:V\to W$ be a linear map, and let $S=\{ \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n} \}$ be a basis in $V$. If $A(S)$ is a basis in $W$, $A$ is an isomorphism.
 >
 >LADW, 6.7
->^Theorem2
+
+^2db34a
+
 
 >**Proof**
 >One way to prove this is to show $A$ is injective and surjective, which is easily done. 
@@ -84,8 +88,8 @@ Let $A:V\to W$ be a linear map. Consider the statements:
 2. $A(S)$ is a basis in $W$.
 3. $A$ is an isomorphism (remember, this is just fancy talk for saying $A$ is invertible).
 
-The [[#^Theorem1|first theorem]] states $1\&3\implies2$
-The [[#^Theorem2|second theorem]] states $1\&2\implies 3$.
+[[#^bf9c8b]] states $1\&3\implies2$
+[[#^2db34a]] states $1\&2\implies 3$.
 
 Thus, the two theorems effectively say given $1$, we have $2\iff 3$. 
 
@@ -100,7 +104,7 @@ A \text{ is invertible}  \underset{ \text{defn} }{ \iff } &(\text{Left inverse e
 \end{align}
 $$
 (\*) is easy to show. Refer [[ANA1_HW1_sub.pdf|this]].
-(\*\*) is important. Proof goes exactly like the proof of the [[#^Theorem1|first theorem]]. 
+(\*\*) is important. Proof goes exactly like the proof of [[#^bf9c8b]].
 
 Speaking in terms of matrices, we get the following corollary to the two theorems:
 

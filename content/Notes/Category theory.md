@@ -106,98 +106,32 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > ```
 > commutes. Associativity immediately from the fact that composition is associative in $\textsf{C}$.
 
-[!Example] Formalizing Example 3.10
-Let $\textsf{C}$ be a category. Choose two fixed morphisms $\alpha:A\to C$ and $\beta:B\to C$ in $\textsf{C}$, with the same target $C$. Define a category $\textsf{C}_{\alpha, \beta}$ as follows:
-- $\text{Obj}(\textsf{C}_{\alpha, \beta})$ contains commutative diagrams
-	```tikz
-	\usepackage{tikz-cd}
-	\begin{document}
-	\begin{tikzcd}
-	& A\ar[rd, "\alpha"] &\\
-	Z\ar[ru, "f"]\ar[rd, "g"]&&C\\
-	&B\ar[ru, "\beta"]&
-	\end{tikzcd}
-	\end{document}
-	```
-	in $\textsf{C}$, and
-- morphisms correspond to commutative diagrams
-	```tikz
-	\usepackage{tikz-cd}
-	\begin{document}
-	\begin{tikzcd}
-	&&A\ar[rd, "\alpha"]&\\
-	Z_1\ar[rru, bend left, "f_1"]\ar[r, "\sigma"]\ar[rrd, bend right, "g_1"]& Z_2\ar[ru, "f_2"]\ar[rd, "g_2"]&&C\\
-	&&B\ar[ru, "\beta"]
-	\end{tikzcd}
-	\end{document}
-	```
-
-
-
-
-
-> [!Example]
-> ```tikz
-> \usepackage{tikz-cd}
-> 
-> \begin{document}
-> \begin{tikzcd}
-> 
->     T
->     \arrow[drr, bend left, "x"]
->     \arrow[ddr, bend right, "y"]
->     \arrow[dr, dotted, "{(x,y)}" description] & & \\
->     K & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
->     & X \arrow[d, "f"] \\
->     & Y \arrow[r, "g"]
->     & Z
-> 
-> \end{tikzcd}
+> [!Example] Formalizing Example 3.10
+> Let $\textsf{C}$ be a category. Choose two fixed morphisms $\alpha:A\to C$ and $\beta:B\to C$ in $\textsf{C}$, with the same target $C$. Define a category $\textsf{C}_{\alpha, \beta}$ as follows:
+> - $\text{Obj}(\textsf{C}_{\alpha, \beta})$ contains commutative diagrams
+> 	```tikz
+> 	\usepackage{tikz-cd}
+> 	\begin{document}
+> 	\begin{tikzcd}
+> 	& A\ar[rd, "\alpha"] &\\
+> 	Z\ar[ru, "f"]\ar[rd, "g"]&&C\\
+> 	&B\ar[ru, "\beta"]&
+> 	\end{tikzcd}
+> 	\end{document}
+> 	```
+> 	in $\textsf{C}$, and
+> - morphisms correspond to commutative diagrams
+> 	```tikz
+> 	\usepackage{tikz-cd}
+> 	\begin{document}
+> 	\begin{tikzcd}
+> 	&&A\ar[rd, "\alpha"]&\\
+> 	Z_1\ar[rru, bend left, "f_1"]\ar[r, "\sigma"]\ar[rrd, bend right, "g_1"]& Z_2\ar[ru, "f_2"]\ar[rd, "g_2"]&&C\\
+> 	&&B\ar[ru, "\beta"]
+> 	\end{tikzcd}
+> 	\end{document}
+> 	```
 > 
 > 
-> 
-> 
-> \end{document}
-> ```
-> ```tikz
-> \usepackage{tikz}
-> 
-> \begin{document}
-> \begin{tikzpicture}
-> \draw (0,0) .. controls (0,4) and (4,0) .. (4,4);
-> \end{tikzpicture}
-> \end{document}
-> ```
 
-
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
-\begin{tikzcd}
-Z_1 \ar[d, "f_1"'] & Z_2 \arrow[d, "f_2"']\\
-A&A
-\end{tikzcd}
-
-\end{document}
-```
-
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
-\begin{tikzcd}[column sep=tiny]
-Z_1 \ar[rr, "\sigma"] \ar[dr, "f_1"'] & & Z_2 \ar[dl, "f_2"]\\
-& A &
-\end{tikzcd}
-\end{document}
-```
-
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
-\begin{tikzcd}
-Z_1 \ar[r, "\sigma"] \ar[dr, "f_1"'] & Z_2 \ar[d, "f_2"] \ar[r, "\tau"] & Z_3 \ar[dl, "f_3"]\\
-& A &
-\end{tikzcd}
-\end{document}
-```
 

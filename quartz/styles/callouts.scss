@@ -33,7 +33,7 @@
   &[data-callout] {
     --color: rgb(130, 161, 241);
     --border: #448aff44;
-    --bg: rgb(37, 40, 58);
+    --bg: #3a82ff1c;
     --callout-icon: var(--callout-icon-note);
   }
 
@@ -49,7 +49,7 @@
   }
 
   &[data-callout="example"]{
-    --color: rgb(255, 255, 255);
+    --color: var(--dark);
   }
 
   &[data-callout="definition"],
@@ -57,25 +57,18 @@
   &[data-callout="lemma"],
   &[data-callout="theorem"],
   &[data-callout="claim"] {
-    --border: #efefef;
+    --border: var(--highlight);
     --bg: #ffffff00;
-    --callout-icon: var(--callout-icon-abstract);
     border-width: 2px;
-
     .callout-icon {
       display: none;
     }
-
-    font-family:'Times New Roman',
-    Times,
-    serif;
-
+    font-family:'Times New Roman', Times, serif;
     .callout-title-inner {
       span:empty {
         display: none;
       }
     }
-
     .callout-title-inner-desc {
       padding-left: 0.2em;
       font-weight: $normalWeight;
@@ -83,7 +76,28 @@
   }
 
   &[data-callout="proof"] {
+    --color: var(--dark);
     background-color: #00000000;
+    .callout-icon {
+      display: none;
+    }
+    font-family:'Times New Roman', Times, serif;
+    .callout-title-inner{
+      font-style: italic;
+    }
+    .callout-title{
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .qed{
+      font-family: 'CMU Serif', 'STIX Two Math', 'Times New Roman', serif; /* LaTeX-like font */
+      font-size: 1em; /* Adjust size for visibility */
+      float: right;
+    }
+  }
+
+  &[data-callout="info"]{
+    font-family:var(--bodyFont);
   }
 
 
