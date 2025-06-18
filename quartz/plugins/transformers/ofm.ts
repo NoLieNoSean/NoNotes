@@ -17,6 +17,9 @@ import { toHtml } from "hast-util-to-html"
 import { PhrasingContent } from "mdast-util-find-and-replace/lib"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
+import tex2svg from 'node-tikzjax';
+console.log(tex2svg);
+
 
 export interface Options {
   comments: boolean
@@ -211,6 +214,43 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
     markdownPlugins(_ctx) {
       const plugins: PluggableList = []
 
+      // render tikz blocks using tikzjax
+      plugins.push(() => {
+        return async (tree: Root, _file) => {
+          const tikzNodes: Code[] = []
+          visit(tree, "code", (node: Code) => {
+            if (node.lang === "tikz") {
+              node.value = "\\usepackage{amsmath, amstext, amsfonts, amssymb}\n" + node.value
+              // console.log(node.value)
+              // console.log("-------------------------------")
+              tikzNodes.push(node)
+            }
+          })
+          // console.log("-------------------------------\n\n\n\n\n\n\n\n\n\n\n\npushing promises")
+          const svgs = [];
+          for (const node of tikzNodes) {
+            try {
+              let svg = await tex2svg.default(node.value, { 
+                showConsole: true,
+                embedFontCss: true,
+                fontCssUrl: 'https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css',
+              });
+              svg = svg.replace('<svg', '<svg data-tikz-svg="true"')
+              node.value = svg;
+              node.type = "html"
+              delete node.lang
+              delete node.meta
+              svgs.push(svg);
+            } catch (error) {
+              console.error(`Failed to process TikZ block: ${error}`);
+            }
+          }
+          // console.log(svgs)
+        }
+      })
+
+
+
       // regex replacements
       plugins.push(() => {
         return (tree: Root, file) => {
@@ -268,9 +308,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                     return {
                       type: "html",
                       data: { hProperties: { transclude: true } },
-                      value: `<blockquote class="transclude" data-url="${url}" data-block="${block}" data-embed-alias="${alias}"><a href="${
-                        url + anchor
-                      }" class="transclude-inner">Transclude of ${url}${block}</a></blockquote>`,
+                      value: `<blockquote class="transclude" data-url="${url}" data-block="${block}" data-embed-alias="${alias}"><a href="${url + anchor
+                        }" class="transclude-inner">Transclude of ${url}${block}</a></blockquote>`,
                     }
                   }
 
@@ -521,6 +560,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
+
+
       return plugins
     },
     htmlPlugins() {
@@ -656,6 +697,117 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           }
         })
       }
+
+      //numbered definitions and theorems!
+      plugins.push(() => {
+        return (tree: HtmlRoot, _file) => {
+          let counter = 0;
+          visit(tree, "element", (node) => {
+            let countedCallouts = ["definition", "lemma", "theorem", "example", "claim"]
+            if (node.tagName === "blockquote" && countedCallouts.includes(node.properties.dataCallout as string)) {
+              counter++;
+              node.properties.calloutNumber = counter
+              visit(node, "element", (childNode) => {
+                if (
+                  childNode.tagName === "div" &&
+                  childNode.properties.className &&
+                  (childNode.properties.className as string).includes("callout-title-inner")
+                ) {
+                  //childNode.children[0] is a <p> tag. I want to change the tagname of this to span, and wrap it in a new <p> tag.
+                  let pTag = childNode.children[0];
+
+                  // Check that it’s an element and a <p> tag
+                  if (pTag && pTag.type === "element" && pTag.tagName === "p") {
+                    // Change the <p> tag to a <span>
+                    pTag.tagName = "span";
+                    let displayDesc = true
+
+                    if (childNode.children[0].children[0].type === "text") {
+                      let prevVal = childNode.children[0].children[0].value.trim()
+                      if (prevVal.toLowerCase() == (node.properties.dataCallout as string).toLowerCase())
+                        displayDesc = false
+                      else
+                        childNode.children[0].children[0].value = prevVal
+                    }
+                    let desc = {
+                      type: "element",
+                      tagName: "span",
+                      properties: { className: ['callout-title-inner-desc'], style: `display: ${displayDesc ? "initial" : "none"}` },
+                      children: [
+                        { type: "text", value: "(" },
+                        pTag,
+                        { type: "text", value: ")" }
+                      ]
+                    };
+
+                    let newVal = node.properties.dataCallout[0].toUpperCase() + node.properties.dataCallout.slice(1) + " " + counter
+
+                    childNode.children[0] = {
+                      type: "element",
+                      tagName: "p",
+                      properties: {},
+                      children: [
+                        {
+                          type: 'element',
+                          tagName: 'span',
+                          properties: { className: ['callout-title-inner-main'] },
+                          children: [
+                            { type: 'text', value: newVal },
+                          ],
+                        },
+                        desc,
+                        {
+                          type: 'element',
+                          tagName: 'span',
+                          properties: { className: ['callout-title-inner-main'] },
+                          children: [
+                            { type: 'text', value: "." },
+                          ],
+                        },
+                      ]
+                    };
+                  }
+                  return false;
+                }
+              });
+            }
+          })
+        }
+      })
+
+      //assign classes to tikz svgs
+      plugins.push(() => {
+          return (tree: HtmlRoot, _file) => {
+            visit(tree, "element", (node) => {
+              if (node.tagName === "svg" && node.properties.dataTikzSvg === "true") {
+                console.log(node)
+                if(node.properties.className) node.properties.className.append("TikzSvg")
+                  else node.properties.className = ["TikzSvg"]
+              }
+            })
+          }
+        })
+      
+
+      //render proof environments
+      plugins.push(() => {
+          return (tree: HtmlRoot, _file) => {
+            visit(tree, "element", (node) => {
+              if (node.tagName === "code" && node.children[0].type === "text" && node.children[0].value === "\\begin{proof}") {
+                console.log(node)
+                node.tagName = "span"
+                node.properties.className = ["proofEnvStart"]
+                node.children[0].value = "Proof."
+              }
+              if (node.tagName === "code" && node.children[0].type === "text" && node.children[0].value === "\\end{proof}") {
+                console.log(node)
+                node.tagName = "span"
+                node.properties.className = ["proofEnvEnd"]
+                node.children[0].value = "□"
+              }
+            })
+          }
+        })
 
       return plugins
     },

@@ -61,7 +61,7 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > 3. $HK<G$ iff $HK=KH$. Useful to note here that
 > 	-  $H\leq N_{G}(K)$ $\implies$ $HK=KH$.
 > 	-  In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
-> 1. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
+> 4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
 
 > [!Warning]
 > Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
@@ -104,7 +104,7 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 ## Example: Chinese remainder theorem
 
 > [!Theorem] Chinese remainder theorem
-> Positive integers $m$ and $n$ are co-prime iff
+> If positive integers $m$ and $n$ are co-prime,
 > $$
 > \frac{\mathbb{Z}}{mn\mathbb{Z}}\cong \frac{\mathbb{Z}}{m\mathbb{Z}}\times \frac{\mathbb{Z}}{n\mathbb{Z}}.
 > $$
@@ -171,7 +171,7 @@ Alternatively, we can first prove a more general result:
 We can now show surjectivity by noting that $\mathrm{Im}~\phi$ must be isomorphic to a subgroup of $\mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$ (which has order $mn$) of order $\text{lcm}(m, n)$. If $\text{lcm}(m, n)=mn$, the only subgroup $\mathrm{Im}~\phi$ can be isomorphic to is the entire codomain, making $\phi$ surjective, and hence an isomorphism.
 
 ---
-... or you could proceed like Claire did. We have the exact sequence
+... or you could proceed like Clare did. We have the exact sequence
 $$
 1_{\frac{\mathbb{Z}}{\text{lcm(m, n)}\mathbb{Z}}}\to \frac{\mathbb{Z}}{\text{lcm}(m, n)\mathbb{Z}}\xrightarrow{\phi_{1}} \frac{\mathbb{Z}}{m\mathbb{Z}}\times \frac{\mathbb{Z}}{n\mathbb{Z}}
 $$

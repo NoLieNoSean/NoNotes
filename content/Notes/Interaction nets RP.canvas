@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"bcf1395e7030f9b3","x":-220,"y":560,"width":920,"height":280,"type":"group","label":"Seminal papers by Lafont"},
+		{"id":"4b07e5efb54f955b","x":-220,"y":160,"width":920,"height":160,"type":"group","label":"Foundations"},
+		{"id":"dd2b00ba1d214eb0","x":-200,"y":180,"width":250,"height":120,"type":"text","text":"Introduction to Lambda Calculus (Barendregt & Barendsen)"},
+		{"id":"f34944037e9e3ff4","type":"text","text":"Term Rewriting and all that (Baader & Nipkow)","x":100,"y":180,"width":250,"height":120},
+		{"id":"6a2a9f7166fe4019","x":400,"y":180,"width":250,"height":120,"type":"text","text":"Linear Logic & Proof Nets (Wadler)"},
+		{"id":"ecf8ffd739047239","x":-200,"y":580,"width":250,"height":100,"type":"text","text":"Interaction Nets (Lafont ’90)"},
+		{"id":"2ff25007417dea4d","x":-200,"y":1000,"width":600,"height":60,"type":"text","text":"Implement basic net rewriting as a distributed parallelly computable system"},
+		{"id":"89fd89ea76358d56","x":100,"y":580,"width":250,"height":100,"type":"text","text":"From Proof Nets to Interaction Nets (Lafont ’95)"},
+		{"id":"ef67ec4a490b74c0","x":400,"y":580,"width":250,"height":100,"type":"text","text":"Interaction Combinators (Lafont ’97)"}
+	],
+	"edges":[
+		{"id":"eef1d3a31f8a40d4","fromNode":"dd2b00ba1d214eb0","fromSide":"right","toNode":"f34944037e9e3ff4","toSide":"left"},
+		{"id":"18f955adba69bb64","fromNode":"f34944037e9e3ff4","fromSide":"bottom","toNode":"ecf8ffd739047239","toSide":"top"},
+		{"id":"e18aaa32041632a4","fromNode":"dd2b00ba1d214eb0","fromSide":"bottom","toNode":"ecf8ffd739047239","toSide":"top"},
+		{"id":"143778fbacbe47e1","fromNode":"6a2a9f7166fe4019","fromSide":"bottom","toNode":"ecf8ffd739047239","toSide":"top"},
+		{"id":"f99ef0975e459ca3","fromNode":"6a2a9f7166fe4019","fromSide":"bottom","toNode":"89fd89ea76358d56","toSide":"top"},
+		{"id":"f3fc0a6e77ffde8f","fromNode":"ecf8ffd739047239","fromSide":"bottom","toNode":"89fd89ea76358d56","toSide":"bottom"},
+		{"id":"2d82ffba27b84294","fromNode":"bcf1395e7030f9b3","fromSide":"bottom","toNode":"2ff25007417dea4d","toSide":"top"},
+		{"id":"b63052fd30c178be","fromNode":"ecf8ffd739047239","fromSide":"bottom","toNode":"ef67ec4a490b74c0","toSide":"bottom"}
+	]
+}

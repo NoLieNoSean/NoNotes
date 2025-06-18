@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "https://nolienosean.github.io/NoNotes/",
-    ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Excalidraw", "Config"],
+    ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Excalidraw", "Config", "Zotero", "Attachments", "Course material", "Notes"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#1a1b25", //"#161618",
+          light:"#1a1b25",//"#1a1b25", //"#161618",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",

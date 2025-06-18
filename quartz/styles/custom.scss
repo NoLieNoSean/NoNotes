@@ -19,11 +19,34 @@ h3
 }
 
 
-em, strong{
-    color: #448aff !important;// #1ABC9C ;#7aa8ff
-}
+// em, strong{
+//     color: #448aff !important;// #1ABC9C ;#7aa8ff
+// }
 
 .page-title>a{
     color: #7a7aff;
     text-decoration: none !important;
+}
+
+
+.TikzSvg{
+    display: block;
+    margin: auto;
+}
+
+.TikzSvg + .TikzSvg{
+    margin-top: 1em;
+}
+
+.proofEnvStart{
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+.proofEnvEnd{
+    float: right;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5em;
 }

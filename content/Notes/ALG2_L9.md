@@ -180,6 +180,11 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 > $$
 > \Phi(\phi_{a}\circ \phi_{b})=\Phi(\phi_{ab})=ab\mod n=\Phi(\phi_{a})\Phi(\phi_{b}).
 > $$
+
+> [!Theorem]
+> If $G$ and $H$ are two groups whose orders are relatively prime, then $\text{Aut}(G\times H)\cong\text{Aut}(G)\times \text{Aut}(H)$.
+
+
 ### Characteristic groups
 
 > [!Definition]

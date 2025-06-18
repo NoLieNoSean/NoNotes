@@ -2,7 +2,7 @@
 @use "sass:color";
 
 .callout {
-  border: 1px solid var(--border);
+  border: 0px solid var(--border);
   background-color: var(--bg);
   border-radius: 5px;
   padding: 0 1rem;
@@ -10,7 +10,7 @@
   transition: max-height 0.3s ease;
   box-sizing: border-box;
 
-  & > .callout-content > :first-child {
+  &>.callout-content> :first-child {
     margin-top: 0;
   }
 
@@ -29,12 +29,63 @@
   --callout-icon-quote: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>');
   --callout-icon-fold: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
 
+
   &[data-callout] {
-    --color: #448aff;
+    --color: rgb(130, 161, 241);
     --border: #448aff44;
-    --bg: #448aff10;
+    --bg: rgb(37, 40, 58);
     --callout-icon: var(--callout-icon-note);
   }
+
+
+  &[data-callout="definition"]{
+    --color: rgb(77, 162, 244);
+  }
+
+  &[data-callout="theorem"],
+  &[data-callout="lemma"],
+  &[data-callout="claim"],{
+    --color: rgb(167, 139, 248);
+  }
+
+  &[data-callout="example"]{
+    --color: rgb(255, 255, 255);
+  }
+
+  &[data-callout="definition"],
+  &[data-callout="example"],
+  &[data-callout="lemma"],
+  &[data-callout="theorem"],
+  &[data-callout="claim"] {
+    --border: #efefef;
+    --bg: #ffffff00;
+    --callout-icon: var(--callout-icon-abstract);
+    border-width: 2px;
+
+    .callout-icon {
+      display: none;
+    }
+
+    font-family:'Times New Roman',
+    Times,
+    serif;
+
+    .callout-title-inner {
+      span:empty {
+        display: none;
+      }
+    }
+
+    .callout-title-inner-desc {
+      padding-left: 0.2em;
+      font-weight: $normalWeight;
+    }
+  }
+
+  &[data-callout="proof"] {
+    background-color: #00000000;
+  }
+
 
   &[data-callout="abstract"] {
     --color: #00b0ff;
@@ -42,6 +93,7 @@
     --bg: #00b0ff10;
     --callout-icon: var(--callout-icon-abstract);
   }
+
 
   &[data-callout="info"],
   &[data-callout="todo"] {
@@ -100,20 +152,13 @@
     --callout-icon: var(--callout-icon-danger);
   }
 
-  &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
-    --callout-icon: var(--callout-icon-example);
-  }
-
   &[data-callout="quote"] {
     --color: var(--secondary);
     --border: var(--lightgray);
     --callout-icon: var(--callout-icon-quote);
   }
 
-  &.is-collapsed > .callout-title > .fold-callout-icon {
+  &.is-collapsed>.callout-title>.fold-callout-icon {
     transform: rotateZ(-90deg);
   }
 }
@@ -134,9 +179,16 @@
     --callout-icon: var(--callout-icon-fold);
   }
 
-  & > .callout-title-inner > p {
+  &>.callout-title-inner>p {
     color: var(--color);
     margin: 0;
+    
+  }
+
+  &>.callout-title-inner{
+    .katex{
+      color: var(--color);
+    }
   }
 
   .callout-icon,

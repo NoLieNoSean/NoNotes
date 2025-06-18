@@ -57,10 +57,11 @@ These notes have been reorganized because I lost count of the lectures at some p
 [[Group of units mod n is cyclic]]
 [[Dummit and Foote Solutions]]
 
-# Quizzes
+# Assessments
 
 [[ALG2_Q1]]
 [[ALG2_Q2]]
+[[ALG2_EndSem]]
 # Tutorials
 
 [[ALG2_T4]]

@@ -7,9 +7,9 @@ date: 2024-09-20
 time: 14:00
 ---
 ![[1726947785622.jpg]]
-## Open cover compactness
+# Open cover compactness
 
-### Open covers and subcovers
+## Open covers and subcovers
 
 >[!Definition]
 >Let $E\subset X$. An *open cover* of $E$ is a collection $\{ V_{\alpha} \}_{\alpha \in I}$ of open sets in $X$ such that 
@@ -21,7 +21,7 @@ time: 14:00
 >\bigcup_{\beta \in J}V_{\beta}\supset E.
 >$$
 
-### Absolute and relative definitions of open cover compactness
+## Absolute and relative definitions of open cover compactness
 
 >[!Definition] Absolute definition for a metric space $E$
 >$E$ is *open cover compact* if every open cover of $E$ has a finite subcover.
@@ -62,7 +62,7 @@ So, as we have seen with the previous forms of compactness, open cover compactne
 >[!info] An analogy
 >Consider a policeman in each open set of an open cover of a set $X$ whose can see only inside their open set. If $X$ is compact, regardless of how myopic the policemen are (regardless of how small the open sets are/ how many open sets are present in the cover), a finite number of them will be able to watch the entire set $X$.
 
-### Equivalence with limit point compactness
+## Equivalence with limit point compactness
 
 >[!Theorem] Claim
 >$X$ is open cover compact $\implies$ $X$ is [[ANA1_L16#Limit point compactness|limit point compact]].
@@ -74,14 +74,14 @@ This will allow us to import all the results we proved for limit point compact s
 
 The converse is also true, but harder to prove.
 
-### Examples
+## Examples
 
 It follows form the previous claim that every set we showed to be not limit point compact in the [[ANA1_L16#Open intervals in R (non example)|previous lecture]] is not open cover compact either. 
 
 For $(0, 1)$, consider the open cover $\left\{  \left( \frac{1}{n}, 1 \right) \ |\ n\in \mathbb{N} \right\}$. 
 For $\mathbb{R}$, consider the open cover $\{ (-n, n)\ |\ n\in \mathbb{N} \}$. 
 
-#### Closed intervals in R are open cover compact
+### Closed intervals in R are open cover compact
 
 Note this is not implied by any of our previous work - it does need to be proved.
 
@@ -92,9 +92,8 @@ Note this is not implied by any of our previous work - it does need to be proved
 >Do this dance in $\mathbb{R}^{k}$, and you get that all closed boxes in $\mathbb{R}^{k}$ are open cover compact.
 
 Note that closed intervals in $\mathbb{Q}$ are not compact. For example, $\left\{  \left( -1, \frac{1}{\sqrt{ 2 }}-\frac{1}{n} \right)\cup\left( \frac{1}{\sqrt{ 2 }}+\frac{1}{n}, 2 \right)\ : n \in \mathbb{N}   \right\}$ is an open cover of $\mathbb{Q}\cap[0, 1]$, but does not have a finite subcover.
-### Exercises in working with open cover compactness
-
-#### Exercise 1
+## Exercises in working with open cover compactness
+### Exercise 1
 In the previous lecture, [[ANA1_L16#Characterization of compact sets|we proved]] that every (limit point/sequentially) compact set $C$ in a metric space $X$ is closed in $X$ and bounded. We do not need to prove this separately for open cover compact sets, because of the equivalence with limit point compact sets we proved above. However, it is a good exercise.
 
 >[!Theorem]
@@ -103,7 +102,7 @@ In the previous lecture, [[ANA1_L16#Characterization of compact sets|we proved]]
 >**Proof** 
 >Consider a point $p \in C$. Consider the set $E=\{ B_{n}(p, C)\ |\ n\in \mathbb{N} \}$. Clearly, it is an open cover of $C$. Since $C$ is compact, $E$ must have a finite subcover. Thus, there exists $n\in \mathbb{N}$ such that $C=B_{n}(p, C)$. ❏
 
-#### Exercise 2
+### Exercise 2
 
 >[!Theorem]
 >The arbitrary intersection of compact sets is compact.
@@ -114,7 +113,7 @@ In the previous lecture, [[ANA1_L16#Characterization of compact sets|we proved]]
 Alternatively, notice that $X\setminus C$ is open in $X$, and use it instead of $\{ W_{p}\ |\ p\in C_{\alpha}\setminus C \}$. 
 
 ---
-## Equivalence of the three versions of compactness
+# Equivalence of the three versions of compactness
 
 While we have proved a lot of the preceding results in general metric spaces, we will mostly be restricting ourselves to $\mathbb{R}^{k}$ in this course.
 
@@ -132,7 +131,7 @@ If we show $2\implies 1$ or $3 \implies 1$, we will have shown that the three ve
 
 Our proof of $3 \implies 1$ will look very similar to our proof of $3 \implies 2$. We have already [[ANA1_L16#Closed intervals in R|shown]] that closed boxes in $\mathbb{R}^{k}$ are open cover compact. If we prove that that closed subsets of open cover compact sets are open cover compact (we [[ANA1_L16#Closed subsets of compact sets are compact|proved]] an analogue of this in the previous lecture for limit point compactness), $3 \implies 1$ should follow. 
 
-### Closed subsets of compact sets are compact
+## Closed subsets of compact sets are compact
 
 >[!Theorem] Lemma
 >If $X$ is open cover compact, $C$ is closed in $X$ $\implies$ $C$ is open cover compact.
@@ -140,7 +139,7 @@ Our proof of $3 \implies 1$ will look very similar to our proof of $3 \implies 2
 >**Proof**
 >Take an open cover $\{ V_{\alpha} \}_{\alpha \in I}$ of $C$, $V_{\alpha}$ open in $X$. Since $C$ is closed in $X$, $X\setminus C$ is open in $X$. Thus, $E=\{ V_{\alpha} \}_{\alpha \in I}\cup \{ X\setminus C \}$ is an open cover of $X$. Since $X$ is open cover compact, a finite subcover $E'$ of $E$ covering $X$ exists. In particular, $E'$ covers $C$. If $E'$ covers $C$, $E'\setminus(X\setminus C)$ also covers $C$ (basically, if $X\setminus C$ is in $E'$, we can throw it away while still having $E'$ cover $C$). Thus, $E'$ is a finite subcover of $\{ V_{\alpha} \}_{\alpha \in I}$. ❏
 
-### The equivalence
+## The equivalence
 
 Here's the proof of $3 \implies 1$. Notice its similarity with the proof of $3 \implies 2$ ($\Longleftarrow$ of Heine Borel).
 
@@ -153,13 +152,13 @@ With this, we have shown that open cover, sequential, and limit point compactnes
 >The pathway we used to prove the equivalence of the three forms of compactness fails in general metric spaces. As noted in the previous lecture, 3 does not imply 1 in this case. Thus, we will be left with no choice but to prove 2 implies 1.
 
 ---
-## Epilogue
+# Epilogue
 
 Tasks:
 - In the above section, try to prove $1 \implies 3$ (for general metric spaces) directly without using $2$ as an intermediary. To be precise, prove this statement: If $C$ is an open cover compact subset of $X$, then $C$ is closed in $X$ (We have already [[#An exercise in working with open cover compactness|proven]] the bounded part).
 
 Briefly discussed uniform continuity.
-### Another exercise in working with open cover compactness 
+## Another exercise in working with open cover compactness 
 
 Prove [[ANA1_L16#Image of a compact set under a continuous function|this]] theorem (Image of a compact set under a continuous function is compact), for open cover compact sets sets without using the equivalence.
 
