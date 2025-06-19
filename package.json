@@ -1,15 +1,15 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "@NoLieNoSean/NoNotes",
+  "description": "NoNotes",
   "private": true,
   "version": "4.3.1",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "author": "NoLieNoSean <vsnguf@gmail.com>",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
+  "homepage": "https://nolienosean.github.io/NoNotes/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/NoLieNoSean/NoNotes"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
