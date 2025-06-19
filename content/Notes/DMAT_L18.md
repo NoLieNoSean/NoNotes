@@ -6,7 +6,7 @@ tags:
 date: 2025-03-24
 time: 11:54
 ---
-## Properties of trees
+# Properties of trees
 
 > [!Theorem]
 > For an $n$ vertex graph $G$, the following are equivalent (and characterize the trees with $n$ vertices).
@@ -32,7 +32,7 @@ time: 11:54
 > Also, the graph $T'+e$ contains a unique cycle $C$. Since $T$ is acyclic, $E_{2}\equiv E(C)\setminus E(T)$ is nonempty. Now, since $e\in E(C)$, and $e$ connects $U$ and $U'$, there must be another edge $e'\in E(C)$ which connects $U$ and $U'$. Note that $e$ is the only edge in $T$ connecting $U$ and $U'$. Thus, $e'\in E_{1}\cap E_{2}$, and $T-e+e'$ and $T'+e-e'$ are both spanning trees of $G$.
 
 ---
-## Spanning trees
+# Spanning trees
 
 > [!Definition]
 > A *spanning tree* of a connected graph $G$ is a subgraph of $G$ which contains all the vertices of $G$, and is, of course, a tree.
@@ -44,7 +44,7 @@ time: 11:54
 > Algorithmic constructive proof. Let $G=(V, E)$. $n$ vertices, $m$ edges. Let $E_{0}=\emptyset$, $V_{0}=\{ v_{0} \}$, where $v_{0}$ is an arbitrary vertex. Having constructed $V_{i-1}$ and $E_{i-1}$ find an edge $e_{i}=\{ x_{i}, y_{i} \}$ such that $x_{i}\in V_{i-1}$ and $y_{i}\in V\setminus V_{i-1}$. Then, $V_{i}=V_{i-1}\cup \{ y_{i} \}$ and $E_{i}=E_{i-1}\cup \{ e_{i} \}$. If no such edge exists, stop. If the algorithm returns $n-1$ edges, then the resulting subgraph is a spanning tree. Otherwise, $G$ is disconnected.
 
 ---
-## Counting spanning trees
+# Counting spanning trees
 
 [[Introduction to Graph Theory (Douglas B. West).pdf#page=104|ref]]
 
@@ -60,7 +60,7 @@ Given a graph $G$, we desire to count the number of spanning trees in $G$.
 > [!Theorem] Lemma
 > If $G$ is a connected loopless graph with no cycle of length greater than 2, then $\tau(G)$ is the product of the edge multiplicities.
 
-### Graphs and matrices
+## Graphs and matrices
 
 > [!Definition]
 > The *adjacency matrix* of a graph $G$ on $n$ nodes is the $n\times n$ matrix given by $\mathcal{A}=[a_{i, j}]$, where $a_{i, j}$ is the number of edges with endpoints $v_{i}$ and $v_{j}$.
@@ -85,7 +85,7 @@ The following lemma should be clear:
 > [!Theorem] Lemma
 > For any square matrix $A$, $\det(A+E_{ii})=\det(A)+\det A[i]$.
 
-### Matrix tree theorem
+## Matrix tree theorem
 
 > [!Theorem] Matrix tree theorem
 > Given a loopless graph $G$ with vertex set $v_{1}, \dots, v_{n}$, let $\mathcal{L}$ be its Laplacian matrix. If $\mathcal{L}^{*}$ is a matrix obtained by deleting row $s$ and column $t$ of $\mathcal{L}$, then $\tau(G)=(-1)^{s+t}\det \mathcal{L}^{*}$.

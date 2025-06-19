@@ -32,7 +32,7 @@
     font-family: var(--bodyFont);
     border: 1px solid var(--lightgray);
     background-color: var(--light);
-    border-radius: 5px;
+    // border-radius: 5px;
     box-shadow: 6px 6px 36px 0 rgba(0, 0, 0, 0.25);
     overflow: auto;
     white-space: normal;
@@ -48,7 +48,7 @@
     &[data-content-type*="image"] {
       img {
         margin: 0;
-        border-radius: 0;
+        // border-radius: 0;
         display: block;
       }
     }

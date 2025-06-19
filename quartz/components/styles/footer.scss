@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 footer {
   text-align: left;
   margin-bottom: 4rem;
@@ -10,6 +12,52 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-top: -1rem;
+    // margin-top: -1rem;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+
+  }
+  .wrapper>.footer-text {
+    flex-grow: 1;
+  }
+
+  .license-notice {
+
+    div{
+      white-space: nowrap;
+    }
+    
+    .noAI {
+      margin: 0;
+      margin-top: 0.2em;
+      height: 100%;
+      max-width: 3em;
+      max-height: 3em;
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bolder;
+      line-height: 1;
+    }
+
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    // flex-direction: column;
+    // align-items: baseline;
+    // align-items: end;
+  }
+}
+
+
+:root[saved-theme="dark"]{
+  .noAI{
+    filter: invert(1);
   }
 }

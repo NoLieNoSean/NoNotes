@@ -13,7 +13,7 @@ export const TextTransforms: QuartzTransformerPlugin = () => {
       src = src
         .replace(/\\begin{align}/g, "\\begin{align*}")
         .replace(/\\end{align}/g, "\\end{align*}")
-        .replace(/!!@!@!@!!!@!@!@@!@!@!@@/, "Last redeployed on: "+ Date())
+        .replace(/!!@!@!@!!!@!@!@@!@!@!@@/, "Last updated on: "+ Date())
       return src
     }
   }

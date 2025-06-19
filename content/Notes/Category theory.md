@@ -1,5 +1,7 @@
 [[Aluffi - 2009 - Algebra chapter 0.pdf#page=41|Refer]] [@aluffiAlgebraChapter02009, pp. 18].
 
+# Preliminaries 
+ 
 > [!Definition] Category
 > A **category** $\textsf{C}$ consists of
 > - a class $\text{Obj}(\textsf{C})$ of *objects* of this category; and
@@ -131,7 +133,3 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > 	\end{tikzcd}
 > 	\end{document}
 > 	```
-> 
-> 
-
-

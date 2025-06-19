@@ -2,13 +2,13 @@
 
 .search {
   min-width: fit-content;
-  max-width: 14rem;
+  // max-width: 14rem;
   flex-grow: 0.3;
 
   & > .search-button {
     background-color: var(--lightgray);
     border: none;
-    border-radius: 4px;
+    // border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
     height: 2rem;
@@ -50,7 +50,7 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(16px);
 
     &.active {
       display: inline-block;
@@ -68,7 +68,7 @@
 
       & > * {
         width: 100%;
-        border-radius: 7px;
+        // border-radius: 7px;
         background: var(--light);
         box-shadow:
           0 14px 50px rgba(27, 33, 48, 0.12),
@@ -127,7 +127,7 @@
 
         & > div {
           height: calc(75vh - 12vh);
-          border-radius: 5px;
+          // border-radius: 5px;
         }
 
         @media all and (max-width: $tabletBreakpoint) {
@@ -144,7 +144,7 @@
 
         & .highlight {
           background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-          border-radius: 5px;
+          // border-radius: 5px;
           scroll-margin-top: 2rem;
         }
 
@@ -207,7 +207,7 @@
             }
 
             & > ul > li > p {
-              border-radius: 8px;
+              // border-radius: 8px;
               background-color: var(--highlight);
               padding: 0.2rem 0.4rem;
               margin: 0 0.1rem;

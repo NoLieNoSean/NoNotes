@@ -227,4 +227,4 @@ Note that $(F_{n})\to F$, where $F_{n}$ and $F$ are distributions, does not impl
 > > $$
 > > The lemma is applicable, and we have $X_{n}\xrightarrow{\text{d}}X$.
 
- 
+   

@@ -53,35 +53,14 @@ Assuming a proper initial alignment, we need to set up institutions such that th
 
 When does an institution turn malevolent? 
 
-
-**1. Institutional Design & Power Balance**
-
-• **Institutional Empowerment**: Look into political theory on the **separation of powers**, **subsidiarity**, and **federalism**. Authors like **James Madison** and **Montesquieu** are critical to understanding these foundational ideas. The design of institutions that can act effectively when necessary, but not overstep, draws heavily from checks and balances. A deeper dive into **constitutional theory** can help illuminate how different models (like presidential vs. parliamentary systems) handle empowerment.
-
-• **International Law & Governance**: For international structures like the UN, studying **global governance theory** is key. You might find works on **realism** (power dynamics in global politics) and **liberal institutionalism** (how institutions can influence state behavior) useful. **Anne-Marie Slaughter’s “A New World Order”** explores how networks of institutions might cooperate more effectively at a global level.
-
-**2. Resilience of Institutions**
-
-• The longevity and adaptability of institutions can be studied through the lens of **institutional economics** and **political sociology**. Douglass North’s **“Institutions, Institutional Change, and Economic Performance”** looks at how institutions evolve and stick around. You can also look at **historical examples** of resilient institutions, like the **British monarchy**, the **Catholic Church**, and long-standing republics like **Switzerland**.
-
-• **Resilience in International Institutions**: Investigate how international bodies like the **European Union** and the **World Bank** have survived various crises. The concept of **path dependence** explains how initial choices in institutional design heavily influence their future trajectory.
-
-**3. Preventing Malevolence**
-
-• **Game theory** and **behavioral economics** offer insights into how systems can be designed to prevent power from being misused. Concepts like **incentive structures** and **accountability mechanisms** are critical here. Read about the **principal-agent problem**, where agents (institutions) might act against the interests of the principals (citizens or states).
-
-• The **Federalist Papers**, especially Madison’s No. 10 and 51, argue for the idea of **factions** and how pluralism can be used to prevent tyranny. Modern applications of these ideas can be seen in **democratic peace theory** and the structure of **federal systems** that disperse power across levels.
-
-**4. Limiting Damage from Failure**
-
-• To minimize the risk of malevolent actors within institutions, you can study **institutional redundancy** and **distributed systems**. These fields explore how decentralized systems, where no single institution has too much power, can prevent catastrophic failure. The notion of **polycentric governance** (advanced by Elinor Ostrom) looks at how multiple, overlapping institutions can work together to limit risks of abuse.
-
 **Recommended Reading List**
 
-• **“The Federalist Papers”**, by Alexander Hamilton, James Madison, and John Jay.
-• **“Institutions, Institutional Change, and Economic Performance”**, by Douglass North.
-• **“A New World Order”**, by Anne-Marie Slaughter.
-• **“The Logic of Collective Action”**, by Mancur Olson.
-• **“Governing the Commons”**, by Elinor Ostrom.
-• **“The Origins of Political Order”**, by Francis Fukuyama.
-• **“Designing Democratic Institutions”**, edited by Ian Shapiro and Stephen Macedo.
+-  **“The Federalist Papers”**, by Alexander Hamilton, James Madison, and John Jay.
+-  **“Institutions, Institutional Change, and Economic Performance”**, by Douglass North.
+-  **“A New World Order”**, by Anne-Marie Slaughter.
+-  **“The Logic of Collective Action”**, by Mancur Olson.
+-  **“Governing the Commons”**, by Elinor Ostrom.
+-  **“The Origins of Political Order”**, by Francis Fukuyama.
+-  **“Designing Democratic Institutions”**, edited by Ian Shapiro and Stephen Macedo.
+
+

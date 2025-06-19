@@ -1,4 +1,6 @@
-Ref: [[Barendregt and Barendsen - 2000 - Introduction to Lambda Calculus.pdf]]
+---
+date: 2025-06-19
+---
 # Preliminaries
 
 $\lambda$ Calculus is a **formal system** for expressing computation in terms of function **application** and **abstraction**.

@@ -34,13 +34,17 @@ Note that $\frac{km}{1+kp}$ must be an integer, since $1+kp$ does not divide $p$
 
 Next, let $a< e$. It is sufficient to show that $H$ is a proper subgroup of $N_{G}(H)$. By Sylow's theorem, we can find a Sylow-$p$ subgroup $P$ such that $H< P$. 
 
-> Claim: If $P$ is any $p$-group and $H< P$, then $H< N_{P}(H)$. 
-> We will prove the claim by induction on $|P|$. If $|P|=1$, the claim is vacuously true. For $|P|> 1$, we know that $Z(P)$ is non-trivial. If $Z(P)$ is not a subgroup of $H$, then any $z\in Z(P)\setminus H$ demonstrates that $N_{G}(H)$ contains elements not in $H$. If $Z(P)\leq H$, Consider the groups $H'=H/Z(P)$ and $P'=P/Z(P)$. Since $H'< P'$, by the induction hypothesis, $H'< N_{P'}(H')$. However, $N_{P'}(H')=N_{P}(H)/Z(P)$, so we have
-> $$
-> \frac{H}{Z(P)}< \frac{N_{P}(H)}{Z(P)}, 
-> $$
-> which implies $H< N_{P}(H)$.
-
+> [!Claim]
+> If $P$ is any $p$-group and $H< P$, then $H< N_{P}(H)$. 
+> 
+> > [!Proof]-
+> > 
+> > We will prove the claim by induction on $|P|$. If $|P|=1$, the claim is vacuously true. For $|P|> 1$, we know that $Z(P)$ is non-trivial. If $Z(P)$ is not a subgroup of $H$, then any $z\in Z(P)\setminus H$ demonstrates that $N_{G}(H)$ contains elements not in $H$. If $Z(P)\leq H$, Consider the groups $H'=H/Z(P)$ and $P'=P/Z(P)$. Since $H'< P'$, by the induction hypothesis, $H'< N_{P'}(H')$. However, $N_{P'}(H')=N_{P}(H)/Z(P)$, so we have
+> > $$
+> > \frac{H}{Z(P)}< \frac{N_{P}(H)}{Z(P)}, 
+> > $$
+> > which implies $H< N_{P}(H)$.
+> 
 
 Thus, $H$ is a proper subgroup of $N_{P}(H)$, and since $N_{P}(H)\subseteq N_{G}(H)$, we have $H< N_{G}(H)$. Hence, $p$ divides the quantity $\frac{|N_{G}(H)|-|G|}{|H|}$, and we are done.
 
@@ -111,7 +115,7 @@ Thus, $\phi$ is injective.
 
 ## Part c
 
-Let $aH=a'H$ and $bK=b'K$. Then, $a'^{-1}a\in H$, and $b'^{-1}b\in K$. So, $a'^{-1}ab'b ^{-1}=b'a'^{-1}ab ^{-1}\in HK$, and hence $ab ^{-1}HK=a'b' ^{-1}HK$. Thus, $\psi$ is well defined. Further for any $a, a', b, b'\in G$, 
+Let $aH=a'H$ and $bK=b'K$. Then, $a'^{-1}a\in H$, and $b'^{-1}b\in K$. So, $a'^{-1}ab'b ^{-1}=b'a'^{-1}ab ^{-1}\in HK$, and hence $ab^{-1}HK=a'b'^{-1}HK$. Thus, $\psi$ is well defined. Further for any $a, a', b, b'\in G$, 
 $$
 \begin{align}
 \psi(aa'H, bb'K) & =aa'b'^{-1}b ^{-1}HK,\\ \\

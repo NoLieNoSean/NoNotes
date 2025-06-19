@@ -252,6 +252,26 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
             try {
               if (node.children[0].children[0].value.slice(0, 8).toLowerCase() === "[!proof]") {
+                let overflowText = node.children[0].children[0].value.slice("[!Proof]-\n".length).trim()
+                let overflowChildren = []
+                if(overflowText){
+                  overflowChildren.push({
+                    type: "text",
+                    value: overflowText,
+                  })
+                  node.children[0].children[0].value = "[!Proof]-\n"
+                }
+                overflowChildren.push(...node.children[0].children.slice(1))
+                node.children[0].children.splice(1)
+                if(overflowChildren){
+                  let overflowp = {
+                    type: "paragraph",
+                    children: overflowChildren,
+                  }
+                  node.children.splice(1, 0, overflowp)
+                }
+
+                
                 if (node.children[node.children.length - 1].type === "paragraph") {
                   node.children[node.children.length - 1].children.push({
                     type: "html",
@@ -835,21 +855,11 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               NumberNodeDict.set(node.properties.id, node)
             }
           })
-
-          console.log(NumberNodeDict)
-
-
           visit(tree, "element", (node) => {
             if (node.tagName === "a" &&
               node.properties.href.slice(0, 4) === "#%5E") {
-
-              console.log(node)
               let callout = NumberNodeDict.get(node.properties.href.slice(4))
               let dataCallout = callout.properties.dataCallout
-
-              console.log(node.children[0].value[0], node.children[0].value[0]!="^")
-
-
               if(node.children[0].value[0]==="^"){
                 node.children[0].value = dataCallout[0].toUpperCase() +dataCallout.slice(1) + " " +callout.properties.calloutNumber 
               }

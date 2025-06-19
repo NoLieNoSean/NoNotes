@@ -1,7 +1,8 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 .page-title>a{
-    color: #7a7aff;
+    // color: #7a7aff;
     text-decoration: none !important;
 }
 
@@ -32,4 +33,18 @@
     float: right;
     font-family:'Times New Roman', Times, serif;
     font-size: 1.5em;
+}
+
+
+@media (max-width: $fullPageWidth) {
+    .sidebar.right {
+        display: none !important;
+    }
+}
+
+
+:root[saved-theme="dark"]{
+  .theme-responsive{
+    filter: invert(1);
+  }
 }

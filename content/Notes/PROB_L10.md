@@ -62,28 +62,28 @@ Here, integrable means [[Measure theory 101#Lebesgue Integration|Lebesgue integr
 
 [^1]: Note that there does not exist a similar property for Riemann integrals, that is, being absolutely dominated by a Riemann integrable function does not imply Riemann integrability. Even if we assume Riemann integrability in the hypothesis, we cannot conclude that the limit is Riemann integrable ([[ANA1_L33#Sequences of functions|here's an example]]). The [[ANA1_L33#Limit of uniformly converging integrable functions is integrable (and more)|closest analogue]] of the DCT in Riemann land does away with the dominating function and requires the sequence of functions to converge uniformly instead.
 
-> [!Theorem] DCT (for sequences of random variables)
+
+> [!Theorem] DCT for sequences of random variables
 > Let $(X_{n})$ be a sequence of random variables. Let $X$ be a random variable such that for every $\omega\in \Omega$, we have $X_{n}(\omega)\to X(\omega)$, that is, $(X_{n})$ converges to $X$ pointwise. Assume there is an integrable random variable $Y$ such that $|X_{n}|\leq Y$. Then,
 > $$
 > EX_{n}\to EX.
 > $$
 > 
-
-`\begin{proof}`
-Treat each $X_{n}$, $X$ and $Y$ as measurable functions (they are measurable by the [[PROB_L8#Continuous random variables|definition]] of a random variable)
-$$
-X_{n}, X, Y:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}),
-$$
-where $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. The probability measure $P$ on $\Omega$ plays the role of the Lebesgue measure. We are given that $|X_{n}|\leq Y$, and that
-$$
-EY=\int_{\Omega}Y(\omega)~dP(\omega)< \infty.
-$$
-So, we have all the hypotheses of the DCT, which enables us to write
-$$
-\lim_{ n \to \infty } EX_{n}=\lim_{ n \to \infty } \int_{\Omega}X_{n}(\omega)~dP(\omega)=\int_{\Omega}X(\omega)~dP(\omega)=EX.
-$$
-.`\end{proof}`
-
+> > [!Proof]-
+> > Treat each $X_{n}$, $X$ and $Y$ as measurable functions (they are measurable by the [[PROB_L8#Continuous random variables|definition]] of a random variable)
+> > $$
+> > X_{n}, X, Y:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}),
+> > $$
+> > where $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. The probability measure $P$ on $\Omega$ plays the role of the Lebesgue measure. We are given that $|X_{n}|\leq Y$, and that
+> > $$
+> > EY=\int_{\Omega}Y(\omega)~dP(\omega)< \infty.
+> > $$
+> > So, we have all the hypotheses of the DCT, which enables us to write
+> > $$
+> > \lim_{ n \to \infty } EX_{n}=\lim_{ n \to \infty } \int_{\Omega}X_{n}(\omega)~dP(\omega)=\int_{\Omega}X(\omega)~dP(\omega)=EX.
+> > $$
+> > 
+> 
 
 A random variable is said to be integrable if it has finite expectation.
 ## Fubini's Theorem

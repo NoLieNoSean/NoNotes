@@ -18,9 +18,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Montserrat",
+        body: "Ubuntu",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
@@ -35,14 +35,14 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light:"#1a1b25",//"#1a1b25", //"#161618",
+          light:"#000000",//#1a1b25,//"#1a1b25", //"#161618",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
           secondary: "#7b97aa",
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(143, 159, 169, 0.3)",
           textHighlight: "#b3aa0288",
         },
       },
@@ -53,7 +53,7 @@ const config: QuartzConfig = {
       Plugin.TextTransforms(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter"],
+        priority: ["frontmatter", "git", "filesystem"]
       }),
       Plugin.SyntaxHighlighting({
         theme: {

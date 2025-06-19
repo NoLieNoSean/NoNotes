@@ -48,11 +48,12 @@ TagList.css = `
 }
 
 a.internal.tag-link {
-  border-radius: 8px;
   background-color: var(--highlight);
   padding: 0.2rem 0.4rem;
   margin: 0 0.1rem;
 }
-`
+`// border-radius: 8px;
+  
+
 
 export default (() => TagList) satisfies QuartzComponentConstructor

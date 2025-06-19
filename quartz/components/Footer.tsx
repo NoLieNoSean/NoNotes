@@ -9,21 +9,39 @@ interface Options {
 
 export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
-    const year = new Date().getFullYear()
+    const year = new Date().getFullYear() % 100
     let links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>
-          {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
-        </p>
-        <ul>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="13" viewBox="0 0 1300 13" preserveAspectRatio="none" stroke="var(--gray)" stroke-width="1" aria-hidden="true" focusable="false" class="dcr-kammsl" style="--darkreader-inline-stroke: var(--darkreader-text--straight-lines, var(--darkreader-text-000000, #e8e6e3));" data-darkreader-inline-stroke="">
+          <line x1="0" x2="1300" y1="0.5" y2="0.5"></line>
+          <line x1="0" x2="1300" y1="4.5" y2="4.5"></line>
+          <line x1="0" x2="1300" y1="8.5" y2="8.5"></line>
+          <line x1="0" x2="1300" y1="12.5" y2="12.5"></line>
+        </svg>
+
+        
+        <div class="wrapper">
+          <div class="footer-text">
+            <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
               <a href={link}>{text}</a>
             </li>
           ))}
         </ul>
+            {i18n(cfg.locale).components.footer.createdWith}{" "}
+            <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>
+
+
+          </div>
+          <div class="license-notice">
+            <div>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </div>
+            <img class="noAI" src="https://100r.co/media/interface/noai.png" alt="noAI"/>
+          </div>
+        </div>
       </footer>
     )
   }
