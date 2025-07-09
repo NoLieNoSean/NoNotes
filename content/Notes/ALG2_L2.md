@@ -46,14 +46,14 @@ The kernel of $\phi$ is the set of all elements in $G$ that it maps to the ident
 > $\phi(1_{G})=\phi(1_{G}1_{G})=\phi(1_{G})\phi(1_{G})$. It follows that $\phi(1_{G})=1_{H}$.
 > 
 > **Proof of 2**
-> Let $g_{1}, g_{2}\in \ker\phi$. Then, $\phi(g_{1} g_{2})=\phi(g_{1})\phi(g_{2})=1_{H}1_{H}=1_{H}$. Thus, $g_{1} g_{2}\in G$. $\phi(1_{G})=1_{H}$, so $1_{G}\in \ker \phi$. Also, $1_{H}=\phi(1_{G})=\phi (g_{1}g_{1}^{-1})=\phi(g_{1})\phi(g_{1}^{-1})=\phi(g_{1}^{-1})$, i.e, $g_{1}^{-1}\in\ker\phi$. Thus, $\ker\phi<G$. 
+> Let $g_{1}, g_{2}\in \ker\phi$. Then, $\phi(g_{1} g_{2})=\phi(g_{1})\phi(g_{2})=1_{H}1_{H}=1_{H}$. Thus, $g_{1} g_{2}\in \ker \phi$. $\phi(1_{G})=1_{H}$, so $1_{G}\in \ker \phi$. Also, $1_{H}=\phi(1_{G})=\phi (g_{1}g_{1}^{-1})=\phi(g_{1})\phi(g_{1}^{-1})=\phi(g_{1}^{-1})$, i.e, $g_{1}^{-1}\in\ker\phi$. Thus, $\ker\phi<G$. 
 > 
 > **Proof of 3**
-> Let $h_{1}, h_{2}\in \mathrm{Im}~\phi$. There must exist $g_{1}, g_{2}\in G$ such that $\phi(g_{1})=h_{1}$ and $\phi(g_{2})=h_{2}$. Then, $\phi(g_{1}g_{2})=\phi(g_{1})\phi(g_{2})=h_{1}h_{2}$. Thus, $h_{1}h_{2}\in \mathrm{Im}~\phi$. Obviously, $1_{H}\in \mathrm{Im}~\phi$. Also, it can be seen from the proof of statement 2 that $h^{-1}=\phi(g_{1})^{-1}=\phi(g_{1}^{-1})\in \mathrm{Im}~\phi$. Thus, $\mathrm{Im}~\phi<H$. 
+> Let $h_{1}, h_{2}\in \mathrm{Im}~\phi$. There must exist $g_{1}, g_{2}\in G$ such that $\phi(g_{1})=h_{1}$ and $\phi(g_{2})=h_{2}$. Then, $\phi(g_{1}g_{2})=\phi(g_{1})\phi(g_{2})=h_{1}h_{2}$. Thus, $h_{1}h_{2}\in \mathrm{Im}~\phi$. Obviously, $1_{H}\in \mathrm{Im}~\phi$. Also, it can be seen from the proof of statement 2 that $h_{1}^{-1}=\phi(g_{1})^{-1}=\phi(g_{1}^{-1})\in \mathrm{Im}~\phi$. Thus, $\mathrm{Im}~\phi<H$. 
 
 Note: Actually, $\ker \phi\triangleleft G$, as seen in the next lecture.
 
-> [!Theorem] Proposition
+> [!Theorem]
 > Let $\psi:G\to G'$ be a homomorphism of groups, and let $a$ and $b$ be elements of $G$. Let $K$ be the kernel of $\psi$. Then, the following are equivalent:
 > - $\psi(a)=\psi(b)$
 > - $a^{-1}b$ is in $K$
@@ -62,7 +62,7 @@ Note: Actually, $\ker \phi\triangleleft G$, as seen in the next lecture.
 
 The last point can be proved by showing that $aK$ and $bK$ are subsets of each other.
 
-> [!Theorem] Proposition
+> [!Theorem]
 > Let $K$ be the kernel of a homomorphism $\phi:G\to G$. The fibre of $\phi$ that contains an element $a$ of $G$ is the coset $aK$ of $K$. These cosets partition $G$, and they correspond to elements of the image of $\phi$. 
 > 
 > ![[Pasted image 20250130164743.png]]

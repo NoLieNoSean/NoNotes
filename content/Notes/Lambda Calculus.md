@@ -115,7 +115,7 @@ Now, we can introduce the $\lambda$ calculus as a formal theory:
 > $$
 > \begin{align}
 > M=M' & \implies MZ=M'Z; \\
-> M=M' & \implies ZM=Z\mathcal{M} \\
+> M=M' & \implies ZM=ZM \\
 > M=M'  & \implies \lambda x.M=\lambda x.M'.
 > \end{align}
 > $$
@@ -140,10 +140,10 @@ The following lemma is clear from the principal axiom:
 > Define **standard combinators**
 > $$
 > \begin{align}
-> \mathbf{I} & \equiv\lambda x.x; \\
-> \mathbf{K} & \equiv\lambda xy.x; \\
-> \mathbf{K}_{*} & \equiv\lambda xy.y; \\
-> \mathbf{S} & \equiv\lambda xyz.xz(yz).
+> \pmb{\textsf{I}} & \equiv\lambda x.x; \\
+> \pmb{\textsf{K}} & \equiv\lambda xy.x; \\
+> \pmb{\textsf{K}}_{*} & \equiv\lambda xy.y; \\
+> \pmb{\textsf{S}} & \equiv\lambda xyz.xz(yz).
 > \end{align}
 > $$
 > 
@@ -153,9 +153,9 @@ The following lemma is clear from the principal axiom:
 > [!Theorem] Fixed point theorem
 > For all $F\in\Lambda$, there exists $X\in\Lambda$ such that $FX=X$. More precisely, for all $F\in\Lambda$, there exists a fixed point combinator 
 > $$
-> \mathbf{Y}\equiv\lambda f.(\lambda x.f(xx))(\lambda x.f(xx))
+> \pmb{\textsf{Y}}\equiv\lambda f.(\lambda x.f(xx))(\lambda x.f(xx))
 > $$
-> such that $F(\mathbf{Y}F)=\mathbf{Y}F$. 
+> such that $F(\pmb{\textsf{Y}}F)=\pmb{\textsf{Y}}F$. 
 > 
 > > [!Proof]-
 > > 
@@ -165,23 +165,23 @@ The following lemma is clear from the principal axiom:
 ^d18faf
 
 > [!Example]
-> Show that there exists $G$ such that for all $X$, $GX=\mathbf{S}GX$.
+> Show that there exists $G$ such that for all $X$, $GX=\pmb{\textsf{S}}GX$.
 > 
-> Let $G\equiv \mathbf{Y}(\lambda gx.\mathbf{S}gx)$. Then, $G$ is a fixed point of $\lambda gx.\mathbf{S}gx$, and 
+> Let $G\equiv \pmb{\textsf{Y}}(\lambda gx.\pmb{\textsf{S}}gx)$. Then, $G$ is a fixed point of $\lambda gx.\pmb{\textsf{S}}gx$, and 
 > $$
 > \begin{align}
->  & G  =(\lambda gx.\mathbf{S}gx)G \\
-> \implies & G=\lambda x.\mathbf{S}Gx \\
-> \implies & Gx=\mathbf{S}Gx \\
-> \implies & GX=\mathbf{S}GX \quad\forall X\in\Lambda. 
+>  & G  =(\lambda gx.\pmb{\textsf{S}}gx)G \\
+> \implies & G=\lambda x.\pmb{\textsf{S}}Gx \\
+> \implies & Gx=\pmb{\textsf{S}}Gx \\
+> \implies & GX=\pmb{\textsf{S}}GX \quad\forall X\in\Lambda. 
 > \end{align}
 > $$
-> Note that taking $G\equiv \mathbf{Y}\mathbf{S}$ also works.
+> Note that taking $G\equiv \pmb{\textsf{Y}}\pmb{\textsf{S}}$ also works.
 
 > [!Example]
 > Show that there exists $G$ such that for all $X$, $GX=GG$.
 > 
-> Let $G\equiv\mathbf{Y}(\lambda gx.gg)$. Then, 
+> Let $G\equiv \pmb{\textsf{Y}}(\lambda gx.gg)$. Then, 
 > $$
 > \begin{align}
 > G & =(\lambda gx.gg)G \\
@@ -234,23 +234,22 @@ The following lemma is clear from the principal axiom:
 > [!Definition] Church numerals
 > The **Church numerals** $c_{0}, c_{1}, \dots,$ are defined by $c_{n}\equiv\lambda fx.f^{n}(x)$.
 
-
 > [!Theorem] Arithmetic on Church numerals
 > Define
 > $$
 > \begin{align}
 > 
-> \mathbf{A}_{+} & \equiv\lambda c_{a}c_{b}fx.c_{a}f(c_{b}fx); \\
-> \mathbf{A}_{*} & \equiv\lambda c_{a}c_{b}f.c_{a}(c_{b}f); \\
-> \mathbf{A}_{\exp} & \equiv\lambda c_{a}c_{b}.c_{b}c_{a}.
+> \pmb{\textsf{A}}_{+} & \equiv\lambda c_{a}c_{b}fx.c_{a}f(c_{b}fx); \\
+> \pmb{\textsf{A}}_{*} & \equiv\lambda c_{a}c_{b}f.c_{a}(c_{b}f); \\
+> \pmb{\textsf{A}}_{\exp} & \equiv\lambda c_{a}c_{b}.c_{b}c_{a}.
 > \end{align}
 > $$
 > Then, 
 > $$
 > \begin{align}
-> \mathbf{A}_{+}c_{a}c_{b} & =c_{a+b}; \\
-> \mathbf{A}_{*}c_{a}c_{b} & =c_{ab}; \\
-> \mathbf{A}_{\exp}c_{a}c_{b} & =c_{a^{b}}, \quad m\ne 0.
+> \pmb{\textsf{A}}_{+}c_{a}c_{b} & =c_{a+b}; \\
+> \pmb{\textsf{A}}_{*}c_{a}c_{b} & =c_{ab}; \\
+> \pmb{\textsf{A}}_{\exp}c_{a}c_{b} & =c_{a^{b}}, \quad m\ne 0.
 > \end{align}
 > $$
 > 
@@ -282,10 +281,9 @@ The following lemma is clear from the principal axiom:
 > ^ec2774
 > 
 > > [!Proof]-
-> > test test
 > > $$
 > > \begin{align}
-> > \mathbf{A}_{+}c_{a}c_{b} & =\lambda fx.c_{a}f(c_{b}fx) \\
+> > \pmb{\textsf{A}}_{+}c_{a}c_{b} & =\lambda fx.c_{a}f(c_{b}fx) \\
 > >  & =\lambda fx.(\lambda x.f^{a}(x))(f^{b}(x))  \\
 > >  & =\lambda fx.f^{a}(f^{b}(x)) \\     
 > >  & =\lambda fx.f^{a+b}(x) \\
@@ -295,7 +293,7 @@ The following lemma is clear from the principal axiom:
 > > Using [[#^ec2774]] $(1)$, 
 > > $$
 > > \begin{align}
-> > \mathbf{A}_{*}c_{a}c_{b} & =\lambda f.c_{a}(c_{b}f) \\
+> > \pmb{\textsf{A}}_{*}c_{a}c_{b} & =\lambda f.c_{a}(c_{b}f) \\
 > >  & = \lambda fx.(c_{b}f)^{a}x \\
 > >  & =\lambda fx.f^{ab}x \\
 > >  & =c_{ab}.
@@ -304,7 +302,7 @@ The following lemma is clear from the principal axiom:
 > > Using [[#^ec2774]] $(2)$, 
 > > $$
 > > \begin{align}
-> > \mathbf{A}_{\exp}c_{a}c_{b} & =c_{b}c_{a} \\
+> > \pmb{\textsf{A}}_{\exp}c_{a}c_{b} & =c_{b}c_{a} \\
 > >  & =\lambda x.c_{a}^{b}x \\
 > >  & =\lambda x.c_{a^{b}}x \\
 > >  & =\lambda x.(\lambda fy.f^{a^{b}}y)x \\
@@ -316,12 +314,11 @@ The following lemma is clear from the principal axiom:
 > 
 
 
-
 ---
 # Booleans and conditionals
 
 > [!Definition]
-> $\textsf{true}\equiv \mathbf{K}$, $\textsf{false}\equiv \mathbf{K}_{*}$, where $\mathbf{K}$ and $\mathbf{K}_{*}$ are the combinators defined [[#^9c0469|here]]. 
+> $\textsf{true}\equiv \pmb{\textsf{K}}$, $\textsf{false}\equiv \pmb{\textsf{K}}_{*}$, where $\pmb{\textsf{K}}$ and $\pmb{\textsf{K}}_{*}$ are the combinators defined [[#^9c0469|here]]. 
 
 Note that if $B$ is a boolean, then 
 $$
@@ -336,28 +333,28 @@ $$
 > $$
 > [M, N]\equiv\lambda z.zMN.
 > $$
-> Then, $[M, N]\textsf{true}=M$, and $[M, N]\textsf{false}=N$. $[M, N]$ can serve as an ordered pair.
+> Then, $[M, N]\textsf{true}=M$, and $[M, N]\textsf{false}=N$. $[M, N]$ can serve as an **ordered pair**.
 
 We can use the pairing construction for an alternative representation of natural numbers.
 
 > [!Definition] Barendregt Numerals
-> For each $n\in \mathbb{N}$, the numeral $\lceil n \rceil$ is defined inductively as follows:
+> For each $n\in \mathbb{N}$, the numeral $\ulcorner n \urcorner$ is defined inductively as follows:
 > $$
 > \begin{align}
-> \lceil 0 \rceil  & \equiv \mathbf{I}, \\
-> \lceil n+1 \rceil  & \equiv[\textsf{false}, \lceil n \rceil ].
+> \ulcorner 0 \urcorner   & \equiv \pmb{\textsf{I}}, \\
+> \ulcorner n+1 \urcorner   & \equiv[\textsf{false}, \ulcorner n \urcorner  ].
 > \end{align}
 > $$
 > 
 
 > [!Lemma] 
-> The exist combinators $\mathbf{S}^{+}, \mathbf{P}^{-}$, and $\mathbf{Z}$ such that
+> The exist combinators $\pmb{\textsf{S}}^{+}, \pmb{\textsf{P}}^{-}$, and $\pmb{\textsf{Z}}$ such that
 > $$
 > \begin{align}
-> \mathbf{S}^{+}\lceil n \rceil  & =\lceil n+1 \rceil , \\
-> \mathbf{P}^{-}\lceil n+1 \rceil  & =\lceil n \rceil , \\
-> \mathbf{Z}\lceil 0 \rceil  & =\textsf{true} \\
-> \mathbf{Z}[n+1] & =\textsf{false}.
+> \pmb{\textsf{S}}^{+}\lceil n \rceil  & =\lceil n+1 \rceil , \\
+> \pmb{\textsf{P}}^{-}\lceil n+1 \rceil  & =\lceil n \rceil , \\
+> \pmb{\textsf{Zero}}\lceil 0 \rceil  & =\textsf{true} \\
+> \pmb{\textsf{Zero}}[n+1] & =\textsf{false}.
 > \end{align}
 > $$
 > 
@@ -366,9 +363,9 @@ We can use the pairing construction for an alternative representation of natural
 > > Take
 > > $$
 > > \begin{align}
-> > \mathbf{S}^{+} & \equiv\lambda x.[\textsf{false}, x] \\
-> > \mathbf{P}^{-} & \equiv\lambda x.x~\textsf{false} \\
-> > \mathbf{Z} & \equiv\lambda x.x~\textsf{true}.
+> > \pmb{\textsf{S}}^{+} & \equiv\lambda x.[\textsf{false}, x] \\
+> > \pmb{\textsf{P}}^{-} & \equiv\lambda x.x~\textsf{false} \\
+> > \pmb{\textsf{Zero}} & \equiv\lambda x.x~\textsf{true}.
 > > \end{align}
 > > $$
 > > 
@@ -378,9 +375,128 @@ We can use the pairing construction for an alternative representation of natural
 > A **numeric function** is a map $\varphi:\mathbb{N}^{p}\to \mathbb{N}$ for some $p$. In this case, $\varphi$ is called $p$-ary.
 > A numeric $p$-ary function $\varphi$ is called **$\lambda$-definable** if for some combinator $F$, 
 > $$
-> F\lceil n_{1} \rceil \lceil n_{2} \rceil \dots \lceil n_{p} \rceil =\lceil \varphi(n_{1}, n_{2}, \dots, n_{p}) \rceil 
+> F~\ulcorner n_{1} \urcorner \ulcorner n_{2} \urcorner  \dots \ulcorner n_{p} \urcorner  =\ulcorner \varphi(n_{1}, n_{2}, \dots, n_{p}) \urcorner  
 > $$
 > for all $n_{1}, \dots, n_{p}\in \mathbb{N}$, in which case, $\varphi$ is said to be **$\lambda$-defined** by $F$.
 
+> [!Definition] Initial functions
+> The **initial functions** are the numeric functions $U^{n}_{i}$, $S^{+}, Z$ defined by 
+> $$
+> \begin{align}
+> U^{n}_{i}(x_{1}, x_{2}, \cdots, x_{n}) & =x_{i}, \quad(1\leq i\leq n) \\
+> S^{+} & =n+1 \\
+> Z(n) & =0.
+> \end{align}
+> $$
 
+> [!Notation]
+> Let $P(n)$ be a numeric relation. $\mu m[P(m)]$ denotes the least number $m$ such that $P(m)$ holds if there is such a number; otherwise it is undefined.
+
+We will now characterize the $\lambda$-definable functions.
+
+> [!Definition] Recursive functions
+> The class $\mathcal{R}$ of **recursive functions** is the smallest class of numeric functions that contains all initial functions and is
+> 1. *closed under composition*: for all $\varphi$ defined by
+> 	$$
+> 	\varphi(\vec{n})=\chi (\psi_{1}(\vec{n}), \psi_{2}(\vec{n}), \cdots, \psi_{m}(\vec{n}))
+> 	$$
+> 	with $\chi, \psi_{1}, \dots, \psi_{m}\in \mathcal{R}$, one has $\varphi\in \mathcal{R}$;
+> 2. *closed under primitive recursion*: for all $\varphi$ defined by
+> 	$$
+> 	\begin{align}
+> 	\varphi(0, \vec{n}) & =\chi(\vec{n}) \\
+> 	\varphi(k+1, \vec{n}) & =\psi(\varphi(k, \vec{n}), k, \vec{n}) 
+> 	\end{align}
+> 	$$
+> 	with $\chi, \psi\in \mathcal{R}$, one has $\varphi\in \mathcal{R}$;
+> 3. *closed under minimalization*: for all $\varphi$ defined by
+> 	$$
+> 	\varphi(\vec{n})=\mu m[\chi(\vec{n}, m)=0],
+> 	$$
+> 	with $\chi\in \mathcal{R}$ such that
+> 	$$
+> 	\forall \vec{n}~\exists m~ \chi(\vec{n}, m)=0
+> 	$$
+> 	one has $\varphi\in \mathcal{R}$.
+
+Our claim is that all recursive functions are $\lambda$-definable. 
+
+> [!Lemma]
+> The initial functions are $\lambda$-definable.
+> 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > \pmb{\textsf{U}}^{n}_{i} & \equiv\lambda x_{1}x_{2}\cdots x_{n}.x_{i}, \\
+> > \pmb{\textsf{S}}^{+} & \equiv\lambda x.[\textsf{false}, x], \\
+> > \pmb{\textsf{Z}} & \equiv\lambda x.\ulcorner 0 \urcorner .
+> > \end{align}
+> > $$
+> > 
+> 
+
+> [!Lemma]
+> The $\lambda$-definable functions are closed under composition.
+
+As to primitive recursion, consider an example: the addition function can be specified as follows:
+$$
+\begin{align}
+\text{Add}(0, y) & =y \\
+\text{Add}(x+1, y) & =\pmb{\textsf{S}}^{+}\text{Add}(x, y).
+\end{align}
+$$
+Therefore we want a term $\textsf{Add}$ satisfying
+$$
+\textsf{Add}~xy= (\pmb{\textsf{Zero}}~x )~y~(\pmb{\textsf{S}}^{+}(\textsf{Add}~(\pmb{\textsf{P}}^{-}x)~y)).
+$$
+This equation can be solved using the [[#^d18faf|fixed point combinator]]:
+$$
+\begin{align}
+\textsf{Add}
+ & =\pmb{\textsf{Y}}(\lambda axy.(\pmb{\textsf{Zero}}~x )~y~(\pmb{\textsf{S}}^{+}(a~(\pmb{\textsf{P}}^{-}x)~y)) ).
+\end{align}
+$$
+The general case follows.
+
+> [!Lemma]
+> The $\lambda$-definable functions are closed under primitive recursion.
+> 
+> > [!Proof]-
+> > Let $\varphi$ be defined by
+> > $$
+> > \begin{align}
+> > \varphi(0, \vec{n}) & =\chi(\vec{n}) \\
+> > \varphi(k+1, \vec{n}) & =\psi(\varphi(k, \vec{n}), k, \vec{n})
+> > \end{align}
+> > $$
+> > where $\psi, \chi$ are $\lambda$-defined by $G, H$ respectively. Now, we require $F$ such that
+> > $$
+> > \begin{align}
+> > Fx\vec{y}=(\pmb{\textsf{Zero}}~x) ~(H\vec{y})~(G(F(\pmb{\textsf{P}}^{-}x)\vec{y})x\vec{y})
+> > \end{align}
+> > $$
+> > Using the fixed point combinator, we have
+> > $$
+> > \begin{align}
+> > F=\pmb{\textsf{Y}}(\lambda fx\vec{y}.(\pmb{\textsf{Zero}}~x) ~(H\vec{y})~(G(f(\pmb{\textsf{P}}^{-}x)\vec{y})x\vec{y})).
+> > \end{align}
+> > $$
+> 
+
+
+> [!Lemma]
+> The $\lambda$-definable functions are closed under minimalization.
+> 
+> > [!Proof]-
+> > Let $\varphi$ be defined by
+> > $$
+> > \varphi(\vec{n})=\mu m[\chi(\vec{n}, m)=0]
+> > $$
+> > where $\chi$ is $\lambda$-defined by $H$. Again by the fixed point theorem, there is a term $G$ such that
+> > $$
+> > \begin{align}
+> > G\vec{x}y & = (\pmb{\textsf{Zero}}~H\vec{x}y)~y~(G\vec{x}(\pmb{\textsf{S}}^{+}y)). 
+> > \end{align}
+> > $$
+> > Set $F\equiv \lambda \vec{x}.G\vec{x}\ulcorner 0 \urcorner$.
 

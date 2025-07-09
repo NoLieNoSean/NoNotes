@@ -9,7 +9,7 @@
 > 
 > Properties of morphisms:
 > 1. For every object $A$ of $\textsf{C}$, there exists (at least) one morphism $1_{A}\in \text{Hom}_{\textsf{C}}(A, A)$ of morphisms, the *identity* on $A$. 
-> 2. One can *compose* morphisms: two morphisms $f\in \text{Hom}_{\textsf{C}}(A, B)$ and $g\in \text{Hom}_{\textsf{C}}(B, C)$ determine a morphism $gf\in \text{Hom}_{\textsf{C}}(A, C)$. That is, for every triple of objects $A, B, C$ of $\textsf{C}$, there is a function (of sets) $\text{Hom}_{C}(A, B)\times \text{Hom}_{\textsf{C}}(B, C)\to \text{Hom}_{\textsf{C}}(A, C)$, and the image of the pair $(f, g)$ is denoted by $gf$.
+> 2. One can *compose* morphisms: two morphisms $f\in \text{Hom}_{\textsf{C}}(A, B)$ and $g\in \text{Hom}_{\textsf{C}}(B, C)$ determine a morphism $gf\in \text{Hom}_{\textsf{C}}(A, C)$. That is, for every triple of objects $A, B, C$ of $\textsf{C}$, there is a function (of sets) $\text{Hom}_{\textsf{C}}(A, B)\times \text{Hom}_{\textsf{C}}(B, C)\to \text{Hom}_{\textsf{C}}(A, C)$, and the image of the pair $(f, g)$ is denoted by $gf$.
 > 3. This 'composition law' is *associative*: if $f\in \text{Hom}_{\textsf{C}}(A, B)$, $g\in \text{Hom}_{\textsf{C}}(B, C)$, and $h\in \text{Hom}_{\textsf{C}}(C, D)$, then $(hg)f=h(gf)$.
 > 4. The *identity morphisms are identities with respect to composition*: for all $f\in \text{Hom}_{\textsf{C}}(A, B)$, we have $f 1_{A}=f$, $1_{B}f=f$.
 
@@ -106,7 +106,7 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > \end{tikzcd}
 > \end{document}
 > ```
-> commutes. Associativity immediately from the fact that composition is associative in $\textsf{C}$.
+> commutes. Associativity immediately follows from the fact that composition is associative in $\textsf{C}$.
 
 > [!Example] Formalizing Example 3.10
 > Let $\textsf{C}$ be a category. Choose two fixed morphisms $\alpha:A\to C$ and $\beta:B\to C$ in $\textsf{C}$, with the same target $C$. Define a category $\textsf{C}_{\alpha, \beta}$ as follows:
@@ -133,3 +133,124 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > 	\end{tikzcd}
 > 	\end{document}
 > 	```
+> 
+> 
+> Again, the identities are inherited from $\textsf{C}$. 
+> 
+>The composition $(Z_{1}, f_{1}, g_{1})\xrightarrow{\sigma}(Z_{2}, f_{2}, g_{2})\xrightarrow{\tau}(Z_{3}, f_{3}, g_{3})$ is obtained by combining the diagrams of $\sigma$ and $\tau$ like so:
+> 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}
+> &&& A\ar[rd, "\alpha"]&\\
+>  	 Z_1 \ar[rrru, bend left, "f_1"]\ar[r, "\sigma"]\ar[rrrd,bend right,  "g_1"'] & Z_2 \ar[rru, bend left, "f_2"'] \ar[rrd, bend right, "g_2"]\ar[r, "\tau"]&Z_3 \ar[ru, "f_3"'] \ar[rd, "g_3"]&&C\\
+>  	 &&&B\ar[ru, "\beta"]&
+> \end{tikzcd}
+> \end{document}
+> ```
+> 
+> and as before, it follows that
+> 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}
+> && A\ar[rd, "\alpha"]&\\
+>  	 Z_1 \ar[rru, bend left, "f_1"]\ar[r, "\tau\sigma"]\ar[rrd,bend right,  "g_1"'] & Z_3 \ar[ru, "f_3"'] \ar[rd, "g_3"]&&C\\
+>  	 &&B\ar[ru, "\beta"]&
+> \end{tikzcd}
+> \end{document}
+> ```
+> commutes. Associativity follows from $\textsf{C}$ being a category.
+
+---
+# Morphisms
+
+## Isomorphisms and automorphisms
+
+> [!Definition] Isomorphism
+> A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is an **isomorphism** if it has a (two-sided) inverse under composition: that is, if $\exists g\in \text{Hom}_{\textsf{C}}(B, A)$ such that
+> $$
+> gf=1_{A}, \quad fg=1_{B}.
+> $$
+
+> [!Info]- Groupoids
+> A category in which every morphism is an isomorphism is called a **groupoid**. A category can be constructed form any set endowed with a reflexive and transitive relation (ensuring identities and composition respectively). If the relation also happens to be symmetric, the category constructed is a groupoid (every morphism now has an inverse).
+
+> [!Proposition]
+> The inverse of an isomorphism is unique.
+> 
+> > [!Proof]-
+> > This is an [[ANA1_HW1_Kulkarni_solutions.pdf#page=2|utterly standard]] verification.
+
+To hammer the point home, if $f$ is a morphism with a left-inverse $g_{1}$ and a right inverse $g_{2}$, then necessarily $f$ is an isomorphism, $g_{1}=g_{2}$, and this morphism is the (unique) inverse of $f$.
+
+More utterly standard stuff:
+
+> [!Proposition]
+> - Each identity $1_{A}$ is an isomorphism and its own inverse.
+> - If $f$ is an isomorphism, then $f^{-1}$ is an isomorphism and further $(f^{-1})^{-1}=f$.
+> - If $f\in \text{Hom}_{\textsf{C}}(A, B)$, $g\in \text{Hom}_{\textsf{C}}(B, C)$ are isomorphisms, then $gf$ is an isomorphism and $(gf)^{-1}=f^{-1}g^{-1}$.
+
+^9e484d
+
+A morphism of an object $A$ of a category $\textsf{C}$ to itself is called an **endomorphism**. $\text{Hom}_{\textsf{C}}(A, A)$ is denoted by $\text{End}_{\textsf{C}}(A)$.
+
+> [!Definition] Automorphism
+> An **automorphism** of an object $A$ of a category $\textsf{C}$ is an isomorphism form $A$ to itself. The set of automorphisms of $A$ is denoted by $\text{Aut}_{\textsf{C}}(A)$; it is a subset of $\text{End}_{\textsf{C}}(A)$. 
+
+From [[#^9e484d]], we can infer than $\text{Aut}_{\textsf{C}}(A)$ is a group for all objects $A$ of all categories $\textsf{C}$:
+- $\text{Aut}_{\textsf{C}}(A)$ is closed under composition;
+- composition is associative
+- $\text{Aut}_{\textsf{C}}(A)$ contains $1_{A}$, the identity for composition;
+- every element $f\in \text{Aut}_{\textsf{C}}(A)$ has an inverse $f^{-1}\in \text{Aut}_{\textsf{C}}(A)$.
+
+Note that we have already [[ALG2_L4#^27ea43|shown]] this for the category $\textsf{Gp}$, the category of groups with morphisms being group homomorphisms. 
+## Monomorphisms and epimorphisms
+
+Note that defining qualities of morphisms by their actions on 'elements' (as we did in $\textsf{Set}$) is not an option here, because objects of an arbitrary category do not (in general) have 'elements'. However, recall that properties of morphisms in $\textsf{Set}$ such as injectivity and surjectivity did have alternative formulations which did not reference 'elements' at all (left cancellable and right cancellable functions, respectively). It turns out that these formulations of these notions do transfer nicely into the categorical setting.
+
+> [!Definition] Monomorphism
+> Let $\textsf{C}$ be a category. A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is a **monomorphism** if the following holds: for all objects $Z$ of $\textsf{C}$ and all morphisms $\alpha, \alpha'\in \text{Hom}_{\textsf{C}}(Z, A)$, 
+> $$
+> f\circ\alpha=f\circ\alpha'\implies\alpha=\alpha'.
+> $$
+> In other words, $f$ is a monomorphism if it is *left cancellable*.
+
+> [!Definition] Epimorphism
+> Let $\textsf{C}$ be a category. A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is an **epimorphism** if the following holds: for all objects $Z$ of $\textsf{C}$ and all morphisms $\alpha, \alpha'\in \text{Hom}_{\textsf{C}}(B, Z)$, 
+> $$
+> \alpha \circ f=\alpha'\circ f\implies\alpha=\alpha'.
+> $$
+> In other words, $f$ is an epimorphism if it is *right cancellable*.
+> 
+
+In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and the epimorphisms are precisely the surjective functions.
+
+> [!Important]
+> In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, hence iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities. Thus, this is not a property one should expect to hold in every category. A function being an epimorphism iff it has a right inverse is another property endemic to $\textsf{Set}$; it is not true in $\textsf{Gp}$!
+
+---
+
+# Universal Properties
+
+> [!Definition]
+> Let $\textsf{C}$ be a category. 
+> - We say that $I\in \text{Obj}(\textsf{C})$ is **initial** in $\textsf{C}$ if for all $A\in \text{Obj}(C)$, $\text{Hom}_{\textsf{C}}(I,A)$ is a singleton. 
+> - We say that $F\in \text{Obj}(\textsf{C})$ is **final** in $\textsf{C}$  if for all $A\in \text{Obj}(\textsf{C})$, $\text{Hom}_{\textsf{C}}(A, F)$ is a singleton.
+
+A category need not have initial and final objects, and when they exist, they may not be unique. However, they are unique up to a unique isomorphism. Initial and final objects are collectively referred to as *terminal objects*.
+
+> [!proposition]
+> Let $\textsf{C}$ be a category.
+> - If $I_{1}, I_{2}$ are both initial objects in $\textsf{C}$, then $I_{1}\cong I_{2}$.
+> - If $F_{1}, F_{2}$ are both final objects in $\textsf{C}$, then $F_{1}\cong F_{2}$.
+> 
+> Moreover, these isomorphisms are uniquely determined.
+> 
+> > [!Proof]-
+> > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$$|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, and that $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
+> 
+
+

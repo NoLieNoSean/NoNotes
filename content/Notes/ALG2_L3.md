@@ -18,7 +18,7 @@ Define two relations on $G$:
 
 First, notice that these are equivalence relations. We will prove this assertion for $\equiv_{r}$.
 
-> [!Theorem] Proposition
+> [!proposition]
 > $\equiv_{r}$ is an equivalence relation.
 
 > **Proof**
@@ -38,10 +38,10 @@ First, notice that these are equivalence relations. We will prove this assertion
 > Transitivity:
 > Let $g\equiv_{r} g'\mod H$ and $g'\equiv_{r} g''\mod H$. Then, $gg'^{-1}\in H$ and $g'g''^{-1}\in H$. It follows that $gg'^{-1}g'g''^{-1}=gg''^{-1}\in H$, so $g\equiv_{r} g''\mod H$. 
 
-As we know, an equivalence relation on a set partitions the set into equivalence classes. We will now see that $\equiv_{l}$ partitions $G$ into its left cosets, and $\equiv_{r}$ partitions $G$ into its right cosets.
+As we know, an equivalence relation on a set partitions the set into equivalence classes. We will now see that $\equiv_{l}$ partitions $G$ into left cosets modulo $H$, and $\equiv_{r}$ partitions $G$ into right cosets modulo $H$.
 
-> [!Theorem] Claim
-> $Hg$ is the equivalence class $g$ under $\equiv_{r}$, i.e, $Hg=\{ g':g\equiv_{r} g'\mod H \}=[g]$. 
+> [!Claim]
+> $Hg$ is the equivalence class of $g$ under $\equiv_{r}$, i.e, $Hg=\{ g':g\equiv_{r} g'\mod H \}=[g]$. 
 
 > **Proof**
 > $[g]\subset Hg$:
@@ -130,7 +130,7 @@ Note that all left/right cosets of a subgroup $H$ of $G$ are of the same cardina
 An immediate corollary of the above lemma is that the alternating group of $n$ elements $A_{n}$ is a normal subgroup of $S_{n}$, since $A_{n}$ is the kernel of the homomorphism $\phi:S_{n}\to \mathbb{Z}_{2}$, $\phi(\tau)=\text{sgn }\tau$.
 
 > [!Warning]
-> The property "is a normal subgroup of" is not transitive. For example, $\langle s \rangle\triangleleft\langle s, r^{2} \rangle\triangleleft D_{8}$, but $\langle s \rangle$ is not normal in $D_{8}$.
+> The relation "is a normal subgroup of" is not transitive. For example, $\langle s \rangle\triangleleft\langle s, r^{2} \rangle\triangleleft D_{8}$, but $\langle s \rangle$ is not normal in $D_{8}$.
 
 ### Cauchy's Theorem
 

@@ -15,7 +15,7 @@ time: 9:10
 > $$
 > If there exists an isomorphism from $G$ to $H$, we say $G$ and $H$ are isomorphic and write $G\cong H$. 
 
-> [!Theorem] Lemma
+> [!Lemma] 
 > If $\phi:G\to G'$ is an isomorphism, so is $\phi ^{-1}:G'\to G$. 
 
 Note that $\phi ^{-1}$ is well defined because $\phi$ is a bijection.
@@ -29,8 +29,10 @@ Recall that, if $\phi:G_{1}\to G_{2}$ is a [[ALG2_L2#Homomorphisms|homomorphism]
 
 $\phi$ is called an *automorphism* if $G_{1}=G_{2}$. The set of all automorphisms is denoted by $\text{Aut }G\equiv \{ \phi:G\to G\ | \ \phi \text{ is an isomorphism}\}$.
 
-> [!Theorem] Lemma
+> [!Lemma] 
 > Let $G$ be a group. Then, $\text{Aut } G$ is a group under composition.
+
+^27ea43
 
 > **Proof**
 > The identity isomorphism is the identity element. Let $\phi_{1}, \phi_{2}\in\text{Aut }G$. Consider the map $\phi_{1}\phi_{2}$. Since $\phi_{1}$ and $\phi_{2}$ are bijective, $\phi_{1}\phi_{2}$ is too. It remains to show that $\phi_{1}\phi_{2}$ is a homeomorphism: $(\phi_{1}\circ\phi_{2})(g_{1}g_{2})=\phi_{1}(\phi_{2}(g_{1})\phi_{2}(g_{2}))=\phi_{1}(\phi_{2}(g_{1}))\phi_{1}(\phi_{2}(g_{2}))=(\phi_{1}\circ\phi_{2})(g_{1})(\phi_{1}\circ\phi_{2})(g_{2})$. Thus, $\text{Aut }G$ is closed under composition. For any $\phi\in\text{Aut }G$, $\phi ^{-1}$ is well defined and bijective, is a homomorphism (easy to check), and hence is an isomorphism: $\phi ^{-1}\in\text{Aut }G$. 

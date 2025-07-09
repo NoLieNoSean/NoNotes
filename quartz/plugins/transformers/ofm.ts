@@ -119,6 +119,9 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 // matches any wikilink, only used for escaping wikilinks inside tables
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
+export const countedCallouts = ["definition", "lemma", "theorem", "example", "claim", "proposition"]
+
+
 const highlightRegex = new RegExp(/==([^=]+)==/g)
 const commentRegex = new RegExp(/%%[\s\S]*?%%/g)
 // from https://github.com/escwxyz/remark-obsidian-callout/blob/main/src/index.ts
@@ -138,6 +141,7 @@ const videoExtensionRegex = new RegExp(/\.(mp4|webm|ogg|avi|mov|flv|wmv|mkv|mpg|
 const wikilinkImageEmbedRegex = new RegExp(
   /^(?<alt>(?!^\d*x?\d*$).*?)?(\|?\s*?(?<width>\d+)(x(?<height>\d+))?)?$/,
 )
+
 
 export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
   const opts = { ...defaultOptions, ...userOpts }
@@ -254,7 +258,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               if (node.children[0].children[0].value.slice(0, 8).toLowerCase() === "[!proof]") {
                 let overflowText = node.children[0].children[0].value.slice("[!Proof]-\n".length).trim()
                 let overflowChildren = []
-                if(overflowText){
+                if (overflowText) {
                   overflowChildren.push({
                     type: "text",
                     value: overflowText,
@@ -263,7 +267,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 }
                 overflowChildren.push(...node.children[0].children.slice(1))
                 node.children[0].children.splice(1)
-                if(overflowChildren){
+                if (overflowChildren) {
                   let overflowp = {
                     type: "paragraph",
                     children: overflowChildren,
@@ -271,7 +275,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   node.children.splice(1, 0, overflowp)
                 }
 
-                
+
                 if (node.children[node.children.length - 1].type === "paragraph") {
                   node.children[node.children.length - 1].children.push({
                     type: "html",
@@ -743,7 +747,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         return (tree: HtmlRoot, _file) => {
           let counter = 0;
           visit(tree, "element", (node) => {
-            let countedCallouts = ["definition", "lemma", "theorem", "example", "claim"]
             if (node.tagName === "blockquote" && countedCallouts.includes(node.properties.dataCallout as string)) {
               counter++;
               node.properties.calloutNumber = counter
@@ -850,21 +853,22 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           const NumberNodeDict = new Map();
 
           visit(tree, "element", (node) => {
-            let countedCallouts = ["definition", "lemma", "theorem", "example", "claim"]
             if (node.tagName === "blockquote" && countedCallouts.includes(node.properties.dataCallout as string) && node.properties.id) {
               NumberNodeDict.set(node.properties.id, node)
             }
           })
+
           visit(tree, "element", (node) => {
             if (node.tagName === "a" &&
               node.properties.href.slice(0, 4) === "#%5E") {
               let callout = NumberNodeDict.get(node.properties.href.slice(4))
-              let dataCallout = callout.properties.dataCallout
-              if(node.children[0].value[0]==="^"){
-                node.children[0].value = dataCallout[0].toUpperCase() +dataCallout.slice(1) + " " +callout.properties.calloutNumber 
+              if (callout) {
+                let dataCallout = callout.properties.dataCallout
+                if (node.children[0].value[0] === "^") {
+                  node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.properties.calloutNumber
+                }
+                node.properties.href = `#${node.properties.href.slice(4)}`
               }
-              node.properties.href = `#${node.properties.href.slice(4)}`
-
             }
           })
         }
