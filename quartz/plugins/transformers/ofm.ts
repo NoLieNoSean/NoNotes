@@ -218,6 +218,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
     markdownPlugins(_ctx) {
       const plugins: PluggableList = []
 
+
+      
       // render tikz blocks using tikzjax
 
       // node-tikzjax or one of its dependencies requests non-existent fonts like "cmmib5" or "cmbsy5" when \boldsymbol{...} is used. 
@@ -227,9 +229,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       // some glyphs, like \Omega, just do not render properly. I threw 4 hours and then some sunk cost fallacy bonus 
       // at this and turned up empty. Just do not use \Omega ffs i give up
 
-      // render tikz blocks using tikzjax
+
       plugins.push(() => {
         return async (tree: Root, _file) => {
+          console.log("Rendering tikz diagrams")
           const tikzNodes: Code[] = []
           visit(tree, "code", (node: Code) => {
             if (node.lang === "tikz") {
@@ -241,9 +244,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           for (const node of tikzNodes) {
             try {
               let svg = await tex2svg.default(node.value, {
-                // showConsole: true,
+                showConsole: true,
                 embedFontCss: true,
-                fontCssUrl: 'https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css',
+                addToPreamble: '% comment',
+                fontCssUrl: 'https://thewarpingtesseract.neocities.org/external/fonts.css',
               });
               svg = svg.replace('<svg', '<svg data-tikz-svg="true"')
               node.value = svg;
@@ -255,8 +259,12 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               console.error(`Failed to process TikZ block: ${error}`);
             }
           }
+          console.log("Done rendering tikz diagrams")
         }
+        
       })
+      
+      
 
       //proof envs
       plugins.push(() => {

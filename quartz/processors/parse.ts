@@ -79,8 +79,15 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
     const res: ProcessedContent[] = []
     for (const fp of fps) {
       try {
+
+        
+
         const perf = new PerfTimer()
         const file = await read(fp)
+
+        if (argv.verbose) {
+          console.log(`[process] ${fp} -> ${file.data.slug} (${perf.timeSince()})`)
+        }
 
         // strip leading and trailing whitespace
         file.value = file.value.toString().trim()
@@ -99,9 +106,7 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
         const newAst = await processor.run(ast, file)
         res.push([newAst, file])
 
-        if (argv.verbose) {
-          console.log(`[process] ${fp} -> ${file.data.slug} (${perf.timeSince()})`)
-        }
+        
       } catch (err) {
         trace(`\nFailed to process \`${fp}\``, err as Error)
       }
