@@ -560,18 +560,3 @@ Hence, we have the following theorem.
 > represents $\varphi$ with respect to the church numerals.
 
 ---
-
-# Reduction
-
-```tikz
-\usepackage{tikz-cd}
-\usepackage{amsmath}
-\begin{document}
-\begin{tikzcd}[column sep=1em]
-\pmb{\textsf{K}}\pmb{\textsf{I}}\boldsymbol{\Omega}\ar[dr]&[-4mm]&&\\
-&(\lambda y.\pmb{\textsf{I}})\boldsymbol{\Omega}\ar[dr]&&\pmb{\textsf{I}}\pmb{\textsf{I}}\ar[dl]\\
-&&\pmb{\textsf{I}}&
-\end{tikzcd}
-\end{document}
-```
-

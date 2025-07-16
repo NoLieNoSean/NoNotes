@@ -16,4 +16,5 @@ Config/
 .replit
 replit.nix
 Zotero/
-
+.pandoc/
+.stfolder/

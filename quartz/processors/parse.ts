@@ -79,8 +79,15 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
     const res: ProcessedContent[] = []
     for (const fp of fps) {
       try {
+
+        
+
         const perf = new PerfTimer()
         const file = await read(fp)
+
+        if (argv.verbose) {
+          console.log(`[process] ${fp} -> ${file.data.slug} (${perf.timeSince()})`)
+        }
 
         // strip leading and trailing whitespace
         file.value = file.value.toString().trim()
@@ -99,9 +106,7 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
         const newAst = await processor.run(ast, file)
         res.push([newAst, file])
 
-        if (argv.verbose) {
-          console.log(`[process] ${fp} -> ${file.data.slug} (${perf.timeSince()})`)
-        }
+        
       } catch (err) {
         trace(`\nFailed to process \`${fp}\``, err as Error)
       }
@@ -119,7 +124,7 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
   const log = new QuartzLogger(argv.verbose)
 
   // rough heuristics: 128 gives enough time for v8 to JIT and optimize parsing code paths
-  const CHUNK_SIZE = 128
+  const CHUNK_SIZE = 1000
   const concurrency = ctx.argv.concurrency ?? clamp(fps.length / CHUNK_SIZE, 1, 4)
 
   let res: ProcessedContent[] = []
