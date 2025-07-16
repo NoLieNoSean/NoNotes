@@ -22,7 +22,8 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > [!Note]
 > In [@aluffiAlgebraChapter02009, pp.22] Example 3.5, we could drop the requirement for morphisms in $\textsf{C}_{A}$ to be *commutative* diagrams. In this new category, call it $\textsf{D}_{A}$, morphisms $f_{1}\to f_{2}$ correspond to all morphisms $\sigma:Z_{1}\to Z_{2}$. However, such a category doesn't yield anything new, since $\text{Hom}_{\textsf{D}_{A}}(f, f')$ is the same as long as the domains of $f$ and $f'$ are fixed. In other words, morphisms in $\textsf{D}_{A}$ depend only on the $Z$'s and ignore the maps to $A$. So, $\textsf{D}_{A}$ is essentially $\textsf{C}$ itself, where the objects are the pairs $(Z, f)$, but the $f$'s are forgotten in defining the morphisms.
 
-> [!Example] Formalizing Example 3.9
+> [!Example] 
+> 
 > Let $\textsf{C}$ be a category. Let $A, B\in\text{Obj}(\textsf{C})$. Define a new category $\textsf{C}_{A, B}$ like so:
 > - $\text{Obj}(\textsf{C}_{A, B})$ consists of diagrams 
 > 	
@@ -108,7 +109,10 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > ```
 > commutes. Associativity immediately follows from the fact that composition is associative in $\textsf{C}$.
 
-> [!Example] Formalizing Example 3.10
+^912207
+
+> [!Example] 
+> (Formalizing Example 3.10)
 > Let $\textsf{C}$ be a category. Choose two fixed morphisms $\alpha:A\to C$ and $\beta:B\to C$ in $\textsf{C}$, with the same target $C$. Define a category $\textsf{C}_{\alpha, \beta}$ as follows:
 > - $\text{Obj}(\textsf{C}_{\alpha, \beta})$ contains commutative diagrams
 > 	```tikz
@@ -232,7 +236,6 @@ In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and 
 > In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, hence iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities. Thus, this is not a property one should expect to hold in every category. A function being an epimorphism iff it has a right inverse is another property endemic to $\textsf{Set}$; it is not true in $\textsf{Gp}$!
 
 ---
-
 # Universal Properties
 
 > [!Definition]
@@ -250,7 +253,107 @@ A category need not have initial and final objects, and when they exist, they ma
 > Moreover, these isomorphisms are uniquely determined.
 > 
 > > [!Proof]-
-> > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$$|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, and that $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
+> > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$$|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, whence $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
 > 
 
+The same object can be both initial and final, as singletons are in the category of pointed sets.
+
+> [!Definition]
+> We say that a construction **satisfies a universal property** when it may be viewed as a terminal object of a category.
+
+## Quotients
+
+Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be a category with objects $A\xrightarrow{\varphi} Z$, where $Z$ is any set, satisfying the property
+$$
+a\sim a'\implies \varphi(a)=\varphi(a').
+$$
+Let objects be denoted by $(\varphi, Z)$. Morphisms $(\varphi_{1}, Z_{1})\to(\varphi_{2}\to Z_{2})$ are commutative diagrams
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}[column sep=tiny]
+Z_1\ar[rr, "\sigma"]&&Z_2\\
+&A\ar[lu, "\varphi_1"]\ar[ru, "\varphi_2"']&
+\end{tikzcd}
+\end{document}
+```
+
+Denote by $\pi$ the canonical projection from $A$ to $A/\sim$. Then, $(\pi, A/\sim)$ is an initial object of $\textsf{C}$. Indeed, for any arbitrary $(\varphi, Z)$ in $\textsf{C}$, we can find a unique $\overline{\varphi}$ such that
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}[column sep = tiny]
+A/\sim\ar[rr, "\overline{\varphi}"]&&Z\\
+&A\ar[lu, "\pi"]\ar[ru, "\varphi"']&
+\end{tikzcd}
+\end{document}
+```
+commutes. 
+
+This information can be sloppily summarized like so:
+
+*The quotient $A/\sim$ is universal with respect to the property of mapping $A$ to a set in such a way that equivalent elements have the same image.*
+
+## Products
+
+> [!Definition]
+> The product of objects $A, B$ in a category $\textsf{C}$ is the isomorphism class of final objects in the category $\textsf{C}_{A, B}$, as defined in [[#^912207]]. 
+
+> [!Example] Products of sets
+> Let $\textsf{C}=\textsf{Set}$, and let $A, B\in \text{Obj}(\textsf{C})$. Consider the product $A\times B$ with the two natural projections:
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}[row sep = tiny]
+> &A\\
+> A\times B\ar[ru, "\pi_A"]\ar[rd, "\pi_B"']&\\
+> &B
+> \end{tikzcd}
+> \end{document}
+> ```
+> Then for every $(Z, f, g)\in \text{Obj}(\textsf{C}_{A, B})$, there exists a unique morphism $\sigma:Z\to A\times B$ such that 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}
+> && A\\
+> Z \ar[rru, bend left, "f"]\ar[r, "\sigma"]\ar[rrd,bend right,  "g"] & A\times B \ar[ru, "\pi_A"] \ar[rd, "\pi_B"']&\\
+> &&B
+> \end{tikzcd}
+> \end{document}
+> ```
+> commutes. In other words, $\text{Hom}((Z, f, g), (A\times B, \pi_{A}, \pi_{B}))$ is a singleton, whence $(A\times B, \pi_{A}, \pi_{B})$ is final in $\textsf{C}_{A, B}$.
+
+## Coproducts
+
+> [!Definition]
+> The coproduct of objects $A, B$ in a category $\textsf{C}$ is the isomorphism class of initial objects in the category $\textsf{C}^{A, B}$.
+
+> [!Example] Disjoint union of Sets
+> Let $\textsf{C}=\textsf{Set}$. Let $A, B\in \text{Obj}(\textsf{C})$. Consider the disjoint union $A\amalg B$ with the inclusion maps $i_{A}$ and $i_{B}$:
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}[row sep = tiny]
+> A\ar[rd, "i_A"]&\\
+> &A\amalg B\\
+> B\ar[ru, "i_B"']&
+> \end{tikzcd}
+> \end{document}
+> ```
+> Then for every $(Z, f_{A}, f_{B})$, there exists a unique morphism $\sigma:A\amalg B\to Z$ such that
+> 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}
+> A\ar[rd, "i_A"]\ar[rrd, bend left, "f_A"]&&\\
+> &A\amalg B\ar[r, "\sigma"]&Z\\
+> B\ar[ru, "i_B"']\ar[rru, bend right, "f_B"']&&&
+> \end{tikzcd}
+> \end{document}
+> ```
+> commutes. So, $(A\amalg B, i_{A}, i_{B})$ is initial in $\textsf{C}^{A, B}$.
 

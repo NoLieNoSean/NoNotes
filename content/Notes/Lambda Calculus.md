@@ -99,7 +99,7 @@ Now, we can introduce the $\lambda$ calculus as a formal theory:
 > 
 > The principal axiom of the $\lambda$-calculus is
 > $$
-> (\lambda x.M)N\equiv M[x:=N]
+> (\lambda x.M)N = M[x:=N]
 > $$
 > for all $M, N\in \Lambda$.
 > 
@@ -234,6 +234,34 @@ The following lemma is clear from the principal axiom:
 > [!Definition] Church numerals
 > The **Church numerals** $c_{0}, c_{1}, \dots,$ are defined by $c_{n}\equiv\lambda fx.f^{n}(x)$.
 
+
+> [!Lemma]
+> 1. $(c_{n}f)^{m}x=f^{nm}x$
+> 2. $(c_{n})^{m}f=c_{n^{m}}f$, for $m> 0$.
+> 
+> > [!Proof]-
+> > 
+> > Proof by induction. Note that for $m=0$, $x=x$, and for $m=1$, $(c_{n}f)x=f^{n}x$. Assume that $(1)$ holds for $m=k$, that is, $(c_{n}f)^{k}x=f^{nk}x$. Then, we have
+> > $$
+> > \begin{align}
+> > (c_{n}f)^{k+1}x & =c_{n}f(f^{nk}x) \\
+> >  & =f^{n}(f^{nk}x) \\
+> >  & =f^{n(k+1)}x.
+> > \end{align}
+> > $$
+> > Similarly, note that $(2)$ holds for $m=1$. Assume that it holds for $m=k$. Then, 
+> > $$
+> > \begin{align}
+> > (c_{n})^{k+1}f & =c_{n}(c_{n^{k}}f) \\
+> >  & =\lambda x.(c_{n^{k}}f)^{n}x \\
+> >  & = \lambda x.f^{n^{k+1}}x \\
+> >  & =c_{n^{k+1}}f.
+> > \end{align}
+> > $$
+> > 
+> 
+^ec2774
+
 > [!Theorem] Arithmetic on Church numerals
 > Define
 > $$
@@ -252,33 +280,6 @@ The following lemma is clear from the principal axiom:
 > \pmb{\textsf{A}}_{\exp}c_{a}c_{b} & =c_{a^{b}}, \quad m\ne 0.
 > \end{align}
 > $$
-> 
-> > [!Lemma]
-> > 1. $(c_{n}f)^{m}x=f^{nm}x$
-> > 2. $(c_{n})^{m}f=c_{n^{m}}f$, for $m> 0$.
-> > 
-> > > [!Proof]-
-> > > 
-> > > Proof by induction. Note that for $m=0$, $x=x$, and for $m=1$, $(c_{n}f)x=f^{n}x$. Assume that $(1)$ holds for $m=k$, that is, $(c_{n}f)^{k}x=f^{nk}x$. Then, we have
-> > > $$
-> > > \begin{align}
-> > > (c_{n}f)^{k+1}x & =c_{n}f(f^{nk}x) \\
-> > >  & =f^{n}(f^{nk}x) \\
-> > >  & =f^{n(k+1)}x.
-> > > \end{align}
-> > > $$
-> > > Similarly, note that $(2)$ holds for $m=1$. Assume that it holds for $m=k$. Then, 
-> > > $$
-> > > \begin{align}
-> > > (c_{n})^{k+1}f & =c_{n}(c_{n^{k}}f) \\
-> > >  & =\lambda x.(c_{n^{k}}f)^{n}x \\
-> > >  & = \lambda x.f^{n^{k+1}}x \\
-> > >  & =c_{n^{k+1}}f.
-> > > \end{align}
-> > > $$
-> > > 
-> > 
-> ^ec2774
 > 
 > > [!Proof]-
 > > $$
@@ -315,7 +316,9 @@ The following lemma is clear from the principal axiom:
 
 
 ---
-# Booleans and conditionals
+# Lambda definability and recursive functions
+
+## Booleans and conditionals
 
 > [!Definition]
 > $\textsf{true}\equiv \pmb{\textsf{K}}$, $\textsf{false}\equiv \pmb{\textsf{K}}_{*}$, where $\pmb{\textsf{K}}$ and $\pmb{\textsf{K}}_{*}$ are the combinators defined [[#^9c0469|here]]. 
@@ -335,6 +338,29 @@ $$
 > $$
 > Then, $[M, N]\textsf{true}=M$, and $[M, N]\textsf{false}=N$. $[M, N]$ can serve as an **ordered pair**.
 
+### Multiple fixed point theorem
+
+> [!Theorem] Multiple fixed point theorem
+> Let $F_{1}, \dots, F_{n}$ be $\lambda$-terms. Then, we can find $X_{1}, \dots, X_{n}$ such that
+> $$
+> \begin{array}{lcl}
+> X_{1} & = & F_{1}X_{1}\dots X_{n}, \\
+>  & \vdots &  \\
+> X_{n} & = & F_{n}X_{1}\dots X_{n}.
+> \end{array}
+> $$
+> For $n=1$, this is the ordinary [[#^d18faf|fixed point theorem]].
+> 
+> > [!Proof]-
+> > Consider $n=2$. By the ordinary fixed point theorem, we can find $X$ such that
+> > $$
+> > X=[F_{1}(X\textsf{true})(X\textsf{false}), F_{2}(X\textsf{true})(X\textsf{false})].
+> > $$
+> > Now define $X_{1}=X\textsf{true}$ and $X_{2}=X\textsf{false}$. The result follows. This can be generalized to arbitrary $n$.
+> 
+
+## Barendregt numerals
+
 We can use the pairing construction for an alternative representation of natural numbers.
 
 > [!Definition] Barendregt Numerals
@@ -348,7 +374,7 @@ We can use the pairing construction for an alternative representation of natural
 > 
 
 > [!Lemma] 
-> The exist combinators $\pmb{\textsf{S}}^{+}, \pmb{\textsf{P}}^{-}$, and $\pmb{\textsf{Z}}$ such that
+> The exist combinators $\pmb{\textsf{S}}^{+}, \pmb{\textsf{P}}^{-}$, and $\pmb{\textsf{Zero}}$ such that
 > $$
 > \begin{align}
 > \pmb{\textsf{S}}^{+}\lceil n \rceil  & =\lceil n+1 \rceil , \\
@@ -371,6 +397,9 @@ We can use the pairing construction for an alternative representation of natural
 > > 
 > 
 
+^bd0c3a
+## Equivalence of lambda definable and recursive functions
+
 > [!Definition] Lambda definability
 > A **numeric function** is a map $\varphi:\mathbb{N}^{p}\to \mathbb{N}$ for some $p$. In this case, $\varphi$ is called $p$-ary.
 > A numeric $p$-ary function $\varphi$ is called **$\lambda$-definable** if for some combinator $F$, 
@@ -384,7 +413,7 @@ We can use the pairing construction for an alternative representation of natural
 > $$
 > \begin{align}
 > U^{n}_{i}(x_{1}, x_{2}, \cdots, x_{n}) & =x_{i}, \quad(1\leq i\leq n) \\
-> S^{+} & =n+1 \\
+> S^{+}(n) & =n+1 \\
 > Z(n) & =0.
 > \end{align}
 > $$
@@ -432,12 +461,14 @@ Our claim is that all recursive functions are $\lambda$-definable.
 > > \pmb{\textsf{Z}} & \equiv\lambda x.\ulcorner 0 \urcorner .
 > > \end{align}
 > > $$
+> > Note that $\pmb{\textsf{S}}^{+}$ is the same successor defined as part of the barendregt numerals [[#^bd0c3a|interface]].
 > > 
 > 
 
 > [!Lemma]
 > The $\lambda$-definable functions are closed under composition.
 
+^97646e
 As to primitive recursion, consider an example: the addition function can be specified as follows:
 $$
 \begin{align}
@@ -483,7 +514,6 @@ The general case follows.
 > > $$
 > 
 
-
 > [!Lemma]
 > The $\lambda$-definable functions are closed under minimalization.
 > 
@@ -499,4 +529,49 @@ The general case follows.
 > > \end{align}
 > > $$
 > > Set $F\equiv \lambda \vec{x}.G\vec{x}\ulcorner 0 \urcorner$.
+
+Hence, we have the following theorem.
+
+> [!Theorem]
+> All recursive functions are $\lambda$-definable.
+
+^13a977
+
+> [!Note]- What if we replaced Barendregt with Church numerals?
+> If we define analogs $\pmb{\textsf{S}}^{+}_{c}$, $\pmb{\textsf{P}}^{-}_{c}$, $\pmb{\textsf{Zero}}_{c}$ of $\pmb{\textsf{S}}^{+}$, $\pmb{\textsf{P}}^{-}$, $\pmb{\textsf{Zero}}$ for Church numerals, like so,
+> $$
+> \begin{align}
+> \pmb{\textsf{S}}^{+}_{c} & \equiv \lambda nfx.f(nfx), \\
+> \pmb{\textsf{P}}^{-}_{c} & \equiv \lambda nfx.\pmb{\textsf{K}}_{*}(nfx), \\
+> \pmb{\textsf{Zero}}_{c} & \equiv\lambda n.n(\pmb{\textsf{K}}~\textsf{false})\textsf{true},
+> \end{align}
+> $$
+> then this section can be developed using Church numerals, and [[#^13a977]] will still hold. An alternative Proof uses translators between numerals $\ulcorner n \urcorner$ and $c_{n}$: define $T, T^{-1}$ as follows:
+> $$
+> \begin{align}
+> T & \equiv\lambda x.x\pmb{\textsf{S}}^{+}\ulcorner 0 \urcorner , \\
+> T^{-1} &  \equiv\lambda x. (\pmb{\textsf{Zero}}~x)~c_{0}~\pmb{\textsf{S}}^{+}_{c}(T^{-1}(\pmb{\textsf{P}}^{-}x)).
+> \end{align}
+> $$
+> Then, $Tc_{n}=\ulcorner n \urcorner$, and $T^{-1}\ulcorner n \urcorner=c_{n}$. Let $\varphi$ be a recursive function (of arity $k$), $\lambda$-defined by $F$ with respect to the numerals $\ulcorner n \urcorner$. Then,
+> $$
+> F_{c}\equiv\lambda \vec{x}.T^{-1}(F(Tx_{1})(Tx_{2})\dots(Tx_{k}))
+> $$
+> represents $\varphi$ with respect to the church numerals.
+
+---
+
+# Reduction
+
+```tikz
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzcd}[column sep=1em]
+\pmb{\textsf{K}}\pmb{\textsf{I}}\boldsymbol{\Omega}\ar[dr]&[-4mm]&&\\
+&(\lambda y.\pmb{\textsf{I}})\boldsymbol{\Omega}\ar[dr]&&\pmb{\textsf{I}}\pmb{\textsf{I}}\ar[dl]\\
+&&\pmb{\textsf{I}}&
+\end{tikzcd}
+\end{document}
+```
 
