@@ -232,7 +232,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       plugins.push(() => {
         return async (tree: Root, _file) => {
-          console.log("Rendering tikz diagrams")
           const tikzNodes: Code[] = []
           visit(tree, "code", (node: Code) => {
             if (node.lang === "tikz") {
@@ -244,10 +243,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           for (const node of tikzNodes) {
             try {
               let svg = await tex2svg.default(node.value, {
-                showConsole: true,
+                // showConsole: true,
                 embedFontCss: true,
-                addToPreamble: '% comment',
-                fontCssUrl: 'https://thewarpingtesseract.neocities.org/external/fonts.css',
+                // addToPreamble: '% comment',
+                fontCssUrl: 'https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css',
               });
               svg = svg.replace('<svg', '<svg data-tikz-svg="true"')
               node.value = svg;
@@ -259,7 +258,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               console.error(`Failed to process TikZ block: ${error}`);
             }
           }
-          console.log("Done rendering tikz diagrams")
         }
         
       })

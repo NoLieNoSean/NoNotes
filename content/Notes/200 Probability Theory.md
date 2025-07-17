@@ -1,12 +1,10 @@
 > [!Info]-
 > References:
-> - Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone)
+> - @hoelIntroductionProbabilityTheory1996
 > - [Lecture recordings](https://www.youtube.com/playlist?list=PL7kSnJf1y6KRyT6HjSOGklUPuKBOZVSct)
 > 
 
 # Lecture notes
-
-These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence or breadth of topics covered in class.
 
 - [[PROB_L1]] ✅
 	- Probability spaces, some properties of the probability measure

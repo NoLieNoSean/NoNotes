@@ -9,8 +9,8 @@ tags:
 
 > [!Info]-
 > References:
-> - Combinatorics: Topics, Techniques, Algorithms, Peter Cameron (Main)
-> - Combinatorial Math, Douglass West
+> - @cameronCombinatoricsTopicsTechniques2001
+> - @westCombinatorialMathematics2021
 > - Enumerative combinatorics vol1, by Richard Stanley
 > 
 > Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating functions, IEP, Mobius inversions, permutation groups, Polya's enumeration theorem, and should time permit, infinitorial combinatorics, graph theory, finite fields.
@@ -45,20 +45,20 @@ tags:
 	- Polya's Enumeration Theorem
 
 ## Prof. Sinhababu's Lectures
-
-> [!Info]-
+ 
+> [!Info]
 > References:
-> - [Misha Lavrov's Math 3322 notes](https://facultyweb.kennesaw.edu/mlavrov/courses/3322-fall-2024.php)
-> - [Mark Muldoon's MATH20902 notes](https://personalpages.manchester.ac.uk/staff/mark.muldoon/Teaching/DiscreteMaths/LectureNotes/AllNotes.pdf)
-> - [https://arxiv.org/pdf/2308.04512](https://arxiv.org/pdf/2308.04512)
-> - Introduction to Graph Theory (Douglass B. West)
-> - A First Course in Graph Theory (Gary Chartrand, Ping Zhang)
-> - Discrete Mathematics Elementary and Beyond (L. Lovász, J. Pelikán, K. Vesztergombi)
-> - Graphs, Networks and Algorithms (Dieter Jungnickel)
-> - An invitation to discrete mathematics (Matousek J., Nesetril J.)
+> - @lavrovMath3322Graph, Misha Lavrov's Math 3322 Notes
+> - @muldoonMATH20902DiscreteMathematics2020
+> - @grinbergIntroductionGraphTheory2024
+> - @westIntroductionGraphTheory2001
+> - @zhaoGraphTheoryAdditive2023
+> - @lovaszDiscreteMathematicsElementary2003
+> - @jungnickelGraphsNetworksAlgorithms2013
+> - @matousekInvitationDiscreteMathematics2009
 > 
 > Stuff to cover: Graph theory, discrete probability, number theory, finite fields, applications to error correcting codes
-
+ 
 - [[DMAT_L16]] ✅
 	- Induction trap, induction on number of vertices, bipartite graphs
 - [[DMAT_L17]] ✅
@@ -101,7 +101,3 @@ tags:
 
 [[DMAT_Q1]]
 
-
----
-
-tut - maximum number of edges possible in a graph which does not have a triangle in it??

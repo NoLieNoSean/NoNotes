@@ -12,8 +12,6 @@ tags:
 > - endsem: 50%
 # Lecture Notes
 
-These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence or breadth of topics covered in class.
-
 - [[ALG2_L1]] ✅
 	- Groups, examples of groups, subgroups
 - [[ALG2_L2]] ✅
@@ -66,18 +64,3 @@ These notes have been reorganized because I lost count of the lectures at some p
 
 [[ALG2_T4]]
 
-
----
-
-to do
-- ~~Review midsem~~
-- Review all tuts
-- Review all notes
-- Solve Sunaina's PS
-- ~~Ask Titan for probs (proof using Cayley)~~
-- Dummit: CHapter 4 and 5
-- Artin: relevant stuff from chapter 5, 6
-- past endsems
-
-???
-- midsem $q$ 10

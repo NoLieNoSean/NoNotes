@@ -8,18 +8,12 @@ tags:
 > **Prof:** Upendra Kulkarni
 > **TAs:** Aditya Sett, Ananya Ranade, Harini Rammohan, Sayandeep Shee
 > 
-> Reference Material:
-> - Principles of Mathematical Analysis, Rudin (Primary)
-> - Understanding Analysis, Abbot
-> - Analysis 1, Tao
-> - Introduction to Real Analysis, Bartle & Sherbert
-> - Analysis 1, Amann & Escher
-
->[!Info]- Notation
->- $B_{\delta}(p, E)$ is an open ball of radius $\delta$ centered at $p$ in a metric space $E$. If $X$ is a superset of $E$, $B_{\delta}(p, E)\equiv B_{\delta}(p, X)\cap E$. 
->- $\sqcup$ denotes disjoint union.
->- $\overline{P}$ denotes the closure of $P$ in the contextually appropriate space.
-
+> References
+> - @rudinPrinciplesMathematicalAnalysis1976
+> - @abbottUnderstandingAnalysis2015
+> - @taoAnalysis2016
+> - @bartleIntroductionRealAnalysis2010
+> - @amannAnalysis2005
 # Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
@@ -43,7 +37,6 @@ tags:
 
 # Lecture Notes
 
-Proper lecture notes start here.
 - [[ANA1_L10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 
 - [[ANA1_L11]] ✅

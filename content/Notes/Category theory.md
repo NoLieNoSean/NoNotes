@@ -1,5 +1,4 @@
-[[Aluffi - 2009 - Algebra chapter 0.pdf#page=41|Refer]] [@aluffiAlgebraChapter02009, pp. 18].
-
+Refer @aluffiAlgebraChapter02009 [pp. 18]
 # Preliminaries 
  
 > [!Definition] Category
@@ -20,7 +19,7 @@ Also, note that if two morphisms are the same, then necessarily they have the sa
 Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 
 > [!Note]
-> In [@aluffiAlgebraChapter02009, pp.22] Example 3.5, we could drop the requirement for morphisms in $\textsf{C}_{A}$ to be *commutative* diagrams. In this new category, call it $\textsf{D}_{A}$, morphisms $f_{1}\to f_{2}$ correspond to all morphisms $\sigma:Z_{1}\to Z_{2}$. However, such a category doesn't yield anything new, since $\text{Hom}_{\textsf{D}_{A}}(f, f')$ is the same as long as the domains of $f$ and $f'$ are fixed. In other words, morphisms in $\textsf{D}_{A}$ depend only on the $Z$'s and ignore the maps to $A$. So, $\textsf{D}_{A}$ is essentially $\textsf{C}$ itself, where the objects are the pairs $(Z, f)$, but the $f$'s are forgotten in defining the morphisms.
+> In @aluffiAlgebraChapter02009 [pp.22] Example 3.5, we could drop the requirement for morphisms in $\textsf{C}_{A}$ to be *commutative* diagrams. In this new category, call it $\textsf{D}_{A}$, morphisms $f_{1}\to f_{2}$ correspond to all morphisms $\sigma:Z_{1}\to Z_{2}$. However, such a category doesn't yield anything new, since $\text{Hom}_{\textsf{D}_{A}}(f, f')$ is the same as long as the domains of $f$ and $f'$ are fixed. In other words, morphisms in $\textsf{D}_{A}$ depend only on the $Z$'s and ignore the maps to $A$. So, $\textsf{D}_{A}$ is essentially $\textsf{C}$ itself, where the objects are the pairs $(Z, f)$, but the $f$'s are forgotten in defining the morphisms.
 
 > [!Example] 
 > 
@@ -356,4 +355,6 @@ This information can be sloppily summarized like so:
 > \end{document}
 > ```
 > commutes. So, $(A\amalg B, i_{A}, i_{B})$ is initial in $\textsf{C}^{A, B}$.
+
+
 

@@ -4,17 +4,17 @@ import { visit } from "unist-util-visit"
 import { QuartzTransformerPlugin } from "../types"
 
 export interface Options {
-  bibliographyFile: string
+  bibliographyFile: string[]
   suppressBibliography: boolean
   linkCitations: boolean
   csl: string
 }
 
 const defaultOptions: Options = {
-  bibliographyFile: "./bibliography.bib",
+  bibliographyFile: ["./bib/Math.bib", "./bib/Physics.bib", "./bib/CS.bib"],
   suppressBibliography: false,
   linkCitations: false,
-  csl: "apa",
+  csl: "vancouver",
 }
 
 export const Citations: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
@@ -31,6 +31,9 @@ export const Citations: QuartzTransformerPlugin<Partial<Options>> = (userOpts) =
           bibliography: opts.bibliographyFile,
           suppressBibliography: opts.suppressBibliography,
           linkCitations: opts.linkCitations,
+          // csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl",
+          showTooltips: true,
+          tooltipAttribute: "data-tooltip"
         },
       ])
 
@@ -41,6 +44,20 @@ export const Citations: QuartzTransformerPlugin<Partial<Options>> = (userOpts) =
           visit(tree, "element", (node, _index, _parent) => {
             if (node.tagName === "a" && node.properties?.href?.startsWith("#bib")) {
               node.properties["data-no-popover"] = true
+            }
+            if (node.tagName === "div" && node.properties.id === "refs") {
+              console.log(node.properties)
+              node.children.splice(0, 0, {
+                type: "element",
+                tagName: "hr",
+                children: []
+              },{
+                type: "element",
+                tagName: "h1",
+                children: [{
+                  type: "text", value: "References"
+                }]
+              })
             }
           })
         }

@@ -4,17 +4,15 @@ tags:
   - MOC
 ---
 > [!Info]-
-> **Prof:** Aditya Karnataki
-> **TAs:** Subhranil Deb, Sunaina Pati, Abhishek Goel.
+> Prof: Aditya Karnataki
 > 
-> Reference material:
-> - Algebra, Artin
-> - Linear Algebra, Hoffman & Kunze
-> - Linear Algebra Done Right, Axler
-> - Linear Algebra Done Wrong, Treil
-> - Linear Algebra, Curtis
-# Compiled Notes
-
+> References
+> - @artinAlgebra2011
+> - @hoffmanLinearAlgebra2014
+> - @axlerLinearAlgebraDone2015
+> - @treilLinearAlgebraDone2014
+> - @curtisLinearAlgebraIntroductory1999
+ 
 - [[Vector spaces]]
 - [[Matrices]]
 - [[Linear Combinations]]
@@ -26,9 +24,9 @@ tags:
 - [[Subspaces]]
 - [[Solving linear systems, Pivots]]
 - [[How to find matrices with a given kernel]]
+
 # Lecture Notes
 
-Proper lecture notes start here.
 - [[ALG1_L8]] ✅ 
 	- Every fdvsp has a basis.
 	- Any two bases of an fdvsp have same cardinality, i.e, the cardinality of a basis is an *invariant* of an fdvsp.
@@ -63,7 +61,7 @@ Proper lecture notes start here.
 - [[ALG1_L23]] 
 
 >[!Excalidraw]-
->These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
+>These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted.
 >- [[ALG1_L1]] Intro, Vector spaces, Fields.
 >- [[ALG1_L2]] Matrices, Variables vs equations table
 >- [[ALG1_L3]] Row operations, REF, RREF, pivots, free variables, conditions for $A\mathbf{x}=\mathbf{b}$ being inconsistent and consistent

@@ -6,8 +6,6 @@
 > - class assignment, 10
 # Lecture notes
 
-These notes have been reorganized because I lost count of the lectures at some point, and do not reflect the exact sequence of topics covered in class.
-
 - [[CAL1_L1]] ✅
 	- The p-norm
 - [[CAL1_L2]] ✅
@@ -21,7 +19,7 @@ These notes have been reorganized because I lost count of the lectures at some p
 
 ## Metric space topology
 
-Ref: Royden & Fitzpatrick
+See @roydenRealAnalysis2014
 
 - [[CAL1_L6]] ✅
 	- Cantor intersection theorem, constructing the completion of a metric space
@@ -36,7 +34,7 @@ Ref: Royden & Fitzpatrick
 
 ## Multivariable functions
 
-Ref: Ghorpade & Limaye
+See @ghorpadeCourseCalculusReal2018 (seriously, don't)
 
 - [[CAL1_L11]] ✅
 	- Order properties of $\mathbb{R}^{n}$, Intervals, disks, and bounded sets
@@ -49,7 +47,7 @@ Ref: Ghorpade & Limaye
 
 ## Multivariable calculus
 
-Ref: Apostol (Mathematical Analysis) ch12 & ch13, Rudin ch9
+See @apostolMathematicalAnalysis1985 ch12 & ch13, @rudinPrinciplesMathematicalAnalysis1976 ch9
 
 - [[CAL1_L15]] ✅
 	- Partial and directional derivatives
