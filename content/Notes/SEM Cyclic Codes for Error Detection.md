@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sem
+  - Seminar
 date: 2025-04-05
 time: 6:30
 ---

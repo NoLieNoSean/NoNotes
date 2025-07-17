@@ -16,7 +16,7 @@ $$
 
 **Subgroups of order 12**
 
-We know that the alternating group $A_{4}$ is the kernel of the sign homomorphism $\sigma:S_{n}\to \mathbb{Z}_{2}$, and [[ALG2_L2#Homomorphisms|hence]] is a subgroup of $S_{n}$. The members of $A_{4}$ are the members of $S_{4}$ with a positive sign:
+We know that the alternating group $A_{4}$ is the kernel of the sign homomorphism $\sigma:S_{n}\to \mathbb{Z}_{2}$, and [[LEC ALG2 2#Homomorphisms|hence]] is a subgroup of $S_{n}$. The members of $A_{4}$ are the members of $S_{4}$ with a positive sign:
 $$
 
 \begin{align}

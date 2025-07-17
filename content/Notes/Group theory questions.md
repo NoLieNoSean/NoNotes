@@ -26,7 +26,7 @@ $$
 $$
 Thus, $\ker\varphi\leq H$. 
 
-Now, for $n\geq 5$, $A_{n}$ is [[ALG2_L12#Simplicity of An|simple]]. If $K$ is a normal subgroup of $S_{n}$ for $n\geq 5$, $K\cap A_{n}$ must be a normal subgroup of $A_{n}$, from the previous question. Thus, $K\cap A_{n}=\{ e \}$. If all non-identity elements of $K$ are odd, $K$ must have order $2$, since the product of two odd permutations is even. If $K$ does have order $2$, it cannot be normal, since for $n\geq 3$ the center of $S_{n}$ is trivial. Thus, the only possibility left is $K=\{ e \}$. Thus, the action is injective.
+Now, for $n\geq 5$, $A_{n}$ is [[LEC ALG2 12#Simplicity of An|simple]]. If $K$ is a normal subgroup of $S_{n}$ for $n\geq 5$, $K\cap A_{n}$ must be a normal subgroup of $A_{n}$, from the previous question. Thus, $K\cap A_{n}=\{ e \}$. If all non-identity elements of $K$ are odd, $K$ must have order $2$, since the product of two odd permutations is even. If $K$ does have order $2$, it cannot be normal, since for $n\geq 3$ the center of $S_{n}$ is trivial. Thus, the only possibility left is $K=\{ e \}$. Thus, the action is injective.
 
 Now, restrict the group action $\varphi$ to $H$ (note that if $*$ is an action of $G$, then $*$ restricted to any subgroup of $G$ is also an action!). Note that $\varphi|_{H}$ remains injective. 
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - CAL1
+---
 Given two n-tuples $(x_{1}, x_{2}, \dots, x_{n})$ and $(y_{1}, y_{2}, \dots, y_{n})$, and $p, q\geq 1$ such that $\frac{1}{p}+\frac{1}{q}=1$, we have Holder's inequality:
 $$
 \sum_{j=1}^{n} |x_{j}y_{j}|\leq\left( \sum_{j=1}^{n} |x_{j}|^{p} \right)^{1/p}\left( \sum_{j=1}^{n} |y_{j}|^{q} \right)^{1/q}
@@ -48,7 +52,7 @@ $$
 
 ---
 
-Note how Holder's generalizes the [[ALG1_L21#The Cauchy-Schwarz Inequality|Cauchy Schwarz inequality]]: for $p=q=\frac{1}{2}$, we have
+Note how Holder's generalizes the [[LEC ALG1 21#The Cauchy-Schwarz Inequality|Cauchy Schwarz inequality]]: for $p=q=\frac{1}{2}$, we have
 $$
 \begin{align}
 \left| \sum_{j=1}^{n} x_{j}y_{j} \right| & \leq\sum_{j=1}^{n} |x_{j}y_{j}|\leq\left( \sum_{j=1}^{n} |x_{j}|^{2} \right)^{1/2}\left( \sum_{j=1}^{n} |y_{j}|^{2} \right)^{1/2} \\

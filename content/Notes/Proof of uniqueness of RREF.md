@@ -1,3 +1,7 @@
+---
+tags:
+  - ALG1
+---
 Consider a $m\times n$ matrix $A$. Say, through some finite sequence of row operations, we obtain two RREFs of $A$.
 $$
 \begin{align}

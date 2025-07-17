@@ -8,7 +8,6 @@ Pull requests are welcome!
 
 !!@!@!@!!!@!@!@@!@!@!@@
 
-**Start here:**
-[[000 Courses|Courses]]
+[MOC list](/NoNotes/tags/MOC) 
 
 <a href="/meta/NoAI"><img src="Pasted image 20250619174756.png" class="theme-responsive" style="max-width: 4em; max-height: 4em"></a>

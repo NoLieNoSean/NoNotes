@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "All pages": "NoNotes/Notes",
-      "Home": "NoNotes/",
+      "All pages": "/NoNotes/Notes",
+      "Home": "/NoNotes/",
       "GitHub": "https://github.com/NoLieNoSean/NoNotes",
     },
   }),
@@ -28,7 +28,16 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Graph()),
+    Component.DesktopOnly(Component.Graph({
+      localGraph: {
+        showTags: false,
+        enableRadial: true,
+      },
+      globalGraph: {
+        showTags: false,
+        enableRadial: true,
+      }
+    })),
     // Component.DesktopOnly(Component.Explorer()),
     
   ],
