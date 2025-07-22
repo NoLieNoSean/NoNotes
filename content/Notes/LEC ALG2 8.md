@@ -92,21 +92,21 @@ $G$ can also act on $G/H$ for some $H<G$: $\phi_{g}(aH)=(ga)H$.
 ## Centralizer and normalizer
 
 > [!Definition]
-> The *centralizer* of $A\subseteq G$ is the set of elements of $G$ which commute with every element of $A$. Denoted by $Z(A)$ or $C_{G}(A)$.
+> The **centralizer** of $A\subseteq G$ is the set of elements of $G$ which commute with every element of $A$. Denoted by $Z(A)$ or $C_{G}(A)$.
 
 It can easily be shown that $C_{G}(A)< G$ for all $A\subseteq G$. 
 
 > [!Definition]
-> The *center* of a group $G$ is defined to be $C_{G}(G)$, the set of all elements in $G$ which commute with every element of $G$. Also denoted by $Z(G)$.
+> The **center** of a group $G$ is defined to be $C_{G}(G)$, the set of all elements in $G$ which commute with every element of $G$. Also denoted by $Z(G)$.
 
 It follows that $Z(G)< G$.
 
 > [!Definition]
-> The *normalizer* of $A$ in $G$ is the set of all $g\in G$ that satisfy $gA=Ag$: $N_{G}(A)=\{ g\in G \ | \ gAg^{-1}=A\}$.
+> The **normalizer** of $A$ in $G$ is the set of all $g\in G$ that satisfy $gA=Ag$: $N_{G}(A)=\{ g\in G \ | \ gAg^{-1}=A\}$.
 
 It can be shown that $N_{G}(A)< G$ for all $A\subseteq G$.
-More details [[Normalizers and Conjugacy|here]].
-Examples of how to find these [[Abstract Algebra Third Edition (David S. Dummit, Richard M. Foote).pdf#page=63|here]].
+
+More details [[Normalizers and Conjugacy|here]]. Refer @dummitAbstractAlgebra2004 [p. 50] for examples.
 
 Note the crucial difference between the centralizer and the normalizer:
 $$
@@ -117,7 +117,7 @@ $$
 $$
 It follows that $C_{G}(A)\subseteq N_{G}(A)$, and since $C_{G}(A)$ is a group, we have $C_{G}(A)\leq N_{G}(A)$.
 
-To summarize:
+In summary, we have:
 
 > [!Important]
 > $Z(G)\leq C_{G}(A)\leq N_{G}(A)\leq G$ for all $A\subseteq G$. 

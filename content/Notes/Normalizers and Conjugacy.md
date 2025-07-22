@@ -11,14 +11,14 @@ Example of a normalizer which is neither $H$ or $G$:
 ![[Pasted image 20250130233941.png]]
 In $D_{6}$, the normalizer of $\langle f \rangle$ is $\{ e, f, r^{3}f, r^{3} \}$.  
 
-> [!Theorem]
+> [!Lemma]
 > For any $H<G$, $N_{G}(H)<G$. Furthermore, $H\triangleleft N_{G}(H)$. 
 
 ![[Pasted image 20250130234706.png]]
 
 ## Conjugacy
 
-For $a\in G$, if $a=bab^{-1}$ for some $b\in G$, $a$ and $b$ are said to be conjugates. Conjugacy is a equivalence relationship. Thus, we can partition a group into sets of conjugates, called conjugacy classes.
+For $a\in G$, if $a=gbg^{-1}$ for some $g\in G$, $a$ and $b$ are said to be conjugates. Conjugacy is a equivalence relationship. Thus, we can partition a group into sets of conjugates, called conjugacy classes.
 
 Conjugacy classes of $A_{4}$:
 
@@ -31,6 +31,6 @@ Conjugacy classes of $A_{4}$:
 
 Now, let $H$ be a normal subgroup, i.e, $gHg^{-1}=H$ for all $g\in G$. This means, for every $h\in H$, every element in $G$ that is conjugate to $h$ must be in $H$, its whole conjugacy class is in $H$. Thus, every normal subgroup is made up of whole conjugacy classes. This, in conjunction with the restrictions due to Lagrange's theorem and inclusion of identity dramatically reduces the possibilities for normal subgroups. 
 
-> [!Theorem] Lemma
+> [!Lemma]
 > When a subgroup contains all of its conjugacy classes, it is a normal subgroup.
 

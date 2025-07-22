@@ -5,10 +5,12 @@ tags:
 date: January 2025
 ---
 CMI, Spring 2025, Clare D'Cruz
-@artinAlgebra2011, @dummitAbstractAlgebra2004, @carterVisualGroupTheory2009, @hersteinTopicsAlgebra
+@artinAlgebra2011, @dummitAbstractAlgebra2004, @carterVisualGroupTheory2009, @hersteinAbstractAlgebra1996
+
+> [!Definition]
+> A **Group** is a groupoid with a single object.
 
 ---
-
 # Lecture Notes
 
 - [[LEC ALG2 1]] ✅
@@ -30,7 +32,7 @@ CMI, Spring 2025, Clare D'Cruz
 - [[LEC ALG2 9]] ✅
 	- Orbit-stabilizer theorem, the class equation, p-groups, conjugacy in $S_{n}$, more on automorphisms
 - [[LEC ALG2 10]]
-	- Semidirect product
+	- Semidirect products
 - [[LEC ALG2 11]]
 	- Sylow's theorems, proofs from Herstein
 - [[LEC ALG2 12]]
@@ -46,13 +48,11 @@ CMI, Spring 2025, Clare D'Cruz
 
 [[Group theory questions]]
 
-
 # Other notes
 
 [[Normalizers and Conjugacy]]
 [[Finding all subgroups of S4]]
-[[Group of units mod n is cyclic]]
-[[Dummit and Foote Solutions]]
+[[Group of units mod p is cyclic]]
 
 # Assessments
 

@@ -92,6 +92,8 @@ Note that all left/right cosets of a subgroup $H$ of $G$ are of the same cardina
 > $\phi ^{-1}(\Pi_{2}, \Pi_{1}, \Pi_{3})=\{ (1243), (1342), (23), (14) \}$.
 > $\phi ^{-1}(\Pi_{3}, \Pi_{2}, \Pi_{1})=\{ (1234), (1432),(13), (24) \}$.
 
+^6cf5fb
+
 
 ---
 ## Quotient groups

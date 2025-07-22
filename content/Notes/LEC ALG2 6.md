@@ -43,14 +43,24 @@ Note that if only $H<G$, $K<G$, and $H<K$ are true, we can still define $\phi:G/
 > The pair $(1_{G}, 1_{G'})$ is the identity, and the inverse of $(a, a')$ is $(a^{-1}, a'^{-1})$. The associative law in $G\times G'$ follows from the fact that it holds in $G$ and $G'$. 
 
 The group $G\times G'$ is related to $G$ and $G'$ by inclusion and projection maps:
-![[Pasted image 20250211162149.png|300]]
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+G\ar[dr, "i"]&&G\\
+&G\times G'\ar[ur, "p"]\ar[dr, "p'"]&\\
+G'\ar[ur, "i'"]&&G'
+\end{tikzcd}
+\end{document}
+```
 
 Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection map $(g, g')\mapsto g$. Ditto for $i'$ and $p'$. 
 
-> [!Theorem] Proposition
+> [!Lemma]
 > $\mathbb{Z}_{mn}\cong \mathbb{Z}_{m}\times \mathbb{Z}_{n}$ when $(m, n)=1$.
 
-> **Proof** $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
+$(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
 
 ### Recognizing direct products
 
@@ -80,12 +90,12 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > $$
 > 
 > **Proof of 3**
-> 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. The reverse implication is also easy to prove.
+> 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. For the converse, we again have $HKHK=HHKK$, which implies $KH=HK$.
 > 
 > **Proof of 4**
 > The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
 
-> [!Theorem] Proposition
+> [!Lemma]
 > $$
 > |HK|= \frac{|H||K|}{|H\cap K|}.
 > $$
@@ -93,7 +103,7 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 > **Proof**
 > Notice that $HK$ is a union of a subset of the left cosets of $K$:
 > $$
-> HK=\bigcup_{h\in h}^{} hK.
+> HK=\bigcup_{h\in H}^{} hK.
 > $$
 > Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in K$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
 > $$

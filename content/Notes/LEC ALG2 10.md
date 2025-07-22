@@ -1,4 +1,5 @@
-## Semidirect product
+Refer @conradSemidirectProducts.
+# Semidirect product
 
 For two groups $H$ and $K$, the most basic construction of a group that contains copies of $H$ and $K$ as subgroups is the [[LEC ALG2 6#Direct products|direct product]] $H\times K$. We can embed $H$ and $K$ into $H\times K$ "on the axes" by $h\mapsto(h, 1)$ and $k\mapsto (1, k)$ for $h\in H$ and $k\in K$. 
 
@@ -6,7 +7,8 @@ We can also use the direct product to decompose groups not initially constructed
 - they generate $H\times K$: $(h, k)=(h, 1)(1, k)$,
 - they intersect trivially: $(h, 1)=(1, k)\implies h=1, k=1$,
 - they commute element-wise: $(h, 1)(1, k)=(1, k)(h, 1)$.
-These properties can be turned around to craft a recognition theorem for a group $G$ to look like a direct product of two subgroups $H$ and $K$, as we did previously: 
+
+These properties can be used to craft a recognition theorem for a group $G$ to look like a direct product of two subgroups $H$ and $K$:
 
 > [!Theorem]
 > Let $G$ be a group with subgroups $H$ and $K$ where
@@ -23,11 +25,13 @@ There's another way to construct a group using two groups $H$ and $K$, called th
 2. there may be multiple nonisomorphic semidirect products using the same two groups.
 
 > [!Definition]
-> Given any two groups $H$ and $K$ and a group homomorphism $\phi:K\to\text{Aut}(H)$, we can construct a new group $H\rtimes_{\phi}K$, called the *semidirect product* of $H$ and $K$ with respect to $\phi$, defined as follows:
+> Given any two groups $H$ and $K$ and a group homomorphism $\phi:K\to\text{Aut}(H)$, we can construct a new group $H\rtimes_{\phi}K$, called the **semidirect product** of $H$ and $K$ with respect to $\phi$, defined as follows:
 > 1. As a set, $H\rtimes_{\phi}K$ is the same as $H\times K$. 
 > 2. $(h_{1}, k_{1})\circ(h_{2}, k_{2})\equiv(h_{1}\phi_{k_{1}}(h_{2}), k_{1}k_{2})$.
 
-### Recognizing semidirect products
+Some visual aid: [vid 1](https://www.youtube.com/watch?v=H_XFikkqrgg, ), [vid 2](https://www.youtube.com/watch?v=c2DL2Sk4-XY&t=745s)
+
+## Recognizing semidirect products
 
 > [!Theorem]
 > Let $G$ be a group with subgroups $H$ and $K$ such that

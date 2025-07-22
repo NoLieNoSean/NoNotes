@@ -21,6 +21,7 @@ import tex2svg from 'node-tikzjax';
 import { Blockquote } from "mdast-util-to-hast/lib/handlers/blockquote"
 
 
+
 export interface Options {
   comments: boolean
   highlight: boolean
@@ -228,8 +229,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       // some glyphs, like \Omega, just do not render properly. I threw 4 hours and then some sunk cost fallacy bonus 
       // at this and turned up empty. Just do not use \Omega ffs i give up
-
-
       plugins.push(() => {
         return async (tree: Root, _file) => {
           const tikzNodes: Code[] = []
@@ -263,12 +262,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       })
       
       
-
       //proof envs
       plugins.push(() => {
         return async (tree: Root, _file) => {
           visit(tree, "blockquote", (node) => {
-
             try {
               if (node.children[0].children[0].value.slice(0, 8).toLowerCase() === "[!proof]") {
                 let overflowText = node.children[0].children[0].value.slice("[!Proof]-\n".length).trim()
@@ -289,8 +286,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   }
                   node.children.splice(1, 0, overflowp)
                 }
-
-
                 if (node.children[node.children.length - 1].type === "paragraph") {
                   node.children[node.children.length - 1].children.push({
                     type: "html",
@@ -363,7 +358,15 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                       type: "html",
                       value: `<iframe src="${url}" class="pdf"></iframe>`,
                     }
-                  } else {
+                  } 
+
+                  // else if (
+                  //   [".excalidraw"].includes(ext)
+                  // ) {
+
+                  // } 
+
+                  else {
                     const block = anchor
                     return {
                       type: "html",
@@ -372,7 +375,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                         }" class="transclude-inner">Transclude of ${url}${block}</a></blockquote>`,
                     }
                   }
-
                   // otherwise, fall through to regular link
                 }
 

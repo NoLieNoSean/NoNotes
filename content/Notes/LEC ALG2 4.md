@@ -53,35 +53,25 @@ Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in 
 > If a group $G$ has just one subgroup $H$ of order $r$, then that subgroup is normal.
 
 ---
-# Projection maps
-
-> [!Theorem] Lemma
-> Let $G$ be a group and $N\triangleleft G$. Then the map $\phi:G\to G/N$ given by $g\mapsto gN$ is a surjective homomorphism.
-
-$\phi$ is known as the *projection map*. 
-
-> **Proof**
-> $\phi$ is clearly well-defined (each $g\in G$ maps to only coset in $G/N$). $\phi$ is a homomorphism: $\phi(g_{1}g_{2})=g_{1}g_{2}N=(g_{1}N)(g_{2}N)=\phi(g_{1})\phi(g_{2})$. It is clearly surjective.
-
-Note that $\ker \phi=N$. 
-## Exact chains
-Note that in the above lemma, we have the following chain of homomorphisms, where $i_{1}, i_{2}$ and $i_{3}$ represent inclusion maps:
-$$
-1_{G}\overset{ i_{1} }{ \to } N\overset{ i_{2} }{ \to } G\overset{ \phi }{ \to } G/N\overset{ i_{3} }{ \to } 1_{G/N}
-$$
-
-Note that the image of one map is the kernel of the following map in the chain. 
-
----
 # First isomorphism theorem
 
-> [!Theorem]
+> [!Lemma]
+> Let $G$ be a group and $N\triangleleft G$. Then the map $\phi:G\to G/N$ given by $g\mapsto gN$ is a surjective homomorphism.
+> 
+> > [!Proof]-
+> > $\phi$ is clearly well-defined (each $g\in G$ maps to only coset in $G/N$). $\phi$ is a homomorphism: $\phi(g_{1}g_{2})=g_{1}g_{2}N=(g_{1}N)(g_{2}N)=\phi(g_{1})\phi(g_{2})$. It is clearly surjective.
+> 
+
+^7dbb5e
+$\phi$ is known as a **projection map**. Note that $\ker \phi=N$. 
+
+> [!Theorem] First isomorphism theorem
 > Let $\phi:G\to G'$ be a homomorphism, and let $\psi:G\to G/\ker\phi$ be a projection map. Then, there exists a unique injective homomorphism $\overline{\phi}:G/\ker\phi\to G'$ such that $\phi=\psi\circ \overline{\phi}$. In other words, $G/\ker \phi\cong\mathrm{Im}~G$.
 > 
 >  ![[Pasted image 20250130111100.png]]
-
-> **Proof**
-> Define $\overline{\phi}(g\ker\phi)=\phi(g)$. Note that $\overline{\phi}$ is a unique, well defined, injective homomorphism. 
+> 
+> > [!Proof]-
+> > Define $\overline{\phi}(g\ker\phi)=\phi(g)$. Note that $\overline{\phi}$ is a unique, well defined, injective homomorphism. 
 
 ---
 

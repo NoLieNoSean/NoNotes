@@ -182,7 +182,7 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > gf=1_{A}, \quad fg=1_{B}.
 > $$
 
-> [!Info]- Groupoids
+> [!Info] Groupoids
 > A category in which every morphism is an isomorphism is called a **groupoid**. A category can be constructed form any set endowed with a reflexive and transitive relation (ensuring identities and composition respectively). If the relation also happens to be symmetric, the category constructed is a groupoid (every morphism now has an inverse).
 
 > [!Proposition]
@@ -236,7 +236,32 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and the epimorphisms are precisely the surjective functions.
 
 > [!Important]
-> In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, hence iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities. Thus, this is not a property one should expect to hold in every category. A function being an epimorphism iff it has a right inverse is another property endemic to $\textsf{Set}$; it is not true in $\textsf{Gp}$!
+> In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, hence iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities. Thus, this is not a property one should expect to hold in every category. 
+> 
+> As another example of $\textsf{Set}$ being special, notice that while 
+> $$
+> \begin{align}
+>  & f\text{ is right invertible }\implies f\text{ is an epimorphism}, \text{and} \\
+>  & f\text{ is left invertible }\implies f\text{ is a monomorphism}
+> \end{align}
+> $$
+> can be easily proven universally, the converse is not generally true (It is true, of course, in $\textsf{Set}$). For example [^1], the map $n\mapsto 2n$ defines a left-cancellable group homomorphism $f:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$. However, there is no group homomorphism $g:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ such that $gf=\mathrm{id}_{\mathbb{Z}/2\mathbb{Z}}$. Similarly, the map $n\mapsto n\mod 2$ defines a right-cancellable group homomorphism $f:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$. However, since every homomorphism $g:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$ must map $[1]_{2}$ to $[2]_{4}$, $f$ is not right invertible.
+> 
+> > [!Info]- A group theoretic digression
+> > At this point, the question "When does a surjective homomorphism have a right inverse?" naturally presents itself. If $\varphi:G\to H$ is a surjective homomorphism, I conjectured that the answer is yes when $H$ is isomorphic to a subgroup of $G$ (based on having constructed a right inverse for [[LEC ALG2 3#^6cf5fb|this homomorphism]]). However, a much stronger condition is required: The existence of a right inverse for $\varphi$ is equivalent to the short exact sequence
+> > $$
+> > 1\to \ker\varphi\to G\to H\to 1
+> > $$
+> > splitting. This happens iff $G$ is isomorphic to a [[LEC ALG2 10#Semidirect product|semidirect product]] of $\ker\varphi$ and a subgroup $\mathcal{H}$ of $G$ that is isomorphic to $H$ and complements the kernel. That is, we must have
+> > - $H\cong\mathcal{H}< G$,
+> > - $\mathcal{H}\cap \ker\varphi=\{ 1 \}$, and
+> > - $G\cong\ker\varphi\rtimes\mathcal{H}$. 
+> > 
+> 
+
+
+[^1]: https://math.stackexchange.com/questions/3824875/monomorphism-that-is-not-left-invertible-epimorphism-that-is-not-right-invertib
+
 
 ---
 # Universal Properties
