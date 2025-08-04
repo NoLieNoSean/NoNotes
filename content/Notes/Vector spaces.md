@@ -6,6 +6,9 @@ tags:
 ## Properties
 
 ### Axioms
+
+^627165
+
 A vector space $V$ is a collection of objects called vectors, along with two operations, addition of vectors and multiplication of a vector by a scalar from a [[Fields|field]] $\mathbb{F}$, such that the following 8 properties (aka axioms of vector spaces) hold:
 
 Additive properties:

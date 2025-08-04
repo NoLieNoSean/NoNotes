@@ -248,17 +248,12 @@ In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and 
 > can be easily proven universally, the converse is not generally true (It is true, of course, in $\textsf{Set}$). For example [^1], the map $n\mapsto 2n$ defines a left-cancellable group homomorphism $f:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$. However, there is no group homomorphism $g:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ such that $gf=\mathrm{id}_{\mathbb{Z}/2\mathbb{Z}}$. Similarly, the map $n\mapsto n\mod 2$ defines a right-cancellable group homomorphism $f:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$. However, since every homomorphism $g:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$ must map $[1]_{2}$ to $[2]_{4}$, $f$ is not right invertible.
 > 
 > > [!Info]- A group theoretic digression
-> > At this point, the question "When does a surjective homomorphism have a right inverse?" naturally presents itself. If $\varphi:G\to H$ is a surjective homomorphism, I conjectured that the answer is yes when $H$ is isomorphic to a subgroup of $G$ (based on having constructed a right inverse for [[LEC ALG2 3#^6cf5fb|this homomorphism]]). However, a much stronger condition is required: The existence of a right inverse for $\varphi$ is equivalent to the short exact sequence
+> > At this point, the question "When does a surjective homomorphism have a right inverse?" naturally arises. If $\varphi:G\to H$ is a surjective homomorphism, I conjectured that the answer is yes when $H$ is isomorphic to a subgroup of $G$ (based on having constructed a right inverse for [[LEC ALG2 3#^6cf5fb|this homomorphism]]). However, a much stronger condition is required: The existence of a right inverse for $\varphi$ is equivalent to the short exact sequence
 > > $$
 > > 1\to \ker\varphi\to G\to H\to 1
 > > $$
-> > splitting. This happens iff $G$ is isomorphic to a [[LEC ALG2 10#Semidirect product|semidirect product]] of $\ker\varphi$ and a subgroup $\mathcal{H}$ of $G$ that is isomorphic to $H$ and complements the kernel. That is, we must have
-> > - $H\cong\mathcal{H}< G$,
-> > - $\mathcal{H}\cap \ker\varphi=\{ 1 \}$, and
-> > - $G\cong\ker\varphi\rtimes\mathcal{H}$. 
-> > 
+> > splitting. Cf.  @conradSPLITTINGSHORTEXACT22, Theorem 3.3.
 > 
-
 
 [^1]: https://math.stackexchange.com/questions/3824875/monomorphism-that-is-not-left-invertible-epimorphism-that-is-not-right-invertib
 

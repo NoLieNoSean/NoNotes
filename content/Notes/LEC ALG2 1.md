@@ -14,6 +14,8 @@ time: 09:13
 > - $G$ has an *identity* element, denoted $1_{G}$, such that $1_{G}\star g=g\star 1_{G}\ \ \forall g\in G$. 
 > - Each $g\in G$ has an *inverse* $g^{-1}\in G$ such that $gg^{-1}=g^{-1}g=1_{G}$.
 
+^50bec9
+
 If $\star$ is commutative, the group is called an *abelian group*.
 
 > [!Proposition] Properties of groups

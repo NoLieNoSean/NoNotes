@@ -4,8 +4,8 @@ tags:
   - MOC
 date: August 2024
 ---
-CMI, Fall 2024, Aditya Karnataki
-@artinAlgebra2011, @hoffmanLinearAlgebra2014, @axlerLinearAlgebraDone2015, @treilLinearAlgebraDone2014, @curtisLinearAlgebraIntroductory1999
+CMI, Aug-Nov 2024, Aditya Karnataki
+@treilLinearAlgebraDone2014, @artinAlgebra2011, @hoffmanLinearAlgebra2014, @axlerLinearAlgebraDone2015, @curtisLinearAlgebraIntroductory1999
 
 ---
  

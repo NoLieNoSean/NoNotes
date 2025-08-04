@@ -160,6 +160,8 @@ Under this action, the center of $G$ is the kernel: $Z(G)=\ker \chi$. So, we hav
 > 3. $A\cap B\trianglelefteq A$, and
 > 4. $AB/B\cong A/A\cap B$.
 
+^e98d1f
+
 > **Proof**
 > $(1)$ follows from [[LEC ALG2 6#Direct products|here]]. Since $A\leq N_{G}(B)$ and $B\leq N_{G}(B)$, $AB\leq N_{G}(B)$, so $B\trianglelefteq AB$. This allows us to define the homomorphism
 > $$

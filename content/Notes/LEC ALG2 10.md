@@ -1,4 +1,4 @@
-Refer @conradSemidirectProducts.
+Refer @conradSemidirectProducts25, @conradSPLITTINGSHORTEXACT22
 # Semidirect product
 
 For two groups $H$ and $K$, the most basic construction of a group that contains copies of $H$ and $K$ as subgroups is the [[LEC ALG2 6#Direct products|direct product]] $H\times K$. We can embed $H$ and $K$ into $H\times K$ "on the axes" by $h\mapsto(h, 1)$ and $k\mapsto (1, k)$ for $h\in H$ and $k\in K$. 
@@ -40,4 +40,20 @@ Some visual aid: [vid 1](https://www.youtube.com/watch?v=H_XFikkqrgg, ), [vid 2]
 > 3. $H\triangleleft G$. 
 > 
 > Let $\varphi:K\to \text{Aut}(H)$ be conjugation: $\varphi_{k}(h)=khk^{-1}$. Then, $\varphi$ is a homomorphism and the map $H\rtimes_{\varphi}K\to G$ by $(h, k)\mapsto hk$ is an isomorphism.
+> 
+> > [!Proof]-
+> > $(3)$ is required for $\varphi$ to be valid. That $\varphi$ is a homomorphism is easy to check:
+> > $$
+> > \varphi_{k_{1}}(\varphi_{k_{2}}(h))=k_{1}k_{2}hk_{2}^{-1}k_{1}^{-1}=\varphi_{k_{1}k_{2}}(h)\quad\forall h\in H.
+> > $$
+> > The map $f:H\rtimes_{\varphi}K\to G$ is surjective by $(1)$ and injective by $(2)$, using the same argument as we did [[LEC ALG2 6#Recognizing direct products|here]]. To show that $f$ is a homomorphism, calculate:
+> > $$
+> > \begin{align}
+> > f((h, k)(h', k')) & =f(h\varphi_{k}(h'), kk') \\
+> >  & =h\varphi_{k}(h')kk' \\
+> >  & =hkh'k^{-1}kk' \\
+> >  & =hkh'k' \\
+> >  & =f(h, k)f(h', k').
+> > \end{align}
+> > $$
 

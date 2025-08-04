@@ -8,13 +8,14 @@ time: 14:00
 ---
 ## Recall
 
->[!Theorem] Lemma
+> [!Theorem] Lemma
 > The [[LEC ALG1 18#Characteristic Polynomial|characteristic Polynomial]] of a linear operator is independent of the basis.
-
->**Proof**
-> $$
-> \det(Ix-PAP^{-1})=\det(P(Ix-A)P^{-1})=\det(Ix-A)
-> $$
+> 
+> >[!Proof]-
+> > $$
+> > \det(Ix-PAP^{-1})=\det(P(Ix-A)P^{-1})=\det(Ix-A)
+> > $$
+> 
 
 >[!Theorem] Corollary
 > Similar Matrices have the same eigenvalues.
@@ -30,66 +31,68 @@ time: 14:00
 > [!Theorem] Proposition
 > 
 > Let $V$ be a nontrivial vector space over $\mathbb{C}$. Then any linear operator $T: V \to V$ will have at least one eigenvalue, and hence at least one eigenvector.
-
-> **Proof**
-> The characteristic polynomial of $T$ will be of degree $\geq 1$. By the Fundamental Theorem of Algebra, this will have at least one complex root. Hence proved.
+> 
+> > [!Proof]-
+> > The characteristic polynomial of $T$ will be of degree $\geq 1$. By the Fundamental Theorem of Algebra, this will have at least one complex root.
+> 
 
 > [!Info]
 > The fundamental theorem of algebra states that every non-constant polynomial with complex coefficients has at least one complex root. This implies that any polynomial of degree $n\geq 1$ with complex coefficients has exactly $n$ complex roots counting multiplicity. So, any operator in a complex vector space has exactly $n$ eigenvalues counting multiplicity.
 
 > [!Example]
-> On the other hand, it is easy to construct a linear map in a real vector space with no real eigenvalues. Consider the rotation map, $R_{\theta}:\mathbb{R}^{2}\to \mathbb{R}^{2}$. It's characteristic polynomial $x^{2}-2\cos\theta\, x+1$ does not have real roots for $\theta\ne n\pi$. But $R_{\theta}:\mathbb{C}^{2}\to \mathbb{C}^{2}$ has eigenvalues $e^{i\theta}$ and $e^{-1\theta}$.
+> On the other hand, it is easy to construct a linear map in a real vector space with no real eigenvalues. Consider the rotation map, $R_{\theta}:\mathbb{R}^{2}\to \mathbb{R}^{2}$. It's characteristic polynomial $x^{2}-2\cos\theta\, x+1$ does not have real roots for $\theta\ne n\pi$. But $R_{\theta}:\mathbb{C}^{2}\to \mathbb{C}^{2}$ has eigenvalues $e^{i\theta}$ and $e^{-i\theta}$.
 
 > [!Theorem] Proposition
 > Every complex $n \times n$ matrix is similar to an upper triangular matrix.
-
-> **Proof**
-> We want to show that for every complex $n \times n$ matrix $A$ there exists a complex $n \times n$ invertible matrix $P$ such that $PAP^{-1}$ is upper triangular.
 > 
-> $A$ has at least one eigenvalue, call it $\lambda$ and its corresponding eigenvector $\mathbf{v}$. Extend $\{ \mathbf{v} \}$ to a basis $\mathcal{B}$ of $V$. Observe that
-> $$
-> [A]_{\mathcal{B}\mathcal{B}} =
-> \left[
-> \begin{array}{c|ccc}
-> \lambda  & * & \cdots & * \\
-> \hline 
-> 0 \\
-> \vdots  &  & D\\
-> 0
-> \end{array}
-> \right]
-> $$
-> for some $(n-1)\times(n-1)$ matrix $D$. By induction hypothesis on $D$, there exists an $(n-1) \times (n-1)$ invertible matrix $Q$ such that $QDQ^{-1}$ is upper triangular. Define 
-> $$
-> G \equiv
-> \left[
-> \begin{array}{c|ccc}
-> 1 & 0 & \cdots & 0 \\
-> \hline
-> 0 \\
-> \vdots &  & Q \\
-> 0
-> \end{array}
-> \right]
-> \qquad
-> {G}^{-1} =
-> \left[
-> \begin{array}{c|ccc}
-> 1 & 0 & \cdots & 0 \\
-> \hline
-> 0 \\
-> \vdots &  & Q^{-1} \\
-> 0
-> \end{array}
-> \right]
-> $$
-> Using block multiplication of matrices it is evident that ${G}^{-1}$ has the above form and that $G[A]_{\mathcal{B}\mathcal{B}}{G}^{-1}$ will be upper triangular.
+> > [!Proof]-
+> > We want to show that for every complex $n \times n$ matrix $A$ there exists a complex $n \times n$ invertible matrix $P$ such that $PAP^{-1}$ is upper triangular.
+> > 
+> > $A$ has at least one eigenvalue, call it $\lambda$ and its corresponding eigenvector $\mathbf{v}$. Extend $\{ \mathbf{v} \}$ to a basis $\mathcal{B}$ of $V$. Observe that
+> > $$
+> > [A]_{\mathcal{B}\mathcal{B}} =
+> > \left[
+> > \begin{array}{c|ccc}
+> > \lambda  & * & \cdots & * \\
+> > \hline 
+> > 0 \\
+> > \vdots  &  & D\\
+> > 0
+> > \end{array}
+> > \right]
+> > $$
+> > for some $(n-1)\times(n-1)$ matrix $D$. By induction hypothesis on $D$, there exists an $(n-1) \times (n-1)$ invertible matrix $Q$ such that $QDQ^{-1}$ is upper triangular. Define 
+> > $$
+> > G \equiv
+> > \left[
+> > \begin{array}{c|ccc}
+> > 1 & 0 & \cdots & 0 \\
+> > \hline
+> > 0 \\
+> > \vdots &  & Q \\
+> > 0
+> > \end{array}
+> > \right]
+> > \qquad
+> > {G}^{-1} =
+> > \left[
+> > \begin{array}{c|ccc}
+> > 1 & 0 & \cdots & 0 \\
+> > \hline
+> > 0 \\
+> > \vdots &  & Q^{-1} \\
+> > 0
+> > \end{array}
+> > \right]
+> > $$
+> > Using block multiplication of matrices it is evident that ${G}^{-1}$ has the above form and that $G[A]_{\mathcal{B}\mathcal{B}}{G}^{-1}$ will be upper triangular.
+> > 
+> > If we denote the standard basis by $\mathcal{S}$, we can write $[A]_{\mathcal{B}\mathcal{B}} = [I]_{\mathcal{B}\mathcal{S}}[A]_{\mathcal{S}\mathcal{S}}[I]_{\mathcal{S}\mathcal{B}}$. Observe that
+> > $$
+> >   G[A]_{\mathcal{B}\mathcal{B}}G^{-1}=G[I]_{\mathcal{B}\mathcal{S}}[A]_{\mathcal{S}\mathcal{S}}[I]_{\mathcal{S}\mathcal{B}}G^{-1}=(G[I]_{\mathcal{B}\mathcal{S}})A(G[I]_{\mathcal{B}\mathcal{S}})^{-1},
+> > $$
+> > where we have used the fact that $A=[A]_{\mathcal{S}\mathcal{S}}$ and $[I]_{\mathcal{B}\mathcal{S}}^{-1}=[I]_{\mathcal{S}\mathcal{B}}$. Put $P=G[I]_{\mathcal{B}\mathcal{S}}$. 
 > 
-> If we denote the standard basis by $\mathcal{S}$, we can write $[A]_{\mathcal{B}\mathcal{B}} = [I]_{\mathcal{B}\mathcal{S}}[A]_{\mathcal{S}\mathcal{S}}[I]_{\mathcal{S}\mathcal{B}}$. Observe that
-> $$
->   G[A]_{\mathcal{B}\mathcal{B}}G^{-1}=G[I]_{\mathcal{B}\mathcal{S}}[A]_{\mathcal{S}\mathcal{S}}[I]_{\mathcal{S}\mathcal{B}}G^{-1}=(G[I]_{\mathcal{B}\mathcal{S}})A(G[I]_{\mathcal{B}\mathcal{S}})^{-1},
-> $$
-> where we have used the fact that $A=[A]_{\mathcal{S}\mathcal{S}}$ and $[I]_{\mathcal{B}\mathcal{S}}^{-1}=[I]_{\mathcal{S}\mathcal{B}}$. Put $P=G[I]_{\mathcal{B}\mathcal{S}}$. ❏
 
 >[!Info] Remark
 > If $A$ is an $n \times n$ matrix over a field $\mathbb{F}$ such that its characteristic polynomial is a product of linear factors in $\mathbb{F}$, then there exists an invertible matrix $P$ (with entries in $\mathbb{F}$) such that $PAP^{-1}$ is upper triangular.
@@ -104,37 +107,38 @@ For operators in $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can 
 > [!Theorem] Proposition
 > 
 > A $n\times n$ matrix $A$ (with values in $\mathbb{F}$) is diagonalizable $\iff$ there exists a basis of $\mathbb{F}^n$ that consists of eigenvectors of $A$.
-
-> **Proof of $\implies$**
-> Let $A=SDS^{-1}$ for some diagonal matrix $D=\text{diag}\{ \alpha_{1}, \alpha_{2}, \dots, \alpha_{n} \}$ and invertible matrix $S$. Let $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ be the column vectors of $S$. Note that $S\mathbf{e}_{k}=\mathbf{v}_{k}\implies S^{-1}\mathbf{v}_{k}=\mathbf{e}_{k}$. Notice what happens when we compute $A\mathbf{v}_{k}$:
-> $$
-> \begin{align}
-> A\mathbf{v}_{k}=SDS^{-1}\mathbf{v}_{k}=SD\mathbf{e}_{k}=S(\alpha_{k}\mathbf{e}_{k})=\alpha_{k}\mathbf{v}_{k}.
-> \end{align}
-> $$
-> So, the column vectors of $S$ are eigenvectors of $A$ (with $\alpha_{k}$'s being the eigenvalues, but this is not important for the proof). Since the column vectors of $S$ form a basis of $\mathbb{F}^{n}$, we are done.
 > 
-> **Proof of $\Longleftarrow$**
-> Suppose there exists a basis of $\mathbb{F}^n$ that consists of eigenvectors of $A$, i.e, $\mathcal{B} = \{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$ such that $A\mathbf{v}_{i} = \lambda_{i}\mathbf{v}_{i}$. Then
-> $$
-> [A]_{\mathcal{B}\mathcal{B}}=
-> \begin{bmatrix}
-> \lambda_{1} \\
-> & \lambda_{2} \\
-> &  & \ddots \\
-> &  &  & \lambda_{n} 
-> \end{bmatrix}.
-> $$
-> If we represent the standard basis by $\mathcal{S}$, we have $A=[A]_{\mathcal{S}\mathcal{S}}=[I]_{\mathcal{S}\mathcal{B}}[A]_{\mathcal{B}\mathcal{B}}[I]_{\mathcal{B}\mathcal{S}}$. We have shown above that $[A]_{\mathcal{B}\mathcal{B}}$ is diagonal, and we know that $[I]_{\mathcal{S}\mathcal{B}}=[I]_{\mathcal{B}\mathcal{S}}^{-1}$. ❏
+> > [!Proof]-
+> > Let $A=SDS^{-1}$ for some diagonal matrix $D=\text{diag}\{ \alpha_{1}, \alpha_{2}, \dots, \alpha_{n} \}$ and invertible matrix $S$. Let $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ be the column vectors of $S$. Note that $S\mathbf{e}_{k}=\mathbf{v}_{k}\implies S^{-1}\mathbf{v}_{k}=\mathbf{e}_{k}$. Notice what happens when we compute $A\mathbf{v}_{k}$:
+> > $$
+> > \begin{align}
+> > A\mathbf{v}_{k}=SDS^{-1}\mathbf{v}_{k}=SD\mathbf{e}_{k}=S(\alpha_{k}\mathbf{e}_{k})=\alpha_{k}\mathbf{v}_{k}.
+> > \end{align}
+> > $$
+> > So, the column vectors of $S$ are eigenvectors of $A$. Since the column vectors of $S$ form a basis of $\mathbb{F}^{n}$, we are done.
+> > 
+> > To prove the converse, suppose there exists a basis of $\mathbb{F}^n$ that consists of eigenvectors of $A$, i.e, $\mathcal{B} = \{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$ such that $A\mathbf{v}_{i} = \lambda_{i}\mathbf{v}_{i}$. Then
+> > $$
+> > [A]_{\mathcal{B}\mathcal{B}}=
+> > \begin{bmatrix}
+> > \lambda_{1} \\
+> > & \lambda_{2} \\
+> > &  & \ddots \\
+> > &  &  & \lambda_{n} 
+> > \end{bmatrix}.
+> > $$
+> > If we represent the standard basis by $\mathcal{S}$, we have $A=[A]_{\mathcal{S}\mathcal{S}}=[I]_{\mathcal{S}\mathcal{B}}[A]_{\mathcal{B}\mathcal{B}}[I]_{\mathcal{B}\mathcal{S}}$. We have shown above that $[A]_{\mathcal{B}\mathcal{B}}$ is diagonal, and we know that $[I]_{\mathcal{S}\mathcal{B}}=[I]_{\mathcal{B}\mathcal{S}}^{-1}$.
+> 
 
 Obviously, an abstract operator $T:V\to V$ is diagonalizable iff its matrix in any basis is diagonalizable. Thus, it follows that $T$ is diagonalizable iff there exists a basis of $V$ that consists of eigenvectors of $T$.
 ### A simple sufficient condition for an operator to be diagonalizable
 
 > [!Theorem]
 > If an operator $T: V \to V$ has exactly $n=\dim V$ *distinct* eigenvalues, then $T$ is diagonalizable.
-
-> **Proof**
-> Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ be the distinct eigenvalues. For each eigenvalue $\lambda_{i}$, let $\mathbf{v}_{i}$ be a corresponding eigenvector. [[LEC ALG1 17#Eigenvectors with distinct eigenvalues are linearly independent|Then]], $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ are linearly independent. Hence, they form a basis of $V$. ❏
+> 
+> > [!Proof]-
+> > Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ be the distinct eigenvalues. For each eigenvalue $\lambda_{i}$, let $\mathbf{v}_{i}$ be a corresponding eigenvector. [[LEC ALG1 17#Eigenvectors with distinct eigenvalues are linearly independent|Then]], $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ are linearly independent. Hence, they form a basis of $V$. ❏
+> 
 
 >[!example]
 > $$
@@ -249,7 +253,7 @@ Let $\{ \lambda_{1}, \lambda_{2},\dots,\lambda_{\gamma} \}$ be the distinct eige
 > \end{array}
 > \right]
 > $$
-> The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Now, $h(x)$ may contain a factor of $(x-\lambda)$. Hence the number of times $(x-\lambda)$ appears in $p_{_{T}}(x)$ will be $g + r$ for some $r \in \mathbb{N}$. Hence Proved.
+> The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Now, $h(x)$ may contain a factor of $(x-\lambda)$. Hence the number of times $(x-\lambda)$ appears in $p_{_{T}}(x)$ will be $g + r$ for some $r \in \mathbb{N}$.
 
 ### Criterion of diagonalizability
 

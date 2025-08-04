@@ -63,7 +63,11 @@ Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in 
 > 
 
 ^7dbb5e
-$\phi$ is known as a **projection map**. Note that $\ker \phi=N$. 
+$\phi$ is known as a **projection map**. We have the following chain of homomorphisms, where $i_{1}$ and $i_{2}$ are inclusion maps:
+$$
+1_{G}\overset{ i_{1} }{ \to } N\overset{ i_{2} }{ \to } G\overset{ \phi }{ \to } G/N\overset{}{ \to } 1_{G/N}
+$$
+Note that the image of one map is the kernel of the following map in the chain. Such a sequence if called a **short exact sequence**. Refer @conradSPLITTINGSHORTEXACT . 
 
 > [!Theorem] First isomorphism theorem
 > Let $\phi:G\to G'$ be a homomorphism, and let $\psi:G\to G/\ker\phi$ be a projection map. Then, there exists a unique injective homomorphism $\overline{\phi}:G/\ker\phi\to G'$ such that $\phi=\psi\circ \overline{\phi}$. In other words, $G/\ker \phi\cong\mathrm{Im}~G$.
@@ -72,6 +76,8 @@ $\phi$ is known as a **projection map**. Note that $\ker \phi=N$.
 > 
 > > [!Proof]-
 > > Define $\overline{\phi}(g\ker\phi)=\phi(g)$. Note that $\overline{\phi}$ is a unique, well defined, injective homomorphism. 
+
+^396133
 
 ---
 

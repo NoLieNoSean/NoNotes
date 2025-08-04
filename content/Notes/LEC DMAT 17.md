@@ -8,7 +8,7 @@ time: 11:58
 ---
 ## How to grow trees
 
-[[Discrete Mathematics Elementary and Beyond (Lovasz-Pelican-Vestzergombi).pdf#page=153|ref]]
+Refer @lovaszDiscreteMathematicsElementary2003.
 
 > [!Theorem]
 > Every tree with at least $2$ nodes has at least $2$ nodes of degree $1$.

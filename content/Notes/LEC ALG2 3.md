@@ -106,28 +106,32 @@ Note that all left/right cosets of a subgroup $H$ of $G$ are of the same cardina
 > [!Definition]
 > A subgroup $N<G$ is called a *normal subgroup* if $gNg^{-1}=N$ for all $g\in G$. In other words, the left coset and right coset of $N$ for any given $g$ coincide. Denoted by $N\triangleleft G$.
 
-> [!Theorem] Lemma
+> [!Theorem]
 > $N\triangleleft G$ $\iff$ the group operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ can be defined on $G/N$ where $g_{1}, g_{2}\in G$, $i$.$e$, $G/N$ is a group.
-
-> **Proof of $\implies$**
-> Let $N$ be a normal subgroup of $G$. It must be that $g_{1}g_{2}N$ does not depend on the choice of representatives $g_{1}$ and $g_{2}$ of each left coset, $g_{1}N$ and $g_{2}N$. To prove this, suppose $xN=g_{1}N$ and $yN=g_{2}N$ for some $x, y\in G$. Then, 
-> $$
-> \begin{align}
->  & (xN)(yN)=xyN=x(g_{2}N)=\\ &  x(Ng_{2})=  (xN)g_{2}=(g_{1}N)g_{2}=\\  & g_{1}(Ng_{2})=g_{1}g_{2}N
-> \end{align}
-> $$
 > 
-> **Proof of $\Longleftarrow$**
-> Let it be given that the operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ is well defined on $G/N$, i.e, for all $x, y, a, b\in G$ such that $xN=aN$ and $yN=bN$, we have $(ab)N=(xy)N$. Let $n\in N$ and $g\in G$. We have $gN=(eg)N=(eN)(gN)=(nN)(gN)=ngN$. Thus, $gN=ngN\implies N=g^{-1}ngN$, i.e, $g^{-1}ng\in N$, for all $n\in N$. It follows that $g^{-1}Ng=N$, or $Ng=gN$. 
+> > [!Proof]-
+> > Let $N$ be a normal subgroup of $G$. It must be that $g_{1}g_{2}N$ does not depend on the choice of representatives $g_{1}$ and $g_{2}$ of each left coset, $g_{1}N$ and $g_{2}N$. To prove this, suppose $xN=g_{1}N$ and $yN=g_{2}N$ for some $x, y\in G$. Then, 
+> > $$
+> > \begin{align}
+> >  & (xN)(yN)=xyN=x(g_{2}N)=\\ &  x(Ng_{2})=  (xN)g_{2}=(g_{1}N)g_{2}=\\  & g_{1}(Ng_{2})=g_{1}g_{2}N
+> > \end{align}
+> > $$
+> > 
+>  >Conversely, let it be given that the operation $(g_{1}N)(g_{2}N)=g_{1}g_{2}N$ is well defined on $G/N$, i.e, for all $x, y, a, b\in G$ such that $xN=aN$ and $yN=bN$, we have $(ab)N=(xy)N$. Let $n\in N$ and $g\in G$. We have $gN=(eg)N=(eN)(gN)=(nN)(gN)=ngN$. Thus, $gN=ngN\implies N=g^{-1}ngN$, i.e, $g^{-1}ng\in N$, for all $n\in N$. It follows that $g^{-1}Ng=N$, or $Ng=gN$. 
+> 
+
+^450126
 
 > [!Theorem]
 > A subgroup $N\leq G$ is normal iff it is the kernel of some homomorphism.
-
-> **Proof of $\impliedby$**
-> Let $\phi$ be a homomorphism between two groups $G$ and $H$. Let $n\in \ker \phi$. Then, $\phi(gng^{-1})=\phi(g)\phi(n)\phi(g^{-1})=\phi(g)1_{H}\phi(g^{-1})=\phi(1_{G})=1_{H}$. Thus, $gng^{-1}\in\ker \phi$. Also, $gn_{1}g^{-1}=gn_{2}g^{-1}\implies n_{1}=n_{2}$. Thus, $gNg^{-1}=N$.
 > 
-> Proof of $\implies$
-> Let $N\trianglelefteq G$. Let $H=G/N$. Then, $N$ is the kernel of the projection map $a\mapsto aN$. 
+> > [!Proof]-
+> > Let $\phi$ be a homomorphism between two groups $G$ and $H$. Let $n\in \ker \phi$. Then, $\phi(gng^{-1})=\phi(g)\phi(n)\phi(g^{-1})=\phi(g)1_{H}\phi(g^{-1})=\phi(1_{G})=1_{H}$. Thus, $gng^{-1}\in\ker \phi$. Also, $gn_{1}g^{-1}=gn_{2}g^{-1}\implies n_{1}=n_{2}$. Thus, $gNg^{-1}=N$.
+> > 
+> > Let $N\trianglelefteq G$. Let $H=G/N$. Then, $N$ is the kernel of the projection map $a\mapsto aN$. 
+> 
+
+^23ccea
 
 An immediate corollary of the above lemma is that the alternating group of $n$ elements $A_{n}$ is a normal subgroup of $S_{n}$, since $A_{n}$ is the kernel of the homomorphism $\phi:S_{n}\to \mathbb{Z}_{2}$, $\phi(\tau)=\text{sgn }\tau$.
 

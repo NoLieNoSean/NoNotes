@@ -79,8 +79,6 @@ $(f_{n})$ converging uniformly to $f$ is denoted by $(f_n) \rightrightarrows f$.
 
 There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrightarrows f$. 
 
-Now we are ready to watch uniform convergence deliver on its promises.
-
 ### Results due to uniform convergence
 #### Limit of uniformly converging continuous functions is continuous
 

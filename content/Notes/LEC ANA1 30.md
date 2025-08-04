@@ -42,9 +42,9 @@ The [[Cauchy sequences|Cauchy criterion]] can be restated for series:
 > \left| \sum_{k=n}^{m} a_{k} \right|<\epsilon.
 > $$
 
-The triangle inequality gives us
+The triangle inequality yields
 $$
-\sum |a_{n}|\text{ converges }\implies \sum a_{n}\text{ converges }.
+\sum |a_{n}|\text{ converges }\implies \sum a_{n}\text{ converges}.
 $$
 Also, if we take $m=n$ in the above theorem, we get the following corollary.
 
@@ -80,7 +80,7 @@ Rudin, 3.25
 > $$
 > \left|\sum_{k=n}^{m} a_{k}\right| \leq \sum_{k=n}^{m} |a_{k}|\leq \sum_{k=n}^{m} c_{k}<\epsilon.
 > $$
->(b) is just the contrapositive of (a). ❏
+>(b) is just the contrapositive of (a).
 
 ### Rudin, 3.27
 

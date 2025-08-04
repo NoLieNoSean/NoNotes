@@ -17,6 +17,8 @@ The motivation behind this is to define a notion of length and perpendicularity 
 >  - $\langle \mathbf{v},\mathbf{v} \rangle = 0 \iff \mathbf{v} = 0$;
 >  - $\langle \alpha \mathbf{u} + \beta \mathbf{v},\mathbf{w} \rangle$ = $\alpha\langle \mathbf{u},\mathbf{w} \rangle + \beta\langle \mathbf{v},\mathbf{w} \rangle$.
 
+^dd5bbe
+
 >[!theorem] Theorem 1
 >The inner product is anti-linear in the second slot.
 
@@ -75,6 +77,8 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > $$
 > \lVert \mathbf{v} \rVert  = \sqrt{ \langle \mathbf{v}, \mathbf{v}\rangle }.
 > $$
+
+^2ffc13
 
 If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVert = |\lambda| \, \lVert \mathbf{v} \rVert$.
 ### The Cauchy-Schwarz Inequality
@@ -160,6 +164,8 @@ Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a num
 
 >[!Definition]
 >A vector space equipped with a norm is called a *normed space*.
+
+^bc7a00
 
 Any inner product space is a normed space, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, not all normed spaces are inner product spaces.
 

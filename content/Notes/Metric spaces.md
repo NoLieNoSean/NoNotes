@@ -10,6 +10,8 @@ tags:
 >- $d(p,q) \le d(p,r) + d(r,q)$
 >The function $d$ is called a *distance function*, or a *metric*.
 
+^d8adcc
+
 Observe:
 - A metric space requires $\mathbb{R}$ to exist.
 - Every subset $Y$ of a metric space $X$ is also a metric space.

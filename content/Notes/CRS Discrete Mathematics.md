@@ -4,17 +4,14 @@ tags:
   - MOC
 date: January 2025
 ---
-CMI, Spring 2025, V Arvind & Amit Kumar Sinhababu
+CMI, Jan-Apr 2025, V Arvind & Amit Kumar Sinhababu
  
 ---
 # Lecture notes
 
 ## Prof. Arvind's Lectures
 
-References:
-- @cameronCombinatoricsTopicsTechniques2001
-- @westCombinatorialMathematics2021
-- Enumerative combinatorics vol1, by Richard Stanley
+See @cameronCombinatoricsTopicsTechniques2001, @westCombinatorialMathematics2021, Enumerative combinatorics vol1, by Richard Stanley
 
 Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating functions, IEP, Mobius inversions, permutation groups, Polya's enumeration theorem, and should time permit, infinitorial combinatorics, graph theory, finite fields.
 
@@ -49,15 +46,7 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 
 ## Prof. Sinhababu's Lectures
  
-References:
-- @lavrovMath3322Graph, Misha Lavrov's Math 3322 Notes
-- @muldoonMATH20902DiscreteMathematics2020
-- @grinbergIntroductionGraphTheory2024
-- @westIntroductionGraphTheory2001
-- @zhaoGraphTheoryAdditive2023
-- @lovaszDiscreteMathematicsElementary2003
-- @jungnickelGraphsNetworksAlgorithms2013
-- @matousekInvitationDiscreteMathematics2009
+See @lavrovMath3322Graph, @muldoonMATH20902DiscreteMathematics2020, @grinbergIntroductionGraphTheory2024, @westIntroductionGraphTheory2001, @zhaoGraphTheoryAdditive2023, @lovaszDiscreteMathematicsElementary2003, @jungnickelGraphsNetworksAlgorithms2013, @matousekInvitationDiscreteMathematics2009
 
 Stuff to cover: Graph theory, discrete probability, number theory, finite fields, applications to error correcting codes
  
@@ -86,12 +75,7 @@ Stuff to cover: Graph theory, discrete probability, number theory, finite fields
 ---
 # Tutorials
 
-[[DMAT_T1]] ✅
-[[TUT DMAT n1]] (where $(n_{k})$ is a subsequence of $2, 3, \dots$)
-[[DMAT_PS_Krutarth]]
-[[DMAT_PS_Sunaina]]
-[[DMAT_PS3b]]
-[[DMAT_MatchingProblems]]
+[[TUT DMAT 1]] 
 # Assignments
 
 [[PS DMAT 1]]
@@ -99,7 +83,4 @@ Stuff to cover: Graph theory, discrete probability, number theory, finite fields
 [[AS DMAT 2]]
 [[AS DMAT 3]]
 
-# Quizzes
-
-[[DMAT_Q1]]
 

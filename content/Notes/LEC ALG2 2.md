@@ -42,6 +42,8 @@ The kernel of $\phi$ is the set of all elements in $G$ that it maps to the ident
 > 2. $\ker\phi<G$.
 > 3. $\mathrm{Im}~ \phi<H$.
 
+^76946c
+
 > **Proof of 1**
 > $\phi(1_{G})=\phi(1_{G}1_{G})=\phi(1_{G})\phi(1_{G})$. It follows that $\phi(1_{G})=1_{H}$.
 > 

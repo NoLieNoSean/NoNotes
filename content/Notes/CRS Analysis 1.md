@@ -4,7 +4,7 @@ tags:
   - MOC
 date: August 2024
 ---
-CMI, Fall 2024, Upendra Kulkarni
+CMI, Aug-Nov 2024, Upendra Kulkarni
 @rudinPrinciplesMathematicalAnalysis1976, @abbottUnderstandingAnalysis2015, @taoAnalysis2016, @bartleIntroductionRealAnalysis2010, @amannAnalysis2005
 
 ---

@@ -4,12 +4,13 @@ tags:
   - CAL1
 date: January 2025
 ---
-CMI, Spring 2025, M. Sundari
+CMI, Jan-Apr 2025, M. Sundari
 @roydenRealAnalysis2014, @ghorpadeCourseCalculusReal2018, @apostolMathematicalAnalysis1985, @rudinPrinciplesMathematicalAnalysis1976 
  
 ---
 # Lecture notes
 
+## Normed linear spaces
 
 - [[LEC CAL1 1]] ✅
 	- The p-norm
@@ -39,7 +40,7 @@ See @roydenRealAnalysis2014
 
 ## Multivariable functions
 
-See @ghorpadeCourseCalculusReal2018 (seriously, don't)
+See @ghorpadeCourseCalculusReal2018 (please don't)
 
 - [[LEC CAL1 11]] ✅
 	- Order properties of $\mathbb{R}^{n}$, Intervals, disks, and bounded sets
@@ -73,4 +74,4 @@ See @apostolMathematicalAnalysis1985 ch12 & ch13, @rudinPrinciplesMathematicalAn
 - [[LEC CAL1 23]]
 	- Extrema of real valued functions
 - [[LEC CAL1 24]]
-	- Extremum problems with side conditions
+	- Extremum problems with side conditions: Lagrange multipliers

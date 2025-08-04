@@ -93,7 +93,7 @@ Analyzing the pivots in the coefficient matrix ($A$) tells us about the [[Invert
 >   the echelon form of $A$ has a *pivot in every row*. $\underset{ ** }{ \iff }$
 >   the column vectors of $A$ form a [[Bases#Spanning systems|spanning set]] in $\mathbb{F}^{n}$ 
 >   
->It follows from these statements that $A\mathbf{x}=\mathbf{y}$ has a unique solution $\mathbf{x}$ for every $\mathbf{y}$ if and only if the echelon form of $A$ has a pivot in every column and row, i.e, the column vectors of $A$ are a [[Bases#Definition|basis]] in $\mathbb{F}^{m}$. [[LADW.pdf#page=57|ref]]
+>It follows from these statements that $A\mathbf{x}=\mathbf{y}$ has a unique solution $\mathbf{x}$ for every $\mathbf{y}$ if and only if the echelon form of $A$ has a pivot in every column and row, i.e, the column vectors of $A$ are a [[Bases#Definition|basis]] in $\mathbb{F}^{m}$. Cf. @treilLinearAlgebraDone2014 [p.57].
 
 (\*) and (\*\*) are easy to see if you recall what [[Linear Transformations#Matrix-vector multiplication as a linear transformation|matrix multiplication]] means, and what it means to be linearly independent/complete.
 

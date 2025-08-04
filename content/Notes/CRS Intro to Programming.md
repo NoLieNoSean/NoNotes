@@ -3,7 +3,7 @@ tags:
   - MOC
 date: August 2024
 ---
-CMI, Fall 2024, S P Suresh 
+CMI, Aug-Nov 2024, S P Suresh 
 
 ---
 # Notes

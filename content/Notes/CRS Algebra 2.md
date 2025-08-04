@@ -4,7 +4,7 @@ tags:
   - MOC
 date: January 2025
 ---
-CMI, Spring 2025, Clare D'Cruz
+CMI, Jan-Apr 2025, Clare D'Cruz
 @artinAlgebra2011, @dummitAbstractAlgebra2004, @carterVisualGroupTheory2009, @hersteinAbstractAlgebra1996
 
 > [!Definition]

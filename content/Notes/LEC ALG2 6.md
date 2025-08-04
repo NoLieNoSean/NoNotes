@@ -12,23 +12,26 @@ time: 9:10
 > $$
 > \frac{{G/H}}{K/H}\cong G/K.
 > $$
+> 
+> > [!Proof]-
+> > First, observe that $H\triangleleft G$ and $H< K< G$ implies $H\triangleleft K$. So, $K/H$ is a group.
+> > Consider $kH\in K/H$, $gH\in G/H$. 
+> > $$
+> > \begin{align}
+> > (gH)(kH)(gH)^{-1} & =gHkHg^{-1}H \\
+> >  & =gkg^{-1}H 
+> > \end{align}
+> > $$
+> > Since $K$ is a normal subgroup, $gkg^{-1}\in K$. Thus, $gkg^{-1}H\in K/H$. Since conjugation is an invertible operation, this gives $(gH)(K/H)(gH)^{-1}=K/H$, i.e. $K/H\triangleleft G/H$. 
+> > 
+> > Now, consider the map $\phi: G/H\to G/K$ defined by $gH\mapsto gK$. This map is well defined, since if $g$ is in a coset $aK$, $gH$ is also necessarily in $aK$. $\phi$ is also surjective, since for every $aK\in G/K$, $aH\mapsto aK$. 
+> > 
+> > $\phi$ is an homomorphism: $\phi((gH)\circ (g'H))=gg'K$, $\phi(gH)\phi(g'H)=gg'K$. The kernel of $\phi$ is the set of all cosets of $H$ contained in $K$, $K/H$. 
+> > 
+> > From the [[LEC ALG2 4#First isomorphism theorem|first isomorphism theorem]], $\frac{G/H}{K/H}\cong G/K$. 
+> 
 
-> **Proof**
-> First, observe that $H\triangleleft G$ and $H< K< G$ implies $H\triangleleft K$. So, $K/H$ is a group.
-> Consider $kH\in K/H$, $gH\in G/H$. 
-> $$
-> \begin{align}
-> (gH)(kH)(gH)^{-1} & =gHkHg^{-1}H \\
->  & =gkg^{-1}H 
-> \end{align}
-> $$
-> Since $K$ is a normal subgroup, $gkg^{-1}\in K$. Thus, $gkg^{-1}H\in K/H$. Since conjugation is an invertible operation, this gives $(gH)(K/H)(gH)^{-1}=K/H$, i.e. $K/H\triangleleft G/H$. 
-> 
-> Now, consider the map $\phi: G/H\to G/K$ defined by $gH\mapsto gK$. This map is well defined, since if $g$ is in a coset $aK$, $gH$ is also necessarily in $aK$. $\phi$ is also surjective, since for every $aK\in G/K$, $aH\mapsto aK$. 
-> 
-> $\phi$ is an homomorphism: $\phi((gH)\circ (g'H))=gg'K$, $\phi(gH)\phi(g'H)=gg'K$. The kernel of $\phi$ is the set of all cosets of $H$ contained in $K$, $K/H$. 
-> 
-> From the [[LEC ALG2 4#First isomorphism theorem|first isomorphism theorem]], $\frac{G/H}{K/H}\cong G/K$. 
+^de06fc
 
 Note that if only $H<G$, $K<G$, and $H<K$ are true, we can still define $\phi:G/H\to G/K$ as we did above, but as a set theoretic function. Note that $G/H$ and $G/K$ are only sets of cosets here, not groups. Our reasoning that $\phi$ is well defined did not use the normality of $H$ or $K$, and thus is still valid.
 
