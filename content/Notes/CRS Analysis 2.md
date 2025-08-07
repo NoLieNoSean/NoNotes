@@ -3,6 +3,9 @@ tags:
   - MOC
   - ANA
 ---
-CMI, Aug-Nov, R Srinivasan
+CMI, Aug-Nov 2025, R Srinivasan
+@kumaresanTopologyMetricSpaces2005, @rudinPrinciplesMathematicalAnalysis1976
+
+---
 
 [[Point set topology]]

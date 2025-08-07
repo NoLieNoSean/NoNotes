@@ -52,7 +52,7 @@ It should be noted that we now use the symbol $\to$ for certain types of diverge
 
 ### Reconciling the two
 
-We have to show that, for a sequence $(p_{n})$,
+We have to show that for a sequence $(p_{n})$,
 $$
 \lim_{ n \to \infty } (\sup \{ p_{n}, p_{n+1}, \dots \}) = \sup \{ x\ |\ p_{n_{k}}\to x \}
 $$
@@ -96,7 +96,6 @@ These will be using Kulkarni's definitions.
 >$$
 
 The above result is rather intuitive once you internalize what limsup and liminf mean:
-### Important result
 
 > [!Important]
 > Let $\lim\sup_{ n \to \infty }t_{n}=p$. Then,
@@ -106,6 +105,8 @@ The above result is rather intuitive once you internalize what limsup and liminf
 > Let $\lim\inf_{ n \to \infty }t_{n}=p$. Then,
 > - for all $q>p$, for all $N$, there exists $n>N$ such that $t_{n}<q$.
 > - for all $q<p$, there exists $N$ such for all $n>N$, we have $t_{n}>q$. 
+
+^033332
 
 ### Limsup = Liminf iff the sequence converges
 

@@ -38,19 +38,19 @@ $$
 > Let $(R, +)$ be an abelian group. Define $ab=0$ for all $a, b\in R$. This is a ring, and is called the **trivial ring**. Multiplication does not add any new structure, and the trivial ring does not have an identity unless it is the zero ring.
 
 > [!Definition]
-> 1. A nonzero element $a\in R$ is a **zero divisor** if there exists a nonzero $b\in R$ such that $ab=0$ or $ba=0$.
-> 2. Assume $R$ has an identity $1\ne 0$. An element $u\in R$ is a **unit** if it has a multiplicative inverse. The set of all units in $R$ is denoted $R^{\times}$ (this is a group under $\cdot$).
+> 1. A nonzero element $a\in R$ is a **left-zero-divisor** if there exist elements $b\ne 0$ in $R$ for which $ab=0$. Ditto for **right zero divisors**. Both are collectively called **zero divisors**.
+> 2. Assume $R$ has an identity $1\ne 0$. An element $u\in R$ is a **left-unit** if $\exists v\in R$ such that $uv=1$.; it is a **right-unit** if $\exists v\in R$ such that $vu=1$. **Units** are two-sided units.
 
 > [!Proposition]
-> 1. A zero divisor can never be a unit.
-> 
-> > [!Proof]-
-> > Suppose $a\in R$ is a zero divisor. There exists $b\in R$ such that $b\ne 0$ and $ab=0$ (or $ba=0$). Suppose $a$ is also a unit. Let $v$ be its multiplicative inverse. Then, $0=v(ab)=(va)b=b$, a contradiction.
-> 
-> 2. Assume $a, b, c\in R$, and $a$ is not a zero divisor. If $ab=ac$, then wither $a=0$ or $b=c$.
-> 
+> In a ring $R$, 
+> 1. $u$ is not a left (right) zero divisor $\iff$ left (right) multiplication by $a$ is injective;
+> 2. $u$ is a left (right) unit $\iff$ left (right) multiplication by $u$ is surjective;
+> 3. $u$ is a left (right) unit $\implies$ right (left) multiplication by $u$ is injective, that is, $u$ is not a right (left) zero divisor.
 
 ^357946
+
+It follows that a two sided zero divisor can not be a two sided unit.
+
 
 > [!Definition] 
 > 1. A ring $R$ with identity $1\ne 0$ is called a **division ring** if every nonzero $a\in R$ is a unit.

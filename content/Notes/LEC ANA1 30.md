@@ -181,51 +181,50 @@ Rudin, 3.31
 > $$
 > \lim_{ n \to \infty } \left( 1+\frac{1}{n} \right)^{n}=e.
 > $$
-
-> **Proof**
-> Let
-> $$
-> s_{n}=\sum_{k=0}^{n} \frac{1}{k!}, \ \ \ \ \ t_{n}=\left( 1+\frac{1}{n} \right)^{n}.
-> $$
-> We have to show that $\lim_{ n \to \infty }t_{n}$ exists, and that it is equal to $\lim_{ n \to \infty }s_{n}$. [[LimSup and LimInf#Limsup = Liminf iff the sequence converges|Recall]] that a limit exists only when $\lim\sup =\lim\inf$. We know that for any sequence, $\lim\inf\leq \lim\sup$. The goal is to show
-> $$
-> e\leq \liminf_{ n \to \infty } t_{n}\leq\limsup_{ n \to \infty } t_{n}\leq e.
-> $$
-> > **Part 1: Showing $\lim\sup t_{n}\leq e$**
-> > $$
-> > \begin{align}
-> > t_{n} & = \left( 1+\frac{1}{n} \right)^{n} \\
-> >  & = \sum_{k=0}^{n} \left( \frac{1}{n} \right)^{k}\begin{pmatrix}
-> > n \\
-> > k
-> > \end{pmatrix} \\
-> >  & =\sum_{k=0}^{n} \frac{1}{n^{k}} \frac{{n!}}{k!(n-k)!} \\
-> >  & =1+1+\sum_{k=2}^{n} \frac{1}{k!} \frac{(n-k+1)\dots(n-1)}{n^{k-1}} \\
-> >  & =1+1+\sum_{k=2}^{n} \frac{1}{k!} \left( 1-\frac{1}{n} \right)\left( 1-\frac{2}{n} \right)\dots\left( 1-\frac{{k-1}}{n} \right) \\
-> >  & \leq 1+1+\sum_{k=2}^{n} \frac{1}{k!} \\
-> >  & =s_{n}
-> > \end{align}
-> > $$
-> > So, $t_{n}\leq s_{n}$ for all $n$. It follows that $\lim\sup t_{n}\leq \lim\sup s_{n}$. Since $(s_{n})\to e$, $\lim\sup s_{n}=\lim\inf s_{n}=\lim s_{n}=e$. So we get $\lim\sup t_{n}\leq e$.
 > 
-> > **Part 2: Showing $\lim\inf t_{n}\leq e$**
-> > Fix $m$. For $n\geq m$,
+> > [!Proof]-
+> > Let
 > > $$
-> > \begin{align}
-> >  t_{n} 
-> >    & \geq \underbrace{ 1+1+\sum_{k=2}^{m} \frac{1}{k!} \left( 1-\frac{1}{n} \right)\left( 1-\frac{2}{n} \right)\dots\left( 1-\frac{{k-1}}{n} \right) }_{ u_{n} }.
-> >  \end{align}
+> > s_{n}=\sum_{k=0}^{n} \frac{1}{k!}, \ \ \ \ \ t_{n}=\left( 1+\frac{1}{n} \right)^{n}.
 > > $$
-> > Note that $(u_{n})$ is a convergent sequence. 
+> > We have to show that $\lim_{ n \to \infty }t_{n}$ exists, and that it is equal to $\lim_{ n \to \infty }s_{n}$. [[LimSup and LimInf#Limsup = Liminf iff the sequence converges|Recall]] that a limit exists only when $\lim\sup =\lim\inf$. We know that for any sequence, $\lim\inf\leq \lim\sup$. The goal is to show
 > > $$
-> > \begin{align}
-> > \liminf _{ n \to \infty } t_{n} & \geq \liminf _{ n \to \infty } u_{n} \\
-> >  & = \sum_{k=0}^{m} \frac{1}{k!}  
-> > \end{align}
+> > e\leq \liminf_{ n \to \infty } t_{n}\leq\limsup_{ n \to \infty } t_{n}\leq e.
 > > $$
-> > This is true for every $m$. Thus, we have $\liminf t_{n}\geq e$. 
-> 
-> ❏
+> > > **Part 1: Showing $\lim\sup t_{n}\leq e$**
+> > > $$
+> > > \begin{align}
+> > > t_{n} & = \left( 1+\frac{1}{n} \right)^{n} \\
+> > >  & = \sum_{k=0}^{n} \left( \frac{1}{n} \right)^{k}\begin{pmatrix}
+> > > n \\
+> > > k
+> > > \end{pmatrix} \\
+> > >  & =\sum_{k=0}^{n} \frac{1}{n^{k}} \frac{{n!}}{k!(n-k)!} \\
+> > >  & =1+1+\sum_{k=2}^{n} \frac{1}{k!} \frac{(n-k+1)\dots(n-1)}{n^{k-1}} \\
+> > >  & =1+1+\sum_{k=2}^{n} \frac{1}{k!} \left( 1-\frac{1}{n} \right)\left( 1-\frac{2}{n} \right)\dots\left( 1-\frac{{k-1}}{n} \right) \\
+> > >  & \leq 1+1+\sum_{k=2}^{n} \frac{1}{k!} \\
+> > >  & =s_{n}
+> > > \end{align}
+> > > $$
+> > > So, $t_{n}\leq s_{n}$ for all $n$. It follows that $\lim\sup t_{n}\leq \lim\sup s_{n}$. Since $(s_{n})\to e$, $\lim\sup s_{n}=\lim\inf s_{n}=\lim s_{n}=e$. So we get $\lim\sup t_{n}\leq e$.
+> > 
+> > > **Part 2: Showing $\lim\inf t_{n}\leq e$**
+> > > Fix $m$. For $n\geq m$,
+> > > $$
+> > > \begin{align}
+> > >  t_{n} 
+> > >    & \geq \underbrace{ 1+1+\sum_{k=2}^{m} \frac{1}{k!} \left( 1-\frac{1}{n} \right)\left( 1-\frac{2}{n} \right)\dots\left( 1-\frac{{k-1}}{n} \right) }_{ u_{n} }.
+> > >  \end{align}
+> > > $$
+> > > Note that $(u_{n})$ is a convergent sequence. 
+> > > $$
+> > > \begin{align}
+> > > \liminf _{ n \to \infty } t_{n} & \geq \liminf _{ n \to \infty } u_{n} \\
+> > >  & = \sum_{k=0}^{m} \frac{1}{k!}  
+> > > \end{align}
+> > > $$
+> > > This is true for every $m$. Thus, we have $\liminf t_{n}\geq e$. 
+> > 
 
 Rudin, 3.32
 

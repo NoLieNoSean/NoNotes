@@ -25,20 +25,18 @@ time: 10:30
 > $$
 
 ---
-## Which functions are integrable?
+# Which functions are integrable?
 
->[!Example] Example of a non integrable function
+>[!Example] Non integrable function
 >Consider the function $f$ on $\mathbb{R}$ which is $1$ at rational inputs and $0$ at irrational inputs. For any partition, each $M_{i}=1$ and each $m_{i}=0$. Thus, the upper Riemann integral will be $(b-a)$, while the lower Riemann integral will be $0$. Thus, this function is not integrable over any interval.
 
-### Continuous functions
+## Continuous functions
 
-Rudin, 6.8
-
-> [!Theorem]
+> [!Theorem] Rudin 6.8
 > If $f:[a, b]\to \mathbb{R}$ is continuous on $[a, b]$ then $f\in\mathscr{R}(\alpha)$ on $[a, b]$.
 
 > **Proof**
-> Note that [[LEC ANA1 20#Continuous functions defined on compact sets are uniformly continuous|since]] $[a, b]$ is [[LEC ANA1 17#Absolute and relative definitions of open cover compactness|compact]], $f$ is [[LEC ANA1 20#Uniform continuity|uniformly continuous]] on $[a, b]$. We will use the [[LEC ANA1 26#A criterion for integrability|the criterion for integrability]] to show $f\in\mathscr R$. Let $\epsilon>0$. We can find $\delta>0$ such that whenever $|s-t|<\delta$, $|f(s)-f(t)|<\epsilon$. Choose $P$ such that each $\Delta x_{i}<\delta$. Thus, in $[x_{i-1}, x_{i}]$, $M_{i}-m_{i}<\epsilon$. Therefore, 
+> Note that [[LEC ANA1 20#Continuous functions defined on compact sets are uniformly continuous|since]] $[a, b]$ is [[LEC ANA1 17#Absolute and relative definitions of open cover compactness|compact]], $f$ is [[LEC ANA1 20#Uniform continuity|uniformly continuous]] on $[a, b]$. We will use [[LEC ANA1 26#A criterion for integrability|this theorem]] to show $f\in\mathscr R$. Let $\epsilon>0$. We can find $\delta>0$ such that whenever $|s-t|<\delta$, $|f(s)-f(t)|<\epsilon$. Choose $P$ such that each $\Delta x_{i}<\delta$. Thus, in $[x_{i-1}, x_{i}]$, $M_{i}-m_{i}<\epsilon$. Therefore, 
 > $$
 > \begin{align}
 > U(P, f, \alpha)-L(P, f, \alpha) = & \ \sum_{i=1}^{n} (M_{i}-m_{i})\Delta\alpha_{i}< \epsilon(\alpha(b)-\alpha(a)).
@@ -47,7 +45,7 @@ Rudin, 6.8
 > Thus, $f\in\mathscr R(\alpha)$. ❏
 
 Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attains these extrema in $[x_{i-1}, x_{i}]$ due to the [[LEC ANA1 16#Extreme value theorem|extreme value theorem]] (this doesn't impact the proof in any way; just an observation). 
-### Monotonic functions
+## Monotonic functions
 
 >[!Theorem]
 >If $f:[a, b]\to \mathbb{R}$ is monotone on $[a, b]$ then $f\in\mathscr R$.
@@ -66,11 +64,9 @@ Note that $M_{i}-m_{i}$ cannot be equal to $\epsilon$, since $f$ actually attain
 > $$
 > $n$ can be made arbitrarily large to meet any $\epsilon$ challenge. ❏
 
-Note that it does not matter whether $f$ is continuous or not.
+Note that the continuity of $f$ doesn't matter here.
 
-Rudin, 6.9
-
->[!Theorem]
+>[!Theorem] Rudin 6.9
 >If $f:[a, b]\to \mathbb{R}$ is monotone on $[a, b]$ and $\alpha$ is continuous on $[a, b]$ then $f\in\mathscr R(\alpha)$.
 
 > **Proof**
@@ -93,7 +89,7 @@ Rudin, 6.9
 > and make $n$ as small as we like to meet any $\epsilon$ challenge. ❏
 
 Note that $\alpha$ being a derivative also works - [[LEC ANA1 24#Properties of derivatives|derivatives have the IVP]].
-### Continuous functions with finitely many transgressions
+## Continuous functions with finitely many transgressions
 
 Rudin, 6.10
 
@@ -101,7 +97,7 @@ Rudin, 6.10
 > Suppose $f$ is continuous on $[a, b]$ except at finitely many points, and $f$ is bounded on $[a, b]$. Then, $f\in\mathscr{R}$ on $[a, b]$.
 
 > **Proof**
-> It suffices to consider the case when $f$ is discontinuous at only one point in $[a, b]$, say $p$. Let $\epsilon>0$. Now, let $k\in(p-\epsilon, p)$ and $k'\in(p, p+\epsilon)$. $f$ is uniformly continuous on $[a, k]\cup[k', b]$, so we can choose $\delta$ such that $s, t\in[a, k]\cup[k', b], |s-t|<\delta\implies |f(s)-f(t)|<\epsilon$. Now, choose a partition $P$ such that $x_{j-1}=k$ and $x_{j}=k'$ for some $j$, and $\Delta x_{i}<\delta$ for all $i\ne j$. Let $M=\sup |f(x)|$. Note that $M_{j}-m_{j}\leq {2}M$. Then,
+> It suffices to consider the case when $f$ is discontinuous at only one point in $[a, b]$, say $p$. Let $\epsilon>0$. Let $k\in(p-\epsilon, p)$ and $k'\in(p, p+\epsilon)$. $f$ is uniformly continuous on $[a, k]\cup[k', b]$, so we can choose $\delta$ such that $s, t\in[a, k]\cup[k', b], |s-t|<\delta\implies |f(s)-f(t)|<\epsilon$. Now, choose a partition $P$ such that $x_{j-1}=k$ and $x_{j}=k'$ for some $j$, and $\Delta x_{i}<\delta$ for all $i\ne j$. Let $M=\sup |f(x)|$. Note that $M_{j}-m_{j}\leq {2}M$. Then,
 > $$
 > \begin{align}
 > U(P, f)-L(P, f)= & \ \sum_{i=1}^{j-1} (M_{i}-m_{i})(x_{i}-x_{i-1}) \\
@@ -138,8 +134,8 @@ Rudin, 6.10
 > $$
 > Since $\epsilon_{1}$ and $\epsilon_{2}$ can be made arbitrarily small, it follows that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for all $\epsilon>0$. ❏
 
-Note that you could have made the same argument with a single $\epsilon$. I choose to use two different variables to semantically indicate that they are bounding different quantities.
-### Compositions of integrable functions with continuous functions
+Note that you could have made the same argument with a single $\epsilon$. I choose to use two different variables to indicate that they are bounding different quantities.
+## Compositions of integrable functions with continuous functions
 
 Rudin, 6.11
 
@@ -212,15 +208,15 @@ Rudin, 6.11
 > $$
 > In hindsight, choosing $\epsilon_{1}=\epsilon/(\alpha(a)-\alpha(b)+K)$ would have been super smart. Say we were super smart. This finally gets us
 > $$
-> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon
+> U(P, h, \alpha)-L(P, h, \alpha)< \epsilon.
 > $$
-> 🎉🎉🎉 ❏
+> 🎉🎉🎉 
 
 >[!Info]
 >The most general characterization of integrability goes like $f\in\mathscr R$ iff it is almost everywhere continuous.
 
 ---
-## Properties of the integral
+# Properties of the integral
 
 Rudin, 6.12
 ### a
@@ -249,7 +245,7 @@ Rudin, 6.12
 > >
 > > For $f_{1}$ and $f_{2}$ defined on $X \subset \mathbb{R}$, we have
 > >$$
-> >\inf_{x \in X} f_{1}(x) + \inf_{x \in X} f_{1}(x) \leq \inf_{x \in X} (f_{1} + f_{2})(x)
+> >\inf_{x \in X} f_{1}(x) + \inf_{x \in X} f_{2}(x) \leq \inf_{x \in X} (f_{1} + f_{2})(x)
 > >$$
 > >**Proof:**
 > > For any $x \in X$ we have

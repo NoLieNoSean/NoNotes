@@ -51,7 +51,7 @@ Rudin, 3.33
 > 3. if $\alpha=1$, the test is inconclusive.
 
 > **Proof**
-> If $\alpha<1$, pick $\alpha<\beta<1$. [[LimSup and LimInf#Important result|We know]] that there exists $N$ such that $n\geq N$ implies $\sqrt[n]{ |a_{n}| }<\beta$.
+> If $\alpha<1$, pick $\alpha<\beta<1$. [[LimSup and LimInf#^033332|We know]] that there exists $N$ such that $n\geq N$ implies $\sqrt[n]{ |a_{n}| }<\beta$.
 > $$
 > \begin{align}
 > |a_{n}| & <\beta^{n} \\

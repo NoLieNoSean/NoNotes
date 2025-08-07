@@ -67,7 +67,7 @@ Rudin, 6.26
 > [!Definition]
 > A [[LEC ANA1 11#Definition|continuous]] mapping $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{k}$ is called a *curve*. If $\boldsymbol{\gamma}$ is injective, it is called an *arc*. If $\boldsymbol{\gamma}(b)=\boldsymbol{\gamma}(a)$, $\boldsymbol{\gamma}$ is called a *closed curve*. 
 
-Consider a [[LEC ANA1 26#Partitions|partition]] $P=\{ x_{0}, x_{1}, \dots, x_{n} \}$ of $[a, b]$. Define
+Consider a [[LEC ANA1 26#^d118a8|partition]] $P=\{ x_{0}, x_{1}, \dots, x_{n} \}$ of $[a, b]$. Define
 $$
 \begin{align}
 \Lambda(P, \boldsymbol{\gamma})\equiv\sum_{i=1}^{n} |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|; \\

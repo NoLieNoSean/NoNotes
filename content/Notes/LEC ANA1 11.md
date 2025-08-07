@@ -49,7 +49,7 @@ Note the differences:
 1. 4.1 requires $p$ to be a limit point, 4.5 doesn't.
 2. 4.5 requires $p\in E$, 4.1 doesn't.
 3. 4.5 says $d_{Y}(f(x), f(p))<\epsilon$, and 4.1 says $d_{Y}(f(x), q)<\epsilon$.
-4. 4.5 says $d_{X}(x, p)<\delta$, 4.1 says $0<d_{X}(x, p)<\delta$. We do not want to take any position about $f(p)$ when working with the limit of $f$ at $p$. It may not exist, it may exist and be not equal to $q$, or it may be equal to $q$ - we do not care, and more importantly, we don't want to say anything about it. However, in 4.5, we are checking $d_{Y}(f(x), f(p))<\epsilon$ for every $x$ that passes the test $d_{X}(x, p)<\delta$, and $d_{Y}(f(p), f(p))<\epsilon$ is always true, regardless of what $f$ and $p$ are. While we do not lose anything by excluding the $x=p$ case, adding the $0<$ restriction does not accomplish anything, and just clutters the definition. It does have some semantic value when $p$ is an isolated point though, as explained below.
+4. 4.5 says $d_{X}(x, p)<\delta$, 4.1 says $0<d_{X}(x, p)<\delta$. We do not want to take any position about $f(p)$ when working with the limit of $f$ at $p$. It may not exist, it may exist and be not equal to $q$, or it may be equal to $q$ - it does not matter. However, in 4.5, we are checking $d_{Y}(f(x), f(p))<\epsilon$ for every $x$ that passes the test $d_{X}(x, p)<\delta$, and $d_{Y}(f(p), f(p))<\epsilon$ is always true, regardless of what $f$ and $p$ are. While we do not lose anything by excluding the $x=p$ case, adding the $0<$ restriction does not accomplish anything, and just clutters the definition. It does have some semantic value when $p$ is an isolated point though, as explained below.
 
 #### How does this definition interact with limit points?
 
@@ -57,9 +57,8 @@ Note the differences:
 Rudin, 4.6
 Say that $f$ is continuous at $p$, and $p$ is a limit point of $E$. Given the latter, 4.5 is a stricter statement than 4.1 - It says that the limit at $p$ exists, and that it equals $f(p)$ (point 3 above). This is essentially the familiar high school definition: $f$ is continuous at $p$ iff $\lim_{ x \to p }f(x)=f(p)$. 
 ##### Case 2: $p$ is an isolated point of $E$
-Say $f$ is continuous at $p$, and $p$ is not a limit point of $E$, i.e, $p$ is an isolated point. 
 
-Recall the definition of a limit point, restated from yesterday:
+Let $p$ be an isolated point of $E$. Recall the definition of a limit point, restated from yesterday:
 
 >[!Definition]
 >Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$. 

@@ -292,7 +292,7 @@ Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be 
 $$
 a\sim a'\implies \varphi(a)=\varphi(a').
 $$
-Let objects be denoted by $(\varphi, Z)$. Morphisms $(\varphi_{1}, Z_{1})\to(\varphi_{2}\to Z_{2})$ are commutative diagrams
+Let objects be denoted by $(\varphi, Z)$. Morphisms $(\varphi_{1}, Z_{1})\to(\varphi_{2}, Z_{2})$ are commutative diagrams
 
 ```tikz
 \usepackage{tikz-cd}

@@ -8,7 +8,7 @@ time: 15:33
 ---
 ![[Pasted image 20241118191126.png]]
 
-## Sequences of functions
+# Sequences of functions
 
 > [!Definition]
 > Suppose $(f_{n})_{n=1}^{\infty}$ is a sequence of functions defined on a set $E$, and suppose that the sequence of numbers $(f_{n}(x))$ converges for every $x\in E$. We can then define a function $f$ by
@@ -45,19 +45,19 @@ which is clearly discontinuous. So, pointwise convergence does not preserve prop
 >  & \lim_{ t \to x } (\lim_{ n \to \infty } f_{n}(t))= \lim_{ n \to \infty } (\lim_{ x \to t } f_{n}(t)) 
 > \end{align}
 > $$
-> (We have used the definition of $f$ as the pointwise limit of $(f_{n})$ and the hypothesis that $f_{n}$ are continuous). So, we are essentially asking whether the order in which limit processes are carried out is immaterial. As said before, this is not true for pointwise convergent functions, but is true for uniformly convergent functions.
+> (We have used the definition of $f$ as the pointwise limit of $(f_{n})$ and the hypothesis that $f_{n}$ are continuous). So, we are essentially asking whether the order in which limit processes are carried out is immaterial. As noted before, this is not true for pointwise convergent functions, but is true for uniformly convergent functions.
 
 %% 
 triangle area function, 0 1 array example
 %%
 
 ---
-## Uniform convergence
+# Uniform convergence
 
-Recall our definition of [[LEC ANA1 20#Uniform continuity|uniform continuity]] and how it was related to vanilla continuity. Something similar will happen here. Notice that the definition of pointwise convergence can be restated like so
+Recall our definition of [[LEC ANA1 20#Uniform continuity|uniform continuity]] and how it relates to vanilla continuity. Something similar will happen here. Notice that the definition of pointwise convergence can be restated like so:
 
 > [!Definition]
-> Let $f_{n}:E\to \mathbb{R}$. $(f_{n})$ is *pointwise convergent* if
+> Let $f_{n}:E\to \mathbb{R}$. $(f_{n})$ is **pointwise convergent** if
 > $$
 > \forall x\in E \ \ \forall\epsilon>0\ \ \exists N\text{ such that }n>N\implies |f_{n}(x)-f(x)|<\epsilon.
 > $$
@@ -65,7 +65,7 @@ Recall our definition of [[LEC ANA1 20#Uniform continuity|uniform continuity]] a
 Compare with the definition of uniform convergence:
 
 > [!Definition]
-> Let $f_{n}:E\to \mathbb{R}$. $(f_{n})$ is *uniformly convergent* if
+> Let $f_{n}:E\to \mathbb{R}$. $(f_{n})$ is **uniformly convergent** if
 > $$
 >   \forall\epsilon>0\ \ \exists N\text{ such that }(\forall x\in E\text{ and }n>N )\implies |f_{n}(x)-f(x)|<\epsilon.
 > $$
@@ -79,69 +79,70 @@ $(f_{n})$ converging uniformly to $f$ is denoted by $(f_n) \rightrightarrows f$.
 
 There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrightarrows f$. 
 
-### Results due to uniform convergence
-#### Limit of uniformly converging continuous functions is continuous
+## Results due to uniform convergence
+### Limit of uniformly converging continuous functions is continuous
 
-> [!Theorem] Theorem Rudin, 7.12
+> [!Theorem] Rudin 7.12
 > $f_{n}\rightrightarrows f$ and each $f_{n}$ continuous on $E$ $\implies$ $f$ is continuous on $E$.
-
-> **Proof**
-> Let $x\in E$. We'll show continuity of $f$ at $x$. Let $\epsilon>0$. Pick $N$ such that $n\geq N$ $\implies$ $|f_{n}(y)-f(y)|<\epsilon$ for all $y\in E$. Let $\delta>0$ such that $d(x, t)<\delta \implies |f_{N}(t)-f_{N}(x)|<\epsilon$.  Now, if $d(x, t)<\delta$, we have
-> $$
-> \begin{align}
-> |f(x)-f(t)| & \leq |f(x)-f_{N}(x)|+|f_{N}(x)-f_{N}(t)|+|f_{N}(t)-f(t)| \\
->  & < \epsilon+\epsilon+\epsilon
 > 
-> \end{align}
-> $$
-> ◻
-#### Limit of uniformly converging integrable functions is integrable (and more)
+> > [!Proof]-
+> > Let $x\in E$. We'll show continuity of $f$ at $x$. Let $\epsilon>0$. Pick $N$ such that $n\geq N$ $\implies$ $|f_{n}(y)-f(y)|<\epsilon$ for all $y\in E$. Let $\delta>0$ such that $d(x, t)<\delta \implies |f_{N}(t)-f_{N}(x)|<\epsilon$.  Now, if $d(x, t)<\delta$, we have
+> > $$
+> > \begin{align}
+> > |f(x)-f(t)| & \leq |f(x)-f_{N}(x)|+|f_{N}(x)-f_{N}(t)|+|f_{N}(t)-f(t)| \\
+> >  & < \epsilon+\epsilon+\epsilon
+> > 
+> > \end{align}
+> > $$
+> 
+### Limit of uniformly converging integrable functions is integrable (and more)
 
-> [!Theorem] Theorem Rudin, 7.16
+> [!Theorem] Rudin 7.16
 > $f_{n}\rightrightarrows f$ and each $f_{n}\in\mathscr{R}$ on $[a, b]$ $\implies$ $f\in\mathscr{R}$ on $[a, b]$ and
 > $$
 > \int_{a}^{b} f \, dx =\lim_{ n \to \infty } \int_{a}^{b} f_{n} \, dx .
 > $$
+> 
+> > [!Proof]-
+> > Let $\epsilon_{n}=\sup_{x\in[a, b]}|f(x)-f_{n}(x)|$. Since $f_{n}$ converges uniformly to $f$, $(\epsilon_{n})\to 0$. Now, 
+> > $$
+> > \begin{align}
+> > f_{n}(x)-\epsilon_{n}\leq f(x)\leq f_{n}(x)+\epsilon_{n}
+> > \end{align}
+> > $$
+> > Consider a partition $P$ of $[a, b]$. Then, the first inequality above gives us
+> > $$
+> > \begin{align}
+> > L(P, f_{n}(x)-\epsilon_{n})\leq L(P, f(x)) \leq \underline{\int_{a}^{b}} f(t) \, dt.
+> > \end{align}
+> > $$
+> > The above is true for every partition $P$. So, we can take the supremum or infimum on the left (doesn't matter which, both are equal):
+> > $$
+> > \int_{a}^{b} f_{n}(t)-\epsilon_{n} \, dt\leq \underline{\int_{a}^{b}} f(t) \, dt.
+> > $$
+> > Applying the same idea on the other side gives us
+> > $$
+> > \begin{align}
+> > \int_{a}^{b} f_{n}(t) \, dt -\epsilon_{n}(b-a)\leq \underline{\int_{a}^{b}} f(t) \, dt\leq \overline{\int_{a}^{b}} f(t)\,dt\leq \int_{a}^{b} f_{n}(t) \, dt+\epsilon_{n}(b-a) 
+> > \end{align}
+> > $$
+> > Thus, 
+> > $$
+> > \overline{\int_{a}^{b}} f(t)\, dt - \underline{\int_{a}^{b}} f(t)\, dt \leq 2\epsilon_{n}(b-a).
+> > $$
+> > Thus, $f$ is integrable on $[a, b]$.
+> 
+### A not so neat but nevertheless useful result on differentiation
 
-> **Proof**
-> Let $\epsilon_{n}=\sup_{x\in[a, b]}|f(x)-f_{n}(x)|$. Since $f_{n}$ converges uniformly to $f$, $(\epsilon_{n})\to 0$. Now, 
-> $$
-> \begin{align}
-> f_{n}(x)-\epsilon_{n}\leq f(x)\leq f_{n}(x)+\epsilon_{n}
-> \end{align}
-> $$
-> Consider a partition $P$ of $[a, b]$. Then, the first inequality above gives us
-> $$
-> \begin{align}
-> L(P, f_{n}(x)-\epsilon_{n})\leq L(P, f(x)) \leq \underline{\int_{a}^{b}} f(t) \, dt.
-> \end{align}
-> $$
-> The above is true for every partition $P$. So, we can take the supremum or infimum on the left (doesn't matter which, both are equal):
-> $$
-> \int_{a}^{b} f_{n}(t)-\epsilon_{n} \, dt\leq \underline{\int_{a}^{b}} f(t) \, dt.
-> $$
-> Applying the same idea on the other side gives us
-> $$
-> \begin{align}
-> \int_{a}^{b} f_{n}(t) \, dt -\epsilon_{n}(b-a)\leq \underline{\int_{a}^{b}} f(t) \, dt\leq \overline{\int_{a}^{b}} f(t)\,dt\leq \int_{a}^{b} f_{n}(t) \, dt+\epsilon_{n}(b-a) 
-> \end{align}
-> $$
-> Thus, 
-> $$
-> \overline{\int_{a}^{b}} f(t)\, dt - \underline{\int_{a}^{b}} f(t)\, dt \leq 2\epsilon_{n}(b-a).
-> $$
-> Thus, $f$ is integrable on $[a, b]$.
-
-#### A not so neat but nevertheless useful result on differentiation
-
-> [!Theorem] Theorem Rudin, 7.17
+> [!Theorem] Rudin 7.17
 > Suppose
 > - $f_{n}$ are differentiable on $[a, b]$,
 > - $f_{n}'\rightrightarrows\text{ a function, say }g\text{ on }[a, b]$, and
 > - there exists some $x_{0}\in[a, b]$ such that $f_{n}(x_{0})$ converges.
 > 
 > Then, $f_{n}\rightrightarrows\text{a function }f$ and $f'(x)=g(x)$ for all $x\in[a, b]$.
-### Another way to understand uniform convergence
+
+## Another way to understand uniform convergence
 
 Let $X$ be a metric space. Define
 $$
@@ -174,48 +175,46 @@ Note that this turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed 
 > $$
 > \sup \lvert f(x)+g(x) \rvert \leq \lVert f \rVert + \lVert g \rVert .
 > $$
-> ◻️
 
 Note the order in which the suprema were taken in the above proof.
 
 Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$. 
 
-> [!Theorem] Claim
+> [!Claim]
 > $f_{n}\rightrightarrows f$ $\iff$ $f_{n}\to f$ in $\mathscr{B}(X)$, i.e, $\forall\epsilon>0$, $\exists N$ such that $n>N$ $\implies$ $\lVert f_{n}-f \rVert<\epsilon$.
-
-> **Proof**
-> $$
-> \lVert f_{n}-f \rVert\leq\epsilon \iff \sup _{x\in X}\ |f_{n}(x)-f(x)|\leq\epsilon \iff |f_{n}(x)-f(x)|\leq\epsilon \ \ \forall x\in X
-> $$
+> 
+> > [!Proof]-
+> > $$
+> > \lVert f_{n}-f \rVert\leq\epsilon \iff \sup _{x\in X}\ |f_{n}(x)-f(x)|\leq\epsilon \iff |f_{n}(x)-f(x)|\leq\epsilon \ \ \forall x\in X
+> > $$
 
 > [!Info] Remark
 > Consider $\mathscr{B}([0, 1])$. Let $\mathscr{C}([0, 1])$ be the set of all continuous functions on $[0, 1]$. Now, since continuous functions on compact sets are bounded, $\mathscr{C}([0, 1])\subset\mathscr{B}([0, 1])$. Since the limit of uniformly converging continuous functions is continuous the limit of every convergent sequence $(f_{n})$ in $\mathscr{C}([0, 1])$ is also in $\mathscr{C}([0, 1])$, i.e, $\mathscr{C}([0, 1])$ is a [[LEC ANA1 13#Epilogue|closed]] subset of $\mathscr{B}([0, 1])$!
-### Criteria for uniform convergence
+## Criteria for uniform convergence
 
-#### The Cauchy Criterion
+### The Cauchy Criterion
 
 > [!Theorem]
 > The sequence of functions $(f_{n})$ defined on $E$ converges uniformly on $E$ if and only if for every $\epsilon>0$ there exists an integer $N$ such that $m\geq N$, $n\geq N$, $x\in E$ implies 
 > $$
 > |f_{n}(x)-f_{m}(x)|\leq \epsilon.
 > $$
-
-> Proof of $\implies$
-> There exists $N$ such that $n>N$ implies $|f_{n}(x)-f(x)|<\epsilon$ for all $x\in E$. Thus, $\forall n, m > N$,
-> $$
-> \begin{align}
-> |f_{n}(x)-f_{m}(x)| & \leq|f_{n}(x)-f(x)|+|f(x)-f_{m}(x)| \\
->  & \leq \epsilon + \epsilon \ \ 
-> \end{align}
-> $$
 > 
-> Proof of $\Longleftarrow$
-> The [[Cauchy sequences#Proof of Cauchy $ implies$ convergent|Cauchy criterion]] for sequences of real numbers tells us that the sequence $(f_{n}(x))$ converges for every fixed $x$. Thus, $(f_{n})$ is pointwise convergent to some function $f$. We need to prove that this convergence is uniform. Choose $N$ such that $m, n\geq N$ implies $|f_{n}(x)-f_{m}(x)|\leq \epsilon$ for all $x\in E$. Now, keep $n$ and $x$ fixed, and consider the sequence obtained by incrementing $m$: $|f_{n}(x)-f_{m+1}(x)|, |f_{n}(x)-f_{m+2}(x)|, \dots$. All of these are less than $\epsilon$. Thus, their limit must also be less than $\epsilon$. So, we have
-> $$
-> |f_{n}(x)-f(x)|\leq \epsilon\ \ \ \  \forall n\geq N, \forall x\in E.
-> $$
-
-#### The M-test
+> > [!Proof]-
+> > Let $N$ be such that $n>N$ implies $|f_{n}(x)-f(x)|<\epsilon$ for all $x\in E$. Thus, $\forall n, m > N$,
+> > $$
+> > \begin{align}
+> > |f_{n}(x)-f_{m}(x)| & \leq|f_{n}(x)-f(x)|+|f(x)-f_{m}(x)| \\
+> >  & \leq \epsilon + \epsilon \ \ 
+> > \end{align}
+> > $$
+> > ---
+> > Conversely, the [[Cauchy sequences#Proof of Cauchy $ implies$ convergent|Cauchy criterion]] for sequences of real numbers tells us that the sequence $(f_{n}(x))$ converges for every fixed $x$. Thus, $(f_{n})$ is pointwise convergent to some function $f$. We need to prove that this convergence is uniform. Choose $N$ such that $m, n\geq N$ implies $|f_{n}(x)-f_{m}(x)|\leq \epsilon$ for all $x\in E$. Now, keep $n$ and $x$ fixed, and consider the sequence obtained by incrementing $m$: $|f_{n}(x)-f_{m+1}(x)|, |f_{n}(x)-f_{m+2}(x)|, \dots$. All of these are less than $\epsilon$. Thus, their limit must also be less than $\epsilon$. So, we have
+> > $$
+> > |f_{n}(x)-f(x)|\leq \epsilon\ \ \ \  \forall n\geq N, \forall x\in E.
+> > $$
+> 
+### The M-test
 
 > [!Theorem]
 > Suppose $(f_{n})$ is a sequence of functions defined on $E$, and suppose 
@@ -223,11 +222,11 @@ Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$.
 > |f_{n}(x)|\leq M_{n}\ \ \ \ (x\in E, n=1, 2, 3,\dots).
 > $$
 > Then, $\sum M_{n}$ converges $\implies$ $\sum f_{n}$ converges uniformly on $E$.
-
-> **Proof**
-> If $\sum M_{n}$ converges, then, for arbitrary $\epsilon>0$, from the [[LEC ANA1 30#Preliminaries|Cauchy criterion for series]], 
-> $$
-> \left\lvert  \sum_{i=n}^{m} f_{i}(x)  \right\rvert \leq \sum_{i=n}^{m} M_{i}\leq \epsilon\ \ \ \ (x\in E),
-> $$
-> provided $m$ and $n$ are large enough. Uniform convergence follows from the Cauchy criterion for uniform convergence. Note the implicit use of the triangle inequality above.
-
+> 
+> > [!Proof]-
+> > If $\sum M_{n}$ converges, then, for arbitrary $\epsilon>0$, from the [[LEC ANA1 30#Preliminaries|Cauchy criterion for series]], 
+> > $$
+> > \left\lvert  \sum_{i=n}^{m} f_{i}(x)  \right\rvert \leq \sum_{i=n}^{m} M_{i}\leq \epsilon\ \ \ \ (x\in E),
+> > $$
+> > provided $m$ and $n$ are large enough. Uniform convergence follows from the Cauchy criterion for uniform convergence. Note the implicit use of the triangle inequality above.
+> 

@@ -47,7 +47,7 @@ Rudin, 2.19
 >$$
 
 >**Proof**
->Choose $s=r-d(p, q)$. Use triangle inequality. ❏
+>Choose $s=r-d(p, q)$. Use triangle inequality.
 
 As defined later, this basically means every open ball is an open set.
 ### If $f$ is continuous, $f^{-1}$ of any ball is a neighborhood of each of its points
@@ -58,7 +58,7 @@ Now, we make the following claim:
 >Given $f:X\to Y$, $f$ is continuous $\implies$ $f^{-1}(B)$ is a neighborhood of any of the points of $f^{-1}(B)$, where $B$ is a ball in $Y$.
 
 >**Proof**
->$f^{-1}(B)$ contains all the point $x\in X$ such that $f(x)\in B$. From the previous theorem, there exists an $\epsilon>0$ such that $B_{\epsilon}(f(x))\subset B$. Since $f$ is continuous, there exists a $\delta>0$ such that $f(B_{\delta}(x))\subset B_{\epsilon}(f(x))$, which implies $f(B_{\delta}(x))\subset B$, which implies $B_{\delta}(x)\subset f^{-1}(B)$. ❏
+>$f^{-1}(B)$ contains all the point $x\in X$ such that $f(x)\in B$. From the previous theorem, there exists an $\epsilon>0$ such that $B_{\epsilon}(f(x))\subset B$. Since $f$ is continuous, there exists a $\delta>0$ such that $f(B_{\delta}(x))\subset B_{\epsilon}(f(x))$, which implies $f(B_{\delta}(x))\subset B$, which implies $B_{\delta}(x)\subset f^{-1}(B)$.
 
 This property of "being a neighborhood of any of its points" is going to be the defining property of open sets. There exists another logically equivalent property: being a union of open balls.
 
@@ -75,7 +75,7 @@ This property of "being a neighborhood of any of its points" is going to be the 
 >**Proof of $2\implies 1$**
 >We have already shown that every ball satisfies 1. It follows that a union of balls must also satisfy 1, since every point in the union will be a part of at least one ball. ❏
 
-It follows from the first theorem that ($f$ is continuous $\implies$ $f^{-1}$ of any ball in $Y$ is a union of balls in $X$). Since $f^{-1}$ preserves unions ([[2015_Book_UnderstandingAnalysis.pdf#page=24|Abbot exercise 1.2.9]], if you're unsure), we can make the more general statement ($f$ is continuous $\implies$ $f^{-1}$ of union of balls in $Y$ is a union of balls in $X$). Having motivated it enough, we finally define an open set.
+It follows from the first theorem that ($f$ is continuous $\implies$ $f^{-1}$ of any ball in $Y$ is a union of balls in $X$). Since $f^{-1}$ preserves unions ( @abbottUnderstandingAnalysis2015 exercise 1.2.9, if you're unsure), we can make the more general statement ($f$ is continuous $\implies$ $f^{-1}$ of union of balls in $Y$ is a union of balls in $X$). Having motivated it enough, we finally define an open set.
 ### Open sets
 
 >[!Definition]

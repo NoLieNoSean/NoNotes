@@ -1,4 +1,3 @@
-`Vasudeva S N`
 # Question 4
 
 ## Part a

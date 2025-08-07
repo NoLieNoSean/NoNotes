@@ -32,4 +32,4 @@ Note that $(C[a, b], \lVert \cdot \rVert_{\infty})$ and $(C[a, b], \lVert \cdot 
 
 ---
 
-Refer LADW, chapter 5 for parallelogram identity, polarization identity, and the relation between norms and inner products. Basically, every inner product space can be made into a NLS by the standard definition ($\lVert x \rVert=\sqrt{ \langle x, x \rangle}$). However, an inner product can be defined on an NLS iff the norm satisfies the parallelogram law.
+Refer @treilLinearAlgebraDone2014 chapter 5 for parallelogram identity, polarization identity, and the relation between norms and inner products. Basically, every inner product space can be made into a NLS by the standard definition ($\lVert x \rVert=\sqrt{ \langle x, x \rangle}$). However, an inner product can be defined on an NLS iff the norm satisfies the parallelogram law.

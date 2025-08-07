@@ -7,9 +7,7 @@ date: 2024-10-23
 time: 15:30
 ---
 ![[1729684704658.jpg]]
-## Definition of the integral
-
-### Partitions
+# Definition of the integral
 
 > [!Definition]
 > A *partition* $P$ of $[a, b]$ is a finite (multi)set of points $x_{0}, x_{1}, \dots, x_{n}$ where
@@ -18,10 +16,13 @@ time: 15:30
 > $$
 > We write $\Delta x_{i}\equiv x_{i}-x_{i-1}$. 
 
-Note that a partition has finitely many points.
-### Riemann integrals
+^d118a8
 
-> [!Definition] Rudin, 6.1
+Note that a partition has finitely many points.
+
+## Riemann integrals
+
+> [!Definition] Rudin 6.1
 > Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Corresponding to each partition $P$ of $[a, b]$, define
 > $$
 > \begin{array}{cc}
@@ -47,6 +48,8 @@ Note that a partition has finitely many points.
 > $$
 > where the $\inf$ and $\sup$ are taken over all partitions $P$ of $[a, b]$. 
 
+^f2c7f5
+
 Observe that $L(P, f)\leq U(P, f)$ for a given partition $P$, since $m_{i}\leq M_{i}$. Further, if $M=\sup f(x)$ and $m=\inf f(x)$, $x\in[a, b]$, then
 $$
 m(b-a)\leq L(P, f)\leq U(P, f)\leq M(b-a).
@@ -60,11 +63,9 @@ Since $L(P, f)$ is bounded above and $U(P, f)$ is bounded below, we can be sure 
 > $$
 
 > [!Important]
-> Since the definition of the Riemann integral requires $f$ to be bounded, the statement $f\in\mathscr R$ comes loaded with the presumption that $f$ is bounded. Ditto for the R-S integral.
+> Since the definition of the Riemann integral requires $f$ to be bounded, the statement $f\in\mathscr R$ presumes that $f$ is bounded. Ditto for the R-S integral.
 
-### Riemann-Stieltjes integrals
-
-Rudin, 6.2
+## Riemann-Stieltjes integrals
 
 Suppose $f:[a, b]\to \mathbb{R}$ is bounded. Let $\alpha$ be a monotone increasing function on $[a, b]$. For a partition $P$ of $[a, b]$, define $\Delta\alpha_{i}\equiv\alpha(x_{i})-\alpha(x_{i-1})$. Define
 
@@ -96,62 +97,63 @@ Observe that
 - $f$ begin Riemann-Stieltjes integrable for some $\alpha$ does not mean $f$ is Riemann-Stieltjes integrable for all $\alpha$. 
 
 ---
-## Lower integrals, upper integrals and integrability
+# Lower integrals, upper integrals and integrability
 
 > [!Definition] Definition Rudin, 6.3
 > A partition $P^{*}$ is called a *refinement* of $P$ if $P^{*}\supset P$. Given two partitions $P_{1}$ and $P_{2}$, we say $P^{*}$ is their *common refinement* if $P^{*}=P_{1}\cup P_{2}$.
 
-### Effect of refinement on upper and lower sums
+## Effect of refinement on upper and lower sums
 
-> [!Theorem] Theorem Rudin, 6.4
+> [!Theorem] Rudin 6.4
 > $P^{*}$ is a refinement of $P$ $\implies$ $L(P, f, \alpha)\leq L(P^{*}, f, \alpha)$ and $U(P, f, \alpha)\geq U(P^{*}, f, \alpha)$. 
+> 
+> > [!Proof]-
+> > It is enough to consider the case where $P^{*}$ contains a single extra point $x^{*}$ with say $x_{i-1}<x^{*}<x_{i}$. Let
+> > $$
+> > \begin{array}{cc}
+> > w_{1}\equiv \inf f(x) & x\in[x_{i-1}, x^{*}], \\
+> > w_{2}\equiv \inf f(x) & x\in[x^{*}, x_{i}].
+> > \end{array}
+> > $$
+> > Note that $w_{1}, w_{2}\geq m_{i}$. Now, 
+> > $$
+> > \begin{align}
+> > L(P^{*}, f, \alpha)-L(P, f, \alpha)  = & \ w_{1}[\alpha(x^{*})-\alpha(x_{i-1})]+w_{2}[\alpha(x_{i})-\alpha(x^{*})] \\
+> >   & -m_{i}[\alpha(x_{i})-\alpha(x_{i-1})] \\
+> > = & \ (w_{1}-m_{i})[-\alpha(x_{i-1})]+(w_{2}-m_{i})[\alpha(x_{i})] \\
+> >  & +w_{1}\alpha(x^{*})-w_{2}\alpha(x^{*})-m_{i}\alpha(x^{*})+m_{i}\alpha(x^{*}) \\
+> > = & \ (w_{1}-m_{i})[\alpha(x^{*})-\alpha(x_{i-1})]+(w_{2}-m_{i})[\alpha(x_{i})-\alpha(x^{*})] \\
+> > \geq  & \ 0
+> > \end{align}
+> > $$
+> 
 
-> **Proof**
-> It is enough to consider the case where $P^{*}$ contains a single extra point $x^{*}$ with say $x_{i-1}<x^{*}<x_{i}$. Let
-> $$
-> \begin{array}{cc}
-> w_{1}\equiv \inf f(x) & x\in[x_{i-1}, x^{*}], \\
-> w_{2}\equiv \inf f(x) & x\in[x^{*}, x_{i}].
-> \end{array}
-> $$
-> Note that $w_{1}, w_{2}\geq m_{i}$. Now, 
-> $$
-> \begin{align}
-> L(P^{*}, f, \alpha)-L(P, f, \alpha)  = & \ w_{1}[\alpha(x^{*})-\alpha(x_{i-1})]+w_{2}[\alpha(x_{i})-\alpha(x^{*})] \\
->   & -m_{i}[\alpha(x_{i})-\alpha(x_{i-1})] \\
-> = & \ (w_{1}-m_{i})[-\alpha(x_{i-1})]+(w_{2}-m_{i})[\alpha(x_{i})] \\
->  & -m_{i}x^{*}+m_{i}x^{*} \\
-> = & \ (w_{1}-m_{i})[x^{*}-\alpha(x_{i-1})]+(w_{2}-m_{i})[\alpha(x_{i})-x^{*}] \\
-> \geq  & \ 0
-> \end{align}
-> $$
-> ❏
+## Relation between upper and lower integrals
 
-### Relation between upper and lower integrals
-
-> [!Theorem] Theorem Rudin, 6.5
+> [!Theorem] Rudin 6.5
 > $$
 > \underline{\int_{a}^{b}} f \, d\alpha \leq \overline{\int_{a}^{b}} f \, d\alpha .
 > $$
-
-> **Proof**
-> Consider arbitrary partitions $P_{1}$ and $P_{2}$ of $[a, b]$. We will show that $L(P_{1}, f, \alpha)\leq U(P_{2}, f, \alpha)$. Let $P^{*}$ be the common refinement $P_{1}\cup P_{2}$. Then, from the previous theorem, we have
-> $$
-> L(P_{1}, f, \alpha)\leq L(P^{*}, f, \alpha)\leq U(P^{*}, f, \alpha)\leq U(P_{2}, f, \alpha).
-> $$
-> Now, fix $P_{2}$. We get $L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$ for all $P$. Thus, $\sup L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$. However, this is true for all $P_{2}$. Thus, $\sup L(P, f, \alpha)\leq \inf U(P, f, \alpha)$. ❏
-
-### A criterion for integrability
-
-> [!Theorem] Theorem Rudin, 6.6
-> $f:[a, b]\to \mathbb{R}\in\mathscr{R}(\alpha)$ $\iff$ $\forall\epsilon>0$ $\exists$ partition $P$ of $[a, b]$ such that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$. 
-
-> **Proof of $\Longleftarrow$**
-> If $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for some $P$, then $\inf U(P, f, \alpha)-\sup L(P, f, \alpha)<\epsilon$. Combined with 6.5, this gives us
-> $$
-> 0\leq \overline{\int_{a}^{b}} f \, d\alpha-\underline{\int_{a}^{b}} f \, d\alpha \leq \epsilon
-> $$
-> for all $\epsilon$. Thus, we must have equality.
 > 
-> **Proof of $\Longrightarrow$**
-> Given $\epsilon$, find $P_{1}$ such that $\int f\,d\alpha-L(P_{1}, f, \alpha)< \frac{\epsilon}{2}$ and $P_{2}$ such that $U(P_{2}, f, \alpha)-\int f\,d\alpha< \frac{\epsilon}{2}$. Now, consider the common refinement $P^{*}$ of $P_{1}$ and $P_{2}$. From 6.4, we get $U(P^{*}, f, \alpha)-L(P^{*}, f, \alpha)< \epsilon$. ❏
+> > [!Proof]-
+> > Consider arbitrary partitions $P_{1}$ and $P_{2}$ of $[a, b]$. We will show that $L(P_{1}, f, \alpha)\leq U(P_{2}, f, \alpha)$. Let $P^{*}$ be the common refinement $P_{1}\cup P_{2}$. Then, from the previous theorem, we have
+> > $$
+> > L(P_{1}, f, \alpha)\leq L(P^{*}, f, \alpha)\leq U(P^{*}, f, \alpha)\leq U(P_{2}, f, \alpha).
+> > $$
+> > Now, fix $P_{2}$. We get $L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$ for all $P$. Thus, $\sup L(P, f, \alpha)\leq U(P_{2}, f, \alpha)$. However, this is true for all $P_{2}$. Thus, $\sup L(P, f, \alpha)\leq \inf U(P, f, \alpha)$.
+> 
+
+## A criterion for integrability
+
+> [!Theorem] Rudin, 6.6
+> $f:[a, b]\to \mathbb{R}\in\mathscr{R}(\alpha)$ $\iff$ $\forall\epsilon>0$ $\exists$ partition $P$ of $[a, b]$ such that $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$. 
+> 
+> > [!Proof]-
+> > ($\impliedby$) If $U(P, f, \alpha)-L(P, f, \alpha)<\epsilon$ for some $P$, then $\inf U(P, f, \alpha)-\sup L(P, f, \alpha)<\epsilon$. Using 6.5, we have
+> > $$
+> > 0\leq \overline{\int_{a}^{b}} f \, d\alpha-\underline{\int_{a}^{b}} f \, d\alpha \leq \epsilon
+> > $$
+> > for all $\epsilon$. Thus, we must have equality.
+> > 
+> > ($\implies$) Given $\epsilon$, find $P_{1}$ such that $\int f\,d\alpha-L(P_{1}, f, \alpha)< \frac{\epsilon}{2}$ and $P_{2}$ such that $U(P_{2}, f, \alpha)-\int f\,d\alpha< \frac{\epsilon}{2}$. Now, consider the common refinement $P^{*}$ of $P_{1}$ and $P_{2}$. From 6.4, we get $U(P^{*}, f, \alpha)-L(P^{*}, f, \alpha)< \epsilon$. 
+

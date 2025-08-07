@@ -45,7 +45,7 @@ Some definitions:
 > $$
 > where the infimum and supremum are taken over finitely supported, simple functions on $E$. The common value of the infimum and supremum is called the **Lebesgue integral** of $f$ over $E$, denoted by $\int_{E}f\, dm$.
 
-Analogous to the definition of the [[LEC ANA1 26#Riemann integrals|Riemann integral]]. 
+Analogous to the definition of the [[LEC ANA1 26#^f2c7f5|Riemann integral]]. 
 
 If $f:[a, b]\to \mathbb{R}$ is a bounded, Riemann integrable function, then it is Lebesgue integrable and the two integrals are equal.
 
