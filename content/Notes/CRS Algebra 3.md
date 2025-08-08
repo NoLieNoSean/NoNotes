@@ -11,5 +11,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 [[Intro to Ring Theory]]
 
+# Lecture notes
+
 [[LEC ALG3 1]]
 [[LEC ALG3 2]]

@@ -1,4 +1,6 @@
 Refer @dummitAbstractAlgebra2004 chapter 7
+Additional material from @aluffiAlgebraChapter02009 chapter 3 
+These references disagree on many definitions.
 # Preliminaries
 
 > [!Definition] Ring
@@ -41,7 +43,8 @@ $$
 > 1. A nonzero element $a\in R$ is a **left-zero-divisor** if there exist elements $b\ne 0$ in $R$ for which $ab=0$. Ditto for **right zero divisors**. Both are collectively called **zero divisors**.
 > 2. Assume $R$ has an identity $1\ne 0$. An element $u\in R$ is a **left-unit** if $\exists v\in R$ such that $uv=1$.; it is a **right-unit** if $\exists v\in R$ such that $vu=1$. **Units** are two-sided units.
 
-> [!Proposition]
+
+> [!Proposition] Aluffi III.1.12
 > In a ring $R$, 
 > 1. $u$ is not a left (right) zero divisor $\iff$ left (right) multiplication by $a$ is injective;
 > 2. $u$ is a left (right) unit $\iff$ left (right) multiplication by $u$ is surjective;
@@ -76,6 +79,8 @@ To show that a subset of a ring $R$ is a subring, it suffices to show that it is
 > 1. A **ring homomorphism** is a map $\varphi:R\to S$ satisfying $\varphi(a+b)=\varphi(a)+\varphi(b)$ for all $a, b\in R$ and $\varphi(ab)=\varphi(a)\varphi(b)$ for all $a, b\in R$. 
 > 2. The **kernel** of the ring homomorphism $\varphi$, denoted $\ker\varphi$, is the set of elements of $R$ that map to $0$ in $S$.
 > 3. A bijective ring homomorphism is called an **isomorphism**.
+
+^6d13b3
 
 If $\varphi:R\to S$ is a ring homomorphism, $\varphi:(R, +)\to(S, +)$ is a group homomorphism, and their kernels coincide.
 

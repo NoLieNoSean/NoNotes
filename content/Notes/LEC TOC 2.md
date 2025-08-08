@@ -17,3 +17,4 @@ $\Delta$ can also be thought of as a function $Q\times\Sigma\to 2^{Q}$. If the i
 
 Languages recognizable by finite state automata are called "recognizable".
 
+Exercise: design an NFA and a DFA which accepts a word if its first and second last letters are the same.

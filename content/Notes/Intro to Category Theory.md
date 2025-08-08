@@ -248,6 +248,7 @@ In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and 
 > can be easily proven universally, the converse is not generally true (It is true, of course, in $\textsf{Set}$). For example [^1], the map $n\mapsto 2n$ defines a left-cancellable group homomorphism $f:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$. However, there is no group homomorphism $g:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ such that $gf=\mathrm{id}_{\mathbb{Z}/2\mathbb{Z}}$. Similarly, the map $n\mapsto n\mod 2$ defines a right-cancellable group homomorphism $f:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$. However, since every homomorphism $g:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$ must map $[1]_{2}$ to $[2]_{4}$, $f$ is not right invertible.
 > 
 > > [!Info]- A group theoretic digression
+> > 
 > > At this point, the question "When does a surjective homomorphism have a right inverse?" naturally arises. If $\varphi:G\to H$ is a surjective homomorphism, I conjectured that the answer is yes when $H$ is isomorphic to a subgroup of $G$ (based on having constructed a right inverse for [[LEC ALG2 3#^6cf5fb|this homomorphism]]). However, a much stronger condition is required: The existence of a right inverse for $\varphi$ is equivalent to the short exact sequence
 > > $$
 > > 1\to \ker\varphi\to G\to H\to 1
@@ -276,7 +277,7 @@ A category need not have initial and final objects, and when they exist, they ma
 > Moreover, these isomorphisms are uniquely determined.
 > 
 > > [!Proof]-
-> > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$$|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, whence $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
+> > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$ $|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, whence $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
 > 
 
 The same object can be both initial and final, as singletons are in the category of pointed sets.
