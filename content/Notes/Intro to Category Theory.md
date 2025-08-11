@@ -225,6 +225,8 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 > $$
 > In other words, $f$ is a monomorphism if it is *left cancellable*.
 
+^8cec61
+
 > [!Definition] Epimorphism
 > Let $\textsf{C}$ be a category. A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is an **epimorphism** if the following holds: for all objects $Z$ of $\textsf{C}$ and all morphisms $\alpha, \alpha'\in \text{Hom}_{\textsf{C}}(B, Z)$, 
 > $$
@@ -253,7 +255,7 @@ In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and 
 > > $$
 > > 1\to \ker\varphi\to G\to H\to 1
 > > $$
-> > splitting. Cf.  @conradSPLITTINGSHORTEXACT22, Theorem 3.3.
+> > splitting (Cf.  @conradSPLITTINGSHORTEXACT22 Theorem 3.3).
 > 
 
 [^1]: https://math.stackexchange.com/questions/3824875/monomorphism-that-is-not-left-invertible-epimorphism-that-is-not-right-invertib

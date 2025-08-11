@@ -2,20 +2,16 @@
 tags:
   - ALG3
   - Lecture
+  - Processed
 date: 2025-08-05
 time: 09:09
 ---
 First quiz on Sep 1.
 
----
-# Rings
-
 Clare's definitions match the ones from @aluffiAlgebraChapter02009 : all rings have $1$, and ring homomorphisms map $1$ to $1$. Ideals are no longer subrings (since that would need them to have a $1$, which in turn would force any ideal to be the whole ring).
 
-> [!Definition]
-> Let $I\subseteq R$ and $(I, +)$ be an abelian group. $I$ is a left/right ideal if it is closed under left/right multiplication by elements of $R$. 
-
-## Ring homomorphisms
+---
+# Ring homomorphisms
 
 Same definition as [[Intro to Ring Theory#^6d13b3|here]], but with the additional requirement that $\varphi(1_{R})=1_{S}$.
 
@@ -23,7 +19,7 @@ It is evident that rings form a [[Intro to Category Theory#^05a089|category]], d
 
 The zero ring is clearly *final* in $\textsf{Ring}$. It is not initial because of the requirement that ring homomorphisms send $1$ to $1$.
 
-$\mathbb{Z}$ is *initial* in $\textsf{Ring}$: for every  ring $R$ we can define a group homomorphism $\varphi:\mathbb{Z}\to R$ by $\varphi(n)=n1_{R}$. But $\varphi$ is in fact a ring homomorphism, since $\varphi(1)=1_{R}$, and
+$\mathbb{Z}$ is *initial* in $\textsf{Ring}$: for every  ring $R$ we can define a group homomorphism $\varphi:\mathbb{Z}\to R$ by $\varphi(n)=n1_{R}$. But $\varphi$ is in fact a ring homomorphism, since $\varphi(1)=1_{R}$, and 
 $$
 \begin{align}
 \varphi(mn) & =(mn)1_{R}=m(n 1_{R}) \\
@@ -37,7 +33,36 @@ Ring homomorphisms preserve units: that is, if $u$ is a left/right unit in $R$ a
 
 On the other hand, the image of a non-zero-divisor by a ring homomorphism may well be a zero-divisor: the canonical projection $\pi:\mathbb{Z}\to \mathbb{Z}/6\mathbb{Z}$ is a ring homomorphism, and $\pi(2)=[2]_{6}$ is a zero divisor.
 
-## Polynomial rings
+## Monomorphisms and epimorphisms
+
+Remember that a monomorphism is a left cancellable morphism (and not necessarily a left invertible one!). 
+
+The analogue of [[Categorical notes on group theory#^79d9ee]] holds in $\textsf{Ring}$:
+
+> [!Proposition] @aluffiAlgebraChapter02009 III.2.4
+> For a ring homomorphism $\varphi:R\to S$, the following are equivalent:
+> 1. $\varphi$ is a monomorphism;
+> 2. $\ker\varphi=\{ 0 \}$;
+> 3. $\varphi$ is injective (as a set function)
+> 
+> > [!Proof]-
+> > $(1)\implies(2)$: Using [[#^0422dc]], we get unique homomorphisms $\text{ev}_{r}:\mathbb{Z}[x]\to R$ and $\text{ev}_{0}:\mathbb{Z}[x]\to R$ such that $\text{ev}_{r}(x)=r$ and $\text{ev}_{0}(x)=0$. Consider the parallel compositions
+> > $$
+> > \mathbb{Z}[x] \underset{\text{ev}_{0}}{\overset{\text{ev}_{r}}{\rightrightarrows}}R\overset{\varphi}{\to}S.
+> > $$
+> > since $\varphi(r)=0=\varphi(0)$, the compositions $\varphi \circ \text{ev}_{r}$ and $\varphi \circ \text{ev}_{0}$ agree; hence $\text{ev}_{r}=\text{ev}_{0}$. Therefore $r=\text{ev}_{r}(x)=\text{ev}_{0}(x)=0$, which proves $(2)$.
+> 
+
+Note that we had to get a little creative here since we couldn't use $\ker\varphi$ as we did in the group theoretic version, since $\ker\varphi$ is not a subring.
+
+However, unlike $\textsf{Set}$, $\textsf{Gp}$, and $\textsf{Ab}$, *epimorphisms need not be surjective* in $\textsf{Ring}$. Consider the inclusion homomorphism $\iota :\mathbb{Z}\to \mathbb{Q}$: $\iota$ is not surjective, hence it is not an epimorphism in $\textsf{Set}$ or $\textsf{Ab}$; but it is an epimorphism in $\textsf{Ring}$ since if homomorphisms $\alpha_{1}, \alpha_{2}:\mathbb{Q}\to R$ agree on $\mathbb{Z}$, then they must agree on $\mathbb{Q}$:
+$$
+\alpha_{i}\left( \frac{p}{q} \right)=\alpha_{i}(p)\alpha_{i}(q^{-1})=\alpha_{i}(p)\alpha_{i}(q)^{-1}.
+$$
+Thus, in $\textsf{Ring}$, a homomorphism may be both a monomorphism and an epimorphism without being an isomorphism!
+
+---
+# Polynomial rings
 
 Let $R$ be a ring. A **polynomial** $f(x)$ in the indeterminate $x$ and with coefficients in $R$ is a *finite* linear combination of nonnegative 'powers' of $x$ with coefficients in $R$. Two polynomials are taken to be equal if all the coefficients are equal. The set of polynomials in $x$ over $R$ is noted $R[x]$. With addition and multiplication defined as one would expect, $R[x]$ is a ring. 
 
@@ -119,3 +144,32 @@ Note again that for any ring $S$, the image of the unique ring homomorphism $\io
 > \end{align}
 > $$
 > Thus, every polynomial $f(x)\in S[x]$ determines a *polynomial function* $f:S\to S$ defined by $s\mapsto \overline{\alpha}_{s}(f(x))$. 
+
+^0422dc
+
+---
+# Products and coproducts
+
+If $R_{1}$ and $R_{2}$ are rings, then $R_{1}\times R_{2}$ may be defined by endowing the direct product of groups $R_{1}\times R_{2}$ with componentwise multiplication. The identity is $(1_{R_{1}}, 1_{R_{2}})$. 
+
+> [!Example]
+> Componentwise multiplication is not the only ring structure one can define on the direct product of underlying groups. For example, $\mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}$, under componentwise multiplication, is not a division ring, and thus, not a field. However, it is possible to make it a division ring by altering the multiplication map:
+> $$
+> \begin{array}{l|llll}
+> &0&a&b&1 \\
+> \hline 
+> 0 & 0 & 0 & 0  & 0 \\
+> a  & 0 & a/b & 0/1 & a\\
+> b  & 0 & 0/1 & b/a & b\\
+> 1 & 0 & a & b & 1
+> \end{array}
+> $$
+> The entries before the slashes are the one arising from componentwise multiplication, and those after are the alternate definitions (note that the first and fourth row and column are immutable). One only needs to very the distributive property for $a$ and $b$, which is easily done.
+
+However, $R_{1}\times R_{2}$ does not satisfy the [[Intro to Category Theory#Coproducts|universal property of coproducts]]: although [[Categorical notes on group theory#^8e8d67|there is]] a unique *group* homomorphism from $R_{1}\times R_{2}$ to $A$ for any $(A, \varphi_{R_{1}}, \varphi_{R_{2}})\in \textsf{C}^{R_{1}, R_{2}}$, this does not respect multiplication, and thus is not a ring homomorphism:
+$$
+\begin{align}
+ & \varphi(1_{R_{1}\times R_{2}})=\varphi(1_{R_{1}}, 1_{R_{2}}) \\
+ & =\varphi(1_{R_{1}}, 0)+\varphi(0, 1_{R_{2}})=1_{A}+1_{A}\ne 1_{A}.
+\end{align}
+$$

@@ -5,6 +5,91 @@ tags:
 date: 2025-08-07
 time: 09:12
 ---
+# Quotients
+
+> [!Definition]
+> Let $I\subseteq R$ and $(I, +)$ be an abelian group. $I$ is a left/right **ideal** if it is closed under left/right multiplication by elements of $R$. 
+
+Let $I$ be a subgroup of the abelian group $(R, +)$ of a ring $R$. Subgroups of abelian groups are automatically normal, so we have a quotient group $R/I$, whose elements are cosets $r+I$ of $I$. Further, we have a surjective group homomorphism
+$$
+\pi:R\to R/I, \quad r\mapsto r+I.
+$$
+What requirements should $I$ meet, in order to have a ring structure on $R/I$, such that $\pi$ becomes a ring homomorphism? If $\pi$ is a ring homomorphism, there is only one way to define a ring structure on $R/I$:
+$$
+(a+I)(b+I)=\pi(a)\pi(b)=\pi(ab)=ab+I.
+$$
+Thus, there is only one sensible ring structure on $R/I$, given by $(a+I)(b+I)\equiv ab+I$. Note that if this operation is well defined, $R/I$ is a ring. When is this operation well defined?
+
+> [!Claim]
+> The operation $(a+I)(b+I)\equiv ab+I$ on $R/I$ is well defined iff $I$ is an ideal of $R$.
+> 
+> > [!Proof]-
+> > Assume the operation is well defined, making $R/I$ into a ring, and $\pi$ into a ring homomorphism. $\ker \pi=I$. The absorption properties are easily verified: for all $a\in I$ and $r\in R$, 
+> > $$
+> > \begin{align}
+> > \pi(ra)=\pi(r)\pi(a)=\pi(r)\cdot 0=0, \\
+> > \pi(ar)=\pi(a)\pi(r)=0\cdot \pi(r)=0.
+> > \end{align}
+> > $$
+> > Thus, $I$ is an ideal.
+> > 
+> > Conversely, assume $I$ is an ideal. Let $\alpha, \beta\in I$. 
+> > $$
+> > \begin{align}
+> >  & (a+\alpha+I)(b+\beta+I) \\
+> >  & =(a+\alpha)(b+\beta)+I \\
+> >  & =ab+\alpha b+a\beta+\alpha\beta+I \\
+> >  & =ab+I,
+> > \end{align}
+> > $$
+> > which proves that the operation is well defined.
+> 
+
+**Thus, $R/I$ is a ring, in such a way that the canonical projection $\pi:R\to R/I$ is a ring homomorphism, iff $I$ is an ideal of $R$.**
+
+The [[LEC ALG2 4#^43c508|mapping property of quotient groups]] provides the scaffolding for its analogue in $\textsf{Ring}$: the needed (group) homomorphism exists and is unique by the group theoretic theorem; verifying it is a ring homomorphism is immediate.
+
+> [!Theorem] @aluffiAlgebraChapter02009 III.3.8
+> Let $I$ be a two-sided ideal of a ring $R$. Then for every ring homomorphism $\varphi:R\to S$ such that $I\subseteq \ker\varphi$ there exists a unique ring homomorphism $\tilde{\varphi}:R/I\to S$ so that the diagram
+> 
+> ```tikz
+> \usepackage{tikz-cd, amsmath, amssymb}
+> \begin{document}
+> \begin{tikzcd}
+> R\ar[rr, "\varphi"]\ar[rd, "\pi"']&&S\\
+> &R/I\ar[ru, "\exists!\tilde{\varphi}"']&
+> \end{tikzcd}
+> \end{document}
+> ```
+> commutes.
+
+This allows for the canonical decomposition and the first isomorphism theorem for rings. The realization that the ideals of a quotient $R/I$ are in bijective correspondence with ideals of $R$ containing $I$ leads to the third isomorphism theorem:
+
+> [!Theorem] @aluffiAlgebraChapter02009 III.3.11
+> Let $I$ be an ideal of a ring $R$, and let $J$ be an ideal of $R$ containing $I$. Then $J/I$ is an ideal of $R/I$, and
+> $$
+> \frac{R/I}{J/I}\cong \frac{R}{J}.
+> $$
+> 
+
+> [!Warning]
+> $J/I$ is not a ring! 
+
+## Characteristic
+
+The fact that $\mathbb{Z}$ is initial in $\textsf{Ring}$ prompts a natural definition. For a ring $R$, let $f:\mathbb{Z}\to R$ be the unique ring homomorphism. Then, $\ker f=n\mathbb{Z}$ for a well-defined nonnegative integer $n$ determined by $R$. This is called the **characteristic** of $R$.
+
+> [!Definition]
+> The **characteristic** of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, $\text{char}(R)=0$. 
+
+
+---
+
+
+
+
+
+
 
 > [!Definition]
 > The **center** of a ring $R$ 
@@ -12,7 +97,9 @@ time: 09:12
 > C(R)=\{ c\in R \ | \  cr=rc \forall r\in R\}.
 > $$
 
-Exercise: this is a subring of $R$. (Do clare's subrings need to have $1$?)
+Exercise: this is a subring of $R$.
+
+The entire theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}(G)$ is a ring for every abelian group $G$.
 
 > [!Definition] Module
 > A **left $R$ module**, where $R$ is a ring with $1$, is an additive abelian group $M$ with the operation $R\times M\to M$ $(r, m)\mapsto rm$ with the following axioms
@@ -36,10 +123,6 @@ Ditto for right $R$ module.
 > If $R$ is an integral domain, $1_{S}=1_{R}$ is forced. Also, if we require in our definition of ring homomorphisms for identity to be mapped to identity, the inclusion map $S\to R$ forces $1_{S}=1_{R}$. In this course, you can assume $1_{S}=1_{R}$.
 > 
 
-> [!Definition]
-> The characteristic of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, we say $\text{char}(R)=0$. 
-
-$\text{char}(\mathbb{Z}/p\mathbb{Z})=p$
 
 If $R$ is a ring and $I$ is a two sided ideal, what are the ideals in $R/I$?
 

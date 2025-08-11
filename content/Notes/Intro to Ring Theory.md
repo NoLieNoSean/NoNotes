@@ -46,7 +46,7 @@ $$
 
 > [!Proposition] Aluffi III.1.12
 > In a ring $R$, 
-> 1. $u$ is not a left (right) zero divisor $\iff$ left (right) multiplication by $a$ is injective;
+> 1. $u$ is not a left (right) zero divisor $\iff$ left (right) multiplication by $u$ is injective;
 > 2. $u$ is a left (right) unit $\iff$ left (right) multiplication by $u$ is surjective;
 > 3. $u$ is a left (right) unit $\implies$ right (left) multiplication by $u$ is injective, that is, $u$ is not a right (left) zero divisor.
 
@@ -159,4 +159,6 @@ Thus, every ideal is the kernel of a ring homomorphism and vice versa [[LEC ALG2
 > 
 > > [!Proof]-
 > > From the correspondence theorem for groups, we have a inclusion preserving bijection between the set of subgroups of $R$ containing $I$ and the set of subgroups of $R/I$, given by $A\leftrightarrow A/I$. Since $A$ is a subring of $R$ $\iff$ $A/I$ is a subring of $R/I$, a restriction of this bijection to the set of subrings of $R$ is the correspondence we are after. The second assertion is trivial.
+
+
 
