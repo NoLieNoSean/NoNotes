@@ -4,7 +4,7 @@ tags:
   - MOC
 ---
 CMI, Aug-Nov 2025, C Aiswarya
-@sipserIntroductionTheoryComputation2013
+@sipserIntroductionTheoryComputation2013, @kozenTheoryComputation2006
 
 ---
 
@@ -12,3 +12,4 @@ CMI, Aug-Nov 2025, C Aiswarya
 [[LEC TOC 2]]
 [[LEC TOC 3]]
 [[LEC TOC 4]]
+[[LEC TOC 5]]

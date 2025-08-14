@@ -8,5 +8,6 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 
 ---
 
-[[LEC CAL2 1]]
 [[LEC CAL2 2]]
+[[LEC CAL2 3]]
+[[LEC CAL2 4]]

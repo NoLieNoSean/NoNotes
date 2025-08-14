@@ -15,7 +15,10 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 [[LEC ALG3 1]] ✅
 [[LEC ALG3 2]]
+[[LEC ALG3 3]]
+[[LEC ALG3 4]]
 
 # Tutorials
 
 [[TUT ALG3 1]]
+[[TUT ALG3 2]]

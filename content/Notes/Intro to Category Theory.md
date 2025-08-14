@@ -185,6 +185,9 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 > [!Info] Groupoids
 > A category in which every morphism is an isomorphism is called a **groupoid**. A category can be constructed form any set endowed with a reflexive and transitive relation (ensuring identities and composition respectively). If the relation also happens to be symmetric, the category constructed is a groupoid (every morphism now has an inverse).
 
+> [!Note]
+> The notion of a "bijective homomorphism" does NOT always correspond to what an isomorphism is in general categories. Consider $\textsf{Poset}$ as a counter example. 
+
 > [!Proposition]
 > The inverse of an isomorphism is unique.
 > 
