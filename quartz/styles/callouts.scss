@@ -31,8 +31,8 @@
 
 
   &[data-callout] {
-    --color: rgb(130, 161, 241);
-    --border: #448aff44;
+    --color: #5681f0;
+    --border: #2072ff40;
     --bg: #3a82ff1c;
     --callout-icon: var(--callout-icon-note);
   }
@@ -91,6 +91,9 @@
       padding-bottom: 0;
       padding-top: 0;
     }
+    .callout-content{
+      padding-top: 1rem;
+    }
     .qed{
       font-family: 'CMU Serif', 'STIX Two Math', 'Times New Roman', serif; /* LaTeX-like font */
       font-size: 1em; /* Adjust size for visibility */
@@ -124,9 +127,9 @@
   }
 
   &[data-callout="tip"] {
-    --color: #00bfa5;
+    --color: #549b00;
     --border: #00bfa544;
-    --bg: #00bfa510;
+    --bg: #74d5002e;
     --callout-icon: var(--callout-icon-tip);
   }
 
@@ -140,14 +143,14 @@
   &[data-callout="question"] {
     --color: #dba642;
     --border: #dba64244;
-    --bg: #dba64210;
+    --bg: #d29c1c3b;;
     --callout-icon: var(--callout-icon-question);
   }
 
   &[data-callout="warning"] {
     --color: #db8942;
     --border: #db894244;
-    --bg: #db894210;
+    --bg: #ff723b42;
     --callout-icon: var(--callout-icon-warning);
   }
 

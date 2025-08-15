@@ -48,7 +48,7 @@ Remarks:
 2. If $A$ is countable, then $A$ has measure zero (it is easy to construct a countable cover consisting of shrinking rectangles such that the sum of their areas is less than $\epsilon$).
 3. If $A$ has measure $0$ and $B\subseteq A$, $B$ has measure $0$.
 4. $[0, 1]$ does not have measure $0$.
-5. Open rectangles can be used in place of closed rectangles in the definition of measure zero.
+5. Open rectangles can be used in place of closed rectangles in the definition of measure zero (we will be using this fact often).
 6. A countable union of measure zero sets is measure zero (the proof is exactly what you would expect).
 
 > [!Definition]
@@ -64,7 +64,7 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 > If $A$ is compact and has measure zero, $A$ has content zero.
 > 
 > > [!Proof]-
-> > Let $\epsilon> 0$. Since $A$ has measure $0$, there exists a cover of $A$ by closed rectangles such that their cumulative volume is less than $\epsilon$. Since $A$ is compact, a finite number $U_{1}, \dots, U_{n}$ of the $U_{i}$ also cover $A$.
+> > Let $\epsilon> 0$. Since $A$ has measure $0$, there exists a cover of $A$ by open rectangles such that their cumulative volume is less than $\epsilon$. Since $A$ is compact, a finite number $U_{1}, \dots, U_{n}$ of the $U_{i}$ also cover $A$.
 
 ^322cf9
 
@@ -83,6 +83,9 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 
 > [!Theorem] @spivakCalculusManifoldsModern1965 1-10
 > The bounded function $f$ is continuous at $a$ iff $o(f, a)=0$.
+
+[!Proof]-
+$(\implies)$ 
 
 > [!Theorem] @spivakCalculusManifoldsModern1965 1-11
 > Let $A\subseteq \mathbb{R}^{n}$ be closed. If $f:A\to \mathbb{R}$ is any bounded function, and $\epsilon> 0$, then $\{ x\in A:o(f, x)\geq \epsilon \}$ is closed.

@@ -12,4 +12,5 @@ export { TableOfContents } from "./toc"
 export { HardLineBreaks } from "./linebreaks"
 export { RoamFlavoredMarkdown } from "./roam"
 export { TextTransforms } from "./textTransforms"
+export { NumberEquaitons } from "./numberEquations"
 
