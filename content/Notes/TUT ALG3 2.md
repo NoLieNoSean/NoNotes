@@ -63,4 +63,13 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > $$
 > f_{0}^{-1}\sum_{i=0}^{l} (-f_{0}^{-1})^{i}g(x)^{i}.
 > $$
-> $(\implies)$ $f_{0}\in U_{n}$ is immediate. We again express $f(x)$ as in [[#^ed1d3b]]. Since $f_{0}$ is invertible and $f(x)$ in invertible, so is $1+f_{0}^{-1}g(x)$, the inverse of must then be given by [[#^ec78c6]], because any inverse would need to satisfy the recursive relation from multiplying out, which formally yields the series. Since the inverse is a (finite-degree) polynomial, the series must terminate, implying $g(x)$ must be nilpotent, which in turn implies $f_{i}$ is nilpotent for $i> 0$ by [[#^e42aa7]]. 
+> $(\implies)$ $f_{0}\in U_{n}$ is immediate. We again express $f(x)$ as in [[#^ed1d3b]]. Since $f_{0}$ is invertible and $f(x)$ is invertible, so is $1+f_{0}^{-1}g(x)$, the inverse of which must then be given by [[#^ec78c6]], because any inverse would need to satisfy the recursive relation from multiplying out, which formally yields the series. Since the inverse is a (finite-degree) polynomial, the series must terminate, implying $g(x)$ must be nilpotent, which in turn implies $f_{i}$ is nilpotent for $i> 0$ by [[#^e42aa7]]. 
+
+> [!note] Neat result as a by-product
+> The sum of a unit element and a nilpotent element is a unit when they commute. 
+> 
+> > [!Proof]-
+> > If $u$ is a unit with inverse $v$, $a$ is nilpotent, and $au=ua$, we have $u+a=u(1+va)$. Note that $au=ua$ implies $va=av$, which implies $va$ is nilpotent. Thus, $1+va$ is invertible by the same argument we used in the previous proof. 
+> 
+
+---

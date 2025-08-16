@@ -83,15 +83,20 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 
 > [!Theorem] @spivakCalculusManifoldsModern1965 1-10
 > The bounded function $f$ is continuous at $a$ iff $o(f, a)=0$.
-
-[!Proof]-
-$(\implies)$ 
+> 
+> > [!Proof]-
+> > 
+> > $(\implies)$ Let $\epsilon> 0$. Choose $\delta> 0$ such that $|f(x)-f(a)|<\epsilon$ for all $x\in B_{\delta}(a)$; thus $M(a, f, \delta)-m(a, f, \delta)< 2\epsilon$. $o(f, a)=0$ follows. 
+> > 
+> > $(\impliedby)$ Let $\epsilon> 0$. Choose $\delta> 0$ such that for all $M(a, f, \delta)-m(a, f, \delta)<\epsilon$. It follows that for $x\in B_{\delta}(a)$, $|f(x)-f(a)|<\epsilon$.
 
 > [!Theorem] @spivakCalculusManifoldsModern1965 1-11
 > Let $A\subseteq \mathbb{R}^{n}$ be closed. If $f:A\to \mathbb{R}$ is any bounded function, and $\epsilon> 0$, then $\{ x\in A:o(f, x)\geq \epsilon \}$ is closed.
+> 
+> > [!Proof]-
+> > Let $B=\{ x\in A:o(f, x)\geq \epsilon \}$. We will show that $\mathbb{R}^{n}-B$ is open. If $x\in \mathbb{R}^{n}-B$, either $x\not\in A$ or $x\in A$ and $o(f, x)<\epsilon$. In the first case, since $A$ is open, there is a neighborhood $N$ of $x$ such that $N\subseteq \mathbb{R}^{n}-A\subseteq \mathbb{R}^{n}-B$. In the second case, there is a $\delta> 0$ such that $M(x, f, \delta)-m(x, f, \delta)<\epsilon$. For any $y\in B_{\delta}(x)$, there exists $\delta_{1}> 0$ such that $B_{\delta_{1}}(y)\subset B_{\delta}(x)$; thus $M(y, f, \delta_{1})-m(y, f, \delta_{1})<\epsilon$, and consequently $o(f, y)<\epsilon$. Therefore, $B_{\delta}(x)\subseteq \mathbb{R}^{n}-B$.
 
 ^425f3e
-
 ## Characterizing integrable functions
 
 > [!Lemma]
@@ -153,5 +158,7 @@ $(\implies)$
 > > \end{align}
 > > $$
 
-[!Definition]
-$f:\mathbb{R}^{n}\to \mathbb{R}$ is **integrable** if there is a closed rectangle $R\subseteq \mathbb{R}^{n}$ such that $f(x)=0$ for all $x\not\in R$ and $f$ is integrable on $R$.
+> [!Definition]
+> $f:\mathbb{R}^{n}\to \mathbb{R}$ is **integrable** if there is a closed rectangle $R\subseteq \mathbb{R}^{n}$ such that $f(x)=0$ for all $x\not\in R$ and $f$ is integrable on $R$.
+> 
+

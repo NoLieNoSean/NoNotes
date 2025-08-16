@@ -1,4 +1,4 @@
-## Derivatives of vector valued functions
+# Derivatives of vector valued functions
 
 Refer @apostolMathematicalAnalysis1985 [p. 114]
 
@@ -23,7 +23,7 @@ $$
 The mean value theorem, as stated here [[LEC ANA1 24#Mean value theorem|here]], does not hold for vector valued functions. A modified version is proved [[LEC CAL1 18#The mean value theorem|here]]. 
 
 ---
-## Partial derivatives
+# Partial derivatives
 
 > [!Definition]
 > Let $S\subseteq \mathbb{R}^{n}$ be open and let $f:S\to \mathbb{R}$. If $\mathbf{x}=(x_{1}, \dots, x_{n})$ and $\mathbf{c}=(c_{1}, \dots, c_{n})$ are two points of $S$ having corresponding coordinates equal except for the $k$th, we can consider the limit
@@ -38,14 +38,14 @@ The mean value theorem, as stated here [[LEC ANA1 24#Mean value theorem|here]], 
 Note that a function of $n$ variables can have partial derivatives at a point with respect to each of the variables and yet not be continuous at the point.
 
 ---
-## Directional derivatives
+# Directional derivatives
 
 > [!Definition]
 > Let $S\subseteq \mathbb{R}^{n}$ and $\mathbf{f}:S\to \mathbb{R}^{m}$. Let $\mathbf{c}\in S^{\circ}$, and $\mathbf{u}\in \mathbb{R}^{n}$. The **directional derivative** of $\mathbf{f}$ at $\mathbf{c}$ in the direction $\mathbf{u}$, denoted by $\mathbf{f}'(\mathbf{c};\mathbf{u})$, is defined by
 > $$
 > \mathbf{f}'(\mathbf{c};\mathbf{u})=\lim_{ h \to 0 } \frac{\mathbf{f}(\mathbf{c}+h\mathbf{u})-\mathbf{f}(\mathbf{c})}{h},
 > $$
-> whenever the limit on the right exists.
+> whenever the limit exists.
 
 > [!Warning]
 > You can assume $\lVert \mathbf{u} \rVert=1$ if that helps. However, as defined, $\mathbf{f}'(\mathbf{c};\mathbf{u})$ does depend on $\lVert \mathbf{u} \rVert$. To be precise, $\mathbf{f}'(\mathbf{c};\lambda\mathbf{u})=\lambda \mathbf{f}'(\mathbf{c};\mathbf{u})$.

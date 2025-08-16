@@ -2,7 +2,7 @@
 
 The set of all positive integers less than a given positive integer $n$ and co-prime to $n$ [[LEC ALG2 1#Groups|form a group]] under multiplication modulo $n$, which is denoted by $U_{n}$. To be clear, $U_{n}$ in general can have any group structure: $U_{6}\cong C_{3}$, $U_{8}\cong V_{4}$, $U_{10}\cong C_{4}$, $U_{15}\cong C_{2}\times C_{4}$, etc. However, we will prove that when $n$ is prime (denoted by replacing $n$ with $p$), $U_{p}$ is cyclic.
 
-For my future self: This is NOT the same thing as proving that a group of order $p$ is cyclic, idiot. $U_{p}$ has order $p-1$.
+Note for my future self: This is NOT the same thing as proving that a group of order $p$ is cyclic, idiot. $U_{p}$ has order $p-1$. Also, $U_{n}$ being cyclic does not imply $n$ is prime ($U_{n}$ is cyclic iff $n=2, 4, p^{k}$ or $2p^{k}$ where $p$ is an odd prime; see @chenOrdersModuloPrime2015 [p. 3]). 
 
 > [!Theorem]
 > In a cyclic group $G$ of order $n$, for each positive integer $m$ that divides $n$, there are $\phi(m)$ elements of order $m$. 
