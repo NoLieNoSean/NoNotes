@@ -73,3 +73,67 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > 
 
 ---
+
+# Problem 8
+
+> [!Question]
+> Determine all prime ideals in $\mathbb{Z}[x]$.
+
+Let $I$ be a prime ideal in $\mathbb{Z}[x]$. 
+
+The characterization: $I=(0)$, $(p)$, $(q(x))$ where $q(x)$ is irreducible, or $(p, f(x))$ where $f(x)$ cannot be expressed as $r(x)+pg(x)$, where $r(x)$ is reducible (in other words, it is not reducible modulo $p$).
+
+## Part 1
+
+> [!Claim]
+> If $I$ is a prime ideal in $\mathbb{Z}[x]$, then $I$ follows the above characterization.
+
+**Case 1: $I$ has constant polynomials.
+
+> [!Lemma]
+> If $q(x)=r(x)+pg(x)$ where $r(x)$ is reducible and $\text{deg}\,r(x)\geq \text{deg}\,q(x)$, there exist $r'(x)$ and $g'(x)$, where $r'(x)$ is reducible, such that $q(x)=r'(x)+pg'(x)$.
+> 
+
+^e01f20
+
+Let $c\in I$ be a constant polynomial. At least one prime factor $p$ of $c$ must be in $I$, since $I$ is a prime ideal. If $q\ne p$ is prime and $q\in I$, $1\in I$ and $I=\mathbb{Z}[x]$. Thus, $p$ is the only prime in $I$, and all constants of $I$ are of the form $kp$. 
+
+Let $S=\{ q(x)\in I\ : \ p \nmid q(x)\}$. If $S=\emptyset$, then $I=(p)$. Else, let $f(x)$ a minimum degree polynomial in $S$. Whatever be the value of the leading coefficient of $f(x)$, note it it cannot be divisible by $p$, and hence, using Bezout's lemma, the leading coefficient of $f(x)$ can be reduced to $1$. Call this polynomial $f^{*}(x)$ ($f^{*}(x)$ is unique modulo $p$). Let the degree of $f^{*}(x)$ be $d$.
+
+Note that $f^{*}(x)$ cannot be written as $r(x)+pa(x)$ where $r(x)$ is reducible; Indeed, if that were true, we would have
+$$
+f^{*}(x)-pa'(x)=r'(x)\in I,
+$$
+for some $r'(x)=r_{1}'(x)r_{2}'(x)$ from [[#^e01f20]]. So either $r'_{1}(x)\in I$ or $r'_{2}(x)\in I$ (neither of which are divisible by $p$), contradicting the minimality of the degree of $f^{*}(x)$. 
+
+We now claim that $I=(p, f^{*}(x))$. Let $u(x)=\sum_{i=0}^{d'}u_{i}x^{i}\in I$ have degree $d'$. If $d'< d$, $u(x)$ is divisible by $p$ by construction of $f^{*}(x)$. Let $d'=d$. 
+$$
+\begin{align}
+u(x)-u_{d'}f^{*}(x)=v(x)\in I.
+\end{align}
+$$
+Since $\text{deg}\,v(x)< d$, it follows that $v(x)=pv'(x)$. Thus, 
+$$
+u(x)=f^{*}(x)u_{d'}+pv'(x).
+$$
+For $d'> d$, 
+$$
+\begin{align}
+ & u(x)-u_{d'}x^{d'-d}f^{*}(x)=v(x)\in I \\
+\end{align}
+$$
+By IH, $v(x)\in(p, f^{*}(x))$, so it follows that $u(x)\in(p, f^{*}(x))$.
+
+
+**Case 2: All polynomials in $I$ have degree at least $1$.**
+
+Let $q(x)\in I$ be the minimum degree minimum leading coefficient polynomial. This clearly has to be unique. It has to be reducible, since if $q(x)=r_{1}(x)r_{2}(x)$, either $r_{1}(x)\in I$ or $r_{2}(x)\in I$, a contradiction. All $u(x)\in I$ being divisible by $q(x)$ is also forced. Thus, $I=(q(x))$.
+
+## Part 2
+
+> [!Claim]
+> If $I$ follows the above characterization, then $I$ is a prime ideal.
+> 
+
+If $I=(p)$ or $I=(q(x))$ for irreducible $q(x)$, $I$ is clearly a prime ideal. Assume $I=(p, q(x))$, where $q(x)$ is not reducible modulo $p$. 
+

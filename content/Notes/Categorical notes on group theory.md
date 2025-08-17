@@ -32,11 +32,12 @@ The nice thing about $\textsf{Ab}$ is that coproducts in $\textsf{Ab}$ coincide 
 > >  & =\varphi((a, b)(c, d)).
 > > \end{align}
 > > $$
-> > The marked equality is true because of $A$ being abelian.
+> > The marked equality is true since $A$ is abelian.
 > 
 
 ^8e8d67
 
+When working as a coproduct, the product $G\times H$ of two abelian groups is often called their **direct sum** and is denoted $G\oplus H$. 
 
 # Homomorphisms
 

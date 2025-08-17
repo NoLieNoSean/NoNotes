@@ -13,10 +13,10 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 # Lecture notes
 
-[[LEC ALG3 1]] ✅
-[[LEC ALG3 2]]
-[[LEC ALG3 3]]
-[[LEC ALG3 4]]
+[[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
+[[LEC ALG3 2]] ✅ Quotients and ideals
+[[LEC ALG3 3]] ✅ Modules (?)
+[[LEC ALG3 4]]  Polynomial rings
 
 # Tutorials
 

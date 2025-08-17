@@ -68,6 +68,18 @@ A commutative division ring is a [[Fields#Axioms|field]]. A finite integral doma
 > [!Definition]
 > A **subring** of the ring $R$ is a subgroup of $R$ that is closed under multiplication.
 
+> [!Note]
+> Let $S\subseteq R$ be a subring. Let $1_{S}$ and $1_{R}$ be the identities of $S$ and $R$ respectively. Then, 
+> $$
+> \begin{align}
+> 1_{S}1_{R}=1_{S} \\
+> 1_{S}1_{S}=1_{S} \\
+> \implies 1_{S}(1_{S}-1_{R})=0
+> \end{align}
+> $$
+> If $R$ is an integral domain, $1_{S}=1_{R}$ is forced. Also, if we require in our definition of ring homomorphisms for identity to be mapped to identity, the inclusion map $S\to R$ forces $1_{S}=1_{R}$. In this course, you can assume $1_{S}=1_{R}$.
+> 
+
 To show that a subset of a ring $R$ is a subring, it suffices to show that it is nonempty and closed under subtraction and multiplication.  
 
 ---
