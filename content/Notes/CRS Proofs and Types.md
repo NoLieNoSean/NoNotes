@@ -8,4 +8,4 @@ CMI, Aug-Nov 2025, S P Suresh
 
 ---
 
-[[LEC PAT 3]]
+[[LEC PAT 4]]

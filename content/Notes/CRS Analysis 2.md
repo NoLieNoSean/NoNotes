@@ -8,4 +8,7 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 ---
 
-[[Point set topology]]
+%% [[Point set topology]]
+ %%
+
+[[LEC ANA2 1]] ✅

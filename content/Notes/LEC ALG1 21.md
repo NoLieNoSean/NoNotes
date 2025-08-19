@@ -6,7 +6,7 @@ tags:
 date: 2024-11-07
 time: 14:00
 ---
-## Inner Product Spaces
+# Inner Product Spaces
 
 The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
 
@@ -19,34 +19,35 @@ The motivation behind this is to define a notion of length and perpendicularity 
 
 ^dd5bbe
 
->[!theorem] Theorem 1
->The inner product is anti-linear in the second slot.
+> [!theorem] 
+> The inner product is anti-linear in the second slot.
+> 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > \langle \mathbf{u}, \alpha \mathbf{v}+\beta \mathbf{w}\rangle &= \overline{\langle\alpha \mathbf{v}+\beta \mathbf{w}, \mathbf{u}\rangle} \\
+> > & = \overline{\alpha\langle \mathbf{v},\mathbf{u}\rangle + \beta\langle \mathbf{w},\mathbf{u}\rangle}\\
+> > & = \overline\alpha\ \overline{\langle \mathbf{v},\mathbf{u}\rangle} + \overline\beta \ \overline{\langle \mathbf{w},\mathbf{u}\rangle}\\
+> > & = \overline\alpha\langle \mathbf{u},\mathbf{v}\rangle + \overline\beta \langle \mathbf{u},\mathbf{w}\rangle.
+> > \end{align}
+> > $$
+> 
 
-> **Proof**
-> $$
-> \begin{align}
-> \langle \mathbf{u}, \alpha \mathbf{v}+\beta \mathbf{w}\rangle &= \overline{\langle\alpha \mathbf{v}+\beta \mathbf{w}, \mathbf{u}\rangle} \\
-> & = \overline{\alpha\langle \mathbf{v},\mathbf{u}\rangle + \beta\langle \mathbf{w},\mathbf{u}\rangle}\\
-> & = \overline\alpha\ \overline{\langle \mathbf{v},\mathbf{u}\rangle} + \overline\beta \ \overline{\langle \mathbf{w},\mathbf{u}\rangle}\\
-> & = \overline\alpha\langle \mathbf{u},\mathbf{v}\rangle + \overline\beta \langle \mathbf{u},\mathbf{w}\rangle.
-> \end{align}
-> $$
-> ❏
-
->[!Theorem] Corollary 1
+>[!Theorem] 
 >$\langle \alpha \mathbf{u} + \beta \mathbf{v}, \alpha \mathbf{u} + \beta \mathbf{v}\rangle = \alpha\bar{\alpha}\langle \mathbf{u},\mathbf{u}\rangle + \alpha\bar{\beta}\langle \mathbf{u},\mathbf{v}\rangle + \bar{\alpha}\beta\langle \mathbf{v},\mathbf{u}\rangle + \beta\bar{\beta}\langle \mathbf{v},\mathbf{v}\rangle$.
 
->[!theorem] Theorem 2
+> [!theorem] 
 > If $\mathbf{u} = 0$, then $\langle \mathbf{u}, \mathbf{v} \rangle = 0$.
-
-> **Proof**
-> _Method 1:_
-> $$
-> \langle 0, \mathbf{v}\rangle = \langle 0 + 0, \mathbf{v}\rangle = \langle 0, \mathbf{v}\rangle + \langle 0, \mathbf{v}\rangle \implies \langle 0, \mathbf{v}\rangle = 0
-> $$
 > 
-> *Method 2: (~~used only by the utterly deranged~~)*
-> Consider the linear map $T: V \to \mathbb{F}$ where $\mathbf{u} \mapsto \langle \mathbf{u}, \mathbf{v} \rangle$ for a fixed $\mathbf{v} \in V$. We know that $T(0) = 0$. Hence $\langle 0, \mathbf{u}\rangle = 0$. As $\mathbf{v}$ was arbitrary, the proposition holds for any $\mathbf{v} \in V$. ❏
+> > [!Proof]-
+> > _Method 1:_
+> > $$
+> > \langle 0, \mathbf{v}\rangle = \langle 0 + 0, \mathbf{v}\rangle = \langle 0, \mathbf{v}\rangle + \langle 0, \mathbf{v}\rangle \implies \langle 0, \mathbf{v}\rangle = 0
+> > $$
+> > 
+> > *Method 2: (~~used only by the utterly deranged~~)*
+> > Consider the linear map $T: V \to \mathbb{F}$ where $\mathbf{u} \mapsto \langle \mathbf{u}, \mathbf{v} \rangle$ for a fixed $\mathbf{v} \in V$. We know that $T(0) = 0$. Hence $\langle 0, \mathbf{u}\rangle = 0$. As $\mathbf{v}$ was arbitrary, the proposition holds for any $\mathbf{v} \in V$. ❏
+> 
 
 >[!Example] Hermitian Dot Product / Standard Hermitian form
 > For vectors $\mathbf{v}, \mathbf{w} \in \mathbb{C}^n$, let $\mathbf{v} = (v_{1}, v_{2}, \dots, v_{n})$ and $\mathbf{w} =(w_{1}, w_{2}, \dots, w_{n})$. The inner product of $\mathbf{v}$ and $\mathbf{w}$ is defined as
@@ -70,7 +71,7 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > \langle f(t), g(t) \rangle = \int_{0}^{1} f(t)\overline{g(t)} \ dt
 >$$
 >It is easy to see that this satisfies all the requirements of the inner product.
-### Norm
+## Norm
 
 >[!Definition]
 > Given an inner product space, one defines a *norm* on it by 
@@ -83,45 +84,48 @@ The motivation behind this is to define a notion of length and perpendicularity 
 If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVert = |\lambda| \, \lVert \mathbf{v} \rVert$.
 ### The Cauchy-Schwarz Inequality
 
+We will need this to show that the norm defined above satisfies the triangle inequality.
+
 > [!Theorem]
 > Let $V$ be an inner product space. For any two $\mathbf{u}, \mathbf{v} \in V$, we have
 > $$
 > \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert \leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
 > $$ 
-
-> **Proof**
-> *Case 1*: $\langle \mathbf{u}, \mathbf{v}\rangle \in \mathbb{R}$
 > 
-> For any $\lambda \in \mathbb{R}$, we have
-> $$
-> \begin{align}
-> \langle \lambda \mathbf{u} + \mathbf{v}, \lambda \mathbf{u} + \mathbf{v} \rangle &\geq 0 \\
-> \lambda^2 \langle \mathbf{u}, \mathbf{u} \rangle + 2\lambda\langle \mathbf{u} , \mathbf{v}\rangle + \langle \mathbf{v}, \mathbf{v}\rangle  & \geq 0 .
-> \end{align}
-> $$
-> As this holds for all $\lambda$, we have
-> $$
-> \begin{align}
-> 4\langle u, v\rangle^2 & \leq 4\langle u, u\rangle \langle v, v\rangle \\
-> |\langle u, v\rangle|  & \leq \lVert u \rVert \,\lVert v \rVert .
-> \end{align}
-> $$
-> *Case 2:* $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$
+> > [!Proof]-
+> > *Case 1*: $\langle \mathbf{u}, \mathbf{v}\rangle \in \mathbb{R}$
+> > 
+> > For any $\lambda \in \mathbb{R}$, we have
+> > $$
+> > \begin{align}
+> > \langle \lambda \mathbf{u} + \mathbf{v}, \lambda \mathbf{u} + \mathbf{v} \rangle &\geq 0 \\
+> > \lambda^2 \langle \mathbf{u}, \mathbf{u} \rangle + 2\lambda\langle \mathbf{u} , \mathbf{v}\rangle + \langle \mathbf{v}, \mathbf{v}\rangle  & \geq 0 .
+> > \end{align}
+> > $$
+> > As this holds for all $\lambda$, we have
+> > $$
+> > \begin{align}
+> > 4\langle u, v\rangle^2 & \leq 4\langle u, u\rangle \langle v, v\rangle \\
+> > |\langle u, v\rangle|  & \leq \lVert u \rVert \,\lVert v \rVert .
+> > \end{align}
+> > $$
+> > *Case 2:* $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$
+> > 
+> > Note that $\langle \mathbf{u}, \mathbf{v}\rangle \neq 0$ as $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$.
+> > Let $\alpha = \langle \mathbf{u}, \mathbf{v}\rangle$. Observe that
+> > $$
+> > \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle = \frac{1}{\alpha}\langle \mathbf{u}, \mathbf{v}\rangle =1 \in \mathbb{R}
+> > $$
+> > We can apply Case 1.
+> > $$
+> > \begin{align}
+> > \left\lvert  \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle   \right\rvert &\leq \left\lVert  \frac{\mathbf{u}}{\alpha}  \right\rVert \, \lVert \mathbf{v} \rVert  \\
+> > \cancel{\frac{1}{\lvert \alpha \rvert }} \lvert \langle \mathbf{u}, \mathbf{v}\rangle  \rvert &\leq \cancel{\frac{1}{\lvert \alpha \rvert }}\lVert \mathbf{u} \rVert \, \lVert \mathbf{v} \rVert  \\
+> > \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert &\leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert 
+> > \end{align}
+> > $$
+> > 
 > 
-> Note that $\langle \mathbf{u}, \mathbf{v}\rangle \neq 0$ as $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$.
-> Let $\alpha = \langle \mathbf{u}, \mathbf{v}\rangle$. Observe that
-> $$
-> \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle = \frac{1}{\alpha}\langle \mathbf{u}, \mathbf{v}\rangle =1 \in \mathbb{R}
-> $$
-> We can apply Case 1.
-> $$
-> \begin{align}
-> \left\lvert  \left\langle  \frac{\mathbf{u}}{\alpha}, \mathbf{v} \right\rangle   \right\rvert &\leq \left\lVert  \frac{\mathbf{u}}{\alpha}  \right\rVert \, \lVert \mathbf{v} \rVert  \\
-> \cancel{\frac{1}{\lvert \alpha \rvert }} \lvert \langle \mathbf{u}, \mathbf{v}\rangle  \rvert &\leq \cancel{\frac{1}{\lvert \alpha \rvert }}\lVert \mathbf{u} \rVert \, \lVert \mathbf{v} \rVert  \\
-> \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert &\leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert 
-> \end{align}
-> $$
-> ❏
 
 >[!Theorem] Corollary
 >$$
@@ -129,7 +133,6 @@ If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVer
 >$$
 >Average velocity over time has to be less than or equal to average velocity over distance, with equality only for constant velocity.
 
-Now, bow before the almighty...
 ### The Triangle Inequality
 
 > [!Theorem]
@@ -137,22 +140,22 @@ Now, bow before the almighty...
 > $$
 > \lVert \mathbf{x}+\mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert .
 > $$
-
-> **Proof**
-> $$
-> \begin{align}
-> \lVert \mathbf{x}+\mathbf{y} \rVert ^{2} & =\langle \mathbf{x}+\mathbf{y}, \mathbf{x}+\mathbf{y} \rangle  \\
->  & =\lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} +\langle \mathbf{x}, \mathbf{y} \rangle +\langle \mathbf{y}, \mathbf{x} \rangle  \\
->  & = \lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} + 2\mathrm{Re}\langle \mathbf{x}, \mathbf{y} \rangle  \\
->  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lvert \langle \mathbf{x}, \mathbf{y} \rangle  \rvert  \\
->  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lVert \mathbf{x} \rVert \lVert \mathbf{y} \rVert  \\
->  & =(\lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert )^{2}.
-> \end{align}
-> $$
-> ❏
+> 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > \lVert \mathbf{x}+\mathbf{y} \rVert ^{2} & =\langle \mathbf{x}+\mathbf{y}, \mathbf{x}+\mathbf{y} \rangle  \\
+> >  & =\lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} +\langle \mathbf{x}, \mathbf{y} \rangle +\langle \mathbf{y}, \mathbf{x} \rangle  \\
+> >  & = \lVert \mathbf{x} \rVert^{2} +\lVert \mathbf{y} \rVert^{2} + 2\mathrm{Re}\langle \mathbf{x}, \mathbf{y} \rangle  \\
+> >  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lvert \langle \mathbf{x}, \mathbf{y} \rangle  \rvert  \\
+> >  & \leq \lVert \mathbf{x} \rVert ^{2}+\lVert \mathbf{y} \rVert ^{2}+2\lVert \mathbf{x} \rVert \lVert \mathbf{y} \rVert  \\
+> >  & =(\lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert )^{2}.
+> > \end{align}
+> > $$
+> 
 
 ---
-## Normed spaces
+# Normed spaces
 
 We have shown that the norm $\lVert \mathbf{v} \rVert$ derived from the inner product satisfies the following properties:
 1. Homogeneity: $\lVert \alpha \mathbf{v} \rVert=\lvert \alpha \rvert\lVert \mathbf{v} \rVert$ for all $\mathbf{v}\in V$ and $\alpha\in \mathbb{F}$.

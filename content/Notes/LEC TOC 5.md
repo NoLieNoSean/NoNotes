@@ -41,3 +41,22 @@ The set of **rational languages** are the smallest class of languages such that
 4. is closed under Keene star
 
 
+---
+
+#### **Key Ideas**
+
+Homomorphisms: definition, recognizable languages are closed under images of homomorphisms and inverse images of homomorphisms. Rational expressions: definition as the smallest class of languages containing finite languages and closed under certain operations.
+
+#### **References**
+
+Homomorphisms: Kozen, chapter 10
+
+Rational expressions: Sipser, pages 63-66
+
+#### **Practice Problems**
+
+Kozen, homework 2 (pg 302), problem 3
+
+Sipser, problem 1.57 (pg 92)
+
+Last modified: Monday, 18 August 2025, 3:19 PM

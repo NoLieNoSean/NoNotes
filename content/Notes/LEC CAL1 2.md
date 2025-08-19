@@ -6,7 +6,6 @@ tags:
 date: 2025-01-09
 time: 11:50
 ---
-
 ## Equivalence of p-norms
 
 > [!Theorem]
@@ -19,8 +18,3 @@ A few simple examples first:
   $\lVert \cdot \rVert_{1}$ and $\lVert \cdot \rVert_{p}$ are equivalent: $\frac{1}{n}\lVert \cdot \rVert_{1}\leq \lVert \cdot \rVert_{p}\leq n^{1/p}\lVert \cdot \rVert_{1}$.
 
 Thus, all p-norms are equivalent.
-
-
-
-
-

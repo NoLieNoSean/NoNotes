@@ -19,7 +19,7 @@ learn to design automata for a given language, write a proof that an automaton i
 
 ###### References
 
-Sipser Section 1.1
+@sipserIntroductionTheoryComputation2013 Section 1.1
 
 ###### Practice Problems
 

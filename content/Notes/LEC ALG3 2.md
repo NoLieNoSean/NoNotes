@@ -185,6 +185,8 @@ for $r_{1}, \dots, r_{n}\in R$.
 > $$
 > 
 
+^5c702e
+
 > [!Definition]
 > 1. A commutative ring $R$ is **Noetherian** if every ideal of $R$ is finitely generated.
 > 2. An integral domain $R$ is a **PID (Principal Ideal Domain)** if every ideal of $R$ is principal.

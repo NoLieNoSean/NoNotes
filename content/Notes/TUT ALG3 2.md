@@ -52,7 +52,7 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > 
 > Note that by [[#^e42aa7]], $g(x)$ is nilpotent. 
 > 
-> If we attempt to construct an inverse $h(x)$ of $1+f_{0}^{-1}g(x)$, we will observe $h(x)$ is forced to be
+> If we attempt to construct an inverse $h(x)$ of $1+f_{0}^{-1}g(x)$, we will observe $h(x)$ is forced to be[^1]
 > $$
 > 1-f_{0}^{-1}g(x)+(f_{0}^{-1})^{2}g(x)^{2}+\dots=\sum(-f_{0}^{-1})^{i}g(x)^{i}.
 > $$
@@ -65,12 +65,16 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > $$
 > $(\implies)$ $f_{0}\in U_{n}$ is immediate. We again express $f(x)$ as in [[#^ed1d3b]]. Since $f_{0}$ is invertible and $f(x)$ is invertible, so is $1+f_{0}^{-1}g(x)$, the inverse of which must then be given by [[#^ec78c6]], because any inverse would need to satisfy the recursive relation from multiplying out, which formally yields the series. Since the inverse is a (finite-degree) polynomial, the series must terminate, implying $g(x)$ must be nilpotent, which in turn implies $f_{i}$ is nilpotent for $i> 0$ by [[#^e42aa7]]. 
 
+[^1]:Why does the inverse have to be a polynomial in $g(x)$? You can't assume this.
+
 > [!note] Neat result as a by-product
 > The sum of a unit element and a nilpotent element is a unit when they commute. 
 > 
 > > [!Proof]-
 > > If $u$ is a unit with inverse $v$, $a$ is nilpotent, and $au=ua$, we have $u+a=u(1+va)$. Note that $au=ua$ implies $va=av$, which implies $va$ is nilpotent. Thus, $1+va$ is invertible by the same argument we used in the previous proof. 
 > 
+
+Alternatively, @conradZORNSLEMMAAPPLICATIONS24 Theorem 3.3 proves that the intersection of all prime ideals in a nonzero commutative ring is the set of nilpotent elements in the ring. 
 
 ---
 
@@ -79,32 +83,42 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > [!Question]
 > Determine all prime ideals in $\mathbb{Z}[x]$.
 
-Let $I$ be a prime ideal in $\mathbb{Z}[x]$. 
-
-The characterization: $I=(0)$, $(p)$, $(q(x))$ where $q(x)$ is irreducible, or $(p, f(x))$ where $f(x)$ cannot be expressed as $r(x)+pg(x)$, where $r(x)$ is reducible (in other words, it is not reducible modulo $p$).
-
-## Part 1
-
-> [!Claim]
-> If $I$ is a prime ideal in $\mathbb{Z}[x]$, then $I$ follows the above characterization.
-
-**Case 1: $I$ has constant polynomials.
+$f(x)\in \mathbb{Z}[x]$ is said to be irreducible modulo prime $p$ if it cannot be expressed as $r(x)+pg(x)$, where $r(x)$ is reducible. $f(x)\in \mathbb{Z}[x]$ is irreducible modulo $p$ iff $\overline{f(x)}\in \mathbb{Z}_{p}[x]$ is irreducible. 
 
 > [!Lemma]
-> If $q(x)=r(x)+pg(x)$ where $r(x)$ is reducible and $\text{deg}\,r(x)\geq \text{deg}\,q(x)$, there exist $r'(x)$ and $g'(x)$, where $r'(x)$ is reducible, such that $q(x)=r'(x)+pg'(x)$.
+> If $q(x)=r(x)+pg(x)$ where $r(x)$ is reducible and $\text{deg}\,r(x)\geq \text{deg}\,q(x)$, there exist $r'(x)$ and $g'(x)$, where $r'(x)$ is reducible and $\text{deg}\,r'(x)= \text{deg}\,q(x)$, such that $q(x)=r'(x)+pg'(x)$.
+> 
+> > [!Proof]-
+> > Assume $\text{deg}\,r(x)> \text{deg}\,q(x)$. Let $r(x)=\left( \sum_{i=0}^{n}a_{i}x^{i} \right)\left( \sum_{i=0}^{m}b_{i}x^{i} \right)$. Either $p\ | \ a_{n}$ or $p\ | \ b_{m}$. WLOG, assume the former. Let $a_{n}=kp$. Then, we have
+> > $$
+> > q(x)= \underbrace{ \left( \sum_{i=0}^{n-1}a_{i}x^{i} \right)\left( \sum_{i=0}^{m}b_{i}x^{i} \right) }_{ r'(x) }+pg'(x).
+> > $$
+> > This can be repeated until the degree of $r'(x)$ is equal to the degree of $q(x)$.
 > 
 
 ^e01f20
 
+> [!Claim]
+> $I$ is a prime ideal in $\mathbb{Z}[x]$ iff one of the following holds:
+> 1. $I=(0)$.
+> 2. $I=(p)$ for some prime $p$.
+> 3. $I=(q(x))$ for some irreducible $q(x)\in \mathbb{Z}[x]$.
+> 4. $I=(p, f(x))$ for some prime $p$, where $f(x)$ is irreducible modulo $p$.
+> 
+
+$(\implies)$
+
+**Case 1: $I$ has constant polynomials.**
+
 Let $c\in I$ be a constant polynomial. At least one prime factor $p$ of $c$ must be in $I$, since $I$ is a prime ideal. If $q\ne p$ is prime and $q\in I$, $1\in I$ and $I=\mathbb{Z}[x]$. Thus, $p$ is the only prime in $I$, and all constants of $I$ are of the form $kp$. 
 
-Let $S=\{ q(x)\in I\ : \ p \nmid q(x)\}$. If $S=\emptyset$, then $I=(p)$. Else, let $f(x)$ a minimum degree polynomial in $S$. Whatever be the value of the leading coefficient of $f(x)$, note it it cannot be divisible by $p$, and hence, using Bezout's lemma, the leading coefficient of $f(x)$ can be reduced to $1$. Call this polynomial $f^{*}(x)$ ($f^{*}(x)$ is unique modulo $p$). Let the degree of $f^{*}(x)$ be $d$.
+Let $S=\{ q(x)\in I\ : \ p \nmid q(x)\}$. If $S=\emptyset$, then $I=(p)$. Else, let $f(x)$ a minimum degree polynomial in $S$. Whatever be the value of the leading coefficient of $f(x)$, note it it cannot be divisible by $p$, and hence, using [[Bezout’s lemma]], the leading coefficient of $f(x)$ can be reduced to $1$. Call this monic polynomial $f^{*}(x)$. Clearly, $f^{*}(x)$ is unique modulo $p$. Let the degree of $f^{*}(x)$ be $d$.
 
-Note that $f^{*}(x)$ cannot be written as $r(x)+pa(x)$ where $r(x)$ is reducible; Indeed, if that were true, we would have
+Note that $f^{*}(x)$ is not reducible modulo $p$; Indeed, if that were true, $f^{*}(x)$ could be expressed as $r(x)+pa(x)$ where $r(x)$ is reducible, and it would follow from [[#^e01f20]] that there exists $r'(x)=r_{1}'(x)r_{2}'(x)$ such that $\text{deg}\,r'(x)=\text{deg}\,f^{*}(x)$ and 
 $$
-f^{*}(x)-pa'(x)=r'(x)\in I,
+f^{*}(x)-pa'(x)=r'(x)\in I.
 $$
-for some $r'(x)=r_{1}'(x)r_{2}'(x)$ from [[#^e01f20]]. So either $r'_{1}(x)\in I$ or $r'_{2}(x)\in I$ (neither of which are divisible by $p$), contradicting the minimality of the degree of $f^{*}(x)$. 
+Since $I$ is a prime ideal, either $r'_{1}(x)\in I$ or $r'_{2}(x)\in I$ (neither of which are divisible by $p$), contradicting the minimality of the degree of $f^{*}(x)$. 
 
 We now claim that $I=(p, f^{*}(x))$. Let $u(x)=\sum_{i=0}^{d'}u_{i}x^{i}\in I$ have degree $d'$. If $d'< d$, $u(x)$ is divisible by $p$ by construction of $f^{*}(x)$. Let $d'=d$. 
 $$
@@ -127,13 +141,25 @@ By IH, $v(x)\in(p, f^{*}(x))$, so it follows that $u(x)\in(p, f^{*}(x))$.
 
 **Case 2: All polynomials in $I$ have degree at least $1$.**
 
-Let $q(x)\in I$ be the minimum degree minimum leading coefficient polynomial. This clearly has to be unique. It has to be reducible, since if $q(x)=r_{1}(x)r_{2}(x)$, either $r_{1}(x)\in I$ or $r_{2}(x)\in I$, a contradiction. All $u(x)\in I$ being divisible by $q(x)$ is also forced. Thus, $I=(q(x))$.
+Let $q(x)\in I$ be the minimum degree minimum leading coefficient polynomial. This clearly has to be unique. It has to be irreducible, since if $q(x)=r_{1}(x)r_{2}(x)$, either $r_{1}(x)\in I$ or $r_{2}(x)\in I$, a contradiction. All $u(x)\in I$ being divisible by $q(x)$ is also forced. Thus, $I=(q(x))$.
 
-## Part 2
+---
+
+$(\impliedby)$
+
+If $I=(p)$ or $I=(q(x))$ for irreducible $q(x)$, $I$ is clearly a prime ideal. Assume $I=(p, q(x))$, where $q(x)$ is not reducible modulo $p$. [[LEC ALG3 2#^5c702e|Note that]]
+$$
+\frac{\mathbb{Z}[x]}{(p, q(x))}\cong \frac{\mathbb{Z}_{p}[x]}{(\overline{q(x)})}.
+$$
+Since $q(x)$ is not reducible modulo $p$, $\overline{q(x)}$ is not reducible in $\mathbb{Z}_{p}[x]$. 
 
 > [!Claim]
-> If $I$ follows the above characterization, then $I$ is a prime ideal.
+> $(\overline{q(x)})$ is a maximal ideal in $\mathbb{Z}_{p}[x]$.
+> 
+> > [!Proof]-
+> > Let $I\subseteq \mathbb{Z}_{p}[x]$ be an ideal such that $(\overline{q(x)})$ is a proper subset of $I$. Let $\overline{g(x)}\in I\setminus(\overline{q(x)})$. Note that $\overline{g(x)}$ cannot be a multiple of $\overline{q(x)}$. If $\overline{g(x)}$ is a constant, that would imply $1\in I$ ($\mathbb{Z}_{p}$ is a field!) and hence $I=\mathbb{Z}_{p}$. 
+> > 
+> > Assume $\text{deg}\,\overline{g(x)}\geq 1$. Let $\overline{f(x)}$ be the monic polynomial of smallest degree in $(\overline{q(x)}, \overline{g(x)})$. Any $\overline{u(x)}\in(\overline{q(x)}, \overline{g(x)})$ can be expressed as $\overline{u(x)}=\overline{f(x)}\cdot\overline{a(x)}+\overline{r(x)}$, where $\overline{r(x)}$ has smaller degree than $\overline{f(x)}$. However, $\overline{r(x)}=\overline{u(x)}-\overline{f(x)}\cdot \overline{a(x)}\in I$, forcing $\overline{r(x)}=0$. Thus, $(\overline{q(x)}, \overline{g(x)})=(\overline{f(x)})$. This implies that $\overline{f(x)}$ is a factor of $\overline{q(x)}$, which forces $\overline{f(x)}=1$, and hence $I=\mathbb{Z}_{p}$.
 > 
 
-If $I=(p)$ or $I=(q(x))$ for irreducible $q(x)$, $I$ is clearly a prime ideal. Assume $I=(p, q(x))$, where $q(x)$ is not reducible modulo $p$. 
-
+Thus, $\mathbb{Z}_{p}[x]/(\overline{q(x)})$ (and thus $\mathbb{Z}[x]/(p, q(x))$) is a field, and in particular an integral domain. It follows that $(p, q(x))$ is a prime ideal in $\mathbb{Z}[x]$.

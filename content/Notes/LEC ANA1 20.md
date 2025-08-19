@@ -43,21 +43,20 @@ Things to note:
 
 ### Continuous functions defined on compact sets are uniformly continuous
 
-Rudin, 4.19
-
->[!Theorem]
->Let $X$ be compact, $f:X\to Y$ be continuous. Then, $f$ is uniformly continuous.
-
->**Proof**
->Let $\epsilon>0$ be arbitrary. To show that $f$ is uniformly continuous, we have to produce a $\delta$ such that $d_{X}(p, q)<\delta$ implies $d_{Y}(f(p), f(q))<\epsilon$. Since $f$ is continuous, we can find $\delta_{x}$ for every $x \in X$ such that $f(B_{\delta_{x}}(x))\subset B_{\frac{\epsilon}{2}}(f(x))$. Note that the set
-> $$
-> S\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in X  \right\}
-> $$ 
->is an open cover of $X$. Since $X$ is compact, $S$ must have a finite subcover 
-> $$
-> S'\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in K \subset X  \right\}.
-> $$
->Let $\delta \equiv \min \left\{  \frac{\delta_{x}}{2}\ |\ x\in K  \right\}$. Consider $p$, $q$ in $X$ with $d_{X}(p, q)<\delta$. Now, $p$ must be in $B_{\frac{\delta_{x}}{2}}(x)$ for some $x\in K$. Thus, $d_{X}(p, x)< \frac{\delta_{x}}{2}$. Triangle inequality gives us $d_{X}(q, x)<\delta_{x}$. Thus, $p, q\in B_{\delta_{x}}(x)$. This implies $f(p), f(q)\in B_{\frac{\epsilon}{2}}(f(x))$, i.e, $d_{Y}(f(p), f(q))<\epsilon$. ❏
+> [!Theorem] Rudin 4.19
+> Let $X$ be compact, $f:X\to Y$ be continuous. Then, $f$ is uniformly continuous.
+> 
+> >[!Proof]-
+> >Let $\epsilon>0$ be arbitrary. To show that $f$ is uniformly continuous, we have to produce a $\delta$ such that $d_{X}(p, q)<\delta$ implies $d_{Y}(f(p), f(q))<\epsilon$. Since $f$ is continuous, we can find $\delta_{x}$ for every $x \in X$ such that $f(B_{\delta_{x}}(x))\subset B_{\frac{\epsilon}{2}}(f(x))$. Note that the set
+> > $$
+> > S\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in X  \right\}
+> > $$ 
+> >is an open cover of $X$. Since $X$ is compact, $S$ must have a finite subcover 
+> > $$
+> > S'\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in K \subset X  \right\}.
+> > $$
+> >Let $\delta \equiv \min \left\{  \frac{\delta_{x}}{2}\ |\ x\in K  \right\}$. Consider $p$, $q$ in $X$ with $d_{X}(p, q)<\delta$. Now, $p$ must be in $B_{\frac{\delta_{x}}{2}}(x)$ for some $x\in K$. Thus, $d_{X}(p, x)< \frac{\delta_{x}}{2}$. Triangle inequality gives us $d_{X}(q, x)<\delta_{x}$. Thus, $p, q\in B_{\delta_{x}}(x)$. This implies $f(p), f(q)\in B_{\frac{\epsilon}{2}}(f(x))$, i.e, $d_{Y}(f(p), f(q))<\epsilon$. ❏
+> 
 
 ---
 ## Theorems that fail when X is not compact

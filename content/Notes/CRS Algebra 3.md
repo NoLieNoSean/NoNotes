@@ -17,6 +17,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 2]] ✅ Quotients and ideals
 [[LEC ALG3 3]] ✅ Modules (?)
 [[LEC ALG3 4]]  Polynomial rings
+[[LEC ALG3 5]]
 
 # Tutorials
 

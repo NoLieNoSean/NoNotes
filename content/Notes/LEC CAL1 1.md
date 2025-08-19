@@ -43,28 +43,29 @@ Notice that for $p=\infty$, $\lVert \mathbf{x} \rVert_{\infty}=\max \{ |x_{i}| \
 
 All the properties except the triangle inequality are trivial to show. The only non trivial property that needs to be proved is the triangle inequality.
 
-> [!Theorem] Claim
+> [!Theorem] Minkowski Inequality
 > The p-norm satisfies the triangle inequality, i.e,
 > $$
-> \left( \sum |x_{i}+y_{i}|^{p} \right)^{1/p}\leq\left( \sum |x_{i}|^{p} \right)^{1/p}+\left( \sum |y_{i}|^{p} \right)^{1/p}
+> \left( \sum |x_{i}+y_{i}|^{p} \right)^{1/p}\leq\left( \sum |x_{i}|^{p} \right)^{1/p}+\left( \sum |y_{i}|^{p} \right)^{1/p}.
 > $$
-
-> Proof
-> If $p=1$, the claim follows from the triangle inequality in $\mathbb{R}$. For $1<p$, we have
-> $$
-> \begin{align}
-> \sum |x_{i}+y_{i}|^{p} & =\sum |x_{i}+y_{i}|^{p-1}|x_{i}+y_{i}| \\
->  & \leq \sum |x_{i}+y_{i}|^{p-1}|x_{i}|+\sum |x_{i}+y_{i}|^{p-1}|y_{i}| \\
-> \end{align}
-> $$
-> Applying [[Holder's inequality]] ($\frac{1}{q}\equiv1-\frac{1}{p}$), we get
-> $$
-> \begin{align}
-> \sum |x_{i}+y_{i}|^{p}  \leq  & \left( \sum |x_{i}|^{p} \right)^{1/p}\left( \sum |x_{i}+y_{i}|^{(p-1)q} \right)^{1/q} +  \\
->    &  \left( \sum |y_{i}|^{p} \right)^{1/p}\left( \sum |x_{i}+y_{i}|^{(p-1)q} \right)^{1/q}  \\
-> \implies \left( \sum |x_{i}+y_{i}|^{p} \right)^{1/p}\leq & \left( \sum |x_{i}|^{p} \right)^{1/p}+\left( \sum |y_{i}|^{p} \right)^{1/p}& (p-1)q=p
-> \end{align}
-> $$
-> ◻️
+> 
+> > [!Proof]-
+> > If $p=1$, the claim follows from the triangle inequality in $\mathbb{R}$. For $1<p$, we have
+> > $$
+> > \begin{align}
+> > \sum |x_{i}+y_{i}|^{p} & =\sum |x_{i}+y_{i}|^{p-1}|x_{i}+y_{i}| \\
+> >  & \leq \sum |x_{i}+y_{i}|^{p-1}|x_{i}|+\sum |x_{i}+y_{i}|^{p-1}|y_{i}| \\
+> > \end{align}
+> > $$
+> > Applying [[Holder's inequality]] ($\frac{1}{q}\equiv1-\frac{1}{p}$), we get
+> > $$
+> > \begin{align}
+> > \sum |x_{i}+y_{i}|^{p}  \leq  & \left( \sum |x_{i}|^{p} \right)^{1/p}\left( \sum |x_{i}+y_{i}|^{(p-1)q} \right)^{1/q} +  \\
+> >    &  \left( \sum |y_{i}|^{p} \right)^{1/p}\left( \sum |x_{i}+y_{i}|^{(p-1)q} \right)^{1/q}  \\
+> > \implies \left( \sum |x_{i}+y_{i}|^{p} \right)^{1/p}\leq & \left( \sum |x_{i}|^{p} \right)^{1/p}+\left( \sum |y_{i}|^{p} \right)^{1/p}& (p-1)q=p
+> > \end{align}
+> > $$
+> >
+> 
 
 Quick exercise: verify the triangle inequality for the infinity norm.

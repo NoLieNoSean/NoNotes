@@ -1,10 +1,12 @@
 ---
 tags:
-  - CAL1
   - Lecture
+  - CAL2
+  - Processed
 date: 2025-08-12
 time: 10:31
 ---
+
 > [!Recall]
 > Let $R\subseteq \mathbb{R}^{n}$ be a rectangle. Let $f:R\to \mathbb{R}$ be bounded. Partitions of $R$ are products of partitions. $U(P, f)$ and $L(P, f)$ are defined analogously to the one variable case. As expected, $f$ is said to be Riemann integrable on $R$ if
 > $$
@@ -31,7 +33,7 @@ time: 10:31
 
 ---
 
-# Integration on general subsets
+# Characterizing integrable functions on closed rectangles
 
 ## Measure zero and content zero
 
@@ -47,9 +49,8 @@ Remarks:
 1. If $A$ is finite, then $A$ has measure zero.
 2. If $A$ is countable, then $A$ has measure zero (it is easy to construct a countable cover consisting of shrinking rectangles such that the sum of their areas is less than $\epsilon$).
 3. If $A$ has measure $0$ and $B\subseteq A$, $B$ has measure $0$.
-4. $[0, 1]$ does not have measure $0$.
-5. Open rectangles can be used in place of closed rectangles in the definition of measure zero (we will be using this fact often).
-6. A countable union of measure zero sets is measure zero (the proof is exactly what you would expect).
+4. Open rectangles can be used in place of closed rectangles in the definition of measure zero (we will be using this fact often).
+5. A countable union of measure zero sets is measure zero (the proof is exactly what you would expect).
 
 > [!Definition]
 > A subset $A\subseteq \mathbb{R}^{n}$ has **content zero** if for all $\epsilon> 0$, there is a finite cover $\{ U_{1}, \dots, U_{k} \}$ of $A$ by closed rectangles such that 
@@ -67,6 +68,8 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 > > Let $\epsilon> 0$. Since $A$ has measure $0$, there exists a cover of $A$ by open rectangles such that their cumulative volume is less than $\epsilon$. Since $A$ is compact, a finite number $U_{1}, \dots, U_{n}$ of the $U_{i}$ also cover $A$.
 
 ^322cf9
+
+If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivakCalculusManifoldsModern1965 3-5. It then follows from [[#^322cf9]] that $[a, b]$ does not have measure zero either. 
 
 ## Oscillations
 
@@ -97,7 +100,7 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 > > Let $B=\{ x\in A:o(f, x)\geq \epsilon \}$. We will show that $\mathbb{R}^{n}-B$ is open. If $x\in \mathbb{R}^{n}-B$, either $x\not\in A$ or $x\in A$ and $o(f, x)<\epsilon$. In the first case, since $A$ is open, there is a neighborhood $N$ of $x$ such that $N\subseteq \mathbb{R}^{n}-A\subseteq \mathbb{R}^{n}-B$. In the second case, there is a $\delta> 0$ such that $M(x, f, \delta)-m(x, f, \delta)<\epsilon$. For any $y\in B_{\delta}(x)$, there exists $\delta_{1}> 0$ such that $B_{\delta_{1}}(y)\subset B_{\delta}(x)$; thus $M(y, f, \delta_{1})-m(y, f, \delta_{1})<\epsilon$, and consequently $o(f, y)<\epsilon$. Therefore, $B_{\delta}(x)\subseteq \mathbb{R}^{n}-B$.
 
 ^425f3e
-## Characterizing integrable functions
+## Necessary and sufficient condition for integrability
 
 > [!Lemma]
 > Let $R\subseteq \mathbb{R}^{n}$ be a closed rectangle, $f:R\to \mathbb{R}$ bounded function such that $o(f, x)\leq \epsilon$ for all $x\in R$. Then, there exists a partition $P$ such that $U(P, f)-L(P, f)<\epsilon \text{Vol}(R)$.
@@ -111,7 +114,7 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 ^06a6cd
 
 > [!Theorem]
-> Let $R\subseteq \mathbb{R}^{n}$ be a closed rectangle. Let $f:R\to \mathbb{R}$ be a bounded function. Then, $f$ is integrable iff the set of discontinuities of $f$ has measure zero.
+> Let $R\subseteq \mathbb{R}^{n}$ be a closed rectangle. Let $f:R\to \mathbb{R}$ be a bounded function. Then, $f$ is integrable on $R$ iff the set of discontinuities of $f$ has measure zero.
 > 
 > > [!Proof]-
 > > Let $B$ be the set of discontinuities of $f$.
@@ -158,7 +161,6 @@ Clearly, $A$ has content zero $\implies$ $A$ has measure zero. The converse is t
 > > \end{align}
 > > $$
 
-> [!Definition]
-> $f:\mathbb{R}^{n}\to \mathbb{R}$ is **integrable** if there is a closed rectangle $R\subseteq \mathbb{R}^{n}$ such that $f(x)=0$ for all $x\not\in R$ and $f$ is integrable on $R$.
-> 
+^9809c8
+
 

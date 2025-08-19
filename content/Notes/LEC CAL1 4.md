@@ -10,7 +10,7 @@ Recall what an [[LEC ALG1 21#Inner Product Spaces|inner product space]] is. Now,
 $$
 \langle f, g \rangle \equiv \int_{a}^{b} f\overline{g}.
 $$
-Given an inner product on a vector space, we can always define a norm on the vector space by
+Note that first of all [[LEC ANA1 27#^d99859|the integral exists]]. $\langle f, f \rangle=0$ iff $f=0$ follows from @kumaresanTopologyMetricSpaces2005 Lemma 1.1.11. The rest of the properties of the inner product follow from the properties of the Riemann integral. Given an inner product on a vector space, we can always define a norm on the vector space by
 $$
 \lVert f \rVert^{2} \equiv \langle f, f \rangle.
 $$
