@@ -13,3 +13,4 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 [[LEC CAL2 5]] ✅ Integration on Jordan measurable sets
 
 
+[[TUT CAL2 1]]

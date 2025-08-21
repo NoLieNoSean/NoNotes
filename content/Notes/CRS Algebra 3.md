@@ -16,10 +16,12 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
 [[LEC ALG3 2]] ✅ Quotients and ideals
 [[LEC ALG3 3]] ✅ Modules (?)
-[[LEC ALG3 4]]  Polynomial rings
-[[LEC ALG3 5]]
+[[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals
+[[LEC ALG3 5]] ✅ Radicals
+[[LEC ALG3 6]]
 
 # Tutorials
 
 [[TUT ALG3 1]]
 [[TUT ALG3 2]]
+[[TUT ALG3 3]]

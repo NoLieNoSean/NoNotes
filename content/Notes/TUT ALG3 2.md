@@ -10,6 +10,8 @@ time: 14:55
 > [!Question]
 > Let $n\geq 1$ be an integer. Determine $U((\mathbb{Z}/n\mathbb{Z})[x])$.
 
+Properties of nilpotents, units, and zero divisors in polynomial rings are developed in a more general setting in @conradNILPOTENTSUNITSZERO21 . 
+
 Let $\psi(n)$ be the squarefree part of $n\in \mathbb{N}$. Call $a\in \mathbb{Z}/n\mathbb{Z}$ *nilpotent* if $\psi(n)\ | \ a$. Call $g(x)\in \mathbb{Z}/n\mathbb{Z}[x]$ nilpotent if $g(x)^{k}=0$ for some $k\in \mathbb{N}$, called the order of $g$.
 
 > [!Lemma]
@@ -40,32 +42,38 @@ Let $\psi(n)$ be the squarefree part of $n\in \mathbb{N}$. Call $a\in \mathbb{Z}
 
 ^e42aa7
 
-Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\mathbb{Z}[x]$ $\iff$ $f_{0}\in U_{n}$ and $f_{i}$ is nilpotent for $i> 0$. 
+Now, I claim the following:
 
-> [!Proof]-
-> $(\impliedby)$ If $f_{0}\in U_{n}$ and $f_{i}$ is nilpotent for $i> 0$, $f$ can be expressed as
-> $$
-> f_{0}(1+f_{0}^{-1}\overbrace{ (f_{1}x+f_{2}x^{2}+\dots f_{k}x^{k}) }^{g(x)\equiv}).
-> $$
-> 
-> ^ed1d3b
-> 
-> Note that by [[#^e42aa7]], $g(x)$ is nilpotent. 
-> 
-> If we attempt to construct an inverse $h(x)$ of $1+f_{0}^{-1}g(x)$, we will observe $h(x)$ is forced to be[^1]
-> $$
-> 1-f_{0}^{-1}g(x)+(f_{0}^{-1})^{2}g(x)^{2}+\dots=\sum(-f_{0}^{-1})^{i}g(x)^{i}.
-> $$
-> 
-> ^ec78c6
-> 
-> It is clear that $h(x)\in \mathbb{Z}/n\mathbb{Z}[x]$ only if $g(x)^{i}=0$ for all $i> l$ for some integer $l$. Since $g(x)$ is nilpotent, this condition is satisfied. Thus, $f(x)$ is a unit, with inverse 
-> $$
-> f_{0}^{-1}\sum_{i=0}^{l} (-f_{0}^{-1})^{i}g(x)^{i}.
-> $$
-> $(\implies)$ $f_{0}\in U_{n}$ is immediate. We again express $f(x)$ as in [[#^ed1d3b]]. Since $f_{0}$ is invertible and $f(x)$ is invertible, so is $1+f_{0}^{-1}g(x)$, the inverse of which must then be given by [[#^ec78c6]], because any inverse would need to satisfy the recursive relation from multiplying out, which formally yields the series. Since the inverse is a (finite-degree) polynomial, the series must terminate, implying $g(x)$ must be nilpotent, which in turn implies $f_{i}$ is nilpotent for $i> 0$ by [[#^e42aa7]]. 
+> [!Claim]
+> $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\mathbb{Z}[x]$ $\iff$ $f_{0}\in U_{n}$ and $f_{i}$ is nilpotent for $i> 0$. 
 
-[^1]:Why does the inverse have to be a polynomial in $g(x)$? You can't assume this.
+^235311
+
+$(\impliedby)$ If $f_{0}\in U_{n}$ and $f_{i}$ is nilpotent for $i> 0$, $f$ can be expressed as
+$$
+f_{0}(1+f_{0}^{-1}\overbrace{ (f_{1}x+f_{2}x^{2}+\dots f_{k}x^{k}) }^{g(x)\equiv}).
+$$
+
+^ed1d3b
+
+Note that by [[#^e42aa7]], $g(x)$ is nilpotent. 
+
+If we attempt to construct an inverse $h(x)$ of $1+f_{0}^{-1}g(x)$, we will observe $h(x)$ is forced to be[^1]
+$$
+1-f_{0}^{-1}g(x)+(f_{0}^{-1})^{2}g(x)^{2}+\dots=\sum(-f_{0}^{-1})^{i}g(x)^{i}.
+$$
+
+^ec78c6
+
+It is clear that $h(x)\in \mathbb{Z}/n\mathbb{Z}[x]$ only if $g(x)^{i}=0$ for all $i> l$ for some integer $l$. Since $g(x)$ is nilpotent, this condition is satisfied. Thus, $f(x)$ is a unit, with inverse 
+$$
+f_{0}^{-1}\sum_{i=0}^{l} (-f_{0}^{-1})^{i}g(x)^{i}.
+$$
+$(\implies)$ $f_{0}\in U_{n}$ is immediate. We again express $f(x)$ as in [[#^ed1d3b]]. Since $f_{0}$ is invertible and $f(x)$ is invertible, so is $1+f_{0}^{-1}g(x)$, the inverse of which must[^2] then be given by [[#^ec78c6]], because any inverse would need to satisfy the recursive relation from multiplying out, which formally yields the series. Since the inverse is a (finite-degree) polynomial, the series must terminate, implying $g(x)$ must be nilpotent, which in turn implies $f_{i}$ is nilpotent for $i> 0$ by [[#^e42aa7]]. 
+
+[^1]:Ok, I haven't been able to prove that $h(x)$ is forced to be [[#^ec78c6]], but the argument here still works: Since $g(x)$ is nilpotent, [[#^ec78c6]] must terminate, and is clearly an inverse of $1+f_{0}^{-1}g(x)$. 
+[^2]:This is where a problem arises. I absolutely NEED $h(x)$ to be [[#^ec78c6]] for the argument to work. Refer @conradNILPOTENTSUNITSZERO21 Theorem 2.2 for a valid proof. 
+
 
 > [!note] Neat result as a by-product
 > The sum of a unit element and a nilpotent element is a unit when they commute. 
@@ -74,7 +82,6 @@ Now, I claim the following: $f(x)=\sum f_{i}x^{i}$ is a unit in $\mathbb{Z}/n\ma
 > > If $u$ is a unit with inverse $v$, $a$ is nilpotent, and $au=ua$, we have $u+a=u(1+va)$. Note that $au=ua$ implies $va=av$, which implies $va$ is nilpotent. Thus, $1+va$ is invertible by the same argument we used in the previous proof. 
 > 
 
-Alternatively, @conradZORNSLEMMAAPPLICATIONS24 Theorem 3.3 proves that the intersection of all prime ideals in a nonzero commutative ring is the set of nilpotent elements in the ring. 
 
 ---
 
