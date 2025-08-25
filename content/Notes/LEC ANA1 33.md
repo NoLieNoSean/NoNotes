@@ -31,7 +31,7 @@ f=\lim_{ n \to \infty } f_{n}=\begin{cases}
 1 & x=1,
 \end{cases}
 $$
-which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called **uniform convergence**, does preserve these properties.
+which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called **uniform convergence**, does. Uniform limits of functions preserve continuity, uniform continuity, integrability, and - with additional hypothesis - differentiability.
 
 > [!Important] Remark
 > To say $f$ is continuous at a limit point $x$ means 
@@ -46,10 +46,6 @@ which is clearly discontinuous. So, pointwise convergence does not preserve prop
 > \end{align}
 > $$
 > (We have used the definition of $f$ as the pointwise limit of $(f_{n})$ and the hypothesis that $f_{n}$ are continuous). So, we are essentially asking whether the order in which limit processes are carried out is immaterial. As noted before, this is not true for pointwise convergent functions, but is true for uniformly convergent functions.
-
-%% 
-triangle area function, 0 1 array example
-%%
 
 ---
 # Uniform convergence

@@ -6,18 +6,18 @@ tags:
 date: 2025-02-04
 time: 11:50
 ---
-## Finite intersection property
+# Finite intersection property
 
 > [!Definition]
-> A collection $F$ of sets in $X$ is said to have the *finite intersection property* if any finite subcollection of $F$ has a nonempty intersection.
+> A collection $F$ of sets in $X$ is said to have the **finite intersection property** if any finite subcollection of $F$ has a nonempty intersection.
 
-If $T$ is a collection of open subsets of a metric space $X$, then the collection $F$ of complements of sets in $T$ is a collection of closed sets. Moreover, $T$ is a cover of $X$ if and only if $F$ has empty intersection. Now, $X$ is compact if $T$ being an open cover implies a finite subcover of $T$ exists. Taking the contrapositive, we get that $X$ is compact if no finite subcover of $T$ implies $T$ is not an open cover. 
+If $T$ is a collection of open subsets of a metric space $X$, then the collection $F$ of complements of sets in $T$ is a collection of closed sets. Moreover, $T$ is a cover of $X$ if and only if $F$ has empty intersection. Now, $X$ is compact if $T$ being an open cover implies a finite subcover of $T$ exists. Taking the contrapositive, we get that $X$ is compact if the nonexistence of a finite subcover of $T$ implies $T$ is not an open cover. 
 
 > [!Theorem]
 > A metric space $X$ is compact if and only if every collection $F$ of closed subsets of $X$ with the finite intersection property has nonempty intersection.
 
 
-## Characterization of compact sets
+# Characterization of compact sets
 
 Recall definitions of [[LEC ANA1 17#Absolute and relative definitions of open cover compactness|open cover compactness]] (referred to as just compactness), [[LEC ANA1 16#Sequential compactness|sequential compactness]], and [[LEC ANA1 16#Limit point compactness|limit point compactness]]. In Analysis 1, we [[LEC ANA1 16#Equivalence of sequential and limit point compactness|showed]] that sequential and limit point compactness are equivalent. We stated but didn't show that this equivalence extends to open cover compactness. We will prove this. Also recall that we [[LEC ANA1 16#Characterization of compact sets|showed]] that all compact sets are closed and bounded (with the [[LEC ANA1 16#Heine Borel Theorem|converse]] being true for $\mathbb{R}^{n}$). We will introduce a stronger characterization, which says that a set is compact if and only if it is complete and totally bounded.
 

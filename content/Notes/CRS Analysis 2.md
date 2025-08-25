@@ -12,3 +12,4 @@ CMI, Aug-Nov 2025, R Srinivasan
  %%
 
 [[LEC ANA2 1]] ✅
+[[LEC ANA2 2]]

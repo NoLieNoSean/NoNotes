@@ -70,7 +70,7 @@ This allows for the canonical decomposition and the first isomorphism theorem fo
 
 ## Correspondence and third isomorphism
 
-Observe that the ideals of $R$ containing $I$ are in bijective correspondence with the ideals of the quotient $R/I$: we already know that the subgroups $J$ of $R$ containing $I$ are in bijective correspondence with the subgroups of $R/I$, viz., $J\leftrightarrow J/I$. It is easily verified that $J/I$ is an ideal of $R/I$ iff $J$ is an ideal of $R$.
+Observe that the ideals of $R$ containing $I$ are in bijective correspondencei with the ideals of the quotient $R/I$: we [[LEC ALG2 5#^90ba83|already know]] that the subgroups $J$ of $R$ containing $I$ are in bijective correspondence with the subgroups of $R/I$, viz., $J\leftrightarrow J/I$. It is easily verified that $J/I$ is an ideal of $R/I$ iff $J$ is an ideal of $R$.
 
 As in the case of groups, quotients by corresponding ideals are isomorphic:
 
@@ -223,6 +223,8 @@ $\mathbb{Z}$ is clearly a PID.
 > > $$
 > > where $p(x)\in k[x]$ and $r(x)$ has degree less than $f(x)$. But, $f(x)$ has minimal degree, so $r(x)=0$ [^2]. It follows that $I=(f(x))$. 
 > 
+
+^2e8cc1
 
 [^1]: Minimal degree monic polynomials in an ideal, if they exist, are unique in polynomial rings. They must exist in this case since $k$ is a field. See @leeuwenAnswerPrincipalIdeal2013 for more.
 

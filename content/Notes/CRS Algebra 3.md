@@ -18,7 +18,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 3]] ✅ Modules (?)
 [[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals
 [[LEC ALG3 5]] ✅ Radicals
-[[LEC ALG3 6]]
+[[LEC ALG3 6]] ✅ Krull's theorem
 
 # Tutorials
 

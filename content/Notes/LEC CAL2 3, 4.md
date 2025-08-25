@@ -127,10 +127,12 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 > > $$
 > > Since $B$ has measure zero, $B_{\epsilon}$ has measure zero. Since $B_{\epsilon}$ is [[#^425f3e|closed]] an bounded, $B_{\epsilon}$ is compact, so $B_{\epsilon}$ has [[#^322cf9|content zero]]. Thus, there exist closed rectangles $U_{1}, \dots, U_{r}$ such that $B_{\epsilon}\subseteq \bigcup_{i=1}^{r}U_{i}^{\circ}$ (working with interiors requires some work) and $\sum_{i=1}^{r}\text{Vol}(U_{i})<\epsilon$.
 > > 
-> > Choose a partition $P$ of $R$ such that every subrectangle $S$ of $P$ is one of two types:
+> > Choose a partition $P$ of $R$ such that every subrectangle $S$ of $P$ is one of two types (Show that this can be done!):
 > > 1. $S\subseteq U_{i}$ for some $i$, or
-> > 2. $S\cap B_{\epsilon}=\emptyset$,
-> > (Show that this can be done!). Let $P=\mathscr{S}_{1}\sqcup\mathscr{S}_{2}$, where $\mathscr{S}_{1}$ and $\mathscr{S}_{2}$ represent rectangles of type $1$ and $2$ respectively.
+> > 2. $S\cap B_{\epsilon}=\emptyset$.
+> >
+> > 
+> > Let $P=\mathscr{S}_{1}\sqcup\mathscr{S}_{2}$, where $\mathscr{S}_{1}$ and $\mathscr{S}_{2}$ represent rectangles of type $1$ and $2$ respectively.
 > > 
 > > Next, let $|f(x)|\leq M$ for all $x\in R$. Then, $M_{S}(f)-m_{S}(f)\leq 2M$ for all $S\in P$.
 > > $$

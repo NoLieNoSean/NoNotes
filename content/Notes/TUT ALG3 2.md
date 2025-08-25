@@ -170,3 +170,10 @@ Since $q(x)$ is not reducible modulo $p$, $\overline{q(x)}$ is not reducible in 
 > 
 
 Thus, $\mathbb{Z}_{p}[x]/(\overline{q(x)})$ (and thus $\mathbb{Z}[x]/(p, q(x))$) is a field, and in particular an integral domain. It follows that $(p, q(x))$ is a prime ideal in $\mathbb{Z}[x]$.
+
+
+$$
+\forall x\in \mathbb{R}
+$$
+
+

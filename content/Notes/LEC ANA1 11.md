@@ -159,6 +159,8 @@ Rudin, 4.4
 >2. $\lim_{ x \to p }(fg)(x)=ab$
 >3. $\lim_{ x \to p } \left( \frac{f}{g} \right)(x)= \frac{a}{b}$, if $b\ne 0$.
 
+^2e47e7
+
 >**Proof**
 >For every $(p_{n})\to p$ in $E\setminus \{ p \}$, we have $(f(p_{n}))\to a$ and $(g(p_{n}))\to b$, courtesy 4.2(=>). Then, the [[Sequences and convergence#Algebraic limit theorem|algebra of limits of sequences]] tells us that $(f(p_{n})+g(p_{n}))\to a+b$. This implies $\lim_{ x \to p }(f(x)+g(x))=a+b$, also because of 4.2(<=). ❏
 
@@ -167,7 +169,11 @@ Similar proofs for (2) and (3).
 >[!Info]
 >In (3), we have only required the limit of $g$ at $p$ to be non-zero, because this guarantees a $\delta$ window about $p$ where $g$ must be non-zero. 
 
-Have a peek at Rudin, 4.9.
+> [!Theorem]
+> Let $f$ and $g$ be complex continuous functions on a metric space $X$. Then, $f+g$, $fg$, and $f/g$ are continuous on $X$.
+
+At isolated points of $X$ there is nothing to prove. At limit points, the statement follows from [[#^2e47e7]]. 
+
 
 ---
 ## Epilogue

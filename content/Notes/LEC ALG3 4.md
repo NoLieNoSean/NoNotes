@@ -73,6 +73,8 @@ All rings in this section are commutative.
 > 1. $I$ is a **prime ideal** if $R/I$ is an integral domain.
 > 2. $I$ is a **maximal ideal** if $R/I$ is a field.
 
+^a53c12
+
 Since [[Intro to Ring Theory#Preliminaries|a finite integral domain is a field]], if $R/I$ is finite, then $I$ is prime iff $I$ is maximal.
 
 > [!Example]
@@ -110,10 +112,12 @@ Since [[Intro to Ring Theory#Preliminaries|a finite integral domain is a field]]
 > > The maximality condition follows from the [[LEC ALG3 2#Correspondence and third isomorphism|correspondence between ideals]] of $R/I$ and ideals of $R$ containing $I$ and [[#^4fe708]]. 
 
 > [!Proposition] @aluffiAlgebraChapter02009 III.4.13
-> Let $R$ be a PID, and let $i$ be a nonzero ideal in $R$. Then $I$ is prime iff it is maximal.
+> Let $R$ be a PID, and let $I$ be a nonzero ideal in $R$. Then $I$ is prime iff it is maximal.
 > 
 > > [!Proof]-
 > > Maximal ideals are prime in every ring. Let $I=(a)$ be a prime ideal in $R$, with $(a)\ne 0$, and assume $I\subseteq J$ for an ideal $J$ of $R$. As $R$ is a PID, $J=(b)$ for some $b\in R$. Since $I=(a)\subseteq(b)=J$, we have $a=bc$ for some $c\in R$. Since $I$ is prime, $b\in I$ or $c\in I$. If $b\in I$, $(b)\subseteq(a)$, and $I=J$. If $c\in I$, we have $c=da$ for some $d\in R$. But then, $a=bda$, so $db=1$ ($R$ is an integral domain). Thus, $b$ is a unit, and $(b)=J=R$.
+
+^340b52
 
 > [!Theorem] @conradZORNSLEMMAAPPLICATIONS24 3.3
 > The intersection of all prime ideals in a nonzero commutative ring is the [[LEC ALG3 5#^e9f650|nilradical]] of the ring.
