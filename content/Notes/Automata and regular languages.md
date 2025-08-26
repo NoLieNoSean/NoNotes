@@ -20,7 +20,7 @@ We say that two automata are **equivalent** if they recognize the same language.
 > [!Definition]
 > A language is called a **recognizable language** if some finite automaton recognizes it.
 
-Sipser calls these "regular languages". 
+Most references calls these "regular languages". 
 
 > [!Definition]
 > Let $A$ and $B$ be languages. We define the regular operations **union**, **concatenation**, and **star** as follows:

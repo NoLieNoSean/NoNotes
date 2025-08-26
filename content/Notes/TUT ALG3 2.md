@@ -148,7 +148,10 @@ By IH, $v(x)\in(p, f^{*}(x))$, so it follows that $u(x)\in(p, f^{*}(x))$.
 
 **Case 2: All polynomials in $I$ have degree at least $1$.**
 
-Let $q(x)\in I$ be the minimum degree minimum leading coefficient polynomial. This clearly has to be unique. It has to be irreducible, since if $q(x)=r_{1}(x)r_{2}(x)$, either $r_{1}(x)\in I$ or $r_{2}(x)\in I$, a contradiction. All $u(x)\in I$ being divisible by $q(x)$ is also forced. Thus, $I=(q(x))$.
+> [!Warning]
+> The following reasoning is flawed; see [[TUT ALG3 3#Case 1 $ mathfrak{P} cap mathbb{Z}=(0)$.|this]] instead.
+
+> Let $q(x)\in I$ be the minimum degree minimum leading coefficient polynomial. This clearly has to be unique. It has to be irreducible, since if $q(x)=r_{1}(x)r_{2}(x)$, either $r_{1}(x)\in I$ or $r_{2}(x)\in I$, a contradiction. All $u(x)\in I$ being divisible by $q(x)$ is also forced. Thus, $I=(q(x))$.
 
 ---
 
@@ -170,10 +173,3 @@ Since $q(x)$ is not reducible modulo $p$, $\overline{q(x)}$ is not reducible in 
 > 
 
 Thus, $\mathbb{Z}_{p}[x]/(\overline{q(x)})$ (and thus $\mathbb{Z}[x]/(p, q(x))$) is a field, and in particular an integral domain. It follows that $(p, q(x))$ is a prime ideal in $\mathbb{Z}[x]$.
-
-
-$$
-\forall x\in \mathbb{R}
-$$
-
-

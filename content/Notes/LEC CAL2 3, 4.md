@@ -45,6 +45,8 @@ time: 10:31
 > \end{align}
 > $$
 
+^aeb6a3
+
 Remarks:
 1. If $A$ is finite, then $A$ has measure zero.
 2. If $A$ is countable, then $A$ has measure zero (it is easy to construct a countable cover consisting of shrinking rectangles such that the sum of their areas is less than $\epsilon$).

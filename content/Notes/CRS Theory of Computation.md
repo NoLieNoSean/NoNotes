@@ -4,11 +4,12 @@ tags:
   - MOC
 ---
 CMI, Aug-Nov 2025, C Aiswarya
-@sipserIntroductionTheoryComputation2013, @kozenTheoryComputation2006
+@sipserIntroductionTheoryComputation2013, @kozenAutomataComputability1997
 
 ---
 
-[[Intro to Automata theory]]
+[[Automata and regular languages]]
+
 
 %% 
 [[LEC TOC 1]]

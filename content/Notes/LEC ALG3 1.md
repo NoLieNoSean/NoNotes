@@ -35,6 +35,7 @@ This ring homomorphism is uniquely determined by the requirement that $\varphi(1
 > > [!Definition]
 > > The **characteristic** of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, $\text{char}(R)=0$. 
 > 
+> If $k$ is a field, then $\text{char}(k)$ is $0$ or $p$ for some prime $p$, since the image of the homomorphism $\varphi:\mathbb{Z}\to k$ is an integral domain and $\mathbb{Z}/\ker\varphi\cong \mathrm{Im}~\varphi$, so $\ker\varphi$ is a prime ideal of $\mathbb{Z}$.
 
 
 Ring homomorphisms preserve units: that is, if $u$ is a left/right unit in $R$ and $\varphi:R\to S$ is a ring homomorphism, then $\varphi(u)$ is a left/right unit. Indeed, if $v$ is a right inverse of $u$, then $\varphi(u)\varphi(v)=\varphi(uv)=\varphi(1_{R})=1_{S}$.

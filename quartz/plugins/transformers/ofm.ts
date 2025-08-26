@@ -120,7 +120,7 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 // matches any wikilink, only used for escaping wikilinks inside tables
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
-export const countedCallouts = ["definition", "lemma", "theorem", "example", "claim", "proposition"]
+export const countedCallouts = ["definition", "lemma", "theorem", "example", "claim", "proposition", "exercise"]
 
 
 const highlightRegex = new RegExp(/==([^=]+)==/g)

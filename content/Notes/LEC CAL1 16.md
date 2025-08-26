@@ -99,6 +99,8 @@ The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point 
 > [!Definition]
 > A function is **continuously differentiable** on $U\subseteq \mathbb{R}^{n}$ if all of its partial derivatives exist and are continuous on $U$. Such a function is called a $C^{1}$ function.
 
+^fc978c
+
 > [!Theorem] @hubbardVectorCalculusLinear2015 1.9.8
 > If $U$ is an open subset of $\mathbb{R}^{n}$, and $\mathbf{f}:U\to \mathbb{R}^{m}$ is a $C^{1}$ mapping, then $\mathbf{f}$ is differentiable on $U$, and its derivative is given by its Jacobian matrix.
 

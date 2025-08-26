@@ -58,7 +58,8 @@
   &[data-callout="lemma"],
   &[data-callout="theorem"],
   &[data-callout="claim"],
-  &[data-callout="proposition"] {
+  &[data-callout="proposition"],
+  &[data-callout="exercise"]{
     --border: var(--highlight);
     --bg: #ffffff00;
     border-width: 2px;

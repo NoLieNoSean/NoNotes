@@ -11,6 +11,6 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 [[LEC CAL2 2]] ✅ Review
 [[LEC CAL2 3, 4]] ✅ Integration on rectangles
 [[LEC CAL2 5]] ✅ Integration on Jordan measurable sets
-
+[[LEC CAL2 6]] ✅ Fubini's theorem
 
 [[TUT CAL2 1]]

@@ -1,5 +1,3 @@
-`Vasudeva Nanjangud`
-
 # Problem 1
 <svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<ellipse stroke="black" stroke-width="1" fill="none" cx="64.5" cy="68.5" rx="30" ry="30"/>
