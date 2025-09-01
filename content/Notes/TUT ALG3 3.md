@@ -7,7 +7,7 @@ time: 15:46
 ---
 # Problem 2
 
-> [!Question]
+> [!Exercise]
 > Let $R=\mathbb{C}[x, y, z]$ and $S=\mathbb{C}[t]$. Let $\phi:R\to S$ be a homomorphism defined by $\phi(x)=t^{3}$, $\phi(y)=t^{4}$, and $\phi(z)=t^{5}$. Show that $\ker \phi=(x^{3}-yz, y^{2}-xz, z^{2}-x^{2}y)$. 
 
 Let $I=(x^{3}-yz, y^{2}-xz, z^{2}-x^{2}y)$. We will prove that
@@ -55,7 +55,8 @@ $$
 > > $$
 > > 4=5(c-k)+3(a-i),
 > > $$
-> > which requires $i\geq 2$, which together with $j=1$ implies $x^{i}y^{j}z^{k}\not\in S$. Thus, $j=b$. $i=a$ and $k=c$ immediately follow. 
+> > which requires $a-i\leq -2$ or $a-i\geq 3$, which together with $j=1$ imply $x^{i}y^{j}z^{k}\not\in S$. Thus, $j=b$. $i=a$ and $k=c$ immediately follow. 
+> 
 
 > [!Claim]
 > For a given polynomial $p(x, y, z)$, any sequence of applications of the rules in $\mathfrak{R}$ will terminate in the same polynomial.
@@ -90,6 +91,75 @@ Let $\alpha(t^{3}, t^{4}, t^{5})\in \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Since $\va
 > > $$
 
 Thus, $R/I\cong \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Together with the obvious observation that $I\subseteq \ker\varphi$, this implies $I=\ker\varphi$.
+
+---
+
+# Problem 8
+
+> [!Exercise]
+> Suppose $I_{1}+\dots+I_{n}=R$ and for each $1\leq k\leq n$, $I_{k}\cap(I_{1}+\dots+I_{k-1}+I_{k+1}+\dots+I_{n})=(0)$. Then show that there is an isomorphism $R\cong I_{1}\times\dots \times I_{n}$. 
+
+There must exist elements $a_{1}, \dots, a_{n}$, $a_{i}\in I_{i}$, such that $a_{1}+\dots+a_{n}=1$ in $R$. Further, these elements are unique: If some $a_{i}'$'s satisfied the same property, then
+$$
+\sum_{i=1}^{n} (a_{i}-a'_{i})=0,
+$$
+so for each $k$, $(a_{k}-a'_{k})=\sum_{i\ne k}(a_{i}-a'_{i})$. Note that the LHS is a member of $I_{k}$, and the RHS is a member of $(I_{1}+\dots+I_{k-1}+I_{k+1}+\dots+I_{n})$. Thus, we have $a_{k}=a'_{k}$ for all $k$. The same method can be used to prove that if $e_{1}+\dots+e_{n}=e'_{1}+\dots+e_{n}'$ and $e_{i}, e'_{i}\in I_{i}$, then $e_{i}=e'_{i}$; we will be using this shortly.
+
+Before we proceed, we have to show that $I_{1}\times\dots \times I_{n}$ is indeed a ring. The only it is missing is an identity, and $(a_{1}, \dots, a_{n})$ does the job. Indeed, for $b_{i}\in I_{i}$, 
+$$
+\begin{align}
+(b_{1}+\dots+b_{n}) & =(b_{1}+\dots+b_{n})(a_{1}+\dots+a_{n}) \\
+ & =b_{1}a_{1}+\dots+b_{n}a_{n},
+\end{align}
+$$
+since all the cross terms must lie in $I_{i}\cap I_{j}$ for some $i\ne j$, and thus must be $0$. Hence, $b_{i}=b_{i}a_{i}$, and we have
+$$
+(b_{1}, \dots, b_{n})(a_{1}, \dots, a_{n})=(b_{1}a_{1}, \dots, b_{n}a_{n})=(b_{1}, \dots, b_{n})
+$$
+for all $(b_{1}, \dots, b_{n})\in I_{1}\times\dots \times I_{n}$. 
+
+Define a map $\varphi:R\to I_{1}\times\dots \times I_{n}$ by
+$$
+r\mapsto(ra_{1}, \dots, ra_{n}).
+$$
+This is clearly a well defined map which respects addition. To see that it respects multiplication, pull the same trick as before: write 
+$$
+r_{1}r_{2}=(r_{1}a_{1}+\dots+r_{1}a_{n})(r_{2}a_{1}+\dots+r_{2}a_{n})=r_{1}a_{1}r_{2}a_{1}+\dots+r_{1}a_{n}r_{2}a_{n},
+$$
+which then is equal to $r_{1}r_{2}(a_{1}+\dots+a_{n})$, so we have $r_{1}r_{2}a_{i}=r_{1}a_{i}r_{2}a_{i}$. Multiplication is okay!
+
+All that's left to prove is surjectivity. Take $(b_{1}, \dots, b_{n})\in I_{1}\times\dots \times I_{n}$, and observe that
+$$
+\varphi(b_{1}+\dots+b_{n})=(b_{1}a_{1}, \dots, b_{n}a_{n})=(b_{1}, \dots, b_{n}).
+$$
+
+> [!Exercise]
+> If $I_{1}, \dots, I_{n}$ are ideals in $R$, then show that there is an injective map $\varphi:R/(I_{1}\cap\dots \cap I_{n})\to(R/I_{1})\times\dots \times(R/I_{n})$.
+
+^08d416
+
+Define the obvious map
+$$
+\varphi\left( r+\bigcap I_{i} \right):=(r+I_{1}, \dots, r+I_{n}).
+$$
+That $\varphi$ is a homomorphism is immediate. If $r_{1}, r_{2}$ are such that $\varphi\left( r_{1}+\bigcap I_{i} \right)=\varphi\left( r_{2}+\bigcap I_{i} \right)$, then $r_{1}-r_{2}\in I_{i}$ for all $i$, so $r_{1}-r_{2}\in \bigcap I_{i}$, so $r_{1}+\bigcap I_{i}=r_{2}+\bigcap I_{i}$.
+
+> [!Exercise]
+> Suppose $I_{i}+I_{j}=R$ for all $i\ne j$. If $b_{1}, \dots, b_{n}\in R$, then show that there exists $b\in R$ such that $b\cong b_{i}\mod I_{i}$ for all $i=1, \dots, n$.
+
+We just have to show that the homomorphism in [[#^08d416]] is surjective given these hypotheses. For the pair $I_{i}, I_{j}$, let $e_{i_{j}}\in I_{i}$ and $e_{j_{i}}\in I_{j}$ be the elements such that $e_{i_{j}}+e_{j_{i}}=1$. Then, we have
+$$
+\begin{align}
+1 & =(e_{1_{2}}+e_{2_{1}})(e_{1_{3}}+e_{3_{1}})\dots(e_{1_{n}}+e_{n_{1}}) \\
+ & = \alpha_{1}+e_{2_{1}}e_{3_{1}}\dots e_{n_{1}},
+\end{align}
+$$
+where $\alpha_{1}\in I_{1}$. Thus, we have shown that $I_{1}+I_{2}I_{3}\dots I_{n}=R$. Generally, we have $I_{k}+\prod_{i\ne k}I_{i}=R$ for all $k$. For $I_{k}$, let $v_{k}$ be an element in $\prod_{i\ne k}I_{i}$ such that $u_{k}+v_{k}=1$, where $u_{k}\in I_{k}$. Note that $v_{k}\in 1+I_{k}$ and $v_{k}\in I_{i}$ for $i\ne k$.
+
+Now, consider $(a_{1}, \dots, a_{n})\in(R/I_{1})\times\dots \times(R/I_{n})$. We have
+$$
+\varphi(a_{1}v_{1}+\dots+a_{n}v_{n})=(a_{1}, \dots, a_{n}).
+$$
 
 ---
 

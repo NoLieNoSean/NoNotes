@@ -10,3 +10,5 @@ CMI, Aug-Nov 2025, Siddharth Pritam
 
 [[LEC ALGO 3]]
 [[LEC ALGO 4]]
+
+[[AS ALGO 1]]

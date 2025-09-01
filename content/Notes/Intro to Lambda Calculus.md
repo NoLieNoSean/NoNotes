@@ -71,6 +71,8 @@ It is a convention that lower case letters denote variables and upper case lette
 > $$
 > A variable in $M$ is said to be **bound** if it is not free. 
 
+^8db839
+
 > [!Definition] Combinator
 > 
 > $M$ is a **closed $\lambda$-term** (or **combinator**) if $FV(M)=\emptyset$. The set of closed $\lambda$-terms is denoted by $\Lambda^{\circ}$.

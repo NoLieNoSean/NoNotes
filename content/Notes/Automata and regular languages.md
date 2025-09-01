@@ -1,5 +1,3 @@
-# Automata and regular expressions
-
 > [!Definition]
 > A **finite automaton** is a 5-tuple $(Q, \Sigma, \delta, q_{0}, F)$, where
 > 1. $Q$ is a finite set of states,
@@ -103,4 +101,6 @@ This is precisely the class of languages described by regular expressions.
 > Next, we have to prove that if $M\subseteq\Gamma^{*}$ is recognizable, then $h^{-1}(M)\subseteq\Sigma^{*}$ is also recognizable.
 > 
 > Let $B$ be an NFA over $\Gamma$ recognizing $M$. Create a copy $B'$ of $B$. Remove all transitions in $B'$. Connect two states $\alpha, \beta$ in $B'$ with an arrow labelled $a\in\Sigma$ if $\beta$ can be reached from $\alpha$ on reading $h(a)$ in $B$.
+
+^6beea1
 

@@ -20,6 +20,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 5]] ✅ Radicals
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
 [[LEC ALG3 7]]
+[[LEC ALG3 8]]
 
 # Tutorials
 
