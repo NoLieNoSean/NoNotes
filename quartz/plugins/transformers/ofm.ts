@@ -894,6 +894,15 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           visit(tree, "element", (node) => {
             if (node.tagName === "blockquote" && countedCallouts.includes(node.properties.dataCallout as string) && node.properties.id) {
               NumberNodeDict.set(node.properties.id, node)
+              let identifier = {
+                type: "element",
+                tagName: "span",
+                properties: { className: ['callout-identifier']},
+                children: [
+                  {type:"text", value: node.properties.id}
+                ]
+              };
+              node.children.push(identifier)
             }
           })
 

@@ -70,6 +70,16 @@
     position: relative;
 }
 
+.callout-identifier{
+    position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  font-size: 0.7rem;
+  font-family: monospace;
+  filter: opacity(0.5);
+}
+
 @font-face {
     font-family: cmb10;
     src: url('https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/bakoma/ttf/cmb10.ttf');

@@ -30,9 +30,11 @@ $$
 This ring homomorphism is uniquely determined by the requirement that $\varphi(1)=1_{R}$ and the fact that $\varphi$ preserves addition. 
 
 > [!Info]
+> 
 > The fact that $\mathbb{Z}$ is initial in $\textsf{Ring}$ prompts a natural definition. For a ring $R$, let $f:\mathbb{Z}\to R$ be the unique ring homomorphism. Then, $\ker f=n\mathbb{Z}$ for a well-defined nonnegative integer $n$ determined by $R$. This is called the **characteristic** of $R$.
 > 
 > > [!Definition]
+> > 
 > > The **characteristic** of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, $\text{char}(R)=0$. 
 > 
 > If $k$ is a field, then $\text{char}(k)$ is $0$ or $p$ for some prime $p$, since the image of the homomorphism $\varphi:\mathbb{Z}\to k$ is an integral domain and $\mathbb{Z}/\ker\varphi\cong \mathrm{Im}~\varphi$, so $\ker\varphi$ is a prime ideal of $\mathbb{Z}$.

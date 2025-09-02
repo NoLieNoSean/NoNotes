@@ -53,7 +53,52 @@ $(1)$ Suppose $a$ is prime. Let $\alpha\beta\in \langle a \rangle$. We need to s
 
 Conversely, suppose $(a)$ is prime. Let 
 
+---
+
 $(2)$ Suppose $b$ is irreducible. We have to show that $\langle b \rangle$ is maximal among all principal ideals, that is, if $\langle b \rangle \subseteq \langle c \rangle$ then $\langle b \rangle=\langle c \rangle$ or $\langle c \rangle=R$. $b=cr$. $c$ is unit or $r$ is unit.
 
 Conversely, suppose $\langle b \rangle$ is maximal in the set of all principle ideals. If $b=b_{1}b_{2}$, then $\langle b \rangle\subseteq \langle b_{1} \rangle$. 
 
+---
+
+Example of an irreducible element which is not prime? Consider $2$ in $\mathbb{Z}[\sqrt{ -5 }]$. $2\cdot 3=(1+\sqrt{ 5 })(1-\sqrt{ 5 })$, and $2$ does not divide either $1+\sqrt{ 5 }$ or $1-\sqrt{ 5 }$. It is easily seen that $2$ is irreducible.
+
+$(3)$. Let $p$ be prime and $p=ab$. Then, $p\ | \ a$ or $p\ | \ b$. WLOG, consider the first case. Then, $pr=a$. Then, $p=ab=prb$, so $p(1-rb)=0$. Since $R$ is an integral domain, we have $1=rb$, so $r$ is a unit.
+
+---
+
+$(4)$ Suppose $R$ is a PID. Let $p\in R$ be irreducible. Since we are in a PID, $(2)$ implies that $\langle \alpha \rangle$ is a maximal ideal. So, $\langle \alpha \rangle$ is prime, so $\alpha$ is prime.
+
+[!Note]
+PIDs are not the only class of rings with this property; consider $\mathbb{Z}[x]$ as an example. It is not a PID, but every irreducible element is prime (recall that we have characterized all prime ideals in $\mathbb{Z}[x]$!)
+
+---
+
+$(5)$ Let $a$ be irreducible and $a$ and $b$ be associates. $a=bu$ for some unit $u$. If $b$ is not irreducible then $b=b_{1}b_{2}$, so $a=b_{1}b_{2}u=(b_{1})(b_{2}u)$, so $a$ is not irreducible.
+
+
+
+
+
+
+
+
+---
+
+
+[!Lemma]
+Let $\varphi:R\to R'$ be a homomorphism, and $\alpha\in R'$, then there exists a unique homomorphism $\Phi:R[x]\to R'$ extending $\varphi$ and mapping $x$ to $\alpha$. $R$ and $R'$ are commutative here.
+
+
+[!Corollary]
+Let $\varphi:R\to R'$ be a ring homomorphism. Then, there exists a unique $\Phi:R[x]\to R'[x]$ such that $\Phi$ agrees with $\varphi$ on $R$ and $\Phi$ maps $x$ to $x$.
+
+
+[!Example]
+Let $R$ be a ring and $I$ be an ideal in $R$. Then we have a natural homomorphism $\pi:R\to R/I$. By the previous result this extends to a unique homomorphism $\pi':R[x]\to (R/I)[x]$. It is easy to see that $\ker\varphi=IR[x]$. Thus, 
+$$
+\frac{R[x]}{IR[x]}\cong (R/I)[x].
+$$
+
+[!Proposition]
+Let $R$ be a principal ideal ring. Let $(a_{1})\subseteq(a_{2})\subseteq\dots$ be a chain of ideals. Then there exists an integer $n$ such that for all $j\geq n$, $(a_{j})=(a_{n})$.

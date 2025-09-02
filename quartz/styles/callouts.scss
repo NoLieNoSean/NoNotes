@@ -9,6 +9,7 @@
   overflow-y: hidden;
   transition: max-height 0.3s ease;
   box-sizing: border-box;
+  position: relative;
 
   &>.callout-content> :first-child {
     margin-top: 0;
