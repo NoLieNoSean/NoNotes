@@ -18,6 +18,8 @@ Recall what a [[LEC ALG1 21#Normed spaces|normed vector space]] is. We say that 
 > c_{1}\lVert \cdot \rVert^{\times} \leq \lVert \cdot \rVert ^{\circ}\leq c_{2}\lVert \cdot \rVert ^{\times}.
 > $$
 
+^ae90b2
+
 > [!Info]- An aside
 > Two metrics $\rho$ and $\sigma$ on a set $X$ are said to be *equivalent* if there exist positive numbers $c_{1}$ and $c_{2}$ such that for all $x_{1}, x_{2}\in X$, 
 > $$

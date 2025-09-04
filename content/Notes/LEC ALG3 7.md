@@ -5,10 +5,7 @@ tags:
 date: 2025-08-26
 time: 10:21
 ---
-> [!Definition]
-> A **size function** on an integral domain $R$ can be any function $\sigma$ whose domain is the set of nonzero elements of $R$, and whose range is the set of nonnegative integers. An integral domain $R$ is a **Euclidean domain** if there is a size function $\sigma$ on $R$ such that division with remainder is possible, in the following sense: Let $a, b\in R$, and suppose $a\ne 0$. There are elements $q$ and $r$ in $R$ such that $b=aq+r$, and either $r=0$ or $\sigma(r)<\sigma(a)$.
-
-
+# Irreducible and prime elements
 
 > [!Definition]
 > Let $a, b\in R$. We say $a\ | \ b$ if there is an element $r\in R$ such that $b=ar$. If $a\ | \ b$ and $b\ | \ a$, we say $a$ and $b$ are associates.
@@ -22,11 +19,16 @@ time: 10:21
 
 > [!Definition]
 > An element $a$ is **irreducible** if $a$ is not a unit and $a=a_{1}a_{2}$ implies $a_{1}$ is a unit or $a_{2}$ is a unit.
-> An element $p$ is **prime** if $p=ab$ implies $p\ | \ a$ or $p\ | \ b$.
+> An element $p$ is **prime** if $p\ | \ ab$ implies $p\ | \ a$ or $p\ | \ b$.
 
-These notions coincide for UFDs, but are not equivalent in general. 
+Every prime is irreducible in an integral domain. The converse is true for UFDs.
 
-Every prime is irreducible in an integral domain. The converse is not generally true.
+> [!Definition]
+> $A$ is a UFD if
+> 1. Every element $x$ factors as a product of finitely many irreducible $x=\prod x_{i}$ with $x_{i}$ irreducible, and
+> 2. irreducible implies prime.
+
+
 
 [!Example]
 $(1+i)$ and $(1-i)$ are associates in the ring of Gaussian integers. 
@@ -102,3 +104,12 @@ $$
 
 [!Proposition]
 Let $R$ be a principal ideal ring. Let $(a_{1})\subseteq(a_{2})\subseteq\dots$ be a chain of ideals. Then there exists an integer $n$ such that for all $j\geq n$, $(a_{j})=(a_{n})$.
+
+
+
+
+
+
+> [!Definition]
+> A **size function** on an integral domain $R$ can be any function $\sigma$ whose domain is the set of nonzero elements of $R$, and whose range is the set of nonnegative integers. An integral domain $R$ is a **Euclidean domain** if there is a size function $\sigma$ on $R$ such that division with remainder is possible, in the following sense: Let $a, b\in R$, and suppose $a\ne 0$. There are elements $q$ and $r$ in $R$ such that $b=aq+r$, and either $r=0$ or $\sigma(r)<\sigma(a)$.
+

@@ -95,30 +95,29 @@ $$
 
 However, an analogue of the MVT does exist:
 
-Rudin, 5.19
-
-> [!Theorem]
+> [!Theorem] Rudin 5.19
 > Suppose $\mathbf{f}$ is a continuous mapping of $[a, b]$ into $\mathbb{R}^{k}$ and $\mathbf{f}$ is differentiable in $(a, b)$. Then there exists $x\in(a, b)$ such that 
 > $$
 > |\mathbf{f}(b)-\mathbf{f}(a)|\leq (b-a)|\mathbf{f}'(x)|.
 > $$
-
-> **Proof**
-> Let $\mathbf{z}=\mathbf{f}(a)-\mathbf{f}(b)$. Define
-> $$
-> \phi(t)=\mathbf{z}\cdot \mathbf{f}(t).
-> $$
-> Now, $\phi$ is a continuous real function. Thus, the mean value theorem tells us 
-> $$
-> \phi(a)-\phi(b)=(b-a)\phi(x)=(b-a)\mathbf{z}\cdot \mathbf{f}(x)
-> $$
-> for some $x\in(a, b)$. Also, 
-> $$
-> \phi(b)-\phi(a)=\mathbf{z}\cdot \mathbf{z}=|\mathbf{z}|^{2}.
-> $$
-> Thus, 
-> $$
-> |\mathbf{z}|^{2}=(b-a)\mathbf{z}\cdot\mathbf{f}(x)\leq(b-a)|\mathbf{z}||\mathbf{f}(x)|.
-> $$
-> ❏
-
+> 
+> > [!Proof]-
+> > Let $\mathbf{z}=\mathbf{f}(a)-\mathbf{f}(b)$. Define
+> > $$
+> > \phi(t)=\mathbf{z}\cdot \mathbf{f}(t).
+> > $$
+> > Now, $\phi$ is a continuous real function. Thus, the mean value theorem tells us 
+> > $$
+> > \phi(a)-\phi(b)=(b-a)\phi'(x)=(b-a)\mathbf{z}\cdot \mathbf{f}'(x)
+> > $$
+> > for some $x\in(a, b)$. Also, 
+> > $$
+> > \phi(b)-\phi(a)=\mathbf{z}\cdot \mathbf{z}=|\mathbf{z}|^{2}.
+> > $$
+> > Thus, 
+> > $$
+> > |\mathbf{z}|^{2}=(b-a)\mathbf{z}\cdot\mathbf{f}'(x)\leq(b-a)|\mathbf{z}||\mathbf{f}'(x)|.
+> > $$
+> > 
+> > 
+> > 

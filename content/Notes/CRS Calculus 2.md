@@ -4,7 +4,7 @@ tags:
   - CAL2
 ---
 CMI, Aug-Nov 2025, Krishna Hanumanthu
-@ramadasMULTIDIMENSIONALINTEGRALCALCULUS, @spivakCalculusManifoldsModern1965 (be sure to check [errata](https://www.jirka.org/spivak-errata.html)), @rudinPrinciplesMathematicalAnalysis1976, @apostolMathematicalAnalysis1985, @pughRealMathematicalAnalysis2015, @duistermaatMultidimensionalRealAnalysis2004a
+@ramadasMULTIDIMENSIONALINTEGRALCALCULUS, @spivakCalculusManifoldsModern1965 ([errata](https://www.jirka.org/spivak-errata.html)), @rudinPrinciplesMathematicalAnalysis1976, @apostolMathematicalAnalysis1985, @pughRealMathematicalAnalysis2015, @duistermaatMultidimensionalRealAnalysis2004a
 
 ---
 
@@ -15,3 +15,11 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 [[LEC CAL2 7]]
 
 [[TUT CAL2 1]]
+
+
+---
+
+If $F:[0, 1]\times U\to\mathbb{R}$ is continuous, and $G(x)=\int_{0}^{1} F(t, x) \, dx$, then 
+$$
+\frac{\partial G(x)}{\partial x_{i}}=\int_{0}^{1} \frac{\partial F(t, x)}{\partial x_{i}} \, dt 
+$$

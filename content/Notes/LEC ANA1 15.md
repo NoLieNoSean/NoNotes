@@ -37,14 +37,17 @@ Arbitrary intersections of closed sets are closed. Finite unions of closed sets 
 
 We have developed two ways to think about continuity - the epsilon-delta [[LEC ANA1 11#Definition|definition]] and the [[LEC ANA1 13#Halfway through to a new definition of continuity|theorem]] about inverse images under a continuous function of open sets being open sets. 
 
-We observe a simple result that Rudin fails to mention:
-### Continuous functions map convergent sequences to convergent sequences
+We observe another equivalent characterization of continuity: continuous functions map convergent sequences to convergent sequences. 
 
->[!Theorem]
->Let $f:X\to Y$ be continuous on $X$. Let $(p_{n})$ be a sequence in $X$ which converges to $p\in X$. Then, $(f(p_{n}))$ must converge to $f(p)\in Y$.
+> [!Theorem]
+> $f:X\to Y$ is continuous on $X$ $\iff$ for all $p\in X$ and for all $(p_{n})\to p$, we have $(f(p_{n}))\to f(p)\in Y$. 
+> 
+> > [!Proof]-
+> > If there is a sequence converging to $p$, then $p$ is a limit point of $X$. So, $f$ being continuous on $X$ [[LEC ANA1 11#Case 1 $p$ is a limit point of $E$|implies]] $\lim_{ x \to p }f(x)$ must exist, and must equal $f(p)$. We know from the [[LEC ANA1 11#The sequence criterion|sequence criterion]] that $\lim_{ x \to p }f(x)=f(p)$ means $\lim_{ n \to \infty }f(p_{n})=f(p)$. 
+> 
 
->**Proof**
->If there is a sequence converging to $p$, then $p$ is a limit point of $X$. So, $f$ being continuous on $X$ [[LEC ANA1 11#Case 1 $p$ is a limit point of $E$|implies]] $\lim_{ x \to p }f(x)$ must exist, and must equal $f(p)$. We know from the [[LEC ANA1 11#Sequence criterion|sequence criterion]] that $\lim_{ x \to p }f(x)=f(p)$ means $\lim_{ n \to \infty }f(p_{n})=f(p)$. ❏
+^50d7a4
+
 
 ### Closed sets in $\mathbb{R}$ contain their suprema
 

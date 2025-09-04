@@ -17,29 +17,34 @@ Note the similarity between the Cantor intersection property (of a metric space)
 
 > [!Theorem] Cantor Intersection Theorem
 > A metric space $X$ has the Cantor intersection property if and only if it is [[Cauchy sequences#Complete metric space|complete]]. 
-
-> **Proof of $\implies$**
-> Let $(s_{n})$ be a Cauchy sequence. For each index $n$ define $F_{n}$ to be $\{ s_{i}\ | \ i\geq n \}$. For all $\epsilon> 0$, there exists $N$ such that for all $n, m> N$, $|s_{n}-s_{m}|<\epsilon$. Thus, $\text{diam}(F_{N})\leq \epsilon$, from which it follows that $\text{diam}(\overline{F_{N}})\leq\epsilon$ (for all $N'> N$ too, since the diameters are decreasing). Thus, $\lim_{ n \to \infty }\text{diam}(\overline{F_{n}})=0$, and $(\overline{F_{n}})$ is a contracting sequence. Thus, $\bigcap_{n=1}^{\infty}\overline{F_{n}}=\{ s \}$, $s\in X$. For all $F_{n}$, $s\in F_{n}$ or $s$ is a limit point of $F_{n}$ (or both). In any case, $B_{\frac{1}{k}}(s)\cap F_{n}\ne \emptyset$ for all $k, n$.  This allows us to select a subsequence of $(s_{n})$ which converges to $s$. If a subsequence of a Cauchy sequence converges to a point, the entire sequence [[Cauchy sequences#Step 3 Persuasive subsequence|converges]] to said point. Thus, $(s_{n})\to s$, every Cauchy sequence converges, and $X$ is complete.
 > 
-> **Proof of $\impliedby$**
-> Let $(F_{n})$ be a contracting sequence of nonempty closed subsets of $X$. Pick $s_{n}\in F_{n}$ for each $n\in \mathbb{N}$. For any $\epsilon> 0$, there exists $F_{N}$ such that $\text{diam}(F_{N})<\epsilon$, $i$.$e$, $d(s_{n}, s_{m})<\epsilon$ for all $n, m > N$. This makes $(s_{n})$ a Cauchy sequence. Since $X$ is complete, it must converge, say to a point $s$. Then, $s$ is a limit point of each $F_{n}$. Since $F_{n}$ is closed for all $n$, $s\in F_{n}$ for all $n$. Thus, $s\in \bigcap_{n=1}^{\infty}F_{n}$. The intersection does not contain more than one point, since if it did, then $\lim_{ n \to \infty }\text{diam}(F_{n})\ne 0$.
+> > [!Proof]-
+> > $(\implies)$ Let $(s_{n})$ be a Cauchy sequence. For each index $n$ define $F_{n}$ to be $\{ s_{i}\ | \ i\geq n \}$. For all $\epsilon> 0$, there exists $N$ such that for all $n, m> N$, $|s_{n}-s_{m}|<\epsilon$. Thus, $\text{diam}(F_{N})\leq \epsilon$, from which it follows that $\text{diam}(\overline{F_{N}})\leq\epsilon$ (for all $N'> N$ too, since the diameters are decreasing). Thus, $\lim_{ n \to \infty }\text{diam}(\overline{F_{n}})=0$, and $(\overline{F_{n}})$ is a contracting sequence. Thus, $\bigcap_{n=1}^{\infty}\overline{F_{n}}=\{ s \}$, $s\in X$. For all $F_{n}$, $s\in F_{n}$ or $s$ is a limit point of $F_{n}$ (or both). In any case, $B_{\frac{1}{k}}(s)\cap F_{n}\ne \emptyset$ for all $k, n$.  This allows us to select a subsequence of $(s_{n})$ which converges to $s$. If a subsequence of a Cauchy sequence converges to a point, the entire sequence [[Cauchy sequences#Step 3 Persuasive subsequence|converges]] to said point. Thus, $(s_{n})\to s$, every Cauchy sequence converges, and $X$ is complete.
+> > 
+> > $(\impliedby)$ Let $(F_{n})$ be a contracting sequence of nonempty closed subsets of $X$. Pick $s_{n}\in F_{n}$ for each $n\in \mathbb{N}$. For any $\epsilon> 0$, there exists $F_{N}$ such that $\text{diam}(F_{N})<\epsilon$, $i$.$e$, $d(s_{n}, s_{m})<\epsilon$ for all $n, m > N$. This makes $(s_{n})$ a Cauchy sequence. Since $X$ is complete, it must converge, say to a point $s$. Then, $s$ is a limit point of each $F_{n}$. Since $F_{n}$ is closed for all $n$, $s\in F_{n}$ for all $n$. Thus, $s\in \bigcap_{n=1}^{\infty}F_{n}$. The intersection does not contain more than one point, since if it did, then $\lim_{ n \to \infty }\text{diam}(F_{n})\ne 0$.
 
 ---
 # Completion of a metric space
 
 > [!Definition]
-> Let $(X, d)$ be a metric space. Then there is a complete metric space $(\tilde{X}, \tilde{d})$ called the *completion* of $(X, d)$ for which $X$ is a dense subset of $\tilde{X}$ and $d(u, v)=\tilde{d}(u, v)$ for all $u, v\in X$.
+> Let $(X, d)$ be a metric space. Then there is a complete metric space $(\tilde{X}, \tilde{d})$ called the **completion** of $(X, d)$ for which $X$ is a dense subset of $\tilde{X}$ and $d(u, v)=\tilde{d}(u, v)$ for all $u, v\in X$.
+
+^407939
+
 
 ## Constructing the completion of a metric space
 
-Let $(X, d)$ be a metric space.
+Let $(X, d)$ be a metric space. We will assume that $\mathbb{R}$ is a complete metric space, so remember that what follows hinges on a separate proof of the completeness of $\mathbb{R}$.
 
-Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}, y_{n}))$ is a Cauchy sequence in $\mathbb{R}$. Let $S$ be the space of all Cauchy sequences in $X$. Define $\rho((x_{n}), (y_{n}))\equiv\lim_{ n \to \infty }d(x_{n}, y_{n})$. It is easy to see that
+Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}, y_{n}))$ is a Cauchy sequence in $\mathbb{R}$, and hence must converge. Let $S$ be the space of all Cauchy sequences in $X$. Define $\rho((x_{n}), (y_{n}))\equiv\lim_{ n \to \infty }d(x_{n}, y_{n})$. It is easy to see that
 - $\rho\geq 0$, and $(x_{n})=(y_{n})$ implies $\rho((x_{n}), (y_{n}))=0$. 
 - $\rho$ is symmetric
 - triangle inequality holds
 
-However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. Note that $\tilde{d}$ is well defined, and that $(\tilde{X}, \tilde{d})$ is a metric space.
+However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. This is well defined[^1]. That makes $(\tilde{X}, \tilde{d})$ a metric space.
+
+[^1]: Let $(x_{n})\sim(a_{n})$ and $(y_{n})\sim(b_{n})$. Write $d(x_{n}, y_{n})\leq d(x_{n}, a_{n})+d(a_{n}, b_{n})+d(b_{n}, y_{n})$ and its dual equation bounding $d(a_{n}, b_{n})$. Combine them to get $|d(x_{n}, y_{n})-d(a_{n}, b_{n})|\leq d(x_{n}, a_{n})+d(y_{n}, b_{n})$. It follows that $\lim_{ n \to \infty }d(x_{n}, y_{n})=\lim_{ n \to \infty }d(a_{n}, b_{n})$, or $\tilde{d}([(x_{n})], [(y_{n})])=\tilde{d}([(a_{n})], [(b_{n})])$.
+
 ### $(\tilde{X}, \tilde{d})$ is complete
 
 Consider a Cauchy sequence in $\tilde{X}$: $([(x_{n, 1})], [(x_{n, 2})], \dots)$. By passing to subsequences if necessary, we can assume that given $m$, $\tilde{d}([(x_{n, k})], [(x_{n, l})])< 2^{-m}$ for all $l, k\geq m$. Similarly, by passing to subsequences if necessary, we can assume that for all $k$, given $c$, $d(x_{a, k}, x_{b, k})< 2^{-c}$ for all $a, b\geq c$.

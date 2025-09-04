@@ -8,7 +8,7 @@ time: 09:10
 ---
 # Quotients of polynomial rings
 
-If $k$ is a field, then $k[x]$ is what is called an Euclidean domain. A **Euclidean domain** is an integral domain with a "degree-like" function $N$ into $\mathbb{N}$ that makes division with remainder possible. The Euclidean algorithm can be executed in a Euclidean domain to obtain the "gcd" of two elements, and the extended Euclidean algorithm can be executed to express this gcd as a linear combination of the two elements. In general, a polynomial ring over an arbitrary ring is not a Euclidean domain. However, you can still perform Euclidean division by *monic* polynomials in any polynomial ring, due to some special properties[^1]:
+If $k$ is a field, then $k[x]$ is what is called a Euclidean domain. A **Euclidean domain** is an integral domain with a "degree-like" function $N$ into $\mathbb{N}$ that makes division with remainder possible. The Euclidean algorithm can be executed in a Euclidean domain to obtain the "gcd" of two elements, and the extended Euclidean algorithm can be executed to express this gcd as a linear combination of the two elements. In general, a polynomial ring over an arbitrary ring is not a Euclidean domain. However, you can still perform Euclidean division by *monic* polynomials in any polynomial ring, due to some special properties[^1]:
 
 [^1]:Note that this does not mean the Euclidean algorithm works: the remainder may not be monic!
 
@@ -121,4 +121,6 @@ Since [[Intro to Ring Theory#Preliminaries|a finite integral domain is a field]]
 
 > [!Theorem] @conradZORNSLEMMAAPPLICATIONS24 3.3
 > The intersection of all prime ideals in a nonzero commutative ring is the [[LEC ALG3 5#^e9f650|nilradical]] of the ring.
+
+^a6d030
 

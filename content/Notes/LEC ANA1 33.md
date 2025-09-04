@@ -91,6 +91,9 @@ There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrigh
 > > \end{align}
 > > $$
 > 
+
+^8504b1
+
 ### Limit of uniformly converging integrable functions is integrable (and more)
 
 > [!Theorem] Rudin 7.16
@@ -138,7 +141,19 @@ There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrigh
 > 
 > Then, $f_{n}\rightrightarrows\text{a function }f$ and $f'(x)=g(x)$ for all $x\in[a, b]$.
 
-## Another way to understand uniform convergence
+A cuter version with much weaker hypothesis:
+
+> [!Theorem] @pughRealMathematicalAnalysis2015 4.9
+> Suppose
+> 1. $f_{n}:[a, b]\to \mathbb{R}$ is differentiable for each $n$;
+> 2. $f_{n}\rightrightarrows f$;
+> 3. $f_{n}'\rightrightarrows g$ for some function $g$.
+> 
+> Then, $f$ is differentiable with $f'=g$
+
+^94a1f8
+
+## Another perspective on uniform convergence
 
 Let $X$ be a metric space. Define
 $$
@@ -153,7 +168,7 @@ Note that this turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed 
 2. $\lVert f \rVert\geq 0$ with $\lVert f \rVert=0$ if and only if $f=0$. 
 3. $\lVert f+g \rVert\leq \lVert f \rVert+\lVert g \rVert$.
 
-> **Proof of triangle inequality**
+> [!Note]- Proof of the triangle inequality
 > 
 > $$
 > \begin{align}
@@ -171,8 +186,7 @@ Note that this turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed 
 > $$
 > \sup \lvert f(x)+g(x) \rvert \leq \lVert f \rVert + \lVert g \rVert .
 > $$
-
-Note the order in which the suprema were taken in the above proof.
+> Note the order in which the suprema were taken in the above proof.
 
 Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$. 
 

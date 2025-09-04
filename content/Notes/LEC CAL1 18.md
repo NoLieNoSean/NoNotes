@@ -43,7 +43,7 @@ for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[LEC CAL1 
 ### Functions with bounded and zero total derivative
 
 > [!Theorem]
-> Suppose $\mathbf{f}$ maps a convex open set $E\subseteq \mathbb{R}^{n}$ in $\mathbb{R}^{m}$, $\mathbf{f}$ is differentiable in $E$, and there is a real number $M$ such that for every $\mathbf{x}\in E$,
+> Suppose $\mathbf{f}$ maps a convex open set $E\subseteq \mathbb{R}^{n}$ to $\mathbb{R}^{m}$, $\mathbf{f}$ is differentiable in $E$, and there is a real number $M$ such that for every $\mathbf{x}\in E$,
 > $$
 > \lVert \mathbf{f}'(\mathbf{x}) (\mathbf{v})\rVert \leq M\lVert \mathbf{v} \rVert 
 > $$
@@ -53,7 +53,7 @@ for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[LEC CAL1 
 > $$
 > for all $\mathbf{a}\in E$, $\mathbf{b}\in E$.
 
-> **Proof**
+> [!Proof]-
 > Since $E$ is convex, we can define $\mathbf{g}(t)\equiv \mathbf{f}(\mathbf{a}+t(\mathbf{b}-\mathbf{a}))$ for $t\in[0, 1]$. Now, $\mathbf{g}'(t)=\mathbf{f}'(\mathbf{a}+t(\mathbf{b}-\mathbf{a});\mathbf{b}-\mathbf{a})$, so that
 > $$
 > \lVert \mathbf{g}'(t) \rVert =\lVert \mathbf{f}'(\mathbf{a}+t(\mathbf{b}-\mathbf{a}))(\mathbf{b}-\mathbf{a}) \rVert \leq M\lVert \mathbf{b}-\mathbf{a} \rVert 
@@ -64,6 +64,7 @@ for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[LEC CAL1 
 > \lVert \mathbf{g}(1) -\mathbf{g}(0)\rVert \leq \lVert \mathbf{g}'(x) \rVert\leq M\lVert \mathbf{b}-\mathbf{a} \rVert .
 > \end{align}
 > $$
+> 
 
 > [!Theorem]
 > Let $S$ be an open connected subset of $\mathbb{R}^{n}$, and let $\mathbf{f}:S\to \mathbb{R}^{m}$ be differentiable at each point of $S$. If $\mathbf{f}'(\mathbf{c})=\mathbf{0}$ for each $\mathbf{c}$ in $S$, then $\mathbf{f}$ is constant on $S$.

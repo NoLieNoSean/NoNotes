@@ -3,8 +3,6 @@ tags:
   - CategoryTheory
 ---
 Refer @aluffiAlgebraChapter02009 [pp. 18].
-
-@aluffi
 # Categories
  
 > [!Definition] Category
@@ -116,8 +114,8 @@ Refer [@aluffiAlgebraChapter02009, pp. 20] for examples.
 
 ^912207
 
-> [!Example] 
-> (Formalizing Example 3.10)
+> [!Example] Formalizing Example 3.10
+> 
 > Let $\textsf{C}$ be a category. Choose two fixed morphisms $\alpha:A\to C$ and $\beta:B\to C$ in $\textsf{C}$, with the same target $C$. Define a category $\textsf{C}_{\alpha, \beta}$ as follows:
 > - $\text{Obj}(\textsf{C}_{\alpha, \beta})$ contains commutative diagrams
 > 	```tikz
@@ -389,6 +387,5 @@ This information can be sloppily summarized like so:
 > \end{document}
 > ```
 > commutes. So, $(A\amalg B, i_{A}, i_{B})$ is initial in $\textsf{C}^{A, B}$.
-
 
 

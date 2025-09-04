@@ -22,13 +22,17 @@ On $C[a, b]$, we can also define a sup-norm
 $$
 \lVert f \rVert _{\infty}\equiv \sup _{x\in[a, b]}|f(x)|
 $$
+
 > [!Theorem]
 > $C[a, b]=(C[a, b], \lVert \cdot \rVert_{\infty})$ is a [[LEC CAL1 1#Preliminaries|complete normed linear space]]. 
+> 
+> > [!Proof]-
+> > We have to show that every Cauchy sequence in $C[a, b]$ converges (in $C[a, b]$, of course). Suppose $(f_{n})$ is a Cauchy sequence in $C[a, b]$. Then, given $\epsilon>0$, $\exists N\in \mathbb{N}$ such that $n_{1}, n_{2}\geq N\implies \lVert f_{n_{1}}-f_{n_{2}} \rVert_{\infty}<\epsilon \implies \sup_{x\in[a, b]}|f_{n_{1}}(x)-f_{n_{2}}(x)|<\epsilon$. So, $(f_{n})$ satisfies the [[LEC ANA1 33#The Cauchy Criterion|Cauchy criterion]] for [[LEC ANA1 33#Uniform convergence|uniform convergence]]. Thus, $(f_{n})\to f$, where $f$ is continuous due to [[LEC ANA1 33#^8504b1]]. 
+> 
 
-> **Proof**
-> We have to show that every Cauchy sequence in $C[a, b]$ converges (in $C[a, b]$, of course). Suppose $(f_{n})$ is a Cauchy sequence in $C[a, b]$. Then, given $\epsilon>0$, $\exists N\in \mathbb{N}$ such that $n_{1}, n_{2}\geq N\implies \lVert f_{n_{1}}-f_{n_{2}} \rVert_{\infty}<\epsilon \implies \sup_{x\in[a, b]}|f_{n_{1}}(x)-f_{n_{2}}(x)|<\epsilon$. So, $(f_{n})$ satisfies the [[LEC ANA1 33#The Cauchy Criterion|Cauchy criterion]] for [[LEC ANA1 33#Uniform convergence|uniform convergence]]. Thus, $(f_{n})\to f$, where $f$ is continuous.
+^9dd2a2
 
-Note that $(C[a, b], \lVert \cdot \rVert_{\infty})$ and $(C[a, b], \lVert \cdot \rVert)$, where the latter uses the norm induced by the inner product, are different spaces. The first one is complete, and the second one is not. As a counter example, consider the sequence of functions $(f_{n})=x, x^{2}, x^{3}, \dots$  in $(C[0, 1], \lVert \cdot \rVert)$. They converge to a function $f$ which is $1$ at $x=1$ and $0$ everywhere else - certainly not in $C[0, 1]$. However, the sequence of functions is a Cauchy sequence with respect to $\lVert \cdot \rVert$: For every $\epsilon>0$, $\exists N\in \mathbb{N}$ such that $n_{1}, n_{2}>N \implies \sqrt{  \int_{0}^{1} |x^{n_{1}}-x^{n_{2}}|^{2} \, dx}<\epsilon$. While we are at it, also note that $(f_{n})$ is not a Cauchy sequence in $(C[a, b], \lVert \cdot \rVert_{\infty})$.
+Note that $(C[a, b], \lVert \cdot \rVert_{\infty})$ and $(C[a, b], \lVert \cdot \rVert)$, where the latter uses the norm induced by the inner product, are different spaces. The first one is complete, and the second one is not. As a counterexample, consider the sequence of functions $(f_{n})=x, x^{2}, x^{3}, \dots$  in $(C[0, 1], \lVert \cdot \rVert)$. They converge to a function $f$ which is $1$ at $x=1$ and $0$ everywhere else - certainly not in $C[0, 1]$. However, the sequence of functions is a Cauchy sequence with respect to $\lVert \cdot \rVert$: For every $\epsilon>0$, $\exists N\in \mathbb{N}$ such that $n_{1}, n_{2}>N \implies \sqrt{  \int_{0}^{1} |x^{n_{1}}-x^{n_{2}}|^{2} \, dx}<\epsilon$. While we are at it, also note that $(f_{n})$ is not a Cauchy sequence in $(C[a, b], \lVert \cdot \rVert_{\infty})$.
 
 ---
 

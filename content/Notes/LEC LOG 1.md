@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-08-28"
-time: "11:59"
+tags:
+  - LOG
+  - Lecture
+date: 2025-08-28
+time: 11:59
 ---
 # First order logic
 

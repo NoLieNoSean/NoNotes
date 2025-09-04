@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-09-02"
-time: "11:57"
+tags:
+  - LOG
+  - Lecture
+date: 2025-09-02
+time: 11:57
 ---
 # definability of a class of structures
 

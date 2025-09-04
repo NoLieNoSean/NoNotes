@@ -1,7 +1,7 @@
 ---
 tags:
   - MOC
-  - PAT
+  - LOG
 ---
 CMI, Aug-Nov 2025, M Praveen
 @sureshIntroductionLogic, @sorensenLecturesCurryHowardIsomorphism2006, @wadlerPropositionsTypes2015, @vonplatoElementsLogicalReasoning, @mimramProgramProof

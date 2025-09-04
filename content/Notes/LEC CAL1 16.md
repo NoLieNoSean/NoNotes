@@ -110,11 +110,8 @@ This is a special case of a [[LEC CAL1 19#A sufficient condition for differentia
 
 # Euler's theorem
 
-[!Theorem]
 Let $f$ be defined on an open set $S$ in $\mathbb{R}^{n}$.  Assume $f$ is homogeneous of degree $p$ over $S$. If $f$ is differentiable at $\mathbf{x}$, 
 $$
 \mathbf{x}\cdot \nabla f(\mathbf{x})=pf(\mathbf{x}).
 $$
-
-**Proof**
-For fixed $\mathbf{x}$, define $g(\lambda)\equiv f(\lambda \mathbf{x})$. $g'(\lambda)=f'(\lambda \mathbf{x})\mathbf{x}$, so $g'(1)=f'(\mathbf{x})\mathbf{x}=\nabla f(\mathbf{x})\cdot \mathbf{x}$. Also, $g(\lambda)=\lambda^{p}f(\mathbf{x})$, so $g'(\lambda)=p\lambda^{p-1}f(\mathbf{x})$, and $g'(1)=pf(\mathbf{x})$.
+Proof: For fixed $\mathbf{x}$, define $g(\lambda)\equiv f(\lambda \mathbf{x})$. $g'(\lambda)=f'(\lambda \mathbf{x})\mathbf{x}$, so $g'(1)=f'(\mathbf{x})\mathbf{x}=\nabla f(\mathbf{x})\cdot \mathbf{x}$. Also, $g(\lambda)=\lambda^{p}f(\mathbf{x})$, so $g'(\lambda)=p\lambda^{p-1}f(\mathbf{x})$, and $g'(1)=pf(\mathbf{x})$.
