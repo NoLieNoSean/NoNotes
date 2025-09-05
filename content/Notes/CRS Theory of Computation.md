@@ -24,3 +24,4 @@ Lecture 9: Equivalence classes from a given DFA, how they form a partition of th
 Lecture 10: Complexity of translations between different formaliszs, complexity of DFA minimization, algorithmic questions on finite representations of regular languages: membership, nonemptiness, universality, finiteness, intersection-nonemptiness, inclusion/containment, equivalence. Hopcroft sections 4.3, 4.4
 
 [[AS TOC 1]]
+[[AS TOC 2]]

@@ -49,6 +49,8 @@ Here's how we'll go about proving this:
 >Cauchy sequences are bounded. 
 >
 
+^aeb73a
+
 >**Proof**
 >Given $\epsilon>0$, there exists an $N$ such that $|x_{m}-x_{n}|<\epsilon$ for all $m,n\geq N$. Thus, the sequence is bounded by $|x_{N}|+\epsilon$ for all $n\ge N$. It follows that 
 >$$

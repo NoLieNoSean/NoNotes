@@ -71,6 +71,9 @@ $$
 $$
 Thus, $([(x_{*, n})])\to[(z_{n})]$ and $(\tilde{X}, \tilde{d})$ is complete.
 
+
+
+
 ### $(\tilde{X}, \tilde{d})$ is the completion of $(X, d)$
 
 For each $p\in X$, there is a Cauchy sequence all of whose terms are $p$. Let $P_{p}$ be the element of $\tilde{X}$ which contains this sequence. Define the map $\phi:X\to \tilde{X}$ by $\phi(p)=P_{p}$. It is easy to see that $\phi$ is an *isometry*, $i$.$e$, $\tilde{d}(P_{p}, P_{q})=d(p, q)$ for all $p, q\in X$. 
