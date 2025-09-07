@@ -21,7 +21,7 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 - [[Solving linear systems, Pivots]]
 - [[How to find matrices with a given kernel]]
 
-# Lecture Notes
+# Lectures
 
 - [[LEC ALG1 8]] ✅ 
 	- Every fdvsp has a basis.

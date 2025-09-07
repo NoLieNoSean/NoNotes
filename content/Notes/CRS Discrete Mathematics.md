@@ -7,9 +7,9 @@ date: January 2025
 CMI, Jan-Apr 2025, V Arvind & Amit Kumar Sinhababu
  
 ---
-# Lecture notes
+# Lectures
 
-## Prof. Arvind's Lectures
+## Prof. Arvind
 
 See @cameronCombinatoricsTopicsTechniques2001, @westCombinatorialMathematics2021, Enumerative combinatorics vol1, by Richard Stanley
 
@@ -44,7 +44,7 @@ Stuff to cover: Schroder-Bernstein Theorem, recurrence relations, generating fun
 - [[LEC DMAT 15]]
 	- Polya's Enumeration Theorem
 
-## Prof. Sinhababu's Lectures
+## Prof. Sinhababu
  
 See @lavrovMath3322Graph, @muldoonMATH20902DiscreteMathematics2020, @grinbergIntroductionGraphTheory2024, @westIntroductionGraphTheory2001, @zhaoGraphTheoryAdditive2023, @lovaszDiscreteMathematicsElementary2003, @jungnickelGraphsNetworksAlgorithms2013, @matousekInvitationDiscreteMathematics2009
 

@@ -8,7 +8,7 @@ CMI, Jan-Apr 2025, M. Sundari
 @roydenRealAnalysis2014, @ghorpadeCourseCalculusReal2018, @apostolMathematicalAnalysis1985, @rudinPrinciplesMathematicalAnalysis1976 
  
 ---
-# Lecture notes
+# Lectures
 
 ## Normed linear spaces
 

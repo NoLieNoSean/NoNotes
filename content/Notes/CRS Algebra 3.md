@@ -12,7 +12,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[Intro to Category Theory]]
 [[Intro to Ring Theory]]
 
-# Lecture notes
+# Lectures
 
 [[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
 [[LEC ALG3 2]] ✅ Quotients and ideals
@@ -20,7 +20,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals
 [[LEC ALG3 5]] ✅ Radicals
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
-[[LEC ALG3 7]]
+[[LEC ALG3 7]] ✅ Irreducible and prime elements
 [[LEC ALG3 8]]
 
 # Tutorials

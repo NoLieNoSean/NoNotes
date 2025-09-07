@@ -90,7 +90,28 @@ Let $\alpha(t^{3}, t^{4}, t^{5})\in \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Since $\va
 > > \end{align}
 > > $$
 
-Thus, $R/I\cong \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Together with the obvious observation that $I\subseteq \ker\varphi$, this implies $I=\ker\varphi$.
+Thus, $R/I\cong \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Together with the observation that $I\subseteq \ker \phi$, this immediately implies $I=\ker \phi$.
+
+For my future self: yes, this is immediate. By the mapping property of quotient groups, there exists a unique homomorphism $R/I\to R/\ker \phi$ which makes this diagram commute:
+
+```tikz
+\usepackage{tikz-cd, amsmath, amssymb}
+\begin{document}
+\begin{tikzcd}
+R\ar[rr, "\phi"]\ar[rd, "\pi"']&&R/\ker \phi\\
+&R/I\ar[ru, "\exists!\tilde{\phi}"']&
+\end{tikzcd}
+\end{document}
+```
+
+Note that by construction, $\varphi$ makes this diagram commute. 
+
+
+> [!Note]- Alternate solution
+> 
+> Let I = (x³-yz, y²-xz, z²-x²y). Its easy to see I is contained in kernel. Now if you have any monomial x^i y^j z^k, you can write it (mod I) as x^i y^j z^k with j+k <=1. Point is replace y² with xz, z² with x²y, and yz with x^3(since these are equivalent mod I) to reduce powers of y,z.
+> 
+> So any polynomial in x,y,z can be written as p(x) + yq(x) + z r(x)  modulo I. If you take the image under tbe homomorphism of this, you get p(t³) + t⁴q(t³) +t⁵r(t³). If the origianl polynomial was in the kernel, then the above polynomial in t is zero (modulo I does not change this as I is contained in kernel). Checking the coefficients of powers of t of the form 3k, 3k+1, 3k+2, gives you p=q=r=0. So the polynomial is 0 mod I i.e. it is contained in I.
 
 ---
 

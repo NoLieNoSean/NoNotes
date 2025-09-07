@@ -8,7 +8,6 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 @rudinPrinciplesMathematicalAnalysis1976, @abbottUnderstandingAnalysis2015, @taoAnalysis2016, @bartleIntroductionRealAnalysis2010, @amannAnalysis2005
 
 ---
-# Compiled Notes
 ## The real and complex number systems
 - [[Ordered sets]]
 - [[Bounds]]
@@ -29,7 +28,7 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 - [[Cauchy sequences]]
 - [[LimSup and LimInf]]
 
-# Lecture Notes
+# Lectures
 
 - [[LEC ANA1 10]] ✅ 
 	- Started chapter 4. Motivated and stated 4.1. Limit points. 2.20. 3.2d. 

@@ -73,11 +73,13 @@ This allows for the canonical decomposition and the first isomorphism theorem fo
 Observe that the ideals of $R$ containing $I$ are in bijective correspondence with the ideals of the quotient $R/I$: we [[LEC ALG2 5#^90ba83|already know]] that the subgroups $J$ of $R$ containing $I$ are in bijective correspondence with the subgroups of $R/I$, viz., $J\leftrightarrow J/I$. It is easily verified that $J/I$ is an ideal of $R/I$ iff $J$ is an ideal of $R$.
 
 > [!Theorem] Correspondence theorem, @artinAlgebra2011 11.4.3
-> Let $\varphi:R\to \mathcal{R}$ be a surjective homomorphism. Let $I$ be an ideal of $R$ and $\mathcal{I}$ be an ideal of $\mathcal{R}$. Then, 
+> Let $\varphi:R\to \mathcal{R}$ be a surjective homomorphism with kernel $K$. Let $I$ be an ideal of $R$ containing $K$ and $\mathcal{I}$ be an ideal of $\mathcal{R}$. Then, 
 > 1. $\varphi(I)$ is an ideal of $\mathcal{R}$. 
 > 2. $\varphi ^{-1}(\mathcal{I})$ is an ideal of $R$, and it contains $K$.
 > 3. $\varphi(\varphi ^{-1}(\mathcal{I}))=\mathcal{I}$, and $\varphi ^{-1}(\varphi(I))=I$. 
 > 4. If $\varphi(I)=\mathcal{I}$, then $R/I\cong \mathcal{R}/\mathcal{I}$. 
+
+^629cc7
 
 As in the case of groups, quotients by corresponding ideals are isomorphic:
 

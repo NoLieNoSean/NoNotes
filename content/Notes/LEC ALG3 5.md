@@ -76,4 +76,16 @@ If $R$ is commutative, by the same argument as [[#^041806]], $\sqrt{ I }$ is an 
 > 
 > Clearly, $(x^{2}y^{2})=(x^{2})\cap(y^{2})$. Also, $(x^{2})=(x)^{2}$. Further, $(x)$ is a prime ideal (should be obvious, but Clare insists on showing $k[x, y]/(x)\cong k(y)$). Thus, using [[#^6f6d3a]], $\sqrt{ (x^{2}y^{2}) }=\sqrt{ (x)^{2} }\cap \sqrt{ (y)^{2} }=(x)\cap(y)=(xy)$.
 
-
+> [!Proposition]
+> Every radical ideal in a [[Noetherian rings|noetherian ring]] is a finite intersection of prime ideals.
+> 
+> > [!Proof]-
+> > First, we will show that if $I$ is a radical ideal and $ab\in I$, then $I=\sqrt{ I+(a) }\cap \sqrt{ I+(b) }$. $I\subseteq \sqrt{ I+(a) }\cap \sqrt{ I+(b) }$ is clear. To show the reverse inclusion, suppose $c\in\sqrt{ I+(a) }\cap \sqrt{ I+(b) }$. Then, $c^{n}=i+ar$ and $c^{m}=i'+br'$ for some integers $n, m$ and $i, i'\in I$, $r, r'\in R$. We now have
+> > $$
+> > \begin{align}
+> > c^{n+m}=ii'+ibr'+i'ar+abrr' \in I.
+> > \end{align}
+> > $$
+> > $c^{n+m}\in I$ implies $c\in I$, since $I$ is a radical ideal. 
+> > 
+> > Now, If $I$ is not a prime ideal, there exist $a, b$ such that $ab\in I$ but $a, b\not\in I$. We can thus write $I$ as the intersection of two radicals $I_{1}$ and $I_{2}$ containing $(a)$ and $(b)$ respectively. If either $I_{1}$ or $I_{2}$ is not prime, we repeat the process. We are guaranteed to reach a prime ideal eventually, since otherwise we'd have an infinite ascending chain of ideals.

@@ -12,7 +12,7 @@ $$
 $$
 Multiplication in $\mathcal{R}[t]$ comes from $S[t]$. It is easy to see that if $I=(a_{1}, \dots, a_{k})$, then $\mathcal{R}(I)=S[a_{1}t, \dots, a_{k}t]$. 
 
-For example, If $I=(x_{1}^{2}, x_{2}^{2})$, then $\mathcal{R}(I)=S[x_{1}^{2}t, x_{2}^{2}t]$. Note that the 'variables' here are not independent; Indeed, $x_{2}^{2}(x_{1}^{2}t)=x_{1}^{2}(x_{2}^{2}t)$. So, the kernel of the map $S[t_{1}, t_{2}]\to S[x_{1}^{2}t, x_{2}^{2}t]$ defined by $t_{1}\mapsto x_{1}^{2}t$ and $t_{2}\mapsto x_{2}^{2}t$ is non-trivial.
+For example, If $I=(x_{1}^{2}, x_{2}^{2})$, then $\mathcal{R}(I)=S[x_{1}^{2}t, x_{2}^{2}t]$. Note that the 'variables' here are not independent; $x_{2}^{2}(x_{1}^{2}t)=x_{1}^{2}(x_{2}^{2}t)$. So, the kernel of the map $S[t_{1}, t_{2}]\to S[x_{1}^{2}t, x_{2}^{2}t]$ defined by $t_{1}\mapsto x_{1}^{2}t$ and $t_{2}\mapsto x_{2}^{2}t$ is non-trivial.
 
 
 

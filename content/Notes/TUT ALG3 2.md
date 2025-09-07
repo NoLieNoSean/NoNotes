@@ -113,6 +113,8 @@ $f(x)\in \mathbb{Z}[x]$ is said to be irreducible modulo prime $p$ if it cannot 
 > 4. $I=(p, f(x))$ for some prime $p$, where $f(x)$ is irreducible modulo $p$.
 > 
 
+^f129e6
+
 $(\implies)$
 
 **Case 1: $I$ has constant polynomials.**

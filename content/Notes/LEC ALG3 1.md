@@ -178,6 +178,8 @@ If $R_{1}$ and $R_{2}$ are rings, then $R_{1}\times R_{2}$ may be defined by end
 > $$
 > The entries before the slashes are the one arising from componentwise multiplication, and those after are the alternate definitions (note that the first and fourth row and column are immutable). One only needs to very the distributive property for $a$ and $b$, which is easily done.
 
+^2daa9c
+
 However, $R_{1}\times R_{2}$ does not satisfy the [[Intro to Category Theory#Coproducts|universal property of coproducts]]: although [[Categorical notes on group theory#^8e8d67|there is]] a unique *group* homomorphism from $R_{1}\times R_{2}$ to $A$ for any $(A, \varphi_{R_{1}}, \varphi_{R_{2}})\in \textsf{C}^{R_{1}, R_{2}}$, this does not respect multiplication, and thus is not a ring homomorphism:
 $$
 \begin{align}

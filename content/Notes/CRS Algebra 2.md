@@ -11,7 +11,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 > A **Group** is a groupoid with a single object.
 
 ---
-# Lecture Notes
+# Lectures
 
 - [[LEC ALG2 1]] ✅
 	- Groups, examples of groups, subgroups
