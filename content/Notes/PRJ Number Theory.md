@@ -1,5 +1,6 @@
 ---
 tags:
   - MOC
+draft: true
 ---
 

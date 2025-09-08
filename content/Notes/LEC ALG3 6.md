@@ -44,8 +44,7 @@ The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if
 > > $$
 > > Thus, $\varphi$ is surjective. 
 > > 
-> > Finally, the ideal $A_{1}A_{2}$ is always contained in $A_{1}\cap A_{2}$. If $A$ and $B$ are comaximal and $x$ and $y$ are as above, then for any $c\in A\cap B$, $c=c1=c(x+y)=cx+cy\in AB$.
+> > Finally, the ideal $A_{1}A_{2}$ is always contained in $A_{1}\cap A_{2}$. If $A_{1}$ and $A_{2}$ are comaximal and $x$ and $y$ are as above, then for any $c\in A_{1}\cap A_{2}$, $c=c1=c(x+y)=cx+cy\in A_{1}A_{2}$.
 > > 
 > > The general case follows by induction from the case of two ideals using $A=A_{1}$ and $B=A_{2}\dots A_{k}$ once we show that $A_{1}$ and $A_{2}\dots A_{k}$ are comaximal. By hypothesis, for each $i\in \{ 2, 3, \dots, k \}$, there are elements $x_{i}\in A_{1}$ and $y_{i}\in A_{i}$ such that $x_{i}+y_{i}=1$. It follows that $1=(x_{2}+y_{2})\dots(x_{k}+y_{k})$ is an element in $A_{1}+(A_{2}\dots A_{k})$. 
-> 
-> 
+
