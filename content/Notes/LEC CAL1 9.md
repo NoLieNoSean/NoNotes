@@ -8,10 +8,10 @@ time: 11:50
 # Separable metric spaces
 
 > [!Definition]
-> A metric space $X$ is said to be *separable* provided there is a countable subset of $X$ that is dense in $X$
+> A metric space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$
 
 > [!Warning]
-> The notion of **“separable”** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]] in topology.
+> The notion of **separable** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]] in topology.
 
 > [!Theorem] 
 > A compact metric space is separable.
@@ -22,7 +22,7 @@ time: 11:50
 ## Second-countable spaces
 
 > [!Definition]
-> A metric space $X$ is *second-countable* if there is a countable collection $\{ O_{n} \}_{n=1}^{\infty}$ of open subsets of $X$ such that any open subset of $X$ is the union of a subcollection of $\{ O_{n} \}_{n=1}^{\infty}$.
+> A metric space $X$ is **second-countable** if there is a countable collection $\{ O_{n} \}_{n=1}^{\infty}$ of open subsets of $X$ called a **basis** such that any open subset of $X$ is the union of a subcollection of $\{ O_{n} \}_{n=1}^{\infty}$.
 
 > [!Theorem]
 > A metric space is separable iff it is second-countable.
@@ -47,7 +47,7 @@ time: 11:50
 > > [!Proof]-
 > > Since $X$ is separable, it has a countable basis $\mathcal{A}=\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$. Express each $f\in F$ as a union of elements in $\mathcal{A}$. Then, $\bigcup f$ is a subcollection $\mathcal{B}\subseteq\mathcal{A}$. For each $b\in \mathcal{B}$, pick $f\in F$ such that $f\supseteq b$. The collection of all these $f$ gives a countable subcollection of $f$ which covers $A$.
 
-Tersely, "every open cover in a separable metric space has a countable subcover".
+Succinctly, "every open cover in a separable metric space has a countable subcover".
 
 
 ---

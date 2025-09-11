@@ -163,7 +163,7 @@ Define a norm on $\mathscr{B}(X)$ by
 $$
 \lVert f \rVert =\sup _{x\in X}\ \lvert f(x) \rvert .
 $$
-Note that this turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed linear space]] over $\mathbb{R}$, since all the properties of the norm are satisfied by our definition:
+This turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed linear space]] over $\mathbb{R}$, since all the properties of the norm are satisfied by our definition:
 1. $\lVert \alpha f \rVert=|\alpha|\lVert f \rVert$ for all $\alpha\in \mathbb{R}$ and $f\in \mathscr{B}(X)$. This is easy to see, since if a function is scaled by $\alpha$, its maximum value is also scaled by $\alpha$.
 2. $\lVert f \rVert\geq 0$ with $\lVert f \rVert=0$ if and only if $f=0$. 
 3. $\lVert f+g \rVert\leq \lVert f \rVert+\lVert g \rVert$.

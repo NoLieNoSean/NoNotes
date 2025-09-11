@@ -22,13 +22,6 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 > [!Exercise]
 > Let $(X, d)$ be a metric space. Show that $\rho=d/(1+d)$ is a metric. Show that $\{ x_{n} \}$ is Cauchy wrt $d$ $\iff$ $\{ x_{n} \}$ is Cauchy wrt $\rho$.
 
-## Completions, reprise
-
-> [!Theorem]
-> Every metric space has a unique [[LEC CAL1 6#^407939|completion]].
-
-[[LEC CAL1 6#Constructing the completion of a metric space|We have already seen the construction of the completion]]. We [[LEC ANA2 4#Uniqueness of completion|will prove its uniqueness]]. We have also not proven that $\mathbb{R}$ is complete yet, which we also do.
-
 > [!Example] Completeness of $B(S)$
 > Let $S$ be any set. Define $B(S)$ as we do [[LEC ANA1 33#Another perspective on uniform convergence|here]], with the metric induced by the sup norm. We will show that $B(S)$ is complete.
 > 
@@ -45,7 +38,7 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 >  & \leq\epsilon+\lVert f_{n'} \rVert\leq\epsilon+M \quad \forall s
 > \end{align}
 > $$
-> so $f\in B(S)$. The limit in $(!)$ exists because $\lVert f_{n}-f_{n'} \rVert$ is a Cauchy sequence[^2] in $\mathbb{R}$. We now need to show that $f_{n}\to f$ under $\lVert \cdot \rVert_{\infty}$, that is, $\lVert f_{n}-f \rVert\to 0$. For $\epsilon> 0$, take $N$ such that $\lVert f_{m}-f_{n} \rVert<\epsilon$ for all $n, m\geq N$. Then, for all $n\geq N$, 
+> so $f\in B(S)$. The limit in $(!)$ exists because $\lVert f_{n}-f_{n'} \rVert$ is a Cauchy sequence[^2] in $\mathbb{R}$. We now need to show $f_{n}\to f$ under $\lVert \cdot \rVert_{\infty}$, that is, $\lVert f_{n}-f \rVert\to 0$. For $\epsilon> 0$, take $N$ such that $\lVert f_{m}-f_{n} \rVert<\epsilon$ for all $n, m\geq N$. Then, for all $n\geq N$, 
 > $$
 > \begin{align}
 > |f_{n}(s)-f(s)| & =\lim_{ m \to \infty } |f_{m}(s)-f_{n}(s)| \quad \forall s\\
@@ -59,6 +52,8 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 
 Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 
+Also note that $B(S)$ with the sup norm is always a Banach space for any set $S$ (no topology or metric needed at all). The structure of $S$ starts to matter only when we restrict to subspaces like $C_{b}(S)$, because you need a topology on $S$ to know what "continuous" means, and compactness determines whether "continuous implies bounded" (in which case we just write $C(S)$). 
+
 > [!Proposition]
 > If $(X, d)$ is a complete metric space, then $A\subseteq X$ is complete iff $A$ is closed in $X$.
 
@@ -66,6 +61,8 @@ Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 > Let $C[0, 1]\subseteq B[0, 1]$ is the space of all continuous functions on $[0, 1]$ equipped with the metric induced by the sup norm. [[LEC CAL1 4#^9dd2a2|We have shown]] that $C[0, 1]$ is complete: essentially, we know that any Cauchy sequence in $C[0, 1]$ converges in the complete ambient space $B[0, 1]$; showing that the limit lies in $C[0, 1]$ requires us to show that the limit is continuous, which is true because [[LEC ANA1 33#^8504b1|the uniform limit of continuous functions is continuous]].
 > 
 > Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete (incidentally, this makes $C[0, 1]$ a [[LEC CAL1 9#Separable metric spaces|separable]] space). However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
+
+For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works.
 
 > [!Example]
 > 
