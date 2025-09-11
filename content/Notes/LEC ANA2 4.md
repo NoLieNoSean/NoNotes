@@ -57,6 +57,7 @@ This follows immediately from the fact that initial objects in a category are is
 > Vasanth proved the following lemma. It is essentially the same as [[#^f13fc5]], and the same proof works; just replace $\tilde{X}$ with $\overline{A}$. 
 > 
 > > [!Lemma]
+> > 
 > > Let $X, Y$ be metric spaces. Suppose $Y$ is complete. Let $f:A(\subseteq X)\to Y$ be uniformly continuous. Then, there exists a unique uniformly continuous $\overline{f}:\overline{A}\to Y$ such that $\overline{f}\ | \ _A=f$. 
 > 
 > ^9f74ac
