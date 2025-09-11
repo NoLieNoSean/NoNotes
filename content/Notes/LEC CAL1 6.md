@@ -71,11 +71,9 @@ $$
 $$
 Thus, $([(x_{*, n})])\to[(z_{n})]$ and $(\tilde{X}, \tilde{d})$ is complete.
 
-
-
-
-### $(\tilde{X}, \tilde{d})$ is the completion of $(X, d)$
+### $X$ is dense in $(\tilde{X}, \tilde{d})$
 
 For each $p\in X$, there is a Cauchy sequence all of whose terms are $p$. Let $P_{p}$ be the element of $\tilde{X}$ which contains this sequence. Define the map $\phi:X\to \tilde{X}$ by $\phi(p)=P_{p}$. It is easy to see that $\phi$ is an *isometry*, $i$.$e$, $\tilde{d}(P_{p}, P_{q})=d(p, q)$ for all $p, q\in X$. 
 
-We will now show that $\phi(X)$ is dense in $\tilde{X}$. Let $[(x_{n})]\in \tilde{X}$ such that $[(x_{n})]\not\in \phi(X)$. Consider the sequence $(P_{x_{1}}, P_{x_{2}}, \dots)$ in $\tilde{X}$. Since $(x_{n})$ is a Cauchy sequence in $X$ and $\tilde{d}(P_{x_{k}}, P_{x_{m}})=d(x_{k}, x_{m})$, $(P_{x_{n}})$ is also a Cauchy sequence. Let $\epsilon> 0$. There exists $N$ such that for all $k, m> N$, $d(x_{k}, x_{m})<\epsilon$. Thus, for $k> N$, $\tilde{d}(P_{x_{k}}, [(x_{n})])=\lim_{ m \to \infty }d(x_{k}, x_{m})<\epsilon$. Therefore, $(P_{x_{n}})\to[(x_{n})]$, proving that $\phi(X)$ is dense in $\tilde{X}$.
+We will now show that $\phi(X)$ is dense in $\tilde{X}$. Let $[(x_{n})]\in \tilde{X}$ such that $[(x_{n})]\not\in \phi(X)$. Consider the sequence $(P_{x_{1}}, P_{x_{2}}, \dots)$ in $\tilde{X}$. Since $(x_{n})$ is a Cauchy sequence in $X$ and $\tilde{d}(P_{x_{k}}, P_{x_{m}})=d(x_{k}, x_{m})$, $(P_{x_{n}})$ is a Cauchy sequence in $\tilde{X}$. Let $\epsilon> 0$. There exists $N$ such that for all $k, m> N$, $d(x_{k}, x_{m})<\epsilon$. Thus, for $k> N$, $\tilde{d}(P_{x_{k}}, [(x_{n})])=\lim_{ m \to \infty }d(x_{k}, x_{m})<\epsilon$. Therefore, $(P_{x_{n}})\to[(x_{n})]$, proving that $\phi(X)$ is dense in $\tilde{X}$.
+

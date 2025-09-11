@@ -14,6 +14,8 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 [[LEC CAL2 6]] ✅ Fubini's theorem
 [[LEC CAL2 7]]
 
+[[LEC CAL2 8]]
+
 [[TUT CAL2 1]]
 
 

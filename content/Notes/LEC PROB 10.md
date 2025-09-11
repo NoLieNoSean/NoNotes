@@ -38,9 +38,9 @@ The above expression is analogous to the convolution product defined for densiti
 ---
 
 # Tools
-## The dominated convergence theorem
+## Dominated convergence theorem
 
-We will use the DCT frequently in the coming proofs.
+We will use the DCT frequently in the upcoming proofs.
 
 > [!Theorem] DCT for sequences of sequences
 > Let $f_{n}:\mathbb{N}\to \mathbb{R}$ be a sequence for $n\in N$. Assume a summable positive sequence $r:\mathbb{N}\to \mathbb{R}_{\geq 0}$ exists such that $\ | \ f_{n}(i)\ | \ \leq r(i)$ for all $n$ and $i$, that is, $|f_{n}|\leq r$ for all $n$. Let the sequence of sequences $(f_{n})$ converge to a sequence $f$ pointwise, that is $f_{n}(i)\to f(i)$ for all $i$. Then, each $f_{n}$ is summable, $f$ is summable, and
@@ -48,6 +48,8 @@ We will use the DCT frequently in the coming proofs.
 > \lim_{ n \to \infty } \sum_{i=1}^{\infty} f_{n}(i)= \sum_{i=1}^{\infty} \lim_{ n \to \infty } f_{n}(i)=\sum_{i=1}^{\infty} f(i).
 > $$
 > 
+
+^0988fa
 
 To put it simply, if a sequence of sequences is bounded by a summable sequence and converges pointwise to a sequence, then the limit of its sum is the sum of its limit. Here, summable means [[LEC ANA1 31#Prologue|absolutely convergent]]. Note that the conclusion that each $f_{n}$ is summable follows from the hypothesis that it is bounded by a summable sequence.
 

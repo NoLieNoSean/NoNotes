@@ -1,3 +1,8 @@
+---
+tags:
+  - TOC
+---
+
 > [!Definition]
 > A **finite automaton** is a 5-tuple $(Q, \Sigma, \delta, q_{0}, F)$, where
 > 1. $Q$ is a finite set of states,

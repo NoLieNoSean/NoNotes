@@ -24,7 +24,8 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
 [[LEC ALG3 7]] ✅ Irreducible and prime elements
 [[LEC ALG3 8]]
-
+[[LEC ALG3 9]]
+[[LEC ALG3 10]]
 # Tutorials
 
 [[TUT ALG3 1]]

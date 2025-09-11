@@ -27,7 +27,7 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 > [!Theorem]
 > Every metric space has a unique [[LEC CAL1 6#^407939|completion]].
 
-[[LEC CAL1 6#Constructing the completion of a metric space|We have already seen the construction of the completion]]. We will prove its uniqueness. We have also not proven that $\mathbb{R}$ is complete yet, which we also do.
+[[LEC CAL1 6#Constructing the completion of a metric space|We have already seen the construction of the completion]]. We [[LEC ANA2 4#Uniqueness of completion|will prove its uniqueness]]. We have also not proven that $\mathbb{R}$ is complete yet, which we also do.
 
 > [!Example] Completeness of $B(S)$
 > Let $S$ be any set. Define $B(S)$ as we do [[LEC ANA1 33#Another perspective on uniform convergence|here]], with the metric induced by the sup norm. We will show that $B(S)$ is complete.
@@ -45,7 +45,7 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 >  & \leq\epsilon+\lVert f_{n'} \rVert\leq\epsilon+M \quad \forall s
 > \end{align}
 > $$
-> so $f\in B(S)$. The limit in $(!)$ exists because $\lVert f_{n}-f_{n'} \rVert$ is a Cauchy sequence in $\mathbb{R}$. We now need to show that $f_{n}\to f$ under $\lVert \cdot \rVert_{\infty}$, that is, $\lVert f_{n}-f \rVert\to 0$. For $\epsilon> 0$, take $N$ such that $\lVert f_{m}-f_{n} \rVert<\epsilon$ for all $n, m\geq N$. Then, for all $n\geq N$, 
+> so $f\in B(S)$. The limit in $(!)$ exists because $\lVert f_{n}-f_{n'} \rVert$ is a Cauchy sequence[^2] in $\mathbb{R}$. We now need to show that $f_{n}\to f$ under $\lVert \cdot \rVert_{\infty}$, that is, $\lVert f_{n}-f \rVert\to 0$. For $\epsilon> 0$, take $N$ such that $\lVert f_{m}-f_{n} \rVert<\epsilon$ for all $n, m\geq N$. Then, for all $n\geq N$, 
 > $$
 > \begin{align}
 > |f_{n}(s)-f(s)| & =\lim_{ m \to \infty } |f_{m}(s)-f_{n}(s)| \quad \forall s\\
@@ -54,6 +54,8 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 > \end{align}
 > $$
 > 
+
+^eb4855
 
 Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 
@@ -81,6 +83,7 @@ Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 
 
 
-[^1]:Because polynomials are dense in $C[0, 1]$, and every polynomial is in $C^{1}[0, 1]$. Proof uses the Weierstrass approximation theorem. 
+[^1]: Because polynomials are dense in $C[0, 1]$, and every polynomial is in $C^{1}[0, 1]$. Proof uses the Weierstrass approximation theorem. 
 
 
+[^2]: $\lVert f_{n}-f_{n'} \rVert-\lVert f_{m}-f_{n'} \rVert\leq \lVert f_{n}-f_{m} \rVert$. 
