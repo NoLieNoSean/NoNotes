@@ -44,7 +44,7 @@ A more precise statement in $\mathbb{R}$ would be "Every sequence in $[a,b]$ in 
 
 One way to prove this is like so:
 1. Show that every sequence in $\mathbb{R}$ has a monotone subsequence, done [[Cauchy sequences#Step 2 Pervasive monotonicity|here]]. 
-2. Since the given sequence is bounded, its subsequence must be bounded too. The theorem follows from the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]]. 
+2. Since the given sequence is bounded, its subsequence must be bounded too. The theorem then follows from the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]]. 
 
 Here's an alternate proof featured in Abbot, that uses the [[The real field#Nested interval property|nested interval property]] of the real field.
 

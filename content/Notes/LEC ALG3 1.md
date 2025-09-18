@@ -33,9 +33,8 @@ This ring homomorphism is uniquely determined by the requirement that $\varphi(1
 > 
 > The fact that $\mathbb{Z}$ is initial in $\textsf{Ring}$ prompts a natural definition. For a ring $R$, let $f:\mathbb{Z}\to R$ be the unique ring homomorphism. Then, $\ker f=n\mathbb{Z}$ for a well-defined nonnegative integer $n$ determined by $R$. This is called the **characteristic** of $R$.
 > 
-> > [!Definition]
-> > 
-> > The **characteristic** of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, $\text{char}(R)=0$. 
+> 
+> The **characteristic** of a ring is the smallest integer $n> 0$ such that $nr=0$. If $nr\ne 0$ for all $n> 0$, $\text{char}(R)=0$. 
 > 
 > If $k$ is a field, then $\text{char}(k)$ is $0$ or $p$ for some prime $p$, since the image of the homomorphism $\varphi:\mathbb{Z}\to k$ is an integral domain and $\mathbb{Z}/\ker\varphi\cong \mathrm{Im}~\varphi$, so $\ker\varphi$ is a prime ideal of $\mathbb{Z}$.
 
@@ -158,6 +157,17 @@ Note again that for any ring $S$, the image of the unique ring homomorphism $\io
 > Thus, every polynomial $f(x)\in S[x]$ determines a *polynomial function* $f:S\to S$ defined by $s\mapsto \overline{\alpha}_{s}(f(x))$. 
 
 ^0422dc
+
+> [!Example]
+> Let $\varphi:R\to S$ be a homomorphism. The codomain can be extended using the inclusion $S\hookrightarrow S[x]$. [[#^0422dc]] gives us a unique homomorphism $\overline{\varphi}:R[x]\to S[x]$ extending $\varphi$ and sending $x$ to $x$.
+> 
+> In particular, if we take $S=R/I$ for some ideal $I$ of $R$, and $\varphi$ to be the natural projection, we get a unique extension $\overline{\pi}:R[x]\to(R/I)[x]$ sending $x$ to $x$. It is easy to see that $\ker \overline{\pi}=IR[x]$. Thus, 
+> $$
+> \frac{R[x]}{IR[x]}\cong (R/I)[x].
+> $$
+> 
+
+
 
 ---
 # Products and coproducts

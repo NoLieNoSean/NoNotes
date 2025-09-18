@@ -278,4 +278,6 @@ $$
 Any matrix obtained by performing row operations on this matrix will also have the same kernel. Thus, matrices whose rows are of the form $(-3a, 9a, a, b)$ will have $W$ as their kernel. 
 
 
+---
 
+See also @coxIdealsVarietiesAlgorithms2015 2.3.

@@ -24,3 +24,31 @@ For example, If $I=(x_{1}^{2}, x_{2}^{2})$, then $\mathcal{R}(I)=S[x_{1}^{2}t, x
 
 ![[Pasted image 20250910193251.png]]
 
+$S=\mathbb{Q}[x_{ij}]$, $1\leq i\leq r$, $1\leq j\leq n$.
+$R=\mathbb{Q}[y_{i}, t_{j}]$ $1\leq i\leq n$, $1\leq j\leq r$, use `lex`.
+$\mathfrak{m}=\langle y_{1}, \dots, y_{n} \rangle$ 
+Let $L'$ be the list of minimal generators of $\mathfrak{m}^{d}$, ordered in `lex`. Reverse $L'$. Let $L$ be the first $n$ entries of $L$. Define the map $\varphi:S\to R$ by
+$$
+x_{ij}\mapsto t_{i}L_{j}.
+$$
+Let $I$ be $\ker\varphi$. Check if the `mingens I = gens gb I`. 
+
+Example:
+
+```Macaulay 2
+S=QQ[X_1,X_2,X_3,X_4,X_5,Y_1,Y_2,Y_3,Y_4,Y_5,Z_1,Z_2,Z_3,Z_4,Z_5]
+R=QQ[a..e,t1,t2,t3,MonomialOrder=>Lex]
+m=ideal(a,b,c,d,e);
+m^4;
+mingens oo
+first entries oo
+oL = reverse oo
+L=oL_{0..4}
+ker map(R,S,matrix{{t1*L_0,t1*L_1,t1*L_2,t1*L_3,t1*L_4,
+           t2*L_0,t2*L_1,t2*L_2,t2*L_3,t2*L_4,
+           t3*L_0,t3*L_1,t3*L_2,t3*L_3,t3*L_4}})
+I=oo;
+mingens I == gens gb I
+```
+
+I want to run this for $r=1, .., 4$, $d=1, .., 4$, and $n=2, .., 5$. Write a python script which writes the Macaulay script for this. Tack on a line at the end of the Macaulay script to print all the results together.

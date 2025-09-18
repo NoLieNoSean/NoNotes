@@ -1,4 +1,4 @@
-## Functions with non-zero Jacobian determinant
+# Functions with non-zero Jacobian determinant
 
 ###### Theorem 1
 > [!Theorem]
@@ -155,9 +155,22 @@
 > 
 
 The hypotheses made in this corollary ensure that each point $\mathbf{x}\in E$ has a neighborhood in which $\mathbf{f}$ is injective. This may be expressed by saying that $\mathbf{f}$ is locally injective in $E$. But this does not imply that $\mathbf{f}$ is injective on $E$!
-## Inverse function theorem
 
-The inverse function theorem roughly states that a [[LEC CAL1 16#When does the total derivative exist?|continuously differentiable]] mapping $\mathbf{f}$ is invertible in a neighborhood of any point $\mathbf{x}$ at which the linear transformation $\mathbf{f}'(\mathbf{x})$ is invertible.
+---
+# Inverse function theorem
+
+The inverse function theorem roughly states that a [[LEC CAL1 16#When does the total derivative exist?|continuously differentiable]] mapping $\mathbf{f}$ is a $C^{1}$ diffeomorphism in a neighborhood of any $\mathbf{a}$ at which $\mathbf{f}'(\mathbf{a})$ is invertible.
+
+Here's the one variable version:
+
+> [!Example]
+> Suppose $f$ is a $C^{1}$ mapping of an interval $(\alpha, \beta)$ into $\mathbb{R}$, and $f'(a)$ is nonzero for some $a\in(\alpha, \beta)$. Then,
+> 1. there exist open sets $U\subseteq(\alpha, \beta)$ and $V\subseteq \mathbb{R}$ such that $a\in U$, $f(a)\in V$, $f$ is injective on $U$, and $f(U)=V$.
+> 2. the inverse $g$ of $f$, defined in $V$ by $g(f(x))=x$ for $x\in U$, is a $C^{1}$ mapping.
+> 
+> > [!Proof]-
+> > Since $f'$ is continuous at $a$, we can pick a neighborhood $U$ of $a$ on which $f'$ is non-zero. Let $V=f(U)$.  is open since strictly monotone continuous maps are open. $f$ is monotone on $U$, so $f$ is injective on $U$. $f^{-1}$ is clearly continuous, so $f$ is a $C^{1}$ homeomorphism. By @pughRealMathematicalAnalysis2015 4.15, we are done.
+> 
 
 > [!Theorem]
 > Suppose $\mathbf{f}$ is a $C^{1}$ mapping of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{n}$, and $\mathbf{f}'(\mathbf{a})$ is invertible for some $\mathbf{a}\in E$. Then,

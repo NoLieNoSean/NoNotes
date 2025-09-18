@@ -15,8 +15,17 @@ CMI, Aug-Nov 2025, R Srinivasan
 [[LEC ANA2 1]] Sequence spaces: $\mathscr{l}_{p}$ is a NLS
 [[LEC ANA2 2]] Examples of metric spaces
 
-## Completeness
+## Completeness, Separability, Compactness
 
 [[LEC ANA2 3]] ✅ $B(S), C_{b}(S)$, and $C[0, 1]$ are complete, some comments about $C^{1}[0, 1]$
 [[LEC ANA2 4]] ✅ Completeness of $l_{1}$, uniqueness of completion
 [[LEC ANA2 5]] ✅ Alternate construction of completion, separability
+[[LEC ANA2 6]] ✅ Second countability, compactness
+
+## Equicontinuity
+
+[[LEC ANA2 7]] Equicontinuity, the Arzelà–Ascoli theorem
+
+
+
+[[AS ANA2 1]]

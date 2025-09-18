@@ -11,7 +11,7 @@ time: 11:50
 > A metric space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$
 
 > [!Warning]
-> The notion of **separable** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]] in topology.
+> The notion of **separable** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]].
 
 > [!Theorem] 
 > A compact metric space is separable.
@@ -28,7 +28,7 @@ time: 11:50
 > A metric space is separable iff it is second-countable.
 > 
 > > [!proof]-
-> > Suppose $X$ is separable. Let $D$ be a countable dense subset of $X$. Assume $D$ is countably infinite, and let $(x_{n})$ be an enumeration of $D$. Then, $\mathcal{A}=\{ B_{1/m}(x_{n}) \}_{n, m\in \mathbb{N}}$ is a countable collection of open subsets of $X$. We claim that every open subset of $X$ is the union of a subcollection of $\mathcal{A}$. Indeed, let $\mathcal{O}$ be an open subset of $X$. Let $x\in \mathcal{O}$. Since $\mathcal{O}$ is open, $B_{2/m}(x)\subseteq \mathcal{O}$ for some $m$. Since $D$ is dense in $X$, we can find $x_{n}$ such that  $x_{n}\in B_{1/m}(x)$. Now, observe that $x\in B_{1/m}(x_{n})\subseteq \mathcal{O}$. Thus, every $x\in \mathcal{O}$ is in some member of $\mathcal{A}$ contained in $\mathcal{O}$. 
+> > Suppose $X$ is separable. Let $D$ be a countable dense subset of $X$. Assume $D$ is countably infinite, and let $(x_{n})$ be an enumeration of $D$. Then, $\mathcal{A}=\{ B_{1/m}(x_{n}) \}_{n, m\in \mathbb{N}}$ is a countable collection of open subsets of $X$. We claim that every open subset of $X$ is the union of a subcollection of $\mathcal{A}$. Let $\mathcal{O}$ be an open subset of $X$. Let $x\in \mathcal{O}$. Since $\mathcal{O}$ is open, $B_{2/m}(x)\subseteq \mathcal{O}$ for some $m$. Since $D$ is dense in $X$, we can find $x_{n}$ such that  $x_{n}\in B_{1/m}(x)$. Now, observe that $x\in B_{1/m}(x_{n})\subseteq \mathcal{O}$. Thus, every $x\in \mathcal{O}$ is in some member of $\mathcal{A}$ contained in $\mathcal{O}$. 
 > > 
 > > To prove the converse, suppose there is a countable collection $\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$ of open sets such that any open subset of $X$ is the union of a subcollection of $\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$. For each $n$, pick a point in $\mathcal{O}_{n}$ and call it $x_{n}$. Then the set $\{ x_{n} \}_{n=1}^{\infty}$ is countable and dense since every nonempty open subset of $X$ is the union of a subcollection of $\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$ and therefore contains points in $\{ x_{n} \}_{n=1}^{\infty}$. 
 > 
@@ -45,7 +45,7 @@ time: 11:50
 > Let $X$ be a separable metric space, and let $A\subseteq X$. Let $F$ be an open covering of $A$. Then, there exists a countable subcollection of $F$ which also covers $A$.
 > 
 > > [!Proof]-
-> > Since $X$ is separable, it has a countable basis $\mathcal{A}=\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$. Express each $f\in F$ as a union of elements in $\mathcal{A}$. Then, $\bigcup f$ is a subcollection $\mathcal{B}\subseteq\mathcal{A}$. For each $b\in \mathcal{B}$, pick $f\in F$ such that $f\supseteq b$. The collection of all these $f$ gives a countable subcollection of $f$ which covers $A$.
+> > Since $X$ is separable, it has a countable basis $\mathcal{A}=\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$. Express each $f\in F$ as a union of elements in $\mathcal{A}$. Then, $\bigcup f$ is a subcollection $\mathcal{B}\subseteq\mathcal{A}$. For each $b\in \mathcal{B}$, pick $f\in F$ such that $f\supseteq b$. The collection of all these $f$ gives a countable subcollection of $F$ which covers $A$.
 
 Succinctly, "every open cover in a separable metric space has a countable subcover".
 

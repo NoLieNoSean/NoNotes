@@ -67,10 +67,12 @@ Important questions about ideals in $k[x_{1}, \dots, x_{n}]$:
 
 Polynomial rings in one variable over fields are nice (see @coxIdealsVarietiesAlgorithms2015 [p. 53]):
 
-1. They are [[LEC ALG3 9#^3db377|euclidean domains]], so gcd is defined and the euclidean algorithm can be used to find it;
+1. They are [[LEC ALG3 9#Euclidean domains|euclidean domains]], so gcd is defined and the euclidean algorithm can be used to find it;
 2. They are PIDs, so checking membership of a polynomial $f$ in an ideal $\langle f_{1}, \dots, f_{s} \rangle=\langle \text{gcd}(f_{1}, \dots, f_{s}) \rangle$ reduces to checking divisibility of $f$ by the gcd of $f_{1}, \dots, f_{s}$.
 
-Gröbner bases allow us to generalize the devision algorithm to $k[x_{1}, \dots, x_{n}]$.
+Gröbner bases allow us to generalize the division algorithm to $k[x_{1}, \dots, x_{n}]$.
 
-## Gröbner bases
+---
+# Gröbner bases
+
 

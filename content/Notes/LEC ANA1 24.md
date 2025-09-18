@@ -145,10 +145,14 @@ $f'$ may have discontinuities of the second kind, though.
 
 **Find a differentiable function $f$ and a point $p$ such that $f'(p)>0$ but the function is not increasing in any interval containing $p$.**
 
+
 Consider 
 $$
 f(x) = \begin{cases}x + 2x^2\sin\left(\frac1x\right),& x\ne 0\\0& x = 0\;.\end{cases}
 $$
+
+![[Pasted image 20250916212739.png|200]]
+
 It can be shown that $f$ is differentiable on $\mathbb{R}$ and $f'(0)=1$. The derivative when $x\ne 0$ is
 $$
 f'(x) = 1+4x\sin\left(\frac1x\right)−2\cos\left(\frac1x\right).
@@ -167,3 +171,5 @@ f'\left( \frac{1}{2n\pi} \right)<1+1-2=0.
 $$
 
 Thus, $f$ is not increasing on $[t_{1}, t_{2}]$.
+
+Incidentally, $f'$ is also an example of a derivative which is not continuous. It does, however, possess the IVP, as Darboux's Theorem demands. Are there derivatives which are discontinuous but do not possess essential discontinuities?

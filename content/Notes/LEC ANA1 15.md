@@ -6,12 +6,13 @@ tags:
 date: 2024-09-18
 time: 15:24
 ---
-%% 
+
 ![[1726743654020.jpg]]
+%% 
 ![[1726743654012.jpg]]
  %%
  
-## Review
+# Review
 
 $V$ is [[LEC ANA1 13#Open sets|open]] in $X$
 $\iff$ $V$ is a union of open balls in $X$ 
@@ -48,77 +49,75 @@ We observe another equivalent characterization of continuity: continuous functio
 
 ^50d7a4
 
+## Closed sets in $\mathbb{R}$ contain their suprema
 
-### Closed sets in $\mathbb{R}$ contain their suprema
-
-A stray theorem form Rudin.
-
-Rudin, 2.28
-
->[!Theorem]
->Let $E$ be a non-empty set of real numbers which is bounded above. Then, $\sup E\in \overline{E}$. Hence $\sup E\in E$ if $E$ is closed and bounded.
-
->**Proof**
->For any $\epsilon>0$, there must exist $e\in E$ such that $\sup E-\epsilon<e<\sup E$. Thus, $B_{\epsilon}(\sup E, E)\setminus \{ \sup E \}\ne \emptyset$, i.e, $\sup E$ is a limit point of $E$, and $\sup E\in \overline{E}$. ❏
-
----
-## Algebra of continuous functions
-
-Rudin, 4.9
-
->[!Theorem]
->Let $f, g:X\to \mathbb{C}$ be continuous, where $X$ is a metric space. Then, $f+g$, $fg$, and $\frac{f}{g}$ (assuming $g(x)\ne 0$ for all $x$) are continuous on $X$. 
-
->**Proof**
->Every function defined on $X$ is continuous at isolated points of $X$. So we only need to consider the case when $p\in X$ is not an isolated point of $X$, i.e, a limit point of $X$. Since $f$ and $g$ are continuous, this gives us $\lim_{ x \to p }f(x)=f(p)$ and $\lim_{ x \to p }g(x)=g(p)$, which gives us $\lim_{ x \to p }(f(x)+g(x))=f(p)+g(p)$. ❏
+> [!Theorem] Rudin 2.28
+> Let $E$ be a non-empty set of real numbers which is bounded above. Then, $\sup E\in \overline{E}$. Hence $\sup E\in E$ if $E$ is closed and bounded.
+> 
+> > [!Proof]-
+> > For any $\epsilon>0$, there must exist $e\in E$ such that $\sup E-\epsilon<e<\sup E$. Thus, $B_{\epsilon}(\sup E, E)\setminus \{ \sup E \}\ne \emptyset$, i.e, $\sup E$ is a limit point of $E$, and $\sup E\in \overline{E}$. 
 
 
 ---
+# Algebra of continuous functions
 
-## Vector valued functions whose components are continuous
 
-Rudin, 4.10
+> [!Theorem] Rudin 4.9
+> Let $f, g:X\to \mathbb{C}$ be continuous, where $X$ is a metric space. Then, $f+g$, $fg$, and $\frac{f}{g}$ (assuming $g(x)\ne 0$ for all $x$) are continuous on $X$. 
+> 
+> > [!Proof]-
+> > Every function defined on $X$ is continuous at isolated points of $X$. So we only need to consider the case when $p\in X$ is not an isolated point of $X$, i.e, a limit point of $X$. Since $f$ and $g$ are continuous, this gives us $\lim_{ x \to p }f(x)=f(p)$ and $\lim_{ x \to p }g(x)=g(p)$, which gives us $\lim_{ x \to p }(f(x)+g(x))=f(p)+g(p)$.
+> 
 
->[!Theorem]
->Let $f_{1}, f_{2}, \dots, f_{k}:X\to \mathbb{R}$. Let $\mathbf{f}:X\to \mathbb{R}^{k}$ be defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))^{T}$. Then, $\mathbf{f}$ is continuous $\iff$ each $f_{i}$ is continuous.
+^dbfc21
 
->**Proof**
->We only need to consider $p\in X$ which are limit points of $X$. Consider the forward implication. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. Note the similarity to the proof of the forward implication of [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot wise convergence]]. The proof of the backward implication of this theorem is also essentially the same as its counterpart, with $N$'s replaced with $\delta$'s, the maximum of all $N$'s replaced with the minimum of all $\delta$'s, and other tiny contextual changes. ❏
+---
+
+# Vector valued functions whose components are continuous
+
+> [!Theorem] Rudin 4.10
+> Let $f_{1}, f_{2}, \dots, f_{k}:X\to \mathbb{R}$. Let $\mathbf{f}:X\to \mathbb{R}^{k}$ be defined by $\mathbf{f}(x)=(f_{1}(x), f_{2}(x), \dots, f_{k}(x))^{T}$. Then, $\mathbf{f}$ is continuous $\iff$ each $f_{i}$ is continuous.
+> 
+> > [!Proof]-
+> > We only need to consider $p\in X$ which are limit points of $X$. Consider the forward implication. We have $\lim_{ x \to p }\mathbf{f}(x)=\mathbf{f}(p)$, from the definition of continuity. Let $\epsilon>0$ be arbitrary. There must exist $\delta>0$ such that $d_{X}(x, p)<\delta$ implies $|\mathbf{f}(x)-\mathbf{f}(p)|<\epsilon \implies |f_{i}(x)-f_{i}(p)|<\epsilon$ for every $i$. Thus, $\lim_{ x \to p }f_{i}(x)=f_{i}(p)$ for every $i$. Note the similarity to the proof of the forward implication of [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|slot wise convergence]]. The proof of the backward implication of this theorem is also essentially the same as its counterpart, with $N$'s replaced with $\delta$'s, the maximum of all $N$'s replaced with the minimum of all $\delta$'s, and other tiny contextual changes. 
+> 
+
+^732adc
 
 >[!Theorem]
 >If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\mathbb{R}^{k}$, $\mathbf{f}+\mathbf{g}$ and $\mathbf{f}\cdot \mathbf{g}$ are continuous.
 
-This follows from the two previous theorems.
+This follows from [[#^dbfc21]] and [[#^732adc]]. 
 
 ---
-## Examples of continuous functions
+# Examples of continuous functions
 
-Rudin, 4.11
+Rudin 4.11
 
 - $\phi_{i}:\mathbb{R}^{k}\to \mathbb{R}$, $\phi_{i}(\mathbf{x})=x_{i}$, where $\mathbf{x}=(x_{1}, x_{2}, \dots, x_{k})$ is a continuous function. 
 - The mapping $\mathbf{x}\to |\mathbf{x}|$ is continuous.
 ---
-## Subspace topology
+# Subspace topology
 
-Rudin, 2.30
 
->[!Theorem]
->Suppose $Y\subset X$. A subset $E$ of $Y$ is open relative to $Y$ if  and only if $E=Y\cap G$ for some open subset $G$ in $X$.
 
->**Proof of $\implies$**
->Since $E$ is open relative to $Y$, each $p \in E$ should have an $r_{p}>0$ associated with it such that $B_{r_{p}}(p, Y)\subset E$. Consider the set
->$$
->\begin{align}
->G=\bigcup_{p \in E} B_{r_{p}}(p, X).
->\end{align}
->$$
->Clearly, $G$ is open in $X$ since it is a union of open balls in $X$. 
->Clearly, $E\subset G\cap Y$.
->$G\cap Y=\bigcup_{p\in E}(B_{r_{p}}(p, X)\cap Y)$ $=\bigcup_{p\in E}B_{r_{p}}(p, Y)\subset E$. 
->Thus, $E=G\cap Y$. ❏
->
->**Proof of $\Longleftarrow$**
->Let $E=Y\cap G$ for some open subset $G$ in $X$. For every $p \in E$, there exists $r_{p}>0$ such that $B_{r_{p}}(p, X)\subset G$ $\implies$ $B_{r_{p}}(p, X)\cap Y\subset G\cap Y$ $\implies$ $B_{r_{p}}(p, Y)\subset E$. ❏
+> [!Theorem] Rudin 2.30
+> Suppose $Y\subset X$. A subset $E$ of $Y$ is open relative to $Y$ if  and only if $E=Y\cap G$ for some open subset $G$ in $X$.
+> 
+> > [!Proof]-
+> > $(\implies)$ Since $E$ is open relative to $Y$, each $p \in E$ should have an $r_{p}>0$ associated with it such that $B_{r_{p}}(p, Y)\subset E$. Consider the set
+> > $$
+> > \begin{align}
+> > G=\bigcup_{p \in E} B_{r_{p}}(p, X).
+> > \end{align}
+> > $$
+> > Clearly, $G$ is open in $X$ since it is a union of open balls in $X$. 
+> > Clearly, $E\subset G\cap Y$.
+> > $G\cap Y=\bigcup_{p\in E}(B_{r_{p}}(p, X)\cap Y)$ $=\bigcup_{p\in E}B_{r_{p}}(p, Y)\subset E$. 
+> > Thus, $E=G\cap Y$. 
+> > 
+> > $(\impliedby)$ Let $E=Y\cap G$ for some open subset $G$ in $X$. For every $p \in E$, there exists $r_{p}>0$ such that $B_{r_{p}}(p, X)\subset G$ $\implies$ $B_{r_{p}}(p, X)\cap Y\subset G\cap Y$ $\implies$ $B_{r_{p}}(p, Y)\subset E$. 
+> 
 
 An analogue for closed sets:
 
@@ -139,7 +138,7 @@ An analogue for closed sets:
 ---
 ## An introduction to compactness
 
-Three versions of compactness are defined:
+Three versions of compactness:
 1. [[Subsequences#Sequential compactness|Sequential compactness]]
 2. Limit point compactness
 3. Open cover compactness

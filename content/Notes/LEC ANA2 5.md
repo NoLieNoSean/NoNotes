@@ -100,9 +100,15 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > $\mathscr{l}_{\infty}$ is not separable. Consider $S=\{ \{ x_{n} \}\ | \ x_{n}\in \{ \pm 1 \} \}$. For any $\mathbf{x}, \mathbf{y}\in S$, $\lVert \mathbf{x}-\mathbf{y} \rVert_{\infty}=2$. Consider the disjoint uncountable collection of open balls $\{ B_{1}(\mathbf{x})\ | \ \mathbf{x}\in S \}$. Since a dense subset of $\mathscr{l}_{\infty}$ must intersect all open balls of $\mathscr{l}_{\infty}$, a countable dense subset doesn't exist.
 
 > [!Exercise]
-> 1. Completion of a separable metric space is separable.
-> 2. If a space is totally bounded, it is separable.
+> 
+> Completion of a separable metric space is separable. 
+> 
+> Immediate from [[#^35d96d]]. 
 
+> [!Exercise]
+> If a space is totally bounded, it is separable.
+> 
+> Let $X$ be a totally bounded space. For $\epsilon_{n}=1/n$, let $O_{n}$ be a finite cover of $X$ by balls of radius $\epsilon_{n}$, and define $S_{n}=\{ x\ | \ B_{\epsilon}(x)\in S_{n} \}$. Take $D=\bigcup_{n=1}^{\infty}S_{n}$. $D$ is countable. $D$ is dense in $X$ since for any $x\in X$, we have balls $B_{n}\in O_{n}$ such that $x\in B_{n}$ for all $n$, so the centers of the balls converge to $x$.
 
 ---
 

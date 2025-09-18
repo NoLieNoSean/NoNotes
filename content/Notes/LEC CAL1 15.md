@@ -1,6 +1,6 @@
 # Derivatives of vector valued functions
 
-Refer @apostolMathematicalAnalysis1985 [p. 114]
+See @apostolMathematicalAnalysis1985 [p. 114].
 
 > [!Definition]
 > Let $\mathbf{f}:(a, b)\to \mathbb{R}^{n}$. Then $\mathbf{f}=(f_{1}, \dots, f_{n})$ where each component $f_{k}$ is a real-valued function defined on $(a, b)$. We say that $\mathbf{f}$ is differentiable at each point $c$ in $(a, b)$ if each component $f_{k}$ is [[LEC ANA1 23#Derivatives of real functions|differentiable]] at $c$ and we define

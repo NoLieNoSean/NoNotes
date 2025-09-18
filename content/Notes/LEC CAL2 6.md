@@ -12,7 +12,7 @@ Exercise: if $f:[0, 1]\to \mathbb{R}$ is continuous, show that $\Gamma_{f}$ has 
 
 > [!Theorem] Fubini's Theorem
 > 
-> Let $A\subseteq \mathbb{R}^{n}$ and $B\subseteq \mathbb{R}^{n}$ be closed rectangles. Let $f:A\times B\to R$ be integrable. For $x\in A$ let $g_{x}:B\to \mathbb{R}$ be defined by $g_{x}(y)=f(x, y)$. Let
+> Let $A\subseteq \mathbb{R}^{n}$ and $B\subseteq \mathbb{R}^{m}$ be closed rectangles. Let $f:A\times B\to \mathbb{R}$ be integrable. For $x\in A$ let $g_{x}:B\to \mathbb{R}$ be defined by $g_{x}(y)=f(x, y)$. Let
 > $$
 > \mathcal{L}(x):=\underline{\int_{B}}g_{x}, \quad \mathcal{U}(x):=\overline{\int_{B}}g_{x}.
 > $$
@@ -59,4 +59,6 @@ Exercise: if $f:[0, 1]\to \mathbb{R}$ is continuous, show that $\Gamma_{f}$ has 
 > > $$
 > > that is, $\mathcal{L}$ is integrable on $A$ and $\int_{A\times B}f=\int_{A}\mathcal{L}$. The assertion for $\mathcal{U}$ follows from a symmetric argument. 
 > > 
-> 
+
+^2ceca8
+

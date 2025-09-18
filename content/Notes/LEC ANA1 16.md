@@ -130,25 +130,23 @@ Rudin, 4.16
 ---
 ## Closed subsets of compact sets are compact
 
-Rudin, 2.35
-
->[!Theorem]
->If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.
-
->**Proof**
->Consider a infinite subset $S\subset C$. Since $S\subset X$, $S$ has a limit point $p$ in $X$. However, a limit point of $S$ is also a limit point of $C$, which contains all of its limit points since it is closed. Thus, $p \in C$. ❏
+> [!Theorem] Rudin 2.35
+> If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.
+> 
+> > [!Proof]-
+> > Consider a infinite subset $S\subset C$. Since $S\subset X$, $S$ has a limit point $p$ in $X$. However, a limit point of $S$ is also a limit point of $C$, which contains all of its limit points since it is closed. Thus, $p \in C$. 
+> 
 
 ---
 ## Heine Borel Theorem
 
->[!Theorem]
->Let $C$ be a subset of $\mathbb{R}$. Then, $C$ is compact $\iff$ $C$ is closed in $\mathbb{R}$ and bounded.
-
->**Proof of $\implies$** 
->Follows from the [[#Characterization of compact sets]].
->
->**Proof of $\Longleftarrow$**
->Since $C$ is bounded, $C\subset[-M, M]$ for some $M$. Now, $C=[-M, M]\cap C$, and thus $C$ is closed in $[-M, M]$ ([[LEC ANA1 15#Subspace topology|Subspace topology]]). We have previously [[#Closed intervals in R|shown]] that closed intervals in $\mathbb{R}$ are compact, so $[-M, M]$ is compact. It follows form the [[#Closed subsets of compact sets are compact|previous theorem]] that $C$ is compact. ❏
+> [!Theorem]
+> Let $C$ be a subset of $\mathbb{R}$. Then, $C$ is compact $\iff$ $C$ is closed in $\mathbb{R}$ and bounded.
+> 
+> > [!Proof]-
+> > $(\implies)$ Follows from the [[#Characterization of compact sets]].
+> > 
+> > $(\impliedby)$ Since $C$ is bounded, $C\subset[-M, M]$ for some $M$. Now, $C=[-M, M]\cap C$, and thus $C$ is closed in $[-M, M]$ ([[LEC ANA1 15#Subspace topology|Subspace topology]]). We have previously [[#Closed intervals in R|shown]] that closed intervals in $\mathbb{R}$ are compact, so $[-M, M]$ is compact. It follows form the [[#Closed subsets of compact sets are compact|previous theorem]] that $C$ is compact. 
 
 >[!Warning]
 >In general, $X$ is closed and bounded $\not\implies$ $X$ is compact. For example, let $E$ be the set of all $p\in \mathbb{Q}$ such that $2<p^{2}<3$. $E$ is closed and bounded in $\mathbb{Q}$, but $E$ is not compact. 

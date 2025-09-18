@@ -5,7 +5,7 @@ tags:
 date: 2025-02-14
 time: 12:22
 ---
-## The Banach contraction principle
+# The Banach contraction principle
 
 > [!Definition]
 > A point $x\in X$ is called a *fixed point* of the mapping $T:X\to X$ if $T(x)=x$.

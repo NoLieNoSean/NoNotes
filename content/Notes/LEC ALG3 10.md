@@ -30,6 +30,8 @@ Let $d=\gcd S$ such that $d=\sum_{i=1}^{n}r_{i}a_{i}$. Since $d\in(a_{1})+\dots+
 
 Conversely, suppose $(d)=(a_{1})+\dots+(a_{n})$. $d=\sum_{i=1}^{n}r_{i}a_{i}$ and $d\ | \ a_{i}$ immediately follow.  show property $(2)$. Show that if there exists another gcd $d'$, $d$ and $d'$ are associates.
 
+[!Example]
+Let $R$ be a ring. Suppose $d$ is the gcd of $S=\{ a_{1}, \dots, a_{n} \}$. It is possible that $d$ may not be expressible as a $R$ linear combination of the elements of $S$. For example, $1$ is the gcd of $\{ x, y \}$ in $k[x, y]$, but $1\not\in \langle x, y \rangle$. 
 
 [!Theorem]
 Every PID is a UFD.
@@ -38,3 +40,7 @@ Every PID is a UFD.
 $\mathbb{Z}[x]/(2, x+1, x^{2}+5)$.
 
 Show that $(x^{2}+5, 3)$ is not a prime ideal.
+
+
+---
+

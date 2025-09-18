@@ -46,7 +46,7 @@ time: 17:01
 ^f13fc5
 
 > [!Proposition]
-> Completion of a metric space is unique. That is, if $X$ is a metric space and $X_{1}$ and $X_{2}$ are complete metric spaces such that there exist isometries $\varphi_{1}:X\to X_{1}$ and $\varphi_{2}:X\to X_{2}$ and $\varphi_{1}(X)\subseteq X_{1}$, $\varphi_{2}(X)\subseteq X_{2}$ are dense. Then, there exists a bijective isometry $\varphi:X_{1}\to X_{2}$ such that $\varphi(\varphi_{1}(x))=\varphi_{2}(x)$. 
+> Completion of a metric space is unique. That is, if $X$ is a metric space and $X_{1}$ and $X_{2}$ are complete metric spaces such that there exist isometries $\varphi_{1}:X\to X_{1}$ and $\varphi_{2}:X\to X_{2}$ and $\varphi_{1}(X)\subseteq X_{1}$, $\varphi_{2}(X)\subseteq X_{2}$ are dense, there exists a bijective isometry $\varphi:X_{1}\to X_{2}$ such that $\varphi(\varphi_{1}(x))=\varphi_{2}(x)$. 
 
 ^1143c2
 
@@ -63,6 +63,13 @@ This follows immediately from the fact that initial objects in a category are is
 > ^9f74ac
 > 
 > Here is his proof for [[#^1143c2]]: $\varphi_{1}^{-1}:\varphi_{1}(X)\to X$ is a bijective isometry; compose with $\varphi_{2}$ to obtain another bijective isometry $\varphi_{2}\varphi_{1}^{-1}:\varphi_{1}(X)\to\varphi_{2}(X)$. By [[#^9f74ac]], there exists a uniformly continuous $\varphi:\overline{\varphi_{1}(X)}=X_{1}\to X_{2}$ such that $\varphi\ | \ _{\varphi_{1}(X)}=\varphi_{2}\varphi_{1}^{-1}$. It is clear that $\varphi$ is a bijective isometry.
+
+> [!Example]
+> Prove that the image of a totally bounded set under a uniformly continuous map is totally bounded.
+> 
+> > [!Proof]-
+> > Let $A$ be a totally bounded set in $X$. Let $f:X\to Y$ be a uniformly continuous function. Consider the induced map $g:\tilde{X}\to \tilde{Y}$, where $\tilde{X}$ and $\tilde{Y}$ are the completions of $X$ and $Y$. Then the closure $\overline{A}$ in $\tilde{X}$ is compact hence $g(\overline{A})\subseteq \tilde{Y}$ is compact. Thus $f(A)=g(A)\cap Y$ is totally bounded.
+> 
 
 ## Alternate proof of completeness of $(\tilde{X}, \tilde{d})$ 
 

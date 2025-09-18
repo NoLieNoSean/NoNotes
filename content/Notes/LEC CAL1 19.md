@@ -23,7 +23,60 @@
 > > satisfies the first order Taylor formula for $\mathbf{f}$, and hence $\mathbf{f}$ is differentiable at $\mathbf{c}$ with derivative $\mathbf{f}'(\mathbf{c})=\mathbf{T}_{\mathbf{c}}$.
 > 
 
-> [!Theorem]
+^e95072
+
+> [!Definition]
+> A differentiable mapping $\mathbf{f}$ of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$ is said to be **continuously differentiable** or $C^{1}$ on $E$ if $\mathbf{f}'$ is a continuous mapping of $E$ into $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$.
+
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 9.21
+> Suppose $\mathbf{f}$ maps an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$. Then $\mathbf{f}\in C^{1}(E)$ iff all partial derivatives $D_{i}f_{j}$ exist and are continuous for $1\leq i\leq n$, $1\leq j\leq m$.
+> 
+> > [!Proof]-
+> > $(\implies)$ Fix $\mathbf{x}\in E$. By [[LEC CAL1 16#^83fea1]], $(D_{j}f_{i})(\mathbf{x})=(\mathbf{f}'(\mathbf{x})\mathbf{e}_{j})\cdot \mathbf{e}_{i}$. Hence, 
+> > $$
+> > (D_{j}f_{i})(\mathbf{x}+\mathbf{h})-(D_{j}f_{i})(\mathbf{x})= \{[\mathbf{f}'(\mathbf{x}+\mathbf{h})-\mathbf{f}'(\mathbf{x})]\mathbf{e}_{j}\}\cdot \mathbf{e}_{i}.
+> > $$
+> > $$
+> > \begin{align}
+> > |(D_{j}f_{i})(\mathbf{x}+\mathbf{h})-(D_{j}f_{i})(\mathbf{x})| & \leq \lVert [\mathbf{f}'(\mathbf{x}+\mathbf{h})-\mathbf{f}'(\mathbf{x})]\mathbf{e}_{j} \rVert  & \text{CS inq} \\
+> >  & \leq \lVert \mathbf{f}'(\mathbf{x}+\mathbf{h})-\mathbf{f}'(\mathbf{x}) \rVert .  & \text{Defn of op norm}
+> > \end{align}
+> > $$
+> > Thus, the partial derivatives are continuous.
+> > 
+> > $(\impliedby)$ For the converse, by [[#^e95072]], it suffices to consider the case $m=1$. Once we show differentiability, continuity of $\mathbf{f}'$ will follow trivially (see [[LEC CAL1 3#^3c2f75]]). 
+> > 
+> > So consider a map $f:E\subseteq \mathbb{R}^{n}\to \mathbb{R}$ such that $D_{j}f$ exist and are continuous for $1\leq i\leq n$. Fix $\mathbf{x}\in E$. If $f$ is differentiable at $\mathbf{x}$, we know that $\mathbf{D}f(\mathbf{x})$ is given by $\nabla f(\mathbf{x})$; so we just have to show that $\nabla f(\mathbf{x})$ satisfies the definition of the derivative, that is,
+> > $$
+> > \lim_{ h \to 0 } \frac{f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-\nabla f(\mathbf{x})\cdot\mathbf{h}}{\lVert \mathbf{h} \rVert}=0.
+> > $$
+> > Let $\epsilon> 0$. Let $S=B_{r}(\mathbf{x})\subseteq E$. The continuity of $D_{j}f$ allows us to choose $r$ such that
+> > $$
+> > \begin{align}
+> > |D_{j}f(\mathbf{y})-D_{j}f(\mathbf{x})|<\frac{\epsilon}{n} \quad \quad \mathbf{y}\in S, 1\leq j\leq n.
+> > \end{align}
+> > $$
+> > Suppose $\mathbf{h}=\sum h_{j}\mathbf{e}_{j}$, $\lVert h \rVert< r$. Define $\mathbf{v}_{0}=0$ and $\mathbf{v}_{k}=h_{1}\mathbf{e}_{1}+\dots+h_{k}\mathbf{e}_{k}$ for $1\leq k\leq n$. Then
+> > $$
+> > f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})=\sum_{j=1}^{n} [f(\mathbf{x}+\mathbf{v}_{j})-f(\mathbf{x}+\mathbf{v}_{j-1})].
+> > $$
+> > Since $\lVert \mathbf{v}_{k} \rVert< r$ for $1\leq k\leq n$ and sine $S$ is convex, the segments with end points $\mathbf{x}+\mathbf{v}_{j-1}$ and $\mathbf{x}+\mathbf{v}_{j}$ lie in $S$. Use the mean value theorem to write the $j$th summand as 
+> > $$
+> > h_{j}D_{j}f(\mathbf{x}+\mathbf{v}_{j-1}+\theta_{j}h_{j}\mathbf{e}_{j})
+> > $$
+> > for some $\theta_{j}\in(0, 1)$. It follows that
+> > $$
+> > \begin{align}
+> > \left| f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-\sum_{j=1}^{n} h_{j}D_{j}f(\mathbf{x}) \right|  & \leq \sum_{j=1}^{n} |h_{j}|\left| D_{j}f(\mathbf{x}+\mathbf{v}_{j-1}+\theta_{j}h_{j}\mathbf{e}_{j})-D_{j}f(\mathbf{x}) \right|  \\
+> >  & \leq \lVert \mathbf{h} \rVert \epsilon.
+> > \end{align}
+> > $$
+> > 
+> 
+
+Turns out you can slightly relax the hypothesis and still have $\mathbf{f}$ to be differentiable.
+
+> [!Theorem] @apostolMathematicalAnalysis1985
 > Assume that one of the partial derivatives $D_{1}\mathbf{f}, \dots, D_{n}\mathbf{f}$ exist at $\mathbf{c}$ and that the remaining $n-1$ partial derivatives exist in some $n$-ball $B(\mathbf{c})$ and are continuous at $\mathbf{c}$. Then $\mathbf{f}$ is differentiable at $\mathbf{c}$.
 > 
 > > [!Proof]-
@@ -81,7 +134,7 @@
 > > 
 > 
 
-Note that this is not a necessary condition.
+Note that this is not a necessary condition for $\mathbf{f}$ to be differentiable.
 
 ---
 # A sufficient condition for equality of mixed partial derivatives
@@ -96,53 +149,54 @@ Note that this is not a necessary condition.
 > $$
 > D_{r, k}\mathbf{f}(\mathbf{c})=D_{k, r}\mathbf{f}(\mathbf{c}).
 > $$
-
-> **Proof**
-> In light of the previous [[#A sufficient condition for differentiability|lemma]], it is sufficient to prove the theorem for real valued $\mathbf{f}$. Also, since only two components are involved, it suffices to consider the case $n=2$. Assume $\mathbf{c}=(0, 0)$; the same argument can be repeated for arbitrary $\mathbf{c}$.
 > 
-> Choose $h\ne 0$ so that the square with vertices $(0, 0), (h, 0), (h, h)$, and $(0, h)$ lies in the $2$-ball $B_{\delta}(\mathbf{0})$. Consider the quantity
-> $$
-> \Delta h=f(h, h)+f(0, 0)-f(h, 0)-f(0, h).
-> $$
-> We will show that $\lim_{ h \to 0 }\Delta h/h^{2}$ is equal to both $D_{2, 1}f(\mathbf{0})$ and $D_{1, 2}f(\mathbf{0})$.
+> > [!Proof]-
+> > In light of the previous [[#A sufficient condition for differentiability|lemma]], it is sufficient to prove the theorem for real valued $\mathbf{f}$. Also, since only two components are involved, it suffices to consider the case $n=2$. Assume $\mathbf{c}=(0, 0)$; the same argument can be repeated for arbitrary $\mathbf{c}$.
+> > 
+> > Choose $h\ne 0$ so that the square with vertices $(0, 0), (h, 0), (h, h)$, and $(0, h)$ lies in the $2$-ball $B_{\delta}(\mathbf{0})$. Consider the quantity
+> > $$
+> > \Delta h=f(h, h)+f(0, 0)-f(h, 0)-f(0, h).
+> > $$
+> > We will show that $\lim_{ h \to 0 }\Delta h/h^{2}$ is equal to both $D_{2, 1}f(\mathbf{0})$ and $D_{1, 2}f(\mathbf{0})$.
+> > 
+> > Define $G(x)=f(x, h)-f(x, 0)$ and note that 
+> > $$
+> > \Delta h=G(h)-G(0).
+> > $$
+> > The existence of $D_{1}f$ in $L((0, h), (h, h))$ implies the differentiability of the map $x\mapsto f(x, h)$ on $[0, h]$. Similarly, the map $x\mapsto(x, 0)$ is differentiable on $[0, h]$. It follows that $G(x)$ is differentiable on $[0, h]$. From the one-dimensional mean value theorem, we have
+> > $$
+> > G(h)-G(0)=hG'(x_{1})=h\{ D_{1}f(x_{1}, h)-D_{1}f(x_{1}, 0) \},
+> > $$
+> > where $x_{1}\in(0, h)$. Since $D_{1}f$ is differentiable at $(0, 0)$, we have the first order Taylor formulas
+> > $$
+> > \begin{align}
+> > D_{1}f(x_{1}, h) & =D_{1}f(0, 0)+\nabla D_{1}f(0, 0)\cdot(x_{1}, h)+\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h) \\
+> >  & =D_{1}f(0, 0)+D_{1, 1}f(0, 0)x_{1}+D_{2, 1}f(0, 0)h+\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h),
+> > \end{align}
+> > $$
+> > and
+> > $$
+> > \begin{align}
+> > D_{1}f(x_{1}, 0) & =D_{1}f(0, 0)+\nabla D_{1}f(0, 0)\cdot(x_{1}, 0)+|x_{1}|E_{2}(h) \\
+> >  & =D_{1}f(0, 0)+D_{1, 1}f(0, 0)x_{1}+|x_{1}|E_{2}(h),
+> > \end{align}
+> > $$
+> > where $E_{1}(h)\to 0$ and $E_{2}(h)\to 0$ as $h\to 0$. So, 
+> > $$
+> > \begin{align}
+> > \Delta h=h^{2}D_{2, 1}f(0, 0)+E(h),
+> > \end{align}
+> > $$
+> > where $E(h)\equiv h\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h)-h|x_{1}|E_{2}(h)$. Since $|x_{1}|\leq h$, 
+> > $$
+> > 0\leq |E(h)|\leq h^{2}\sqrt{ 2 }|E_{1}(h)|+h^{2}|E_{2}(h)|,
+> > $$
+> > so
+> > $$
+> > \lim_{ h \to 0 } \frac{\Delta h}{h^{2}}=D_{2, 1}f(0, 0).
+> > $$
+> > Next, define $H(x)=f(h, x)-f(0, x)$ and note that $\Delta h=H(h)-H(0)$. The same procedure yields $\lim_{ h \to 0 }\Delta h/h^{2}=D_{1, 2}f(0, 0)$. 
 > 
-> Define $G(x)=f(x, h)-f(x, 0)$ and note that 
-> $$
-> \Delta h=G(h)-G(0).
-> $$
-> The existence of $D_{1}f$ in $L((0, h), (h, h))$ implies the differentiability of the map $x\mapsto f(x, h)$ on $[0, h]$. Similarly, the map $x\mapsto(x, 0)$ is differentiable on $[0, h]$. It follows that $G(x)$ is differentiable on $[0, h]$. From the one-dimensional mean value theorem, we have
-> $$
-> G(h)-G(0)=hG'(x_{1})=h\{ D_{1}f(x_{1}, h)-D_{1}f(x_{1}, 0) \},
-> $$
-> where $x_{1}\in(0, h)$. Since $D_{1}f$ is differentiable at $(0, 0)$, we have the first order Taylor formulas
-> $$
-> \begin{align}
-> D_{1}f(x_{1}, h) & =D_{1}f(0, 0)+\nabla D_{1}f(0, 0)\cdot(x_{1}, h)+\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h) \\
->  & =D_{1}f(0, 0)+D_{1, 1}f(0, 0)x_{1}+D_{2, 1}f(0, 0)h+\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h),
-> \end{align}
-> $$
-> and
-> $$
-> \begin{align}
-> D_{1}f(x_{1}, 0) & =D_{1}f(0, 0)+\nabla D_{1}f(0, 0)\cdot(x_{1}, 0)+|x_{1}|E_{2}(h) \\
->  & =D_{1}f(0, 0)+D_{1, 1}f(0, 0)x_{1}+|x_{1}|E_{2}(h),
-> \end{align}
-> $$
-> where $E_{1}(h)\to 0$ and $E_{2}(h)\to 0$ as $h\to 0$. So, 
-> $$
-> \begin{align}
-> \Delta h=h^{2}D_{2, 1}f(0, 0)+E(h),
-> \end{align}
-> $$
-> where $E(h)\equiv h\sqrt{ x_{1}^{2}+h^{2} }~E_{1}(h)-h|x_{1}|E_{2}(h)$. Since $|x_{1}|\leq h$, 
-> $$
-> 0\leq |E(h)|\leq h^{2}\sqrt{ 2 }|E_{1}(h)|+h^{2}|E_{2}(h)|,
-> $$
-> so
-> $$
-> \lim_{ h \to 0 } \frac{\Delta h}{h^{2}}=D_{2, 1}f(0, 0).
-> $$
-> Next, define $H(x)=f(h, x)-f(0, x)$ and note that $\Delta h=H(h)-H(0)$. The same procedure yields $\lim_{ h \to 0 }\Delta h/h^{2}=D_{1, 2}f(0, 0)$. 
 
 > [!Theorem] Corollary
 > If both partial derivatives $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ exist in an $n$-ball $B(\mathbf{c})$ and if both $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ are continuous at $\mathbf{c}$, then

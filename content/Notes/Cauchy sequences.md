@@ -78,6 +78,8 @@ Recall that a monotone sequence has no meaning in a metric space. Thus, this seq
 >[!Lemma]
 >If a subsequence of a Cauchy sequence converges to $l$, the Cauchy sequence also converges to $l$.
 
+^4bc448
+
 >**Proof**
 >Let $(a_{i_{k}})\to l$ be a subsequence of a Cauchy sequence $(a_{n})$. Let $\epsilon>0$ be arbitrary. We have $|a_{i_{k}}-l|< \frac{\epsilon}{2}$ for all $k\geq N_{1}$, for some $N_{1}$. Also, we have $|a_{i_{k}}-a_{n}|< \frac{\epsilon}{2}$, for all $n, k\ge N_{2}$ (since $i_{k}\ge k$). As usual, let $N=\max\{ N_{1}, N_{2} \}$. Triangle inequality gives us $|a_{n}-l|<\epsilon$ for all $n\ge N$. ❏
 

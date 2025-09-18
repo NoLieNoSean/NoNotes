@@ -2,7 +2,7 @@ There are two equivalent definitions of Noetherian ring: A commutative ring with
 1. every ideal of $A$ is finitely generated.
 2. every ascending chain of ideals in $A$ stabilizes: that is, for every increasing sequence $I_{1}\subseteq I_{2}\subseteq\dots$ of ideals in $A$, there exists an $n$ such that $I_{n}=I_{n+1}=\dots$. 
 
-$2\implies 1$: Suppose $I$ is not finitely generated. For any finite set $\{ a_{1}, \dots, a_{n} \}$, $(a_{1}, \dots, a_{n})\ne I$. Consider the chain
+$2\implies 1$: Suppose $I$ is not finitely generated. For any finite set $\{ a_{1}, \dots, a_{n} \}$, $\langle a_{1}, \dots, a_{n} \rangle\ne I$. Consider the chain
 $$
 \langle a_{1} \rangle \subset \langle a_{1}, a_{2} \rangle \subset\dots.
 $$

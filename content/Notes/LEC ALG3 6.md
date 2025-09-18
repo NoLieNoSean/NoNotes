@@ -28,7 +28,7 @@ The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if
 > $$
 > is a ring homomorphism with kernel $A_{1}\cap\dots \cap A_{k}$. If $A_{1}, \dots , A_{k}$ are pairwise comaximal, then this map is surjective and $A_{1}\cap\dots \cap A_{k}=A_{1}\dots A_{k}$, so
 > $$
-> \frac{R}{A_{1}\dots A_{k}}=\frac{R}{A_{1}\cap\dots \cap A_{k}}\cong \frac{R}{A_{1}}\times\dots \frac{R}{A_{k}}.
+> \frac{R}{A_{1}\dots A_{k}}=\frac{R}{A_{1}\cap\dots \cap A_{k}}\cong \frac{R}{A_{1}}\times\dots \times\frac{R}{A_{k}}.
 > $$
 > 
 > > [!Proof]-
@@ -47,4 +47,22 @@ The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if
 > > Finally, the ideal $A_{1}A_{2}$ is always contained in $A_{1}\cap A_{2}$. If $A_{1}$ and $A_{2}$ are comaximal and $x$ and $y$ are as above, then for any $c\in A_{1}\cap A_{2}$, $c=c1=c(x+y)=cx+cy\in A_{1}A_{2}$.
 > > 
 > > The general case follows by induction from the case of two ideals using $A=A_{1}$ and $B=A_{2}\dots A_{k}$ once we show that $A_{1}$ and $A_{2}\dots A_{k}$ are comaximal. By hypothesis, for each $i\in \{ 2, 3, \dots, k \}$, there are elements $x_{i}\in A_{1}$ and $y_{i}\in A_{i}$ such that $x_{i}+y_{i}=1$. It follows that $1=(x_{2}+y_{2})\dots(x_{k}+y_{k})$ is an element in $A_{1}+(A_{2}\dots A_{k})$. 
+
+^1c5a62
+
+> [!Example]
+> Consider $n\in \mathbb{Z}$. $\mathbb{Z}$ is a UFD, so we can write $n=p_{1}^{a_{1}}\dots p_{r}^{a_{r}}$ for primes $p_{1}, \dots, p_{r}$. Since $\mathbb{Z}$ is a PID, prime ideals are maximal ideals, so $\langle p_{1} \rangle, \dots, \langle p_{r} \rangle$ are maximal ideals, and hence pairwise comaximal. It follows[^2] that the ideals $\langle p_{1} \rangle^{a_{1}}, \dots, \langle p_{r} \rangle^{a_{r}}$ are pairwise comaximal. By [[#^1c5a62]], we have[^1] $\langle p_{1}^{a_{1}} \rangle\cap \dots \cap \langle p_{r}^{a_{r}} \rangle=\langle p_{1}^{a_{1}} \rangle\dots \langle p_{r}^{a_{r}} \rangle=\langle p_{1}^{a_{1}}\dots p_{r}^{a_{r}} \rangle=\langle n \rangle$, and
+> $$
+> \frac{\mathbb{Z}}{n\mathbb{Z}}\cong \frac{\mathbb{Z}}{p_{1}^{a_{1}}\mathbb{Z}}\times\dots \times\frac{\mathbb{Z}}{p_{r}^{a_{r}}\mathbb{Z}}.
+> $$
+> Additionally,
+> $$
+> \frac{\mathbb{Z}}{n\mathbb{Z}}[x]\cong \frac{\mathbb{Z}}{p_{1}^{a_{1}}\mathbb{Z}}[x]\times\dots \times\frac{\mathbb{Z}}{p_{r}^{a_{r}}\mathbb{Z}}[x].
+> $$
+> 
+
+
+[^2]:In any commutative ring, $I+J=R$ implies $I^{m}+J^{k}=R$ for all ideals $I, J\subseteq R$ and positive integers $m, k$ (just raise the identity $i+j=1$ to the power $m+k$).
+
+[^1]:$\langle a \rangle\langle b \rangle=\langle ab \rangle$ in commutative rings.
 

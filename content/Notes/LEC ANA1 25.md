@@ -47,35 +47,37 @@ where $\lim_{ h \to 0 }r_{2}(h)=0$.
 
 $E_{n}$ is called the $n$th Taylor polynomial at $x$. 
 
-Rudin, 5.15
 
-> [!Theorem]
+
+> [!Theorem] Rudin 5.15
 > Suppose $f:[a, b]\to \mathbb{R}$, and $f^{(0)}, f^{(1)}, \dots, f^{(m-1)}$ are continuous on $[a, b]$, and $f^{(m)}$ exists on $(a, b)$. Let $x, x+h\in[a, b]$.
 > Then, there exists $\theta$ strictly between $x$ and $x+h$ such that
 > $$
 > f(x+h)=\underbrace{ f^{(0)}(x)+f^{(1)}(x)(h)+\frac{f^{(2)}(x)}{2}(h)^{2}+\dots+ \frac{f^{(m-1)}(x)}{(m-1)!}(h)^{m-1} }_{ E_{m-1}(h) }+ \frac{f^{(m)}(\theta)}{m!}(h)^{m}.
 > $$
-
-> **Proof**
-> We have shown that $f$ can be expressed as 
-> $$
-> f(x+h)=E_{m-1}(h)+r_{m-1}(h)h^{m-1}.
-> $$
-> Let $M$ be the number defined by
-> $$
-> f(x+h)=E_{m-1}(h)+Mh^{m}.
-> $$
-> Define 
-> $$
-> g(x+k)\equiv r_{m-1}(k)k^{m-1}-Mk^{m},
-> $$
-> where $x+k\in[a, b]$. Note that $g(x)=0$, and $g(x+h)=0$. Also note that $g^{(1)}(x), g^{(2)}(x),\dots, g^{(m-1)}(x)$ are zero.
 > 
-> On differentiating both sides $m$ times with respect to $k$ we get
-> $$
-> g^{(m)}(x+k)=f^{(m)}(x+k)-Mm!
-> $$
-> Now, since $g(x)=0$ and $g(x+h)=0$, there must exist $x+t_{1}$ between $x$ and $x+h$ such that $g'(x+t_{1})=0$, thanks to the [[LEC ANA1 24#Mean value theorem|mean value theorem]]. Again, since $g'(x)=0$ and $g'(x+t_{1})=0$, there must exist $x+t_{2}$ between $x$ and $x+t_{1}$ such that $g''(x+t_{2})=0$. After $m$ steps, we obtain $x+t_{m}\in(x, x+h)$ such that $g^{(m)}(x+t_{m})=0$. Therefore, $M=\frac{f^{(m)}(x+t_{m})}{m!}$. ❏
+> > [!Proof]-
+> > We have shown that $f$ can be expressed as 
+> > $$
+> > f(x+h)=E_{m-1}(h)+r_{m-1}(h)h^{m-1}.
+> > $$
+> > Let $M$ be the number defined by
+> > $$
+> > f(x+h)=E_{m-1}(h)+Mh^{m}.
+> > $$
+> > Define 
+> > $$
+> > g(x+k)\equiv r_{m-1}(k)k^{m-1}-Mk^{m},
+> > $$
+> > where $x+k\in[a, b]$. Note that $g(x)=0$, and $g(x+h)=0$. Also note that $g^{(1)}(x), g^{(2)}(x),\dots, g^{(m-1)}(x)$ are zero.
+> > 
+> > On differentiating both sides $m$ times with respect to $k$ we get
+> > $$
+> > g^{(m)}(x+k)=f^{(m)}(x+k)-Mm!
+> > $$
+> > Now, since $g(x)=0$ and $g(x+h)=0$, there must exist $x+t_{1}$ between $x$ and $x+h$ such that $g'(x+t_{1})=0$, thanks to the [[LEC ANA1 24#Mean value theorem|mean value theorem]]. Again, since $g'(x)=0$ and $g'(x+t_{1})=0$, there must exist $x+t_{2}$ between $x$ and $x+t_{1}$ such that $g''(x+t_{2})=0$. After $m$ steps, we obtain $x+t_{m}\in(x, x+h)$ such that $g^{(m)}(x+t_{m})=0$. Therefore, $M=\frac{f^{(m)}(x+t_{m})}{m!}$. 
+> 
+
 
 If we know that bounds on $|f^{(m)}(x)|$, we can bound the error!
 

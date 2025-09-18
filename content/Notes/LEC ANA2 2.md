@@ -5,13 +5,6 @@ tags:
 date: 2025-08-22
 time: 15:32
 ---
-
-
-
-
-
-
-
 Examples of metrics on $C[0, 1]$ ($\subset B[0, 1]$), $C^{1}[0, 1]$, $C^{k}[0, 1]$, and $C^{\infty}[0, 1]$.
 $$
 \lVert f \rVert _{1, \infty}=\lVert f \rVert _{\infty}+\lVert f' \rVert _{\infty}.

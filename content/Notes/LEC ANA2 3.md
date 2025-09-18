@@ -20,7 +20,7 @@ induce the discrete topology on $\mathbb{N}$. A sequence converges under $d_{1}$
 Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. However, under $d_{2}$, the sequence $\{ x_{n} =n\}$ is Cauchy, but it doesn't converge! So $(\mathbb{N}, d_{1})$ is complete, while $(\mathbb{N}, d_{2})$ is not.
 
 > [!Exercise]
-> Let $(X, d)$ be a metric space. Show that $\rho=d/(1+d)$ is a metric. Show that $\{ x_{n} \}$ is Cauchy wrt $d$ $\iff$ $\{ x_{n} \}$ is Cauchy wrt $\rho$.
+> Let $(X, d)$ be a metric space. Show that $\rho=d/(1+d)$ is a metric. Show that $\{ x_{n} \}$ is Cauchy wrt $d$ $\iff$ $\{ x_{n} \}$ is Cauchy wrt $\rho$. %% [MSE](https://math.stackexchange.com/questions/309198/if-dx-y-is-a-metric-then-fracdx-y1-dx-y-is-also-a-metric)  %%
 
 > [!Example] Completeness of $B(S)$
 > Let $S$ be any set. Define $B(S)$ as we do [[LEC ANA1 33#Another perspective on uniform convergence|here]], with the metric induced by the sup norm. We will show that $B(S)$ is complete.
@@ -47,8 +47,9 @@ Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. 
 > \end{align}
 > $$
 > 
-
 ^eb4855
+
+A good idea is to prove uniform convergence first; boundedness then is immediate. See @pughRealMathematicalAnalysis2015 4.3.
 
 Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 
@@ -76,7 +77,7 @@ For a general metric space $S$, you can still consider $C_{b}(S)$, the space of 
 > $$
 > is continuous. So, if $S\subseteq C[0, 1]$ is closed under $\lVert \cdot \rVert_{1}$, it is closed under $\lVert \cdot \rVert_{\infty}$. 
 > 
-> The norms are not [[LEC CAL1 1#^ae90b2|equivalent]], however: there is no constant $c> 0$ such that $c\lVert f \rVert_{\infty}\leq \lVert f \rVert_{1}$ for all $f\in C[0, 1]$, the classic counter example being the sequence of triangular 'spike' functions of height $1$ and base $1/n$: $\lVert f \rVert_{\infty}=1$ for every $n$, but $\lVert f_{n} \rVert_{1}\to 0$. $(C[0, 1], \lVert \cdot \rVert_{1})$ is not complete, either: $(x^{n})\to 1_{\{ 1 \}}\not\in C[0, 1]$. 
+> The norms are not [[LEC CAL1 1#^ae90b2|equivalent]], however: there is no constant $c> 0$ such that $c\lVert f \rVert_{\infty}\leq \lVert f \rVert_{1}$ for all $f\in C[0, 1]$, the classic counterexample being the sequence of triangular 'spike' functions of height $1$ and base $1/n$: $\lVert f \rVert_{\infty}=1$ for every $n$, but $\lVert f_{n} \rVert_{1}\to 0$. $(C[0, 1], \lVert \cdot \rVert_{1})$ is not complete, either: $(x^{n})\to 1_{\{ 1 \}}\not\in C[0, 1]$. 
 
 
 

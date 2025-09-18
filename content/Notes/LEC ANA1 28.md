@@ -6,6 +6,7 @@ tags:
 date: 2024-10-25
 time: 14:00
 ---
+
 ![[7.jpeg]] 
 
 We can sample the value of the function in an interval instead of using the supremum/infimum:
@@ -96,6 +97,8 @@ Rudin drags his feet in the last part of the proof, since he wants to avoid inte
 > > \left|F(b)-F(a)-\int_{a}^{b} f \, dx \right|<\epsilon.
 > > $$
 > 
+
+^88e00c
 
 
 ---

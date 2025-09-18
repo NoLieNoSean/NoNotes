@@ -31,7 +31,7 @@ f=\lim_{ n \to \infty } f_{n}=\begin{cases}
 1 & x=1,
 \end{cases}
 $$
-which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called **uniform convergence**, does. Uniform limits of functions preserve continuity, uniform continuity, integrability, and - with additional hypothesis - differentiability.
+which is clearly discontinuous. So, pointwise convergence does not preserve properties such as continuity. However, a stronger form of convergence, called **uniform convergence**, does. Uniform limits of functions preserve [[#^8504b1|continuity]], uniform continuity, [[#^9132bb|integrability]], and - with additional hypothesis - [[#^94a1f8|differentiability]].
 
 > [!Important] Remark
 > To say $f$ is continuous at a limit point $x$ means 
@@ -75,8 +75,59 @@ $(f_{n})$ converging uniformly to $f$ is denoted by $(f_n) \rightrightarrows f$.
 
 There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrightarrows f$. 
 
+## Another perspective on uniform convergence
+
+Let $X$ be a metric space. Define
+$$
+B(X)\equiv \{ f:X\to \mathbb{R} \ |\ f(X) \text{ is a bounded set}\}.
+$$
+Define a norm on $B(X)$ by
+$$
+\lVert f \rVert =\sup _{x\in X}\ \lvert f(x) \rvert .
+$$
+This turns $B(X)$ into a [[LEC ALG1 21#Normed spaces|normed linear space]] over $\mathbb{R}$, since all the properties of the norm are satisfied by our definition:
+1. $\lVert \alpha f \rVert=|\alpha|\lVert f \rVert$ for all $\alpha\in \mathbb{R}$ and $f\in B(X)$. This is easy to see, since if a function is scaled by $\alpha$, its maximum value is also scaled by $\alpha$.
+2. $\lVert f \rVert\geq 0$ with $\lVert f \rVert=0$ if and only if $f=0$. 
+3. $\lVert f+g \rVert\leq \lVert f \rVert+\lVert g \rVert$.
+
+> [!Note]- Proof of the triangle inequality
+> 
+> $$
+> \begin{align}
+> L & \equiv \sup _{x\in X}\ |f(x)+g(x)| \\
+> R & \equiv \sup _{x\in X}\ |f(x)|+ \sup _{x\in X}\ |g(x)|
+> \end{align}
+> $$
+> From the triangle inequality for real numbers, we know that
+> $$
+> \begin{align}
+> |f(x)+g(x)|\leq |f(x)|+|g(x)|\ \ \ \  \forall x\in X \\
+> \end{align}
+> $$
+> We know that $|f(x)|+|g(x)|\leq \sup |f(x)|+ \sup |g(x)|=\lVert f \rVert+\lVert g \rVert$. This is true for all $x$. Thus, $\lVert f \rVert+\lVert g \rVert$ is an upper bound for $\lvert f(x)+g(x) \rvert$. Thus, we have
+> $$
+> \sup \lvert f(x)+g(x) \rvert \leq \lVert f \rVert + \lVert g \rVert .
+> $$
+> Note the order in which the suprema were taken in the above proof.
+
+Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$. 
+
+> [!Claim]
+> $f_{n}\rightrightarrows f$ $\iff$ $f_{n}\to f$ in $B(X)$, i.e, $\forall\epsilon>0$, $\exists N$ such that $n>N$ $\implies$ $\lVert f_{n}-f \rVert<\epsilon$.
+> 
+> > [!Proof]-
+> > $$
+> > \lVert f_{n}-f \rVert\leq\epsilon \iff \sup _{x\in X}\ |f_{n}(x)-f(x)|\leq\epsilon \iff |f_{n}(x)-f(x)|\leq\epsilon \ \ \forall x\in X
+> > $$
+
+> [!Info] Remark
+> Consider $\mathscr{B}([0, 1])$. Let $\mathscr{C}([0, 1])$ be the set of all continuous functions on $[0, 1]$. Now, since continuous functions on compact sets are bounded, $\mathscr{C}([0, 1])\subset\mathscr{B}([0, 1])$. Since the limit of uniformly converging continuous functions is continuous the limit of every convergent sequence $(f_{n})$ in $\mathscr{C}([0, 1])$ is also in $\mathscr{C}([0, 1])$, i.e, $\mathscr{C}([0, 1])$ is a [[LEC ANA1 13#Epilogue|closed]] subset of $\mathscr{B}([0, 1])$!
+
 ## Results due to uniform convergence
-### Limit of uniformly converging continuous functions is continuous
+
+1. Uniform limit of continuous functions is continuous.
+2. Uniform limit of Riemann integrable functions is Riemann integrable, and the limit of the integrals is the integral of the limit.
+3. Uniform limit of differentiable functions is differentiable provided that the sequence of derivatives also converge uniformly.
 
 > [!Theorem] Rudin 7.12
 > $f_{n}\rightrightarrows f$ and each $f_{n}$ continuous on $E$ $\implies$ $f$ is continuous on $E$.
@@ -94,7 +145,7 @@ There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrigh
 
 ^8504b1
 
-### Limit of uniformly converging integrable functions is integrable (and more)
+Denote by $C[0, 1]$ the set of continuous functions in $B[0, 1]$. Then, [[#^8504b1]] says that $C[0, 1]$ is a closed subset of $B[0, 1]$. 
 
 > [!Theorem] Rudin 7.16
 > $f_{n}\rightrightarrows f$ and each $f_{n}\in\mathscr{R}$ on $[a, b]$ $\implies$ $f\in\mathscr{R}$ on $[a, b]$ and
@@ -131,7 +182,18 @@ There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrigh
 > > $$
 > > Thus, $f$ is integrable on $[a, b]$.
 > 
-### A not so neat but nevertheless useful result on differentiation
+
+^9132bb
+
+Denote by $\mathscr{R}[0, 1]$ the set of integrable functions in $B[0, 1]$. Then, [[#^9132bb]] says that $\mathscr{R}[0, 1]$ is a closed subset of $B[0, 1]$, and the integral function $f\mapsto \int_{a}^{b} f \, dx$ is a continuous map from $\mathscr{R}[0, 1]$ to $R$ (by [[LEC ANA1 11#^78c16d|the sequence criterion]]).
+
+> [!Example] Term by term integration
+> A uniformly convergent series of integrable functions $\sum f_{k}$ can be integrated term-by-term:
+> $$
+> \int_{a}^{b} \sum_{k=0}^{\infty} f_{k}(x) \, dx =\sum_{k=0}^{\infty} \int_{a}^{b} f_{k}(x) \, dx .
+> $$
+> 
+
 
 > [!Theorem] Rudin 7.17
 > Suppose
@@ -141,7 +203,7 @@ There exist parallel definitions for $\sum f_{n}\to f$ and $\sum f_{n}\rightrigh
 > 
 > Then, $f_{n}\rightrightarrows\text{a function }f$ and $f'(x)=g(x)$ for all $x\in[a, b]$.
 
-A cuter version with much weaker hypothesis:
+A cuter version with weaker hypothesis:
 
 > [!Theorem] @pughRealMathematicalAnalysis2015 4.9
 > Suppose
@@ -152,54 +214,6 @@ A cuter version with much weaker hypothesis:
 > Then, $f$ is differentiable with $f'=g$
 
 ^94a1f8
-
-## Another perspective on uniform convergence
-
-Let $X$ be a metric space. Define
-$$
-\mathscr{B}(X)\equiv \{ f:X\to \mathbb{R} \ |\ f(X) \text{ is a bounded set}\}.
-$$
-Define a norm on $\mathscr{B}(X)$ by
-$$
-\lVert f \rVert =\sup _{x\in X}\ \lvert f(x) \rvert .
-$$
-This turns $\mathscr{B}(X)$ into a [[LEC ALG1 21#Normed spaces|normed linear space]] over $\mathbb{R}$, since all the properties of the norm are satisfied by our definition:
-1. $\lVert \alpha f \rVert=|\alpha|\lVert f \rVert$ for all $\alpha\in \mathbb{R}$ and $f\in \mathscr{B}(X)$. This is easy to see, since if a function is scaled by $\alpha$, its maximum value is also scaled by $\alpha$.
-2. $\lVert f \rVert\geq 0$ with $\lVert f \rVert=0$ if and only if $f=0$. 
-3. $\lVert f+g \rVert\leq \lVert f \rVert+\lVert g \rVert$.
-
-> [!Note]- Proof of the triangle inequality
-> 
-> $$
-> \begin{align}
-> L & \equiv \sup _{x\in X}\ |f(x)+g(x)| \\
-> R & \equiv \sup _{x\in X}\ |f(x)|+ \sup _{x\in X}\ |g(x)|
-> \end{align}
-> $$
-> From the triangle inequality for real numbers, we know that
-> $$
-> \begin{align}
-> |f(x)+g(x)|\leq |f(x)|+|g(x)|\ \ \ \  \forall x\in X \\
-> \end{align}
-> $$
-> We know that $|f(x)|+|g(x)|\leq \sup |f(x)|+ \sup |g(x)|=\lVert f \rVert+\lVert g \rVert$. This is true for all $x$. Thus, $\lVert f \rVert+\lVert g \rVert$ is an upper bound for $\lvert f(x)+g(x) \rvert$. Thus, we have
-> $$
-> \sup \lvert f(x)+g(x) \rvert \leq \lVert f \rVert + \lVert g \rVert .
-> $$
-> Note the order in which the suprema were taken in the above proof.
-
-Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$. 
-
-> [!Claim]
-> $f_{n}\rightrightarrows f$ $\iff$ $f_{n}\to f$ in $\mathscr{B}(X)$, i.e, $\forall\epsilon>0$, $\exists N$ such that $n>N$ $\implies$ $\lVert f_{n}-f \rVert<\epsilon$.
-> 
-> > [!Proof]-
-> > $$
-> > \lVert f_{n}-f \rVert\leq\epsilon \iff \sup _{x\in X}\ |f_{n}(x)-f(x)|\leq\epsilon \iff |f_{n}(x)-f(x)|\leq\epsilon \ \ \forall x\in X
-> > $$
-
-> [!Info] Remark
-> Consider $\mathscr{B}([0, 1])$. Let $\mathscr{C}([0, 1])$ be the set of all continuous functions on $[0, 1]$. Now, since continuous functions on compact sets are bounded, $\mathscr{C}([0, 1])\subset\mathscr{B}([0, 1])$. Since the limit of uniformly converging continuous functions is continuous the limit of every convergent sequence $(f_{n})$ in $\mathscr{C}([0, 1])$ is also in $\mathscr{C}([0, 1])$, i.e, $\mathscr{C}([0, 1])$ is a [[LEC ANA1 13#Epilogue|closed]] subset of $\mathscr{B}([0, 1])$!
 ## Criteria for uniform convergence
 
 ### The Cauchy Criterion

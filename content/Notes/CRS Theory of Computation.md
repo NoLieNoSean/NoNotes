@@ -6,9 +6,9 @@ tags:
 CMI, Aug-Nov 2025, C Aiswarya
 @sipserIntroductionTheoryComputation2013, @kozenAutomataComputability1997, @hopcroftIntroductionAutomataTheory2007
 
-$\begin{array}{l}\Huge \equiv=\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{.\,_{.\,_{.}}}}}}}}}}}}}}}\\\tiny{\textsf{Exhibit A: The Nerode Staircase}}\end{array}$
-
-
+$$
+\begin{array}{c}\Huge \equiv=\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{.\,_{.\,_{.}}}}}}}}}}}}}}}\\\tiny{\textsf{Exhibit A: The Nerode Staircase}}\end{array}
+$$
 ---
 
 [[Automata and regular languages]] ✅ We show that automata and regular expressions describe the same class of languages.
@@ -18,13 +18,7 @@ $\begin{array}{l}\Huge \equiv=\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv
 [[Context free grammars]] 
 
 
-
-
-Lecture 11: Context-Free Grammar (CFG), Derivation, Sentential Form, Language of a Grammar (L(G)), Parse Tree, Ambiguity. Kozen lecture 19
-
-Lecture 12: Exercises on CFGs - plaindromes, unary addition, well-bracketed paratheses, proving correctness. Kozen lecture 20
-
----
+[[LEC TOC 7]]
 
 [[AS TOC 1]]
 [[AS TOC 2]]

@@ -1,9 +1,7 @@
 # Total derivatives
 
-Let $\mathbf{f}:S\to \mathbb{R}^{m}$ be defined on $S\subseteq \mathbb{R}^{n}$ and let $\mathbf{c}\in S^{\circ}$.
-
 > [!Definition]
-> $\mathbf{f}$ is **differentiable** at $\mathbf{c}$ if there exists a linear transformation $\mathbf{T}_{\mathbf{c}}:\mathbb{R}^{n}\to \mathbb{R}^{m}$ such that
+> Let $\mathbf{f}:S\to \mathbb{R}^{m}$ be defined on $S\subseteq \mathbb{R}^{n}$ and let $\mathbf{c}\in S^{\circ}$. $\mathbf{f}$ is **differentiable** at $\mathbf{c}$ if there exists a linear transformation $\mathbf{T}_{\mathbf{c}}:\mathbb{R}^{n}\to \mathbb{R}^{m}$ such that
 > $$
 > \lim_{ \mathbf{v} \to \mathbf{0} } \frac{1}{\lVert \mathbf{v} \rVert }\left( \mathbf{f}(\mathbf{c}+\mathbf{v})-\mathbf{f}(\mathbf{c})-\mathbf{T}_{\mathbf{c}}(\mathbf{v}) \right)=\mathbf{0},
 > $$
@@ -40,6 +38,8 @@ where $\mathbf{E}_{\mathbf{c}}(\mathbf{v})\to \mathbf{0}$ as $\mathbf{v}\to \mat
 > >  & =\mathbf{T}_{\mathbf{c}}(\mathbf{u}).
 > > \end{align}
 > > $$
+
+^83fea1
 
 > [!Theorem]
 > If $\mathbf{f}$ is differentiable at $\mathbf{c}$, then $\mathbf{f}$ is continuous at $\mathbf{c}$.

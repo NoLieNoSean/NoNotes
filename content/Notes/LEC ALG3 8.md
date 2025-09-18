@@ -1,23 +1,9 @@
----
-tags: 
-date: "2025-08-28"
-time: "09:23"
----
-[!Lemma]
-Let $\varphi:R\to R'$ be a homomorphism, and $\alpha\in R'$, then there exists a unique homomorphism $\Phi:R[x]\to R'$ extending $\varphi$ and mapping $x$ to $\alpha$. $R$ and $R'$ are commutative here.
+# Ring of fractions
 
+A Commutative ring $R$ is always a subring of a larger ring $Q$, called the *ring of fractions*, in which every nonzero element of $R$ that is not a zero divisor is a unit in $Q$. If $R$ is an integral domain, $Q$ will be a field, called the *field of fractions* of $R$.
 
-[!Corollary]
-Let $\varphi:R\to R'$ be a ring homomorphism. Then, there exists a unique $\Phi:R[x]\to R'[x]$ such that $\Phi$ agrees with $\varphi$ on $R$ and $\Phi$ maps $x$ to $x$.
-
-
-[!Example]
-Let $R$ be a ring and $I$ be an ideal in $R$. Then we have a natural homomorphism $\pi:R\to R/I$. By the previous result this extends to a unique homomorphism $\pi':R[x]\to (R/I)[x]$. It is easy to see that $\ker\varphi=IR[x]$. Thus, 
-$$
-\frac{R[x]}{IR[x]}\cong (R/I)[x].
-$$
-
-[!Proposition]
-Let $R$ be a principal ideal ring. Let $(a_{1})\subseteq(a_{2})\subseteq\dots$ be a chain of ideals. Then there exists an integer $n$ such that for all $j\geq n$, $(a_{j})=(a_{n})$.
-
+> [!Theorem]
+> Let $R$ be a commutative ring. Let $D$ be any nonempty subset of $R$ that does not contain $0$, does not contain any zero divisors and is closed under multiplication. Then there is a commutative ring $Q$ such that $Q$ contains $R$ as a subring and every element of $D$ is a unit in $Q$. Also, 
+> 1. every element of $Q$ is of the form $rd^{-1}$, for some $r\in R$ and $d\in D$. If $D=R\setminus \{ 0 \}$ then $Q$ is a field.
+> 2. $Q$ is the "smallest" ring containing $R$ in which all elements of $D$ become units. Precisely, $Q$ satisfies this universal property: If $h:R\to S$ in an injective ring homomorphism such that $h(d)$ is a unit for every $d\in D$, there exists a unique injective homomorphism $\overline{h}:Q\to S$ such that $\overline{h}\ | \ _{R}=h$. 
 
