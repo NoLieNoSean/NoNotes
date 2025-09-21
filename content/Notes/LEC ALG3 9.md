@@ -1,10 +1,11 @@
 ---
 tags:
   - ALG3
+  - Lecture
 date: 2025-09-09
 time: 09:23
 ---
-# Euclidean domains
+# Euclidean Domains
 
 > [!Definition]
 > An integral domain $R$ is called **Euclidean** if there is a function $d:R\setminus \{ 0 \}\to \mathbb{N}$ with the following properties[^1]:
@@ -19,28 +20,23 @@ The two main results about Euclidean domains: A Euclidean Domain is a PID, and t
 
 Clare distinguishes between 'Euclidean ring' (not a domain) and 'Euclidean domain'. For example, If $R$ is a Euclidean domain, and $I$ is a nonprime ideal in $R,$ then $R/I$ is a Euclidean ring which is not a domain.
 
-
 > [!Proposition]
 > Every ER is a PIR.
 > 
 > > [!Proof]-
 > > Let $I\ne(0)$ be a proper ideal of $R$. Let $b$ be an element of minimum norm[^2] in $I$. Let $a\in I$. We can write $a=qb+r$, where $r=0$ or $\sigma(r)<\sigma(b)$. Since $r=a-qb\in I$, $r$ must be $0$. Thus, we have $I=(b)$. 
 > 
-
 ^c12bf3
 
-In particular, every Euclidean domain is a principal ideal domain.
-
 [^2]: $\mathbb{N}$ is well ordered!
+In particular, every Euclidean domain is a principal ideal domain.
 
 > [!Example]
 > - $\mathbb{Z}[i]$ is a euclidean domain, with $d(a)=|a|^{2}$. Division with remainder is not unique: There may be as many as four choices for the remainder. See @artinAlgebra2011 [p. 361]. 
-> - $\mathbb{Z}[x]$ is not a Euclidean domain, since it is not a principal domain. $\mathbb{Q}[x]$ is a Euclidean domain.
+> - $\mathbb{Z}[x]$ is not a Euclidean domain, since it is not a principal ideal domain. $\mathbb{Q}[x]$ is a Euclidean domain.
 > - $\mathbb{Z}[\sqrt{ -5 }]$ is not a Euclidean domain, since it is not a principal domain. See @dummitAbstractAlgebra2004 [p. 272]. 
-> - $\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not a Euclidean domain. See @dummitAbstractAlgebra2004 [p. 276].
+> - $\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not a Euclidean domain. See [[TUT ALG3 4#Problem 9]].
 > - A polynomial ring $\mathbb{F}[x]$ in one variable over a field $\mathbb{F}$ is a Euclidean domain, with $d(f)$ equal to the degree of $f$.
-
-
 
 ## Greatest common divisors
 
@@ -49,22 +45,62 @@ In particular, every Euclidean domain is a principal ideal domain.
 
 Clearly, $\gcd(a, b)$ is a generator for the unique smallest principal ideal containing $a$ and $b$. Note that while $\gcd(a, b)$ is not unique, $(\gcd(a, b))$ is.
 
-A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$. This is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal, so $(1)$ is the unique smallest principal ideal containing $2$ and $x$. 
+A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$ (this is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal, so $(1)$ is the unique smallest principal ideal containing $2$ and $x$). It follows that gcds always exist in a principal ideal domain:
 
+> [!Proposition]
+> Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. $d$ is a gcd of $a$ and $b$. 
 
+> [!Remark]
+> When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$. 
 
+^9467ec
 
+---
+# Unique Factorization Domains
 
-[!Definition]
-Let $\alpha\in \mathbb{C}$ not be an integer. Let $\alpha$ satisfy a monic irreducible polynomial $f(x)=x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}$, where $a_{i}\in \mathbb{Z}$. We define the norm and trace of $\alpha$ as $\text{Norm}(\alpha)=(-1)^{n}a_{0}$, $\text{Tr}(\alpha)=-a_{n-1}$.
+> [!Definition]
+> We say that factoring in an integral domain $R$ is **unique** if, whenever an element $a$ of $R$ is written in two ways as a product of irreducible elements, say
+> $$
+> p_{1}\dots p_{m}=a=q_{1}\dots q_{n},
+> $$
+> then $m=n$, and of the right side is rearranged suitably, $q_{i}$ is an associate of $p_{i}$ for each $i$. 
+> 
+> When the recursive factoring of every nonunit nonzero element terminates, we say that **factoring terminates** in $R$.
 
-For example, every element in $\mathbb{Z}[i]$ is of the form $\alpha=a+bi$; $\text{Tr}(\alpha)=2a$, $\text{Norm}(\alpha)=a^{2}+b^{2}$. 
+> [!Definition]
+> An integral domain $R$ is a **unique factorization domain** if
+> 1. Factoring terminates in $R$: every element $x$ factors as a product $x=\prod x_{i}$ of finitely many irreducible $x_{i}$.
+> 2. The irreducible factorization of an element $a$ is unique.
 
+^9fb28b
 
+> [!Proposition]
+> Let $R$ be an integral domain. Factoring terminates in $R$ iff $R$ does not contain an infinite strictly increasing chain $(a_{1})<(a_{2})<\dots$ of principal ideals.
 
+We will rarely encounter rings in which factoring fails to terminate; in practice it is the uniqueness that gives trouble.
 
+> [!Proposition]
+> Let $R$ be an integral domain in which factoring terminates. Then $R$ is a UFD iff every irreducible element is a prime element.
 
+> [!Proposition]
+> Every PID is a UFD.
 
+Divisibility in a UFD can be deduced from irreducible factorizations:
 
+> [!Proposition]
+> Let $R$ be a UFD. 
+> 1. Let $a=p_{1}\dots p_{m}$ and $b=q_{1}\dots q_{n}$ be irreducible factorizations of two elements of $R$. Then $a\ | \ b$ iff $m\leq n$ and, when $q_{j}$ are arranged suitably, $p_{i}$ is an associate of $q_{i}$ for $i=1, \dots, m$.
+> 2. Any pair of elements $a, b$, not both zero, has a gcd.
+
+In particular, for one variable polynomial rings over fields, we have these results:
+
+> [!Theorem]
+> Let $F[x]$ be the polynomial in one variable over a field $F$.
+> 1. Two polynomials $f$ and $g$, not both zero, have a unique monic greatest common divisor $d$, and there are polynomials $r$ and $s$ such that $rf+sg=d$. [[#^9467ec]]
+> 2. Every irreducible polynomial in $F[x]$ is prime. [[LEC ALG3 7#^662472]] (4)
+> 3. Every monic polynomial in $F[x]$ can be written uniquely as a product of irreducible monic polynomials.
+
+> [!Proposition]
+> A polynomial $f$ of degree $n$ with coefficients in a field $F$ has at most $n$ roots in $F$.
 
 

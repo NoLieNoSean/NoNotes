@@ -22,24 +22,12 @@ time: 10:21
 > An element $a$ is **irreducible** if $a$ is not a unit and $a=a_{1}a_{2}$ implies $a_{1}$ is a unit or $a_{2}$ is a unit.
 > An element $p$ is **prime** if $p\ | \ ab$ implies $p\ | \ a$ or $p\ | \ b$.
 
-Every prime is irreducible in an integral domain. The converse is true for UFDs.
-
-> [!Definition]
-> $A$ is a **UFD** if
-> 1. Every element $x$ factors as a product of finitely many irreducible $x=\prod x_{i}$ with $x_{i}$ irreducible, and
-> 2. irreducible implies prime.
+Every prime is irreducible in an integral domain. The converse is true for [[LEC ALG3 9#^9fb28b|unique factorization domains]], and in particular for PIDs, as we will show below.
 
 > [!Example]
-> $(1+i)$ and $(1-i)$ are associates in the ring of Gaussian integers. 
-> $(\overline{2})$ and $(\overline{3})$ are associates in $\mathbb{Z}/8\mathbb{Z}$. 
-> In $\mathbb{Z}[\sqrt{ -5 }]$, $\langle 6 \rangle=\langle 2 \rangle\langle 3 \rangle=\langle 1-\sqrt{ -5 } \rangle\langle 1+\sqrt{ -5 } \rangle$.
-
-> [!Theorem] Hilbert's basis theorem
-> If $R$ is noetherian then $R[x]$ is noetherian. 
-
-Thus, $\mathbb{Z}[x_{1}, \dots, x_{n}]$ is noetherian. $k[x_{1}, \dots, x_{n}]$ is noetherian for any field $k$. If $R$ is noetherian, for any ideal $I$ of $R$, $R/I$ is noetherian. 
-
-Also, $R=k[x, y]$ is noetherian. However, the subring $S=k[x, xy, xy^{2}, \dots]$ is not noetherian: $\langle x \rangle \subset \langle x, xy \rangle \subset \langle x, xy^{2} \rangle \subset\dots$ .
+> 1. $(1+i)$ and $(1-i)$ are associates in the ring of Gaussian integers. 
+> 2. $(\overline{2})$ and $(\overline{3})$ are associates in $\mathbb{Z}/8\mathbb{Z}$. 
+> 3. In $\mathbb{Z}[\sqrt{ -5 }]$, $\langle 6 \rangle=\langle 2 \rangle\langle 3 \rangle=\langle 1-\sqrt{ -5 } \rangle\langle 1+\sqrt{ -5 } \rangle$, where $2$, $3$, and $1\pm \sqrt{ -5 }$ are irreducible - factorization is not unique!
 
 > [!Proposition]
 > Let $R$ be an integral domain, $a, b\in R$, $a, b\ne 0$. Then, 
@@ -78,5 +66,6 @@ Also, $R=k[x, y]$ is noetherian. However, the subring $S=k[x, xy, xy^{2}, \dots]
 > > $(5)$ Let $a$ be irreducible and $a$ and $b$ be associates. $a=bu$ for some unit $u$. If $b$ is not irreducible then $b=b_{1}b_{2}$, so $a=b_{1}b_{2}u=(b_{1})(b_{2}u)$, so $a$ is not irreducible.
 > 
 
+^662472
 
 Example of an irreducible element which is not prime: Consider $2$ in $\mathbb{Z}[\sqrt{ -5 }]$. $2\cdot 3=(1+\sqrt{ 5 })(1-\sqrt{ 5 })$, and $2$ does not divide either $1+\sqrt{ 5 }$ or $1-\sqrt{ 5 }$. It is easily seen that $2$ is irreducible.

@@ -24,10 +24,10 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
 [[LEC ALG3 7]] ✅ Irreducible and prime elements
 [[LEC ALG3 8]] ✅ Ring of fractions
-[[LEC ALG3 9]] Euclidean domains
-[[LEC ALG3 10]]
-[[LEC ALG3 11]]
-[[LEC ALG3 12]]
+[[LEC ALG3 9]] ✅ Euclidean domains and unique factorization domains
+[[LEC ALG3 10]] Gauss's Lemma
+[[LEC ALG3 11]] Nakayama Lemma, every PID is a UFD
+[[LEC ALG3 12]] Stuff on UFDs
 
 
 # Tutorials

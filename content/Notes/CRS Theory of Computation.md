@@ -17,6 +17,8 @@ $$
 [[Algorithmic considerations for regular languages]] Complexity of translations between different formalizations, complexity of DFA minimization, algorithmic questions on finite representations of regular languages: membership, nonemptiness, universality, finiteness, intersection, nonemptiness, inclusion/containment, equivalence.
 [[Context free grammars]] 
 
+Greybach normal form, CFGs as NPDAs, DPDAs weaker than NPDAs
+
 
 [[LEC TOC 7]]
 

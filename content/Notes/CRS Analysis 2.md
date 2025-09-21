@@ -25,7 +25,8 @@ CMI, Aug-Nov 2025, R Srinivasan
 ## Equicontinuity
 
 [[LEC ANA2 7]] Equicontinuity, the Arzelà–Ascoli theorem
-
+[[LEC ANA2 8]]
 
 
 [[AS ANA2 1]]
+[[AS ANA2 2]]

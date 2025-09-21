@@ -8,6 +8,8 @@ Reviewed [[LEC CAL1 9#Second-countable spaces|second countability]]. A metric sp
 > [!Example]
 > Bounded sets need not be totally bounded. In $\mathscr{l}_{1}$, let $\mathbf{e}_{n}=\{ e_{n}^{k} \}_{k=1}^{\infty}$ be the sequence defined by $e_{n}^{k}=\delta_{n,k}$. $\lVert \mathbf{e}_{n} -\mathbf{e}_{k}\rVert_{1}=2$ for all $n\ne m$. Now, the set $B=\{ \mathbf{x}\in \mathscr{l}_{1}\ | \ \lVert \mathbf{x} \rVert_{1}\leq 1 \}\supset \{ \mathbf{e}_{n} \}$. Any open ball of radius $1/2$ can contain at most one $\mathbf{e}_{n}$. Thus, $B$ is not totally bounded. 
 
+^c45e7a
+
 ---
 # Compactness
 
@@ -28,14 +30,15 @@ Vasanth's proof: Suppose there does not exist such a $\delta$. Then for each $n\
 *Compact $\implies$ complete.*
 Let $X$ be compact. We have shown that this implies $X$ is sequentially compact. If $\{ x_{n} \}$ is a Cauchy sequence in $X$, then it has a convergent subsequence, [[Cauchy sequences#^4bc448|and hence must itself converge]].
 
-TFAE: 
-1. $X$ is compact;
-2. $X$ is complete and totally bounded.
-3. $X$ is sequentially compact;
-
+*TFAE:* 
+1. *$X$ is compact;*
+2. *$X$ is complete and totally bounded.*
+3. *$X$ is sequentially compact;*
 
 We have shown: $1 \implies 2$, $1 \implies 3$,
 
 $2 \implies 3$: Let $\{ x_{n} \}\subseteq X$. If $\{ x_{n} \}$ has finitely many distinct elements, then we are done. Otherwise, $X$ is the union of finitely many $1$-balls, and at least one such ball must contain infinitely many elements of $\{ x_{n} \}$. Take the closure of this ball. It is totally bounded (since $X$ is totally bounded), so we can cover it with finitely many balls of radius $1/2$, once of which must again contain infinitely many points of $\{ x_{n} \}$. Keep going to obtain a contracting sequence of closed sets, whose intersection must be a singleton $\{ x \}$ since $X$ is complete. It is now easy to obtain a subsequence of $\{ x_{n} \}$ converging to $x$.
 
 $3 \implies 1$: Let $\{ U_{\alpha} \}_{\alpha\in I}$ be an open cover of $X$. Since $X$ is sequentially compact, there exists $\delta> 0$ such that for every $x\in X$, there is $\alpha\in I$ such that $B_{\delta}(x)\subseteq U_{\alpha}$. We now claim that there exist $x_{1}, \dots, x_{n}$ such that $X=\bigcup_{i=1}^{n}B_{\delta}(x)$. Indeed, if this were not true, we would be able to construct a sequence $\{ y_{n} \}$ such that $d(y_{n}, y_{m})\geq\delta$ for any $n, m$, contradicting sequential compactness.
+
+[[LEC CAL1 7#^0b0337|Here]], we have shown the implications in the opposite directions.

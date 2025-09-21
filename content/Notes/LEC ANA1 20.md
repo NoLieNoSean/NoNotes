@@ -35,6 +35,8 @@ Compare with definition of uniform continuity:
 > \forall\epsilon>0, \exists\delta>0 \text{ such that } \forall x\in X, f(B_{\delta}(x, X))\subset B_{\epsilon}(f(x), Y).
 > $$
 
+^5d7328
+
 Things to note:
 - Uniform continuity implies continuity, but the converse is generally not true. Consider $f:(0, \infty)\to \mathbb{R}$, $f(x)=\frac{1}{x}$ as a counterexample.  The converse *is* true, if $X$ is *compact*, as we will prove.
 - Continuity is a local phenomenon; you only need to look in a (potentially very tiny) neighborhood of $x$ and $f(x)$ to check if an $\epsilon$ challenge can be met. Uniform continuity requires you to analyze the function over its entire domain. 
@@ -55,8 +57,10 @@ Things to note:
 > > $$
 > > S'\equiv \left\{  B_{\frac{\delta_{x}}{2}}(x)\ |\ x \in K \subset X  \right\}.
 > > $$
-> >Let $\delta \equiv \min \left\{  \frac{\delta_{x}}{2}\ |\ x\in K  \right\}$. Consider $p$, $q$ in $X$ with $d_{X}(p, q)<\delta$. Now, $p$ must be in $B_{\frac{\delta_{x}}{2}}(x)$ for some $x\in K$. Thus, $d_{X}(p, x)< \frac{\delta_{x}}{2}$. Triangle inequality gives us $d_{X}(q, x)<\delta_{x}$. Thus, $p, q\in B_{\delta_{x}}(x)$. This implies $f(p), f(q)\in B_{\frac{\epsilon}{2}}(f(x))$, i.e, $d_{Y}(f(p), f(q))<\epsilon$. ❏
+> >Let $\delta \equiv \min \left\{  \frac{\delta_{x}}{2}\ |\ x\in K  \right\}$. Consider $p$, $q$ in $X$ with $d_{X}(p, q)<\delta$. Now, $p$ must be in $B_{\frac{\delta_{x}}{2}}(x)$ for some $x\in K$. Thus, $d_{X}(p, x)< \frac{\delta_{x}}{2}$. Triangle inequality gives us $d_{X}(q, x)<\delta_{x}$. Thus, $p, q\in B_{\delta_{x}}(x)$. This implies $f(p), f(q)\in B_{\frac{\epsilon}{2}}(f(x))$, i.e, $d_{Y}(f(p), f(q))<\epsilon$. 
 > 
+
+^95867f
 
 ---
 ## Theorems that fail when X is not compact
