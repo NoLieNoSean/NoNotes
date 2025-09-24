@@ -19,6 +19,25 @@ See @pughRealMathematicalAnalysis2015 5§1.
 
 It is clear from the definition that $|T\mathbf{v}|\leq \lVert T \rVert|\mathbf{v}|$ for all $\mathbf{v}\in V$. 
 
+> [!Proposition] Properties of the operator norm, @rudinPrinciplesMathematicalAnalysis1976 9.7
+> 1. $\lVert A+B \rVert\leq \lVert A \rVert+\lVert B \rVert$,
+> 2. $\lVert AB \rVert\leq \lVert A \rVert\lVert B \rVert$,
+> whenever the matrices on the left are well defined.
+
+^9a0d87
+
+[[#^9a0d87]] (1) turns $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$ with the distance between $A$ and $B$ defined by $\lVert A-B \rVert$ into a metric space.
+
+> [!Proposition] @rudinPrinciplesMathematicalAnalysis1976 9.8
+> Let $\Omega$ be the set of invertible linear operators on $\mathbb{R}^{n}$. If $A\in \Omega$ and $B\in \mathcal{L}(\mathbb{R}^{n})$, and
+> $$
+> \lVert B-A \rVert  < \frac{1}{\lVert A^{-1} \rVert},
+> $$
+> then $B\in \Omega$. Thus, $\Omega$ is an open subset of $\mathcal{L}(\mathbb{R}^{n})$. Further, the mapping $A\mapsto A^{-1}$ is continuous on $\Omega$ and obviously injective.
+
+^a7608b
+
+
 > [!Remark]
 > The operator norm of a matrix is bounded above by its Euclidean norm:
 > $$

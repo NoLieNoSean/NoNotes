@@ -5,6 +5,17 @@ tags:
 date: 2025-08-22
 time: 15:32
 ---
+> [!Example]
+> If $(X, d)$ is a metric space, we can define a bounded metric
+> $$
+> d_{0}(x, y)=\frac{d(x, y)}{1+d(x, y)}.
+> $$
+> Convergence and open sets are preserved, so $d_{0}$ and $d$ are equivalent metrics. See @mathsstudent147If$dxy$Metric2020 
+
+^f5a704
+
+
+
 Examples of metrics on $C[0, 1]$ ($\subset B[0, 1]$), $C^{1}[0, 1]$, $C^{k}[0, 1]$, and $C^{\infty}[0, 1]$.
 $$
 \lVert f \rVert _{1, \infty}=\lVert f \rVert _{\infty}+\lVert f' \rVert _{\infty}.
@@ -17,11 +28,7 @@ d(f, g)=\sum_{k=0}^{\infty} \frac{1}{k} \frac{\lVert f^{(k)}-g^{(k)} \rVert_{\in
 $$
 ^ this is not obtained from a norm.
 
-If $(X, d)$ is a metric space, we can define a bounded metric
-$$
-d_{0}(x, y)=\frac{d(x, y)}{1+d(x, y)}.
-$$
-Convergence and open sets are preserved.
+
 
 ---
 

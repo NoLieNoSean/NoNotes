@@ -7,7 +7,6 @@ CMI, Aug-Nov 2025, R Srinivasan
 @kumaresanTopologyMetricSpaces2005, @rudinPrinciplesMathematicalAnalysis1976, @roydenRealAnalysis2014, @pughRealMathematicalAnalysis2015, [Lecture recordings](https://www.youtube.com/playlist?list=PL7kSnJf1y6KSm3G6NnNA4OthoTRt0TOur)
 
 ---
-
 # Lectures
 
 ## Metric spaces
@@ -25,8 +24,10 @@ CMI, Aug-Nov 2025, R Srinivasan
 ## Equicontinuity
 
 [[LEC ANA2 7]] Equicontinuity, the Arzelà–Ascoli theorem
-[[LEC ANA2 8]]
+[[LEC ANA2 8]] Banach's Contraction principle, Baire Category theorem
+[[LEC ANA2 9]] Nowhere differentiable function are second category in $C[0, 1]$.
 
+---
 
 [[AS ANA2 1]]
 [[AS ANA2 2]]

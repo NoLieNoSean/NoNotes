@@ -103,4 +103,6 @@ In particular, for one variable polynomial rings over fields, we have these resu
 > [!Proposition]
 > A polynomial $f$ of degree $n$ with coefficients in a field $F$ has at most $n$ roots in $F$.
 
+^497a71
+
 

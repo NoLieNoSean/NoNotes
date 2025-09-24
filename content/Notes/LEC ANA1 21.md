@@ -7,10 +7,10 @@ date: 2024-10-8
 time: 15:45
 ---
 ![[1728577113525.jpg]]
-## Topological spaces
+# Topological spaces
 
 >[!Definition]
->A *topological space* is a set $X$ along with a structure called a *topology*, which is a subset $T \subset P(X)$ which is closed under (arbitrary) unions and finite intersections. We call the elements of $T$ *open sets*. 
+>A **topological space** is a set $X$ along with a structure called a **topology**, which is a subset $T \subset P(X)$ which is closed under (arbitrary) unions and finite intersections. We call the elements of $T$ **open sets**. 
 
 Note that $X, \emptyset\in T$. A set $A\subset X$ is called *closed* if $A^{c}\in T$. See that these notions, as defined in terms of open sets, also make sense in topological spaces:
 
@@ -27,7 +27,7 @@ A topological space is the most general type of a mathematical space that allows
 Note that all of our previous proofs using open cover compactness for theorems on metric spaces are applicable verbatim to topological spaces.
 
 ---
-## Homeomorphisms
+# Homeomorphisms
 
 An isomorphism between two spaces is a *set theoretic bijection* which also *preserves the structure* of the space in *both directions*. For example, one way to think about the structure of a [[Vector spaces|vector space]] $V$ is the unique decomposition of any vector as a linear combination of a [[Bases#Definition|basis]] $B$ of $V$. Preserving the structure is akin preserving the this unique linear combination for all vectors in the image. The class of functions that satisfy this requirement are [[LEC ALG1 11#Linear maps|linear maps]]. Recall that, if $T:V\to W$ is a bijective linear map,  $\mathbf{v}$ and $T(\mathbf{v})$ have the same decomposition in terms of $B$ and $T(B)$. Now, the inverse of any set theoretic bijection is always a bijection, so $T^{-1}:W\to V$ is a bijection. But, we also require $T^{-1}$ to be a linear map! Fortunately, it so happens that $T$ being a bijective linear map forces $T^{-1}$ to also be linear:
 $$
@@ -50,25 +50,27 @@ In a topological space, the structure is defined by $T$, the set of all open set
 
 Note: Since all metric spaces are topological spaces, homeomorphisms can exist between metric spaces. 
 
-### Continuous bijective maps on compact sets are homeomorphisms
+## Continuous bijective maps on compact sets are homeomorphisms
 
 However, If the domain is compact, it is in fact true that a bijective continuous map is a homeomorphism. 
 
-Rudin, 4.17
+> [!Theorem] Rudin 4.17
+> Let $X$ be compact. Then, if $f:X\to Y$ is bijective and continuous, $f^{-1}$ is continuous, i.e, $f$ is a homeomorphism.
+> 
+> >[!Proof]-
+> >
+> >We have to prove that $f^{-1}$ is continuous, i.e, $f(U)$ is open for every open $U\subset X$, i.e, $f(C)$ is closed for every closed $C\subset X$ (Since $f$ is bijective, it preserves complements: $f(U^{c})=f(U)^{c}$). Let $C\subset X$ be closed. [[LEC ANA1 17#Closed subsets of compact sets are compact|Since]] $X$ is compact, $C$ must be compact. It [[LEC ANA1 17#Another exercise in working with open cover compactness|follows]] that $f(C)$ is a compact subset of $Y$. So, $f(C)$ [[LEC ANA1 18#Proof of Rudin, 2.34 using open cover compactness|must be]] closed in $Y$.
+> 
 
->[!Theorem]
->Let $X$ be compact. Then, if $f:X\to Y$ is bijective and continuous, $f^{-1}$ is continuous, i.e, $f$ is a homeomorphism.
+^8a68b8
 
->**Proof**
->We have to prove that $f^{-1}$ is continuous, i.e, $f(U)$ is open for every open $U\subset X$, i.e, $f(C)$ is closed for every closed $C\subset X$ (Since $f$ is bijective, it preserves complements). Let $C\subset X$ be closed. [[LEC ANA1 17#Closed subsets of compact sets are compact|Since]] $X$ is compact, $C$ must be compact. It [[LEC ANA1 17#Another exercise in working with open cover compactness|follows]] that $f(C)$ is a compact subset of $Y$. So, $f(C)$ [[LEC ANA1 18#Proof of Rudin, 2.34 using open cover compactness|must be]] closed in $Y$. ❏
+Note that the function being bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps on compact sets are *closed maps*, i.e, they map closed sets to closed sets.
 
-Note that the function being bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps from compact sets are *closed maps*, i.e, they map closed sets to closed sets.
-
->[!Theorem]
->Continuous maps from compact sets are closed maps.
+>[!Corollary]
+>Continuous maps on compact sets are closed maps.
 
 >[!Warning]
->Do not mistake homeomorphisms with [[LEC ALG1 13#Homomorphisms|homomorphisms]].
+>Do not conflate homeomorphisms with [[LEC ALG1 13#Homomorphisms|homomorphisms]].
 
 >[!Info]
 >Let $f:X\to Y$.

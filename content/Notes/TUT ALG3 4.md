@@ -78,16 +78,16 @@ See @wilsonExamplePIDWhich2011
 
 Denote $(1+\sqrt{ -19 })/2$ by $\omega$. 
 
-[!Claim]
-$R$ is not a Euclidean domain.
-
-[!Proof]-
-Define the field norm on $\mathbb{Q}(\sqrt{ -19 })$. Show that it is multiplicative. Show that when it is restricted to $R$, it takes positive integer values $N(a+b\omega)=a^{2}+ab+5b^{2}$. So a unit in $R$ must have norm $\pm 1$. It is straightforward to see that the only solutions of $a^{2}+ab+5b^{2}=\pm 1$ are $\{ \pm 1 \}$. 
-
-Note that the smallest nonzero values of $a^{2}+ab+5b^{2}$ are $1$ and $4$. 
-
-If $R$ is a euclidean domain, it must have a universal side divisor $u\in R-\{ \pm 1, 0 \}$. Take $x=2$, so $u$ must divide $2-0$ or $2\pm 1$, that is, $u$ is a non-unit divisor of $2$ or $3$. Use the norm to argue that the the only possible values for $u$ are $\pm 2$ or $\pm 3$. Now, take $x=\omega$, and note that none of $\omega$, $\omega\pm 1$ are divisible by $\pm 2$ or $\pm 3$, so none of these are universal side divisors.
-
+> [!Claim]
+> $R$ is not a Euclidean domain.
+> 
+> > [!Proof]-
+> > Define the field norm on $\mathbb{Q}(\sqrt{ -19 })$ by $N(\alpha)=\alpha \overline{\alpha}$. Show that it is multiplicative. Show that when it is restricted to $R$, it takes positive integer values $N(a+b\omega)=a^{2}+ab+5b^{2}$. So a unit in $R$ must have norm $\pm 1$. It is straightforward to see that the only solutions of $N(a+b\omega)=\pm 1$ are $\{ \pm 1 \}$. 
+> > 
+> > Note that the smallest nonzero values of $a^{2}+ab+5b^{2}$ are $1$ and $4$. 
+> > 
+> > If $R$ is a euclidean domain, it must have a universal side divisor $u\in R-\{ \pm 1, 0 \}$. Take $x=2$, so $u$ must divide $2-0$ or $2\pm 1$, that is, $u$ is a non-unit divisor of $2$ or $3$. Use the norm to argue that the the only possible values for $u$ are $\pm 2$ or $\pm 3$. Now, take $x=\omega$, and note that none of $\omega$, $\omega\pm 1$ are divisible by $\pm 2$ or $\pm 3$, so none of these are universal side divisors.
+> 
 
 [!Claim]
 $R$ is a PID.
@@ -109,7 +109,7 @@ $$
 $$
 where $p\alpha-q\beta\in R$. 
 
-First, observe that for any $r\in R$, $\alpha'=\alpha+\beta r\in I\setminus \langle \beta \rangle$. $\alpha'/\beta=\alpha/\beta+r$, so we can choose $r$ such that $-\sqrt{ 19 }/4\leq\mathrm{Im}~\alpha'/\beta\leq \sqrt{ 19 }/4$. If $-\sqrt{ 3 }/2< \mathrm{Im}~\alpha'/\beta< \sqrt{3 }/2$, $\alpha'/\beta$ lies at distance less than $1$ from some integer $n$, so take $p=1$ and $q=n$. Thus, assume $\sqrt{ 3 }/2\leq \mathrm{Im}~\alpha'/\beta\leq \sqrt{ 19 }/4$. 
+First, observe that for any $r\in R$, $\alpha'=\alpha+\beta r\in I\setminus \langle \beta \rangle$. $\alpha'/\beta=\alpha/\beta+r$, so we can choose $r$ such that $-\sqrt{ 19 }/4\leq\mathrm{Im}~\alpha'/\beta\leq \sqrt{ 19 }/4$. If $-\sqrt{ 3 }/2< \mathrm{Im}~\alpha'/\beta< \sqrt{3 }/2$, $\alpha'/\beta$ lies at distance less than $1$ from some integer $n$, so take $p=1$ and $q=n$ ($\alpha'/p$ cannot be equal to some integer $n$, since that would imply $\alpha'\in \langle \beta \rangle$). Thus, assume $\sqrt{ 3 }/2\leq \mathrm{Im}~\alpha'/\beta\leq \sqrt{ 19 }/4$. 
 $$
 \begin{align}
  & \sqrt{ 3 }/2\leq \mathrm{Im}~\alpha'/\beta\leq \sqrt{ 19 }/4 \\
@@ -118,8 +118,12 @@ $$
 $$
 Note that $\sqrt{ 19 }< \sqrt{ 27 }=3\sqrt{ 3 }$, so
 $$
-\sqrt{ 3 }/2< \mathrm{Im}(2\alpha'/\beta-\omega)\leq 0,
+-\sqrt{ 3 }/2< \mathrm{Im}(2\alpha'/\beta-\omega)\leq 0,
 $$
-so $2\alpha'/\beta-\omega$ lies at a distance less than $1$ from some integer. It is possible that $2\alpha'/\beta-\omega=0$, in which case we have $\alpha'/\beta=\omega/2$. Choose $p=\overline{\omega}$ and $q=2$. Then,  
-
-
+so $2\alpha'/\beta-\omega$ lies at a distance less than $1$ from some integer. 
+It is possible that $2\alpha'/\beta-\omega$ is equal to some integer $q$, in which case $\alpha'/\beta=(q+\omega)/2=(1\pm \sqrt{ -19 })/4+s$ for some $s\in R$. Here, choose $p=(1\mp \sqrt{ -19 })/2$ and $q=2$:
+$$
+\begin{align}
+\left| p\left( \frac{\alpha'}{\beta} -s\right) -q\right| = \left| \frac{5}{2}-2 \right| = \frac{1}{2}.
+\end{align}
+$$

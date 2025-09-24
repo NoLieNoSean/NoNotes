@@ -60,6 +60,8 @@ To put it simply, if a sequence of sequences is bounded by a summable sequence a
 > $$
 > 
 
+^f84359
+
 Here, integrable means [[Intro to Measure theory#Lebesgue Integration|Lebesgue integrable]]. Any measurable function that is absolutely dominated by an integrable function is integrable[^1] (thus, the conclusion that each $f_{n}$ is integrable follows from the hypothesis that it is measurable and bounded by an integrable function). 
 
 [^1]: Note that there does not exist a similar property for Riemann integrals, that is, being absolutely dominated by a Riemann integrable function does not imply Riemann integrability. Even if we assume Riemann integrability in the hypothesis, we cannot conclude that the limit is Riemann integrable ([[LEC ANA1 33#Sequences of functions|here's an example]]). The [[LEC ANA1 33#Limit of uniformly converging integrable functions is integrable (and more)|closest analogue]] of the DCT in Riemann land does away with the dominating function and requires the sequence of functions to converge uniformly instead.

@@ -17,9 +17,9 @@ CMI, Jan-Apr 2025, M. Sundari
 - [[LEC CAL1 2]] ✅
 	- Equivalence of p-norms
 - [[LEC CAL1 3]] ✅
-	- Equivalence of all norms on a finite dimensional normed linear space
+	- Topological properties of $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$, equivalence of all norms on a finite dimensional normed linear space
 - [[LEC CAL1 4]] ✅
-	- Example of complete normed linear space, inner product spaces (mostly stuff covered in ALG1)
+	- Example of complete normed linear space, inner product spaces
 - [[LEC CAL1 5]] ✅
 	- Examples of finding limits in $\mathbb{R}^{2}$
 
@@ -67,7 +67,7 @@ See @apostolMathematicalAnalysis1985 ch12 & ch13, @rudinPrinciplesMathematicalAn
 	- Sufficient conditions for differentiability and equality of mixed partial derivatives
 - [[LEC CAL1 20]] ✅
 	- Taylor's formula for functions from $\mathbb{R}^{n}$ to $\mathbb{R}$
-- [[LEC CAL1 21]]
+- [[LEC CAL1 21]] ✅
 	- Inverse function theorem
 - [[LEC CAL1 22]]
 	- Implicit function theorem

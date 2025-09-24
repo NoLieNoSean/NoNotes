@@ -140,20 +140,22 @@ An immediate corollary of the above lemma is that the alternating group of $n$ e
 
 ### Cauchy's Theorem
 
-> [!Theorem]
+> [!Theorem] Cauchy's Theorem
 > If $G$ is a finite group and $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
+> 
+> > [!Proof]-
+> > Define
+> > $$
+> > \mathcal{S}=\left\{  (x_{1}, \dots, x_{p})\ | \  x_{i}\in G , x_{1}x_{2}\dots x_{p}=1\right\}.
+> > $$
+> > Note that $\mathcal{S}$ has $|G|^{p-1}$ elements (we are free to choose the first $p-1$ entries in the tuple, the last one must be the inverse of their product). Also note that any cyclic permutation of an element of $\mathcal{S}$ is also an element of $\mathcal{S}$:
+> > $$
+> > \begin{align}
+> >  & x_{1}x_{2}\dots x_{p}=1 \\
+> > \implies  & x_{2}\dots x_{p}=x_{1}^{-1} \\
+> > \implies & x_{2}\dots x_{p}x_{1}=1.
+> > \end{align}
+> > $$
+> > Define the relation $\sim$ on $S$ by $\alpha\sim\beta$ if $\alpha$ is a cyclic permutation of $\beta$. Clearly, $\sim$ is an equivalence relation. Next, observe that every equivalence class in $S/\sim$ has order $1$ or $p$, since $p$ is prime. Moreover, equivalence classes of size $1$ are of the form $\{ (x, x, \dots, x) \}$ with $x^{p}=1$. Thus, $|G|^{p-1}=k+pd$, where $k$ is the number of equivalence classes of size $1$ and $d$ is the number of equivalence classes of size $p$. It follows that $p$ must divide $k$. Now, $\{ (1, 1, \dots, 1) \}$ is an equivalence class of size $1$. This forces the existence of a non-identity element of order $p$.
 
-> **Proof**
-> Define
-> $$
-> \mathcal{S}=\left\{  (x_{1}, \dots, x_{p})\ | \  x_{i}\in G , x_{1}x_{2}\dots x_{p}=1\right\}.
-> $$
-> Note that $\mathcal{S}$ has $|G|^{p-1}$ elements (we are free to choose the first $p-1$ entries in the tuple, the last one must be the inverse of their product). Also note that any cyclic permutation of an element of $\mathcal{S}$ is also an element of $\mathcal{S}$:
-> $$
-> \begin{align}
->  & x_{1}x_{2}\dots x_{p}=1 \\
-> \implies  & x_{2}\dots x_{p}=x_{1}^{-1} \\
-> \implies & x_{2}\dots x_{p}x_{1}=1.
-> \end{align}
-> $$
-> Define the relation $\sim$ on $S$ by $\alpha\sim\beta$ if $\alpha$ is a cyclic permutation of $\beta$. Clearly, $\sim$ is an equivalence relation. Next, observe that every equivalence class in $S/\sim$ has order $1$ or $p$, since $p$ is prime. Moreover, equivalence classes of size $1$ are of the form $\{ (x, x, \dots, x) \}$ with $x^{p}=1$. Thus, $|G|^{p-1}=k+pd$, where $k$ is the number of equivalence classes of size $1$ and $d$ is the number of equivalence classes of size $p$. It follows that $p$ must divide $k$. Now, $\{ (1, 1, \dots, 1) \}$ is an equivalence class of size $1$. This forces the existence of a non-identity element of order $p$.
+^9f0c4c

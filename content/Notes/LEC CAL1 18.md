@@ -64,6 +64,8 @@ for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[LEC CAL1 
 > > 
 > 
 
+^fb4aaf
+
 > [!Theorem]
 > Let $S$ be an open connected subset of $\mathbb{R}^{n}$, and let $\mathbf{f}:S\to \mathbb{R}^{m}$ be differentiable at each point of $S$. If $\mathbf{f}'(\mathbf{c})=\mathbf{0}$ for each $\mathbf{c}$ in $S$, then $\mathbf{f}$ is constant on $S$.
 > 

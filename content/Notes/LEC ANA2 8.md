@@ -1,17 +1,30 @@
 ---
-tags: 
-date: "2025-09-19"
-time: "15:35"
+tags:
+  - ANA2
+  - Lecture
+date: 2025-09-19
+time: 15:35
 ---
-[!Remark]
-Let $X$ be compact, and $f:X\to Y$ be a continuous bijection. Then $f$ is a homeomorphism.
+Reviewed [[LEC ANA1 21#^8a68b8]]. 
+
+---
+
 
 [!Example]
-Let $k:[0, 1]\times[0, 1]\to \mathbb{C}$ be continuous. Define $T_{k}:C[0, 1]\to C[0, 1]$ by
+Let $k:[0, 1]\times[0, 1]\to \mathbb{R}$ be continuous. Define $T_{k}:C[0, 1]\to C[0, 1]$ by
 $$
 (T_{k}f)(x)=\int_{0}^{1} k(x, y)f(y) \, dy 
 $$
-By DCT, $T_{k}f$ is continuous for every $f$.
+Let $k_{x}(y):=k(x, y)$. If $\{ x_{n} \}\to x$, the sequence of functions $\{ k_{x_{n}} \}$ must converge to $k_{x}$ pointwise due to the continuity of $k$. Also, by the extreme value theorem, $k\leq M$ on $[0, 1]\times[0, 1]$ for some $M> 0$, so each $k_{x_{n}}$ is bounded by the integrable constant function $M$ on $[0, 1]$. By the [[LEC PROB 10#^f84359|Dominated convergence theorem]], 
+$$
+\begin{align}
+\lim_{ n \to \infty } (T_{k}f)(x_{n}) & =\lim_{ n \to \infty } \int_{0}^{1} k(x_{n}, y)f(y) \, dy \\
+  & =\int_{0}^{1} \lim_{ n \to \infty } k(x_{n}, y)f(y) \, dy \\
+ & =\int_{0}^{1} k(x, y)f(y) \, dy  \\
+ & =(T_{k}f)(x).
+\end{align}
+$$
+So, $T_{k}f$ is continuous for every $f$.
 $$
 \mathcal{F}=\overline{\{ T_{k}f:\lVert f \rVert _{\infty}\leq 1 \}}\subseteq C[0, 1].
 $$

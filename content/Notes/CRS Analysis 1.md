@@ -53,7 +53,7 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 - [[LEC ANA1 20]] ✅
 	- Uniform continuity
 - [[LEC ANA1 21]] ✅
-	- Topological spaces, homeomorphisms, 4.17
+	- Topological spaces, homeomorphisms
 - [[LEC ANA1 22]] ✅ <- *Quiz 2 syllabus ends here*
 	- Connected sets, Intermediate value theorem, connected components, allied theorems. 
 - [[LEC ANA1 23]] ✅ Differentiation!

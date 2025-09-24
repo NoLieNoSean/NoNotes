@@ -7,6 +7,8 @@
 > $$
 > in which case the **total derivative** of $\mathbf{f}$ at $\mathbf{c}$ is defined to be $\mathbf{T}_{\mathbf{c}}$. $\mathbf{T}_{\mathbf{c}}$ is also denoted by $\mathbf{f}'(\mathbf{c})$.
 
+^054571
+
 Essentially, $\mathbf{f}$ is differentiable at $\mathbf{c}$ if there exists a linear function $\mathbf{T}_{\mathbf{c}}:\mathbb{R}^{n}\to \mathbb{R}^{m}$ such that 
 $$
 \mathbf{f}(\mathbf{c}+\mathbf{v})=\mathbf{f}(\mathbf{c})+\mathbf{T}_{\mathbf{c}}(\mathbf{v})+\lVert \mathbf{v} \rVert \mathbf{E}_{\mathbf{c}}(\mathbf{v}),

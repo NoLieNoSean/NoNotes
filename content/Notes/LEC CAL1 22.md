@@ -6,7 +6,7 @@
 > (\mathbf{x}, \mathbf{y})\equiv(x_{1}, \dots, x_{n}, y_{1}, \dots, y_{m})\in \mathbb{R}^{n+m}.
 > $$
 > 
-> Secondly, Every $A\in \mathcal{L}(\mathbb{R}^{n+m}, \mathbb{R}^{n})$ can be split into two linear transformations $A_{x}$ and $A_{y}$, defined by
+> Secondly, every $A\in \mathcal{L}(\mathbb{R}^{n+m}, \mathbb{R}^{n})$ can be split into two linear transformations $A_{x}$ and $A_{y}$, defined by
 > $$
 > A_{x}\mathbf{h}\equiv A(\mathbf{h}, \mathbf{0}),\quad A_{y}\mathbf{k}\equiv A(\mathbf{0, \mathbf{k}})
 > $$
@@ -35,7 +35,7 @@ Clearly, every system of $n$ equations in $n+k$ variables can be expressed in th
 
 Note that every such system of equations always represents a relation on $\mathbb{R}^{n}\times \mathbb{R}^{k}$, namely, the tuples $(\mathbf{x}, \mathbf{t})$ which satisfy the system. The implicit function theorem tells us when such a relation is (locally) a function from $\mathbb{R}^{k}$ to $\mathbb{R}^{n}$, that is, when $\mathbf{x}$ can be determined uniquely as a function $\boldsymbol{\varphi}$ of $\mathbf{t}$, in which case $\mathbf{f}$ is said to implicitly define $\boldsymbol{\varphi}$.
 
-The linear version of the implicit function theorem is as follows:
+The linear version of the implicit functioOn theorem is as follows:
 
 > [!Theorem]
 > If $A\in \mathcal{L}(\mathbb{R}^{n+m}, \mathbb{R}^{n})$ and if $A_{x}$ is invertible, then there corresponds to every $\mathbf{k}\in \mathbb{R}^{m}$ a unique $\mathbf{h}\in \mathbb{R}^{n}$ such that $A(\mathbf{h}, \mathbf{k})=\mathbf{0}$. This $\mathbf{h}$ can be computed from $\mathbf{k}$ by the formula
