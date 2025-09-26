@@ -1,7 +1,3 @@
----
-tags:
-  - TOC
----
 # The pumping lemma
 
 > [!Theorem] Pumping Lemma, @kozenAutomataComputability1997 11.2

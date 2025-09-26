@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-09-24"
-time: "15:31"
+tags:
+  - ANA2
+  - Lecture
+date: 2025-09-24
+time: 15:31
 ---
 
 > [!Proposition]
@@ -26,14 +28,13 @@ time: "15:31"
 > > $$
 > > By hypotheses, $\sum_{k=1}^{N} (x_{n_{k+1}}-x_{n_{k}})$ converges, say to $x$. Then, $x_{n_{N+1}}\to x+x_{n_{1}}$. Thus, $\{ x_{n} \}$ has a convergent subsequence. Since $\{ x_{n} \}$ is Cauchy, $\{ x_{n} \}$ converges.
 
-Baire: If $X$ is complete, it cannot be written as a countable union of nowhere dense subsets.
 
 [!Proposition]
 A complete NLS is not a countable union of proper closed subspaces.
 
 [!Proof]-
 
-Only need to prove if $K$ is a proper closed subset of $X$, then $K$ is nowhere dense. Since $K\ne X$, there exists $y\not\in K$ such that
+By [[LEC ANA2 8#^1a2743]], It suffices to prove that if $K$ is a proper closed subspace of $X$, then $K$ is nowhere dense. Since $K\ne X$, there exists $y\not\in K$. Clearly, $y/\lVert y \rVert$ is not in $K$ either, so WLOG we can assume $\lVert y \rVert=1$. If $x\in K$, then $x+\epsilon y\not\in K$ for all $\epsilon> 0$.  Since $\lVert x-(x+\epsilon y) \rVert=\lVert \epsilon y \rVert=\epsilon$, this implies
 
 ---
 

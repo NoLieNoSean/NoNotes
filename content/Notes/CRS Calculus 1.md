@@ -17,7 +17,7 @@ CMI, Jan-Apr 2025, M. Sundari
 - [[LEC CAL1 2]] ✅
 	- Equivalence of p-norms
 - [[LEC CAL1 3]] ✅
-	- Topological properties of $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$, equivalence of all norms on a finite dimensional normed linear space
+	- Topological properties of $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$, equivalence of all norms on a finite dimensional normed linear space, Heine Borel in finite dimensional normed linear spaces
 - [[LEC CAL1 4]] ✅
 	- Example of complete normed linear space, inner product spaces
 - [[LEC CAL1 5]] ✅

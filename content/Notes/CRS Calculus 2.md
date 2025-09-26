@@ -22,6 +22,7 @@ Intermezzo: [[CRS Calculus 1|CAL 1]] review
 [!Theorem]
 Let $f:X\to \mathbb{R}^{n}$, where $X\subseteq \mathbb{R}^{n+m}$ is open, be $C^{1}$. Let $Z$ be the zero set of $f$. Let $f'(x, y)=[A_{x}~~A_{y}]$. Assume $A_{x}$ is invertible for all $(x, y)\in Z$. Then $M$ is a manifold of $\dim m$. 
 
+[[LEC CAL2 7]]
 
 # Tutorials
 

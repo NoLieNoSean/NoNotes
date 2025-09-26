@@ -8,6 +8,10 @@ time: 17:06
 ---
 # Completeness
 
+> [!Highlights]
+> - $B(S)$ with the sup norm is always a Banach space for any set $S$.
+> - $C_{b}(S)$ is a subspace of $B(S)$. It is also a Banach space. When $X$ is compact, $C_{b}(S)=C(S)$, and $C(S)$ is a Banach space.
+
 *Completeness is not a topological property; it depends on the metric*. Two metrics may generate induce the same topology (generate the same open sets), but the space may be complete under one metric and not complete under the other. For example, both of the metrics
 $$
 d_{1}(n, m)=|n-m|,
@@ -53,7 +57,7 @@ A good idea is to prove uniform convergence first; boundedness then is immediate
 
 Note that this also shows $\mathscr{l}_{\infty}=B(\mathbb{N})$ is complete.
 
-Also note that $B(S)$ with the sup norm is always a Banach space for any set $S$ (no topology or metric needed at all). The structure of $S$ starts to matter only when we restrict to subspaces like $C_{b}(S)$, because you need a topology on $S$ to know what "continuous" means, and compactness determines whether "continuous implies bounded" (in which case we just write $C(S)$). 
+Also note that *$B(S)$ with the sup norm is always a Banach space for any set $S$* (no topology or metric needed at all). The structure of $S$ starts to matter only when we restrict to subspaces like $C_{b}(S)$, because you need a topology on $S$ to know what "continuous" means, and compactness determines whether "continuous implies bounded" (in which case we just write $C(S)$). 
 
 > [!Proposition]
 > If $(X, d)$ is a complete metric space, then $A\subseteq X$ is complete iff $A$ is closed in $X$.
@@ -63,7 +67,7 @@ Also note that $B(S)$ with the sup norm is always a Banach space for any set $S$
 > 
 > Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete (incidentally, this makes $C[0, 1]$ a [[LEC CAL1 9#Separable metric spaces|separable]] space). However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
 
-For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works.
+For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is compact.
 
 > [!Example]
 > 

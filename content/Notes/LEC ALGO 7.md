@@ -3,27 +3,19 @@ tags:
 date: "2025-09-19"
 time: "11:59"
 ---
-# Greedy algorithms
+We looked at merge sort ($O(n\log n)$, $O(n)$), Insertion sort ($O(n^{2})$, $O(1)$), and quick sort $(O(n^{2}), O(1))$. 
 
-For a greedy approach to be viable, the problem must have
-- optimal substructure, that is, a solution of a subproblem is contained in the solution of the parent problem.
-- the greedy choice property: a globally optimal solution can be arrived at by locally optimal choices.
+# Heap sort
 
-[!Example] Minimum spanning tree
-Recall [[LEC DMAT 19#Kruskal's algorithm for MSTs]]. 
+$A[1..n]$ is an array to be sorted. Define parent$(i)=\lfloor i/2 \rfloor$, left$(i)=2i$, right$(i)=2i+1$. This makes the array into what's called at *heap*. A max heap satisfies $A[\text{parent(i)}]\geq A[i]$, and a min heap satisfies $A[\text{parent(i)}]< A[i]$. 
 
-Optimal substructure: Let $T$ be a MST of $G$, and $e\in T$. If $T'$ is a MST of $G\setminus e$, then $T_{e}=T'\cup \{ e \}$ is a MST of $G$.
+*max heapify* is a recursive trickle down subroutine that max heapifies a heap given that the left and right subheaps of the root are max heaps, in $O(\log n)$ time. Heap sort calls max heapify $n$ times, starting from the leaves and working its way upwards.
 
-Proof: Let $T^{*}$ be a MST of $G$ that contains $e$. $T^{*}\setminus e$ is a spanning tree of $G'$. $W(T')\leq W(T^{*}\setminus e)=W(T^{*})-W(e)$. Thus, $W(T_{e})=W(T^{'})+W(e)\leq W(T^{*})$.
+---
 
-This gives us a generic algorithm:
-1. Find select a "safe edge" $e$.
-2. Contract the edge $e$.
-3. Recurse on $G\setminus e$.
-4. Expand and add $e$.
+> [!Theorem]
+> Any comparison based sort algorithm requires $\Omega(n\log n)$ comparisons in the worst case.
 
-Greedy choice property: Given any $S\subseteq V$, $(V, S\setminus V)$ is a cut of $G$. 
 
-Claim: For any cut $(S, V\setminus S)$ in a graph $G=(V, E, W)$ any least weight crossing edge is in some spanning tree.
 
-Prim's algorithm
+

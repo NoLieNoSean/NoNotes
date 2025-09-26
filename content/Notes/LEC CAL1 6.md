@@ -23,6 +23,8 @@ Note the similarity between the Cantor intersection property (of a metric space)
 > > 
 > > $(\impliedby)$ Let $(F_{n})$ be a contracting sequence of nonempty closed subsets of $X$. Pick $s_{n}\in F_{n}$ for each $n\in \mathbb{N}$. For any $\epsilon> 0$, there exists $F_{N}$ such that $\text{diam}(F_{N})<\epsilon$, $i$.$e$, $d(s_{n}, s_{m})<\epsilon$ for all $n, m > N$. This makes $(s_{n})$ a Cauchy sequence. Since $X$ is complete, it must converge, say to a point $s$. Then, $s$ is a limit point of each $F_{n}$. Since $F_{n}$ is closed for all $n$, $s\in F_{n}$ for all $n$. Thus, $s\in \bigcap_{n=1}^{\infty}F_{n}$. The intersection does not contain more than one point, since if it did, then $\lim_{ n \to \infty }\text{diam}(F_{n})\ne 0$.
 
+^d823bd
+
 ---
 # Completion of a metric space
 

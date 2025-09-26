@@ -16,18 +16,20 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 ## Completeness, Separability, Compactness
 
-[[LEC ANA2 3]] ✅ $B(S), C_{b}(S)$, and $C[0, 1]$ are complete, some comments about $C^{1}[0, 1]$
+[[LEC ANA2 3]] ✅ $B(S)$, $C_{b}(S)$ are Banach spaces, some comments about $C^{1}[0, 1]$
 [[LEC ANA2 4]] ✅ Completeness of $l_{1}$, uniqueness of completion
 [[LEC ANA2 5]] ✅ Alternate construction of completion, separability
 [[LEC ANA2 6]] ✅ Second countability, compactness
 
 ## Equicontinuity
 
-[[LEC ANA2 7]] Equicontinuity, the Arzelà–Ascoli theorem
-[[LEC ANA2 8]] Banach's Contraction principle, Baire Category theorem
+[[LEC ANA2 7]] ✅ Equicontinuity, the Arzelà–Ascoli theorem
+[[LEC ANA2 8]] ✅ Banach's Contraction principle, Baire Category theorem
 [[LEC ANA2 9]] Nowhere differentiable function are second category in $C[0, 1]$.
 
 ---
 
 [[AS ANA2 1]]
 [[AS ANA2 2]]
+
+[[TST ANA2 Quiz 1]]

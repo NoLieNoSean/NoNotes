@@ -113,4 +113,28 @@ Since $\lVert \cdot \rVert$ is continuous, and singleton sets are closed, $\lVer
 > > **Way 2:** Same as the previous one, but instead consider the real function $V\to \mathbb{R}$ defined by $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$. This is continuous, and by the extreme value theorem must attain a minimum value on $\varphi(S)$, which cannot be zero since any norm of a nonzero vector can't be zero. Proceed as we did before.
 > 
 
+^3a3caf
 
+---
+# Heine Borel in finite dimensional normed linear spaces
+
+The [[LEC ANA1 16#^f2a44b|Heine Borel]] theorem in ANA1 was stated for $\mathbb{R}^{k}$. It shouldn't be surprising that it in fact holds in all finite dimensional normed linear spaces. 
+
+> [!Theorem]
+> Let $(V, \lVert \cdot \rVert)$ be a finite dimensional normed linear space. Let $X\subseteq V$. Then, $X$ is compact $\iff$ $X$ is closed and bounded in $V$.
+> 
+> > [!Proof]-
+> > Compact $\implies$ closed and bounded: true in any metric space.
+> > 
+> > For the converse, suppose $n=\dim V$. Choose a basis $v_{1}, \dots, v_{n}$ and let $T$ be the natural isomorphism from $\mathbb{R}^{n}$ to $V$ for this basis. This induces a norm $\lVert \cdot \rVert'$ on $V$. By [[#^3a3caf]], $\lVert  \cdot \rVert$ and $\lVert \cdot \rVert'$ are equivalent. Suppose there exist $c_{1}$ and $c_{2}$ such that
+> > $$
+> > c_{1}\lVert \cdot \rVert' \leq \lVert \cdot \rVert \leq c_{2}\lVert \cdot \rVert '.
+> > $$
+> > ^610a33
+> > If a sequence in $\mathbb{R}^{n}$ converges, the images of the sequence must converge in $(V, \lVert \cdot \rVert')$, and thus they must also converge in $(V, \lVert \cdot \rVert)$ by the second inequality of [[#^610a33]]. Thus, by [[LEC ANA1 15#^50d7a4|the sequence criterion for continuity]], $T$ is continuous. Similarly, by the first inequality of [[#^610a33]], $T^{-1}$ is continuous.
+> > 
+> > Now, if $K\subseteq V$ is closed and bounded then $T^{-1}(K)\subseteq \mathbb{R}^{n}$ is closed and bounded, hence compact by the usual Heine Borel in $\mathbb{R}^{n}$. Since $T$ is continuous, $K=T(T^{-1}(K))$ is compact.
+
+^98df3d
+
+Obviously, this is NOT true in general for infinite dimensional normed linear spaces.

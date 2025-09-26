@@ -27,6 +27,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 9]] ✅ Euclidean domains and unique factorization domains
 [[LEC ALG3 10]] ✅ Gauss's Lemma
 [[LEC ALG3 11]]
+[[LEC ALG3 12]]
 
 [[Stuff I'll look at later]]
 # Tutorials

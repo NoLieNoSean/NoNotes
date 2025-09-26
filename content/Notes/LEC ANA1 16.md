@@ -26,7 +26,7 @@ To-do:
 
 ---
 
-## Compactness: Absolute and relative definitions
+# Compactness: Absolute and relative definitions
 
 ### Sequential compactness
 
@@ -56,7 +56,7 @@ $E$ is sequentially compact in $X$ $\iff$ $E$ is sequentially compact in $Y$ $\i
 Same argument as in sequential compactness.
 
 ---
-## Examples of compact sets
+# Examples of compact sets
 
 ### Finite sets
 
@@ -79,7 +79,7 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 
 ---
 
-## Equivalence of sequential and limit point compactness
+# Equivalence of sequential and limit point compactness
 
 >[!Theorem]
 >Let $X$ be a metric space. Then, $X$ is sequentially compact $\iff$ $X$ is limit point compact.
@@ -97,7 +97,7 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 >We have not yet shown that open cover compactness is equivalent to limit point/sequential compactness, so replace every instance of compact with limit point compact or sequentially compact in the following theorems and proofs if you're reading these lecture notes in order.
 
 ---
-## Image of a compact set under a continuous function
+# Image of a compact set under a continuous function
 
 >[!Theorem]
 >If $f:X\to Y$ is continuous, and $X$ is compact, $f(X)$ is compact.
@@ -106,7 +106,7 @@ It follows that "closed boxes" in $\mathbb{R}^{k}$ are limit point compact. This
 >Consider a sequence $f(x_{1}), f(x_{2}), \dots$ in $f(X)$. $x_{1}, x_{2}, \dots$ is a sequence in $X$. Since $X$ is compact, $x_{1}, x_{2}, \dots$ has a subsequence $(x_{k_{n}})\to p\in X$. Since $f$ is continuous, it [[LEC ANA1 15#Continuous functions map convergent sequences to convergent sequences|follows]] that $f(x_{k_{n}})\to f(p)\in f(X)$. ❏
 
 ---
-## Characterization of compact sets
+# Characterization of compact sets
 
 Rudin, 2.34
 
@@ -118,7 +118,7 @@ Rudin, 2.34
 >Suppose $C$ is unbounded. Pick $x_{0}\in C$. Pick $x_{n+1}$ such that $d(x_{0}, x_{n+1})>1+d(x_{0}, x_{n})$. This construction results in the distance between any two terms in $(x_{n})$ being greater than 1. Thus, there does not exist an $N$ such that for all $n\ge N$, all $x_{n}$ lie in a ball of radius $\frac{1}{2}$. So, no subsequence of $(x_{n})$ converges, contradicting the hypothesis that $C$ is compact. $\Rightarrow\Leftarrow$ ❏
 
 ---
-## Extreme value theorem
+# Extreme value theorem
 
 Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. We know now that this implies $f(X)$ is compact, which in turn implies $f(X)$ is closed in $\mathbb{R}$ and bounded. Since $f(X)$ is non-empty and bounded, it must have a [[Bounds#Supremum and infimum|supremum and infimum]], when then must be [[LEC ANA1 15#Closed sets in $ mathbb{R}$ contain their suprema|contained]] in $f(X)$ since it is closed. Hence the theorem.
 
@@ -126,7 +126,7 @@ Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. 
 >A continuous function from a non-empty compact space to a subset of the real numbers attains a maximum and a minimum value.
 
 ---
-## Closed subsets of compact sets are compact
+# Closed subsets of compact sets are compact
 
 > [!Theorem] Rudin 2.35
 > If $X$ is compact, $C$ is closed in $X$ $\implies$ $C$ is compact.
@@ -136,7 +136,7 @@ Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. 
 > 
 
 ---
-## Heine Borel Theorem
+# Heine Borel Theorem
 
 > [!Theorem]
 > Let $C$ be a subset of $\mathbb{R}$. Then, $C$ is compact $\iff$ $C$ is closed in $\mathbb{R}$ and bounded.
@@ -145,6 +145,8 @@ Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. 
 > > $(\implies)$ Follows from the [[#Characterization of compact sets]].
 > > 
 > > $(\impliedby)$ Since $C$ is bounded, $C\subset[-M, M]$ for some $M$. Now, $C=[-M, M]\cap C$, and thus $C$ is closed in $[-M, M]$ ([[LEC ANA1 15#Subspace topology|Subspace topology]]). We have previously [[#Closed intervals in R|shown]] that closed intervals in $\mathbb{R}$ are compact, so $[-M, M]$ is compact. It follows form the [[#Closed subsets of compact sets are compact|previous theorem]] that $C$ is compact. 
+
+^f2a44b
 
 >[!Warning]
 >In general, $X$ is closed and bounded $\not\implies$ $X$ is compact. For example, let $E$ be the set of all $p\in \mathbb{Q}$ such that $2<p^{2}<3$. $E$ is closed and bounded in $\mathbb{Q}$, but $E$ is not compact. 
