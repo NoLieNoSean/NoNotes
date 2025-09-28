@@ -104,8 +104,3 @@ Let $a=up_{1}^{a_{1}}\dots p_{s}^{a_{s}}$ and $b=wq_{1}^{b_{1}}\dots q_{t}^{b_{t
 
 In $R=k[x_{1}, \dots, x_{n}]$, If $I=(m_{1}, \dots, m_{t})$ and $d$ is the gcd of the generators of $I$, then $I=(d)(I:(d))$. 
 
-[!Definition]
-Let $R$ be a UFD, and let $x$ be a variable. Let $f=\sum_{i=0}^{n}a_{i}x^{i}\in R[x]$. Define $c(f)$, the content of $f$, to be the gcd of the coefficients of $f$, up to multiplication by a unit. 
-
-[!Gauss Lemma]
-Let $R$ be a UFD, and $f, g\in R$. Then $c(gf)=c(f)c(g)$. In particular, the product of primitive polynomials is a primitive polynomials.

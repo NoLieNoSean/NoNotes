@@ -1,5 +1,7 @@
 # Ring of fractions
 
+^8031a7
+
 A Commutative ring $R$ is always a subring of a larger ring $Q$, called the *ring of fractions*, in which every nonzero element of $R$ that is not a zero divisor is a unit in $Q$. If $R$ is an integral domain, $Q$ will be a field, called the *field of fractions* of $R$.
 
 > [!Theorem]

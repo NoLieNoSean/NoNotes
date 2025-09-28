@@ -29,12 +29,13 @@ Clare distinguishes between 'Euclidean ring' (not a domain) and 'Euclidean domai
 ^c12bf3
 
 [^2]: $\mathbb{N}$ is well ordered!
+
 In particular, every Euclidean domain is a principal ideal domain.
 
 > [!Example]
 > - $\mathbb{Z}[i]$ is a euclidean domain, with $d(a)=|a|^{2}$. Division with remainder is not unique: There may be as many as four choices for the remainder. See @artinAlgebra2011 [p. 361]. 
 > - $\mathbb{Z}[x]$ is not a Euclidean domain, since it is not a principal ideal domain. $\mathbb{Q}[x]$ is a Euclidean domain.
-> - $\mathbb{Z}[\sqrt{ -5 }]$ is not a Euclidean domain, since it is not a principal domain. See @dummitAbstractAlgebra2004 [p. 272]. 
+> - $\mathbb{Z}[\sqrt{ -5 }]$ is not a Euclidean domain, since it is not a principal domain. See @dummitAbstractAlgebra2004 [p. 272]. It is also not a UFD, since $6$ does not have unique factorization. Factorization does terminate, however: this can be shown using the field norm on $\mathbb{Q}[\sqrt{ -5 }]$. 
 > - $\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not a Euclidean domain. See [[TUT ALG3 4#Problem 9]].
 > - A polynomial ring $\mathbb{F}[x]$ in one variable over a field $\mathbb{F}$ is a Euclidean domain, with $d(f)$ equal to the degree of $f$.
 
@@ -51,7 +52,7 @@ A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal i
 > Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. $d$ is a gcd of $a$ and $b$. 
 
 > [!Remark]
-> When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$. 
+> When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$ in $\mathbb{Z}[x]$: $(1)$ is strictly larger than $(2, x)$, and cannot be written as a linear combination of $2$ and $x$.
 
 ^9467ec
 
@@ -63,7 +64,7 @@ A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal i
 > $$
 > p_{1}\dots p_{m}=a=q_{1}\dots q_{n},
 > $$
-> then $m=n$, and of the right side is rearranged suitably, $q_{i}$ is an associate of $p_{i}$ for each $i$. 
+> then $m=n$, and if the right side is rearranged suitably, $q_{i}$ is an associate of $p_{i}$ for each $i$. 
 > 
 > When the recursive factoring of every nonunit nonzero element terminates, we say that **factoring terminates** in $R$.
 
@@ -81,9 +82,30 @@ We will rarely encounter rings in which factoring fails to terminate; in practic
 
 > [!Proposition]
 > Let $R$ be an integral domain in which factoring terminates. Then $R$ is a UFD iff every irreducible element is a prime element.
+> 
+> > [!Proof]-
+> > Let $R$ be a ring in which every irreducible element is prime, and suppose that an element $a$ factors in two ways into irreducible elements, say $p_{1}\dots p_{m}=a=q_{1}\dots q_{n}$, where $m\leq n$. If $n=1$, then $m=1$ and $p_{1}=q_{1}$. Suppose $n> 1$. Since $p_{1}$ is prime, it divides one of the factors $q_{1}, \dots, q_{n}$, say $q_{1}$. Since $q_{1}$ is irreducible and. since $p_{1}$ is not a unit, $q_{1}$ and $p_{1}$ are associates, say $p_{1}=uq_{1}$, where $u$ is a unit. We move the unit factor over to $q_{2}$, replacing $q_{1}$ by $uq_{1}$ and $q_{2}$ by $u^{-1}q_{2}$. The result is that now $p_{1}=q_{1}$. Then we cancel $p_{1}$ and use induction on $n$.
+> > 
+> > Conversely, suppose that there is an irreducible element $p$ that is not prime. Then there are elements $a$ and $b$ such that $p$ divides $r:=ab$, say $pc=r$, but $p$ does not divide $a$ or $b$. By factoring $a$, $b$, and $c$ into irreducible elements, we obtain two inequivalent factorizations of $r$.
+> 
+
+^414a66
 
 > [!Proposition]
 > Every PID is a UFD.
+> 
+> > [!Proof]-
+> > Let $R$ be a PID. Since every irreducible element of $R$ is prime, we only need to show that factoring terminates. Suppose we are given an infinite weakly increasing chain
+> > $$
+> > (a_{1})\subseteq(a_{2})\subseteq(a_{3})\subseteq\dots.
+> > $$
+> > The union $J=\bigcup (a_{n})$ is an ideal (this is true for any increasing chain of ideals in a ring): if $u$ and $v$ are in $J$, they must both be in $(a_{n})$ for some $n$, so, $u+v$ and $ru$ for any $r\in R$ are also in $I_{n}$ and therefore they are in $J$. Since $R$ is a PID, $J$ is principal, say $J=(b)$. Since $b$ is in the union of the ideals $(a_{n})$, it must be in one of them. But if $b$ is in $(a_{n})$, then $(b)\subseteq(a_{n})$. On the other hand, $(a_{n})\subseteq(a_{n+1})\subseteq(b)$. Therefore $(b)=(a_{n})=(a_{n+1})$. The chain is not strictly increasing.
+> > 
+> 
+
+^97c00a
+
+It follows from [[#^c12bf3]] and [[#^97c00a]] that every Euclidean domain is a UFD. 
 
 Divisibility in a UFD can be deduced from irreducible factorizations:
 

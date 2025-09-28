@@ -22,7 +22,7 @@ see @butlerCLASSIFICATIONGAUSSIANPRIMES
 > Let $f(x)=1+x+\dots+x^{p-1}$. Clearly, $f(\alpha)=0$. Use https://en.wikipedia.org/wiki/Eisenstein%27s_criterion to prove $f$ is irreducible.
 
 > [!Example]
-> Show that $3$ is prime in $\mathbb{Z}[i]$. It is sufficient to show that 
+> To show that $3$ is prime in $\mathbb{Z}[i]$, it is sufficient to show that 
 > $$
 > \frac{\mathbb{Z}[i]}{(3)}\cong \frac{\mathbb{F}_{3}[x]}{x^{2}+1}
 > $$
