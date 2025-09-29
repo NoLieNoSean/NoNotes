@@ -135,8 +135,16 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > $X$ is a metric space. $S\subseteq X$ is **nowhere dense** if $(\overline{S})^{\circ}=\emptyset$.
 
 > [!Definition]
-> Closed $F\subseteq X$ is said to be **meagre** or of **category I** if $F$ can be written as a countable union of closed nowhere dense sets. If $F\subseteq X$ is not of category I, it is said to be of **category II**.
+> $F\subseteq X$ is said to be **meagre** or of **category I** if $F$ is contained in a countable union of closed nowhere dense sets. If $F\subseteq X$ is not of category I, it is said to be of **category II**.
 > 
+
+> [!Note]
+> There are two definitions of a meagre set: the one given above, and this: $F\subseteq X$ is meagre if $F$ is equal to a countable union of nowhere dense sets. These are equivalent; the one given above is more convenient to work with because closed sets are easier to manipulate in proofs.
+
+> [!Example]
+> 1. Note that "meagre/Category I" is a property relative to the ambient topological space. $\mathbb{Z}$ is of first category in $\mathbb{R}$, but $\mathbb{Z}$ is not of first category in $\mathbb{Z}$, because nowhere dense sets do not exist in $\mathbb{Z}$ when it is regarded as the whole space. When we say a space is of category x, we mean it is of category x in itself.
+> 2. $\mathbb{Q}$ is of first category in $\mathbb{R}$, and of first category in $\mathbb{Q}$. In fact, any countable metric space having no isolated points is of first category in itself.
+> 3. The set of all rational sequences in $\mathscr{l}_{1}$ with rational coordinates is of first category in $\mathscr{l}_{1}$. 
 
 > [!Theorem] Baire Category Theorem
 > Let $X$ be a complete metric space. Let $\{ U_{n} \}_{n=1}^{\infty}$ be a collection of open and dense subsets of $X$. Then, $U=\bigcap_{n=1}^{\infty}U_{n}$ is dense in $X$.
@@ -145,13 +153,12 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > > It suffices to show $B_{0}\cap U\ne \emptyset$ for any closed ball $B_{0}\subseteq X$ of radius $\delta$. Clearly, $B_{0}^{\circ}\cap U_{1}$ is open, and hence contains a closed ball $B_{1}$ of radius less than $\delta/2$. Iteratively, choose a closed ball  $B_{n}$ of radius $\delta/2^{n}$ such that $B_{n}\subseteq B_{n-1}^{\circ}\cap U_{n}$. $\{ B_{n} \}_{n=1}^{\infty}$ is a contracting sequence of nonempty closed subsets. Since $X$ is complete, $\bigcap_{n=1}^{\infty}B_{n}=\{ x \}$ for some $x\in X$. It follows that $x\in U$.
 
 ^44da7d
-
+ 
 > [!Corollary]
-> If $X$ is complete, then $X$ is of second category.
+> If $X$ is complete, then $X$ is of second category. In other words, a complete metric space cannot be expressed as a countable union of closed nowhere dense subsets.
 > 
 > > [!Proof]-
 > > Let $\{ F_{n} \}_{n=1}^{\infty}$ be a collection of closed nowhere dense subsets of $X$. Then, $\{ F_{n}^{c} \}_{n=1}^{\infty}$ is a collection of open dense subsets of $X$. By [[#^44da7d]], $\left( \bigcup_{n=1}^{\infty}F_{n} \right)^{c}=\bigcap_{n=1}^{\infty}F_{n}^{c}$ is dense in $X$. Thus, $\bigcup_{n=1}^{\infty}F_{n}\ne X$.
 
 ^1a2743
 
-Thus, a complete metric space cannot be expressed as a countable union of closed nowhere dense subsets.

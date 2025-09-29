@@ -25,7 +25,7 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 [[LEC ANA2 7]] ✅ Equicontinuity, the Arzelà–Ascoli theorem
 [[LEC ANA2 8]] ✅ Banach's Contraction principle, Baire Category theorem
-[[LEC ANA2 9]] Nowhere differentiable function are second category in $C[0, 1]$.
+[[LEC ANA2 9]] ✅ Nowhere differentiable function are second category in $C[0, 1]$.
 
 ---
 

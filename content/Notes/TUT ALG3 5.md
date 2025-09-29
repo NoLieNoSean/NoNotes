@@ -93,7 +93,6 @@ we must have $a^{2}=1$, $b^{2}=1$, and $2ab=1$. $\pm 1$ are solutions for the fi
 
 Since $x^{3}-1=(x-1)(x^{2}+x+1)$, $x^{2}+x+1$ has a root in iff $x^{3}-1$ has non trivial roots in $\mathbb{F}_{p}$ iff $x^{3}-1$ has three distinct roots. The roots of $x^{3}-1$ are solutions to $x^{3}\equiv 1\mod p$, which form a subgroup of order $3$ of $\mathbb{F}_{p}^{\times}$, which exists iff $\mathbb{F}_{p}^{\times}$ has an element of order $3$, which happens iff $3\ | \ p-1$ by [[LEC ALG2 3#^9f0c4c|Cauchy's theorem]], which is equivalent to $p\equiv 1 \mod 3$.
 
-
 > [!Exercise]
 > $(p)$ is maximal in $\mathbb{Z}[\omega]$ iff $p\equiv 2\mod 3$. 
 
@@ -109,6 +108,12 @@ $$
 \end{align}
 $$
 where the last equivalence is obtained from [[#^de56d5]]. 
+
+> [!Exercise]
+> $p$ factors in $\mathbb{Z}[\omega]$ iff $p=a^{2}+ab+b^{2}$ for some integers $a$ and $b$.
+
+
+
 
 
 ---
