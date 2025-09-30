@@ -22,7 +22,7 @@ $$
 induce the discrete topology on $\mathbb{N}$. A sequence converges under $d_{1}$ iff it is constant for all $n$ greater than some $N$. The same holds for $d_{2}$ (check this!), so a sequence converges under $d_{1}$ iff it converges under $d_{2}$.
 
 Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. However, under $d_{2}$, the sequence $\{ x_{n} =n\}$ is Cauchy, but it doesn't converge! So $(\mathbb{N}, d_{1})$ is complete, while $(\mathbb{N}, d_{2})$ is not.
-
+e
 > [!Exercise]
 > Let $(X, d)$ be a metric space. Show that $\rho=d/(1+d)$ is a metric. Show that $\{ x_{n} \}$ is Cauchy wrt $d$ $\iff$ $\{ x_{n} \}$ is Cauchy wrt $\rho$. %% [MSE](https://math.stackexchange.com/questions/309198/if-dx-y-is-a-metric-then-fracdx-y1-dx-y-is-also-a-metric)  %%
 
@@ -65,7 +65,7 @@ Also note that *$B(S)$ with the sup norm is always a Banach space for any set $S
 > [!Example]
 > Let $C[0, 1]\subseteq B[0, 1]$ is the space of all continuous functions on $[0, 1]$ equipped with the metric induced by the sup norm. [[LEC CAL1 4#^9dd2a2|We have shown]] that $C[0, 1]$ is complete: essentially, we know that any Cauchy sequence in $C[0, 1]$ converges in the complete ambient space $B[0, 1]$; showing that the limit lies in $C[0, 1]$ requires us to show that the limit is continuous, which is true because [[LEC ANA1 33#^8504b1|the uniform limit of continuous functions is continuous]].
 > 
-> Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete (incidentally, this makes $C[0, 1]$ a [[LEC CAL1 9#Separable metric spaces|separable]] space). However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
+> Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete. However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
 
 For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is compact.
 

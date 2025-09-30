@@ -43,7 +43,7 @@ Suppose $(x_{n})$ and $(y_{n})$ are two Cauchy sequences in $X$. Then, $(d(x_{n}
 - $\rho$ is symmetric
 - triangle inequality holds
 
-However, $\rho((x_{n}), (y_{n}))=0$ may not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. This is well defined[^1]. That makes $(\tilde{X}, \tilde{d})$ a metric space.
+However, $\rho((x_{n}), (y_{n}))=0$ does not imply $(x_{n})=(y_{n})$. $\rho$ is what is called a *pseudometric*, and $(S, \rho)$ is called a *pseudometric space*. On such a space, one can define the relation $(x_{n})\sim (y_{n})$ if $\rho((x_{n}), (y_{n}))=0$. This is an equivalence relation, and partitions $S$ into equivalence classes $S/\sim \ =:\tilde{X}$. Define $\tilde{d}([(x_{n})], [(y_{n})])=\rho((x_{n}), (y_{n}))$. This is well defined[^1]. That makes $(\tilde{X}, \tilde{d})$ a metric space.
 
 [^1]: Let $(x_{n})\sim(a_{n})$ and $(y_{n})\sim(b_{n})$. Write $d(x_{n}, y_{n})\leq d(x_{n}, a_{n})+d(a_{n}, b_{n})+d(b_{n}, y_{n})$ and its dual equation bounding $d(a_{n}, b_{n})$. Combine them to get $|d(x_{n}, y_{n})-d(a_{n}, b_{n})|\leq d(x_{n}, a_{n})+d(y_{n}, b_{n})$. It follows that $\lim_{ n \to \infty }d(x_{n}, y_{n})=\lim_{ n \to \infty }d(a_{n}, b_{n})$, or $\tilde{d}([(x_{n})], [(y_{n})])=\tilde{d}([(a_{n})], [(b_{n})])$.
 

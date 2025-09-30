@@ -119,7 +119,7 @@ Read examples at 3.35.
 
 $R$ is called the *convergence radius* of $\sum c_{n}z^{n}$.
 
-> [!Example] Examples
+> [!Example]
 > 1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.
 > 2. The series $\sum \frac{z^{n}}{n^{n}}$ has $R=\infty$, i.e, it converges for every $z$. 
 > 3. The above theorem is not easily applicable on the series $\sum \frac{z^{n}}{n!}$, since showing $\lim\sup \sqrt[n]{ 1/n! } = 0$ takes some work. It is much easier to use the ratio test: $\lim\sup |z|/(n+1) =0$, for all $z$. Thus, $R=\infty$. 

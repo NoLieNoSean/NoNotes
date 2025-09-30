@@ -59,7 +59,7 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > > $$
 > > \left| \mathcal{F}_{\mathbb{Q}} \right| =\left| \bigcup_{i=1}^{\infty} \mathbb{Q}^{i} \right|.
 > > $$
-> > It is clear that $\mathcal{F}_{\mathbb{Q}}$ is dense in $\mathcal{F}$. We need to prove that $\mathcal{F}$ is dense in $\mathscr{l}_{1}$, and we'll be done by [[#^35d96d]]. 
+> > It is clear that $\mathcal{F}_{\mathbb{Q}}$ is dense in $\mathcal{F}$. If we show $\mathcal{F}$ is dense in $\mathscr{l}_{1}$, we'll be done by [[#^35d96d]]. 
 > > 
 > > Let $\mathbf{x}=\{ x_{k} \}\in \mathscr{l}_{1}$. Let $\{ \mathbf{x}_{n} \}\subseteq \mathcal{F}$ be a sequence, with $\mathbf{x}_{n}=\{ x_{n}^{k} \}_{k=1}^{\infty}$ and
 > > $$
@@ -85,6 +85,7 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > [!Exercise]
 > 1. $\mathscr{l}_{p}$ is separable.
 > 2. $C[0, 1]$ is separable.
+>    ![[Pasted image 20250930105556.png]]
 
 > [!Example]
 > Define $C_{0}:=\{ \{ x_{n} \}\ | \ x_{n}\to 0 \}\subset \mathscr{l}_{\infty}$. We will show that $C_{0}$ is a separable subspace of $\mathscr{l}_{\infty}$. Let $\mathcal{F}\subseteq C_{0}$ be as in [[#^74c8ab]]. 

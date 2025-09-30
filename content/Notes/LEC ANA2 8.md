@@ -105,10 +105,12 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > [!Proposition]
 > Let $V\subseteq B(S)$ be a closed NLS containing all constant functions of $B(S)$. Let $T:V\to V$ (need not be linear) satisfy:
 > 1. $T(f)\leq T(g)$ if $f\leq g$ (these are pointwise comparisons).
-> 2. There exists $0<\beta< 1$ such that for all $f\in V$ and constant functions $c$, $T(f+c)\leq(Tf)+\beta c$ 
+> 2. There exists $0<\beta< 1$ such that for all $f\in V$ and constant functions $c$, $T(f+c)\leq(Tf)+\beta c$.
+> 
 > Then $T$ has a unique fixed point.
 > 
 > > [!Proof]-
+> > 
 > > It suffices to show $T$ is a contraction with $\beta$. Fix $f, g\in V$. Let $c=\lVert f-g \rVert_{\infty}$. Then, 
 > > $$
 > > \begin{align}
@@ -144,7 +146,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > [!Example]
 > 1. Note that "meagre/Category I" is a property relative to the ambient topological space. $\mathbb{Z}$ is of first category in $\mathbb{R}$, but $\mathbb{Z}$ is not of first category in $\mathbb{Z}$, because nowhere dense sets do not exist in $\mathbb{Z}$ when it is regarded as the whole space. When we say a space is of category x, we mean it is of category x in itself.
 > 2. $\mathbb{Q}$ is of first category in $\mathbb{R}$, and of first category in $\mathbb{Q}$. In fact, any countable metric space having no isolated points is of first category in itself.
-> 3. The set of all rational sequences in $\mathscr{l}_{1}$ with rational coordinates is of first category in $\mathscr{l}_{1}$. 
+
 
 > [!Theorem] Baire Category Theorem
 > Let $X$ be a complete metric space. Let $\{ U_{n} \}_{n=1}^{\infty}$ be a collection of open and dense subsets of $X$. Then, $U=\bigcap_{n=1}^{\infty}U_{n}$ is dense in $X$.
