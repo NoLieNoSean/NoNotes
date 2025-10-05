@@ -31,6 +31,4 @@ CMI, Aug-Nov 2025, Siddharth Pritam
 # Assignments
 
 [[AS ALGO 1]]
-
-
-
+[[AS ALGO 2]]

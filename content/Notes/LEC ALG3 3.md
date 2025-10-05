@@ -10,7 +10,7 @@ time: 09:17
 The theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}(G)$ is a ring for every abelian group $G$ (see @aluffiAlgebraChapter02009 III.1.1). Recall that we defined [[LEC ALG2 7#Group actions|group actions]] as group homomorphisms from a fixed group to the group of symmetries of a set. Analogously, the left-action of a ring $R$ on an abelian group $M$ is a homomorphism of rings $\sigma:R\to \text{End}_{\textsf{Ab}}(M)$. The uncurried version $\rho$ has type $R\times M\to M$, with the relation between them given by $\rho(r, m)=\sigma(r)(m)$. $\rho(r, m)$ is denoted by $rm$. 
 
 > [!Definition] Module
-> Let $R$ be a ring (with $1$). A **left $R$ module** is an additive abelian group $M$ with the operation $R\times M\to M$ $(r, m)\mapsto rm$ with the following axioms
+> Let $R$ be a ring (with $1$). A **left $R$ module** is an additive abelian group $M$ with the operation $R\times M\to M$ , $(r, m)\mapsto rm$ with the following axioms
 > 1. $(r+s)m=rm+sm$
 > 2. $r(m+n)=rm+rn$
 > 3. $rs(m)=r(sm)$

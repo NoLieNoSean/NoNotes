@@ -242,19 +242,20 @@ Let $\{ \lambda_{1}, \lambda_{2},\dots,\lambda_{\gamma} \}$ be the distinct eige
 > [!Theorem]
 > 
 >  $a_{i} \geq g_{i}$ for each $i$.
-
-> **Proof**
-> Fix $i$, call $\lambda_{i} = \lambda, \ g_{i} = g, \ a_{i} = a$. Take $v_{1}, v_{2},\dots,v_{g}$ to  be the basis of $\ker{A-\lambda I}$. Extend this to a basis of $V$ by appending $v_{g+1}, v_{g+2},\dots,v_{n}$. By writing the matrix of $T$ in this basis we get
-> $$
-> \left[
-> \begin{array}{c|cc}
-> \lambda I_{g} & *\ \ \\
-> \hline \mathbf{0} & *\ \
-> \end{array}
-> \right]
-> $$
-> The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Now, $h(x)$ may contain a factor of $(x-\lambda)$. Hence the number of times $(x-\lambda)$ appears in $p_{_{T}}(x)$ will be $g + r$ for some $r \in \mathbb{N}$.
-
+> 
+> > [!Proof]-
+> > 
+> > Fix $i$, call $\lambda_{i} = \lambda, \ g_{i} = g, \ a_{i} = a$. Take $v_{1}, v_{2},\dots,v_{g}$ to  be the basis of $\ker{A-\lambda I}$. Extend this to a basis of $V$ by appending $v_{g+1}, v_{g+2},\dots,v_{n}$. By writing the matrix of $T$ in this basis we get
+> > $$
+> > \left[
+> > \begin{array}{c|cc}
+> > \lambda I_{g} & *\ \ \\
+> > \hline \mathbf{0} & *\ \
+> > \end{array}
+> > \right]
+> > $$
+> > The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Now, $h(x)$ may contain a factor of $(x-\lambda)$. Hence the number of times $(x-\lambda)$ appears in $p_{_{T}}(x)$ will be $g + r$ for some $r \in \mathbb{N}$.
+> 
 ### Criterion of diagonalizability
 
 This theorem holds for vector spaces over general fields.

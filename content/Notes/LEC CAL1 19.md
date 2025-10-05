@@ -74,6 +74,8 @@
 > > 
 > 
 
+^c71feb
+
 Turns out you can slightly relax the hypothesis and still have $\mathbf{f}$ to be differentiable.
 
 > [!Theorem] @apostolMathematicalAnalysis1985

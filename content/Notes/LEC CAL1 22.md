@@ -35,7 +35,7 @@ Clearly, every system of $n$ equations in $n+k$ variables can be expressed in th
 
 Note that every such system of equations always represents a relation on $\mathbb{R}^{n}\times \mathbb{R}^{k}$, namely, the tuples $(\mathbf{x}, \mathbf{t})$ which satisfy the system. The implicit function theorem tells us when such a relation is (locally) a function from $\mathbb{R}^{k}$ to $\mathbb{R}^{n}$, that is, when $\mathbf{x}$ can be determined uniquely as a function $\boldsymbol{\varphi}$ of $\mathbf{t}$, in which case $\mathbf{f}$ is said to implicitly define $\boldsymbol{\varphi}$.
 
-The linear version of the implicit functioOn theorem is as follows:
+The linear version of the implicit function theorem is as follows:
 
 > [!Theorem]
 > If $A\in \mathcal{L}(\mathbb{R}^{n+m}, \mathbb{R}^{n})$ and if $A_{x}$ is invertible, then there corresponds to every $\mathbf{k}\in \mathbb{R}^{m}$ a unique $\mathbf{h}\in \mathbb{R}^{n}$ such that $A(\mathbf{h}, \mathbf{k})=\mathbf{0}$. This $\mathbf{h}$ can be computed from $\mathbf{k}$ by the formula
@@ -70,4 +70,21 @@ Define $\mathbf{F}:E\to \mathbb{R}^{n+m}$ by
 $$
 \mathbf{F}(\mathbf{x}, \mathbf{y})=(\mathbf{f}(\mathbf{x}, \mathbf{y}), \mathbf{y})\quad((\mathbf{x}, \mathbf{y})\in E).
 $$
-Then $\mathbf{F}$ is a $C^{1}$ mapping of $E$ into $\mathbb{R}^{n+m}$.
+Its derivative is given by the block matrix
+$$
+\mathbf{F}'(\mathbf{x}, \mathbf{y})=\left[
+\begin{array}{ccc}
+ \underset{n\times (m+n)}{\mathbf{f}'(\mathbf{x}, \mathbf{y})}\\
+\hline \underset{m\times n}{\mathbf{0}} ~~~ \underset{m\times m}{I}
+\end{array}
+\right].
+$$
+All the partial derivatives are clearly continuous. By [[LEC CAL1 19#^c71feb]], $\mathbf{F}$ is a $C^{1}$ mapping of $E$ into $\mathbb{R}^{n+m}$. Also, since $\det \mathbf{F}'(\mathbf{a}, \mathbf{b})=\det A_{x}\det I_{m\times m}=\det A_{x}\ne 0$, $\mathbf{F}'(\mathbf{a}, \mathbf{b})$ is invertible. It follows from the [[LEC CAL1 21#^ccd2d7|inverse function theorem]] that there exist open sets $U$ and $V$ in $\mathbb{R}^{n+m}$, with $(\mathbf{a}, \mathbf{b})\in U$, $(\mathbf{0}, \mathbf{b})\in V$, such that $\mathbf{F}$ is an injective mapping of $U$ onto $V$. 
+
+Let $W$ be the set of all $\mathbf{y}\in \mathbb{R}^{m}$ such that $(\mathbf{0}, \mathbf{y})\in V$. Note that $\mathbf{b}\in W$. It is clear that $W$ is open since $V$ is open. If $\mathbf{y}\in W$, then $(\mathbf{0}, \mathbf{y})=\mathbf{F}(\mathbf{x}, \mathbf{y})$ for some $(\mathbf{x}, \mathbf{y})\in U$. It follows that $\mathbf{f}(\mathbf{x}, \mathbf{y})=\mathbf{0}$ for this $\mathbf{x}$. The uniqueness of $\mathbf{x}$ follows from the injectivity of $\mathbf{F}$ on $U$. This proves he first part of the theorem.
+
+For the second part, define $\mathbf{g}(\mathbf{y})$ for $\mathbf{y}\in W$ to be the unique $\mathbf{x}$ such that $(\mathbf{x}, \mathbf{y})\in U$ and $\mathbf{f}(\mathbf{x}, \mathbf{y})=\mathbf{0}$. Then for $\mathbf{y}\in W$,
+$$
+\mathbf{F}(\mathbf{g}(\mathbf{y}), \mathbf{y})=(\mathbf{0}, \mathbf{y}).
+$$
+If $\mathbf{G}$ is the mapping of $V$ onto $U$ that inverts $\mathbf{F}$, then $\mathbf{G}\in C^{1}$ by the inverse function theorem and $(\mathbf{g}(\mathbf{y}), \mathbf{y})=\mathbf{G}(\mathbf{0}, \mathbf{y})$ for $\mathbf{y}\in W$.

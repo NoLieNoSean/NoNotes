@@ -10,3 +10,7 @@ Pull requests are welcome!
 
 [MOC list](tags/MOC) 
 
+@aluffiAlgebraChapter02009 [p. 29]
+
+
+
