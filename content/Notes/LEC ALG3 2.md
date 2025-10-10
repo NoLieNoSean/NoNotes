@@ -19,7 +19,7 @@ What requirements should $I$ meet, in order to have a ring structure on $R/I$, s
 $$
 (a+I)(b+I)=\pi(a)\pi(b)=\pi(ab)=ab+I.
 $$
-Thus, there is only one sensible ring structure on $R/I$, given by $(a+I)(b+I)\equiv ab+I$. Note that if this operation is well defined, $R/I$ is a ring. When is this operation well defined?
+Thus, there is only one sensible ring structure on $R/I$, given by $(a+I)(b+I)\equiv ab+I$ (note that if this operation is well defined, $R/I$ is, in fact, a ring). When is this operation well defined?
 
 > [!Claim]
 > The operation $(a+I)(b+I)\equiv ab+I$ on $R/I$ is well defined iff $I$ is an ideal of $R$.

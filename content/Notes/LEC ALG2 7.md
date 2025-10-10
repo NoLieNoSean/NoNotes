@@ -6,7 +6,7 @@ tags:
 date: 2025-02-04
 time: 9:10
 ---
-## Double cosets
+# Double cosets
 
 > [!Definition]
 > Let $H$ and $K$ be subgroups of $G$. Define
@@ -22,8 +22,7 @@ Remarks:
 - If $K$ is not normal, then $KgK$ contains a left coset and a right coset, namely $gK$ and $Kg$. 
 
 ---
-
-## Group actions
+# Group actions
 
 > [!Definition]
 > Let $G$ be a group and let $X$ be a set. We say that $G$ acts on $X$ if we have a map $\phi:G\times X\to X$ ($\phi(g, x)$ is denoted by $gx$), called a *group action*, satisfying
@@ -42,6 +41,24 @@ It is easy to see that $\phi_{g}$ is a bijection for all $g\in G$:
 
 Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X)$, the group of all bijections from $X$ to $X$. This along with the defining properties of a group action makes $\phi$ a group homomorphism. 
 
+> [!Remark]
+> More generally, an **action** of a group $G$ on an object $A$ of a category $\textsf{C}$ is simply a homomorphism 
+> $$
+> \sigma:G\to \text{Aut}_{\textsf{C}}(A). 
+> $$
+> We will be exclusively dealing with the case $\textsf{C}=\textsf{Set}$, so $\text{Aut}_{\textsf{C}}(A)=S_{A}$.
+
+> [!Remark] @aluffiAlgebraChapter02009 Exercise III.9.3
+> What we've defined above is a **left group action**. A **right action** would associate to each pair $(g, x)$ with  and $x\in A$ an element $xg\in A$, such that $(xg_{1})g_{2}=x(g_{1}g_{2})$ for all $x\in X$, and $g_{1}, g_{2}\in G$. This is a different requirement than the one given above. Multiplication on the right in a group gives a prototypical example of a right action. 
+> 
+> Every right action may be turned into a left action, as follows. If $G=(G, \cdot)$ is a group, define the 'opposite group' $G^{\circ}=(G, \bullet)$ supported on the same set $G$, by prescribing
+> $$
+> (\forall g, h\in G): g\bullet h:=h\cdot g.
+> $$
+> It is easy to verify that $G^{\circ}$ is indeed a group. The identity map $G\to G^{\circ}$ is an isomorphism iff $G$ is commutative. However, even if $G$ is not commutative, the map $G\to G^{\circ}$ given by $x\mapsto x ^{-1}$ is an isomorphism, so $G\cong G^{\circ}$. Now, a right action of $G$ on a set $X$ is a map $\varphi:G\to S_{X}$ such that $\varphi_{a}\circ\varphi_{b}=\varphi_{b\cdot a}$. However, since $\varphi_{b\cdot a}=\varphi_{a\bullet b}$, $\varphi$ is a homomorphism $G^{\circ}\to S_{X}$. Thus, giving a right action of $G$ on a set $X$ is the same as giving a left action of $G^{\circ}$ on $X$. Thus, we do not lose anything by restricting our study to left actions.
+
+^bee0cf
+
 If $\phi$ is injective, then it is said to be *faithful* or *effective*. 
 
 > [!Example]
@@ -50,12 +67,13 @@ If $\phi$ is injective, then it is said to be *faithful* or *effective*.
 > \left(\tau, \underset{=\{ a, b \}\cup \{ c, d \}}{\Pi_{i}}\right)\mapsto \tau\Pi_{i}\equiv \{ \tau(a), \tau(b) \}\cup \{ \tau(c), \tau(d) \}.
 > $$
 > $\phi$ satisfies the properties of a group action. Note that the curried version of $\phi$ is not injective here, as $|\ker \phi|=4$.
-### Cayley's theorem
 
-> [!Theorem]
+> [!Theorem] Cayley's theorem
 > Any group $G$ of order $n$ is isomorphic to a subgroup of $S_{n}$.
+> 
+> > [!Proof]-
+> > Let $G$ act on itself by left multiplication. That is, define $\phi:G\to(G\to G)$ by $\phi(g)=\phi_{g}$, $\phi_{g}(g')=gg'$. Note that $\phi_{1_{G}}$ is the identity on $G$, and $\phi_{g_{1}}\phi_{g_{2}}(g)=g_{1}g_{2}g=\phi_{g_{1}g_{2}}(g)$. Thus, $\phi$ is a group action. If $\phi_{g_{1}}=\phi_{g_{2}}$, then $g_{1}g=g_{2}g$ for all $g\in G$, which implies $g_{1}=g_{2}$, making $\phi$ injective. Note $\phi$ being a homomorphism makes $\mathrm{Im}~\phi$ is a subgroup of $\text{Sym}(G)$. So, $\phi':G\to \mathrm{Im}~\phi$ defined by $\phi'(g)=\phi(g)$ is a bijective homomorphism, or an isomorphism. Thus, $G\cong \mathrm{Im}~\phi<\text{Sym(G)}\cong S_{n}$. 
+> 
 
-> **Proof**
-> Let $G$ act on itself by left multiplication. That is, define $\phi:G\to(G\to G)$ by $\phi(g)=\phi_{g}$, $\phi_{g}(g')=gg'$. Note that $\phi_{1_{G}}$ is the identity on $G$, and $\phi_{g_{1}}\phi_{g_{2}}(g)=g_{1}g_{2}g=\phi_{g_{1}g_{2}}(g)$. Thus, $\phi$ is a group action. If $\phi_{g_{1}}=\phi_{g_{2}}$, then $g_{1}g=g_{2}g$ for all $g\in G$, which implies $g_{1}=g_{2}$, making $\phi$ injective. Note $\phi$ being a homomorphism makes $\mathrm{Im}~\phi$ is a subgroup of $\text{Sym}(G)$. So, $\phi':G\to \mathrm{Im}~\phi$ defined by $\phi'(g)=\phi(g)$ is a bijective homomorphism, or an isomorphism. Thus, $G\cong \mathrm{Im}~\phi<\text{Sym(G)}\cong S_{n}$. 
-
+^3ca8d2
 

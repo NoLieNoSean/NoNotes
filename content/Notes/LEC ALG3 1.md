@@ -71,6 +71,24 @@ $$
 $$
 Thus, in $\textsf{Ring}$, a homomorphism may be both a monomorphism and an epimorphism without being an isomorphism!
 
+## Cayley's Theorem analog
+
+Let $|G|$ denote the underlying set of a group $G$. For $r\in G$, let $\lambda_{r}:|G|\to |G|$ be the map $g\mapsto rg$. [[LEC ALG2 7#^3ca8d2|Cayley's theorem]] for groups says that the map 
+$$
+\varphi:G\to \text{Aut}_{\textsf{Set}}(G),\quad   r\mapsto\lambda_{r}
+$$
+is an injective group homomorphism (i.e, a faithful group action). 
+
+We have a similar result for rings. Let $R$ be a ring, and for $r\in R$, define $\lambda_{r}$ to be the left multiplication map. 
+
+> [!Proposition] @aluffiAlgebraChapter02009 III.2.7
+> Let $R$ be a ring. Then, the map $r\to\lambda_{r}$ is an injective ring homomorphism
+> $$
+> \lambda:R\to \text{End}_{\textsf{Ab}}(R).
+> $$
+> 
+
+
 
 ---
 # Polynomial rings

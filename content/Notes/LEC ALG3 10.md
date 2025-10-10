@@ -95,6 +95,8 @@ The proof of the following theorem is immediate from [[#^b33f2e]] and [[LEC ALG3
 
 ^2a6362
 
+
+
 ## Generalization to multivariable polynomial rings over fields
 
 Regard $\mathbb{F}[t, x]$ as the ring $\mathbb{F}[t][x]$ of polynomials in $x$ whose coefficients are polynomials in $t$. The analogue of the field $\mathbb{Q}$ will be $\mathbb{F}(t)$, the [[LEC ALG3 8#Ring of fractions|field of fractions]] of $\mathbb{F}[t]$. Denote this field by $\mathcal{F}$. Then, $\mathbb{F}[t, x]$ is a subring of the ring $\mathcal{F}[x]$ of polynomials

@@ -26,7 +26,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 - [[LEC ALG2 6]] ✅
 	- Product of groups, third isomorphism theorem, Chinese remainder theorem
 - [[LEC ALG2 7]] ✅
-	- Double cosets, group actions
+	- Double cosets, group actions, Cayley's theorem
 - [[LEC ALG2 8]] ✅
 	- Orbit, stabilizer, kernel, groups acting on themselves, centralizer, normalizer, second isomorphism theorem
 - [[LEC ALG2 9]] ✅
