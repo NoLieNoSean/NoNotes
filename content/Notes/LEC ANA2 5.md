@@ -111,6 +111,10 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > 
 > Let $X$ be a totally bounded space. For $\epsilon_{n}=1/n$, let $O_{n}$ be a finite cover of $X$ by balls of radius $\epsilon_{n}$, and define $S_{n}=\{ x\ | \ B_{\epsilon}(x)\in S_{n} \}$. Take $D=\bigcup_{n=1}^{\infty}S_{n}$. $D$ is countable. $D$ is dense in $X$ since for any $x\in X$, we have balls $B_{n}\in O_{n}$ such that $x\in B_{n}$ for all $n$, so the centers of the balls converge to $x$.
 
+[!Exercise]
+The space of all non-empty compact subsets of a separable metric space $M$ endowed with the [[LEC ANA2 2#^e94696|Hausdorff metric]] is separable.
+
+
 ---
 
 > [!Proposition]

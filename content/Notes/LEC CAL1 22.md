@@ -88,3 +88,9 @@ $$
 \mathbf{F}(\mathbf{g}(\mathbf{y}), \mathbf{y})=(\mathbf{0}, \mathbf{y}).
 $$
 If $\mathbf{G}$ is the mapping of $V$ onto $U$ that inverts $\mathbf{F}$, then $\mathbf{G}\in C^{1}$ by the inverse function theorem and $(\mathbf{g}(\mathbf{y}), \mathbf{y})=\mathbf{G}(\mathbf{0}, \mathbf{y})$ for $\mathbf{y}\in W$.
+
+
+> [!Theorem]
+> Let $f:X\to \mathbb{R}^{n}$, where $X\subseteq \mathbb{R}^{n+m}$ is open, be $C^{1}$. Let $Z$ be the zero set of $f$. Let $f'(x, y)=[A_{x}~~A_{y}]$. Assume $A_{x}$ is invertible for all $(x, y)\in Z$. Then $M$ is a manifold of $\dim m$. 
+
+The requirement above is not nThe function $f:\mathbb{R}^{3}\to \mathbb{R}$ defined by $f(x, y, z)=x^{2}+y^{2}+z^{2}-1$ does not satisfy these hypotheses: $A_{x}=[2x]$ is not invertible for $x=0$. However, at these points, we can solve for $z$ or $y$ instead; all three of these cannot be simultaneously zero. So, the zero set of $f$ is a manifold. 

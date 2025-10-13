@@ -17,7 +17,12 @@ Then, $M_{G}(\lambda)=\lambda(\lambda-1)(\lambda-1)$.
 Let $G=K_{3}$.
 Then, $M_{G}(\lambda)=\lambda(\lambda-1)(\lambda-2)$.
 
-Let $G$ be![[Drawing 2025-04-21 12.00.48.excalidraw|100]]($A$ and $B$ are non adjacent vertices)
+Let $G$ be 
+
+![[Drawing 2025-04-21 12.00.48.excalidraw.dark.png|100]]
+%%[[Drawing 2025-04-21 12.00.48.excalidraw.md|🖋 Edit in Excalidraw]], and the [[Drawing 2025-04-21 12.00.48.excalidraw.light.png|light exported image]]%%
+
+($A$ and $B$ are non adjacent vertices)
 
 Colorings of $G$ with $\lambda$ colors are of two types:
 1. Colorings in which $A$ and $B$ have different colors
@@ -30,7 +35,8 @@ Conversely, any coloring of $G'$ will be of type $(1)$.
 Further, a coloring of $G$ of type $(2)$ will be a coloring of $G''$ obtained from $G$ by contracting the vertices $A$ and $B$.
 
 $G''$ looks like this:
-![[Drawing 2025-04-21 12.06.34.excalidraw|100]]
+![[Drawing 2025-04-21 12.06.34.excalidraw.dark.png|100]]
+%%[[Drawing 2025-04-21 12.06.34.excalidraw.md|🖋 Edit in Excalidraw]], and the [[Drawing 2025-04-21 12.06.34.excalidraw.light.png|light exported image]]%%
 
 conversely, any coloring of $G''$ corresponds to a type-2 coloring of $G$.
 

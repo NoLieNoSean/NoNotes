@@ -49,10 +49,3 @@ Intersecting $P$ with $E$ and taking $X=\mathbb{R}^{n}$, one obtains as a coroll
 
 [!Exercise]
 Find a counterexample to unique expressibility if $X$ is not assumed to be complete.
-
----
-
-[!Exercise]
-Show that there does not exist $f:\mathbb{R}\to \mathbb{R}$ that is only continuous on $\mathbb{Q}$.
-
-[!Proof]-

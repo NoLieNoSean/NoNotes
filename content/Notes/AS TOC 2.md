@@ -1,5 +1,3 @@
-`Vasudeva Nanjangud`
-
 # Problem 1
 
 I will refer to the first and second languages by $L_{1}$ and $L_{2}$ respectively.
@@ -42,7 +40,8 @@ $$
 $$
 $(a)$ Consider the word `aases`. This has two distinct parse trees in $P$:
 
-![[AS TOC 2 2025-09-06 23.32.22.excalidraw]]
+![[AS TOC 2 2025-09-06 23.32.22.excalidraw.dark.png]]
+%%[[AS TOC 2 2025-09-06 23.32.22.excalidraw.md|🖋 Edit in Excalidraw]], and the [[AS TOC 2 2025-09-06 23.32.22.excalidraw.light.png|light exported image]]%%
 
 Thus, $G$ is ambiguous.
 

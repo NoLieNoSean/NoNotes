@@ -55,7 +55,7 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 - [[LEC ALG1 22]] ✅
 	- Gram-Schmidt example, orthogonal decomposition theorem
 - [[LEC ALG1 23]] 
-
+%% 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted.
 >- [[ALG1_L1]] Intro, Vector spaces, Fields.
@@ -85,7 +85,7 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 >	- fdvsp
 >- [[TUT ALG1 1]]
 >- [[TUT ALG1 2]]
-
+ %%
 # Homework
 
 - [[ALG1_HW1.pdf|ALG1_HW1]]

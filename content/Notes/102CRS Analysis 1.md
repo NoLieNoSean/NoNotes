@@ -84,6 +84,7 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 - [[LEC ANA1 37]]
 - [[LEC ANA1 38]]
 
+%% 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted. Refer [[#Compiled Notes]] for the content form these lectures.
 >- [[ANA1_L1]] ✅
@@ -95,7 +96,7 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 >- [[LEC ANA1 7]] ✅
 >- [[LEC ANA1 8]] ✅
 >- [[LEC ANA1 9]] ✅
-
+ %%
 # Homework
 
 - [[ANA1_HW1.pdf|ANA1_HW1]], [[ANA1_HW1_Kulkarni_solutions.pdf|Solutions]] 

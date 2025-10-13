@@ -14,8 +14,6 @@ time: 15:32
 
 ^f5a704
 
-
-
 Examples of metrics on $C[0, 1]$ ($\subset B[0, 1]$), $C^{1}[0, 1]$, $C^{k}[0, 1]$, and $C^{\infty}[0, 1]$.
 $$
 \lVert f \rVert _{1, \infty}=\lVert f \rVert _{\infty}+\lVert f' \rVert _{\infty}.
@@ -34,8 +32,6 @@ $$
 
 The $1$-norm on $\mathscr{R}[0, 1]$ (Riemann integrable functions on $[0, 1]$) is a pseudo norm: $\lVert f \rVert_{1}=0$ does not imply $f=0$.
 
-For any pseudonorm
-
 ---
 
 Defined a topology. Set of all open sets in a metric space is a topology.
@@ -45,6 +41,13 @@ Exercise: In $C[0, 1]$, fix $f_{0}, g_{0}$. Show that $\{ h:g_{0}(t)< h(t)< f_{0
 ---
 
 
-Haussdorf metric
+> [!Proposition] Hausdorff metric
+> Let $(X, d)$ be a metric space and let $\mathcal{K}$ denote the family of all non-empty bounded closed subsets of $X$. For $A, B\in \mathcal{K}$, let
+> $$
+> \rho(A, B)=\inf \{ \epsilon> 0:A\subseteq N_{\epsilon}(B)\text{ and }B\subseteq N_{\epsilon}(A) \},
+> $$
+> where $N_{\epsilon}(A)=\{ x\in X:d(x, A)<\epsilon \}$. $(\mathcal{K}, \rho)$ is a metric space; $\rho$ is called the **Hausdorff metric**. 
+> 
 
+^e94696
 

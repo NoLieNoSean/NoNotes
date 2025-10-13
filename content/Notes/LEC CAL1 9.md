@@ -8,7 +8,7 @@ time: 11:50
 # Separable metric spaces
 
 > [!Definition]
-> A metric space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$
+> A metric space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$.
 
 > [!Warning]
 > The notion of **separable** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]].

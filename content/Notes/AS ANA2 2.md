@@ -4,9 +4,6 @@ tags:
 date: 2025-09-22
 time: 18:22
 ---
-`Vasudeva Nanjangud`
-
----
 # Problem 1
 
 Suppose for every $x\in S$, there exists a neighborhood $U_{s}$ such that $U_{s}\cap S$ is countable. $\{ U_{s} \}_{s\in S}$ is an open cover of $S$. Since every subset of a separable metric space is separable, $S$ is separable. By Lindelöf's covering theorem, there exists a countable subcover $\{ U_{s} \}_{s\in\alpha \subset S}$. This implies

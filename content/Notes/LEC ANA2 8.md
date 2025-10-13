@@ -164,3 +164,27 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 
 ^1a2743
 
+> [!Exercise]
+> 
+> Show that there does not exist $f:\mathbb{R}\to\mathbb{R}$ that is only continuous on $\mathbb{Q}$.
+> 
+> Recall [Thomae's function](https://en.wikipedia.org/wiki/Thomae%27s_function) as an example of a function which is continuous only on the irrationals; something must go pear shaped when we try to achieve the same for the rationals. First, observe that the set of discontinuities $B$ of any function from $\mathbb{R}$ to $\mathbb{R}$ is a countable union of closed sets (aka an $F_{\sigma}$ set):
+> $$
+> B=\bigcup_{n=1}^{\infty} \{ x\in \mathbb{R}:o(f, x)\geq 1/n \};
+> $$
+> 
+> see [[LEC CAL2 3, 4#^30212b]] and [[LEC CAL2 3, 4#^b75287]][^1]. Thus, if a function from $\mathbb{R}$ to $\mathbb{R}$ which is continuous only on $\mathbb{Q}$ existed, the irrationals would be a countable union of closed sets $\bigcup_{i=1}^{\infty}C_{i}$, but since the irrationals do not contain an interval, neither can any of the $C_{i}$. Therefore, each of the $C_{i}$ would be nowhere dense, and the irrationals would be a meagre set. It would follow that $\mathbb{R}$ is meagre, contradicting [[#^1a2743]].
+
+
+[^1]: These theorems require $f$ to be bounded, but this can dealt with by extending the definitions to allow for infinite oscillation. 
+
+
+[!Exercise]
+For $f:[0, 1]\to \mathbb{R}$, define
+$$
+(D^{+}f)(a)=\limsup_{x\to a^{+}}\frac{f(x)-f(a)}{x-a}.
+$$
+Prove that for each $a\in[0, 1]$ the set $\{ f\in C[0, 1]:D^{+}f(a)=\infty \}$ is a dense $G_{\delta}$ subset. (A set is said to be $G_{\delta}$ if it is a countable intersection of open sets.)
+
+
+I thought of consider the sets $S_{n}=\{ f\in C[0, 1]:D^{+}f(a)> n \}$ for $n\in \mathbb{N}$, but i do not think these are open.

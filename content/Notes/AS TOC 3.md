@@ -4,7 +4,6 @@ tags:
 date: 2025-10-05
 time: 11:39
 ---
-`Vasudeva S Nanjangud`
 # Problem 1
 
 ## Part a
@@ -18,7 +17,8 @@ Thus, $L$ is not context free.
 
 Unlabelled arrows are of type $\epsilon, \epsilon\to\epsilon$. $\overline{\Sigma}$ represents $\{ a, b \}$. The transition $z, y\to\epsilon$ represents every transition of its type where $z\in \overline{\Sigma}$, $y\in \overline{\Sigma}$, and $z\ne y$.
 
-![[AS TOC 3 2025-10-06 01.08.18.excalidraw|900]]
+![[AS TOC 3 2025-10-06 01.08.18.excalidraw.dark.png]]
+%%[[AS TOC 3 2025-10-06 01.08.18.excalidraw.md|🖋 Edit in Excalidraw]]%%
 
 
 
@@ -90,7 +90,8 @@ Let $\pmb{\textsf{P}}'$ be the set of newly defined productions. Let $\mathbf{G}
 > > 
 > > $(\subseteq)$ Suppose $w\in L(\mathbf{G}')$, and $u$ be the first letter of $w$. It is clear from the definition of $\pmb{\textsf{P}}'$ that the derivation tree of $w$ must have a chain of non-terminals $S_{0}, \tilde{A}_{1}, \tilde{A}_{2}, \dots, \tilde{A}_{n}$, where each $\tilde{A}_{i}\in \pmb{\textsf{V}}'$, $\tilde{A}_{i}=A_{i}^{\mathcal{R}}$ or $\tilde{A}_{i}=A_{i}^{\mathcal{L}}$ for some $A_{i}\in \pmb{\textsf{V}}$, and $A_{n}=S$. Denote the child of $\tilde{A}_{i}$ not in $\pmb{\textsf{V}}'$ by $B_{i}$. Here's an example:
 > > 
-> > ![[AS TOC 3 2025-10-05 19.34.21.excalidraw|300]]
+> > ![[AS TOC 3 2025-10-05 19.34.21.excalidraw.dark.png|400]]
+%%[[AS TOC 3 2025-10-05 19.34.21.excalidraw.md|🖋 Edit in Excalidraw]], and the [[AS TOC 3 2025-10-05 19.34.21.excalidraw.light.png|light exported image]]%%
 > >
 > > 
 > > For $2\leq i\leq n$, depending on weather $\tilde{A}_{i}$ is $A^{\mathcal{R}}_{i}$ or $A_{i}^{\mathcal{L}}$, we have $A_{i}\to B_{i}A_{i-1}$ or $A_{i}\to A_{i-1}B_{i}$ in $\pmb{\textsf{P}}$ respectively. If $\tilde{A}_{1}=A_{1}^{\mathcal{R}}$, then $A_{1}\to B_{1}U\in \pmb{\textsf{P}}$, else if $\tilde{A}_{1}=A_{1}^{\mathcal{L}}$, then $A_{1}\to UB_{1}\in \pmb{\textsf{P}}$, where $U$ is such that $U\to u\in \pmb{\textsf{P}}$. Let $\alpha_{1}<\alpha_{2}<\dots<\alpha_{p}$ be such that $\tilde{A}_{\alpha_{i}}=A^{\mathcal{R}}_{\alpha_{i}}$. Similarly, let $\beta_{1}<\beta_{2}<\dots<\beta_{q}$ be such that $\tilde{A}_{\beta_{i}}=A^{\mathcal{L}}_{\beta_{i}}$. Then, we have the derivation

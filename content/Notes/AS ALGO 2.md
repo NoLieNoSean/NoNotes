@@ -4,7 +4,6 @@ tags:
 date: 2025-10-02
 time: 19:23
 ---
-`Vasudeva S Nanjangud`
 # Problem 1
 
 $$
@@ -93,7 +92,8 @@ Suppose $G$ has $n$ vertices. Pick a point $x_{1}\in V(G)$ and consider the cut 
 
 The converse is not true. Consider the following graph:
 
-![[AS ALGO 2 2025-10-06 17.47.53.excalidraw|200]]
+![[AS ALGO 2 2025-10-13 18.53.56.excalidraw.svg]]
+%%[[AS ALGO 2 2025-10-13 18.53.56.excalidraw.md|🖋 Edit in Excalidraw]]%%
 
 It has a unique minimum spanning tree, namely, the entire graph, but the cut displayed does not permit a unique minimum weight crossing edge.
 
