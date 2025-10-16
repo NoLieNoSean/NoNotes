@@ -1,18 +1,30 @@
 ---
-tags: 
-date: "2025-10-09"
-time: "10:34"
+tags:
+  - CAL2
+  - Lecture
+date: 2025-10-09
+time: 10:34
 ---
 # Change of variables
 
+If $g:[a, b]\to \mathbb{R}$ is continuously differentiable and $f:\mathbb{R}\to \mathbb{R}$ is continuous, then
+$$
+\int_{g(a)}^{g(b)} f =\int_{a}^{b} (f\circ g)\cdot g' . 
+$$
+
+
+[!Theorem]
 Let $A\subseteq \mathbb{R}^{n}$ be open and let $g:A\to \mathbb{R}^{n}$ be a 1-1, continuously differentiable function such that $\det g'(x)\ne 0$ for all $x\in A$. Suppose that $f:g(A)\to \mathbb{R}$ is integrable[^1]. Then, 
 $$
 \int_{g(A)}f=\int_{A}(f\circ g)|\det g'|.
 $$
-[^1]: Note that $g(A)$ is open.
+
 
 [!Proof]-
 
+
+
+[^1]: Note that $g(A)$ is open.
 
 [!Example]
 Evaluate:
@@ -28,7 +40,7 @@ g'(r, \theta)=\begin{bmatrix}
 $$
 $\det g'=r$. Thus, the above integral is equal to
 $$
-\int_{A}e^{ 1-r^{2} }r=\int_{0}^{\pi/2} \int_{0}^{1} e^{ 1-r^{2} } \, dr  \, d\theta=\pi(e-1)/4
+\int_{A}e^{ 1-r^{2} }r=\int_{0}^{\pi/2} \int_{0}^{1} re^{ 1-r^{2} } \, dr  \, d\theta=\pi(e-1)/4
 $$
 
 [!Example]

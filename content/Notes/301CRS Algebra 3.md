@@ -18,7 +18,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 [[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
 [[LEC ALG3 2]] ✅ Quotients and ideals
-[[LEC ALG3 3]] ✅ Modules (?)
+[[LEC ALG3 3]] ✅ Modules
 [[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals
 [[LEC ALG3 5]] ✅ Radicals
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
@@ -26,10 +26,10 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 8]] ✅ Ring of fractions
 [[LEC ALG3 9]] ✅ Euclidean domains and unique factorization domains
 [[LEC ALG3 10]] ✅ Gauss's Lemma
-[[LEC ALG3 11]]
-[[LEC ALG3 12]]
-[[LEC ALG3 13]]
-
+[[LEC ALG3 11]] Gaussian primes
+[[LEC ALG3 12]] More on factoring
+[[LEC ALG3 13]] Eisenstein's Criterion
+[[LEC ALG3 15]] Fields!
 
 [[Stuff I'll look at later]]
 # Tutorials
@@ -39,3 +39,6 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[TUT ALG3 3]]
 [[TUT ALG3 4]]
 [[TUT ALG3 5]]
+[[TUT ALG3 6]]
+
+[[TST ALG3 Midsem]]

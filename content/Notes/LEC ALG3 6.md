@@ -21,7 +21,7 @@ time: 09:21
 
 The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if $A+B=R$.
 
-> [!Theorem]
+> [!Theorem] Chinese remainder theorem
 > Let $A_{1}, \dots, A_{k}$ be ideals in $R$. The map $R\to R/A_{1}\times\dots \times R/A_{k}$ defined by 
 > $$
 > r\mapsto(r+A_{1}, \dots, r+A_{k})
@@ -62,7 +62,9 @@ The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if
 > 
 
 
-[^2]:In any commutative ring, $I+J=R$ implies $I^{m}+J^{k}=R$ for all ideals $I, J\subseteq R$ and positive integers $m, k$ (just raise the identity $i+j=1$ to the power $m+k$).
+[^2]: In any commutative ring, $I+J=R$ implies $I^{m}+J^{k}=R$ for all ideals $I, J\subseteq R$ and positive integers $m, k$ (just raise the identity $i+j=1$ to the power $m+k$).
 
 [^1]:$\langle a \rangle\langle b \rangle=\langle ab \rangle$ in commutative rings.
+
+
 

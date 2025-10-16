@@ -6,13 +6,16 @@ tags:
 date: 2025-08-12
 time: 10:31
 ---
+# Integrating on closed rectangles
 
-> [!Recall]
-> Let $R\subseteq \mathbb{R}^{n}$ be a rectangle. Let $f:R\to \mathbb{R}$ be bounded. Partitions of $R$ are products of partitions. $U(P, f)$ and $L(P, f)$ are defined analogously to the one variable case. As expected, $f$ is said to be Riemann integrable on $R$ if
+> [!Definition]
+> Let $R\subseteq \mathbb{R}^{n}$ be a rectangle. Let $f:R\to \mathbb{R}$ be bounded. Partitions of $R$ are products of partitions of projections of $R$. $U(P, f)$ and $L(P, f)$ are defined analogously to the one variable case. As expected, $f$ is said to be Riemann integrable on $R$ if
 > $$
 > \inf_{P}U(P, f)=\sup_{P}L(P, f)\equiv \int_{R}f.
 > $$
 > 
+
+^72104f
 
 > [!Example]
 > Let $f:R\to \mathbb{R}$ be the constant function, $f(x)=c$ for all $x\in R$. Then, 
@@ -30,10 +33,6 @@ time: 10:31
 > \end{cases}
 > $$
 > Clearly, $L(P, f)=0$ and $U(P, f)=1$ for every partition $P$. It follows that $f$ is not integrable on $[0, 1]\times[0, 1]$.
-
----
-
-# Characterizing integrable functions on closed rectangles
 
 ## Measure zero and content zero
 
@@ -104,9 +103,7 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 > > Let $B=\{ x\in A:o(f, x)\geq \epsilon \}$. We will show that $\mathbb{R}^{n}-B$ is open. If $x\in \mathbb{R}^{n}-B$, either $x\not\in A$ or $x\in A$ and $o(f, x)<\epsilon$. In the first case, since $A$ is open, there is a neighborhood $N$ of $x$ such that $N\subseteq \mathbb{R}^{n}-A\subseteq \mathbb{R}^{n}-B$. In the second case, there is a $\delta> 0$ such that $M(x, f, \delta)-m(x, f, \delta)<\epsilon$. For any $y\in B_{\delta}(x)$, there exists $\delta_{1}> 0$ such that $B_{\delta_{1}}(y)\subset B_{\delta}(x)$; thus $M(y, f, \delta_{1})-m(y, f, \delta_{1})<\epsilon$, and consequently $o(f, y)<\epsilon$. Therefore, $B_{\delta}(x)\subseteq \mathbb{R}^{n}-B$.
 
 ^b75287
-
-^425f3e
-## Necessary and sufficient condition for integrability
+## Characterizing integrable functions on closed rectangles
 
 > [!Lemma]
 > Let $R\subseteq \mathbb{R}^{n}$ be a closed rectangle, $f:R\to \mathbb{R}$ bounded function such that $o(f, x)\leq \epsilon$ for all $x\in R$. Then, there exists a partition $P$ such that $U(P, f)-L(P, f)<\epsilon \text{Vol}(R)$.

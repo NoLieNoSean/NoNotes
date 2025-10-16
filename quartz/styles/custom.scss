@@ -2,9 +2,10 @@
 @use "./variables.scss" as *;
 
 .page-title>a {
-    // color: #7a7aff;
+    color: rgb(141, 197, 228) !important;
     text-decoration: none !important;
 }
+
 
 
 .TikzSvg {
@@ -78,6 +79,10 @@
   font-size: 0.7rem;
   font-family: monospace;
   filter: opacity(0.5);
+}
+
+em, strong{
+    color: #9CB6FF !important;
 }
 
 @font-face {

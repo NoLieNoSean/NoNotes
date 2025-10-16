@@ -6,7 +6,7 @@ tags:
 date: 2025-08-19
 time: 10:30
 ---
-# Integrating over general sets
+# Integrating over Jordan measurable sets
 
 > [!Definition]
 > If $C\subset \mathbb{R}^{n}$, the **characteristic function** $\chi_{C}$ of $C$ is defined by
@@ -23,6 +23,8 @@ time: 10:30
 > $$
 > \int_{C}f:=\int_{R}f\chi_{C}.
 > $$
+
+^97bced
 
 Check that $R$ can be replaced by any rectangle $R'$ which also contains $C$ and on which $f$ is bounded.
 

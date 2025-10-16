@@ -31,3 +31,20 @@ see @butlerCLASSIFICATIONGAUSSIANPRIMES
 > On the other hand, $x^{2}+1$ IS reducible in $\mathbb{F}_{5}[x]$, so $5$ is not prime in $\mathbb{Z}[i]$.
 
 If $I$ is an ideal in a ring $R$, then $\frac{R}{I}[x]\cong \frac{R[x]}{IR[x]}$.
+
+
+---
+
+
+[!Exercise]
+Let $p$ be a prime number and $n=p+1$. Let $f(x)=x^{2p}+nx+n\in Q[\sqrt[n]{p  }][x]$. Is $f(x)$ irreducible? 
+
+[!Lemma]
+$d\ | \ a+bi$ iff $d\ | \ a$ and $d\ | \ b$. 
+
+[!Lemma]
+Let $\pi$ be a Gauss prime. Then $\pi \overline{\pi}$ is either a prime integer or the square of a prime integer.
+
+[!Proof]-
+$\pi \overline{\pi}\in \mathbb{Z}$. 
+

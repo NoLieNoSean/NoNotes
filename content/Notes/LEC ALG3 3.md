@@ -2,12 +2,13 @@
 tags:
   - ALG3
   - Lecture
+  - Processed
 date: 2025-08-12
 time: 09:17
 ---
 # Modules
 
-The theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}(G)$ is a ring for every abelian group $G$ (see @aluffiAlgebraChapter02009 III.1.1). Recall that we defined [[LEC ALG2 7#Group actions|group actions]] as group homomorphisms from a fixed group to the group of automorphisms of a set. Analogously, the left-action of a ring $R$ on an abelian group $M$ is a homomorphism of rings $\sigma:R\to \text{End}_{\textsf{Ab}}(M)$. The uncurried version $\rho$ has type $R\times M\to M$, with the relation between them given by $\rho(r, m)=\sigma(r)(m)$. $\rho(r, m)$ is denoted by $rm$. 
+The theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}(G)$ is a ring for every abelian group $G$ (see @aluffiAlgebraChapter02009 III.1.1). Recall that we defined [[LEC ALG2 7#Group actions|group actions]] as group homomorphisms from a fixed group to the group of automorphisms of a set. Analogously, *the left-action of a ring $R$ on an abelian group $M$ is a homomorphism of rings $\sigma:R\to \text{End}_{\textsf{Ab}}(M)$*. The uncurried version $\rho$ has type $R\times M\to M$, with the relation between them given by $\rho(r, m)=\sigma(r)(m)$. $\rho(r, m)$ is denoted by $rm$. 
 
 > [!Definition] Module
 > Let $R$ be a ring (with $1$). A **left $R$ module** is an additive abelian group $M$ with the operation $R\times M\to M$ , $(r, m)\mapsto rm$ with the following axioms
@@ -17,11 +18,22 @@ The theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}
 > 4. $1m=m$
 > 
 
-Ditto for right $R$ module. Similar to [[LEC ALG2 7#^bee0cf|right group actions]], a right $R$-module structure may be identified with a left-$R^{\circ}$ module structure, where $R^{\circ}$ is the 'opposite ring' obtained by reversing the order of multiplication. However, unlike the case for groups, $R$ and $R^{\circ}$ are not isomorphic in general. Take 'module' to mean 'left module'.
+Ditto for right $R$ module. Similar to [[LEC ALG2 7#^bee0cf|right group actions]], a right $R$-module structure may be identified with a left-$R^{\circ}$ module structure, where $R^{\circ}$ is the 'opposite ring' obtained by reversing the order of multiplication. However, unlike the case for groups, $R$ and $R^{\circ}$ are *not isomorphic in general*. Take 'module' to mean 'left module'.
 
 Some trivial facts:
 1. $0\cdot m=0$;
 2. $(-1)\cdot m=-m$.
+
+> [!Proposition]
+> Every abelian group is a $\mathbb{Z}$-module, in exactly one way.
+> 
+> > [!Proof]-
+> > Let $G$ be an abelian group. Since $\mathbb{Z}$ is initial in $\textsf{Ring}$, there exists exactly one homomorphism
+> > $$
+> > \mathbb{Z}\to\text{End}_{\textsf{Ab}}(G).
+> > $$
+> > 
+> 
 
 
 > [!Definition]

@@ -60,7 +60,7 @@
 > > $$
 > > f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})=\sum_{j=1}^{n} [f(\mathbf{x}+\mathbf{v}_{j})-f(\mathbf{x}+\mathbf{v}_{j-1})].
 > > $$
-> > Since $\lVert \mathbf{v}_{k} \rVert< r$ for $1\leq k\leq n$ and sine $S$ is convex, the segments with end points $\mathbf{x}+\mathbf{v}_{j-1}$ and $\mathbf{x}+\mathbf{v}_{j}$ lie in $S$. Use the mean value theorem to write the $j$th summand as 
+> > Since $\lVert \mathbf{v}_{k} \rVert< r$ for $1\leq k\leq n$ and since $S$ is convex, the segments with end points $\mathbf{x}+\mathbf{v}_{j-1}$ and $\mathbf{x}+\mathbf{v}_{j}$ lie in $S$. Use the mean value theorem to write the $j$th summand as 
 > > $$
 > > h_{j}D_{j}f(\mathbf{x}+\mathbf{v}_{j-1}+\theta_{j}h_{j}\mathbf{e}_{j})
 > > $$

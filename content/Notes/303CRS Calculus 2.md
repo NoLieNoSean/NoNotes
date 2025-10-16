@@ -19,7 +19,6 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 
 Intermezzo: [[203CRS Calculus 1|CAL 1]] review
 
-
 [[LEC CAL2 7]] Partitions of unity
 [[LEC CAL2 8]] Change of variables
 
@@ -28,6 +27,7 @@ Intermezzo: [[203CRS Calculus 1|CAL 1]] review
 [[TUT CAL2 1]] $S^{1}$ has measure zero in $\mathbb{R}^{2}$
 [[TUT CAL2 2]] Sard's Theorem
 [[TUT CAL2 3]] The Rank Theorem
+[[TUT CAL2 4]]
 
 ---
 
