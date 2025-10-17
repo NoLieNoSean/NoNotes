@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-14
 time: 09:10
+id: "109"
 ---
 # Quotients of polynomial rings
 

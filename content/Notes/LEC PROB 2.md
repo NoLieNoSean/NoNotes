@@ -1,3 +1,7 @@
+---
+id: "230"
+---
+
 ## More properties of the probability function
 
 $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.

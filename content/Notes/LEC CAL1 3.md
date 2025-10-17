@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-10
 time: 11:50
+id: "172"
 ---
 # Topological properties of linear maps
 

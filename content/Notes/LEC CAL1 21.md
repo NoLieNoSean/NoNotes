@@ -1,3 +1,7 @@
+---
+id: "190"
+---
+
 # Functions with non-zero Jacobian determinant
 
 See @apostolMathematicalAnalysis1985 [p. 369]

@@ -1,3 +1,7 @@
+---
+id: "226"
+---
+
 We know that the electric field at $\mathbf{r}$ is given by
 
 $$

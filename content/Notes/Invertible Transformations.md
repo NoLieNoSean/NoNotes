@@ -1,6 +1,7 @@
 ---
 tags:
   - ALG1
+id: "69"
 ---
 
 ## Left and right invertibility

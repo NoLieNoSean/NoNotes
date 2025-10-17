@@ -1,3 +1,7 @@
+---
+id: "238"
+---
+
 # Distributions of sums and quotients
 
 ## Distribution of X+Y

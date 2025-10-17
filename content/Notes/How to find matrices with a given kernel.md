@@ -1,3 +1,8 @@
+---
+id: "55"
+---
+
+ 
  Let $f_{A}:\mathbb{R}^{c}\to \mathbb{R}^{r}$. Let $W$ be a subspace of $\mathbb{R}^{c}$ with basis vectors $\mathbf{w}_{1}, \mathbf{w}_{2}, \dots, \mathbf{w}_{n}$, where $n\le c$. If $W$ is the kernel of $A$, find all possible matrices $A$.
 
 ## Method 1

@@ -4,6 +4,7 @@ tags:
   - Tutorial
 date: 2025-08-21
 time: 10:34
+id: "305"
 ---
 We will show that $S^{1}=\{ (x, y)\ | \ x^{2}+y^{2}=1 \}$ has [[LEC CAL2 3, 4#^aeb6a3|measure zero]] in $\mathbb{R}^{^{2}}$.
 

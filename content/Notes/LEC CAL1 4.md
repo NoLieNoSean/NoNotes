@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-17
 time: 11:50
+id: "173"
 ---
 Recall what an [[LEC ALG1 21#Inner Product Spaces|inner product space]] is. Now, define $C[a, b]\equiv \{ f:[a, b]\to \mathbb{C}:f\text{ is continuous} \}$. Define
 $$

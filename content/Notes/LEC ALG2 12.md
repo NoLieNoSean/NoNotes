@@ -1,3 +1,7 @@
+---
+id: "101"
+---
+
 ## Simplicity of An
 
 > [!Theorem]

@@ -2,8 +2,10 @@
 tags:
   - ALG3
   - Lecture
+  - Processed
 date: 2025-09-09
 time: 09:23
+id: "114"
 ---
 # Euclidean Domains
 
@@ -36,7 +38,7 @@ In particular, every Euclidean domain is a principal ideal domain.
 > - $\mathbb{Z}[i]$ is a euclidean domain, with $d(a)=|a|^{2}$. Division with remainder is not unique: There may be as many as four choices for the remainder. See @artinAlgebra2011 [p. 361]. 
 > - $\mathbb{Z}[x]$ is not a Euclidean domain, since it is not a principal ideal domain. $\mathbb{Q}[x]$ is a Euclidean domain.
 > - $\mathbb{Z}[\sqrt{ -5 }]$ is not a Euclidean domain, since it is not a principal domain. See @dummitAbstractAlgebra2004 [p. 272]. It is also not a UFD, since $6$ does not have unique factorization. Factorization does terminate, however: this can be shown using the field norm on $\mathbb{Q}[\sqrt{ -5 }]$. 
-> - $\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not a Euclidean domain. See [[TUT ALG3 4#Problem 9]].
+> - $\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not a Euclidean domain. See [[TUT ALG3 4#^b57acd]].
 > - A polynomial ring $\mathbb{F}[x]$ in one variable over a field $\mathbb{F}$ is a Euclidean domain, with $d(f)$ equal to the degree of $f$.
 
 ## Greatest common divisors

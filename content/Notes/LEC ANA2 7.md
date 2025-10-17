@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-09-17
 time: 15:36
+id: "167"
 ---
 > [!Remark]
 > Recall that a set is compact iff it is complete and totally bounded. Compactness is a topological property, but completeness and totally boundedness are not; they depend on the metric. Let $d_{1}$ and $d_{2}$ be metrics on $\mathbb{N}$, as defined [[LEC ANA2 3#Completeness|here]]. We have seen that while $(\mathbb{N}, d_{1})$ and $(\mathbb{N} ,d_{2})$ are the same topological space (they have the same open sets), the former is complete and the latter is not. Also, $(\mathbb{N}, d_{1})$ is not totally bounded, but $(\mathbb{N}, d_{2})$ is!

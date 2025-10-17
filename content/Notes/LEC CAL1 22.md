@@ -1,3 +1,7 @@
+---
+id: "191"
+---
+
 # Implicit function theorem
 
 > [!Info] Notation

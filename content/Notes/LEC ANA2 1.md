@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-18
 time: 15:26
+id: "161"
 ---
 Reviewed metric spaces, vector spaces, [[LEC ALG1 21#Normed spaces|normed spaces]], and the [[LEC CAL1 3#Equivalence of norms|equivalence of norms in finite dimensional vector spaces]]. 
 

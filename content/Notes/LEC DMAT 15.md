@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-03-12
 time: 11:51
+id: "213"
 ---
 ## The cycle index polynomial
 

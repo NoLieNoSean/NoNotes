@@ -1,8 +1,41 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
+
+// colors
+
+
+
+:root[saved-theme="dark"] {
+    em, strong{
+        color: #9CB6FF !important;
+    }
+    em > *, strong > *{
+        color: #9CB6FF !important;
+    }
+    a{
+        color: rgb(141, 197, 228) !important;
+    }
+}
+
+
+// :root[saved-theme="light"] {
+//     em, strong{
+//         color: #9CB6FF !important;
+//     }
+//     em > *, strong > *{
+//         color: #9CB6FF !important;
+//     }
+// }
+
+.katex{
+    font-size: 1em !important;
+}
+
+
+
 .page-title>a {
-    color: rgb(141, 197, 228) !important;
+    // color: rgb(141, 197, 228) !important;
     text-decoration: none !important;
 }
 
@@ -79,11 +112,10 @@
   font-size: 0.7rem;
   font-family: monospace;
   filter: opacity(0.5);
+  font-style: normal;
 }
 
-em, strong{
-    color: #9CB6FF !important;
-}
+
 
 @font-face {
     font-family: cmb10;

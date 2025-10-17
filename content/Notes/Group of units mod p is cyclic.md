@@ -1,3 +1,7 @@
+---
+id: "52"
+---
+
 @hersteinAbstractAlgebra1996 [p. 66], problems 37 to 40
 
 The set of all positive integers less than a given positive integer $n$ and co-prime to $n$ [[LEC ALG2 1#Groups|form a group]] under multiplication modulo $n$, which is denoted by $U_{n}$. To be clear, $U_{n}$ in general can have any group structure: $U_{6}\cong C_{3}$, $U_{8}\cong V_{4}$, $U_{10}\cong C_{4}$, $U_{15}\cong C_{2}\times C_{4}$, etc. However, we will prove that when $n$ is prime (denoted by replacing $n$ with $p$), $U_{p}$ is cyclic.

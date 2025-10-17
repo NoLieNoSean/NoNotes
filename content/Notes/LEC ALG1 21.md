@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2024-11-07
 time: 14:00
+id: "87"
 ---
 # Inner Product Spaces
 

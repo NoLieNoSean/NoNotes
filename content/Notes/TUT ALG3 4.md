@@ -2,6 +2,7 @@
 tags: 
 date: "2025-09-14"
 time: "19:48"
+id: "302"
 ---
 # Problem 1
 
@@ -92,8 +93,10 @@ Denote $(1+\sqrt{ -19 })/2$ by $\omega$.
 > > If $R$ is a euclidean domain, it must have a universal side divisor $u\in R-\{ \pm 1, 0 \}$. Take $x=2$, so $u$ must divide $2-0$ or $2\pm 1$, that is, $u$ is a non-unit divisor of $2$ or $3$. Use the norm to argue that the the only possible values for $u$ are $\pm 2$ or $\pm 3$. Now, take $x=\omega$, and note that none of $\omega$, $\omega\pm 1$ are divisible by $\pm 2$ or $\pm 3$, so none of these are universal side divisors.
 > 
 
-[!Claim]
-$R$ is a PID.
+> [!Claim]
+> $R$ is a PID. 
+
+^b57acd
 
 [!Proof]-
 Let $I$ be an ideal in $R$. For all $a+b\omega\in R$, the square of the complex norm is a nonnegative integer:

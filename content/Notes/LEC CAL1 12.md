@@ -1,3 +1,7 @@
+---
+id: "181"
+---
+
 ## Monotonicity and Bimonotonicity
 
 > [!Definition]

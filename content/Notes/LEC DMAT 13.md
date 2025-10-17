@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-02-26
 time: 11:51
+id: "211"
 ---
 ## Edge Reconstruction Conjecture
 

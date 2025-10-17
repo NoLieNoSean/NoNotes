@@ -4,6 +4,7 @@ tags:
   - TOC
 date: 2025-08-06
 time: 09:14
+id: "241"
 ---
 
 # Finite state automata

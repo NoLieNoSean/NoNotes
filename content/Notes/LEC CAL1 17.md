@@ -1,3 +1,7 @@
+---
+id: "186"
+---
+
 # The chain rule
 
 > [!Theorem]

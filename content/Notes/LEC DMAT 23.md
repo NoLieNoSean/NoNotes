@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-04-12
 time: 12:00
+id: "221"
 ---
 # Probabilistic methods in DM: Example 1
 

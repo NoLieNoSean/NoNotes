@@ -1,3 +1,7 @@
+---
+id: "192"
+---
+
 ## Extrema of real valued functions of one variable
 
 > [!Theorem]

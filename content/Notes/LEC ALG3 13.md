@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-10-14
 time: 09:13
+id: "118"
 ---
 # Eisenstein's Criterion
 

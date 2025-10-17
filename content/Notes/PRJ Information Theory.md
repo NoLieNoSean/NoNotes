@@ -2,6 +2,7 @@
 draft: true
 tags:
   - MOC
+id: "263"
 ---
 
 https://www.csa.iisc.ac.in/~arindamkhan/courses/toolkit21/TheoristsToolkit.html, lectures 8 through 11

@@ -1,3 +1,7 @@
+---
+id: "278"
+---
+
 [!Fact]
 Let $k$ be a field. Then, $S=k[x_{1}, \dots, x_{n}]$ is a UFD. This follows from the fact that any regular local ring is a UFD. A Local ring $R$ is one which has a unique maximal ideal $\mathfrak{m}$. If a ring is regular local, then $\mathfrak{m}/\mathfrak{m}^{2}$ is a vector space over $R/\mathfrak{m}$. 
 

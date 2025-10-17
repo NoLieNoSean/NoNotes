@@ -2,6 +2,7 @@
 tags:
   - MOC
 date: August 2024
+id: "40"
 ---
 CMI, Aug-Nov 2024, S P Suresh 
 

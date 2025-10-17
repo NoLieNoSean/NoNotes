@@ -1,3 +1,7 @@
+---
+id: "105"
+---
+
 > [!Definition]
 > An **isometry** of $\mathbb{R}^{n}$ is a distance preserving map $f$ from $\mathbb{R}^{n}$ to itself, a map such that, for all $u$ and $v$ in $\mathbb{R}^{n}$, 
 > $$

@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-04-16
 time: 11:58
+id: "222"
 ---
 # Probabilistic methods in DM: Example 2
 

@@ -3,6 +3,7 @@ tags:
 date: 2025-09-15
 time: 17:55
 draft: true
+id: "261"
 ---
 > [!Note]- Images 1
 >
@@ -27,19 +28,19 @@ draft: true
 
 ```Macaulay-2
 Extremal= q-> (
-     S=set {1};
-     for i from 1 to q  do S=S+set{i};
-     PS=subsets S;
-     V={};
-     for i from 1 to #PS-1 do V=V|{x_{PS#i}};
-     R=QQ[V];
-     Elist={};
-     for i from 1 to q do (
-      e_i=1;
-      for j from 0 to #PS-1 do  if isSubset(set{i},PS#j) then
-        e_i=e_i*x_{PS#j};
+    S=set {1};
+    for i from 1 to q  do S=S+set{i};
+    PS=subsets S;
+    V={};
+    for i from 1 to #PS-1 do V=V|{x_{PS#i}};
+    R=QQ[V];
+    Elist={};
+    for i from 1 to q do (
+	    e_i=1;
+	    for j from 0 to #PS-1 do  if isSubset(set{i},PS#j) then
+	        e_i=e_i*x_{PS#j};
         Elist=Elist|{e_i};
-        );
+    );
     return monomialIdeal(Elist);
 )
 ```
@@ -75,12 +76,16 @@ $$
 $$
 however, $I\subseteq(I:J)$ always holds, so $(I:J)=I$, and by [[#^2e6cc7]], $J\not\in\text{Ass}(I)$.
 
-> [!Corollary]
+> [!Theorem]
 > Let $I$ be a monomial ideal and $x_{1}, \dots, x_{n}$ be some variables. If $I:(x_{1}, \dots, x_{n})=I$, then no associated prime of $I$ contains $(x_{1}, \dots, x_{n})$.
 
 ## Finding $\text{astab}(\mathcal{E}_{2})$
 
 $\mathcal{E}_{2}=(y_{1}y_{12}, y_{2}y_{12})$. It is easily seen that $\text{Min}(\mathcal{E}_{2})=\{ (y_{1}, y_{2}), (y_{12}) \}$ by [[Primes E4 Preliminaries#^5f7307]] and [[Primes E4 Preliminaries#^716dce]]. We can say more:
+
+> [!Claim]
+> $\text{Ass}(\mathcal{E}_{3}^{r})=\text{Min}(\mathcal{E}_{3}^{2})\cup \{ (y_{12}, y_{13}, y_{23}) \}$ for all $r\geq 2$.
+
 
 > [!Claim]
 > $\text{Ass}(\mathcal{E}_{2}^{r})=\text{Min}(\mathcal{E}_{2})$ for all $r\geq 2$. 
@@ -96,9 +101,6 @@ $(y_{12}, y_{13}, y_{23})\in\text{Ass}(\mathcal{E}^{r}_{3})$ for all $r\geq 2$.
 [!Proof]-
 Find $c_{r}$ such that $(x_{12}, x_{23}, x_{31})=\mathcal{E}^{r}_{3}:(c_{r})$.
 
-![[1759420391568.jpg]]
-
-
 
 > [!Note]- Images 2
 > 
@@ -110,6 +112,3 @@ Find $c_{r}$ such that $(x_{12}, x_{23}, x_{31})=\mathcal{E}^{r}_{3}:(c_{r})$.
 > ![[1759420391568.jpg]]
 
 
-
-> [!Claim]
-> $\text{Ass}(\mathcal{E}_{3}^{r})=\text{Min}(\mathcal{E}_{3}^{2})\cup \{ (y_{12}, y_{13}, y_{23}) \}$ for all $r\geq 2$.

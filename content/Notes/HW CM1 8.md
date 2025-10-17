@@ -1,3 +1,8 @@
+---
+id: "62"
+---
+
+
 ## 6.25
 
 Let the line joining the pivot to the mass make an angle $\theta$ with the rod of length $l$. 

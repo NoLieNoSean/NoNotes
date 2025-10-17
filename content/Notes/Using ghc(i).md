@@ -1,3 +1,7 @@
+---
+id: "311"
+---
+
 Compile a script using `ghc <file name>`. This generates a binary whose name does not have the .hs extension.
 A script must contain a main function to compile.
 

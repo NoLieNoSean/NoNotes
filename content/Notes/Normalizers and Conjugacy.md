@@ -1,6 +1,7 @@
 ---
 tags:
   - ALG2
+id: "257"
 ---
 Is there a way to measure how close a subgroup is to being normal? We have said that a subgroup $H$ is normal when *every* element $g\in G$ satisfies $gH=Hg$. So a simple way to measure how close a subgroup is to normal is to check how many of the $g\in G$ satisfy this requirement. The set of $g\in G$ which satisfy $gH=Hg$ is called the normalizer of $H$ in $G$, denoted by $N_{G}(H)$. 
 - At minimum, we know that every $g\in H$ satisfies $gH=Hg$.

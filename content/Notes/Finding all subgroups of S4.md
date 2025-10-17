@@ -1,3 +1,8 @@
+---
+id: "48"
+---
+
+
 $|S_{4}|=24$. So, the possible orders of subgroups of $S_{4}$ are 12, 8, 6, 4, 3, 2, 1.
 
 $S_{4}$ is composed of the following elements:

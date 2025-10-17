@@ -1,3 +1,8 @@
+---
+id: "56"
+---
+
+
 ## 3.30
 ![[Pasted image 20240827163402.png|300]]
 Let $A$ have acceleration $a$ and tension $T$ acting upward. Then, from the conservation of string, pulley 1 must have upward acceleration of $\frac{a}{2}$, pulley 2 $\frac{a}{4}$, and pulley $n$ (and hence $B$) $\frac{a}{2^n}$. Similarly, if $A$ experiences an upward tension of $T$, pulley 1 must experience a total upward tension of $2T$, pulley 2 $4T$, and pulley $n$ (and hence $B$) $2^nT$. 

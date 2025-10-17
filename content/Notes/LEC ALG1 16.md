@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2024-10-15
 time: 14:00
+id: "82"
 ---
 ## Another formula for determinants
 

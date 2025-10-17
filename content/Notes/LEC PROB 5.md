@@ -1,3 +1,7 @@
+---
+id: "233"
+---
+
 ## Discrete Random Vector
 
 > [!Definition]

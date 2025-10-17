@@ -2,6 +2,7 @@
 tags: 
 date: "2025-09-19"
 time: "11:59"
+id: "124"
 ---
 We looked at merge sort ($O(n\log n)$, $O(n)$), Insertion sort ($O(n^{2})$, $O(1)$), and quick sort $(O(n^{2}), O(1))$. 
 

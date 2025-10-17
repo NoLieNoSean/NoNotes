@@ -1,3 +1,8 @@
+---
+id: "33"
+---
+
+
 The Chinese Remainder Theorem is a tool for solving systems of linear congruences of the following form: $a_1x \equiv b_1 \pmod {m_1}, ....,a_{n-1}x \equiv \pmod{m_{n-1}}, a_nx \equiv b_n \pmod {m_n}$.
 
 > [!Theorem] Chinese remainder theorem

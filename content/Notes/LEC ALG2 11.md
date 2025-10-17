@@ -1,3 +1,7 @@
+---
+id: "100"
+---
+
 ## Sylow's theorems
 
 Note that the following lemma is a special case of [[LEC ALG2 3#Cauchy's Theorem|Cauchy's theorem]], which we have already proved.

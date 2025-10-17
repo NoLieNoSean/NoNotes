@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2024-10-17
 time: 14:00
+id: "84"
 ---
 ## Finding eigenstuff
 

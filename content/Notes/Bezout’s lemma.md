@@ -1,3 +1,8 @@
+---
+id: "28"
+---
+
+
 > [!Lemma]
 > Let $a$ and $b$ be integers with gcd $d$. Then, there exist integers $x$ and $y$ such that $ax+by=d$. Moreover, all integers of the type $an+bm$ are multiples of $d$. 
 > 

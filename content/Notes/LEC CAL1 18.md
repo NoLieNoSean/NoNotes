@@ -1,3 +1,7 @@
+---
+id: "187"
+---
+
 # The mean value theorem 
 
 Recall the [[LEC ANA1 24#Mean value theorem|mean value theorem]] for functions from $\mathbb{R}$ to $\mathbb{R}$. It is false, in general, for vector valued functions from $\mathbb{R}^{n}$ to $\mathbb{R}^{m}$ when $m> 1$, as illustrated [[LEC ANA1 25#MVT analogue for vector valued functions|here]]. However, a useful generalization can be obtained by using the dot product:

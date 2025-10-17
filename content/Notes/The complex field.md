@@ -1,6 +1,7 @@
 ---
 tags:
   - ANA1
+id: "281"
 ---
 
 A *complex number* is an ordered pair $(a,b)$ of [[The real field|real numbers]]. Equality, addition, and multiplication are defined as follows:

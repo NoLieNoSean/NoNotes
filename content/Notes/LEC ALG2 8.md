@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-02-06
 time: 9:10
+id: "97"
 ---
 ## Orbit, stabilizer and kernel
 

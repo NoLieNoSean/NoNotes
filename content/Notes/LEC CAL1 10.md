@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-02-14
 time: 12:22
+id: "179"
 ---
 # The Banach contraction principle
 

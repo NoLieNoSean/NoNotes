@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-10-09
 time: 10:34
+id: "199"
 ---
 # Change of variables
 

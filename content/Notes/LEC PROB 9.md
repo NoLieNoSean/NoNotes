@@ -1,6 +1,7 @@
 ---
 tags:
   - PROB
+id: "237"
 ---
 
 # Expectation of continuous random variables

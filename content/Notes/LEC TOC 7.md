@@ -2,6 +2,7 @@
 tags: 
 date: "2025-09-17"
 time: "09:28"
+id: "246"
 ---
 
 CFLs are closed under unions, concatenation, and kleene star, homo, inv homo, CF subs. Not closed under intersection and complement.

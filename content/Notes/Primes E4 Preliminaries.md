@@ -3,6 +3,7 @@ tags:
 date: 2025-10-16
 time: 18:05
 draft: true
+id: "262"
 ---
 # Primary decomposition
 

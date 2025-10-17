@@ -1,3 +1,8 @@
+---
+id: "68"
+---
+
+
 Refer @dummitAbstractAlgebra2004 chapter 7
 Additional material from @aluffiAlgebraChapter02009 chapter 3 
 These references disagree on many definitions.

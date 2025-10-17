@@ -56,7 +56,7 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
                 toml: (s) => toml.parse(s) as object,
               },
             })
-
+            // console.log(data) 
             if (data.title != null && data.title.toString() !== "") {
               data.title = data.title.toString()
             } else {
@@ -94,6 +94,7 @@ declare module "vfile" {
         enableToc: string
         cssclasses: string[]
         time: string
+        id: string
       }>
   }
 }

@@ -1,3 +1,7 @@
+---
+id: "184"
+---
+
 # Derivatives of vector valued functions
 
 See @apostolMathematicalAnalysis1985 [p. 114].

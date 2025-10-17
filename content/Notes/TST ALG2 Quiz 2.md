@@ -1,3 +1,7 @@
+---
+id: "289"
+---
+
 **Prove or disprove: Let $G=A_{4}$. There exist proper subgroups $H$ and $K$ such that $A_{4}\cong H\times K$.**
 
 WLOG, the orders of $H$ and $G$ must be $2$ and $6$ or $4$ and $3$. Since $A_{4}$ does not have a subgroup of order $6$, it must be the latter case. Say $|H|=4$ and $|G|=3$. $A_{4}$ has exactly one subgroup of order $4$, which is isomorphic to $V_{4}$, which is abelian. Also, all groups of order 3 are cyclic, and hence also abelian. It follows that $H\times G$ is also abelian. But, $A_{4}$ is not abelian. 

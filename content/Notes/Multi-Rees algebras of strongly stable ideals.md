@@ -1,6 +1,7 @@
 ---
 draft: true
 date: 2025-09-01
+id: "255"
 ---
 ![[Pasted image 20250902225923.png]]
 

@@ -1,6 +1,7 @@
 ---
 tags:
   - ALG1
+id: "248"
 ---
 
 ## Linear combination

@@ -1,6 +1,8 @@
 import { QuartzConfig } from "../cfg"
 import { FullSlug } from "./path"
 
+export type Mapping = Record<string, [number | string, number]>;
+
 export interface Argv {
   directory: string
   verbose: boolean
@@ -18,4 +20,5 @@ export interface BuildCtx {
   argv: Argv
   cfg: QuartzConfig
   allSlugs: FullSlug[]
+  mapping: Mapping
 }

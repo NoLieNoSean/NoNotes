@@ -1,6 +1,7 @@
 ---
 tags:
   - PROB
+id: "236"
 ---
 
 # Continuous random variables

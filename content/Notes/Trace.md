@@ -1,6 +1,7 @@
 ---
 tags:
   - ALG1
+id: "286"
 ---
 
 For a square [[Matrices#Definition|matrix]] $A$, its *trace* is defined as the sum of its diagonal entries

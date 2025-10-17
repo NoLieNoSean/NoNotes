@@ -2,6 +2,7 @@
 tags:
   - MOC
 date: August 2024
+id: "38"
 ---
 CMI, Aug-Nov 2024, Amitabh Virmani
 @morinIntroductionClassicalMechanics2008

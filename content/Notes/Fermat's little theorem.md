@@ -1,3 +1,8 @@
+---
+id: "46"
+---
+
+
 > [!Theorem]
 > If $p$ is prime and $p  \nmid a$, then $a^{p-1}\equiv  1\mod p$. 
 > 

@@ -1,3 +1,7 @@
+---
+id: "188"
+---
+
 # A sufficient condition for differentiability
 
 > [!Lemma]

@@ -1,3 +1,7 @@
+---
+id: "229"
+---
+
 ## Probability spaces
 
 The *sample space* ($\Omega$) is the set of all possible outcomes of an experiment. An *event* is a subset of $\Omega$. 

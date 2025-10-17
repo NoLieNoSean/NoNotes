@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-21
 time: 09:21
+id: "111"
 ---
 # Existence of maximal ideals
 

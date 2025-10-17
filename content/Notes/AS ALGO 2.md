@@ -3,6 +3,7 @@ tags:
   - ALGO
 date: 2025-10-02
 time: 19:23
+id: "14"
 ---
 # Problem 1
 

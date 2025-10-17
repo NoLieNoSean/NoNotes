@@ -1,6 +1,7 @@
 ---
 tags:
   - PROB
+id: "234"
 ---
 
 ## Infinite sequences of Bernoulli trials

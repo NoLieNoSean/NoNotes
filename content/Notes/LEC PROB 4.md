@@ -1,3 +1,7 @@
+---
+id: "232"
+---
+
 ## More examples of probability mass functions
 
 ### Random walks

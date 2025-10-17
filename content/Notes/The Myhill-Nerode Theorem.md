@@ -1,6 +1,7 @@
 ---
 tags:
   - TOC
+id: "283"
 ---
 See @kozenAutomataComputability1997 lectures 13-16.
 # DFA minimization

@@ -1,3 +1,8 @@
+---
+id: "45"
+---
+
+
 Generalizes [[Fermat's little theorem]].
 
 > [!Theorem]

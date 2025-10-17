@@ -3,6 +3,7 @@ tags:
   - MOC
   - PROB
 date: January 2025
+id: "5"
 ---
 CMI, Jan-Apr 2025, R Srinivasan
 @hoelIntroductionProbabilityTheory1996, [Lecture recordings](https://www.youtube.com/playlist?list=PL7kSnJf1y6KRyT6HjSOGklUPuKBOZVSct)

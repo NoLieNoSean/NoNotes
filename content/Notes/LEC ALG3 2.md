@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-07
 time: 09:12
+id: "107"
 ---
 # Quotients
 

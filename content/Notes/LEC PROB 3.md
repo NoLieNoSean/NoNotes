@@ -1,3 +1,7 @@
+---
+id: "231"
+---
+
 ## Independent events
 
 We say two events are independent if $P(A\cap B)=P(A)P(B)$.

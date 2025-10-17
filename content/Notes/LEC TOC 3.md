@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-08-08
 time: 09:17
+id: "242"
 ---
 **Key Terms**  
 Deterministic Finite State Automata (DFA), Subset construction, closure properties: union, intersection, complement

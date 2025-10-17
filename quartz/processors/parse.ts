@@ -12,7 +12,20 @@ import path from "path"
 import workerpool, { Promise as WorkerPromise } from "workerpool"
 import { QuartzLogger } from "../util/log"
 import { trace } from "../util/trace"
-import { BuildCtx } from "../util/ctx"
+import { BuildCtx , Mapping} from "../util/ctx"
+
+
+// call_python_execfile.ts
+import { execFile } from "child_process";
+import { promisify } from "util";
+
+const execFileAsync = promisify(execFile);
+
+// type Mapping = Record<string, [number | string, number]>;
+
+
+
+
 
 export type QuartzProcessor = Processor<MDRoot, MDRoot, HTMLRoot>
 export function createProcessor(ctx: BuildCtx): QuartzProcessor {
@@ -73,15 +86,39 @@ async function transpileWorkerScript() {
   })
 }
 
+async function callCollector() {
+  const pythonCmd = process.env.PYTHON || "python3"; // or "python" / "py" on Windows
+  const scriptPath = "content/Scripts/collect_block_ids.py";
+  const vaultPath = "content/Notes";
+
+  try {
+    // pass --pretty if you want pretty JSON output (not necessary)
+    const { stdout, stderr } = await execFileAsync(pythonCmd, [scriptPath, vaultPath, "--pretty"], {
+      maxBuffer: 10 * 1024 * 1024, // increase if output might be large
+    });
+
+    if (stderr && stderr.trim()) {
+      console.error("collector stderr:", stderr);
+    }
+
+    const mapping: Mapping = JSON.parse(stdout);
+    console.log("Mapping keys:", Object.keys(mapping).length);
+    // console.log(mapping);
+    return mapping;
+
+  } catch (err: any) {
+    console.error("Failed to run collector:", err);
+    throw err;
+  }
+}
+
+
 export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
   const { argv, cfg } = ctx
   return async (processor: QuartzProcessor) => {
     const res: ProcessedContent[] = []
     for (const fp of fps) {
       try {
-
-        
-
         const perf = new PerfTimer()
         const file = await read(fp)
 
@@ -116,12 +153,22 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
   }
 }
 
+
+
 const clamp = (num: number, min: number, max: number) =>
   Math.min(Math.max(Math.round(num), min), max)
+
+
 export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<ProcessedContent[]> {
   const { argv } = ctx
   const perf = new PerfTimer()
   const log = new QuartzLogger(argv.verbose)
+
+    // usage (top-level await if your TS config allows it)
+  const mapping = await callCollector();
+  ctx.mapping = mapping;
+  console.log(mapping);
+
 
   // rough heuristics: 128 gives enough time for v8 to JIT and optimize parsing code paths
   const CHUNK_SIZE = 128
@@ -148,7 +195,7 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
 
     const childPromises: WorkerPromise<ProcessedContent[]>[] = []
     for (const chunk of chunks(fps, CHUNK_SIZE)) {
-      childPromises.push(pool.exec("parseFiles", [ctx.buildId, argv, chunk, ctx.allSlugs]))
+      childPromises.push(pool.exec("parseFiles", [ctx.buildId, argv, chunk, ctx.allSlugs, ctx.mapping]))
     }
 
     const results: ProcessedContent[][] = await WorkerPromise.all(childPromises).catch((err) => {
@@ -163,3 +210,14 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
   log.end(`Parsed ${res.length} Markdown files in ${perf.timeSince()}`)
   return res
 }
+
+
+
+
+
+
+
+
+
+
+

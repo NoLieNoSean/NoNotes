@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-21
 time: 11:50
+id: "174"
 ---
 > [!Theorem]
 > Let $S\subset \mathbb{R}^{n}$ such that $\overline{S}=\mathbb{R}^{n}$ ($i$.$e$, $S$ is dense in $\mathbb{R}^{n}$). Let $\Omega$ be an open subset of $\mathbb{R}^{n}$. Then, $S\cap \Omega$ is [[LEC ANA1 14#Dense subsets|dense]] in $\Omega$.

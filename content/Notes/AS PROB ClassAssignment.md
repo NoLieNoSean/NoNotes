@@ -1,3 +1,8 @@
+---
+id: "22"
+---
+
+
 ## Polya Urn Scheme
 
 > [!Question]

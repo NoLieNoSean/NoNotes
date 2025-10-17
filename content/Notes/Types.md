@@ -1,3 +1,7 @@
+---
+id: "310"
+---
+
 In Haskell,
 - Every expression has a type.
 - The type of every expression is known at compile time (static type system).

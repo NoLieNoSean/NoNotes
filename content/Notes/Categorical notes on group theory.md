@@ -1,3 +1,8 @@
+---
+id: "31"
+---
+
+
 # Products and Coproducts
 
 $\textsf{Gp}$ has products, and the product of two groups $G, H$ is supported on the product $G\times H$ of the underlying sets. Componentwise multiplication defines a group structure on $G\times H$, and it is easy to verify that this group is actually a product in $\textsf{Gp}$ ( @aluffiAlgebraChapter02009 II.3.4). 

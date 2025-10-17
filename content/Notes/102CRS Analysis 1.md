@@ -3,6 +3,7 @@ tags:
   - ANA1
   - MOC
 date: August 2024
+id: "2"
 ---
 CMI, Aug-Nov 2024, Upendra Kulkarni
 @rudinPrinciplesMathematicalAnalysis1976, @abbottUnderstandingAnalysis2015, @taoAnalysis2016, @bartleIntroductionRealAnalysis2010, @amannAnalysis2005

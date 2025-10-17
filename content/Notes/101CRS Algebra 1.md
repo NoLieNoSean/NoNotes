@@ -3,6 +3,7 @@ tags:
   - ALG1
   - MOC
 date: August 2024
+id: "1"
 ---
 CMI, Aug-Nov 2024, Aditya Karnataki
 @treilLinearAlgebraDone2014, @artinAlgebra2011, @hoffmanLinearAlgebra2014, @axlerLinearAlgebraDone2015, @curtisLinearAlgebraIntroductory1999

@@ -1,3 +1,7 @@
+---
+id: "193"
+---
+
 ## Extremum problems with side conditions
 
 > [!Theorem]

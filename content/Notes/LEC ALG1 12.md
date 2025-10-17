@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2024-09-19
 time: 14:05
+id: "78"
 ---
 ## Linear maps in $\mathbb{R}^{n}$ are matrices
 

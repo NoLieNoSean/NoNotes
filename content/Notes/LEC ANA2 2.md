@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-08-22
 time: 15:32
+id: "162"
 ---
 > [!Example]
 > If $(X, d)$ is a metric space, we can define a bounded metric

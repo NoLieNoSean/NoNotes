@@ -1,3 +1,7 @@
+---
+id: "288"
+---
+
 Suppose $\mathbb{F}$ is a infinite field. Let $V$ be a vector space over $\mathbb{F}$. Show that $V$ cannot be written as a union of finitely many proper subspace. Does the same statement hold if $\mathbb{F}$ is a finite field?
 
 ### When F is an infinite field

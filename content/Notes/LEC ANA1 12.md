@@ -2,6 +2,7 @@
 tags:
   - Lecture
   - ANA1
+id: "134"
 ---
 If $p>0$, then $\lim_{ n \to \infty } \frac{1}{n^{p}}=0$.
 If $p>0$, then $\lim_{ n \to \infty }\sqrt[n]{ p }=1$.

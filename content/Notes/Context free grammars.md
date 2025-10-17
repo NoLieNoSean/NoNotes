@@ -1,3 +1,7 @@
+---
+id: "35"
+---
+
 See @kozenAutomataComputability1997 lectures 19, 20
 
 CNF and GNF cannot generate $\epsilon$. 

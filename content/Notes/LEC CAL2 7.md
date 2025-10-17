@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-09-25
 time: 10:57
+id: "198"
 ---
 # Partitions of unity
 

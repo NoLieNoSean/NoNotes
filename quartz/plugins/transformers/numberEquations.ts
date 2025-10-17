@@ -14,7 +14,7 @@ export const NumberEquaitons: QuartzTransformerPlugin = () => {
 
             plugins.push(() => {
                 return (tree: HtmlRoot, _file) => {
-                    console.log("NumberEquations")
+                    // console.log("NumberEquations")
                     const EquationDict = new Map();
                     let counter = 0
                     visit(tree, "element", (node, index, parent) => {
@@ -24,7 +24,7 @@ export const NumberEquaitons: QuartzTransformerPlugin = () => {
                             && node.properties.className.includes("numbered-equation-locator")
                         ) {
                             counter++
-                            console.log(node)
+                            // console.log(node)
                             let equation = parent.children[index - 1]
                             equation.properties.id = node.properties.id
                             equation.properties.eqNumber = counter
@@ -61,9 +61,9 @@ export const NumberEquaitons: QuartzTransformerPlugin = () => {
 
                             let equation = EquationDict.get(link.properties.href.slice(4))
 
-                            console.log(equation)
+                            // console.log(equation)
                             if (equation) {
-                                console.log(link)
+                                // console.log(link)
                                 if (link.children[0].value[0] === "^") {
                                     link.children[0].value = "(E" + equation.properties.eqNumber + ")"
                                 }

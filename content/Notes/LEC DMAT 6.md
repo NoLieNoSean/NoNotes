@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-27
 time: 11:58
+id: "204"
 ---
 ## Picking objects
 

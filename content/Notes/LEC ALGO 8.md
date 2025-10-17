@@ -1,3 +1,7 @@
+---
+id: "125"
+---
+
 fixed length encoding, variable length encoding:
 
 An encoding is a **prefix free code** if no code of a character is a prefix of another character code.

@@ -1,6 +1,7 @@
 ---
 tags:
   - ANA1
+id: "284"
 ---
 
 There exists an [[Ordered fields|ordered field]] $\mathbb{R}$ which has the [[LUB property]]. Also, $\mathbb{R}$ contains $\mathbb{Q}$ as a subfield.

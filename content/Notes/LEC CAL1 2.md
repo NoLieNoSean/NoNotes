@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-09
 time: 11:50
+id: "171"
 ---
 ## Equivalence of p-norms
 

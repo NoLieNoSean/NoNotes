@@ -1,3 +1,7 @@
+---
+id: "223"
+---
+
 # Graph coloring
 
 > [!Definition]

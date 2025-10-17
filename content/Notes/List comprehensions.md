@@ -1,3 +1,7 @@
+---
+id: "250"
+---
+
 Very much like set comprehensions.
 
 Syntax: `[<output function> | ...<<variable> <- <input set>>, ...<predicates>]`

@@ -1,3 +1,7 @@
+---
+id: "290"
+---
+
 All rings are commutative with $1$.
 # Problem 11
 

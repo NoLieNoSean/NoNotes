@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-03-10
 time: 11:55
+id: "212"
 ---
 ## Counting with Symmetries
 

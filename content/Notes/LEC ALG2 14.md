@@ -1,3 +1,7 @@
+---
+id: "103"
+---
+
 ## Free abelian groups
 
 The commutator subgroup of a group $G$, denoted by $[G, G]$, is defined to be $\langle aba^{-1}b ^{-1}\ | \ a, b\in G \rangle$.

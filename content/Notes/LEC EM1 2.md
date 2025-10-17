@@ -1,3 +1,7 @@
+---
+id: "225"
+---
+
 ## Dirac delta function
 
 is what is called a "generalized function". Used to model point charges in space. The Dirac delta function is defined like so:

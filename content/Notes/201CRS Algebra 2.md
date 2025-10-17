@@ -3,6 +3,7 @@ tags:
   - ALG2
   - MOC
 date: January 2025
+id: "3"
 ---
 CMI, Jan-Apr 2025, Clare D'Cruz
 @artinAlgebra2011, @dummitAbstractAlgebra2004, @carterVisualGroupTheory2009, @hersteinAbstractAlgebra1996

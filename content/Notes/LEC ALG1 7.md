@@ -2,6 +2,7 @@
 tags:
   - ALG1
   - Lecture
+id: "73"
 ---
 
 - Vector space of polynomials of degree $\le n$ = span of $\{ 1,x,x^{2},x^3,\dots, x^n \}$. 

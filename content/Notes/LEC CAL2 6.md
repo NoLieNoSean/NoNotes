@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-26
 time: 10:30
+id: "197"
 ---
 Exercise: if $f:[0, 1]\to \mathbb{R}$ is continuous, show that $\Gamma_{f}$ has measure zero (use uniform continuity). Then, assume $f$ is Riemann integrable. Show again that $\Gamma_{f}$ has measure zero. Also true if the domain is a subset of $\mathbb{R}^{n}$.
 

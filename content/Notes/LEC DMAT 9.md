@@ -1,3 +1,7 @@
+---
+id: "207"
+---
+
 ## Catalan numbers
 
 $C_{n}$ is the number of binary trees with $n$ nodes.

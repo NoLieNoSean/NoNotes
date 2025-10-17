@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-09-11
 time: 09:27
+id: "115"
 ---
 # Gauss's Lemma: Factoring in $\mathbb{Z}[x]$
 
@@ -42,7 +43,7 @@ It is clear that if $f$ is an integer polynomial of positive degree with positiv
 > The product of primitive polynomials is primitive.
 > 
 > > [!Proof]-
-> > Suppose $f$ and $g$ are primitive polynomials. Since their leading coefficients are positive, the leading coefficient of $fg$ is positive. Moreover, no prime $p$ divides $f$ or $g$, so no prime divides $fg$.
+> > Suppose $f$ and $g$ are primitive polynomials. Since their leading coefficients are positive, the leading coefficient of $fg$ is positive. Moreover, no prime $p\in \mathbb{Z}$ divides $f$ or $g$, so no prime divides $fg$.
 
 ^87f54e
 

@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "https://nolienosean.github.io/NoNotes/",
     // ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Excalidraw", "Config", "Zotero", ".pandoc", ".stfolder", "Notes", "Attachments", "Course material", "meta"],
-    ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Config", "Zotero", ".pandoc", ".stfolder", "dev"], 
+    ignorePatterns: ["Private", "Templates", ".obsidian", "Reading", "Courses", "Config", "Zotero", ".pandoc", ".stfolder", "dev", "Test"], 
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",

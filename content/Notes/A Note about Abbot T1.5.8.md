@@ -1,6 +1,7 @@
 ---
 tags:
   - ANA1
+id: "9"
 ---
 
 In Abbot, two versions of the theorem are supplied:

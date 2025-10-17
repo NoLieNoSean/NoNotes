@@ -1,3 +1,7 @@
+---
+id: "224"
+---
+
 # Directed graphs
 
 > [!Definition]

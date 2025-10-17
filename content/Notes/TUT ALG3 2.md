@@ -4,6 +4,7 @@ tags:
   - ALG3
 date: 2025-08-13
 time: 14:55
+id: "300"
 ---
 # Problem 2
 

@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-01-30
 time: 9:10
+id: "95"
 ---
 ## Third isomorphism theorem
 

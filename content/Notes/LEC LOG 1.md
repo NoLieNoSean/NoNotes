@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-08-28
 time: 11:59
+id: "227"
 ---
 # First order logic
 

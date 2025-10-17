@@ -2,6 +2,7 @@
 tags: 
 date: "2025-09-23"
 time: "09:18"
+id: "116"
 ---
 [!Remark]
 Let $R$ be a Noetherian ring, and let $\mathfrak{m}_{1}, \dots, \mathfrak{m}_{k}$ be maximal ideals. Then $\mathfrak{m}_{1}^{a_{1}}\dots \mathfrak{m}_{k}^{a_{k}}=\mathfrak{m}_{1}^{a_{1}}\cap\dots \cap \mathfrak{m}_{k}^{a_{k}}$.

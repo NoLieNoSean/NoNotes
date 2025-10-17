@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2024-09-25
 time: 15:37
+id: "140"
 ---
 ![[IMG_20240925_164725.jpg]]
 ## Proof of Rudin, 2.34 using open cover compactness

@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-01-22
 time: 11:51
+id: "203"
 ---
 ## De Bruijn–Erdős theorem: another application of Zorn's lemma
 

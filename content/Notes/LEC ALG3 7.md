@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-26
 time: 10:21
+id: "112"
 ---
 # Irreducible and prime elements
 

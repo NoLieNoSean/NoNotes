@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-02-06
 time: 11:50
+id: "177"
 ---
 # Converse of the extreme value theorem
 

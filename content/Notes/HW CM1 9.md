@@ -1,3 +1,8 @@
+---
+id: "63"
+---
+
+
 ## 11.47
 
 Let $A$, $B$, and $C$ be frames of reference with coordinates $(ct, x)$, $(c\tilde{t}, \tilde{x})$, and $(c\overline{t}, \overline{x})$. Let the velocity of $B$ be $v_{1}$ with respect to $A$, and the velocity of $C$ be $v_{2}$ with respect to $B$. If we let $\beta_{v_{1}}=v_{1}/c$, $\beta_{v_{2}}=\frac{v_{2}}{c}$, $\gamma_{v_{1}}=1/\sqrt{ 1-\beta_{v_{1}}^{2} }$, and $\gamma_{v_{2}}=1/\sqrt{ 1-\beta_{v_{2}}^{2} }$, we can write

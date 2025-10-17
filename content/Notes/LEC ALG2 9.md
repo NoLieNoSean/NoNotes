@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-02-11
 time: 9:10
+id: "98"
 ---
 ## Orbit-stabilizer theorem
 

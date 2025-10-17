@@ -1,6 +1,7 @@
 ---
 tags:
   - PROB
+id: "292"
 ---
 ## Problem 3
 

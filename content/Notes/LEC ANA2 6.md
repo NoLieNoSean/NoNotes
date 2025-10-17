@@ -2,6 +2,7 @@
 tags: 
 date: "2025-09-12"
 time: "15:31"
+id: "166"
 ---
 Reviewed [[LEC CAL1 9#Second-countable spaces|second countability]]. A metric space is separable iff it is second countable.
 

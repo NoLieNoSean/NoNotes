@@ -1,3 +1,7 @@
+---
+id: "53"
+---
+
 > [!Question]
 > If $aH=bH$, show that $aHa^{-1}=bHb ^{-1}$.
 > 

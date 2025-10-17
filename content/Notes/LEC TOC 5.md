@@ -4,6 +4,7 @@ tags:
   - Lecture
 date: 2025-08-13
 time: 09:10
+id: "244"
 ---
 > [!Recall]
 > Closure properties of recognizable languages: closed under boolean operations $(\cap, \cup, -^{c})$. Saw the cartesian product construction for intersections.

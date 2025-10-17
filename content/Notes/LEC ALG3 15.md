@@ -4,8 +4,9 @@ tags:
   - Lecture
 date: 2025-10-16
 time: 09:14
+id: "119"
 ---
-# Fields
+	`# Fields
 
 > [!Definition]
 > A field extension is an injective ring homomorphism $F\to K$, where $F$ is called the base field, and $K$ is called the extension of $F$.

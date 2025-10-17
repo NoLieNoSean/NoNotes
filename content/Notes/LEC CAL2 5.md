@@ -5,6 +5,7 @@ tags:
   - Processed
 date: 2025-08-19
 time: 10:30
+id: "196"
 ---
 # Integrating over Jordan measurable sets
 

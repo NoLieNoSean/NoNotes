@@ -40,6 +40,12 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         if (fileData.frontmatter.time) segments.push(fileData.frontmatter.time)
       }
 
+      if (fileData.frontmatter) {
+        if (fileData.frontmatter.id) segments.push("#"+fileData.frontmatter.id)
+      }
+
+      
+
 
       // Display reading time if enabled
       if (options.showReadingTime) {

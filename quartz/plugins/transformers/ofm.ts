@@ -120,7 +120,7 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 // matches any wikilink, only used for escaping wikilinks inside tables
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
-export const countedCallouts = ["definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise"]
+export const countedCallouts = ["definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise", "remark"]
 
 
 const highlightRegex = new RegExp(/==([^=]+)==/g)
@@ -155,7 +155,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
   return {
     name: "ObsidianFlavoredMarkdown",
     textTransform(_ctx, src) {
-      console.log("Reg OFM TT")
+      // console.log("Reg OFM TT")
 
       // do comments at text level
       if (opts.comments) {
@@ -168,7 +168,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       // pre-transform blockquotes
       if (opts.callouts) {
-        console.log("pre-transform blockquotes")
+        // console.log("pre-transform blockquotes")
         if (src instanceof Buffer) {
           src = src.toString()
         }
@@ -181,7 +181,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       // pre-transform wikilinks (fix anchors to things that may contain illegal syntax e.g. codeblocks, latex)
       if (opts.wikilinks) {
-        console.log("pre-tranform wikilinks")
+        // console.log("pre-tranform wikilinks")
         if (src instanceof Buffer) {
           src = src.toString()
         }
@@ -222,7 +222,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
     },
     markdownPlugins(_ctx) {
       const plugins: PluggableList = []
-      console.log("Reg OFM MP")
+      // console.log("Reg OFM MP")
 
 
 
@@ -236,7 +236,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       // at this and turned up empty. Just do not use \Omega ffs i give up
       plugins.push(() => {
         return async (tree: Root, _file) => {
-          console.log("Rendering tikz diagrams")
+          // console.log("Rendering tikz diagrams")
 
           const tikzNodes: Code[] = []
           visit(tree, "code", (node: Code) => {
@@ -272,7 +272,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       //Formatting proof envs
       plugins.push(() => {
         return async (tree: Root, _file) => {
-          console.log("Formatting proof envs")
+          // console.log("Formatting proof envs")
 
           visit(tree, "blockquote", (node) => {
             try {
@@ -318,7 +318,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       // regex replacements
       plugins.push(() => {
         return (tree: Root, file) => {
-          console.log("Regex replacements")
+          // console.log("Regex replacements")
 
           const replacements: [RegExp, string | ReplaceFunction][] = []
           const base = pathToRoot(file.data.slug!)
@@ -635,9 +635,9 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       return plugins
     },
-    htmlPlugins() {
+    htmlPlugins(_ctx) {
       const plugins: PluggableList = [rehypeRaw]
-      console.log("Reg OFM HP")
+      // console.log("Reg OFM HP")
 
 
       if (opts.parseBlockReferences) {
@@ -775,7 +775,13 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       //numbered definitions and theorems!
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
-          console.log("Number definitions and theorems")
+          // console.log("Number definitions and theorems")
+
+          let note_number = ""
+
+          if (_file.data.frontmatter && _file.data.frontmatter.id) note_number = _file.data.frontmatter.id + "."
+
+
 
           let counter = 0;
           visit(tree, "element", (node) => {
@@ -817,7 +823,9 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                       ]
                     };
 
-                    let newVal = node.properties.dataCallout[0].toUpperCase() + node.properties.dataCallout.slice(1) + " " + counter
+
+
+                    let newVal = node.properties.dataCallout[0].toUpperCase() + node.properties.dataCallout.slice(1) + " " + note_number + counter
 
                     childNode.children[0] = {
                       type: "element",
@@ -855,7 +863,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       //assign classes to tikz svgs
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
-          console.log("Assign classes to tikz SVGs")
+          // console.log("Assign classes to tikz SVGs")
 
           visit(tree, "element", (node) => {
             if (node.tagName === "svg" && node.properties.dataTikzSvg === "true") {
@@ -871,7 +879,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       //add period after title for proof envs
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
-          console.log("Add period after title for proof envs")
+          // console.log("Add period after title for proof envs")
 
           visit(tree, "element", (node) => {
             if (node.tagName === "blockquote" && node.properties.className && node.properties.className.includes("proof")) {
@@ -887,7 +895,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       //internal link naming
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
-          console.log("Internal link naming")
+          // console.log("Internal link naming")
 
           const NumberNodeDict = new Map();
 
@@ -897,35 +905,57 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               let identifier = {
                 type: "element",
                 tagName: "span",
-                properties: { className: ['callout-identifier']},
+                properties: { className: ['callout-identifier'] },
                 children: [
-                  {type:"text", value: node.properties.id}
+                  { type: "text", value: node.properties.id }
                 ]
               };
               node.children.push(identifier)
             }
           })
 
+          function afterPercent5E(str: string) {
+            const marker = "%5E";
+            const index = str.indexOf(marker);
+            if (index === -1) return null; // or return str if you prefer
+            return str.slice(index + marker.length);
+          }
+
           visit(tree, "element", (node) => {
-            if (node.tagName === "a" &&
-              node.properties.href.slice(0, 4) === "#%5E") {
-              let callout = NumberNodeDict.get(node.properties.href.slice(4))
-              if (callout) {
-                let dataCallout = callout.properties.dataCallout
-                if (node.children[0].value[0] === "^") {
-                  node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.properties.calloutNumber
+            if (node.tagName === "a" && typeof node.properties.href == "string") {
+              if (node.properties.href.slice(0, 4) === "#%5E") {
+                let callout = NumberNodeDict.get(node.properties.href.slice(4))
+                if (callout) {
+                  let dataCallout = callout.properties.dataCallout
+                  if (node.children[0].value[0] === "^") {
+                    node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.properties.calloutNumber
+                  }
+                  node.properties.href = `#${node.properties.href.slice(4)}`
                 }
-                node.properties.href = `#${node.properties.href.slice(4)}`
+              } else {
+                let block_id = afterPercent5E(node.properties.href)
+                if (block_id && _ctx.mapping[block_id]) {
+                  let callout = _ctx.mapping[block_id]
+                  let dataCallout = callout.kind
+                  if (node.children[0].value[0] === "^") {
+                    node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.note_id+ "."+ callout.callout_count
+                  }
+                  // node.properties.href = `#${node.properties.href.slice(4)}`
+                }
               }
+
             }
+
           })
+
+
         }
       })
 
       //Tagging numbered equations
       plugins.push(() => {
         return (tree: HtmlRoot, _file) => {
-          console.log("Tagging numbered equations")
+          // console.log("Tagging numbered equations")
           visit(tree, "element", (node, index, parent) => {
             if (
               node.tagName === "pre"
@@ -935,7 +965,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               && node.children[0].tagName === "code"
               && node.children[0].properties.className.includes("math-display")
             ) {
-              console.log(node)
+              // console.log(node)
               let desc = {
                 type: "element",
                 tagName: "span",
@@ -946,7 +976,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
               // I want to insert the desc element right after "node", that is, if node is parent.children[i], i want
               // desc to be parent.children[i+1].
               parent.children.splice(index + 1, 0, desc)
-              console.log(parent)
+              // console.log(parent)
             }
           })
         }
