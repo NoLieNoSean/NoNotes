@@ -8,7 +8,7 @@ id: "6"
 CMI, Aug-Nov 2025, Clare D'Cruz
 @artinAlgebra2011, @dummitAbstractAlgebra2004, @aluffiAlgebraChapter02009 ([Errata](https://www.math.fsu.edu/~aluffi/algebraerrata.2016/Errata.html)), @langAlgebra2002, @hungerfordAlgebra1974, [Conrad's expository papers](https://kconrad.math.uconn.edu/blurbs/)
 
-![[Pasted image 20250929164457.png]]
+![[Pasted image 20250929164457.jpeg]]
 
 ---
 

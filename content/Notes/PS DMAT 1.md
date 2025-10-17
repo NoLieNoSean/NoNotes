@@ -51,7 +51,7 @@ $$
 **Solution using a tree structure**
 
 Construct a binary tree and associate each point with a natural number like so:
-![[Pasted image 20250203224351.png]]
+![[Pasted image 20250203224351.jpeg]]
 (The tree is infinite)
 
 Now, with each node of the tree, associate a subset of $\mathbb{N}$ which consists of all the numbers of the nodes in the path between the node and the root of the tree. For example, the subset associated with 26 would be $\{ 1, 3, 6, 13, 26 \}$. Consider the set of all sets associated with every node in the tree. The intersection of any two elements of this set must necessarily have a finite intersection, since the paths to the two nodes corresponding to the elements must diverge at some point.

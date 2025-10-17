@@ -1,10 +1,8 @@
 ---
 id: "56"
 ---
-
-
 ## 3.30
-![[Pasted image 20240827163402.png|300]]
+![[Pasted image 20240827163402.jpeg|300]]
 Let $A$ have acceleration $a$ and tension $T$ acting upward. Then, from the conservation of string, pulley 1 must have upward acceleration of $\frac{a}{2}$, pulley 2 $\frac{a}{4}$, and pulley $n$ (and hence $B$) $\frac{a}{2^n}$. Similarly, if $A$ experiences an upward tension of $T$, pulley 1 must experience a total upward tension of $2T$, pulley 2 $4T$, and pulley $n$ (and hence $B$) $2^nT$. 
 
 We can now proceed to write the second law equations for both the blocks.
@@ -22,7 +20,7 @@ a=\frac{{g(2^n-1)}}{2^{-n}+2^n}
 }
 $$
 ## 3.44
-![[Pasted image 20240827170008.png|300]]
+![[Pasted image 20240827170008.jpeg|300]]
 Suppose Newton is at $A(0,0)$, and he aims his rock at an apple located at $B(d,h)$ with a velocity $\mathbf{v}$. Let $\mathbf{r}_{1}$ denote the position of the rock, and $\mathbf{r}_{2}$ denote the position of the apple. $\mathbf{r}_{1}$ and $\mathbf{r}_{2}$ can be parameterized in $t$ like so (let $\theta = \arctan\left( \frac{h}{d} \right)$):
 $$
 \begin{align}
@@ -41,7 +39,7 @@ $$
 Thus, the rock hits the apple.
 
 ## 3.57
-![[Pasted image 20240827175208.png|300]]
+![[Pasted image 20240827175208.jpeg|300]]
 
 From the frame of reference of the hoop, the bead will experience a fictitious force $\mathbf{F}_{2} = mR\sin \theta \omega^{2}\hat{r}$, gravitational force $\mathbf{F}_{1}=-mg\hat{k}$, and normal force due to the hoop $\mathbf{N}$. For the bead to remain at the same angle $\theta$ relative to the vertical, the resultant of $\mathbf{F}_{1}$ and $\mathbf{F}_{2}$ must be antiparallel to $\mathbf{N}$. Thus, 
 $$

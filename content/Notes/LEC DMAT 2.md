@@ -74,13 +74,13 @@ Makes proving things like $|\mathbb{N}\times \mathbb{N}|=|\mathbb{N}|$ easy.
 > Assume $A$ and $B$ are disjoint so the notation does not become too cumbersome. 
 > Consider the set of all sequences $S= \{ (\dots,f^{-1}(g^{-1}(a)), g^{-1}(a), a, f(a), g(f(a)), f(f(g(a))), \dots): a\in A\}$. If $a$ does not have a preimage under $g$, the sequence starts at $a$ (Note the set of sequences obtained by $b\in B$ and interchanging $f$ and $g$ is equal to $S$). So, every element $e\in A\cup B$ appears in one (and exactly one) sequence in $S$. The a sequence $s$ in $S$ can be characterized like so:
 > - Starts at $A$: Has a first element in $A$ which does not have a preimage under $g$. Denoted by $s\in S_{A}$. 
->   ![[Pasted image 20250114111252.png|200]]
+>   ![[Pasted image 20250114111252.jpeg|200]]
 > - Starts at $B$: Has a first element in $B$ which does not have a preimage under $f$. Denoted by $s\in S_{B}$.
->   ![[Pasted image 20250114111328.png|200]]
+>   ![[Pasted image 20250114111328.jpeg|200]]
 > - Loops forever: Continues forever in both directions, but the elements loop. $s\in S_{l}$
->   ![[Pasted image 20250114111353.png|200]]
+>   ![[Pasted image 20250114111353.jpeg|200]]
 > - Continues forever in both directions, but does not loop. $s\in S_{\infty}$
->   ![[Pasted image 20250114111444.png|200]]
+>   ![[Pasted image 20250114111444.jpeg|200]]
 > 
 > Note that sequences in $S_{A}$ and $S_{B}$ are incapable of looping. Thus, $S_{A}$, $S_{B}$, $S_{l}$, and $S_{\infty}$ actually form a partition of $S$. 
 > 

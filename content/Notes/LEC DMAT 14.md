@@ -132,7 +132,7 @@ Let $G$ denote the set of all orientations of a cube obtained through rotations.
 >[!proof]-
 >There are $6$ choices for the front face and $4$ for the side one; these uniquely determine an orientation.
 >Alternatively, you can embed a tetrahedron in the cube such that its edges correspond with a set of pairwise non-adjacent edges of the cube (there are two such sets of edges). It will have two orientations upon rotating the cube. This will give a isomorphism to $S_{4}$.
->![[Pasted image 20250316144333.png|500]]
+>![[Pasted image 20250316144333.jpeg|500]]
 >The pink colored vertices form one tetrahedron, and the grey colored ones form another.
 
 There are four types of symmetries present here. 

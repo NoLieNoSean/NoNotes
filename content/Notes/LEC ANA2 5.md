@@ -86,7 +86,7 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > [!Exercise]
 > 1. $\mathscr{l}_{p}$ is separable.
 > 2. $C[0, 1]$ is separable.
->    ![[Pasted image 20250930105556.png]]
+>    ![[Pasted image 20250930105556.jpeg]]
 
 > [!Example]
 > Define $C_{0}:=\{ \{ x_{n} \}\ | \ x_{n}\to 0 \}\subset \mathscr{l}_{\infty}$. We will show that $C_{0}$ is a separable subspace of $\mathscr{l}_{\infty}$. Let $\mathcal{F}\subseteq C_{0}$ be as in [[#^74c8ab]]. 

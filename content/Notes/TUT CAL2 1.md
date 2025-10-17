@@ -18,5 +18,5 @@ for all $p\in B$, $\lVert D_{p}f \rVert< M$ for some $M> 0$.
 
 yadayada
 
-[!Theorem] Sard's Theorem
+[!Theorem] Sard
 $f:U\to \mathbb{R}^{m}$ is a $C^{\infty}$ map where $U$ is an open subset of $\mathbb{R}^{n}$. $\{ f(x)\ | \ x\in U , \text{ rank }\mathbf{D}_{x}f< m\}$ has $m$-dimensional measure zero.

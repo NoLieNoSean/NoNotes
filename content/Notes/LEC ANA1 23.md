@@ -7,7 +7,7 @@ date: 2024-10-09
 time: 15:55
 id: "145"
 ---
-![[1728577113476.jpg]]
+![[1728577113476.jpeg]]
 
 # Derivatives of real functions
 

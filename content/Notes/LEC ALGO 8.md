@@ -10,7 +10,7 @@ It can be proved that the optimal data compression achievable by a character cod
 
 Huffman encoding.
 
-![[Pasted image 20250924124502.png]]
+![[Pasted image 20250924124502.jpeg]]
 
 Each prefix code can be represented as a tree. The tree of an optimal encoding must be a full binary tree. 
 $$

@@ -33,7 +33,7 @@ C_{n}= & (\text{number of paths from }(0, 0)\text{ to }(n, n))- \\
 $$
 To compute the second term, notice that there exists a bijection between the set of all paths from $(0, 0)$ to $(n, n)$ which rise above the $x=y$ line and the set of all paths from $(0, 0)$ to $(n-1, n+1)$:
 
-![[Pasted image 20250223205828.png|400]]
+![[Pasted image 20250223205828.jpeg|400]]
 
 Thus, we have
 $$

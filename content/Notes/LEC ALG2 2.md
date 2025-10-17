@@ -68,4 +68,6 @@ The last point can be proved by showing that $aK$ and $bK$ are subsets of each o
 > [!Theorem]
 > Let $K$ be the kernel of a homomorphism $\phi:G\to G$. The fibre of $\phi$ that contains an element $a$ of $G$ is the coset $aK$ of $K$. These cosets partition $G$, and they correspond to elements of the image of $\phi$. 
 > 
-> ![[Pasted image 20250130164743.png]]
+> ![[Pasted image 20250130164743.jpeg]]
+
+

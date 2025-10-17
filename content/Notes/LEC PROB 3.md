@@ -52,7 +52,7 @@ f(x)=\begin{dcases}
 0 & \text{otherwise.} 
 \end{dcases}
 $$
-![[Pasted image 20250306192004.png]]
+![[Pasted image 20250306192004.jpeg]]
 
 The outcome of performing $n$ Bernoulli trials with fixed parameter $p$ can be given by the [[LEC PROB 5#Random vector|random vector]] $\mathbf{X}=(X_{1}, X_{2}, \dots, X_{n})$, with $X_{i}=1$ and $X_{i}=0$ signaling success and failure in the $i$th trial respectively. We know that the random variable $S_{n}=X_{1}+X_{2}+\dots+X_{n}$ is binomially distributed with parameters $n$ and $p$, as shown above. Turning this around, we can say that any random variable $Y$ that is binomially distributed with these same parameters can be thought of as the sum of $n$ independent Bernoulli random variables $X_{1}, \dots, X_{n}$ each having parameter $p$.
 ### The distribution function

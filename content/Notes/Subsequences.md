@@ -47,9 +47,7 @@ One way to prove this is like so:
 1. Show that every sequence in $\mathbb{R}$ has a monotone subsequence, done [[Cauchy sequences#Step 2 Pervasive monotonicity|here]]. 
 2. Since the given sequence is bounded, its subsequence must be bounded too. The theorem then follows from the [[Sequences and convergence#Monotone convergence theorem|monotone convergence theorem]]. 
 
-Here's an alternate proof featured in Abbot, that uses the [[The real field#Nested interval property|nested interval property]] of the real field.
-
-![[Pasted image 20240901213114.png]]
+See @abbottUnderstandingAnalysis2015 [p. 64] for an alternate proof that uses the [[The real field#Nested interval property|nested interval property]] of $\mathbb{R}$.
 
 ---
 ### Now, for $\mathbb{R}^{k}$.

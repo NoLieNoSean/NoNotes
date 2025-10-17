@@ -19,7 +19,7 @@ id: "221"
 > Every edge in $E$ occurs in $E'$ with probability $1/2$. Let $X_{1}, \dots, X_{m}$ be indicator variables such that $|E'|=\sum X_{i}$. Then, $\mathbb{E}(|E'|)=\mathbb{E}\left( \sum X_{i} \right)=\frac{m}{2}$. Thus, there must exist a coloring where $|E'|\geq m/2$.
 
 > **Algorithmic proof**
-> ![[Pasted image 20250430173521.png]]
+> ![[Pasted image 20250430173521.jpeg]]
 > 
 ---
 # Back to matching problems: Konig's theorem

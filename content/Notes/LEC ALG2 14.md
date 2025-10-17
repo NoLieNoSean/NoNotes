@@ -6,21 +6,23 @@ id: "103"
 
 The commutator subgroup of a group $G$, denoted by $[G, G]$, is defined to be $\langle aba^{-1}b ^{-1}\ | \ a, b\in G \rangle$.
 
-> [!Theorem] Lemma
+> [!Lemma]
 > For any group $G$, $[G, G]$ is a normal subgroup.
+> 
+> > [!Proof]-
+> > A subgroup is normal if $g h g^{-1} \in [G, G]$ for all $g \in G$, $h \in [G, G]$. Since $h$ is a product of commutators $c_i = a_i b_i a_i^{-1} b_i^{-1}$:
+> > - Conjugate $c = aba^{-1}b^{-1}$: $g c g^{-1} =$ $(g a g^{-1})(g b g^{-1})(g a^{-1} g^{-1})(g b^{-1} g^{-1}) =$ $a' b' a'^{-1} b'^{-1}$, a commutator with $a' = g a g^{-1}$, $b' = g b g^{-1}$.
+> > - For $h = c_1 \cdots c_n$, $g h g^{-1} = (g c_1 g^{-1}) \cdots (g c_n g^{-1})$, a product of commutators, so $g h g^{-1} \in [G, G]$.
+> > - Inverses follow similarly, as $(g c g^{-1})^{-1}$ is a commutator.
+> > Hence, $[G, G]\triangleleft G$.
+> 
 
-> **Proof**
-> A subgroup is normal if $g h g^{-1} \in [G, G]$ for all $g \in G$, $h \in [G, G]$. Since $h$ is a product of commutators $c_i = a_i b_i a_i^{-1} b_i^{-1}$:
-> - Conjugate $c = aba^{-1}b^{-1}$: $g c g^{-1} =$ $(g a g^{-1})(g b g^{-1})(g a^{-1} g^{-1})(g b^{-1} g^{-1}) =$ $a' b' a'^{-1} b'^{-1}$, a commutator with $a' = g a g^{-1}$, $b' = g b g^{-1}$.
-> - For $h = c_1 \cdots c_n$, $g h g^{-1} = (g c_1 g^{-1}) \cdots (g c_n g^{-1})$, a product of commutators, so $g h g^{-1} \in [G, G]$.
-> - Inverses follow similarly, as $(g c g^{-1})^{-1}$ is a commutator.
-> Hence, $[G, G]\triangleleft G$.
-
-> [!Theorem] Lemma
+> [!Lemma]
 > If $\mathcal{F}$ is a [[LEC ALG2 13#The free group|free group]], then $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is abelian. 
-
-> **Proof**
-> Let $a[\mathcal{F}, \mathcal{F}]$ and $b[\mathcal{F}, \mathcal{F}]$ be any two elements in $\mathcal{F}$. Since $a^{-1} b ^{-1}ab\in[\mathcal{F}, \mathcal{F}]$, we have $ab[\mathcal{F}, \mathcal{F}]=ba[\mathcal{F}, \mathcal{F}]$. 
+> 
+> > [!Proof]-
+> > Let $a[\mathcal{F}, \mathcal{F}]$ and $b[\mathcal{F}, \mathcal{F}]$ be any two elements in $\mathcal{F}$. Since $a^{-1} b ^{-1}ab\in[\mathcal{F}, \mathcal{F}]$, we have $ab[\mathcal{F}, \mathcal{F}]=ba[\mathcal{F}, \mathcal{F}]$. 
+> 
 
 Note that since the quotient of a finitely generated group is finitely generated (the images of the generators generate the image), if $\mathcal{F}$ is a finitely generated free group, $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is also finitely generated. 
 
@@ -38,17 +40,18 @@ We will restrict our development to abelian groups with finite bases, so just wo
 
 > [!Theorem]
 > Let $A$ be an abelian group with finite basis $X$. Then every element $a\in A$ can be written *uniquely* as $a=\sum_{x\in X}n_{x}x$, $n_{x}\in \mathbb{Z}$. The map $\Theta:\mathbb{Z}^{|X|}\to A$ given by $\Theta(\mathbf{n})=\sum_{x\in X}n_{x}x$ is an isomorphism, and $A\cong\mathbb{Z}^{|X|}$.
-
-> **Proof**
-> It is easy to check that $\Theta$ is a homomorphism.
-> $$
-> \begin{align}
-> \Theta(\mathbf{n}+\mathbf{m}) & =\sum_{x\in X}(n_{x}+m_{x})x \\
->  & =\sum_{x\in X}n_{x}x+\sum_{x\in X}m_{x}x & (A\text{ is abelian}) \\
->  & =\Theta(\mathbf{n})+\Theta(\mathbf{m}). 
-> \end{align}
-> $$
-> $\Theta$ is onto by property 1 of a basis, and has trivial kernel by property 2. Thus, $\Theta$ is an isomorphism, and unique linear decompositions of elements of $A$ in terms of $X$ follow.
+> 
+> > [!Proof]-
+> > It is easy to check that $\Theta$ is a homomorphism.
+> > $$
+> > \begin{align}
+> > \Theta(\mathbf{n}+\mathbf{m}) & =\sum_{x\in X}(n_{x}+m_{x})x \\
+> >  & =\sum_{x\in X}n_{x}x+\sum_{x\in X}m_{x}x & (A\text{ is abelian}) \\
+> >  & =\Theta(\mathbf{n})+\Theta(\mathbf{m}). 
+> > \end{align}
+> > $$
+> > $\Theta$ is onto by property 1 of a basis, and has trivial kernel by property 2. Thus, $\Theta$ is an isomorphism, and unique linear decompositions of elements of $A$ in terms of $X$ follow.
+> 
 
 > [!Definition]
 > The group $\mathbb{Z}^{|X|}$ is called the *free abelian group on $X$*. It has a canonical basis $\{ \hat{e}_{x}\ | \ x\in X \}$ which is in bijective correspondence with $X$.
@@ -70,11 +73,22 @@ The next theorem links free abelian groups with free groups.
 
 > [!Theorem]
 > Let $\mathbb{Z}^{|X|}$ be the free abelian group on $X$. Let $i:X\to \mathbb{Z}^{|X|}$ be the function defined by $i(x)=\hat{e}_{x}$. If $A$ is an abelian group and $\varphi:X\to A$ is any map, then there exists a *unique* homomorphism $\overline{\varphi}:\mathbb{Z}^{|X|}\to A$ that makes the following diagram commute:
-> ![[Pasted image 20250406213539.png|200]]
+> 
+> ```tikz
+> \usepackage{tikz-cd, amsmath, amssymb}
+> \begin{document}
+> \begin{tikzcd}
+> X\ar[r, "\varphi"]\ar[d, hook, ""]&A\\
+> \mathbb{Z}^{|X|}\ar[ru, dotted, "\overline{\varphi}"']&\\
+> \end{tikzcd}
+> \end{document}
+> ```
+> 
+
 
 This yields the following important corollary:
 
-> [!Theorem] Corollary
+> [!Corollary]
 > Every abelian group is a quotient of a free abelian group.
 
 Of interest to us is the finite case: if $A$ is a finitely generated abelian group generated by $n$ generators, then $A\cong \mathbb{Z}^{n}/H$ for some $H\leq \mathbb{Z}^{n}$ (remember, all subgroups of an abelian group are normal).
@@ -84,7 +98,7 @@ It follows that to classify all the finitely generated abelian groups, we need o
 > [!Theorem] Invariant factor theorem
 > If $H$ is a subgroup of a free abelian group $G$ or rank $n$, then $H$ is free abelian of rank $r\leq n$. Further, there are bases $\{ e_{1}, \dots, e_{n} \}$ of $G$ and $\{ d_{1}e_{2},\dots, d_{r}e_{r} \}$ of $H$ respectively where $d_{i}$ divides $d_{i+1}$ for $i< r$. The integers $d_{i}$ are uniquely determined up to sign and are called the invariant factors of $H$.
 
-> [!Theorem] Corollary: Structure theorem for finitely generated abelian groups
+> [!Corollary] Structure theorem for finitely generated abelian groups
 > A finitely generated abelian group is isomorphic to $\mathbb{Z}^{m}\times \mathbb{Z}_{d_{1}}\times\dots \times \mathbb{Z}_{d_{r}}$ for some $m\geq 0$ and $d_{i}$ dividing $d_{i+1}$. The integer $m$ as well as all the $d_{i}$s (up to sign) are uniquely determined.
 
 I'm having trouble understanding the invariant factor theorem. Consider the standard basis $e_{1}=(1, 0, \dots, 0), e_{2}, \dots, e_{r}$ for the free abelian group $\mathbb{Z}^{r}$. Let $H$ be the subgroup of $\mathbb{Z}^{r}$ generated by $\{ e_{1}, 2e_{2}, \dots,  re_{r} \}$. Is it correct that the invariant factor theorem says that there exists another basis $e_{1}', \dots, e_{r}'$ of $\mathbb{Z}^{r}$ such that $d_{1}e_{1}', \dots, d_{r}e_{r}'$ is a basis of $H$ and $d_{i}$ divides $d_{i+1}$? If so, can you find me the basis?

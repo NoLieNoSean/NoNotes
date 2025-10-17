@@ -7,7 +7,7 @@ date: 2024-11-13
 time: 15:33
 id: "155"
 ---
-![[Pasted image 20241118191126.png]]
+![[Pasted image 20241118191126.jpeg]]
 
 # Sequences of functions
 

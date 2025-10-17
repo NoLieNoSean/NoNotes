@@ -9,13 +9,13 @@ Is there a way to measure how close a subgroup is to being normal? We have said 
 - Furthermore, the deciding factor in how a left coset will vote is simply whether it is also a right coset. Thus, $N_{G}(H)$ is made up of all the left cosets that are also right cosets. 
 
 Example of a normalizer which is neither $H$ or $G$:
-![[Pasted image 20250130233941.png]]
+![[Pasted image 20250130233941.jpeg]]
 In $D_{6}$, the normalizer of $\langle f \rangle$ is $\{ e, f, r^{3}f, r^{3} \}$.  
 
 > [!Lemma]
 > For any $H<G$, $N_{G}(H)<G$. Furthermore, $H\triangleleft N_{G}(H)$. 
 
-![[Pasted image 20250130234706.png]]
+![[Pasted image 20250130234706.jpeg]]
 
 ## Conjugacy
 

@@ -7,7 +7,7 @@ date: 2024-09-20
 time: 14:00
 id: "139"
 ---
-![[1726947785622.jpg]]
+![[1726947785622.jpeg]]
 # Open cover compactness
 
 ## Open covers and subcovers

@@ -30,7 +30,7 @@ a & =\frac{{k}}{\epsilon^{2}-1} \\
  & = \frac{GM}{v_{0}^{2}}
 \end{align}
 $$
-![[Pasted image 20241016222701.png|400]]
+![[Pasted image 20241016222701.jpeg|400]]
 We know that the equations of the asymptotes of the hyperbola are $y=\pm \left( \frac{b}{a} \right)x$. Thus, $\theta=\tan ^{-1}\left( \frac{b}{a} \right)=\tan ^{-1}\left( \frac{bv_{0}^{2}}{GM} \right)$. The angle of deflection, of course, is $\pi-2\theta=\pi-2\tan ^{-1}\left( \frac{bv_{0}^{2}}{GM} \right)$, as desired.
 
 
@@ -38,7 +38,7 @@ We know that the equations of the asymptotes of the hyperbola are $y=\pm \left( 
 
 Let $d\sigma$ be the area of the infinitesimal ring of inner radius $b$ and outer radius $b+db$. Then, $d\sigma=2\pi b\ db$. We know from part $A$ that the angle of deflection is uniquely determined by the impact parameter $b$. Thus, all particles originating in this ring will have the same deflection angle $\phi$. 
 
-![[Pasted image 20241016225636.png]]
+![[Pasted image 20241016225636.jpeg]]
 
 From part a, we have
 $$
@@ -76,6 +76,6 @@ $$
 $$
 $r$ is only defined when  $-1\le\cos\theta< -\frac{1}{\epsilon}$. Thus, the trajectory of the particle is the left branch of the hyperbola. 
 
-![[Pasted image 20241017003046.png]]
+![[Pasted image 20241017003046.jpeg]]
 
 

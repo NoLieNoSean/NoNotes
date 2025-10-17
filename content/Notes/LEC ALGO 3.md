@@ -10,7 +10,7 @@ id: "120"
 
 Refer @ericksonAlgorithms2019 [p. 32]
 
-![[Pasted image 20250924190537.png]]
+![[Pasted image 20250924190537.jpeg]]
 
 Consider the recurrence
 $$

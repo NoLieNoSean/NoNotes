@@ -212,4 +212,4 @@ Note that this is not a necessary condition for $\mathbf{f}$ to be differentiabl
 
 As in the previous theorem, it suffices to prove this when $n=2$ and $\mathbf{f}$ is real valued. The proof is very similar to the previous one; use a second application of MVT.
 
-![[Pasted image 20250420013131.png]]
+![[Pasted image 20250420013131.jpeg]]

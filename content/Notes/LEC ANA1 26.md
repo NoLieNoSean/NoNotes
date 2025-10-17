@@ -7,7 +7,7 @@ date: 2024-10-23
 time: 15:30
 id: "148"
 ---
-![[1729684704658.jpg]]
+![[1729684704658.jpeg]]
 # Definition of the integral
 
 > [!Definition]

@@ -7,7 +7,7 @@ date: 2024-10-25
 time: 10:30
 id: "149"
 ---
-![[1729857829763.jpg]]
+![[1729857829763.jpeg]]
 
 > [!Recall]
 > For any bounded $f:[a, b]\to \mathbb{R}$, a partition $P$ of $[a, b]$, a refinement $P^{*}$ of $P$, and monotone increasing function $\alpha:[a, b]\to \mathbb{R}$, we have

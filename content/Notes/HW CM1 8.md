@@ -7,7 +7,7 @@ id: "62"
 
 Let the line joining the pivot to the mass make an angle $\theta$ with the rod of length $l$. 
 
-![[Pasted image 20241111125439.png|400]]
+![[Pasted image 20241111125439.jpeg|400]]
 
 The components of the velocity of the mass along the rod and perpendicular to the rod will be $\dot{r}+l\omega$ and $-r\omega$ respectively. Thus, the kinetic energy of the mass is 
 $$

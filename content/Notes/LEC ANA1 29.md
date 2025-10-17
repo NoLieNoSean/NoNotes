@@ -7,7 +7,7 @@ date: 2024-10-26
 time: 9:30
 id: "151"
 ---
-![[1729920845842.jpg]]
+![[1729920845842.jpeg]]
 
 ## Integration of vector valued functions
 
