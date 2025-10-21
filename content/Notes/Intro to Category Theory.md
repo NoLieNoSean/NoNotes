@@ -390,3 +390,4 @@ This information can be sloppily summarized like so:
 > commutes. So, $(A\amalg B, i_{A}, i_{B})$ is initial in $\textsf{C}^{A, B}$.
 
 
+

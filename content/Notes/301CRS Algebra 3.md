@@ -20,7 +20,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
 [[LEC ALG3 2]] ✅ Quotients and ideals
 [[LEC ALG3 3]] ✅ Modules
-[[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals
+[[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals, power series rings
 [[LEC ALG3 5]] ✅ Radicals
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem
 [[LEC ALG3 7]] ✅ Irreducible and prime elements
@@ -31,6 +31,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 12]] More on factoring
 [[LEC ALG3 13]] Eisenstein's Criterion
 [[LEC ALG3 15]] Fields!
+[[LEC ALG3 16]]
 
 [[Stuff I'll look at later]]
 # Tutorials

@@ -76,43 +76,44 @@ $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$.
 > 	-  $H\leq N_{G}(K)$ $\implies$ $HK=KH$.
 > 	-  In particular, if $K\triangleleft G$, $HK=KH$ for all $H< G$.
 > 4. $f$ is an isomorphism iff $H\cap K=\{ 1 \}$, $HK=G$, $H\triangleleft G$, and $K\triangleleft G$.
-
-> [!Warning]
-> Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
-
-> **Proof of 1**
-> Let $H\cap K=\{ 1 \}$. Then, $f(h, k)=f(h', k')\implies$ $hk=h'k'\implies$ $h'^{-1}h=k'k^{-1}$. Notice that since $h'^{-1}h\in H$ and $k'k^{-1}\in K$, it must be that both are equal to $1$. Thus, $h'^{-1}h=1\implies h'=h$ and $k'k^{-1}=1 \implies k'=k$.
-> On the other hand, if $g\in H\cap K$, $g\ne 1$, we have $(g, 1)\mapsto g$ and $(1, g)\mapsto g$, making $f$ not injective.
 > 
-> **Proof of 2**
-> $$
-> \begin{align}
->  & f((h, k)\circ(h', k'))  =f(h, k)\circ f(h', k') \\
-> \iff  &  hh'kk'  =hkh'k' \\
-> \iff  & h'k  =kh' ~~~~\forall h,h'\in H, k,k'\in K
-> \end{align}
-> $$
+> > [!Proof]-
+> > 
+> > $(1)$ Let $H\cap K=\{ 1 \}$. Then, $f(h, k)=f(h', k')\implies$ $hk=h'k'\implies$ $h'^{-1}h=k'k^{-1}$. Notice that since $h'^{-1}h\in H$ and $k'k^{-1}\in K$, it must be that both are equal to $1$. Thus, $h'^{-1}h=1\implies h'=h$ and $k'k^{-1}=1 \implies k'=k$.
+> > On the other hand, if $g\in H\cap K$, $g\ne 1$, we have $(g, 1)\mapsto g$ and $(1, g)\mapsto g$, making $f$ not injective.
+> > 
+> > $(2)$ 
+> > $$
+> > \begin{align}
+> >  & f((h, k)\circ(h', k'))  =f(h, k)\circ f(h', k') \\
+> > \iff  &  hh'kk'  =hkh'k' \\
+> > \iff  & h'k  =kh' ~~~~\forall h,h'\in H, k,k'\in K
+> > \end{align}
+> > $$
+> > 
+> > $(3)$ 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. For the converse, we again have $HKHK=HHKK$, which implies $KH=HK$.
+> > 
+> > $(4)$ The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
+> > 
+> > [!Warning]
+> > Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
 > 
-> **Proof of 3**
-> 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. For the converse, we again have $HKHK=HHKK$, which implies $KH=HK$.
-> 
-> **Proof of 4**
-> The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
 
 > [!Lemma]
 > $$
 > |HK|= \frac{|H||K|}{|H\cap K|}.
 > $$
-
-> **Proof**
-> Notice that $HK$ is a union of a subset of the left cosets of $K$:
-> $$
-> HK=\bigcup_{h\in H}^{} hK.
-> $$
-> Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in K$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
-> $$
-> |HK|= \left( \frac{{|H|}}{|H\cap K|} \right)|K|.
-> $$
+> 
+> > [!Proof]-
+> > Notice that $HK$ is a union of a subset of the left cosets of $K$:
+> > $$
+> > HK=\bigcup_{h\in H}^{} hK.
+> > $$
+> > Since each coset of $K$ had $|K|$ elements, it suffices to find the number of distinct cosets of the form $hK$, $h\in H$. But, $h_{1}K=h_{2}K$ $\iff$ $h_{2}^{-1}h_{1}\in K$ $\iff$ $h_{2}^{-1}h_{1}\in H\cap K$ $\iff$ $h_{1}(H\cap K)=h_{2}(H\cap K)$. Thus, $h_{1}$ and $h_{2}$ belong to the same coset of $K$ if and only if they also belong to the same coset of $H\cap K$. Thus, the number of distinct cosets of the form $hK$ is equal to the index of $H\cap K$ in $H$. Thus,
+> > $$
+> > |HK|= \left( \frac{{|H|}}{|H\cap K|} \right)|K|.
+> > $$
+> 
 
 ---
 ## Example: Chinese remainder theorem

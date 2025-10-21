@@ -16,7 +16,15 @@ See @pughRealMathematicalAnalysis2015 5§1.
 > $$
 > \lVert T \rVert :=\sup \left\{  \frac{|T\mathbf{v}|}{|\mathbf{v}|}:\mathbf{v}\ne 0  \right\}.
 > $$
-> 
+> If $\lVert T \rVert< \infty$, we say $T$ is **bounded**.
+
+> [!Remark]
+> For a bounded linear operator $T$ on a normed space the three quantities
+> $$
+> \sup_{\lvert x \rvert \leq 1}\lvert Tx \rvert , \quad \sup_{\lvert x \rvert =1}\lvert Tx \rvert , \quad \sup_{x\ne 0}\frac{|Tx|}{|x|}
+> $$
+> are equal, even in infinite dimensions (however, note that the supremum need not be attained in infinite dimensions, since [[LEC ANA2 7#^bd2833|the unit ball is not compact]]). 
+
 
 It is clear from the definition that $|T\mathbf{v}|\leq \lVert T \rVert|\mathbf{v}|$ for all $\mathbf{v}\in V$. 
 
@@ -38,7 +46,6 @@ It is clear from the definition that $|T\mathbf{v}|\leq \lVert T \rVert|\mathbf{
 
 ^a7608b
 
-
 > [!Remark]
 > The operator norm of a matrix is bounded above by its Euclidean norm:
 > $$
@@ -52,11 +59,23 @@ It is clear from the definition that $|T\mathbf{v}|\leq \lVert T \rVert|\mathbf{
 ^3c2f75
 
 > [!Proposition]
-> Let $T:V\to W$ be a linear transformation from one normed space to another. The following are equivalent:
+> Let $T:V\to W$ be a linear transformation from one normed linear space to another. The following are equivalent:
 > 1. $\lVert T \rVert\leq \infty$.
 > 2. $T$ is uniformly continuous.
 > 3. $T$ is continuous.
 > 4. $T$ is continuous at the origin.
+> 5. $T$ is continuous at some $\mathbf{v}\in V$.
+> 
+> > [!Proof]-
+> > $(1\implies 4)$: For $\epsilon> 0$, take $\delta=\epsilon/\lVert T \rVert$. 
+> > $(4\implies 1)$: Let $\epsilon=1$, and $\delta> 0$ be obtained by the continuity of $T$ at $\mathbf{0}$. For all $\mathbf{v}\ne \mathbf{0}$, 
+> > $$
+> > |T\mathbf{v}|= \frac{2|\mathbf{v}|}{\delta}\left|T\left( \frac{\delta v}{2|\mathbf{v}|} \right)  \right| \leq  \frac{2}{\delta} |\mathbf{v}|.
+> > $$
+> > Thus, $\lVert T \rVert< \infty$.
+> 
+
+^b01b34
 
 > [!Proposition]
 > Every linear transformation $T:\mathbb{R}^{n}\to W$ is continuous and every isomorphism $T:\mathbb{R}^{n}\to W$ is a homeomorphism.
@@ -76,6 +95,8 @@ We will prove that all norms on a finite dimensional normed linear space are equ
 > 
 > > [!Proof]-
 > > Consider a norm $\lVert \cdot \rVert:V\to \mathbb{R}$. We will prove that $\lVert \cdot \rVert$ is [[LEC ANA1 20#Uniform continuity|uniformly continuous]], which implies that it is also continuous. Let $\epsilon>0$. We need to find a $\delta$ such that $\lVert \mathbf{v}_{1}-\mathbf{v}_{2} \rVert<\delta\implies |\lVert \mathbf{v}_{1} \rVert-\lVert \mathbf{v}_{2} \rVert|<\epsilon$. But, we know that $|\lVert \mathbf{v}_{1} \rVert-\lVert \mathbf{v}_{2} \rVert|\leq \lVert \mathbf{v}_{1}-\mathbf{v}_{2} \rVert$. Thus, choosing $\delta=\epsilon$ will do. 
+
+^67b79d
 
 > [!Lemma]
 > Suppose $(V, \lVert \cdot \rVert)$ is finite dimensional normed linear space. Consider $S=\{ \mathbf{x}\in V: \lVert \mathbf{x} \rVert=1 \}$. $S$ is [[LEC ANA1 13#Epilogue|closed]] in $(V, \lVert \cdot \rVert)$.

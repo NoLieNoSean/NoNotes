@@ -42,7 +42,7 @@ Non-Abelian examples:
 - $(GL_{n}(\mathbb{R}), \times)$: The set of $n\times n$ invertible real matrices. The fact that it is closed under $\times$ comes from the fact that if $A$ and $B$ are invertible matrices, $AB$ is also invertible.
 
 > [!Definition] Subgroup
-> Let $G=(G, \star)$ be a group. A **subgroup** of $G$ is a group $H=(H, \star)$ where $H$ is a subset of $G$. Mya be denoted $H\leq G$.
+> Let $G=(G, \star)$ be a group. A **subgroup** of $G$ is a group $H=(H, \star)$ where $H$ is a subset of $G$. May be denoted $H\leq G$.
 
 > [!Theorem]
 > Every subgroup of $\mathbb{Z}$ is of the form $n\mathbb{Z}$, $n\geq 0$. 

@@ -20,11 +20,13 @@ We now have the tools to prove [[LEC ANA1 20#^95867f]] more succinctly:
 > 
  
 > [!Example]
-> Open balls in $\mathscr{l}_{1}, \mathscr{l}_{2}, \dots, \mathscr{l}_{\infty}$ are not compact ([[LEC ANA2 6#^c45e7a|we have shown]] that any ball centered at the origin in these spaces is not totally bounded; any ball in an NLS can be obtained by scaling and translating the unit ball). 
+> Closed balls in $\mathscr{l}_{1}, \mathscr{l}_{2}, \dots, \mathscr{l}_{\infty}$ are not compact ([[LEC ANA2 6#^c45e7a|we have shown]] that any ball centered at the origin in these spaces is not totally bounded; any ball in an NLS can be obtained by scaling and translating the unit ball). 
 > 
 > We will now show that balls in $C[0, 1]$ are not compact. Consider the sequence $\{ t^{n} \}_{n=1}^{\infty}\subseteq B_{2}(0)$. $\{ t^{n} \}$ clearly does not have a converging subsequence: if it did, the subsequence would have to converge pointwise to the limit, and the pointwise limit of any subsequence is the pointwise limit of $\{ t^{n} \}$, which is not continuous.  
 > 
-> In fact, unit balls at not compact in any infinite dimensional NLS. Proving this requires some functional analysis.
+> *In fact, unit balls at not compact in any infinite dimensional NLS*. Proving this requires some functional analysis.
+
+^bd2833
 
 ---
 
@@ -71,7 +73,7 @@ For example, a family of [[LEC CAL1 10#^659739|Lipschitz mappings]] with the sam
 > $$
 > for all $f\in \mathcal{A}$ and $x, y\in X$. Thus, $\mathcal{A}$ is equicontinuous.
 
-> [!Theorem] Arzelà–Ascoli Theorem, @kumaresanTopologyMetricSpaces2005 4.4.8
+> [!Theorem] Arzelà–Ascoli, @kumaresanTopologyMetricSpaces2005 4.4.8
 > Let $X$ be a compact metric space. Then a set $\mathcal{F}\subseteq C(X)$ is compact iff $\mathcal{F}$ is bounded[^1], closed, and equicontinuous.
 > 
 > > [!Proof]-

@@ -75,7 +75,7 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 
 ## Oscillations
 
-> [!Definition]
+> [!Definition] Oscillation
 > Let $f:A\to \mathbb{R}$ be a bounded function, $A\subseteq \mathbb{R}^{n}$. Let $x\in A$, $\delta> 0$.
 > $$
 > \begin{align}
@@ -85,6 +85,8 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 > \end{align}
 > $$
 > $o(f, x)$ is called the **oscillation** of $f$ at $x$.
+
+^aca9e3
 
 > [!Theorem] @spivakCalculusManifoldsModern1965 1-10
 > A bounded function $f$ is continuous at $a$ iff $o(f, a)=0$.
@@ -101,7 +103,9 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 > Let $A\subseteq \mathbb{R}^{n}$ be closed. If $f:A\to \mathbb{R}$ is any bounded function, and $\epsilon> 0$, then $\{ x\in A:o(f, x)\geq \epsilon \}$ is closed.
 > 
 > > [!Proof]-
-> > Let $B=\{ x\in A:o(f, x)\geq \epsilon \}$. We will show that $\mathbb{R}^{n}-B$ is open. If $x\in \mathbb{R}^{n}-B$, either $x\not\in A$ or $x\in A$ and $o(f, x)<\epsilon$. In the first case, since $A$ is open, there is a neighborhood $N$ of $x$ such that $N\subseteq \mathbb{R}^{n}-A\subseteq \mathbb{R}^{n}-B$. In the second case, there is a $\delta> 0$ such that $M(x, f, \delta)-m(x, f, \delta)<\epsilon$. For any $y\in B_{\delta}(x)$, there exists $\delta_{1}> 0$ such that $B_{\delta_{1}}(y)\subset B_{\delta}(x)$; thus $M(y, f, \delta_{1})-m(y, f, \delta_{1})<\epsilon$, and consequently $o(f, y)<\epsilon$. Therefore, $B_{\delta}(x)\subseteq \mathbb{R}^{n}-B$.
+> > Let $B=\{ x\in A:o(f, x)\geq \epsilon \}$. We will show that $\mathbb{R}^{n}-B$ is open. If $x\in \mathbb{R}^{n}-B$, either $x\not\in A$ or $x\in A$ and $o(f, x)<\epsilon$. In the first case, since $A^{c}$ is open, there is a neighborhood $N$ of $x$ such that $N\subseteq \mathbb{R}^{n}-A\subseteq \mathbb{R}^{n}-B$. In the second case, there is a $\delta> 0$ such that $M(x, f, \delta)-m(x, f, \delta)<\epsilon$. For any $y\in B_{\delta}(x)$, there exists $\delta_{1}> 0$ such that $B_{\delta_{1}}(y)\subset B_{\delta}(x)$; thus $M(y, f, \delta_{1})-m(y, f, \delta_{1})<\epsilon$, and consequently $o(f, y)<\epsilon$. Therefore, $B_{\delta}(x)\subseteq \mathbb{R}^{n}-B$.
+
+^99db22
 
 ^b75287
 ## Characterizing integrable functions on closed rectangles

@@ -79,7 +79,7 @@ In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \cir
 
 ^79d9ee
 
-The analog of the above statement holds true for epimorphisms: a homomorphism $\varphi:G\to H$ is an epimorphism iff it is surjective. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
+The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to H$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
 
 > [!Definition]
 > Let $\varphi:G\to G'$ be a group homomorphism. $\text{coker}\,\varphi$ is the group equipped with a homomorphism $\pi:G'\to \text{coker}\,\varphi$ which is initial with respect to all morphisms $\alpha$ such that $\alpha \circ\varphi=0$.

@@ -141,6 +141,8 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > $F\subseteq X$ is said to be **meagre** or of **category I** if $F$ is contained in a countable union of closed nowhere dense sets. If $F\subseteq X$ is not of category I, it is said to be of **category II**.
 > 
 
+^5f5dd5
+
 > [!Note]
 > There are two definitions of a meagre set: the one given above, and this: $F\subseteq X$ is meagre if $F$ is equal to a countable union of nowhere dense sets. These are equivalent; the one given above is more convenient to work with because closed sets are easier to manipulate in proofs.
 
@@ -188,4 +190,4 @@ $$
 Prove that for each $a\in[0, 1]$ the set $\{ f\in C[0, 1]:D^{+}f(a)=\infty \}$ is a dense $G_{\delta}$ subset. (A set is said to be $G_{\delta}$ if it is a countable intersection of open sets.)
 
 
-I thought of consider the sets $S_{n}=\{ f\in C[0, 1]:D^{+}f(a)> n \}$ for $n\in \mathbb{N}$, but i do not think these are open.
+I thought of considering the sets $S_{n}=\{ f\in C[0, 1]:D^{+}f(a)> n \}$ for $n\in \mathbb{N}$, but i do not think these are open.

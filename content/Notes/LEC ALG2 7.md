@@ -47,7 +47,7 @@ Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X
 > $$
 > \sigma:G\to \text{Aut}_{\textsf{C}}(A). 
 > $$
-> We will be exclusively dealing with the case $\textsf{C}=\textsf{Set}$, so $\text{Aut}_{\textsf{C}}(A)=S_{A}$.
+> We will be exclusively dealing with the case $\textsf{C}=\textsf{Set}$, so $\text{Aut}_{\textsf{C}}(A)=\text{Sym}(A)$.
 
 > [!Remark] @aluffiAlgebraChapter02009 Exercise III.9.3
 > What we've defined above is a **left group action**. A **right action** would associate to each pair $(g, x)$ with  and $x\in A$ an element $xg\in A$, such that $(xg_{1})g_{2}=x(g_{1}g_{2})$ for all $x\in X$, and $g_{1}, g_{2}\in G$. This is a different requirement than the one given above. Multiplication on the right in a group gives a prototypical example of a right action. 
@@ -56,7 +56,7 @@ Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X
 > $$
 > (\forall g, h\in G): g\bullet h:=h\cdot g.
 > $$
-> It is easy to verify that $G^{\circ}$ is indeed a group. The identity map $G\to G^{\circ}$ is an isomorphism iff $G$ is commutative. However, even if $G$ is not commutative, the map $G\to G^{\circ}$ given by $x\mapsto x ^{-1}$ is an isomorphism, so $G\cong G^{\circ}$. Now, a right action of $G$ on a set $X$ is a map $\varphi:G\to S_{X}$ such that $\varphi_{a}\circ\varphi_{b}=\varphi_{b\cdot a}$. However, since $\varphi_{b\cdot a}=\varphi_{a\bullet b}$, $\varphi$ is a homomorphism $G^{\circ}\to S_{X}$. Thus, giving a right action of $G$ on a set $X$ is the same as giving a left action of $G^{\circ}$ on $X$. Thus, we do not lose anything by restricting our study to left actions.
+> It is easy to verify that $G^{\circ}$ is indeed a group. The identity map $G\to G^{\circ}$ is an isomorphism iff $G$ is commutative. However, even if $G$ is not commutative, the map $G\to G^{\circ}$ given by $x\mapsto x ^{-1}$ is an isomorphism, so $G\cong G^{\circ}$. Now, a right action of $G$ on a set $X$ is a map $\varphi:G\to S_{X}$ such that $\varphi_{a}\circ\varphi_{b}=\varphi_{b\cdot a}$. However, since $\varphi_{b\cdot a}=\varphi_{a\bullet b}$, $\varphi$ is a homomorphism $G^{\circ}\to S_{X}$. Thus, giving a right action of $G$ on a set $X$ is the same as giving a left action of $G^{\circ}$ on $X$. We therefore do not lose anything by restricting our study to left actions[^1]. 
 
 ^bee0cf
 
@@ -78,3 +78,4 @@ If $\phi$ is injective, then it is said to be *faithful* or *effective*.
 
 ^3ca8d2
 
+[^1]: the defining map $G\to S_{X}$ is a homomorphism for left group actions, unlike for right group actions, as seen here. The only reason for this is the manner in which we define function composition: $f\circ g$ is 'first $g$ then $f$'. 

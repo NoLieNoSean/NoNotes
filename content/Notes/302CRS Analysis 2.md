@@ -14,22 +14,19 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 [[LEC ANA2 1]] Sequence spaces: $\mathscr{l}_{p}$ is a NLS
 [[LEC ANA2 2]] Examples of metric spaces
-
-## Completeness, Separability, Compactness
+## Completeness, Separability, Compactness, Equicontinuity
 
 [[LEC ANA2 3]] ✅ $B(S)$, $C_{b}(S)$ are Banach spaces, some comments about $C^{1}[0, 1]$
 [[LEC ANA2 4]] ✅ Completeness of $l_{1}$, uniqueness of completion
 [[LEC ANA2 5]] ✅ Alternate construction of completion, separability
 [[LEC ANA2 6]] ✅ Second countability, compactness
+[[LEC ANA2 7]] ✅ Equicontinuity, Arzelà–Ascoli theorem
+## Baire Category Theorem
 
-## Equicontinuity
-
-[[LEC ANA2 7]] ✅ Equicontinuity, the Arzelà–Ascoli theorem
 [[LEC ANA2 8]] ✅ Banach's Contraction principle, Baire Category theorem
 [[LEC ANA2 9]] ✅ Nowhere differentiable function are second category in $C[0, 1]$.
-
-[[LEC ANA2 10]]
-[[LEC ANA2 11]]
+[[LEC ANA2 10]] ✅ Discontinuities of pointwise limit of continuous functions, Uniform boundedness theorem
+[[LEC ANA2 11]] ✅ Stone Weierstrass Theorem
 
 ---
 

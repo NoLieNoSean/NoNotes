@@ -125,3 +125,44 @@ Since [[Intro to Ring Theory#Preliminaries|a finite integral domain is a field]]
 
 ^a6d030
 
+---
+
+# Power series rings
+
+The set of all formal power series in $x$ with coefficients in a commutative ring $R$ constitute another ring $R[[x]]$, called the **ring of formal power series** in the variable $x$ over $R$.
+
+As a set, $R[[x]]$ can be constructed as the set $R^{\mathbb{N}}$. Addition is defined componentwise, and multiplication is defined to be the Cauchy product:
+$$
+(a_{n})_{n\in \mathbb{N}}\times(b_{n})_{n\in \mathbb{N}}=\left( \sum_{k=0}^{n} a_{k}b_{n-k} \right)_{n\in \mathbb{N}}.
+$$
+
+With these operations, $R^{\mathbb{N}}$ becomes a commutative ring with zero $(0, 0, 0,\dots)$ and identity $(1, 0,0, \dots)$. 
+
+> [!Lemma]
+> Let $R$ be a commutative ring. A formal power series $f(x)=\sum_{n\geq 0}a_{n}x^{n}$ is a unit in $R[[x]]$ iff its constant coefficient $a_{0}$ is a unit in $R$.
+> 
+> > [!Proof]-
+> > 
+> > Suppose $a_{0}$ is a unit in $R$. Then, we can write $f(x)=a_{0}^{-1}(1+a_{1}a_{0}^{-1}x+a_{2}a_{0}^{-1}x^{2}+\dots)$, the inverse of which can be constructed recursively. Conversely, if $a_{0}$ is not a unit in $R$ and $g(x)=\sum_{n\geq 0}b_{n}x^{n}$ is the inverse of $f(x)$, we have $a_{0}b_{0}=1$, a contradiction. 
+
+^769902
+
+> [!Theorem]
+> If $K$ is a field, then $K[[x]]$ is a PID.
+> 
+> > [!Proof]-
+> > Define the order of a nonzero series
+> > $$
+> > \operatorname{ord}(f)=\min{n: a_n\neq0}.
+> > $$
+> > Properties: $\operatorname{ord}(0)=\infty$, and $\operatorname{ord}(fg)=\operatorname{ord}(f)+\operatorname{ord}(g)$.
+> > 
+> > Now let $I$ be a nonzero ideal in $K[[x]]$. Choose $f\in I$ with minimal order $n:=\operatorname{ord}(f)$. Then $f=x^n u$ where $u$ has order $0$, so $u$ is a unit by [[#^769902]]. Hence $x^n = u^{-1} f \in I$. Now for any $g\in I$, $\operatorname{ord}(g)\ge n$ by minimality, so $g = X^n h$ for some $h\in K[[X]]$. Thus  
+> > $$
+> > I \subseteq (X^n).
+> > $$
+> > Since $X^n\in I$, we also have $(X^n)\subseteq I$. So $I=(X^n)$.
+> 
+
+Side note: By [[#^769902]], the set of non-units is precisely the the ideal $(x)$. By [[@dummitAbstractAlgebra2004#^a2d371]], $(x)$ is the unique maximal ideal of $K[[x]]$.
+

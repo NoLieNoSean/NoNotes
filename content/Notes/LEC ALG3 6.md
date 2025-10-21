@@ -18,6 +18,8 @@ id: "111"
 > > 
 > > A similar construction works to show that every proper ideal $I$ is contained in some maximal ideal. Let $P=\{ A\supset I :A\text{ is a proper ideal in }R\}$. Again, by Zorn's lemma, $P$ has a maximal element $N$. It is easy to see that $N$ must be a maximal ideal in $R$. By definition of $P$, $N$ must contain $I$. 
 
+^5e9db5
+
 # Chinese remainder theorem, reprise
 
 The ideals $A$ and $B$ of a commutative ring $R$ are said to be **comaximal** if $A+B=R$.

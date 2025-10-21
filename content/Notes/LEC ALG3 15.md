@@ -6,7 +6,7 @@ date: 2025-10-16
 time: 09:14
 id: "119"
 ---
-	`# Fields
+# Fields
 
 > [!Definition]
 > A field extension is an injective ring homomorphism $F\to K$, where $F$ is called the base field, and $K$ is called the extension of $F$.
@@ -21,7 +21,7 @@ id: "119"
 > 2. $2^{1/3}+2^{1/2}+1$ is algebraic over $\mathbb{Q}$.
 
 > [!Proposition]
-> Let $F\subseteq K$ be algebraic over $F$. Let $\alpha$ be algebraic over $F$. Then there is a unique monic irreducible polynomial in $F[x]$ such that $f(\alpha)=0$. 
+> Let $F\subseteq K$. Let $\alpha$ be algebraic over $F$. Then there is a unique monic irreducible polynomial in $F[x]$ such that $f(\alpha)=0$. 
 > 
 > > [!Proof]-
 > > 
@@ -67,12 +67,22 @@ The converse inclusion holds too.
 > > Let $\alpha\in K$ be transcendental over $F$. If $F(\alpha)=F[x]$, then $\alpha ^{-1}\in F(a)=F[x]$, so $\alpha ^{-1}=\sum_{i=0}^{n}a_{i}\alpha^{i}\iff 0=\left( \sum_{i=0}^{n}a_{i}\alpha^{i+1} \right)-1$. So, $\alpha$ is algebraic over $F$, a contradiction.
 
 [!Proposition]
-$\text{dim}_{F}(F(\alpha))=n$, where $n$ is the degree of $\text{Irr}(\alpha;F)$.
+$\text{dim}_{F}(K)=n$, where $n$ is the degree of $\text{Irr}(\alpha;F)$. Specifically, $B=\{ 1, \alpha, \dots, \alpha^{n-1} \}$ is an $F$-basis for $K$.
 
 [!Proof]-
-
-Let $B=\{ 1, \alpha, \dots, \alpha^{n-1} \}$. 
-
+Showed that $B$ is linearly independent. 
+Let $g(\alpha)\in F[\alpha]$. Suppose $f$ is the irreducible polynomial of $\alpha$, that is, $f(\alpha)=0$ and $\text{deg}(f)=n$. By the division algorithm, there exist unique $q(x), r(x)\in F[x]$ with $r(x)=0$ or $\text{deg}(r(x))< n$. 
+$$
+\begin{align}
+ & g(x)=f(x)q(x)+r(x) \\
+\implies & g(\alpha)=r(\alpha). 
+\end{align}
+$$
+If $r(x)=0$, then $r(\alpha)=0\in\text{span}(B)$. If $r(x)\ne 0$, then 
+$$
+r(x)=\sum_{i=o}^{n-1} a_{i}x^{i}
+$$
+and hence $r(\alpha)\in\text{span}(B)$. Therefore, $F[\alpha]\subseteq\text{span}(B)$. Since $\text{span}(B)\subseteq F[\alpha]$, we get $F[\alpha]=\text{span}(B)$. 
 
 
 
