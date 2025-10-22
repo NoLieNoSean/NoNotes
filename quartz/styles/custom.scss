@@ -7,13 +7,18 @@
 
 
 :root[saved-theme="dark"] {
-    em, strong{
+
+    em,
+    strong {
         color: #9CB6FF !important;
     }
-    em > *, strong > *{
+
+    em>*,
+    strong>* {
         color: #9CB6FF !important;
     }
-    a{
+
+    a {
         color: rgb(141, 197, 228) !important;
     }
 }
@@ -28,7 +33,7 @@
 //     }
 // }
 
-.katex{
+.katex {
     font-size: 1em !important;
 }
 
@@ -54,6 +59,7 @@
     path {
         stroke: var(--darkgray);
     }
+    font-style: normal;
 }
 
 .proofEnvStart {
@@ -94,8 +100,8 @@
     text-align: right;
 }
 
-.equation-wrapper:hover{
-    .equation-number{
+.equation-wrapper:hover {
+    .equation-number {
         display: none;
     }
 }
@@ -104,15 +110,27 @@
     position: relative;
 }
 
-.callout-identifier{
+.callout-identifier {
     position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 1px;
-  font-size: 0.7rem;
-  font-family: monospace;
-  filter: opacity(0.5);
-  font-style: normal;
+    right: 0;
+    bottom: 0;
+    padding: 1px;
+    font-size: 0.7rem;
+    font-family: monospace;
+    filter: opacity(0.5);
+    font-style: normal;
+}
+
+@media print {
+    body,
+    section {
+        margin: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+        font-family: var(--bodyFont);
+        color: var(--darkgray);
+    }
 }
 
 

@@ -79,6 +79,9 @@
       font-weight: $normalWeight;
     }
     font-style: italic;
+    @media print{
+      border-width: 0px;
+    }
   }
 
   &[data-callout="proof"] {

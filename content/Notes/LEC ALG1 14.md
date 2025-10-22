@@ -7,11 +7,9 @@ date: 2024-10-09
 time: 14:02
 id: "80"
 ---
-## Direct Sums
+# Direct Sums
 
-### External direct sums
-
->[!Definition]
+>[!Definition] External direct sums
 >Let $V$ and $W$ be two vector spaces. Define the *external direct sum* like so:
 >$$
 >V \oplus W \equiv \{ (v,\ w) \ \mid \ v\in V, \ w \in W\} = V \times W.
@@ -26,16 +24,15 @@ id: "80"
 
 Notice that $V \oplus W$ contains a *copy* of $V$ and $W$, i.e. there exists an injection from $V$ and $W$ into $V \oplus W$. $V$ and $W$ are NOT subspaces of $V\oplus W$. 
 
->[!Theorem] Lemma
+> [!Lemma]
 > $\dim (V \oplus W) = \dim V + \dim W$.
- 
-> **Proof**:
-> Let a basis for $V$ be $\{ \mathbf{v}_{i} \}_{i=1}^n$ and a basis for $W$ be $\{ \mathbf{w}_{j} \}_{j=1}^m$.
-> Then $\{ (\mathbf{v}_{i},\ 0) \}_{i=1}^{n} \cup \{ (0,\ \mathbf{w}_{j}) \}_{j=1}^m$ is a basis for $V \oplus W$. ❏
+>  
+> > [!Proof]-
+> > Let a basis for $V$ be $\{ \mathbf{v}_{i} \}_{i=1}^n$ and a basis for $W$ be $\{ \mathbf{w}_{j} \}_{j=1}^m$.
+> > Then $\{ (\mathbf{v}_{i},\ 0) \}_{i=1}^{n} \cup \{ (0,\ \mathbf{w}_{j}) \}_{j=1}^m$ is a basis for $V \oplus W$. 
+> 
 
-### Internal Direct Sum
-
->[!Definition]
+>[!Definition] Internal direct sum
 > Suppose $W_{1}, W_{2}, \dots W_{k}$ are subspaces of $W$. Define the *internal direct sum* of these subspaces like so:
 > $$
 >\begin{align}
@@ -52,6 +49,7 @@ The internal direct sum of $W_{1}, \ W_{2},\  \dots \ W_{k}$ is the smallest sub
 >\mathbf{w}_{1} + \mathbf{w}_{2}+\dots +\mathbf{w}_{k} = \mathbf{0} \ \implies \mathbf{w}_{i} = \mathbf{0} \tag{$\mathbf{w}_i \in W_{i}$}.
 >$$
 ### Relation between external and internal direct sums
+
 For $W_{1}, W_{2} \subseteq V$, define
 $$
 \begin{align}
@@ -69,47 +67,53 @@ We may define $T : \ker S \to W_{1} \cap W_{2}$ such that $(-\mathbf{w}, \mathbf
 $$
 \ker S \cong W_{1} \cap W_{2}.
 $$
->[!Theorem]
->$\dim \ (W_{1} + W_{2}) = \dim W_{1} + \dim W_2 - \dim (W_{1} \cap W_{2})$.
 
->**Proof**
->Using the [[LEC ALG1 10#Rank-nullity theorem|rank nullity theorem]], we have
->$$
->\begin{align}
->\dim \text{Domain of S} &= \dim \ker S \ + \ \dim \mathrm{Im} \ S \\
->\dim \ (W_{1} \oplus  W_{2})  & = \dim \ker S \ + \ \dim\  (W_{1} + W_{2})\\ 
->\dim \ (W_{1} + W_{2})  & = \dim W_{1} + \dim W_2 - \dim (W_{1} \cap W_{2}).\\ 
->\end{align}
->$$
->❏
-
->**Alternate Proof (Artin)**
->Let a basis of $W_{1} \cap W_{2}$ be $A=\{ \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2},\dots,\boldsymbol{\alpha}_{k} \}$.
->We may extend this to a basis of $W_{1}$ by appending $B=\{ \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \dots, \boldsymbol{\beta}_{l} \}$.
->We may also extend it to a basis of $W_{2}$ by appending $C=\{ \boldsymbol{\gamma}_{1}, \boldsymbol{\gamma}_{2}, \dots, \boldsymbol{\gamma}_{m} \}$.
->Then, the claimed formula is
->$$
->\dim(W_{1}+W_{2})=(k+l)+(k+m)-k=k+l+m
->$$
->So, we have to show that $A\cup B\cup C$ is a basis of $W_{1}+W_{2}$. Clearly, $A\cup B\cup C$ spans $W_{1}+W_{2}$ since $A\cup B$ spans $W_{1}$ and $A\cup C$ spans $W_{2}$. Also, $A\cup B$ and $A\cup C$ are linearly independent sets, since they are bases. So, it only remains to show that $B\cup C$ is linearly independent. To this end, consider a linear combination of vectors in $B\cup C$ which is $\mathbf{0}$.
->$$
->\begin{align}
-> & \sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}+\sum_{i=1}^{m} c_{i}\boldsymbol{\gamma}_{i}=\mathbf{0} \\
-> \implies & \sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}=-\sum_{i=1}^{m} c_{i}\boldsymbol{\gamma}_{i}\equiv \mathbf{w}
->\end{align}
->$$
->Clearly, $\mathbf{w}\in W_{1}$ and $\mathbf{w}\in W_{2}$ $\implies$ $\mathbf{w}\in W_{1}\cap W_{2}$. Thus, 
->$$
->\begin{align}
-> & \mathbf{w}=\sum_{i=1}^{k} a_{i}\boldsymbol{\alpha}_{i} \\
->\implies &  \sum_{i=1}^{k} a_{i}\boldsymbol{\alpha}_{i}-\sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}=\mathbf{0} \\
->\implies & b_{i}=0\ \forall\ i, \text{ since } A\cup B\text{ is linearly independent.}
->\end{align}
->$$
->Similarly, $c_{i}=0$ for all $i$. Thus, $B\cup C$ is linearly independent. ❏
+> [!Theorem]
+> $\dim \ (W_{1} + W_{2}) = \dim W_{1} + \dim W_2 - \dim (W_{1} \cap W_{2})$.
+> 
+> > [!Proof]-
+> > Using the [[LEC ALG1 10#Rank-nullity theorem|rank nullity theorem]], we have
+> > $$
+> > \begin{align}
+> > \dim \text{Domain of S} &= \dim \ker S \ + \ \dim \mathrm{Im} \ S \\
+> > \dim \ (W_{1} \oplus  W_{2})  & = \dim \ker S \ + \ \dim\  (W_{1} + W_{2})\\ 
+> > \dim \ (W_{1} + W_{2})  & = \dim W_{1} + \dim W_2 - \dim (W_{1} \cap W_{2}).\\ 
+> > \end{align}
+> > $$
+> > 
+> 
+> Another one:
+> 
+> > [!Proof]-
+> > Let a basis of $W_{1} \cap W_{2}$ be $A=\{ \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2},\dots,\boldsymbol{\alpha}_{k} \}$.
+> > We may extend this to a basis of $W_{1}$ by appending $B=\{ \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \dots, \boldsymbol{\beta}_{l} \}$.
+> > We may also extend it to a basis of $W_{2}$ by appending $C=\{ \boldsymbol{\gamma}_{1}, \boldsymbol{\gamma}_{2}, \dots, \boldsymbol{\gamma}_{m} \}$.
+> > Then, the claimed formula is
+> > $$
+> > \dim(W_{1}+W_{2})=(k+l)+(k+m)-k=k+l+m
+> > $$
+> > So, we have to show that $A\cup B\cup C$ is a basis of $W_{1}+W_{2}$. Clearly, $A\cup B\cup C$ spans $W_{1}+W_{2}$ since $A\cup B$ spans $W_{1}$ and $A\cup C$ spans $W_{2}$. Also, $A\cup B$ and $A\cup C$ are linearly independent sets, since they are bases. So, it only remains to show that $B\cup C$ is linearly independent. To this end, consider a linear combination of vectors in $B\cup C$ which is $\mathbf{0}$.
+> > $$
+> > \begin{align}
+> > & \sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}+\sum_{i=1}^{m} c_{i}\boldsymbol{\gamma}_{i}=\mathbf{0} \\
+> > \implies & \sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}=-\sum_{i=1}^{m} c_{i}\boldsymbol{\gamma}_{i}\equiv \mathbf{w}
+> > \end{align}
+> > $$
+> > Clearly, $\mathbf{w}\in W_{1}$ and $\mathbf{w}\in W_{2}$ $\implies$ $\mathbf{w}\in W_{1}\cap W_{2}$. Thus, 
+> > $$
+> > \begin{align}
+> > & \mathbf{w}=\sum_{i=1}^{k} a_{i}\boldsymbol{\alpha}_{i} \\
+> > \implies &  \sum_{i=1}^{k} a_{i}\boldsymbol{\alpha}_{i}-\sum_{i=1}^{l} b_{i}\boldsymbol{\beta}_{i}=\mathbf{0} \\
+> > \implies & b_{i}=0\ \forall\ i, \text{ since } A\cup B\text{ is linearly independent.}
+> > \end{align}
+> > $$
+> > Similarly, $c_{i}=0$ for all $i$. Thus, $B\cup C$ is linearly independent.
+> 
+> 
 
 
 !!!! this seems sus. Take 3 lines in $\mathbb{R}^{2}$.
+
 >[!Theorem] Corollary
 > $$
 > \dim \left( \sum_{i=1}^n W_{i} \right) = \sum_{i=1}^{n} (-1)^{n+1} \left(\sum_{1 \leq i_{1}<\dots<i_{k} \leq n} \dim(W_{i_{1}} \cap \dots \cap W_{i_{k}})\right)
@@ -141,9 +145,9 @@ $$
 > $$
 > Note that the backwards implication is not true for $k \geq 3$. 
 
-> [!Warning]
+> [!Note]
 > 
-> Almost all the literature I could find has these completely different definitions for the "sum of subspaces" and "direct sums":
+> Almost all the literature I could find has these definitions for the "sum of subspaces" and "direct sums":
 >
 > > [!Definition]
 > > 

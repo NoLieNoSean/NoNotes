@@ -18,7 +18,9 @@ By irredundant, we mean that removing any of the $Q_{i}$ changes the intersectio
 # Associated primes
 
 > [!Definition] Associated primes
-> Given a primary decomposition $I=Q_{1} \cap\dots \cap Q_{n}$, the set $\text{Ass}_{R}(I):=\{ \sqrt{ Q_{i} }\ | \ i \}$ is ==uniquely determined== by $I$, and is called the set of **associated primes** of $I$. Minimal elements in $\text{Ass}_{R}(I)$ are called **isolated primes** while the rest (those properly containing associated primes) are called **embedded primes**.
+> Given a primary decomposition $I=Q_{1} \cap\dots \cap Q_{n}$, the set $\text{Ass}_{R}(I):=\{ \sqrt{ Q_{i} }\ | \ i \}$ is ==uniquely determined== by $I$, and is called the set of **associated primes** of $I$. Minimal elements in $\text{Ass}_{R}(I)$ are called **isolated primes** while the rest (those properly containing minimal primes) are called **embedded primes**.
+
+^53e841
 
 Here's another way to think about associated primes: Let $R$ be a Noetherian ring, $M$ be a finitely generated $R$-module. Let $S\subseteq M$ be nonempty. Define the **annihilator** of $S$ to be
 $$
@@ -45,8 +47,24 @@ This is clear form the definition above: $P\in\text{Ass}(I)$ implies $P=\text{An
 
 ==Note that== $\mathfrak{p}/I$ is a minimal prime ideal of $R/I$ iff $\mathfrak{p}\in\text{Min}(I)$.
 
-> [!Fact]
+We state the following without proof
+
+> [!Proposition]
 > For an ideal $I$ of a Noetherian ring $R$, ==$\text{Ass}(I)$ is a finite set==, and ==$\text{Min}(I)\subseteq\text{Ass}(I)$==.
+
+^18ff18
+
+> [!Lemma]
+> Let $I$ be any ideal. Then $\text{Min}(I^{n})=\text{Min}(I)$ for any $n$.
+
+^7bd1da
+
+From [[#^18ff18]] and [[#^7bd1da]], it follows that
+
+> [!Corollary]
+> $\text{Min}(I)=\text{Min}(I^{n})\subseteq\text{Ass}(I^{n})$.
+
+^d3a486
 
 # Stabilization of associated primes
 
@@ -87,6 +105,8 @@ We denote the unique minimal set of monomial generators of the monomial ideal $I
 
 > [!Theorem] 
 > Let $I$ and $J$ be monomial ideals. Then $I\cap J$ is a monomial ideal, and $\{ \text{lcm}(u, v):u\in G(I), v\in G(J) \}$ is a set of generators of $I\cap J$.
+
+^3f2f38
 
 > [!Theorem]
 > Let $I$ and $J$ be monomial ideals. Then $I:J$ is a monomial ideal, and
@@ -151,4 +171,6 @@ The following Lemma holds in general.
 > $$
 > I=\bigcap_{P\in\text{Min}(I)}P.
 > $$
-> 
+
+^84e161
+

@@ -188,6 +188,9 @@ a {
         gap: 0;
         align-items: center;
       }
+      @media print {
+        display: none !important;
+      }
     }
 
     & .sidebar.right {

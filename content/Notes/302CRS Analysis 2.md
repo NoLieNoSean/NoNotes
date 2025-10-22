@@ -27,6 +27,7 @@ CMI, Aug-Nov 2025, R Srinivasan
 [[LEC ANA2 9]] ✅ Nowhere differentiable function are second category in $C[0, 1]$.
 [[LEC ANA2 10]] ✅ Discontinuities of pointwise limit of continuous functions, Uniform boundedness theorem
 [[LEC ANA2 11]] ✅ Stone Weierstrass Theorem
+[[LEC ANA2 12]]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "318"
-date: 2025-10-20
-time: 14:21
+date: 2025-10-22
+time: 18:30
 tags:
 ---
 # Categories
@@ -30,24 +30,8 @@ A category is called **concrete** if the objects of the category are structured 
 The strength of category theory lies in its abstraction: objects do not have to be sets, and morphisms do not have to be functions.
 
 > [!Example] Finite categories
+> ![[image.jpeg]]
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
-> \begin{tikzcd}\\
-> * 
-> \end{tikzcd} \quad \quad 
-> \begin{tikzcd}\\
-> * \ar[r, ""] &\star
-> \end{tikzcd}\quad \quad 
-> \begin{tikzcd}\\
-> * \ar[r, ""] \ar[dr, ""]&\star \ar[d, ""]\\
->   
->   & \bullet\\
-> \end{tikzcd}
-> 
-> \end{document}
-> ```
 
 > [!Example] The category Rel
 > Take sets as objects and take binary relations as arrows. That is, an arrow $f:A\to B$ is an arbitrary subset $f\subseteq A\times B$. The identity arrow on a set $A$ is the identity relation. Given $R\subseteq A\times B$ and $S\subseteq B\times C$, define composition $S\circ R$ by
@@ -233,7 +217,6 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 > $$
 > In other words, $f$ is a monomorphism if it is *left cancellable*.
 
-^8cec61
 
 > [!Definition] Epimorphism
 > Let $\textsf{C}$ be a category. A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is an **epimorphism** if the following holds: for all objects $Z$ of $\textsf{C}$ and all morphisms $\alpha, \alpha'\in \text{Hom}_{\textsf{C}}(B, Z)$, 
@@ -246,11 +229,11 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and the epimorphisms are precisely the surjective functions.
 
 Several things that we take for granted in $\textsf{Set}$ break in general categories:
-### epic + monic $\centernot\implies$ isomorphism
+### epic + monic ${\implies}\mathllap{/~~~\,}$ isomorphism
 
 In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, i.e iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities.
 
-### epic $\centernot\implies$ right invertible,     monic $\centernot\implies$ left invertible
+### epic ${\implies}\mathllap{/~~~\,}$ right invertible,     monic ${\implies}\mathllap{/~~~\,}$ left invertible
 
 While 
 $$
@@ -261,7 +244,7 @@ $$
 $$
 can be easily proven universally, the converse is not generally true (It is true, of course, in $\textsf{Set}$). For example, the map $n\mapsto 2n$ defines a left-cancellable group homomorphism $f:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$. However, there is no group homomorphism $g:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ such that $gf=\mathrm{id}_{\mathbb{Z}/2\mathbb{Z}}$. Similarly, the map $n\mapsto n\mod 2$ defines a right-cancellable group homomorphism $f:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$. However, since every homomorphism $g:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$ must map $[1]_{2}$ to $[2]_{4}$, $f$ is not right invertible.
 
-### epic $\centernot\implies$ surjective
+### epic ${\implies}\mathllap{/~~~\,}$ surjective
 
 In $\textsf{Set}$, $\textsf{Gp}$(!) and $\textsf{Ab}$, *epic $\iff$ surjective*.
 
@@ -271,7 +254,7 @@ $$
 $$
 This makes for another example of a morphism which is monic and epic but not an isomorphism.
 
-### monic $\centernot\implies$ injective
+### monic ${\implies}\mathllap{/~~~\,}$ injective
 
 We'll get back to this in a bit.
 
@@ -296,7 +279,7 @@ A category need not have initial and final objects, and when they exist, they ma
 > 
 > Moreover, these isomorphisms are uniquely determined.
 > 
-> > [!Proof]
+> > [!Proof]-
 > > Since $I_{1}, I_{2}$ are initial objects, $|\text{Hom}_{\textsf{C}}(I_{1}, I_{2})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{1})|=$ $|\text{Hom}_{\textsf{C}}(I_{1}, I_{1})|=|\text{Hom}_{\textsf{C}}(I_{2}, I_{2})|=1$. Let $\varphi_{1}\in \text{Hom}_{\textsf{C}}(I_{1}, I_{2})$, $\varphi_{2}\in \text{Hom}_{\textsf{C}}(I_{2}, I_{1})$. It follows that $\varphi_{1}\varphi_{2}=\text{Id}_{I_{2}}$ and $\varphi_{2}\varphi_{1}=\text{Id}_{\varphi_{1}}$, whence $\varphi_{1}$ and $\varphi_{2}$ are isomorphisms. The same proof works for final objects.
 > 
 
@@ -305,7 +288,7 @@ The same object can be both initial and final, as singletons are in the category
 > [!Definition]
 > We say that a construction **satisfies a universal property** when it may be viewed as a terminal object of a category.
 
-> [!Example] Quotients
+> [!Example] Quotienting by equivalence relations
 > Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be a category with objects $A\xrightarrow{\varphi} Z$, where $Z$ is any set, satisfying the property
 > $$
 > a\sim a'\implies \varphi(a)=\varphi(a').
@@ -372,7 +355,19 @@ The same object can be both initial and final, as singletons are in the category
 > [!Exercise] Products of groups
 > As another trivial example, show that for $G, H\in \textsf{Gp}$, the product group $G\times H$ that we know and love satisfies the universal property of products.
 
-
+> [!Example] Product topology
+> 
+> ```tikz
+> \usepackage{tikz-cd, amsmath, amssymb}
+> \begin{document}
+> \begin{tikzcd}
+> &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
+> &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
+> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{4}}\\
+> \end{tikzcd}
+> \end{document}
+> ```
+> 
 ## Coproducts
 
 > [!Definition] Universal property of coproducts
@@ -407,7 +402,7 @@ The same object can be both initial and final, as singletons are in the category
 > [!Example]
 > If $G$ and $H$ are abelian groups, then the product $G\times H$ satisfies the [[Intro to Category Theory#Coproducts|universal property for coproducts]] in $\textsf{Ab}$.
 > 
-> > [!Proof]
+> > [!Proof]-
 > > We need to show that $(G\times H, i_{G}, i_{H})$ is initial in $\textsf{C}^{G, H}$. Let $(A, \varphi_{G}, \varphi_{H})\in \textsf{C}^{G, H}$. We need a unique homomorphism $\varphi$ which makes the following diagram commute:
 > > 
 > > ```tikz
@@ -467,21 +462,11 @@ What are coproducts in $\textsf{Gp}$?
 > 
 > In the category of divisible (abelian) groups, the map $\pi:\mathbb{Q}\to \mathbb{Q}/\mathbb{Z}$ is a non-injective monomorphism. 
 > 
-> Indeed, suppose that $f,g\colon G\to \mathbb{Q}$ are such that $\pi\circ f= \pi\circ g$. Let $x\in G$. Then $f(x)-g(x) = n\in\mathbb{Z}$. If $n\neq 0$, then let $y\in G$ be such that $y^{2n}=x$ (using multiplicative notation for $G$ since we are not assuming $G$ is abelian). Then $f(x) = f(y^{2n}) = 2nf(y)$, hence $f(y) = \frac{1}{2n}f(x)$; and similarly $g(y) = \frac{1}{2n}g(x)$. Now, $f(y)-g(y)$ must be an integer, but
-> $$f(y)-g(y) = \frac{1}{2n}(f(x)-g(x)) = \frac{1}{2},$$
+> Indeed, suppose that $f,g\colon G\to \mathbb{Q}$ are such that $\pi\circ f= \pi\circ g$. Let $x\in G$. Then $f(x)-g(x) = n\in\mathbb{Z}$. If $n\neq 0$, then let $y\in G$ be such that $2ny=x$. Then $f(x) = f(2ny) = 2nf(y)$, hence $f(y) = \frac{1}{2n}f(x)$; and similarly $g(y) = \frac{1}{2n}g(x)$. Now, $f(y)-g(y)$ must be an integer, but
+> 
+> $$
+> f(y)-g(y) = \frac{1}{2n}(f(x)-g(x)) = \frac{1}{2},
+> $$
+> 
 > a contradiction. Therefore, $n=0$, so $f(x)=g(x)$. Thus, $f=g$ and $\pi$ is a monomorphism.
-
-
-
-# Page 163
-
-```button
-name Go
-type link
-action obsidian://shell-commands/?vault=content&execute=9uwggqud98&_page_no=163
-```
-
-## Annotation 163.1
-
-The only proof of $f_{n}g_{n}\rightrightarrow fg$ 
 
