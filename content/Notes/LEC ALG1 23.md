@@ -6,7 +6,7 @@ date: 2024-11-14
 time: 14:00
 id: "89"
 ---
-## Bilinear forms
+# Bilinear forms
 
 We will now generalize the notion of the inner product. We will see that the [[LEC ALG1 21#Inner Product Spaces|inner product, as defined in the previous lecture]], is a positive definite symmetric (bilinear) form on a real vector space, and a positive definite Hermitian form on a complex vector space. 
 
@@ -52,7 +52,7 @@ $$
 $$
 for some $n\times n$ matrix $A$. Note that we didn't have to choose a basis to arrive at the above equation (in a sense, it is "canonical"); the elements of $\mathbb{R}^{n}$ are column vectors, and naturally allow a bilinear form to be described in the above manner. Of course, if we treat $\mathbb{R}^n$ as an abstract vector space and choose an arbitrary basis $\mathcal{B}$, we can write elements in terms of their coordinates in $\mathcal{B}$, leading again to the formula: $[\mathbf{v}]_{\mathcal{B}}^{T} \  [\langle \,, \rangle]_{\mathcal{B}} \ [\mathbf{w}]_{\mathcal{B}}$. The distinction between treating $\mathbb{R}^n$ as a coordinate space with its canonical basis and as an abstract vector space with a chosen basis is subtle but important.
 
-### Change of basis
+## Change of basis
 
 The matrix of a bilinear form $\langle \,, \rangle$ depends on our choice of basis, as must be evident from the above discussion. How does this matrix change when we change the basis?
 
@@ -71,7 +71,7 @@ Thus, we have $A'=P^{T}AP$.
 > [!Important]
 > For a real vector space $V$ with dimension $n$, when a basis is given, both linear operators and bilinear forms are described by $n\times n$ matrices. However, the theories of linear operators and bilinear forms are not equivalent. When one makes a change of basis, the matrix $A$ of a bilinear form changes to $P^{T}AP$, while the matrix $A$ of a linear operator changes to $P^{-1}AP$. 
 
-### Symmetric forms
+## Symmetric forms
 
 A bilinear form is *symmetric* if $\langle \mathbf{v}, \mathbf{w} \rangle=\langle \mathbf{w}, \mathbf{v} \rangle$ for all $\mathbf{v}, \mathbf{w}\in V$. "symmetric form" is short for "symmetric bilinear form". 
 
@@ -85,9 +85,9 @@ Now consider a bilinear form $\langle \,, \rangle$ on an abstract vector space $
 > [!Theorem]
 > A bilinear form $\langle \,, \rangle$ is symmetric if and only if its matrix with respect to an arbitrary basis is a symmetric matrix.
 
-### Positive definite forms
+## Positive definite forms
 
-A bilinear form is positive definite if $\langle \mathbf{v}, \mathbf{v} \rangle>0$ for all nonzero vectors $\mathbf{v}$. The dot product is a symmetric, positive definite form on $\mathbb{R}^{n}$. The matrix of the dot product on $\mathbb{R}^{n}$ is the identity matrix. Thus, if $\langle \,, \rangle$ is the dot product, $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}\mathbf{w}$. If we change basis to $\mathcal {B}$ using a change of basis matrix $P$, then $\langle \mathbf{v}, \mathbf{w} \rangle=[\mathbf{v}]_{\mathcal {B}}P^{T}P[\mathbf{w}]_{B}$, i.e, the matrix of the dot product becomes $P^{T}P$. If the [[LEC ALG1 21#Orthogonal matrices|change of basis is orthogonal]], $P^{T}P$ is the identity matrix, and $\langle \mathbf{v}, \mathbf{w} \rangle=\langle [\mathbf{v}]_{\mathcal {B}}, [\mathbf{w}]_{\mathcal {B}} \rangle$. 
+A bilinear form is positive definite if $\langle \mathbf{v}, \mathbf{v} \rangle>0$ for all nonzero vectors $\mathbf{v}$. The dot product is a symmetric, positive definite form on $\mathbb{R}^{n}$. The matrix of the dot product on $\mathbb{R}^{n}$ is the identity matrix. Thus, if $\langle \,, \rangle$ is the dot product, $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}\mathbf{w}$. If we change basis to $\mathcal {B}$ using a change of basis matrix $P$, then $\langle \mathbf{v}, \mathbf{w} \rangle=[\mathbf{v}]_{\mathcal {B}}P^{T}P[\mathbf{w}]_{B}$, i.e, the matrix of the dot product becomes $P^{T}P$. If the change of basis is [[LEC ALG1 21#^d11820|orthogonal]], $P^{T}P$ is the identity matrix, and $\langle \mathbf{v}, \mathbf{w} \rangle=\langle [\mathbf{v}]_{\mathcal {B}}, [\mathbf{w}]_{\mathcal {B}} \rangle$. 
 
 Analogously to the terminology for positive forms, we say a matrix $A$ is positive definite if the form defined by $A$ on $\mathbb{R}^{n}$ is positive definite, i.e, $\mathbf{x}^{T}A\mathbf{x}>0$ for all nonzero column vectors $\mathbf{x}$. Evidently, if the form $\mathbf{x}^{T}A\mathbf{x}$ is equivalent to the dot product (which is positive definite), $A$ must be positive definite.
 
@@ -100,7 +100,7 @@ We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that
 
 ---
 
-## Hermitian forms
+# Hermitian forms
 
 > [!Definition]
 > A *Hermitian form* on a complex vector space $V$ is a map $V\times V\to \mathbb{C}$ denoted by $\langle \mathbf{v}, \mathbf{w} \rangle$. A Hermitian form is

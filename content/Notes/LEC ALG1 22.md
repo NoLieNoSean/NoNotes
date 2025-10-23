@@ -7,9 +7,9 @@ date: 2024-11-12
 time: 14:00
 id: "88"
 ---
-## More on orthogonal vectors
+# More on orthogonal vectors
 
-### Constructing orthonormal basis using Gram-Schmidt
+## Constructing orthonormal basis using Gram-Schmidt
 
 Recall that If $V$ is a finite dimensional inner product space, it has an orthonormal set as a basis. 
 
@@ -18,7 +18,7 @@ Recall that If $V$ is a finite dimensional inner product space, it has an orthon
 > $$
 > \langle f, g \rangle =\int_{-1}^{1} f(t)g(t) \, dt
 > $$
-> The standard basis of $V$ is $( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3} )\equiv( 1, t, t^{2})$. Applying the [[LEC ALG1 21#Gram-Schmidt Orthogonalization Process|Gram-Schmidt Orthogonalization Process]], we get 
+> The standard basis of $V$ is $( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3} )\equiv( 1, t, t^{2})$. Applying the [[LEC ALG1 21#^f789a3|Gram-Schmidt Orthogonalization Process]], we get 
 > $$
 > \begin{align} \\
 > \mathbf{w}_{1} & = \frac{\mathbf{v}_{1}}{\lVert \mathbf{v}_{1} \rVert}= \frac{1}{\sqrt{ \int_{-1}^{1}  \, dt  }}=\frac{1}{\sqrt{ 2 }}. \\

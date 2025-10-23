@@ -5,10 +5,9 @@ tags:
 id: "8"
 ---
 CMI, Aug-Nov 2025, Krishna Hanumanthu
-@ramadasMULTIDIMENSIONALINTEGRALCALCULUS, @spivakCalculusManifoldsModern1965 ([errata](https://www.jirka.org/spivak-errata.html)), @rudinPrinciplesMathematicalAnalysis1976, @apostolMathematicalAnalysis1985, @pughRealMathematicalAnalysis2015, @duistermaatMultidimensionalRealAnalysis2004a
+@ramadasMULTIDIMENSIONALINTEGRALCALCULUS, @spivakCalculusManifoldsModern1965 ([errata](https://www.jirka.org/spivak-errata.html)), @rudinPrinciplesMathematicalAnalysis1976, @apostolMathematicalAnalysis1985, @pughRealMathematicalAnalysis2015, @zorichMathematicalAnalysis22016
 
 ---
-
 # Lectures
 
 ## Integration in $\mathbb{R}^{n}$
@@ -20,9 +19,10 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 
 Intermezzo: [[203CRS Calculus 1|CAL 1]] review
 
-[[LEC CAL2 7]] Partitions of unity
+[[LEC CAL2 7]] ✅ Partitions of unity
 [[LEC CAL2 8]] Change of variables
-[[LEC CAL2 9]]
+[[LEC CAL2 9]] Tensor products
+[[LEC CAL2 10]] Differential forms
 # Tutorials
 
 [[TUT CAL2 1]] $S^{1}$ has measure zero in $\mathbb{R}^{2}$

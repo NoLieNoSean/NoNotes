@@ -20,7 +20,7 @@ The motivation behind this is to define a notion of length and perpendicularity 
 
 ^dd5bbe
 
-> [!theorem] 
+> [!Proposition] 
 > The inner product is anti-linear in the second slot.
 > 
 > > [!Proof]-
@@ -34,10 +34,12 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > > $$
 > 
 
->[!Theorem] 
+>[!Proposition] 
 >$\langle \alpha \mathbf{u} + \beta \mathbf{v}, \alpha \mathbf{u} + \beta \mathbf{v}\rangle = \alpha\bar{\alpha}\langle \mathbf{u},\mathbf{u}\rangle + \alpha\bar{\beta}\langle \mathbf{u},\mathbf{v}\rangle + \bar{\alpha}\beta\langle \mathbf{v},\mathbf{u}\rangle + \beta\bar{\beta}\langle \mathbf{v},\mathbf{v}\rangle$.
 
-> [!theorem] 
+^ef218e
+
+> [!Proposition] 
 > If $\mathbf{u} = 0$, then $\langle \mathbf{u}, \mathbf{v} \rangle = 0$.
 > 
 > > [!Proof]-
@@ -82,12 +84,12 @@ The motivation behind this is to define a notion of length and perpendicularity 
 
 ^2ffc13
 
-If we plug $\beta=0$ in theorem 2 above, we get $\lVert \lambda \mathbf{v} \rVert = |\lambda| \, \lVert \mathbf{v} \rVert$.
+If we plug $\beta=0$ in [[#^ef218e]], we get $\lVert \lambda \mathbf{v} \rVert = |\lambda| \, \lVert \mathbf{v} \rVert$.
 ### The Cauchy-Schwarz Inequality
 
 We will need this to show that the norm defined above satisfies the triangle inequality.
 
-> [!Theorem]
+> [!Theorem] Cauchy-Schwarz
 > Let $V$ be an inner product space. For any two $\mathbf{u}, \mathbf{v} \in V$, we have
 > $$
 > \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert \leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
@@ -128,7 +130,9 @@ We will need this to show that the norm defined above satisfies the triangle ine
 > > 
 > 
 
->[!Theorem] Corollary
+^c0606c
+
+>[!Corollary] 
 >$$
 >{\left\lvert  \int_{0}^1 f(t)g(t) \, dt \right\rvert}^2 \leq \left( \int_{0}^{1} \lvert f^2(t) \rvert  \, dt  \right)\left( \int_{0}^{1} \lvert g^2(t) \rvert  \, dt  \right)
 >$$
@@ -136,13 +140,14 @@ We will need this to show that the norm defined above satisfies the triangle ine
 
 ### The Triangle Inequality
 
-> [!Theorem]
+> [!Proposition]
 > For any vectors $\mathbf{x}$ and $\mathbf{y}$ in an inner product space, we have
 > $$
 > \lVert \mathbf{x}+\mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert .
 > $$
 > 
 > > [!Proof]-
+> > Using [[#^c0606c]],
 > > $$
 > > \begin{align}
 > > \lVert \mathbf{x}+\mathbf{y} \rVert ^{2} & =\langle \mathbf{x}+\mathbf{y}, \mathbf{x}+\mathbf{y} \rangle  \\
@@ -158,56 +163,42 @@ We will need this to show that the norm defined above satisfies the triangle ine
 ---
 # Normed spaces
 
-We have shown that the norm $\lVert \mathbf{v} \rVert$ derived from the inner product satisfies the following properties:
+We have shown that the norm $\lVert \mathbf{v} \rVert$ [[#^2ffc13|derived from the inner product]] satisfies the following properties:
 1. Homogeneity: $\lVert \alpha \mathbf{v} \rVert=\lvert \alpha \rvert\lVert \mathbf{v} \rVert$ for all $\mathbf{v}\in V$ and $\alpha\in \mathbb{F}$.
 2. Triangle inequality: $\lVert \mathbf{x}+\mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +\lVert \mathbf{y} \rVert$. 
 3. Non-negativity: $\lVert \mathbf{v} \rVert\geq 0$ for all $\mathbf{v}\in V$.
 4. Non-degeneracy: $\lVert \mathbf{v} \rVert=0 \iff \mathbf{v}=\mathbf{0}$. 
 
-Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfied. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a *norm*. 
+Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfied. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a **norm**. A vector space equipped with a norm is called a **normed space**.
+
+*Any inner product space is a normed space*, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, *not all normed spaces are inner product spaces*.
+
+## Orthogonality
+
+If $\mathbf{u}, \mathbf{v} \in V$ then  is said to be **orthogonal** to  if $\langle \mathbf{u}, \mathbf{v}\rangle = 0$. If $\mathbf{u}$ is orthogonal to  then $\mathbf{v}$ is orthogonal to $\mathbf{u}$ as $\langle \mathbf{v}, \mathbf{u}\rangle = \overline{\langle \mathbf{u}, \mathbf{v}\rangle} = 0$.
 
 >[!Definition]
->A vector space equipped with a norm is called a *normed space*.
-
-^bc7a00
-
-Any inner product space is a normed space, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, not all normed spaces are inner product spaces.
-
----
-## Orthogonal Vectors
-
->[!Definition]
->If $\mathbf{u}, \mathbf{v} \in V$ then $\mathbf{u}$ is *orthogonal* to $\mathbf{v}$ if $\langle \mathbf{u}, \mathbf{v}\rangle = 0$.
-
-If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to $\mathbf{u}$ as $\langle \mathbf{v}, \mathbf{u}\rangle = \overline{\langle \mathbf{u}, \mathbf{v}\rangle} = 0$
-
->[!Definition]
-> If $W \subset V$ is a subspace then the *orthogonal complement* of $W$ is defined as
+> If $W \subset V$ is a subspace then the **orthogonal complement** of $W$ is defined as
 > $$
 > W^{\perp} \equiv \{ \mathbf{x} \in V \mid \langle \mathbf{x}, \mathbf{w}\rangle = 0\, \ \forall \, \mathbf{w} \in W \}.
 > $$
 
->[!theorem]
-> $W^\perp$ is a subspace of $V$.
+> [!Proposition]
+> If $W$ is a subspace of $V$, then $W^\perp$ is a subspace of $V$.
+> 
+> > [!Proof]-
+> > 1) $\mathbf{0} \in W^\perp$ as $\langle \mathbf{0}, \mathbf{w}\rangle = 0\ \forall \ \mathbf{w} \in W$.
+> > 2) For any $\mathbf{u}, \mathbf{v} \in W^\perp$ and $\mathbf{w}\in W$, we have
+> > $$
+> > \langle \alpha \mathbf{u} + \beta \mathbf{v}, \mathbf{w}\rangle = \alpha \langle \mathbf{u}, \mathbf{w}\rangle +\beta\langle \mathbf{v}, \mathbf{w}\rangle = 0.
+> > $$
+> > So, $W^\perp$ is closed under addition and scalar multiplication. 
+> 
 
-> **Proof**
-> 1) $\mathbf{0} \in W^\perp$ as $\langle \mathbf{0}, \mathbf{w}\rangle = 0\ \forall \ \mathbf{w} \in W$.
-> 2) For any $\mathbf{u}, \mathbf{v} \in W^\perp$, we have
-> $$
-> \langle \alpha \mathbf{u} + \beta \mathbf{v}, \mathbf{w}\rangle = \alpha \langle \mathbf{u}, \mathbf{w}\rangle +\beta\langle \mathbf{v}, \mathbf{w}\rangle = 0.
-> $$
-> So, $W^\perp$ is closed under addition and scalar multiplication. ❏
-
->[!theorem]
->$W \, \cap \, W^\perp = \{ \mathbf{0} \}.$
-
-> **Proof**
-> If $\mathbf{w} \in W \, \cap \, W^\perp$ then $\langle \mathbf{w}, \mathbf{w}\rangle = 0 \implies \mathbf{w} = 0$. ❏
-
-### Orthonormal vectors
+Clearly, $W \, \cap \, W^\perp = \{ \mathbf{0} \}$, since if $\mathbf{w} \in W \, \cap \, W^\perp$ then $\langle \mathbf{w}, \mathbf{w}\rangle = 0 \implies \mathbf{w} = 0$.
 
 >[!Definition]
-> A set of vectors $\{ \mathbf{v}_{i} \}$ in $V$ is an *orthonormal set* if
+> A set of vectors $\{ \mathbf{v}_{i} \}\subseteq V$ is an ***orthonormal set*** if
 > $$
 > \langle \mathbf{v}_{i}, \mathbf{v}_{j}\rangle = 
 > \begin{cases}
@@ -216,65 +207,68 @@ If $\mathbf{u}$ is orthogonal to $\mathbf{v}$ then $\mathbf{v}$ is orthogonal to
 > \end{cases}
 > $$
 
->[!Theorem]
+> [!Proposition]
 > If $\{ \mathbf{v}_{i} \} \subset V$ is an orthonormal set then $\{ \mathbf{v}_{i} \}$ are linearly independent.
+> 
+> > [!Proof]-
+> > Assume that for some $\beta_{i}$, $\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}  =0$. Then,
+> > $$
+> > \begin{align}
+> > 0=\langle \mathbf{0}, \mathbf{v}_{k}\rangle =\left\langle  \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}, \mathbf{v}_{k} \right\rangle=\sum_{i=1}^{n} \beta_{i}\langle \mathbf{v}_{i}, \mathbf{v}_{k}\rangle =\beta_{k}.
+> > \end{align}
+> > $$
+> > As $1 \leq k \leq n$, we have all $\beta_{k}= 0$. Hence $\{ \mathbf{v}_{i} \}$ is linearly independent.
+> 
 
-> **Proof**
-> Assume that for some $\beta_{i}$, $\sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}  =0$. Then,
-> $$
-> \begin{align}
-> 0=\langle \mathbf{0}, \mathbf{v}_{k}\rangle =\left\langle  \sum_{i=1}^{n} \beta_{i}\mathbf{v}_{i}, \mathbf{v}_{k} \right\rangle=\sum_{i=1}^{n} \beta_{i}\langle \mathbf{v}_{i}, \mathbf{v}_{k}\rangle =\beta_{k}.
-> \end{align}
-> $$
-> As $1 \leq k \leq n$, we have all $\beta_{k}= 0$. Hence $\{ \mathbf{v}_{i} \}$ is linearly independent. ❏
+For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
 
-> [!Important] 
-> For an orthonormal set $\{ \mathbf{v}_{i} \}$, if there is some $\mathbf{w}$ such that $\mathbf{w} = \alpha_{1}\mathbf{v}_{1} + \alpha_{2}\mathbf{v}_{2} +\dots + \alpha_{n}\mathbf{v}_{n}$, then $\alpha_{k} = \langle \mathbf{w}, \mathbf{v}_{k}\rangle$.
-
->[!Important]
-> For an orthonormal set $\{ \mathbf{v}_{i} \}$ in $V$ and any $\mathbf{w} \in V$,
-> $$
-> \mathbf{u} \equiv \mathbf{w} - \langle \mathbf{w}, \mathbf{v}_{1} \rangle \mathbf{v}_{1} - \langle \mathbf{w}, \mathbf{v}_{2}\rangle \mathbf{v}_{2} - \dots - \langle \mathbf{w}, \mathbf{v}_{n}\rangle \mathbf{v}_{n} 
-> $$
-> is orthogonal to each of $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots,\mathbf{v}_{n}$.
-### Orthogonal matrices
+For an orthonormal set $\{ \mathbf{v}_{i} \}$ in $V$ and any $\mathbf{w} \in V$,
+$$
+\mathbf{u} \equiv \mathbf{w} - \langle \mathbf{w}, \mathbf{v}_{1} \rangle \mathbf{v}_{1} - \langle \mathbf{w}, \mathbf{v}_{2}\rangle \mathbf{v}_{2} - \dots - \langle \mathbf{w}, \mathbf{v}_{n}\rangle \mathbf{v}_{n} 
+$$
+is orthogonal to each of $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots,\mathbf{v}_{n}$.
 
 > [!Definition]
-> A real $n\times n$ matrix $A$ is *orthogonal* if $A^{T}A=I$, which is to say $A$ is invertible and $A^{-1}=A^{T}$. 
+> A real $n\times n$ matrix $A$ is **orthogonal** if $A^{T}A=I$, which is to say $A$ is invertible and $A^{-1}=A^{T}$. 
 
-> [!Theorem]
+^d11820
+
+> [!Proposition]
 > An $n\times n$ matrix $A$ is orthogonal if and only if its columns form an orthonormal basis of $\mathbb{R}^{n}$.
-
-> **Proof**
-> Let $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ be the column vectors of $A$. Then, the $i,j$-entry of $A^{T}A$ is given by $\mathbf{v}_{i}^{T}\mathbf{v}_{j}$, which is $\langle \mathbf{v}_{i}, \mathbf{v}_{j} \rangle$. Thus, if $A^{T}A=I$, the column vectors must be orthonormal, and if the column vectors are orthonormal, $A^{T}A=I$. 
-### Gram-Schmidt Orthogonalization Process
-
->[!Theorem] Theorem
->Every finite dimensional inner product space has an orthonormal basis.
-
-> **Proof**
-> Let $V$ be any finite dimensional inner product space. Take a basis of $V$, say $\{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$. From this, we will construct an orthonormal set of $n$ vectors.
 > 
-> Let $\mathbf{u}_{1}\equiv \mathbf{v}_{1}$. Define
-> $$
-> \mathbf{w}_{1} \equiv \frac{\mathbf{u}_{1}}{\lVert \mathbf{u}_{1} \rVert},
-> $$
-> which gives us $\langle \mathbf{w}_{1}, \mathbf{w}_{1}\rangle = 1$. Now, $\mathbf{u}_{2}$ defined as
-> $$
-> \mathbf{u}_{2} \equiv \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1}\rangle \mathbf{w}_{1}
-> $$
-> is orthogonal to $\mathbf{w}_{1}$. Note that $\mathbf{u}_{2}\neq \mathbf{0}$ as $\mathbf{v}_{2}$ and $\mathbf{w}_{1}$ are linearly independent. Now we can define $\mathbf{w}_{2}$ as
-> $$
-> \mathbf{w}_{2} = \frac{\mathbf{u}_{2}}{\lVert \mathbf{u}_{2} \rVert }.
-> $$
-> Continuing this process, we get
-> $$
-> \begin{align}
-> \mathbf{u}_{1} &= \mathbf{v}_{1}  & \mathbf{w}_{1} = \hat{\mathbf{u}}_{1}\\
-> \mathbf{u}_{2} &= \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1} \rangle \mathbf{w}_{1}  & \mathbf{w}_{2} = \hat{\mathbf{u}}_{2}\\
-> \mathbf{u}_{3} &= \mathbf{v}_{3} - \langle \mathbf{v}_{3}, \mathbf{w}_{1} \rangle \mathbf{w}_{1} - \langle \mathbf{v}_{3}, \mathbf{w}_{2}\rangle \mathbf{w}_{2}  & \mathbf{w}_{3} = \hat{\mathbf{u}}_{3}\\
->  & \ \ \vdots  & \vdots \quad \ \ \\
-> \mathbf{u}_{k} &= \mathbf{v}_{k}-\langle \mathbf{v}_{k}, \mathbf{w}_{1}\rangle \mathbf{w}_{1} - \langle \mathbf{v}_{k}, \mathbf{w}_{2}\rangle \mathbf{w}_{2} - \dots - \langle \mathbf{v}_{k} , \mathbf{w}_{k-1}\rangle \mathbf{w}_{k-1} & \mathbf{w}_{k} = \hat{\mathbf{u}}_{k} 
-> \end{align}
-> $$
-> where $\hat{\mathbf{u}}$ represents the normalized vector $\mathbf{u}/\lVert \mathbf{u} \rVert$. Thus, $\{ \mathbf{w}_{i} \}$ is an orthonormal set, and hence a linearly independent set. Since a linearly independent set of size $n=\dim V$ is a basis, $\{ \mathbf{w}_{i} \}$ is a basis of $V$. ❏
+> > [!Proof]-
+> > Let $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ be the column vectors of $A$. Then, the $i,j$-entry of $A^{T}A$ is given by $\mathbf{v}_{i}^{T}\mathbf{v}_{j}$, which is $\langle \mathbf{v}_{i}, \mathbf{v}_{j} \rangle$. Thus, if $A^{T}A=I$, the column vectors must be orthonormal, and if the column vectors are orthonormal, $A^{T}A=I$. 
+> 
+
+> [!Theorem] Gram-Schmidt
+> Every finite dimensional inner product space has an orthonormal basis.
+> 
+> > [!Proof]-
+> > Let $V$ be any finite dimensional inner product space. Take a basis of $V$, say $\{ \mathbf{v}_{1}, \mathbf{v}_{2},\dots,\mathbf{v}_{n} \}$. From this, we will construct an orthonormal set of $n$ vectors.
+> > 
+> > Let $\mathbf{u}_{1}\equiv \mathbf{v}_{1}$. Define
+> > $$
+> > \mathbf{w}_{1} \equiv \frac{\mathbf{u}_{1}}{\lVert \mathbf{u}_{1} \rVert},
+> > $$
+> > which gives us $\langle \mathbf{w}_{1}, \mathbf{w}_{1}\rangle = 1$. Now, $\mathbf{u}_{2}$ defined as
+> > $$
+> > \mathbf{u}_{2} \equiv \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1}\rangle \mathbf{w}_{1}
+> > $$
+> > is orthogonal to $\mathbf{w}_{1}$. Note that $\mathbf{u}_{2}\neq \mathbf{0}$ as $\mathbf{v}_{2}$ and $\mathbf{w}_{1}$ are linearly independent. Now we can define $\mathbf{w}_{2}$ as
+> > $$
+> > \mathbf{w}_{2} = \frac{\mathbf{u}_{2}}{\lVert \mathbf{u}_{2} \rVert }.
+> > $$
+> > Continuing this process, we get
+> > $$
+> > \begin{align}
+> > \mathbf{u}_{1} &= \mathbf{v}_{1}  & \mathbf{w}_{1} = \hat{\mathbf{u}}_{1}\\
+> > \mathbf{u}_{2} &= \mathbf{v}_{2} - \langle \mathbf{v}_{2}, \mathbf{w}_{1} \rangle \mathbf{w}_{1}  & \mathbf{w}_{2} = \hat{\mathbf{u}}_{2}\\
+> > \mathbf{u}_{3} &= \mathbf{v}_{3} - \langle \mathbf{v}_{3}, \mathbf{w}_{1} \rangle \mathbf{w}_{1} - \langle \mathbf{v}_{3}, \mathbf{w}_{2}\rangle \mathbf{w}_{2}  & \mathbf{w}_{3} = \hat{\mathbf{u}}_{3}\\
+> >  & \ \ \vdots  & \vdots \quad \ \ \\
+> > \mathbf{u}_{k} &= \mathbf{v}_{k}-\langle \mathbf{v}_{k}, \mathbf{w}_{1}\rangle \mathbf{w}_{1} - \langle \mathbf{v}_{k}, \mathbf{w}_{2}\rangle \mathbf{w}_{2} - \dots - \langle \mathbf{v}_{k} , \mathbf{w}_{k-1}\rangle \mathbf{w}_{k-1} & \mathbf{w}_{k} = \hat{\mathbf{u}}_{k} 
+> > \end{align}
+> > $$
+> > where $\hat{\mathbf{u}}$ represents the normalized vector $\mathbf{u}/\lVert \mathbf{u} \rVert$. Thus, $\{ \mathbf{w}_{i} \}$ is an orthonormal set, and hence a linearly independent set. Since a linearly independent set of size $n=\dim V$ is a basis, $\{ \mathbf{w}_{i} \}$ is a basis of $V$.
+> > 
+
+^f789a3

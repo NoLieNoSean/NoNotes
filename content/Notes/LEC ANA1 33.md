@@ -11,7 +11,6 @@ id: "155"
 
 # Sequences of functions
 
-^c3dbb8
 
 > [!Definition]
 > Suppose $(f_{n})_{n=1}^{\infty}$ is a sequence of functions defined on a set $E$, and suppose that the sequence of numbers $(f_{n}(x))$ converges for every $x\in E$. We can then define a function $f$ by

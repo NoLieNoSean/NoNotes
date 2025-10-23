@@ -9,7 +9,7 @@ tags:
 ---
 # Discontinuities of pointwise limit of continuous functions 
 
-[[LEC ANA1 33#^c3dbb8|We have seen]] that the pointwise limit of continuous maps is not continuous; we will now characterize the set of discontinuities of such maps.
+[[LEC ANA1 33#Sequences of functions|We have seen]] that the pointwise limit of continuous maps is not continuous; we will now characterize the set of discontinuities of such maps.
 
 > [!Lemma]
 > Let $X$ be a complete metric space. $f_{n}:X\to \mathbb{C}$ are continuous functions, and $f_{n}\to f$ pointwise. Given any ball $B\subseteq X$ and $\epsilon> 0$, there is another ball $B_{0}\subseteq B$ and $m\in \mathbb{N}$ such that $|f_{m}(x)-f(x)|<\epsilon$ for all $x\in B_{0}$.

@@ -55,7 +55,8 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 	- Inner product spaces, normed spaces, orthogonal vectors, Gram-Schmidt orthogonalization process
 - [[LEC ALG1 22]] ✅
 	- Gram-Schmidt example, orthogonal decomposition theorem
-- [[LEC ALG1 23]] 
+- [[LEC ALG1 23]] Bilinear forms, Hermitian forms
+
 %% 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted.

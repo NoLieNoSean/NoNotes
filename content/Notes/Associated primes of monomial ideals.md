@@ -2,7 +2,7 @@
 tags:
 date: 2025-10-16
 time: 18:05
-draft: true
+draft: false
 id: "262"
 ---
 # Primary decomposition
@@ -71,7 +71,7 @@ From [[#^18ff18]] and [[#^7bd1da]], it follows that
 > [!Theorem] @brodmannAsymptoticStabilityAssM1979
 > Let $R$ be a Noetherian ring, $I$ an ideal of $R$ and $M$ a finitely generated $R$-module. Let $A$ be the map from $\mathbb{N}$ to subsets of $\text{spec}(R)$ defined by $A(n)=\text{Ass}_{R}(M/I^{n}M)$. Then, there exists $n_{0}$ such that for all $n\geq n_{0}$, $A(n)=A(n_{0})$. 
 
-In particular, for $M=R$, we have $A(n)=\text{Ass}_{R}(I^{n})$. The smallest $n_{0}$ for which $A(n)$ stabilizes is denoted by **$\text{astab}(I)$.**
+In particular, for $M=R$, we have $A(n)=\text{Ass}_{R}(I^{n})$. The smallest $n_{0}$ for which $A(n)$ stabilizes is denoted by **$\text{astab}(I)$**. 
 
 # Monomial ideals [^1]
 [^1]: See @herzogMonomialIdeals2011 Chapter 1 for proofs.

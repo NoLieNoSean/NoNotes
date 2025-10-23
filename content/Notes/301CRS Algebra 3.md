@@ -32,6 +32,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 13]] Eisenstein's Criterion
 [[LEC ALG3 15]] Fields!
 [[LEC ALG3 16]]
+[[LEC ALG3 17]]
 
 [[Stuff I'll look at later]]
 # Tutorials
