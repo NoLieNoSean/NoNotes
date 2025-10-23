@@ -99,6 +99,9 @@ Can M2 run on a GPU?
 > [!Conjecture]
 > $\text{astab}(\mathcal{E}_{q})=q-1$. 
 
+> [!Proposition]
+> $|\text{Min}(\mathcal{E}_{q})|$ is the number of minimal covers of $n$ objects (https://oeis.org/A046165).
+
 ## Finding $\text{astab}(\mathcal{E}_{2})$
 
 $\mathcal{E}_{2}=(y_{1}y_{12}, y_{2}y_{12})$. It is easily seen that $\text{Min}(\mathcal{E}_{2})=\{ (y_{1}, y_{2}), (y_{12}) \}$ by [[Associated primes of monomial ideals#^5f7307]] and [[Associated primes of monomial ideals#^716dce]]. We can say more:
