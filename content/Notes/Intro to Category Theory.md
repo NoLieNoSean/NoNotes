@@ -291,42 +291,41 @@ The same object can be both initial and final, as singletons are in the category
 > [!Definition]
 > We say that a construction **satisfies a universal property** when it may be viewed as a terminal object of a category.
 
-> [!Note]
-> Try to see the [[LEC ALG2 13#^9ea063|universal property we stated for free groups]] in the context of this new definition.
-## Quotients
+Try to see the [[LEC ALG2 13#^9ea063|universal property we stated for free groups]] in the context of this new definition.
 
-Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be a category with objects $A\xrightarrow{\varphi} Z$, where $Z$ is any set, satisfying the property
-$$
-a\sim a'\implies \varphi(a)=\varphi(a').
-$$
-Let objects be denoted by $(\varphi, Z)$. Morphisms $(\varphi_{1}, Z_{1})\to(\varphi_{2}, Z_{2})$ are commutative diagrams
-
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
-\begin{tikzcd}[column sep=tiny]
-Z_1\ar[rr, "\sigma"]&&Z_2\\
-&A\ar[lu, "\varphi_1"]\ar[ru, "\varphi_2"']&
-\end{tikzcd}
-\end{document}
-```
-
-Denote by $\pi$ the canonical projection from $A$ to $A/\sim$. Then, $(\pi, A/\sim)$ is an initial object of $\textsf{C}$. Indeed, for any arbitrary $(\varphi, Z)$ in $\textsf{C}$, we can find a unique $\overline{\varphi}$ such that
-
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
-\begin{tikzcd}[column sep = tiny]
-A/\sim\ar[rr, "\overline{\varphi}"]&&Z\\
-&A\ar[lu, "\pi"]\ar[ru, "\varphi"']&
-\end{tikzcd}
-\end{document}
-```
-commutes. 
-
-This information can be sloppily summarized like so:
-
-*The quotient $A/\sim$ is universal with respect to the property of mapping $A$ to a set in such a way that equivalent elements have the same image.*
+> [!Example] Quotienting by equivalence relations
+> Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be a category with objects $A\xrightarrow{\varphi} Z$, where $Z$ is any set, satisfying the property
+> $$
+> a\sim a'\implies \varphi(a)=\varphi(a').
+> $$
+> Let objects be denoted by $(\varphi, Z)$. Morphisms $(\varphi_{1}, Z_{1})\to(\varphi_{2}, Z_{2})$ are commutative diagrams
+> 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}[column sep=tiny]
+> Z_1\ar[rr, "\sigma"]&&Z_2\\
+> &A\ar[lu, "\varphi_1"]\ar[ru, "\varphi_2"']&
+> \end{tikzcd}
+> \end{document}
+> ```
+> 
+> Denote by $\pi$ the canonical projection from $A$ to $A/\sim$. Then, $(\pi, A/\sim)$ is an initial object of $\textsf{C}$. Indeed, for any arbitrary $(\varphi, Z)$ in $\textsf{C}$, we can find a unique $\overline{\varphi}$ such that
+> 
+> ```tikz
+> \usepackage{tikz-cd}
+> \begin{document}
+> \begin{tikzcd}[column sep = tiny]
+> A/\sim\ar[rr, "\overline{\varphi}"]&&Z\\
+> &A\ar[lu, "\pi"]\ar[ru, "\varphi"']&
+> \end{tikzcd}
+> \end{document}
+> ```
+> commutes. 
+> 
+> This information can be sloppily summarized like so:
+> 
+> *The quotient $A/\sim$ is universal with respect to the property of mapping $A$ to a set in such a way that equivalent elements have the same image.*
 
 ## Products
 
@@ -357,6 +356,22 @@ This information can be sloppily summarized like so:
 > \end{document}
 > ```
 > commutes. In other words, $\text{Hom}((Z, f, g), (A\times B, \pi_{A}, \pi_{B}))$ is a singleton, whence $(A\times B, \pi_{A}, \pi_{B})$ is final in $\textsf{C}_{A, B}$.
+
+> [!Example] Product topology
+> 
+> ```tikz
+> \usepackage{tikz-cd, amsmath, amssymb}
+> \begin{document}
+> \begin{tikzcd}
+> &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
+> &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
+> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{4}}\\
+> \end{tikzcd}
+> \end{document}
+> ```
+> 
+
+^71ded8
 
 ## Coproducts
 

@@ -115,6 +115,17 @@ To show that $\pi(A)$ is open in $\tilde{X}$, it is sufficient to show that $\pi
 
 # Problem 3
 
+> [!Exercise]
+> Let $\mathbb{R}^*$ be the extended real number system $[-\infty, \infty]$. Define $f : \mathbb{R}^* \mapsto [-1, 1]$ by
+> $$f(x) = \frac{x}{1 + |x|} \quad \forall x \in (-\infty, \infty), \quad 
+> f(-\infty) = -1, \quad f(\infty) = 1.$$
+> Show that $f$ is a bijection and non-decreasing. Prove that 
+> $$d(x, y) = |f(x) - f(y)|$$
+> is a metric. Describe the open subsets of $(\mathbb{R}^*, d)$. Is it compact?
+
+^4391a5
+
+
 **$d$ is a metric**
 
 Suppose $y\in(0, 1)$. Then, $y=\frac{x}{1+|x|}$ implies $x> 0$, and
@@ -222,6 +233,9 @@ We know that $(X, d)$ is not complete: consider any sequence converging to $1$. 
 ---
 # Problem 6
 
+> [!Exercise]
+> Let $X=\{ \{ x_{n} \}_{n=1}^{\infty}:0\leq x_{n}\leq 1, \forall n\in \mathbb{N} \}$. Define $d(\{ x_{n} \}, \{ y_{n} \})=\sum_{n=1}^{\infty}\frac{1}{2^{n}}|x_{n}-y_{n}|$. Show that $d$ is a metric. Show that a sequence $\{ \overline{x_{n}} \}\subseteq X$, with $\overline{x_{n}}=\{ x_{m, n} \}_{m=1}^{\infty}$ converges iff $\{ x_{m, n} \}_{n=1}^{\infty}$ converges for each $m\in \mathbb{N}$. Describe the open subsets of $X$.
+
 $d(\{ x_{n} \}, \{ y_{n} \})$ exists for all $\{ x_{n} \}, \{ y_{n} \}\in X$, since 
 $$
 \begin{align}
@@ -237,13 +251,13 @@ $$
 $$
 Thus, $d$ respects the triangle inequality. 
 
-Suppose $\{ \overline{x}_{n} \}\to \{ y_{n} \}$. For every $\epsilon> 0$, there exists $N$ such that for all $n> N$, 
+Suppose $\{ \overline{x}_{n} \}\to \{ y_{n} \}$. Let $m'\in \mathbb{N}$. For every $\epsilon> 0$, there exists $N$ such that for all $n> N$, 
 $$
 \begin{align}
-\sum_{m=1}^{\infty} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}|<\epsilon.
+\sum_{m=1}^{\infty} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}|<\frac{\epsilon}{2^{m'}}.
 \end{align}
 $$
-In particular, $|\overline{x}_{m, n}-y_{m}|<\epsilon$ for each $m$. Thus, $\{ \overline{x}_{m, n} \}_{n=1}^{\infty}\to y_{m}$ for each $m$.
+In particular, $|\overline{x}_{m', n}-y_{m'}|<\epsilon$ for each $n$. Thus, $\{ \overline{x}_{m', n} \}_{n=1}^{\infty}\to y_{m'}$. 
 
 Conversely, suppose $\{ \overline{x}_{m, n} \}_{n=1}^{\infty}\to y_{m}$ for each $m$. Let $\epsilon> 0$. Choose $k$ such that 
 $$
@@ -252,7 +266,7 @@ $$
 Let $N$ be such that for all $n> N$, $|\overline{x}_{m, n}-y_{m}|<\epsilon/2$ for $m\in \{ 1, \dots, k \}$. Now, for $n> N$,
 $$
 \begin{align}
-\sum_{m=1}^{\infty} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}| & =\sum_{m=1}^{k} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}|+ r \\
+\sum_{m=1}^{\infty} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}| & \leq\sum_{m=1}^{k} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}|+ r \\
  & \leq \frac{\epsilon}{2}(1-r)+r \\
  & \leq\frac{\epsilon}{2}(1-r)+\frac{\epsilon}{2} \\
  & \leq\epsilon .
@@ -286,6 +300,8 @@ d(\{ x_{n} \}, \{ y_{n} \}) & =\sum_{n=1}^{\infty} \frac{1}{2^{n}}|x_{n}-y_{n}| 
 \end{align}
 $$
 so $\{ y_{n} \}\in B_{r}(\{ x_{n} \})$, whence $U\subseteq B_{r}(\{ x_{n} \})$. It follows that any open set in $X$ can be written as a union of open sets of the form [[#^cdf3ef]]. 
+
+Note that this is the [[Intro to Category Theory#^71ded8|product topology]] on $X$. 
 
 ---
 # Problem 7

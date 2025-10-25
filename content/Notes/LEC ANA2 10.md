@@ -90,3 +90,11 @@ tags:
 > 
 
 [^2]: Again, the map $x\mapsto |T_{i}x|$ is continuous by [[LEC CAL1 3#^b01b34]] and [[LEC CAL1 3#^67b79d]], and $[-n, n]$ is closed.
+
+[!Corollary]
+$T_{n}:X\to X$ $n\in \mathbb{N}$ such that for all $x\in X$, $\{ T_{n}(x) \}$ converges. Define $T(x)=\lim_{ n \to \infty }T_{n}(x)$. this is linear. Then $|T(x)|\leq M$ for all $x$ such that $|x|=1$. 
+
+[!Example]
+Let $\{ a_{n} \}$. If for all $\{ x_{n} \}\in \ell^{1}$, $\sum a_{n}x_{n}$ converges, then $\{ a_{n} \}\in \ell^{\infty}$. 
+
+[!Example]

@@ -9,6 +9,12 @@ id: "163"
 ---
 # Completeness
 
+> [!Definition]
+> 1. A **Cauchy space** is a complete metric space.
+> 2. A **Banach space** is a complete normed linear space .
+> 3. A **Hilbert space** is a complete inner product space.
+
+
 > [!Highlights]
 > - $B(S)$ with the sup norm is always a Banach space for any set $S$.
 > - $C_{b}(S)$ is a subspace of $B(S)$. It is also a Banach space. When $X$ is compact, $C_{b}(S)=C(S)$, and $C(S)$ is a Banach space.
@@ -23,7 +29,7 @@ $$
 induce the discrete topology on $\mathbb{N}$. A sequence converges under $d_{1}$ iff it is constant for all $n$ greater than some $N$. The same holds for $d_{2}$ (check this!), so a sequence converges under $d_{1}$ iff it converges under $d_{2}$.
 
 Under $d_{1}$, all Cauchy sequences also satisfy the 'constant after some $N$'. However, under $d_{2}$, the sequence $\{ x_{n} =n\}$ is Cauchy, but it doesn't converge! So $(\mathbb{N}, d_{1})$ is complete, while $(\mathbb{N}, d_{2})$ is not.
-e
+
 > [!Exercise]
 > Let $(X, d)$ be a metric space. Show that $\rho=d/(1+d)$ is a metric. Show that $\{ x_{n} \}$ is Cauchy wrt $d$ $\iff$ $\{ x_{n} \}$ is Cauchy wrt $\rho$. %% [MSE](https://math.stackexchange.com/questions/309198/if-dx-y-is-a-metric-then-fracdx-y1-dx-y-is-also-a-metric)  %%
 
@@ -68,7 +74,10 @@ Also note that *$B(S)$ with the sup norm is always a Banach space for any set $S
 > 
 > Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete. However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
 
-For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is compact.
+> [!Remark]
+> For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is compact.
+
+^e12a1f
 
 > [!Example]
 > 

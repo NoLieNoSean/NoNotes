@@ -69,17 +69,18 @@ Given a ring $R$, the identity $M\to M$ is an $R$-module homomorphism. Clearly, 
 
 ^e65692
 
-> [!Remark]
-> 
-> In [[#^e65692]], if we require $R$ to be commutative and $\varphi$ to map $R$ to the center of $S$, the ring operation in $S$ become compatible with the $R$-module structure:
-> $$
-> (r_{1}s_{1})(r_{2}s_{2})=\varphi(r_{1})s_{1}\varphi(r_{1})s_{2}=\varphi(r_{1})\varphi(r_{2})s_{1}s_{2}=(r_{1}r_{2})(s_{1}s_{2}).
-> $$
-> Such a structure is called an $R$-algebra.
-> 
-> > [!Definition]
-> > Let $R$ be a commutative ring. An **$R$-algebra** is a ring homomorphism $\alpha:R\to S$ such that $\alpha(R)$ is contained in the center of $S$. 
-> 
+In [[#^e65692]], if we require $R$ to be commutative and $\varphi$ to map $R$ to the center of $S$, the ring operation in $S$ become compatible with the $R$-module structure:
+$$
+(r_{1}s_{1})(r_{2}s_{2})=\varphi(r_{1})s_{1}\varphi(r_{1})s_{2}=\varphi(r_{1})\varphi(r_{2})s_{1}s_{2}=(r_{1}r_{2})(s_{1}s_{2}).
+$$
+Such a structure is called an $R$-algebra.
+
+> [!Definition] $R$-algebra
+> Let $R$ be a commutative ring. An **$R$-algebra** is a ring homomorphism $\alpha:R\to S$ such that $\alpha(R)$ is contained in the center of $S$. 
+
+^419c68
+
+[[#^419c68]] defines an $R$-algebra as a ring with compatible $R$-module structure; it can also be thought of as an $R$-module with a compatible ring structure.
 
 
 > [!Remark]

@@ -117,6 +117,11 @@ For example, a family of [[LEC CAL1 10#^659739|Lipschitz mappings]] with the sam
 > > \mathcal{F}\subseteq \bigcup_{\alpha\in \mathcal{A}}O_{\alpha}.
 > > $$
 
+> [!Corollary]
+> If $C(X)$ is infinite dimensional, then any compact subset of $C(X)$ must be nowhere dense.
 
+All we need to show is that closed balls are not compact in $C(X)$; this can be done by adding triangle functions with increasing slopes to the function at the center of ball, violating equicontinuity.
+
+This holds in general for any infinite dimensional NLS, since [[#^bd2833|closed balls in infinite dimensional normed linear spaces are not compact]]. 
 
 [^1]: As a subset of $C(X)$!

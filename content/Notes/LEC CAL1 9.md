@@ -9,10 +9,10 @@ id: "178"
 # Separable metric spaces
 
 > [!Definition]
-> A metric space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$.
+> A topological space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$.
 
 > [!Warning]
-> The notion of **separable** for a metric space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]].
+> The notion of **separable** for a topological space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]].
 
 > [!Theorem] 
 > A compact metric space is separable.
@@ -23,7 +23,7 @@ id: "178"
 ## Second-countable spaces
 
 > [!Definition]
-> A metric space $X$ is **second-countable** if there is a countable collection $\{ O_{n} \}_{n=1}^{\infty}$ of open subsets of $X$ called a **basis** such that any open subset of $X$ is the union of a subcollection of $\{ O_{n} \}_{n=1}^{\infty}$.
+> A topological space $X$ is **second-countable** if there is a countable collection $\{ O_{n} \}_{n=1}^{\infty}$ of open subsets of $X$ called a **basis** such that any open subset of $X$ is the union of a subcollection of $\{ O_{n} \}_{n=1}^{\infty}$.
 
 > [!Theorem]
 > A metric space is separable iff it is second-countable.

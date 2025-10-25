@@ -7,7 +7,17 @@ tags:
   - Processed
 id: "315"
 ---
+
 # Stone Weierstrass Theorem
+
+> [!Note]
+> A list of all versions of S-W we've seen:
+> 1. [[#^b2e532]]: S-W for $\mathbb{R}$-subalgebras
+> 2. [[#^61ec7e]]: S-W for $\mathbb{R}$-subalgebras as seen in @rudinPrinciplesMathematicalAnalysis1976 7.32. 
+> 3. [[#^c03f69]]: S-W for $\mathbb{C}$-subalgebras
+> 4. [[LEC ANA2 12#^04f340]]: characterization of $\mathbb{R}$-subalgebras which separate points
+> 5. [[LEC ANA2 12#^8f3e36]]: S-W for $\mathbb{R}$-subalgebras and locally compact spaces
+
 
 > [!Proposition] Dini
 > Let $X$ be a compact metric space. Suppose $\{ f_{n} \}\subseteq C(X)$ is monotone[^1] and converges pointwise to $f\in C(X)$. Then, $\{ f_{n} \}$ converges to $f$ uniformly.
@@ -23,8 +33,10 @@ id: "315"
 
 ^132392
 
+Note that $C(X, \mathbb{R})$, with its vector space ($\mathbb{R}$-module) and ring structure, is an $\mathbb{R}$-algebra ([[LEC ALG3 3#^419c68]]). 
+
 > [!Definition]
-> Let $X$ be compact. A subset $\mathcal{A}\subseteq C(X, \mathbb{R})$ is an **algebra** if
+> Let $X$ be compact. A subset $\mathcal{A}\subseteq C(X, \mathbb{R})$ is a **subalgebra** if
 > 1. for every $f, g\in \mathcal{A}$, $fg\in \mathcal{A}$
 > 2. $\forall f, g\in \mathcal{A}$ and $\forall\alpha, \beta\in \mathbb{R}$, $\alpha f+\beta g\in \mathcal{A}$.
 > 
@@ -55,10 +67,10 @@ id: "315"
 ^968bc3
 
 > [!Definition]
-> A subset $S\subseteq C(X)$ is a **lattice** if for every $f, g\in S$, $\text{min}(f, g)$ and $\text{max}(f, g)$ are in $S$.
+> A subset $S\subseteq C(X, \mathbb{R})$ is a **lattice** if for every $f, g\in S$, $\text{min}(f, g)$ and $\text{max}(f, g)$ are in $S$.
 
 > [!Lemma]
-> Let $X$ be compact. A closed algebra $\mathcal{A}$ of $C(X)$ is a lattice.
+> Let $X$ be compact. A closed subalgebra $\mathcal{A}$ of $C(X, \mathbb{R})$ is a lattice.
 > 
 > > [!proof]-
 > > Let $f\in \mathcal{A}$, $M=\lVert f \rVert_{\infty}$. Note that $f^{2}/M^{2}\in \mathcal{A}$. Let $\{ p_{n} \}$ be as in [[#^968bc3]]. $p_{n}\circ f^{2}/M^{2}$ is a polynomial in $f^{2}/M^{2}$, so $p_{n}\circ f^{2}/M^{2}\in \mathcal{A}$[^3] for every $n$. $p_{n}\circ f^{2}/M^{2}$ converges uniformly to $|f|/M$. Since $\mathcal{A}$ is closed, $|f|/M\in \mathcal{A}$, so $|f|\in \mathcal{A}$. 
@@ -73,8 +85,8 @@ id: "315"
 
 ^2d581a
 
-> [!Theorem] Stone-Weierstrass
-> Let $X$ be a compact metric space. Let $\mathcal{A}\subseteq C(X, \mathbb{R})$ be a unital algebra which separates points. Then, $\mathcal{A}$ is dense in $C(X, \mathbb{R})$. 
+> [!Theorem] Stone-Weierstrass for $\mathbb{R}$, v1
+> Let $X$ be a compact metric space. Let $\mathcal{A}\subseteq C(X, \mathbb{R})$ be a unital subalgebra which separates points. Then, $\mathcal{A}$ is dense in $C(X, \mathbb{R})$. 
 > 
 > > [!Proof]-
 > > 
@@ -112,22 +124,44 @@ id: "315"
 
 ^b2e532
 
-> [!Remark]
-> If to each $x\in X$ there corresponds a function $g\in \mathcal{A}$ such that $g(x)\ne 0$, we say that $\mathcal{A}$ vanishes at no point of $X$.
+> [!Lemma]
+> Let $X$ be a compact metric space. If $\mathcal{A}$ is a subalgebra of $C(X, \mathbb{R})$ which vanishes at no point of $X$, then $\overline{\mathcal{A}}$ is unital.
 > 
-> @rudinPrinciplesMathematicalAnalysis1976 7.32 proves the Stone-Weierstrass theorem with different hypothesis: '$\mathcal{A}$ contains constants' is replaced with '$\mathcal{A}$ vanishes at no point of $X$'. 
+> > [!Proof]-
+> > 
+> > We need to prove $1\in \overline{\mathcal{A}}$. Since $\mathcal{A}$ vanishes at no point of $X$, for each $x\in X$ there exists $f_{x}\in \mathcal{A}$ such that $f_{x}(x)=1$. Let $1>m> 0$.  As before, define
+> > $$
+> > U_{x}:=\{ y\in X:f_{x}(y)> m\}. 
+> > $$
+> > These are non-empty, since $x\in U_{x}$. Since $X$ is compact, 
+> > $$
+> > X=\bigcup_{x\in X}U_{x}=\bigcup_{i=1}^{n} U_{x_{i}}.
+> > $$
+> > By [[#^2d581a]], $f=\max\{ f_{x_{1}}, \dots, f_{x_{n}} \}\in \overline{\mathcal{A}}$. Note that $f(t)> m$ for all $t\in X$. Define $g:[0, \lVert f \rVert_{\infty}]\to \mathbb{R}$ such that $g(0)=0$, $g|_{[m, \lVert f \rVert_{\infty}]}=1$, and $g$ is continuous. Then, $g\in C([0, \lVert f \rVert_{\infty}])$. By [[#^b2e532]], there exist polynomials $\{ p_{n} \}$ defined on $[0, \lVert f \rVert_{\infty}]$ which converge uniformly to $g$. Let $\{ c_{n} \}$ be the sequence of constant coefficients of $\{ p_{n} \}$. Then, $\{ c_{n} \}\to 0$, and $\{ q_{n} \}:=\{ p_{n}-c_{n} \}$ is a sequence of polynomials with constant zero coefficient also converging uniformly to $g$. Each $q_{n}(f)\in \mathcal{A}$, and $\{ q_{n}(f) \}\to g(f)=1$, so $1\in \mathcal{\overline{A}}$. 
 > 
-> Rudin's hypotheses are weaker: consider the algebra $\mathcal{B}$ of all polynomials with zero constant coefficient over $[1, 2]$. $\mathcal{B}$ separates points and vanishes at no point of $[1, 2]$, since the polynomial $f(x)=x$ is in $\mathcal{B}$. But, $\mathcal{B}$ contains no constants!
+
+^54eba1
+
+We have the following corollary of [[#^b2e532]] and [[#^54eba1]]. 
+
+> [!Corollary] Stone-Weierstrass over $\mathbb{R}$, v2
+> Let $X$ be a compact metric space. Let $A\subseteq C(X, \mathbb{R})$ be a subalgebra which separates points and vanishes at no point of $X$. Then, $\mathcal{A}$ is dense in $C(X, \mathbb{R})$.
 > 
-> In fact, if we replace our definition of $h_{xy}$ with Rudin's, we can get by with the weaker hypotheses too, since our proof of the fact that $\mathcal{\overline{A}}$ is a lattice does not require constants (Rudin, on the other hand, appeals to the vanilla Weierstrass theorem (polynomials are dense in $C[0, 1]$) to show that $\overline{\mathcal{A}}$ is a lattice, the proof of which looks quite hairy)
+> > [!Proof]-
+> > 
+> > By [[#^54eba1]], $\mathcal{\overline{A}}$ is unital. By [[#^b2e532]], $\mathcal{\overline{A}}$ is dense in $C(X, \mathbb{R})$. This implies $\mathcal{\overline{A}}=C(X, \mathbb{R})$, which implies $\mathcal{A}$ is dense in $C(X, \mathbb{R})$. 
+> 
+
+^61ec7e
+
 
 > [!Corollary]
 > Let $K\subseteq \mathbb{R}^{n}$ be compact. Then polynomials in coordinates $x_{1}, \dots, x_{n}$ are dense in $C(K, \mathbb{R})$. 
 
 The [[#^b2e532]] analog for complex algebras requires additional hypotheses. A complex algebra $\mathcal{A}$ is called **self-adjoint** if $f\in \mathcal{A}$ implies $\overline{f}\in \mathcal{A}$.
 
-> [!Theorem] Stone-Weierstrass over $\mathbb{C}$
-> Let $X$ be a compact metric space. Let $\mathcal{A}\subseteq C(X, \mathbb{C})$ be a unital self-adjoint algebra which separates points. Then $\mathcal{A}$ is dense in $C(X, \mathbb{C})$.
+> [!Theorem] Stone-Weierstrass for $\mathbb{C}$, v3
+> Let $X$ be a compact metric space. Let $\mathcal{A}\subseteq C(X, \mathbb{C})$ be a unital self-adjoint subalgebra which separates points. Then $\mathcal{A}$ is dense in $C(X, \mathbb{C})$.
 > 
 > > [!Proof]-
 > > 
@@ -135,6 +169,8 @@ The [[#^b2e532]] analog for complex algebras requires additional hypotheses. A c
 > > 
 > > Note that $C(X, \mathbb{C})\cong C(X, \mathbb{R})+\sqrt{ -1 }C(X, \mathbb{R})$. So $\mathcal{A}\cong \mathcal{A}_{\mathbb{R}}+\sqrt{ -1 }\mathcal{A}_{\mathbb{R}}$. Given $f\in C(X, \mathbb{C})$, $\text{Re}(f)$ and $\text{Im}(f)$ can be uniformly approximated by functions in $\mathcal{A}_{\mathbb{R}}$: $\varphi_{n}\to\text{Re}(f)$ and $\psi_{n}\to\text{Im}(f)$. Therefore, $\varphi_{n}+\sqrt{ -1 }\psi_{n}\to\text{Re}(f)+\sqrt{ -1 }\text{Im}(f)=f$. It follows that $\mathcal{\overline{A}}=C(X, \mathbb{C})$ and $\mathcal{A}$ is dense.
 > 
+
+^c03f69
 
 
 [^1]: $f_{n}(x)$ is a monotone sequence for every $x\in X$

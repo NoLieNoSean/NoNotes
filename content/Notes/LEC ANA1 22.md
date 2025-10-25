@@ -12,12 +12,16 @@ id: "144"
 ## Connected sets
 
 >[!Definition]
->For a metric space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both [[LEC ANA1 13#Open sets|open]] in $X$. 
+>For a topological space $X$, a *separation* of $X$ is a partition of $X=A\sqcup B$ into two proper subsets $A$ and $B=X\setminus A$ such that $A$ and $B$ are both [[LEC ANA1 13#Open sets|open]] in $X$. 
+
+^d3e14f
 
 Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are both closed in $X$. A set which is both open and closed in called a *clopen* set. So, $A$ and $B$ are clopen in $X$. 
 
 >[!Definition]
 >If $X$ has a separation, $X$ is called *disconnected*. If $X$ is not disconnected, $X$ is *connected*.
+
+^b8ca19
 
 For example, $X=\mathbb{R}\setminus \{ p \}$ is disconnected because $X=(-\infty, p)\sqcup(p, \infty)$. 
 ### Characterization of connected sets in R
@@ -36,8 +40,10 @@ For example, $X=\mathbb{R}\setminus \{ p \}$ is disconnected because $X=(-\infty
 >[!Theorem]
 >If $X$ is a connected metric space and $f:X\to Y$ is [[LEC ANA1 13#Halfway through to a new definition of continuity|continuous]], $f(X)$ is connected.
 
+^26ad1a
+
 >**Proof**
->Let $f(X)=A\sqcup B$, $A$, $B$ open in $f(X)$. This implies $X=f^{-1}(A)\sqcup f^{-1}(B)$. $\Rightarrow\Leftarrow$ ❏
+>Let $f(X)=A\sqcup B$, $A$, $B$ open in $f(X)$. This implies $X=f^{-1}(A)\sqcup f^{-1}(B)$. $\Rightarrow\Leftarrow$
 
 ### Intermediate value theorem
 

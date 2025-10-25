@@ -368,6 +368,8 @@ The same object can be both initial and final, as singletons are in the category
 > \end{document}
 > ```
 > 
+
+
 ## Coproducts
 
 > [!Definition] Universal property of coproducts
