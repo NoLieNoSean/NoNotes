@@ -36,7 +36,6 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 [[LEC ANA2 13]] Connectedness
 
-
 > [!Definition]
 > A topological space is called
 > 1. **Hausdorff** if distinct points have disjoint open neighborhoods.
@@ -52,3 +51,5 @@ A normal space need not be Hausdorff in general.
 
 [[TST ANA2 Quiz 1]]
 [[TST ANA2 Quiz 2]]
+
+[[TUT ANA2 1]]

@@ -18,6 +18,8 @@ See @pughRealMathematicalAnalysis2015 5§1.
 > $$
 > If $\lVert T \rVert< \infty$, we say $T$ is **bounded**.
 
+^ecdf17
+
 > [!Remark]
 > For a bounded linear operator $T$ on a normed space the three quantities
 > $$

@@ -25,7 +25,7 @@ import sys
 import json
 import argparse
 
-ALLOWED_CALLOUTS = {"definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise", "remark"}
+ALLOWED_CALLOUTS = {"definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise", "remark", "fact", "conjecture"}
 
 CALLOUT_RE = re.compile(r'^\s*>\s*\[!(?P<kind>[A-Za-z]+)\]', re.IGNORECASE)
 BLOCK_ID_RE = re.compile(r'^\s*\^([A-Za-z0-9_-]+)\s*$')

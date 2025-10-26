@@ -69,4 +69,7 @@ Every prime is irreducible in an integral domain. The converse is true for [[LEC
 
 ^662472
 
-Example of an irreducible element which is not prime: Consider $2$ in $\mathbb{Z}[\sqrt{ -5 }]$. $2\cdot 3=(1+\sqrt{ 5 })(1-\sqrt{ 5 })$, and $2$ does not divide either $1+\sqrt{ 5 }$ or $1-\sqrt{ 5 }$. It is easily seen that $2$ is irreducible.
+Example of an irreducible element which is not prime: Consider $2$ in $\mathbb{Z}[\sqrt{ -5 }]$. $2\cdot 3=(1+\sqrt{ 5 })(1-\sqrt{ 5 })$, and $2$ does not divide either $1+\sqrt{ 5 }$ or $1-\sqrt{ 5 }$. It is easily seen that $2$ is irreducible. This also shows that $6$ does not have a unique factorization!
+
+> [!Example]
+> An irreducible element may become reducible in a quotient space. For example, $2$ is irreducible in $\mathbb{Z}[x]$, but is reducible in the Gaussian integers $\mathbb{Z}[x]/(x^{2}+1)$: $\overline{2}=\overline{(1+x)}\cdot\overline{(1-x)}$. 

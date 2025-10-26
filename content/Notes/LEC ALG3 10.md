@@ -143,3 +143,5 @@ We can retrace the same steps as in the previous section to prove that If $R$ is
 > 6. Let $f$ be an element of $R[x]$. $f$ is irreducible in $R[x]$ iff it is either an irreducible element of $R$, or a primitive polynomial that is irreducible in $\mathcal{R}[x]$.
 > 7. The ring $R[x]$ is a unique factorization domain.
 
+^d96427
+

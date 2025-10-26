@@ -107,7 +107,6 @@ If $a< b$, then $[a, b]\subset \mathbb{R}$ does not have content zero by @spivak
 
 ^99db22
 
-^b75287
 ## Characterizing integrable functions on closed rectangles
 
 > [!Lemma]

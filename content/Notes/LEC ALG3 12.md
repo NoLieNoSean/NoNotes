@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-10-09"
-time: "09:05"
+tags:
+  - ALG3
+  - Lecture
+date: 2025-10-09
+time: 09:05
 id: "117"
 ---
 gcd not defined in power series ring

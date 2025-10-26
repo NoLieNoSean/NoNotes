@@ -256,3 +256,7 @@ A cuter version with weaker hypothesis:
 > > $$
 > > provided $m$ and $n$ are large enough. Uniform convergence follows from the Cauchy criterion for uniform convergence. Note the implicit use of the triangle inequality above.
 > 
+
+
+
+

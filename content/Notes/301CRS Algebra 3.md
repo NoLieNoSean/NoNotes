@@ -30,11 +30,12 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 11]] Gaussian primes
 [[LEC ALG3 12]] More on factoring
 [[LEC ALG3 13]] Eisenstein's Criterion
-[[LEC ALG3 15]] Fields!
-[[LEC ALG3 16]]
+[[LEC ALG3 15]] ✅ Field extensions, algebraic elements, minimal polynomials
+[[LEC ALG3 16]] More on field extensions
 [[LEC ALG3 17]]
 
 [[Stuff I'll look at later]]
+[[Quadratic integer rings]]
 # Tutorials
 
 [[TUT ALG3 1]]

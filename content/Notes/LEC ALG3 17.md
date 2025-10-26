@@ -3,17 +3,19 @@ id: "325"
 date: 2025-10-23
 time: 09:47
 tags:
+  - ALG3
+  - Lecture
 ---
 > [!Claim]
 > Let $F, K$ be fields. Let $\{ F_{i} \}_{i\in \mathbb{N}}$ be fields such that $F_{i}\subseteq F_{i+1}$ and $F\subseteq F_{i}\subseteq K$ for every $i$. Then $\bigcup_{i\in \mathbb{N}}F_{i}$ is a subfield of $K$. 
 
-If $K$ is an algebraic extension of $F$, is $[K:F]$ always finite? No. We have
+^9d1148
+
+If $K/F$ is an algebraic extension, is $[K:F]$ always finite? No. Consider
 $$
 \mathbb{Q}\subseteq \mathbb{Q}[\sqrt[2]{ 2 }]\subseteq \mathbb{Q}[\sqrt[4]{ 2 }]\subseteq \mathbb{Q}[\sqrt[8]{ 2 }]\subseteq\dots\subseteq \mathbb{Q}[\sqrt[2^{n}]{ 2 }]\subseteq\dots \subseteq \mathbb{C}.
 $$
-The degree of the extension $\mathbb{Q}\subseteq \mathbb{Q}[\sqrt[2]{ 2 }]$ is 2, $\mathbb{Q}\subseteq \mathbb{Q}[\sqrt[4]{ 2 }]$ is 4, and so on (check this!). Note that $\bigcup_{k\in \mathbb{N}}F_{i}$ is a field, and an algebraic extension of $\mathbb{Q}$. 
-
-Then $\left[ \bigcup_{i\in \mathbb{N}}F_{i}:F \right]$ cannot be finite; easy contradiction if it were. 
+ $[ \mathbb{Q}[\sqrt[2^{i}]{ 2 }]:\mathbb{Q}]=2^{i}$. $\bigcup_{i\in \mathbb{N}} \mathbb{Q}[\sqrt[2^{i}]{ 2 }]$ is a field by [[#^9d1148]], and is clearly an algebraic extension of $\mathbb{Q}$. However, $\left[ \bigcup_{i\in \mathbb{N}} \mathbb{Q}[\sqrt[2^{i}]{ 2 }]:\mathbb{Q} \right]$ cannot be finite; easy contradiction if it were. 
 
 ---
 

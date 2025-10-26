@@ -71,8 +71,15 @@ tags:
 ---
 # Uniform boundedness theorem
 
-> [!Theorem] Uniform boundedness theorem
-> Let $X$ be a complete normed linear space. Let $\{ T_{i} \}_{i\in I}$ be a collection of bounded linear operators such that for each $x\in X$, there exists $M$ satisfying $\sup_{i\in I}\lvert T_{i}(x) \rvert\leq M$. Then, $\sup_{i\in I}\lVert T_{i} \rVert< \infty$.
+> [!Theorem]
+> Let $X$ be a Banach space, $Y$ a normed vector space and $B(X, Y)$ the space of all continuous[^3] linear operators from $X$ to $Y$ equipped with the [[LEC CAL1 3#^ecdf17|operator norm]]. Suppose that $\{ T_{i} \}_{i\in I}$ is a collection of continuous linear operators form $X$ to $Y$. If, for every $x\in X$, 
+> $$
+> \sup_{i\in I}| T_{i}(x)|< \infty,
+> $$
+> then
+> $$
+> \sup_{i\in I}\lVert T_{i} \rVert < \infty.
+> $$
 > 
 > > [!Proof]-
 > > 
@@ -83,18 +90,16 @@ tags:
 > > and we have $\bigcup_{n=1}^{\infty}F_{n}=X$. By [[LEC ANA2 8#^1a2743]], there exists $F_{m}$ with non-empty interior. Let $B\subseteq F_{m}$ be a closed ball with center $v_{0}$ and radius $r$. If $|x|=1$, 
 > > $$
 > > \begin{align}
-> > |T_{i}x|=\left| T_{i}\left( \frac{(v_{0}+rx)-v_{0}}{r} \right)  \right| =\left| \frac{T_{i}(v_{0}+rx)-T_{i}(v_{0}) }{r}\right| \leq \frac{2n}{r}  &  & (\forall T_{i})
+> > |T_{i}x|=\left| T_{i}\left( \frac{(v_{0}+rx)-v_{0}}{r} \right)  \right| =\left| \frac{T_{i}(v_{0}+rx)-T_{i}(v_{0}) }{r}\right| \leq \frac{2m}{r}  &  & (\forall T_{i})
 > > \end{align}
 > > $$
-> > Thus, $\lVert T_{i} \rVert\leq2n/r$ for all $i$, and $\sup_{i\in I}\lVert T_{i} \rVert\leq 2n/r$.
+> > Thus, $\lVert T_{i} \rVert\leq2m/r$ for all $i$, and $\sup_{i\in I}\lVert T_{i} \rVert\leq 2m/r$.
 > 
+
+
+^90f996
+
 
 [^2]: Again, the map $x\mapsto |T_{i}x|$ is continuous by [[LEC CAL1 3#^b01b34]] and [[LEC CAL1 3#^67b79d]], and $[-n, n]$ is closed.
 
-[!Corollary]
-$T_{n}:X\to X$ $n\in \mathbb{N}$ such that for all $x\in X$, $\{ T_{n}(x) \}$ converges. Define $T(x)=\lim_{ n \to \infty }T_{n}(x)$. this is linear. Then $|T(x)|\leq M$ for all $x$ such that $|x|=1$. 
-
-[!Example]
-Let $\{ a_{n} \}$. If for all $\{ x_{n} \}\in \ell^{1}$, $\sum a_{n}x_{n}$ converges, then $\{ a_{n} \}\in \ell^{\infty}$. 
-
-[!Example]
+[^3]: Continuity and boundedness are equivalent here; see [[LEC CAL1 3#^b01b34]]. 

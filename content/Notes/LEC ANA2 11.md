@@ -124,6 +124,35 @@ Note that $C(X, \mathbb{R})$, with its vector space ($\mathbb{R}$-module) and ri
 
 ^b2e532
 
+
+> [!Corollary]
+> Let $K\subseteq \mathbb{R}^{n}$ be compact. Then polynomials in coordinates $x_{1}, \dots, x_{n}$ are dense in $C(K, \mathbb{R})$. 
+
+^b3f0b7
+
+
+> [!Exercise]
+> Suppose $f\in C([0, 1])$ such that
+> $$
+> \int_{0}^{1} f(t)t^{i} \, dt=0
+> $$
+> for all $i\geqslant 0$. Show that $f=0$.
+> 
+> > [!Proof]-
+> > 
+> > By [[#^b3f0b7]], we have a sequence of polynomials $\{ p_{n} \}$ converging uniformly to $f$. It follows that the sequence $\{ p_{n}\cdot f \}$ converges uniformly to $f^{2}$. Let the degree of $p_{n}$ be $d_{n}$. By [[LEC ANA1 33#^9132bb]], 
+> > $$
+> > \begin{align}
+> > \int_{0}^{1} f^{2}(t) \, dt  & = \lim_{ n \to \infty } \int_{0}^{1} p_{n}(t)f(t) \, dt  \\
+> >  & =\lim_{ n \to \infty } \left[ \sum_{i=0}^{d_{n}} \int_{0}^{1} p_{n, i}t^{i}f(t) \, dt  \right]  \\
+> >  & =0. 
+> > \end{align}
+> > $$
+> > Since $f^{2}\geqslant 0$, it follows that $f^{2}=0$, so $f=0$.
+> 
+
+
+
 > [!Lemma]
 > Let $X$ be a compact metric space. If $\mathcal{A}$ is a subalgebra of $C(X, \mathbb{R})$ which vanishes at no point of $X$, then $\overline{\mathcal{A}}$ is unital.
 > 
@@ -137,7 +166,7 @@ Note that $C(X, \mathbb{R})$, with its vector space ($\mathbb{R}$-module) and ri
 > > $$
 > > X=\bigcup_{x\in X}U_{x}=\bigcup_{i=1}^{n} U_{x_{i}}.
 > > $$
-> > By [[#^2d581a]], $f=\max\{ f_{x_{1}}, \dots, f_{x_{n}} \}\in \overline{\mathcal{A}}$. Note that $f(t)> m$ for all $t\in X$. Define $g:[0, \lVert f \rVert_{\infty}]\to \mathbb{R}$ such that $g(0)=0$, $g|_{[m, \lVert f \rVert_{\infty}]}=1$, and $g$ is continuous. Then, $g\in C([0, \lVert f \rVert_{\infty}])$. By [[#^b2e532]], there exist polynomials $\{ p_{n} \}$ defined on $[0, \lVert f \rVert_{\infty}]$ which converge uniformly to $g$. Let $\{ c_{n} \}$ be the sequence of constant coefficients of $\{ p_{n} \}$. Then, $\{ c_{n} \}\to 0$, and $\{ q_{n} \}:=\{ p_{n}-c_{n} \}$ is a sequence of polynomials with constant zero coefficient also converging uniformly to $g$. Each $q_{n}(f)\in \mathcal{A}$, and $\{ q_{n}(f) \}\to g(f)=1$, so $1\in \mathcal{\overline{A}}$. 
+> > By [[#^2d581a]], $f=\max\{ f_{x_{1}}, \dots, f_{x_{n}} \}\in \overline{\mathcal{A}}$. Note that $f(t)> m$ for all $t\in X$. Define $g:[0, \lVert f \rVert_{\infty}]\to \mathbb{R}$ such that $g(0)=0$, $g|_{[m, \lVert f \rVert_{\infty}]}=1$, and $g$ is continuous. Then, $g\in C([0, \lVert f \rVert_{\infty}])$. By [[#^b3f0b7]], there exist polynomials $\{ p_{n} \}$ defined on $[0, \lVert f \rVert_{\infty}]$ which converge uniformly to $g$. Let $\{ c_{n} \}$ be the sequence of constant coefficients of $\{ p_{n} \}$. Then, $\{ c_{n} \}\to 0$, and $\{ q_{n} \}:=\{ p_{n}-c_{n} \}$ is a sequence of polynomials with constant zero coefficient also converging uniformly to $g$. Each $q_{n}(f)\in \mathcal{A}$, and $\{ q_{n}(f) \}\to g(f)=1$, so $1\in \mathcal{\overline{A}}$. 
 > 
 
 ^54eba1
@@ -155,8 +184,6 @@ We have the following corollary of [[#^b2e532]] and [[#^54eba1]].
 ^61ec7e
 
 
-> [!Corollary]
-> Let $K\subseteq \mathbb{R}^{n}$ be compact. Then polynomials in coordinates $x_{1}, \dots, x_{n}$ are dense in $C(K, \mathbb{R})$. 
 
 The [[#^b2e532]] analog for complex algebras requires additional hypotheses. A complex algebra $\mathcal{A}$ is called **self-adjoint** if $f\in \mathcal{A}$ implies $\overline{f}\in \mathcal{A}$.
 
@@ -171,6 +198,7 @@ The [[#^b2e532]] analog for complex algebras requires additional hypotheses. A c
 > 
 
 ^c03f69
+
 
 
 [^1]: $f_{n}(x)$ is a monotone sequence for every $x\in X$

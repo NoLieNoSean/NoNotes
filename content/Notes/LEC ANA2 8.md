@@ -158,6 +158,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > > It suffices to show $B_{0}\cap U\ne \emptyset$ for any closed ball $B_{0}\subseteq X$ of radius $\delta$. Clearly, $B_{0}^{\circ}\cap U_{1}$ is open, and hence contains a closed ball $B_{1}$ of radius less than $\delta/2$. Iteratively, choose a closed ball  $B_{n}$ of radius $\delta/2^{n}$ such that $B_{n}\subseteq B_{n-1}^{\circ}\cap U_{n}$. $\{ B_{n} \}_{n=1}^{\infty}$ is a contracting sequence of nonempty closed subsets. Since $X$ is complete, $\bigcap_{n=1}^{\infty}B_{n}=\{ x \}$ for some $x\in X$. It follows that $x\in U$.
 
 ^44da7d
+
  
 > [!Corollary]
 > If $X$ is complete, then $X$ is of second category. In other words, a complete metric space cannot be expressed as a countable union of closed nowhere dense subsets.
@@ -176,7 +177,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > B=\bigcup_{n=1}^{\infty} \{ x\in \mathbb{R}:o(f, x)\geq 1/n \};
 > $$
 > 
-> see [[LEC CAL2 3, 4#^30212b]] and [[LEC CAL2 3, 4#^b75287]][^1]. Thus, if a function from $\mathbb{R}$ to $\mathbb{R}$ which is continuous only on $\mathbb{Q}$ existed, the irrationals would be a countable union of closed sets $\bigcup_{i=1}^{\infty}C_{i}$, but since the irrationals do not contain an interval, neither can any of the $C_{i}$. Therefore, each of the $C_{i}$ would be nowhere dense, and the irrationals would be a meagre set. It would follow that $\mathbb{R}$ is meagre, contradicting [[#^1a2743]].
+> see [[LEC CAL2 3, 4#^30212b]] and [[LEC CAL2 3, 4#^99db22]][^1]. Thus, if a function from $\mathbb{R}$ to $\mathbb{R}$ which is continuous only on $\mathbb{Q}$ existed, the irrationals would be a countable union of closed sets $\bigcup_{i=1}^{\infty}C_{i}$, but since the irrationals do not contain an interval, neither can any of the $C_{i}$. Therefore, each of the $C_{i}$ would be nowhere dense, and the irrationals would be a meagre set. It would follow that $\mathbb{R}$ is meagre, contradicting [[#^1a2743]].
 
 
 [^1]: These theorems require $f$ to be bounded, but this can dealt with by extending the definitions to allow for infinite oscillation. 
