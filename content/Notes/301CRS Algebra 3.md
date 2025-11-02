@@ -33,6 +33,8 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 15]] ✅ Field extensions, algebraic elements, minimal polynomials
 [[LEC ALG3 16]] More on field extensions
 [[LEC ALG3 17]]
+[[LEC ALG3 18]]
+[[LEC ALG3 19]]
 
 [[Stuff I'll look at later]]
 [[Quadratic integer rings]]
@@ -44,5 +46,6 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[TUT ALG3 4]]
 [[TUT ALG3 5]]
 [[TUT ALG3 6]]
+[[TUT ALG3 7]]
 
 [[TST ALG3 Midsem]]

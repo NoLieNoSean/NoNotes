@@ -35,6 +35,9 @@ CMI, Aug-Nov 2025, R Srinivasan
 ## Connectedness
 
 [[LEC ANA2 13]] Connectedness
+[[LEC ANA2 14]]
+[[LEC ANA2 15]]
+
 
 > [!Definition]
 > A topological space is called

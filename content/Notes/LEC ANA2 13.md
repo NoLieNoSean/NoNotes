@@ -20,6 +20,12 @@ Let $X$ be a topological space. Recall [[LEC ANA1 22#^d3e14f]] and [[LEC ANA1 22
 > [!Lemma]
 > A set $J\subseteq \mathbb{R}$ is connected iff $J$ is an interval.
 
+[!Proof]-
+Suppose $J$ is not an interval. There exist $a, b\in J$ such that $a< c< b$ and $c\not\in J$. $(-\infty, c)\cap J$, $(c, \infty)\cap J$ are open in $J$ and form a separation of $J$.
+
+Let $J$ be a finite interval $[a, b]$, and $J=(U\cap J)\cup(V\cap J)$ for open $V$ and $U$. Suppose $U\cap J\ne \emptyset$. Let $c\in U\cap J$ such that $a< c< b$. There exists $\epsilon> 0$ such that $(c-\epsilon, c+\epsilon)\cap J\subseteq U\cap J$, so $[c, c+\epsilon)\subseteq U\cap J$. Let $x_{0}=\sup \{ x:[c, x)\subseteq U\cap J \}$. $x_{0}\ne b$ leads to a contradiction; we must have $x_{0}=b$ and $b\in U\cap J$. 
+
+
 [!Example]
 - $GL(2, \mathbb{R})$ is not collected; Trivial by [[LEC ANA1 22#^26ad1a]]. 
 - $O(2, \mathbb{R})=\{ A\in GL(2, \mathbb{R}):AA^{T}=\text{id} \}$ is not connected.

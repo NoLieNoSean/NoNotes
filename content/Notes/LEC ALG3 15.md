@@ -7,7 +7,7 @@ date: 2025-10-16
 time: 09:14
 id: "119"
 ---
-# Fields
+# Field extensions
 
 > [!Definition] Field extension
 > A **field extension** is an injective ring homomorphism $F\to K$, where $F$ is called the base field, and $K$ is called the extension of $F$. We will denote the field extension $F\subseteq K$ by $K/F$.
@@ -44,7 +44,7 @@ id: "119"
 > [!Definition]
 > Let $K/F$ be a field extension and let $\alpha\in K$. We denote the smallest subfield of $K$ containing $\alpha$ and $F$ by $F(\alpha)$. 
 
-The notation $F(\alpha)$ is suggestive. Indeed, it is easy to see that $F(\alpha)$ is the set of all rational functions in $\alpha$ with coefficients in $F$:
+The notation $F(\alpha)$ is suggestive. Indeed, it is easy to see that *$F(\alpha)$ is the set of all rational functions in $\alpha$ with coefficients in $F$*:
 $$
 F(\alpha)=\left\{ \frac{f(\alpha)}{g(\alpha)}:f, g\in F[x], g(\alpha)\ne 0 \right\}.
 $$
@@ -56,7 +56,7 @@ $$
 If $\alpha$ is algebraic over $F$, the reverse inclusion holds too.
 
 > [!Proposition]
-> Let $F\subseteq K$ be a field extension and $\alpha\in K$ be algebraic over $F$. 
+> Let $K/F$ be a field extension and $\alpha\in K$ be algebraic over $F$. 
 > $$
 > F(\alpha)=F[\alpha]\cong F[x]/\text{Irr}(\alpha; F).
 > $$
@@ -77,7 +77,7 @@ If $\alpha$ is algebraic over $F$, the reverse inclusion holds too.
 > $F(\alpha)=F[\alpha]$ iff $\alpha$ is algebraic over $F$.
 > 
 > > [!Proof]-
-> > Let $\alpha\in K$ be transcendental over $F$. If $F(\alpha)=F[\alpha]$, then $\alpha ^{-1}\in F(a)=F[\alpha]$, so $\alpha ^{-1}=\sum_{i=0}^{n}a_{i}\alpha^{i}\iff 0=\left( \sum_{i=0}^{n}a_{i}\alpha^{i+1} \right)-1$. This implies $\alpha$ is algebraic over $F$, a contradiction.
+> > Let $\alpha\in K$ be transcendental over $F$. If $F(\alpha)=F[\alpha]$, since $\alpha ^{-1}\in F(\alpha)$, we have $\alpha ^{-1}=\sum_{i=0}^{n}a_{i}\alpha^{i}\iff 0=\left( \sum_{i=0}^{n}a_{i}\alpha^{i+1} \right)-1$. This implies $\alpha$ is algebraic over $F$, a contradiction.
 
 > [!Proposition]
 > Let $K/F$ be a field extension and $\alpha\in K$ be algebraic over $F$. Then, $\text{dim}_{F}(F(\alpha))=n$, where $n$ is the degree of $\text{Irr}(\alpha;F)$. Specifically, $B=\{ 1, \alpha, \dots, \alpha^{n-1} \}$ is an $F$-basis for $F(\alpha)$.

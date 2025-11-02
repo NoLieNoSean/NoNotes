@@ -11,6 +11,8 @@ id: "301"
 > [!Exercise]
 > Let $R=\mathbb{C}[x, y, z]$ and $S=\mathbb{C}[t]$. Let $\phi:R\to S$ be a homomorphism defined by $\phi(x)=t^{3}$, $\phi(y)=t^{4}$, and $\phi(z)=t^{5}$. Show that $\ker \phi=(x^{3}-yz, y^{2}-xz, z^{2}-x^{2}y)$. 
 
+^dd5746
+
 Let $I=(x^{3}-yz, y^{2}-xz, z^{2}-x^{2}y)$. We will prove that
 $$
 \frac{R}{I}\cong \mathbb{C}[t^{3}, t^{4}, t^{5}].

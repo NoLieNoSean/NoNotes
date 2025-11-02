@@ -9,7 +9,7 @@ id: "85"
 ---
 ## Recall
 
-> [!Theorem] Lemma
+> [!Lemma] 
 > The [[LEC ALG1 18#Characteristic Polynomial|characteristic Polynomial]] of a linear operator is independent of the basis.
 > 
 > >[!Proof]-
@@ -18,7 +18,7 @@ id: "85"
 > > $$
 > 
 
->[!Theorem] Corollary
+>[!Corollary] 
 > Similar Matrices have the same eigenvalues.
 
 **Exercise:** Let $K$ and $W$ be the kernel and the image of a linear operator $T:V\to V$. Show that the following are equivalent:
@@ -29,7 +29,7 @@ id: "85"
 ---
 ## Complex vs Real vector spaces
 
-> [!Theorem] Proposition
+> [!Proposition] 
 > 
 > Let $V$ be a nontrivial vector space over $\mathbb{C}$. Then any linear operator $T: V \to V$ will have at least one eigenvalue, and hence at least one eigenvector.
 > 
@@ -43,7 +43,7 @@ id: "85"
 > [!Example]
 > On the other hand, it is easy to construct a linear map in a real vector space with no real eigenvalues. Consider the rotation map, $R_{\theta}:\mathbb{R}^{2}\to \mathbb{R}^{2}$. It's characteristic polynomial $x^{2}-2\cos\theta\, x+1$ does not have real roots for $\theta\ne n\pi$. But $R_{\theta}:\mathbb{C}^{2}\to \mathbb{C}^{2}$ has eigenvalues $e^{i\theta}$ and $e^{-i\theta}$.
 
-> [!Theorem] Proposition
+> [!Proposition] 
 > Every complex $n \times n$ matrix is similar to an upper triangular matrix.
 > 
 > > [!Proof]-
@@ -95,7 +95,7 @@ id: "85"
 > > where we have used the fact that $A=[A]_{\mathcal{S}\mathcal{S}}$ and $[I]_{\mathcal{B}\mathcal{S}}^{-1}=[I]_{\mathcal{S}\mathcal{B}}$. Put $P=G[I]_{\mathcal{B}\mathcal{S}}$. 
 > 
 
->[!Info] Remark
+>[!Remark] 
 > If $A$ is an $n \times n$ matrix over a field $\mathbb{F}$ such that its characteristic polynomial is a product of linear factors in $\mathbb{F}$, then there exists an invertible matrix $P$ (with entries in $\mathbb{F}$) such that $PAP^{-1}$ is upper triangular.
 
 ---
@@ -105,7 +105,7 @@ Diagonalization of a linear operator $T:V\to V$ entails finding a basis $B$ of $
 
 For operators in $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can be expressed as $A=SDS^{-1}$, where $D$ is a diagonal matrix and $S$ is an invertible matrix with entries in $\mathbb{F}$, i.e, $A$ is similar to a diagonal matrix.
 
-> [!Theorem] Proposition
+> [!Proposition]
 > 
 > A $n\times n$ matrix $A$ (with values in $\mathbb{F}$) is diagonalizable $\iff$ there exists a basis of $\mathbb{F}^n$ that consists of eigenvectors of $A$.
 > 

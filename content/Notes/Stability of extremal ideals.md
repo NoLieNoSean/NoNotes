@@ -94,6 +94,13 @@ $|\text{Ass}(\mathcal{E}_{q}^{r})|$ sequences
 4. $\mathcal{E}_{5}$: 462, 2095, 2858, 2859
 5. $\mathcal{E}_{6}$: 6424, 
 
+6. 2
+7. 8, 9
+8. 49, 80, 81
+9. 462, 2095, 2858, 2859
+10. 6424, 
+
+
 Can M2 run on a GPU?
 
 > [!Conjecture]

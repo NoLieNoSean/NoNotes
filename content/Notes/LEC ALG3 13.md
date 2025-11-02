@@ -18,15 +18,16 @@ id: "118"
 > $$
 > so $(f, g, h)$ is a prime ideal. Note that $\overline{g(x)}$ is ==irreducible== in $\mathbb{Q}[x, y, z]/f(x)$. We can ==write== $(f, g)=q\cap(f, g, h)$, where $\sqrt{ q }$ is prime. This shows that $(f, g)$ cannot be ==prime==.
 
-[!Theorem]
-Let $R$ be a UFD, and let $Q$ be its field of fractions. Suppose
-$$
-f(x)=\sum_{i=0}^{n} a_{i}x^{i}\in R[x]
-$$
-such that $a_{n}\ne 0$ and $\text{deg}\,f\geq 1$.
+> [!Theorem] Eisenstein
+> Let $R$ be a UFD, and let $Q$ be its field of fractions. Suppose
+> $$
+> f(x)=\sum_{i=0}^{n} a_{i}x^{i}\in R[x]
+> $$
+> such that $a_{n}\ne 0$ and $\text{deg}\,f\geq 1$.
+> 
+> If $p$ is an irreducible element in $R$ such that $p\nmid a_{n}$, $p\ | \ a_{i}$ for $i=0, \dots, n-1$, $p^{2}\nmid a_{0}$, then $f$ is irreducible in $Q[x]$. If $f$ is primitive, it follows ([[LEC ALG3 10#^d96427]].6) that $f$ is irreducible in $R[x]$.
 
-If $p$ is an irreducible element in $R$ such that $p\nmid a_{n}$, $p\ | \ a_{i}$ for $i=0, \dots, n-1$, $p^{2}\nmid a_{0}$, then $f$ is irreducible in $Q[x]$. If $f$ is primitive, it follows ([[LEC ALG3 10#^d96427]].6) that $f$ is irreducible in $R[x]$.
-
+^62ad0c
 
 [!Proof]-
 
