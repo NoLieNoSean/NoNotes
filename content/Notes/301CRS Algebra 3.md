@@ -14,6 +14,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 [[Intro to Category Theory]]
 [[Intro to Ring Theory]]
+[[Quadratic integer rings]]
 
 # Lectures
 
@@ -35,9 +36,11 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 17]]
 [[LEC ALG3 18]]
 [[LEC ALG3 19]]
+[[LEC ALG3 20]]
+[[LEC ALG3 21]]
 
 [[Stuff I'll look at later]]
-[[Quadratic integer rings]]
+
 # Tutorials
 
 [[TUT ALG3 1]]
@@ -47,5 +50,8 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[TUT ALG3 5]]
 [[TUT ALG3 6]]
 [[TUT ALG3 7]]
+[[TUT ALG3 8]]
+
 
 [[TST ALG3 Midsem]]
+[[TST ALG3 Quiz2]]

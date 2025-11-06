@@ -89,6 +89,8 @@ Since [[Intro to Ring Theory#Preliminaries|a finite integral domain is a field]]
 > $$
 > is a field, where $\cong_{1}$ uses [[LEC ALG3 2#^5c702e|this result]] and $\cong_{2}$ uses the isomorphism obtained in [[#^0c976e]]. 
 
+^f0a74d
+
 > [!Lemma]
 > A commutative ring $R$ is a field iff its only ideals are $(0)$ and $(1)$. 
 > 

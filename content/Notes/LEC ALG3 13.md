@@ -34,6 +34,3 @@ id: "118"
 Let $p$ be as above. Write $f(x)=c(f)f'(x)$, where $f'(x)$ is primitive. It is sufficient to show that $f'(x)$ is irreducible in $Q[x]$. The hypothesis given for $f(x)$ continue to hold for $f'(x)$ (easy to show). Thus, we can assume WLOG that $f$ is primitive. 
 
 Suppose $f=gh$. Write $g(x)=\sum b_{i}x^{i}$ and $h(x)=\sum c_{i}x^{i}$. Suppose $p\ | \ a_{0}$. Then,  $p\ | \ b_{0}$ or $p\ | \ c_{0}$. If $p\ | \ b_{0}$, then $p\nmid c_{0}$, since then $p^{2}\ | \ a_{0}$. Suppose WLOG $p\ | \ b_{0}$. Then, there exists an integer $k$ such that $p\ | \ b_{0}, \dots, b_{k-1}$, and $p\nmid b_{k}$. Note that $k$ cannot be less than $n$, since that would lead to a contradiction (see the expression for $a_{n}$).
-
-[!Theorem]
-Let $R$ be a Noetherian domain. $p$ a prime ideal. If $R$ is a ufd, then every prime ideal has height $1$. 

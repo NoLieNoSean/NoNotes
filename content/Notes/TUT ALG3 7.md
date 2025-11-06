@@ -69,12 +69,12 @@ Use [[LEC ALG3 13#^62ad0c]] with $p=y$.
 
 Let $\lambda$ denote an arbitrary unit. 
 
-Consider the map $\varphi:\mathbb{C}[x, y, z]\to \mathbb{C}[t]$ defined by $\varphi(x)=t^{3}$, $\varphi(y)=t^{4}$, and $\varphi(z)=t^{5}$ (this is the same map we encountered in [[TUT ALG3 3#^dd5746]]!). Observe that $\varphi(p_{6})=6t^{37}$; neat. Now, suppose $f, g\in \mathbb{C}[x, y, z]$ such that $p_{6}=fg$. Then, $6t^{37}=\varphi(f)\varphi(g)$. This forces $\varphi(f)=\lambda t^{a}$, $\varphi(g)=\lambda t^{b}$ for some $a, b\geqslant 0$. It follows that $f$ must be a sum of monomials $m_{1}+\dots+m_{n}$ such that $\varphi(m_{i})=\lambda t^{a}$ for each $i$; ditto for $g$. 
+Consider the map $\varphi:\mathbb{C}[x, y, z]\to \mathbb{C}[t]$ defined by $\varphi(x)=t^{3}$, $\varphi(y)=t^{4}$, and $\varphi(z)=t^{5}$ (this is the same map we encountered in [[TUT ALG3 3#^dd5746]]!). Observe that $\varphi(p_{6})=6t^{37}$; neat. Now, suppose $f, g\in \mathbb{C}[x, y, z]$ such that $p_{6}=fg$. Then, $6t^{37}=\varphi(f)\varphi(g)$. This forces $\varphi(f)=\lambda t^{a}$, $\varphi(g)=\lambda t^{b}$ for some $a, b\geqslant 0$. It follows that $f$ must be a sum of monomials $m_{1}+\dots+m_{n}$ such that $\varphi(m_{i})=\lambda t^{a}$ for each $i$; ditto for $g$.
 
 Denote the set of monomials of $f$ by $\text{Mon}(f)$. Denote "$\alpha\in\text{Mon}(f)$ and $\beta\in\text{Mon}(g)$" by $(\alpha, \beta)$. 
 
 Since $y^{3}\in\text{Mon}(fg)$, WLOG we must have either $(y, y^{2})$ or $(1, y^{3})$. 
-Since $x^{4}\in\text{Mon}(fg)$, one of $(1, x^{4})$, $(x, x^{3})$, $(x^{2}, x^{2})$, $(x^{3}, x)$, $(x^{4}, 1)$ must be true. 
+Since $x^{4}\in\text{Mon}(fg)$, one of $(1, x^{4})$, $(x, x^{3})$, $(x^{2}, x^{2})$, $(x^{3}, x)$, $(x^{4}, 1)$ must be true.
 
 If $(y, y^{2})$, none of $1, x, x^{2}, x^{3}, x^{4}$ can be in $\text{Mon}(f)$, since none of them have image $\lambda t^{4}$ under $\varphi$. 
 If $(1, y^{3})$, then $(1, x^{4})$ is forced, and $f$ must be a unit. 

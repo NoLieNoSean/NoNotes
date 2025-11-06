@@ -94,3 +94,102 @@ Let $\delta=(1+\sqrt{ -19 })/2$ and $R=\mathbb{Z}[\delta]$.
 > [!Exercise]
 > Show that $R\cong \mathbb{Z}[x]/(x^{2}-x+5)$.
 
+$\delta\in \mathbb{Q}[\sqrt{ -19 }]$ and $\delta$ satisfies $x^{2}-x+5=0$. We are done by [[Quadratic integer rings#^ebe532]]. 
+
+> [!Exercise]
+> Determine whether $2$ and $3$ are prime in $R$.
+
+By [[TUT ALG3 4#^b57acd]], $R$ is a PID, and hence a UFD. It therefore suffices to determine the irreducibility of $2$ and $3$. We have shown in [[TUT ALG3 4#^3cc8c6]] that $N(a+b\delta)=a^{2}+ab+5b^{2}$. The smallest values this norm takes are $1, 4$. It is immediate that $2$ and $3$ are irreducible. 
+
+> [!Exercise]
+> Determine whether the following ideals are prime or maximal in $R[x]$:
+> 1. $\mathfrak{p}_{1}=(7, \delta^{3}x+x+1)$
+> 2. $\mathfrak{p}_{2}=(2\delta^{2}+3)$
+> 3. $\mathfrak{p}_{3}=(\delta x+1)$
+> 4. $\mathfrak{p}_{4}=(\delta x+2)$
+> 5. $\mathfrak{p}_{5}=(2x\delta+1)$
+> 6. $\mathfrak{p}_{6}=(11, 2x\delta+1)$.
+
+## $\mathfrak{p}_{1}$
+
+Compute (using [[LEC ALG3 2#^5c702e]], [[LEC ALG3 6#^1c5a62]], [[LEC ALG3 4#^0c976e]]):
+$$
+\begin{align} \\
+ & \quad \,\,\frac{R}{(7)R}  & a+b\delta+(7)R\\
+& \cong\frac{\mathbb{Z}[y]}{(7, y^{2}-y+5)}  & a+by+(7, y^{2}-y+5)\\
+ & \cong \frac{\mathbb{F}_{7}[y]}{(y^{2}-y+\overline{5})}  & \overline{a}+\overline{b}y+(y^{2}-y+\overline{5})\\
+ & = \frac{\mathbb{F}_{7}[y]}{(y-\overline{2})(y-\overline{6})}  & \overline{a}+\overline{b}y+(y-\overline{2})(y-\overline{6})\\
+ & \cong \frac{\mathbb{F}_{7}[y]}{(y-\overline{2})} \times\frac{\mathbb{F}_{7}[y]}{(y-\overline{6})}  & (\overline{a}+\overline{b}y+(y-\overline{2}), \overline{a}+\overline{b}y+(y-\overline{6}))  \\
+ & \cong \mathbb{F}_{7}\times \mathbb{F}_{7}. & (\overline{a+2b}, \overline{a+6b}).
+\end{align}
+$$
+
+Let $\varphi:R/(7)R\to \mathbb{F}_{7}\times \mathbb{F}_{7}$ be the canonical isomorphism. Note that $\varphi(a+b\delta+(7)R)=(\overline{a+2b}, \overline{a+6b})$.
+
+Next, 
+$$
+\begin{align}
+\frac{R[x]}{(7, 1+(\delta^{3}+1)x)} & = \frac{R[x]}{(7, 1+(-4\delta-4)x)} \\
+ & \cong \frac{(R/(7)R)[x]}{((1+(7)R)+(-4\delta-4+(7)R)x) } \\
+ & \cong \frac{(\mathbb{F}_{7}\times \mathbb{F}_{7})[x]}{(\varphi(1)+\varphi(-4\delta-4)x)} \\
+ & = \frac{(\mathbb{F}_{7}\times \mathbb{F}_{7})[x]}{((\overline{1}, \overline{1})+(\overline{2}, \overline{0})x)}   \\
+ & \cong\frac{\mathbb{F}_{7}[x]\times \mathbb{F}_{7}[x]}{((\overline{1}+\overline{2}x, \overline{1}))} \\
+ & \cong \frac{\mathbb{F}_{7}[x]}{(\overline{1}+\overline{2}x)}\times\frac{\mathbb{F}_{7}[x]}{(\overline{1})} \\
+ & \cong \frac{\mathbb{F}_{7}[x]}{(\overline{4}+x)} \\
+ & \cong \mathbb{F}_{7}.
+\end{align}
+$$
+Thus, $\mathfrak{p}_{1}$ is a maximal ideal. 
+## $\mathfrak{p}_{2}$
+
+$2\delta^{2}+3=2\delta-7$. $N(2\delta-7)=55=5\cdot 11$. There exist elements of norms $5$ and $11$ in $R$, and $2\delta-7$ in fact factorizes as $(-1+\delta)(2+\delta)$. Both factors have norm $5$ and $11$ respectively, and thus are not units by the proof of [[TUT ALG3 4#^3cc8c6]]. Thus, $2\delta-7$ is reducible in $R$, and since $R$ is a UFD, not prime. By [[LEC ALG3 10#^d96427]].1, $2\delta-7$ is not prime in $R[x]$. 
+
+## $\mathfrak{p}_{3}$
+
+Let $\mathcal{R}$ be the [[LEC ALG3 8#Ring of fractions|field of fractions]] of $R$. Consider the homomorphism $\varphi:R[x]\to \mathcal{R}$ given by $x\mapsto-1/\delta$.  Clearly, $\delta x+1\in \ker\varphi$. If $f(x)\in \ker\varphi$, we have $f(x)=\overline{q}(x)(\delta x+1)+\overline{r}$, where $\overline{q}(x)\in \mathcal{R}[x]$ and $\overline{r}\in \mathcal{R}$. $f(-1/\delta)=0$ forces $\overline{r}=0$, and $(\delta x+1)$ divides $f(x)$ in $R[x]$ by [[LEC ALG3 10#^d96427]].4. Thus, $\ker\varphi=(\delta x+1)$. Clearly, $\mathrm{im}\,\varphi=R\left[ \frac{1}{\delta} \right]$, so we have
+$$
+\begin{align}
+\frac{R[x]}{(\delta x+1)}\cong R\left[ \frac{1}{\delta} \right].
+\end{align}
+$$
+$R\left[ \frac{1}{\delta} \right]$ is a subring of the field $\mathcal{R}$, and hence is an integral domain. However, $R\left[ \frac{1}{\delta} \right]$ is not a field. Thus, $\mathfrak{p}_{3}$ is prime but not maximal. 
+
+## $\mathfrak{p}_{4}$
+
+
+---
+
+# Problem 3
+
+> [!Exercise]
+> Let $R=\mathbb{Z}[\sqrt[3]{ 2 }]$. Is it possible to write $(5)$ as a product of prime ideals?
+
+Use Dedekind's theorem to obtain $\mathfrak{p}_{1}=(5, \alpha-3)$ and $\mathfrak{p}_{2}=(5, \alpha^{2}+3\alpha+4)$. It is easy to show that $\mathfrak{p}_{1}$ and $\mathfrak{P}_{2}$ are maximal and that $(5)=\mathfrak{p}_{1}\mathfrak{p}_{2}$.
+
+---
+
+# Problem 4
+
+Let $R=\mathbb{Z}[\sqrt{ -n }]$ where $n\geqslant 3$. 
+
+> [!Exercise]
+> Which of the following are irreducible or prime in $R$?
+> 1. $2$
+> 2. $\sqrt{ -n }$
+> 3. $1+\sqrt{ -n }$
+
+
+> [!Exercise]
+> Show that $R$ is not a UFD.
+
+$2$ is irreducible but not prime. 
+
+---
+
+# Problem 5
+
+Let $R=\mathbb{Z}[\omega]$ where $\omega=e^{ 2\pi i/3 }$. Let $p\ne 3$ be a prime. 
+
+> [!Exercise]
+> Show that $x^{2}+x+1$ has a root in $\mathbb{Z}/p\mathbb{Z}$ iff $p\not\cong 1\mod 3$. 
+

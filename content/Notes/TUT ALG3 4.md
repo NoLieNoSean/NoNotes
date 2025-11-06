@@ -1,7 +1,9 @@
 ---
-tags: 
-date: "2025-09-14"
-time: "19:48"
+tags:
+  - ALG3
+  - Tutorial
+date: 2025-09-14
+time: 19:48
 id: "302"
 ---
 # Problem 1
@@ -80,7 +82,7 @@ $\alpha$ is a unit iff $-\alpha$ is a unit, so we can restrict ourselves to posi
 
 # Problem 9
 
-See @wilsonExamplePIDWhich2011
+See @wilsonExamplePIDWhich2011.
 
 > [!Exercise]
 > Show that $R=\mathbb{Z}[(1+\sqrt{ -19 })/2]$ is a PID but not an ED.
@@ -97,6 +99,8 @@ Denote $(1+\sqrt{ -19 })/2$ by $\omega$.
 > > 
 > > If $R$ is a euclidean domain, it must have a universal side divisor $u\in R-\{ \pm 1, 0 \}$. Take $x=2$, so $u$ must divide $2-0$ or $2\pm 1$, that is, $u$ is a non-unit divisor of $2$ or $3$. Use the norm to argue that the the only possible values for $u$ are $\pm 2$ or $\pm 3$. Now, take $x=\omega$, and note that none of $\omega$, $\omega\pm 1$ are divisible by $\pm 2$ or $\pm 3$, so none of these are universal side divisors.
 > 
+
+^3cc8c6
 
 > [!Claim]
 > $R$ is a PID. 
