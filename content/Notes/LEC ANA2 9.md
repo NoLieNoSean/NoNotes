@@ -31,13 +31,17 @@ id: "169"
 > > By hypotheses, $\sum_{k=1}^{N} (x_{n_{k+1}}-x_{n_{k}})$ converges, say to $x$. Then, $x_{n_{N+1}}\to x+x_{n_{1}}$. Thus, $\{ x_{n} \}$ has a convergent subsequence. Since $\{ x_{n} \}$ is Cauchy, $\{ x_{n} \}$ converges.
 
 > [!Proposition]
-> A complete NLS is not a countable union of proper closed subspaces.
+> A Banach space is not a countable union of proper closed subspaces.
 > 
 > > [!Proof]-
 > > 
 > > By [[LEC ANA2 8#^1a2743]], It suffices to prove that if $K$ is a proper closed subspace of $X$, then $K$ is nowhere dense. Since $K\ne X$, there exists $y\not\in K$. Clearly, $y/\lVert y \rVert$ is not in $K$ either, so WLOG we can assume $\lVert y \rVert=1$. If $x\in K$, then $x+\epsilon y\not\in K$ for all $\epsilon> 0$.  Since $\lVert x-(x+\epsilon y) \rVert=\lVert \epsilon y \rVert=\epsilon$, this implies $x\not\in K^{\circ}$, so $K$ is nowhere dense.
 > 
 
+> [!Corollary]
+> A infinite dimensional Banach space cannot have a countable [[Hamel bases#^c53024|Hamel basis]].
+
+^bd2fbe
 
 ---
 

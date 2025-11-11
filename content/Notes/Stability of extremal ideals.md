@@ -88,18 +88,11 @@ $\mathcal{E}_{q}$ is a squarefree monomial ideal. There are finitely many monomi
 By [[Associated primes of monomial ideals#^d3a486]], the associated primes of higher powers of $\mathcal{E}_{q}$ contain $\text{Min}(\mathcal{E}_{q})$, and maybe additional embedded primes from the pool of monomial prime ideals.
 
 $|\text{Ass}(\mathcal{E}_{q}^{r})|$ sequences
-1. $\mathcal{E}_{2}$: 2
-2. $\mathcal{E}_{3}$: 8, 9
-3. $\mathcal{E}_{4}$: 49, 80, 81
-4. $\mathcal{E}_{5}$: 462, 2095, 2858, 2859
-5. $\mathcal{E}_{6}$: 6424, 
-
-6. 2
-7. 8, 9
-8. 49, 80, 81
-9. 462, 2095, 2858, 2859
-10. 6424, 
-
+1. $\mathcal{E}_{2}$: 2; 2
+2. $\mathcal{E}_{3}$: 8, 9; 8, 1
+3. $\mathcal{E}_{4}$: 49, 80, 81; 49, 31, 1
+4. $\mathcal{E}_{5}$: 462, 2095, 2858, 2859; 462, 1633, 763, 1
+5. $\mathcal{E}_{6}$: 6424
 
 Can M2 run on a GPU?
 
@@ -125,8 +118,6 @@ $\mathcal{E}_{2}=(y_{1}y_{12}, y_{2}y_{12})$. It is easily seen that $\text{Min}
 > > $$
 > > \begin{align}
 > > \mathcal{E}^{r}_{2}:(y_{2}, y_{12}) & =(\mathcal{E}^{r}_{2}:(y_{2}))\cap(\mathcal{E}_{2}^{r}:(y_{12})) \\
-> >  & =(y_{1}^{r}y_{12}^{r}, y_{2}^{r-1}y_{12}^{r})\cap(y_{1}^{r}y_{12}^{r-1}, y_{2}^{r}y_{12}^{r-1}) \\
-> >  & = (y_{1}^{r}y_{12}^{r}, y_{2}^{r}y_{12}^{r}) \\
 > >  & =\mathcal{E}_{2}^{r}.
 > > \end{align}
 > > $$

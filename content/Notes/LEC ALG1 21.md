@@ -66,6 +66,8 @@ The motivation behind this is to define a notion of length and perpendicularity 
 > > $$
 > > Then for the example of $(1, i) \in \mathbb{C}^2$, we have $\langle (1, i),(1, i)\rangle = 1\cdot 1 + i \cdot i = 0$. This is somewhat of a problem as we expect this to be positive. If we use the Hermitian dot product, we get a nicer answer: $\langle (1, i),(1, i)\rangle = 1\cdot \bar{1} + i \cdot \bar{i} = 2$. The Hermitian dot product in fact guarantees $\langle\mathbf{v}, \mathbf{v}\rangle\geq 0$ and $\langle\mathbf{v}, \mathbf{v}\rangle= 0 \iff \mathbf{v}=0$ along with the other two properties, as you can easily verify.  
 
+^54ba8c
+
 >[!example] Inner Product of Functions (Hilbert Space)
 >
 >Let $V$ be the set of all continuous real/complex functions on $[0,1]$.
@@ -206,6 +208,8 @@ Clearly, $W \, \cap \, W^\perp = \{ \mathbf{0} \}$, since if $\mathbf{w} \in W \
 > 0 & i \neq j.
 > \end{cases}
 > $$
+
+^98652c
 
 > [!Proposition]
 > If $\{ \mathbf{v}_{i} \} \subset V$ is an orthonormal set then $\{ \mathbf{v}_{i} \}$ are linearly independent.

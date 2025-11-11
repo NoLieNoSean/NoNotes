@@ -24,11 +24,11 @@ $$
 i & j=0 \\
 j & i=0\\
 DP[i-1][ j-1]+1 & A[i]=B[j], i\ne0, j\ne0 \\
-1+\min\{ DP[i][ j-1]+DP[i-1][ j]  \} & \text{otherwise}.
+1+\min\{ DP[i][ j-1],DP[i-1][ j]  \} & \text{otherwise}.
 \end{cases}
 \end{align}
 $$
-> [!Proof]-
+> [!Proof]
 > The cases for $i=0$ and $j=0$ are clear. Suppose $S$ is the SCS of $A[1..i]$ and $B[1..j]$. Suppose $S$ has length $l$. If $A[i]=B[j]=:c$, then $S[l]$ must be $c$. $S[1..l-1]$ must be the SCS of $A[1..i-1]$ and $B[1..j-1]$; if it weren't, we would be able to construct a shorter common subsequence of $A[1..i]$ and $B[1..j]$ by the usual cut-and-paste argument. Thus, $DP[i][ j]=DP[i-1][ j-1]+1$. If $A[i]\ne B[j]$, then $S[l]$ must be either $A[i]$ or $B[j]$, and the same argument yields either $S[1..l-1]$ is the SCS of $A[1..i-1]$ and $B[1..j]$ or the SCS of $A[1..i]$ and $B[1..j-1]$ respectively.
 
 $$
@@ -40,7 +40,7 @@ $$
  & \quad \quad \quad \text{if }i=0: DP[i][j]\gets j \\
  & \quad \quad \quad \text{else if }j=0: DP[i][j]\gets i \\
   & \quad \quad \quad \text{else if }A[i]==B[j]: DP[i][j]\gets DP[i-1][j-1]+1 \\
- & \quad \quad \quad \text{else } DP[i][j]\gets 1+\max\{ DP[i][ j-1]+DP[i-1][ j]  \} \\
+ & \quad \quad \quad \text{else } DP[i][j]\gets 1+\min\{ DP[i][ j-1],DP[i-1][ j]  \} \\
  & \quad \text{return }DP[m, n]
 \end{align}
 $$
@@ -92,20 +92,15 @@ $$
 \end{align}
 $$
 
-
-
 ## Part c
 $$
 \begin{align}
- & \textsf{LOS}(X[1..n]):  \\
- & \quad i\gets 1 \\
- & \quad ans\gets 0\\
- &  \quad \text{do}: \\
- &  \quad \quad \text{while }i< n\text{ and }X[i+1]< X[i] : i\gets i+1 \\
- &  \quad \quad ans\gets ans+1 \\
- &  \quad \quad \text{while }i< n\text{ and }X[i+1]> X[i] : i\gets i+1\\
- &  \quad \quad ans\gets ans+1 \\
- & \quad \text{return }ans
+ & \textsf{LOS}(X[1..n]): \\ 
+ & \quad up, down\gets 1\\
+ & \quad \text{for }i\in[2..n]: \\
+ & \quad \quad \text{if }X[i]> X[i-1]:up\gets down+1 \\
+ & \quad \quad \text{if }X[i]< X[i-1]:down\gets up+1 \\ \\
+ & \quad \text{return }\max(up, down)
 \end{align}
 $$
 
@@ -216,7 +211,8 @@ $$
  & \quad \quad \quad j\gets i+l \\
  & \quad \quad \quad ans\gets DP[i][j-1] \\
  & \quad \quad \quad \text{for }e\in E[j]: \text{if }i\leqslant e.\text{left}\leqslant j-1:  & (*)\\
- & \quad \quad \quad \quad  ans\gets \textsf{max}(ans, 1+DP[i, e.\text{left}-1]+DP[e.\text{left}+1, j-1]) \\
+ & \quad \quad \quad \quad  ans\gets \textsf{max}(ans, 1+DP[i, e.\text{left}-1]+DP[e.\text{left}+1, j-1]) \\ 
+ & \quad \quad \quad DP[i][j]\gets ans\\\\
  & \quad \text{return }DP[1][n]
 \end{align}
 $$
@@ -298,6 +294,8 @@ Now, $\textsf{MaximumClique}(N, F)$ returns the required result in $O(mn\log m)$
 
 # Problem 3
 
+We can assume all sequences start with $\text{DBL}$. Note that no shortest sequence will have two consecutive increments, since $\text{DBL}\to\text{INC}\to\text{INC}$ can be replaced by $\text{INC}\to\text{DBL}$. Thus, if a shortest sequence has $d$ doublings, it can have at most $d$ increments. Such sequences of $\text{DBL}$ and $\text{INC}$ can be interpreted as binary numbers, which the following algorithm exploits:
+
 $$
 \begin{align}
  & \textsf{OptSeq}(n): \\
@@ -310,16 +308,64 @@ $$
 \end{align}
 $$
 
-Let $\lambda(n)$ denote the length of the shortest sequence of increments and doublings which achieves  from $1$. It is evident that the algorithm follows a sequence of increments and doubles, and that $num=n$ after the conclusion of the for loop. Thus, $\textsf{OptSeq}(n)$ is an upper bound for $\lambda(n)$. Suppose the sequence $S_{1}$ discovered by $\textsf{OptSeq}$ uses $d_{1}$ doublings and $i_{1}$ increments. Then, $n\geqslant 2^{d_{1}}+i_{1}$. Suppose $S_{2}$ is a sequence of shorter length, achieving $n$ with $d_{2}$ doublings and $i_{2}$ increments. Either one of $d_{2}< d_{1}$ or $i_{2}< i_{1}$ must be true. If $d_{2}< d_{1}$, we have $n\leqslant i_{2}$
+Let $\lambda(n)$ denote the length of the shortest sequence of increments and doublings which achieves  from $1$. It is evident that the algorithm follows a sequence of increments and doubles, and that $num=n$ after the conclusion of the for loop. Thus, $\textsf{OptSeq}(n)$ is an upper bound for $\lambda(n)$. Suppose the sequence $S_{1}$ discovered by $\textsf{OptSeq}$ uses $d_{1}$ doublings and $i_{1}$ increments. Then, $n\geqslant 2^{d_{1}}+i_{1}$. Suppose $S_{2}$ is the shortest possible sequence, achieving $n$ with $d_{2}$ doublings and $i_{2}$ increments. Suppose $d_{2}< d_{1}$. Since $i_{2}\leq d_{2}$ and no two increments can appear consecutively, we have $n\leqslant 2^{d_{2}+1}-1< 2^{d_{1}}$, a contradiction. If $i_{2}< i_{1}$, we would have and equality of the form
+$$
+2^{\alpha_{1}}+2^{\alpha_{2}}+\dots+2^{\alpha_{i_{2}}}= 2^{\beta_{1}}+2^{\beta_{2}}+\dots+2^{\beta_{i_{1}}},
+$$
+with $\alpha_{1}<\alpha_{1}<\dots<\alpha_{i_{2}}$, $\beta_{1}<\beta_{2}<\dots <\beta_{i_{1}}$, and $i_{2}< i_{1}$, which is impossible. This, $\textsf{OptSeq}(n)$ is optimal.
 
+---
 
+# Problem 4
 
+## Part a
 
+Let $S = \{v_1, \dots, v_n\}$ be the columns of $T$. Let $M$ denote the tuple $(S, \mathcal{I})$. Clearly $\emptyset \in \mathcal{I}$. If $A \in \mathcal{I}$ and $B \subset A$ then any linear combination of vectors in $B$ may be viewed as if it were in $A$, hence $B$ is linearly independent, i.e. $B \in \mathcal{I}$. Further, if $A, B \in \mathcal{I}$ with $|A| > |B|$ then $A\not\subseteq\text{span }B$, since if that were the case, $\text{span }A$ would be spanned by fewer than or equal to $|B|$ vectors, contradicting the independence of $A$. Let $x\in A\setminus\text{span }B$. Indeed $B \cup \{x\} \in \mathcal{I}$ since $x \not\in \text{span } B$ and $B$ is linearly independent. Hence $M$ is a matroid.
 
-  
+## Part b
 
-The correctness of the algorithm follows since at the start of each iteration, the first $k-1$ bits (from the right) of $num$ and the first $k-1$ bits of $n$ are the same. This is easily seen using induction. Moreover this algorithm produces the minimum number of steps since we can view the ``$\times 2$" operation as bitshift to the left and the ``$+1$" operation as incrementing the first bit.
+Let $M = (S, \mathcal{I})$ and let $M' = (S, \mathcal{I}')$. Clearly $\emptyset \in \mathcal{I}'$ since $\emptyset^c = S$ must contain some maximal independent set of $M$. If $A \in \mathcal{I}'$ and $B \subset A$ then $A^c \subset B^c$ and since $A^c$ contains a maximal independent set of $M$, so does $B^c$ and hence $B \in \mathcal{I}'$. 
 
-  
+Suppose $A, B\in \mathcal{I}'$, and $|A|> |B|$. For all $a\in A$, suppose $B\cup \{ a \}\not\in \mathcal{I}'$, that is, $(B\cup \{ a \})^{c}$ does not contain a maximal independent set of $M$. It follows that every maximal independent set of $M$ in $B^{c}$ contains $A$. Since $A\in \mathcal{I}'$, $A^{c}$ must contain a maximal independent set $C$ of $M$. Since $C$ does not contain $A$, $C$ cannot lie in $B^{c}$, so $C$ must intersect $B$. However, by using the exchange property of $M$, every element $b\in B\cap C$ can be replaced with an element $a\in D$, where $D$ is an independent set in $B^{c}$. Let $E$ be the set obtained from $C$ after all elements of $C\cap B$ have been replaced with elements of $D$. Since all maximal independent sets have the same cardinality, $E$ is a maximal independent set of $M$. Since we made at most $|B|$ exchanges, $|B|< |A|$, and $C\cap A=\emptyset$, $E$ does not contain $A$. This is a contradiction, since we have previously determined that all independent sets of $M$ in $B^{c}$ must contain $A$.  
 
-Observe that the length of the binary expansion of $n$ is $\log n$. For each digit in the binary expansion of $n$, we are doing atmost 2 operations. Hence the time complexity is $\boldsymbol{\Theta}(\log n)$.
+## Part c
+
+Let $M = (S, \mathcal{I})$ and let $P = \{S_1, \dots, S_k\}$ be the given partition of $S$. Clearly $\emptyset \in \mathcal{I}$ since $|\emptyset \cap S_i| = 0$ for all $i$. If $A \in \mathcal{I}$ and $B \subset A$ then $|B \cap S_i| \leqslant |A \cap S_i| \leqslant 1$ for all $i$, hence $B \in \mathcal{I}$. If $A, B \in \mathcal{I}$ with $|A| > |B|$ then there is an $i$ for which $|S_i \cap A| = 1$ and $|S_i \cap B| = 0$. Let $x \in A \cap S_i$ then $B \cup \{x\} \in \mathcal{I}$. Hence $M$ is a matroid.
+
+---
+
+# Problem 5
+
+$$
+\begin{align}
+ & \textsf{BoundedDijkstra}(G(V, E), W, s\in V): \\
+ & \quad \text{Initialize list }B[0..W(V-1)]\text{ with }\emptyset \\
+ & \quad \text{Initialize list }dist[1..V]\text{ with }\infty \\
+ & \quad B[0]\gets s \\
+ & \quad dist[s]\gets 0 \\\\
+ & \quad \text{for } i\in[0..W(V-1)]: \\
+ & \quad \quad \text{for }v\in B[i] :\\
+ & \quad \quad \quad \text{for each neighbor }u\text{ of }v: \\
+ & \quad \quad \quad \quad dist'\gets i+w(v, u) \quad \texttt{\#i=dist[v]}\\
+ & \quad \quad \quad \quad \text{if }dist[u]> dist': \\
+ & \quad \quad \quad \quad \quad \text{remove }u\text{ from }B[dist[u]] \\
+ & \quad \quad \quad \quad \quad \text{append }u\text{ to }B[dist'] \\
+ & \quad \quad \quad \quad \quad dist[u]\gets dist' \\\\
+ & \quad \text{return }dist
+\end{align}
+$$
+
+The mechanism to pick the vertex with the shortest distance has been modified to use buckets in pace of the priority queue used in the vanilla algorithm. Bounding the weights by $W$ allows us to bound maximum weight of a path in the graph by $W(V-1)$. Every vertex is processed, since a vertex can only be inserted into a later bucket or at the end of the current bucket. 
+
+Each edge is processed once, and we pass through $W(V-1)$ buckets. Thus, the algorithm runs in $O(W|V|+|E|)$ time. 
+
+---
+
+# Problem 6
+
+Suppose $T$ is a binary tree that is not full. Then there is a node $v$ which has only one child $u$. We split the solution into two cases:
+
+1. If $v$ is the root node then delete $v$ and use $u$ are the root node instead.
+2. If $v$ is not the root node then it has a parent, say $w$. Here, delete $v$ and attach $u$ to $w$.
+
+In both cases, we have shown that there is a new tree which uses less bits to encode the data (since we are deleting an edge). Hence $T$ cannot correspond to an optimal code.

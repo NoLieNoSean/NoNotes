@@ -100,8 +100,6 @@ Rudin 4.11
 ---
 # Subspace topology
 
-
-
 > [!Theorem] Rudin 2.30
 > Suppose $Y\subset X$. A subset $E$ of $Y$ is open relative to $Y$ if  and only if $E=Y\cap G$ for some open subset $G$ in $X$.
 > 
@@ -120,13 +118,18 @@ Rudin 4.11
 > > $(\impliedby)$ Let $E=Y\cap G$ for some open subset $G$ in $X$. For every $p \in E$, there exists $r_{p}>0$ such that $B_{r_{p}}(p, X)\subset G$ $\implies$ $B_{r_{p}}(p, X)\cap Y\subset G\cap Y$ $\implies$ $B_{r_{p}}(p, Y)\subset E$. 
 > 
 
+^471dc5
+
 An analogue for closed sets:
 
->[!Theorem] Corollary
->Suppose $Y\subset X$. A subset $E$ of $Y$ is closed relative to $Y$ if  and only if $E=Y\cap C$ for some closed subset $C$ in $X$.
+> [!Corollary]
+> Suppose $Y\subset X$. A subset $E$ of $Y$ is closed relative to $Y$ if  and only if $E=Y\cap C$ for some closed subset $C$ in $X$.
+> 
+> > [!Proof]-
+> > $E\subset Y$ is closed in $Y$ $\iff$ $Y\setminus E$ is open in $Y$ $\iff$ $Y\setminus E=Y\cap G$ for some $G$ open in $X$ $\iff$ $E=Y\setminus(Y\cap G)=Y\setminus G=Y\cap(X\setminus G)$, where $X\setminus G$ is closed in $X$.
+> 
 
->**Proof**
->$E\subset Y$ is closed in $Y$ $\iff$ $Y\setminus E$ is open in $Y$ $\iff$ $Y\setminus E=Y\cap G$ for some $G$ open in $X$ $\iff$ $E=Y\setminus(Y\cap G)=Y\setminus G=Y\cap(X\setminus G)$, where $X\setminus G$ is closed in $X$. ❏
+^749981
 
 ### Restrictions of continuous functions are continuous
 

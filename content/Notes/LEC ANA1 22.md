@@ -26,34 +26,38 @@ Note that if $A$ and $B$ are both open in $X$, it follows that $A$ and $B$ are b
 For example, $X=\mathbb{R}\setminus \{ p \}$ is disconnected because $X=(-\infty, p)\sqcup(p, \infty)$. 
 ### Characterization of connected sets in R
 
->[!Theorem]
->A nonempty subset $X\subset \mathbb{R}$ is connected $\iff$ (($p, q\in X$ and $p<x<q$ )$\implies$ $x\in X$), i.e, a connected set in $\mathbb{R}$ is either a singleton, an interval, a ray, or $\mathbb{R}$.
+> [!Theorem]
+> A nonempty subset $X\subset \mathbb{R}$ is connected $\iff$ (($p, q\in X$ and $p<x<q$ )$\implies$ $x\in X$), i.e, a connected set in $\mathbb{R}$ is either a singleton, an interval, a ray, or $\mathbb{R}$.
+> 
+> > [!Proof]-
+> > 
+> > $(\implies)$ We will prove the contrapositive. Let $p<x<q$ with $x \not\in X$, $p, q\in X$. Let $A=X\cap(-\infty, x)$ and $B=X\cap(x, \infty)$. $X=A\sqcup B$.
+> > 
+> > $(\impliedby)$ Suppose $X=A\sqcup B$, with $A$ and $B$ nonempty, disjoint and open in $X$. Let $a\in A$, $b\in B$, and WLOG $a<b$. We know $[a, b]\subset X$. Let $c\equiv \inf \ [a, b]\cap B$. Clearly, $c\not\in A$, since then every neighborhood of $c$ must contain a point of $B$, making it impossible to find a neighborhood of $c$ in $A$ (Alternatively, $B$ being a closed set forces $c\in B$). However, $c$ cannot be in $B$ either, since $B$ would then have to contain a neighborhood of $c$, which would contain an element smaller than $c$!
+> 
 
->**Proof of $\implies$**
->We will prove the contrapositive. Let $p<x<q$ with $x \not\in X$, $p, q\in X$. Let $A=X\cap(-\infty, x)$ and $B=X\cap(x, \infty)$. $X=A\sqcup B$. ❏
->
->**Proof of $\Longleftarrow$**
->Suppose $X=A\sqcup B$, with $A$ and $B$ nonempty, disjoint and open in $X$. Let $a\in A$, $b\in B$, and WLOG $a<b$. We know $[a, b]\subset X$. Let $c\equiv \inf \ [a, b]\cap B$. Clearly, $c\not\in A$, since then every neighborhood of $c$ must contain a point of $B$, making it impossible to find a neighborhood of $c$ in $A$ (Alternatively, $B$ being a closed set forces $c\in B$). $c\in B$ also leads to a contradiction, since B must contain a neighborhood of $c$, which in turn would contain an element smaller than $c$. $\Rightarrow\Leftarrow$ ❏
+^f5f9b2
 
 ### Images of connected sets under continuous functions are connected
 
->[!Theorem]
->If $X$ is a connected metric space and $f:X\to Y$ is [[LEC ANA1 13#Halfway through to a new definition of continuity|continuous]], $f(X)$ is connected.
+> [!Theorem]
+> If $X$ is a connected metric space and $f:X\to Y$ is [[LEC ANA1 13#Halfway through to a new definition of continuity|continuous]], $f(X)$ is connected.
+> 
+> > [!Proof]-
+> >Let $f(X)=A\sqcup B$, $A$, $B$ open in $f(X)$. This implies $X=f^{-1}(A)\sqcup f^{-1}(B)$, a contradiction.
 
 ^26ad1a
 
->**Proof**
->Let $f(X)=A\sqcup B$, $A$, $B$ open in $f(X)$. This implies $X=f^{-1}(A)\sqcup f^{-1}(B)$. $\Rightarrow\Leftarrow$
-
 ### Intermediate value theorem
 
-Rudin, 4.23
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976, 4.23
+> Let $f:[a, b]\to \mathbb{R}$ be continuous, WLOG $f(a)<c<f(b)$. Then, $\exists x\in(a, b)$ such that $f(x)=c$. 
+> 
+> > [!Proof]-
+> >From the previous theorem, we know $f([a, b])$ is connected. From the characterization of connected sets in $\mathbb{R}$, we know that $c\in f([a, b])$.
+> 
 
->[!Theorem]
->Let $f:[a, b]\to \mathbb{R}$ be continuous, WLOG $f(a)<c<f(b)$. Then, $\exists x\in(a, b)$ such that $f(x)=c$. 
-
->**Proof**
->From the previous theorem, we know $f([a, b])$ is connected. From the characterization of connected sets in $\mathbb{R}$, we know that $c\in f([a, b])$. ❏
+^30e172
 
 >[!Important]
 >If $f$ satisfies the conclusion of the intermediate value theorem ($\forall c$ such that $f(a)<c<f(b)$, $\exists x\in(a, b)$ such that $f(x)=c$), $f$ need not be continuous. For example, consider $f:[-\pi, \pi]\to \mathbb{R}$ defined by

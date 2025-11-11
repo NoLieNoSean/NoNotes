@@ -85,6 +85,8 @@ for all $\mathbf{x}, \mathbf{y}\in S$ (so $\mathbf{f}$ satisfies the [[LEC CAL1 
 > > for every $\mathbf{a}$. Taking $\mathbf{a}=\mathbf{f}(\mathbf{y})-\mathbf{f}(\mathbf{x})$, we find $\mathbf{f}(\mathbf{x})=\mathbf{f}(\mathbf{y})$, so $\mathbf{f}$ is constant on $S$.
 > 
 
+^f0f6d5
+
 
 Also follows as a corollary of the previous theorem by plugging $M=0$. 
 

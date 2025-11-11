@@ -40,7 +40,9 @@ Note that $C(X, \mathbb{R})$, with its vector space ($\mathbb{R}$-module) and ri
 > 1. for every $f, g\in \mathcal{A}$, $fg\in \mathcal{A}$
 > 2. $\forall f, g\in \mathcal{A}$ and $\forall\alpha, \beta\in \mathbb{R}$, $\alpha f+\beta g\in \mathcal{A}$.
 > 
-> $\mathcal{A}$ **separates points** if for every distinct $x, y\in X$, there exists $f\in \mathcal{A}$ such that $f(x)\ne f(y)$. $\mathcal{A}$ is said to **contain constants**/be **unital** if $1\in \mathcal{A}$.
+> $\mathcal{A}$ **separates points** if for every distinct $x, y\in X$, there exists $f\in \mathcal{A}$ such that $f(x)\ne f(y)$. $\mathcal{A}$ is said to **contain constants**/be **unital** if $1\in \mathcal{A}$. The same definition holds for $\mathbb{C}$. 
+
+^ba6b9c
 
 > [!Lemma]
 > There is a sequence $\{ p_{n} \}$ of real valued polynomials with *zero constant coefficient* which converge uniformly to $f(x)=\sqrt{ x }$ on $[0, 1]$.

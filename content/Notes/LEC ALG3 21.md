@@ -7,9 +7,10 @@ tags:
   - Lecture
 ---
 [!Theorem]
-Let $|K|=q$. Then the moltiplicative group $K^{*}$ is a cyclic group of order $q-1$. 
+Let $|K|=q$. Then the multiplicative group $K^{*}$ is a cyclic group of order $q-1$. 
 
 [!Proof]-
+
 $K^{*}$ is an abelian group under multiplication. Use the structure theorem for finitely generated abelian groups. 
 
 $$
@@ -28,6 +29,6 @@ Let $f(x)=x^{q}-x$. gcd of $f$ and $f'$ is $1$, so $f$ has no multiple roots. Th
 ---
 
 [!Corollary]
-There exists a field of order $q=p^{r}$, for $r\geqslant 1$. Any twoO such fields are isomorphic.
+There exists a field of order $q=p^{r}$, for $r\geqslant 1$. Any two such fields are isomorphic.
 
 

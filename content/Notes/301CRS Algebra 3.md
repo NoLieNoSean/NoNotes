@@ -38,6 +38,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 19]]
 [[LEC ALG3 20]]
 [[LEC ALG3 21]]
+[[LEC ALG3 22]]
 
 [[Stuff I'll look at later]]
 

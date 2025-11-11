@@ -236,6 +236,10 @@ We know that $(X, d)$ is not complete: consider any sequence converging to $1$. 
 > [!Exercise]
 > Let $X=\{ \{ x_{n} \}_{n=1}^{\infty}:0\leq x_{n}\leq 1, \forall n\in \mathbb{N} \}$. Define $d(\{ x_{n} \}, \{ y_{n} \})=\sum_{n=1}^{\infty}\frac{1}{2^{n}}|x_{n}-y_{n}|$. Show that $d$ is a metric. Show that a sequence $\{ \overline{x_{n}} \}\subseteq X$, with $\overline{x_{n}}=\{ x_{m, n} \}_{m=1}^{\infty}$ converges iff $\{ x_{m, n} \}_{n=1}^{\infty}$ converges for each $m\in \mathbb{N}$. Describe the open subsets of $X$.
 
+^8c4c5c
+
+**$d$ is a metric**
+
 $d(\{ x_{n} \}, \{ y_{n} \})$ exists for all $\{ x_{n} \}, \{ y_{n} \}\in X$, since 
 $$
 \begin{align}
@@ -251,13 +255,15 @@ $$
 $$
 Thus, $d$ respects the triangle inequality. 
 
+**Convergence in $X$ is equivalent to pointwise convergence**
+
 Suppose $\{ \overline{x}_{n} \}\to \{ y_{n} \}$. Let $m'\in \mathbb{N}$. For every $\epsilon> 0$, there exists $N$ such that for all $n> N$, 
 $$
 \begin{align}
 \sum_{m=1}^{\infty} \frac{1}{2^{m}}|\overline{x}_{m, n}-y_{m}|<\frac{\epsilon}{2^{m'}}.
 \end{align}
 $$
-In particular, $|\overline{x}_{m', n}-y_{m'}|<\epsilon$ for each $n$. Thus, $\{ \overline{x}_{m', n} \}_{n=1}^{\infty}\to y_{m'}$. 
+In particular, $|\overline{x}_{m', n}-y_{m'}|<\epsilon$ for all $n> N$. Thus, $\{ \overline{x}_{m', n} \}_{n=1}^{\infty}\to y_{m'}$. 
 
 Conversely, suppose $\{ \overline{x}_{m, n} \}_{n=1}^{\infty}\to y_{m}$ for each $m$. Let $\epsilon> 0$. Choose $k$ such that 
 $$
@@ -273,6 +279,13 @@ $$
 \end{align}
 $$
 Thus, $\{ \overline{x}_{n} \}\to \{ y_{n} \}$.
+
+> [!Remark]
+> We have just shown that $X$ is complete: If $\{ \overline{x}_{n} \}_{n=1}^{\infty}\subseteq X$ is a Cauchy sequence, the above argument can be used to conclude that for each $m$,  $\{ \overline{x}_{m, n} \}_{n=1}^{\infty}$ is a Cauchy sequence in $[0, 1]$, and hence convergent. It follows that $\{ \overline{x}_{n} \}$ is convergent.
+
+^f9262b
+
+**The topology of $X$**
 
 Let
 $$
@@ -301,7 +314,17 @@ d(\{ x_{n} \}, \{ y_{n} \}) & =\sum_{n=1}^{\infty} \frac{1}{2^{n}}|x_{n}-y_{n}| 
 $$
 so $\{ y_{n} \}\in B_{r}(\{ x_{n} \})$, whence $U\subseteq B_{r}(\{ x_{n} \})$. It follows that any open set in $X$ can be written as a union of open sets of the form [[#^cdf3ef]]. 
 
-Note that this is the [[Intro to Category Theory#^71ded8|product topology]] on $X$. 
+> [!Remark]
+> We've just shown that the metric $d$ metrizes the [[Intro to Category Theory#^71ded8|product topology]] on $X=[0, 1]^{\mathbb{N}}$!
+
+It is possible to make a much more general statement:
+
+> [!Theorem]
+> If $X$ is a metric space (hence metrizable and first-countable) then the countable product $Y=X^{\mathbb{N}}$ with the product topology is metrizable, and convergence of sequences in $Y$ is equivalent to coordinate-wise convergence.
+
+^bf5811
+
+
 
 ---
 # Problem 7

@@ -11,6 +11,8 @@ id: "178"
 > [!Definition]
 > A topological space $X$ is said to be **separable** provided there is a countable subset of $X$ that is dense in $X$.
 
+^9c3671
+
 > [!Warning]
 > The notion of **separable** for a topological space with a dense countable subset is distinct from that of connectedness and [[LEC ANA1 22#Connected sets|separations]].
 
@@ -34,6 +36,8 @@ id: "178"
 > > To prove the converse, suppose there is a countable collection $\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$ of open sets such that any open subset of $X$ is the union of a subcollection of $\{ \mathcal{O}_{n} \}_{n=1}^{\infty}$. For each $n$, pick a point in $\mathcal{O}_{n}$ and call it $x_{n}$. Then the set $\{ x_{n} \}_{n=1}^{\infty}$ is countable and dense since every nonempty open subset of $X$ is the union of a subcollection of $\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$ and therefore contains points in $\{ x_{n} \}_{n=1}^{\infty}$. 
 > 
 
+^b788c7
+
 > [!Theorem]
 > Every subset of a separable metric space is separable.
 > 
@@ -47,6 +51,8 @@ id: "178"
 > 
 > > [!Proof]-
 > > Since $X$ is separable, it has a countable basis $\mathcal{A}=\{ \mathcal{O} _{n}\}_{n=1}^{\infty}$. Express each $f\in F$ as a union of elements in $\mathcal{A}$. Then, $\bigcup f$ is a subcollection $\mathcal{B}\subseteq\mathcal{A}$. For each $b\in \mathcal{B}$, pick $f\in F$ such that $f\supseteq b$. The collection of all these $f$ gives a countable subcollection of $F$ which covers $A$.
+
+^0bd0b5
 
 Succinctly, "every open cover in a separable metric space has a countable subcover".
 

@@ -156,7 +156,9 @@ $$
 We are done!
 
 > [!Exercise]
-> Prove $\mathscr{l}_{2}$ is complete.
+> Prove $\ell_{2}$ is complete.
+
+^0a51be
 
 
 

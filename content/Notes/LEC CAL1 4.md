@@ -7,7 +7,7 @@ date: 2025-01-17
 time: 11:50
 id: "173"
 ---
-Recall what an [[LEC ALG1 21#Inner Product Spaces|inner product space]] is. Now, define $C[a, b]\equiv \{ f:[a, b]\to \mathbb{C}:f\text{ is continuous} \}$. Define
+Recall what an [[LEC ALG1 21#Inner Product Spaces|inner product space]] is. Define $C[a, b]\equiv \{ f:[a, b]\to \mathbb{C}:f\text{ is continuous} \}$. Define
 $$
 \langle f, g \rangle \equiv \int_{a}^{b} f\overline{g}.
 $$
@@ -37,4 +37,30 @@ Note that $(C[a, b], \lVert \cdot \rVert_{\infty})$ and $(C[a, b], \lVert \cdot 
 
 ---
 
-Refer @treilLinearAlgebraDone2014 chapter 5 for parallelogram identity, polarization identity, and the relation between norms and inner products. Basically, every inner product space can be made into a NLS by the standard definition ($\lVert x \rVert=\sqrt{ \langle x, x \rangle}$). However, an inner product can be defined on an NLS iff the norm satisfies the parallelogram law.
+# On inner products in a NLS
+
+Refer @treilLinearAlgebraDone2014 chapter 5 for parallelogram identity, polarization identity, and the relation between norms and inner products. Basically, every inner product space can be made into a NLS by the standard definition ($\lVert x \rVert=\sqrt{ \langle x, x \rangle}$). However, an inner product can be defined on an NLS iff the norm satisfies the parallelogram identity.
+
+> [!Definition] Parallelogram identity
+> For any vectors $\mathbf{u}$, $\mathbf{v}$
+> $$
+> \lVert \mathbf{u}+\mathbf{v} \rVert ^{2}+\lVert \mathbf{u}-\mathbf{v} \rVert ^{2}=2(\lVert \mathbf{u} \rVert ^{2}+\lVert \mathbf{v} \rVert ^{2}).
+> $$
+> 
+
+^dead55
+
+> [!Definition] Polarization identities
+> For $\mathbf{x}, \mathbf{y}\in V$
+> $$
+> \langle \mathbf{x}, \mathbf{y} \rangle =\frac{1}{4}(\lVert \mathbf{x}+\mathbf{y} \rVert ^{2}-\lVert \mathbf{x}-\mathbf{y} \rVert ^{2})
+> $$
+> if $V$ is a real inner product space, and
+> $$
+> \langle \mathbf{x}, \mathbf{y} \rangle =\frac{1}{4}\sum_{\alpha=\pm 1, \pm i}\alpha \lVert \mathbf{x}+\alpha \mathbf{y} \rVert ^{2}
+> $$
+> if $V$ is a complex inner product space. 
+
+^c6f497
+
+It can be verified that if the norm satisfies the parallelogram identity, then the inner product $\langle \mathbf{x}, \mathbf{y} \rangle$ defined by the polarization identities is indeed an inner product. Treil does not supply this proof.

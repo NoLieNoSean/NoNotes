@@ -40,6 +40,8 @@ Intersecting $P$ with $E$ and taking $X=\mathbb{R}^{n}$, one obtains as a coroll
 > > FTSOC, assume that some $x\in Q$ is not a condensation point of $E$. Then there exists an open neighborhood $U$ of $x$ containing only countably many points $\{ x_{n} \}_{n=1}^{\infty}$ of $E$. WLOG, assume $\{ x_{n} \}_{n=1}^{\infty}\subseteq Q$ ($Q$ is perfect!). WLOG, let $x_{1}=x$. Take a small enough open ball $U_{2}$ around $x_{2}$ whose closure lies entirely inside $U$ and does not contain $x$, and pick the smallest index $n$ such that $x_{n}$ lies in $U_{2}$ (since $x_{2}\in Q$, it is also a limit point of $Q$). Repeat this procedure ensuring that the radii of the balls go to $0$. By the [[LEC CAL1 6#Cantor intersection theorem|Cantor intersection theorem]], the subsequence of $\{ x_{n} \}_{n=1}^{\infty}$ thus obtained must converge to some point in $E$. But, we've knocked off every point in $\{ x_{n} \}_{n=1}^{\infty}$ when constructing the contracting sequence ($x_{i}\not\in U_{i+1}$), so this is impossible!
 > 
 
+^5a0ea7
+
 > [!Exercise] Cantor Bendixson Theorem
 > Finally, show that every condensation point of $E$ is contained in $Q$, hence $Q$ is the set of condensation points of $E$. This shows that a closed subset of a complete, second countable metric space is uniquely expressible as a disjoint union of a perfect set and a set that is at most countable.
 > 
