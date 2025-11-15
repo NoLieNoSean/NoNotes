@@ -43,7 +43,28 @@ $$
 $$
 $k\ | \ r$. 
 
-$k\ | \ r$ $\implies$ $p^{k}-1$ | $p^{r}-1$ 
+$k\ | \ r$ $\implies$ $p^{k}-1$ | $p^{r}-1$.
+
+From some lemma, $\mathbb{F}_{q'}^{*}$ has an element of order $p^{k}-1$. All elements of order $p^{k}-1$ are roots of $x^{p^{k}}-x$. Note that these roots form a subfield of $K$. 
+
+
+[!Corollary]
+All irreducible factors of $x^{q}-x\in \mathbb{F}_{p}[x]$ are irreducible polynomials whose degree divides $r$. 
+
+[!Proof]-
+
+Let $g$ be an irreducible polynomial of degree $k$ such that $g\ | \ x^{q}-x$. Let $k$ be the splitting field of $x^{q}-x$. Let $\beta$ be a root of $g$ in $K$. Then, 
+$$
+\underbrace{ [K:\mathbb{F}_{p}] }_{ r }=[F:\mathbb{F}_{p}(\beta)]\underbrace{ [\mathbb{F}_{p}(\beta):\mathbb{F}_{p}] }_{ \text{deg}\,g }
+$$
+so, $\text{deg}\,g\ | \ r$. 
+
+Conversely, suppose $k\ | \ r$. Then if $\beta$ is a root of $g$ in some extension field, $[\mathbb{F}_{p}(\beta):\mathbb{F}_{p}]=k$, $\mathbb{F}_{p}(\beta)$ will be isomorphic to a subfield of $K$, so $g$ has a root in $K$. Repeat till we obtain $g\ | \ x^{q}-x$. 
+
+
+
+
+
 
 ---
 

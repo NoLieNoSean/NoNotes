@@ -262,23 +262,26 @@ Let $\{ \lambda_{1}, \lambda_{2},\dots,\lambda_{\gamma} \}$ be the distinct eige
 This theorem holds for vector spaces over general fields.
 
 > [!Theorem]
-> Let an operator $A:V\to V$ have exactly $n=\dim V$ eigenvalues (counting multiplicities) (Since any operator in a complex vector space has exactly $n$ eigenvalues, this assumption is moot in the complex case). Then, $A$ is diagonalizable if and only if for each eigenvalue $\lambda$, the geometric multiplicity of $\lambda$ coincides with the algebraic multiplicity of $\lambda$.
-
-We know that $g_{i}\leq a_{i}\forall i$ and the hypothesis requires $\sum a_{i}=n$. Thus, this theorem boils down to
-$$
-A \text{ is diagonalizable} \iff \sum_{i=1}^{\gamma} g_{i}= \dim V.
-$$
-> **Proof of $\implies$**
-> If $A$ is diagonalizable, $[A]_{\mathcal{B}\mathcal{B}}$ is diagonal for some basis $\mathcal{B}$. Observe that geometric and algebraic multiplicities coincide for diagonal matrices. It follows that they must coincide for $A$ too. 
+> Let an operator $A:V\to V$ have exactly $n=\dim V$ eigenvalues (counting multiplicities) (Since any operator in a complex vector space has exactly $n$ eigenvalues, this assumption is redundant in the complex case). Then, $A$ is diagonalizable if and only if for each eigenvalue $\lambda$, the geometric multiplicity of $\lambda$ coincides with the algebraic multiplicity of $\lambda$.
 > 
-> **Proof of $\Longleftarrow$**
-> Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{\gamma}$ be the distinct eigenvalues of $A$, and let $E_{k}$ be the $\lambda_{k}$-eigenspace for $1\leq k\leq\gamma$. We know that these subspaces are linearly independent, i.e, $\bigcap_{i} E_{i}=\emptyset$. Let $\mathcal{B}_{k}$ be a basis of $E_{k}$. It follows that $\mathcal{B}\equiv\bigcup_{i}\mathcal{B}_{i}$ is linearly independent. Also, 
-> $$
-> \begin{align}
-> |\mathcal{B}|=\sum_{i=1}^{\gamma}  |\mathcal{B}_{i}|=\sum_{i=1}^{\gamma} \dim(\ker(A-\lambda_{i} I))=\sum_{i=1}^{\gamma} g_{i}=n.
-> \end{align}
-> $$
-> A linearly independent system of size $n$ is a basis. Thus, $\mathcal{B}$ is a basis of $V$. ❏
+> 
+> > [!Proof]-
+> > 
+> > We know that $g_{i}\leq a_{i}\forall i$ and the hypothesis requires $\sum a_{i}=n$. Thus, this theorem boils down to
+> > $$
+> > A \text{ is diagonalizable} \iff \sum_{i=1}^{\gamma} g_{i}= \dim V.
+> > $$
+> > 
+> > $(\implies)$ If $A$ is diagonalizable, $[A]_{\mathcal{B}\mathcal{B}}$ is diagonal for some basis $\mathcal{B}$. Observe that geometric and algebraic multiplicities coincide for diagonal matrices. It follows that they must coincide for $A$ too. 
+> > 
+> > $(\impliedby)$ Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{\gamma}$ be the distinct eigenvalues of $A$, and let $E_{k}$ be the $\lambda_{k}$-eigenspace for $1\leq k\leq\gamma$. We know that these subspaces are linearly independent, i.e, $\bigcap_{i} E_{i}=\{ \mathbf{0} \}$. Let $\mathcal{B}_{k}$ be a basis of $E_{k}$. It follows that $\mathcal{B}\equiv\bigcup_{i}\mathcal{B}_{i}$ is linearly independent. Also, 
+> > $$
+> > \begin{align}
+> > |\mathcal{B}|=\sum_{i=1}^{\gamma}  |\mathcal{B}_{i}|=\sum_{i=1}^{\gamma} \dim(\ker(A-\lambda_{i} I))=\sum_{i=1}^{\gamma} g_{i}=n.
+> > \end{align}
+> > $$
+> > A linearly independent system of size $n$ is a basis. Thus, $\mathcal{B}$ is a basis of $V$. 
+> 
 
 The theorem can be restated specifically for real matrices:
 

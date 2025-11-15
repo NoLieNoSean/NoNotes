@@ -23,6 +23,8 @@ id: "67"
 > [!Definition]
 > Let $(X, \Sigma)$ and $(Y, \Delta)$ be measurable spaces. A function $f:X\to Y$ is said to be **measurable** if for every $E\in \Delta$ the pre-image of $E$ under $f$ is in $\Sigma$. In other words, $f^{-1}(E)\in\Sigma$ for all $E\in\Delta$.  
 
+^80e256
+
 This is in direct analogy the the [[LEC ANA1 13#Halfway through to a new definition of continuity|definition of a continuous function between topological spaces]], where the preimage of any open set is open.
 
 ---

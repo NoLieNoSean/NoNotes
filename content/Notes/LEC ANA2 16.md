@@ -11,15 +11,24 @@ tags:
 
 A Hilbert space is a complete [[LEC ALG1 21#^dd5bbe|inner product space]]. Examples include $\mathbb{C}^{n}$ with the [[LEC ALG1 21#^54ba8c|usual inner product]], and $\ell_{2}$ ([[LEC ANA2 1#^02d59c]], [[LEC ANA2 4#^0a51be]]).
 
-> [!Definition]
+> [!Definition] Lebesgue spaces
 > On $C[a, b]$, Define
 > $$
 > \langle f, g \rangle \equiv \frac{1}{b-a}\int_{a}^{b} f\overline{g}.
 > $$
 > Note that $C[a, b]$ is not complete under the norm induced by $\langle , \rangle$. Define $L^{2}([a, b])$ to be the completion of $C[a, b]$ with respect to $\langle , \rangle$. $L^{2}[a, b]$ is a Hilbert space. 
 
+> [!Remark]
+> Alternatively, an element of $L^{2}[a, b]$ is an equivalence class of [[Intro to Measure theory#^80e256|measurable]] functions $f:[a, b]\to \mathbb{C}$ for which 
+> $$
+> \int_{a}^{b} |f(x)|^{2} \, dx < \infty,
+> $$
+> where two functions are considered the same element of $L^{2}$ iff they do not differ outside of a set of measure zero. Note that while $L^{2}[a, b]$ is a Hilbert space, it is not an algebra, since it is not closed under multiplication.
+
 > [!Definition] Orthonormal basis
 > Let $H$ be a Hilbert space. $S\subseteq H$ is an **orthonormal basis** if it is [[LEC ALG1 21#^98652c|orthonormal]] and $\overline{\text{span}(S)}=H$.  
+
+^5f2a03
 
 Contrast with a [[Hamel bases#^c53024|Hamel basis]]. 
 
@@ -139,16 +148,19 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 
 > [!Proposition]
 > Let $H$ be a separable Hilbert space. Let $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ be an orthonormal set. TFAE:
-> 1. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is a maximal orthonormal set.
-> 2. $\mathbf{x}=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}$ for all $\mathbf{x}\in H$. 
-> 3. $\langle \mathbf{x}, \mathbf{y} \rangle=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle\langle \mathbf{e}_{n}, \mathbf{y} \rangle$ for all $\mathbf{x}, \mathbf{y}\in H$. 
-> 4. $\lVert \mathbf{x} \rVert^{2}=\sum_{n=1}^{\infty}|\langle \mathbf{x}, \mathbf{e}_{n} \rangle|^{2}$ for all $\mathbf{x}\in H$. 
+> 1. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is an orthonormal basis.
+> 2. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is a maximal orthonormal set.
+> 3. $\mathbf{x}=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}$ for all $\mathbf{x}\in H$. 
+> 4. $\langle \mathbf{x}, \mathbf{y} \rangle=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle\langle \mathbf{e}_{n}, \mathbf{y} \rangle$ for all $\mathbf{x}, \mathbf{y}\in H$. 
+> 5. $\lVert \mathbf{x} \rVert^{2}=\sum_{n=1}^{\infty}|\langle \mathbf{x}, \mathbf{e}_{n} \rangle|^{2}$ for all $\mathbf{x}\in H$. 
 > 
 > > [!Proof]-
 > > 
-> > $(1\implies 2)$ By [[#^9752cf]] and [[#^84dbb8]], $\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}$ converges. If $\mathbf{y}:= \mathbf{x}-\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}\ne 0$, $\mathbf{y}$ is perpendicular to $\mathbf{e}_{n}$ for all $n$, contradicting maximality. 
+> > $(1 \iff 2)$ If $\{ \mathbf{e}_{n} \}$ is a maximal orthonormal set, it follows that it is an orthonormal basis from $(2\implies 3)$. Suppose $\{ \mathbf{e}_{n} \}$ is an orthonormal basis, and $\mathbf{e}\perp \mathbf{e}_{n}$ for all $n$. Since $\overline{\text{span }\{ \mathbf{e}_{n} \}}=H$, we must have $\sum_{n=1}^{\infty}\alpha_{n}\mathbf{e}_{n}=\mathbf{e}$ for some coefficients $\alpha_{i}$. Taking the inner product with $\mathbf{e}$ on both sides results in a contradiction by [[#^181916]].  
 > > 
-> > $(2\implies 3)$
+> > $(2\implies 3)$ By [[#^9752cf]] and [[#^84dbb8]], $\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}$ converges. If $\mathbf{y}:= \mathbf{x}-\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}\ne 0$, $\mathbf{y}$ is perpendicular to $\mathbf{e}_{n}$ for all $n$, contradicting maximality. 
+> > 
+> > $(3\implies 4)$
 > > $$
 > > \begin{align}
 > > \langle \mathbf{x}, \mathbf{y} \rangle  & =\left\langle  \sum_{i=1}^{\infty} \langle \mathbf{x}, \mathbf{e}_{i} \rangle \mathbf{e}_{i}, \sum_{j=1}^{\infty} \langle \mathbf{y}, \mathbf{e}_{j} \rangle \mathbf{e}_{j}  \right\rangle  \\
@@ -156,15 +168,12 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > >  & =\sum_{i=1}^{\infty} \langle \mathbf{x}, \mathbf{e}_{i} \rangle \langle \mathbf{e}_{i}, \mathbf{y} \rangle .
 > > \end{align}
 > > $$
-> > $(3\implies 4)$ is immediate. 
+> > $(4\implies 5)$ is immediate. 
 > > 
-> > $(4\implies 1)$ Suppose $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is not maximal, that is, there exists nonzero $\mathbf{e}\in H$ such that $\mathbf{e}\perp \mathbf{e}_{n}$ for all $n$. Then, $\lVert \mathbf{e} \rVert^{2}=\sum_{n=1}^{\infty}|\langle \mathbf{e}, \mathbf{e}_{n} \rangle|^{2}=0$, a contradiction. 
+> > $(5\implies 2)$ Suppose $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is not maximal, that is, there exists nonzero $\mathbf{e}\in H$ such that $\mathbf{e}\perp \mathbf{e}_{n}$ for all $n$. Then, $\lVert \mathbf{e} \rVert^{2}=\sum_{n=1}^{\infty}|\langle \mathbf{e}, \mathbf{e}_{n} \rangle|^{2}=0$, a contradiction. 
 > 
 
-> [!Corollary]
-> If $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}\subseteq H$ is maximal orthonormal set, it is an orthonormal basis.
-
-==?? This might contain errors==
+^754891
 
 > [!Theorem]
 > $S=\{ e^{ int }:n\in \mathbb{Z} \}\subseteq L^{2}[0, 2\pi]$ is an orthonormal basis.
@@ -181,7 +190,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > > \end{dcases}
 > > \end{align}
 > > $$
-> > Let $\mathscr{C}:=C'([0, 2\pi], \mathbb{C})$ be the space of all continuous complex functions $f$ on $[0, 2\pi]$ such that $f(0)=f(2\pi)$ - essentially, $C(S_{1}, \mathbb{C})$. Observe that $\mathcal{A}:=\text{span}\{ e^{ i nt }:n\in \mathbb{Z} \}$ is a unital self-adjoint [[LEC ANA2 11#^ba6b9c|subalgebra]] of $\mathscr{C}$ which separates points. By [[LEC ANA2 11#^c03f69]], $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\infty})$. Thus, for every $f\in \mathscr{C}$, there exists $\{ f_{n} \}\subseteq \mathcal{A}$ such that $\{ f_{n} \}\rightrightarrows f$. By [[LEC ANA1 33#^9132bb]],
+> > Let $\mathscr{C}:=C^{0}([0, 2\pi], \mathbb{C})$ be the space of all continuous periodic complex functions $f$ with period $2\pi$ - essentially, $C(S_{1}, \mathbb{C})$. Observe that $\mathcal{A}:=\text{span}\{ e^{ i nt }:n\in \mathbb{Z} \}$ is a unital self-adjoint [[LEC ANA2 11#^ba6b9c|subalgebra]] of $\mathscr{C}$ which separates points. By [[LEC ANA2 11#^c03f69]], $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\infty})$. Thus, for every $f\in \mathscr{C}$, there exists $\{ f_{n} \}\subseteq \mathcal{A}$ such that $\{ f_{n} \}\rightrightarrows f$. By [[LEC ANA1 33#^9132bb]],
 > > $$
 > > \begin{align}
 > > \lim_{ n \to \infty } \int_{0}^{2\pi} |f-f_{n}|^{2} \, dx = 0,
@@ -189,3 +198,5 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > > $$
 > > so $\{ f_{n} \}\to f$ under $\lVert \cdot \rVert_{\langle , \rangle}$. It follows that $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\langle , \rangle})$. Note that $(\mathscr{C}, \lVert \cdot \rVert_{\langle , \rangle})$ is dense in $(C([0, 2\pi], \mathbb{C}), \lVert \cdot \rVert_{\langle , \rangle})$, which is dense in $L^{2}[0, 2\pi]$ by definition. $\mathcal{A}$ is dense in $L^{2}[0, 2\pi]$ by [[LEC ANA2 5#^35d96d]]. 
 > > 
+
+^915903

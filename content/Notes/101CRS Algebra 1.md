@@ -57,6 +57,8 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 	- Gram-Schmidt example, orthogonal decomposition theorem
 - [[LEC ALG1 23]] Bilinear forms, Hermitian forms
 
+[[Spectral theorem]]
+
 %% 
 >[!Excalidraw]-
 >These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted.

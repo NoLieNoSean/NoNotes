@@ -72,20 +72,14 @@ tags:
 # Uniform boundedness theorem
 
 > [!Theorem]
-> Let $X$ be a Banach space, $Y$ a normed vector space and $B(X, Y)$ the space of all continuous[^3] linear operators from $X$ to $Y$ equipped with the [[LEC CAL1 3#^ecdf17|operator norm]]. Suppose that $\{ T_{i} \}_{i\in I}$ is a collection of continuous linear operators form $X$ to $Y$. If, for every $x\in X$, 
-> $$
-> \sup_{i\in I}| T_{i}(x)|< \infty,
-> $$
-> then
-> $$
-> \sup_{i\in I}\lVert T_{i} \rVert < \infty.
-> $$
+> Let $X$ be a Banach space, $Y$ a normed vector space and $B(X, Y)$ the space of all continuous[^3] linear operators from $X$ to $Y$ equipped with the [[LEC CAL1 3#^ecdf17|operator norm]]. Suppose $\{ T_{i} \}_{i=1}^{\infty}\subseteq B(X, Y)$.
+> 1. If for every $x\in X$, $\sup_{i\in \mathbb{N}}| T_{i}(x)|< \infty,$ then $\sup_{i\in \mathbb{N}}\lVert T_{i} \rVert < \infty$.
 > 
 > > [!Proof]-
 > > 
-> > Let $F_{n}=\{ x\in X:\lvert T_{i}x \rvert\leq n\quad\forall i\in I \}$. As usual, each $F_{n}$ is closed, since[^2]
+> > Let $F_{n}=\{ x\in X:\lvert T_{i}x \rvert\leq n\quad\forall i\in \mathbb{N} \}$. As usual, each $F_{n}$ is closed, since[^2]
 > > $$
-> > F_{n}=\bigcap_{i\in I}\{ x\in X:|T_{i}x|\leq n \},
+> > F_{n}=\bigcap_{i\in \mathbb{N}}\{ x\in X:|T_{i}x|\leq n \},
 > > $$
 > > and we have $\bigcup_{n=1}^{\infty}F_{n}=X$. By [[LEC ANA2 8#^1a2743]], there exists $F_{m}$ with non-empty interior. Let $B\subseteq F_{m}$ be a closed ball with center $v_{0}$ and radius $r$. If $|x|=1$, 
 > > $$
@@ -93,11 +87,42 @@ tags:
 > > |T_{i}x|=\left| T_{i}\left( \frac{(v_{0}+rx)-v_{0}}{r} \right)  \right| =\left| \frac{T_{i}(v_{0}+rx)-T_{i}(v_{0}) }{r}\right| \leq \frac{2m}{r}  &  & (\forall T_{i})
 > > \end{align}
 > > $$
-> > Thus, $\lVert T_{i} \rVert\leq2m/r$ for all $i$, and $\sup_{i\in I}\lVert T_{i} \rVert\leq 2m/r$.
+> > Thus, $\lVert T_{i} \rVert\leq2m/r$ for all $i$, and $\sup_{i\in \mathbb{N}}\lVert T_{i} \rVert\leq 2m/r$.
+> 
+> 2. If $\sup_{i\in \mathbb{N}}\lVert T_{i} \rVert = \infty$, then $\{ x\in X :\sup_{i\in \mathbb{N}}|T_{i}x|=\infty \}$ is a dense $G_{\delta}$ set. 
+> 
+> > [!Proof]-
+> > 
+> > Let $F_{n}$ be defined as above. We have $\bigcup_{n=1}^{\infty}F_{n}=\{ x\in X : \sup_{i\in \mathbb{N}}|T_{i}x|< \infty\}$. 
+> > 
+> > We will show that $F_{n}$ is nowhere dense for each $n$. Let $x\in F_{n}$, and $\epsilon> 0$. Pick $T_{k}$ such that $\lVert T_{k} \rVert> 2n/\epsilon$. There must exist $v\in B(0, 1)$ such that $|T_{k}v|> 2n/\epsilon$. Now, 
+> > $$
+> > \begin{align}
+> > |T_{k}(x+\epsilon v)|=|T_{k}(x)+T_{k}(\epsilon v)| \geqslant ||T_{k}x|-\epsilon |T_{k}v||> n.
+> > \end{align}
+> > $$
+> > Thus, $B(x, \epsilon)\not\subseteq F_{n}$. 
+> > 
+> > We can now write
+> > $$
+> > \begin{align}
+> > \left\{ x\in X :\sup_{i\in \mathbb{N}}|T_{i}x| = \infty  \right\}  & =\left( \bigcup_{n=1}^{\infty} F_{n} \right)^{c} \\
+> >  & = \bigcap_{n=1}^{\infty} F_{n}^{c},
+> > \end{align}
+> > $$
+> > where each $F_{n}^{c}$ is open and dense. By [[LEC ANA2 8#^44da7d]], the intersection is dense. 
+> 
 > 
 
-
 ^90f996
+
+A simple example: if $X=Y=\mathbb{R}^{2}$ and $T_{i}$ is the linear operator given by the matrix $\begin{bmatrix}1 & 0  \\ 0 & i\end{bmatrix}$, $\{ x\in X :\sup_{i\in \mathbb{N}}|T_{i}x|< \infty \}= \mathbb{R}\times \{ 0 \}$. 
+
+
+
+
+
+
 
 
 [^2]: Again, the map $x\mapsto |T_{i}x|$ is continuous by [[LEC CAL1 3#^b01b34]] and [[LEC CAL1 3#^67b79d]], and $[-n, n]$ is closed.

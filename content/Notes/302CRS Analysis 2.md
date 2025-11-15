@@ -43,6 +43,8 @@ CMI, Aug-Nov 2025, R Srinivasan
 ## Fourier analysis
 
 [[LEC ANA2 16]] ✅ Hilbert spaces
+[[LEC ANA2 17]] ✅ The Fourier transform, failure of pointwise convergence of the Fourier series
+[[LEC ANA2 18]]
 
 
 ---
@@ -53,6 +55,6 @@ CMI, Aug-Nov 2025, R Srinivasan
 
 [[TST ANA2 Quiz 1]]
 [[TST ANA2 Quiz 2]]
-
+[[ANA2 Quiz 4]]
 
 [[TUT ANA2 1]]
