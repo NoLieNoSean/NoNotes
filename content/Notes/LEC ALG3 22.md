@@ -6,7 +6,7 @@ tags:
   - ALG3
   - Lecture
 ---
-# Properties of finite fields
+q# Properties of finite fields
 
 [!Lemma]
 For any $x, y\in F$, with char $F=p$, $(x+y)^{p^{r}}=x^{p^{r}}+y^{p^{r}}$.

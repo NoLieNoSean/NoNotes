@@ -26,6 +26,8 @@ Greybach normal form, CFGs as NPDAs, DPDAs weaker than NPDAs
 
 [[LEC TOC 7]]
 
+[[Reductions]]
+
 
 ---
 

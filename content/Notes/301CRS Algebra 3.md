@@ -6,7 +6,7 @@ date: August 2025
 id: "6"
 ---
 CMI, Aug-Nov 2025, Clare D'Cruz
-@artinAlgebra2011, @dummitAbstractAlgebra2004, @aluffiAlgebraChapter02009 ([Errata](https://www.math.fsu.edu/~aluffi/algebraerrata.2016/Errata.html)), @langAlgebra2002, @hungerfordAlgebra1974, [Conrad's expository papers](https://kconrad.math.uconn.edu/blurbs/)
+@artinAlgebra2011, @dummitAbstractAlgebra2004, @aluffiAlgebraChapter02009 ([Errata](https://www.math.fsu.edu/~aluffi/algebraerrata.2016/Errata.html)), @langAlgebra2002, @hungerfordAlgebra1974, [Conrad's expository papers](https://kconrad.math.uconn.edu/blurbs/), @thestacksprojectauthorsFields
 
 ![[Pasted image 20250929164457.jpeg]]
 
@@ -27,19 +27,19 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 7]] ✅ Irreducible and prime elements
 [[LEC ALG3 8]] ✅ Ring of fractions
 [[LEC ALG3 9]] ✅ Euclidean domains and unique factorization domains
-[[LEC ALG3 10]] ✅ Gauss's Lemma
+[[LEC ALG3 10]] ✅ Gauss's Lemma, $R$ is UFD $\implies$ $R[x]$ is UFD
 [[LEC ALG3 11]] Gaussian primes
 [[LEC ALG3 12]] More on factoring
 [[LEC ALG3 13]] Eisenstein's Criterion
-[[LEC ALG3 15]] ✅ Field extensions, algebraic elements, minimal polynomials
-[[LEC ALG3 16]] More on field extensions
-[[LEC ALG3 17]]
-[[LEC ALG3 18]]
-[[LEC ALG3 19]]
-[[LEC ALG3 20]]
+[[LEC ALG3 15]] ✅ Algebraic elements and algebraic extensions
+[[LEC ALG3 16]] ✅ Towers of algebraic extensions
+[[LEC ALG3 17]] ✅ Algebraic elements form a subextension
+[[LEC ALG3 19]] Splitting fields
+[[LEC ALG3 20]] Finite fields
 [[LEC ALG3 21]]
 [[LEC ALG3 22]]
 [[LEC ALG3 23]]
+
 
 [[Stuff I'll look at later]]
 
@@ -53,7 +53,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[TUT ALG3 6]]
 [[TUT ALG3 7]]
 [[TUT ALG3 8]]
-
+[[TUT ALG3 9]]
 
 [[TST ALG3 Midsem]]
 [[TST ALG3 Quiz2]]

@@ -15,6 +15,24 @@ This is a generalization to rings of [[LEC ALG3 15#Field extensions|algebraic ex
 > 2. The ring $R$ is an **integral extension** of $S$ or just **integral over** $S$ if every $r\in R$ is integral over $S$. 
 > 3. The integral closure of $S$ in $R$ is the set of elements of $R$ that are integral over $S$. 
 > 4. The ring $S$ is said to be **integrally closed in $R$** if $S$ is equal to its integral closure in $R$. The integral closure of an integral domain $S$ in its field of fractions is called the **normalization** of $S$. An integral domain is called **integrally closed** or **normal** if it is integrally closed in its field of fractions. 
+> 5. For any $r\in R$, $S[r]$ is the smallest subring of $R$ containing $S$ and $r$.
+
+^f5a41a
+
+Here's the analog of [[LEC ALG3 15#^10680c]]:
+
+> [!Proposition]
+> Suppose $S\subseteq R$. TFAE:
+> 1. $r\in R$ is integral over $S$.
+> 2. The subring $S[r]\subseteq R$ is a [[LEC ALG3 3#^db6ba2|finitely generated]] $S$-module.
+> 
+> > [!Proof]-
+> > 
+> > If $r$ is the root of a monic, degree $n$ polynomial over $S$, then $S[r]$ is spanned as an $S$-module by $\{ 1, r, \dots, r^{n-1} \}$. Conversely, if $S[r]$ is spanned as an $S$-module by finitely many elements, then at most finitely many powers of $r$, say $\{ 1, r, r^{2}, \dots, r^{n-1} \}$, appear in the formulas for these elements. It follows that these powers of $r$ span $S[r]$ as an $S$-module, hence $r^{n}$ is an $S$-linear combination of lower powers of $r$.
+> 
+
+^ee7415
+
 
 > [!Lemma]
 > Let $R$ be an integral domain and $S\subseteq R$ be a UFD. Let $r\in R$ be integral over $S$; let $f(x)\in S[x]$ be a monic irreducible polynomial such that $f(r)=0$. Then, $S[r]\cong S[x]/(f(x))$.
@@ -30,6 +48,8 @@ This is a generalization to rings of [[LEC ALG3 15#Field extensions|algebraic ex
 > > Now, $g(x)$ divides $f(x)$. Since $f(x)$ is irreducible, it follows that $g(x)$ and $f(x)$ are associates, so $\ker\varphi=(g(x))=(f(x))$. 
 
 ^ebe532
+
+It follows that *if $r$ is algebraic over $S$, then $S[r]$ is a finitely generated $S$ module.*
 
 For example, If $\omega\in \mathbb{C}$ is integral over $\mathbb{Z}$, and $f(x)\in \mathbb{Z}[x]$ is a monic irreducible polynomial such that $f(\omega)=0$, then $\mathbb{Z}[\omega]\cong \mathbb{Z}[x]/(f(x))$. 
 

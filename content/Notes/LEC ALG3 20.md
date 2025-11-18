@@ -3,6 +3,8 @@ id: "342"
 date: 2025-11-04
 time: 09:31
 tags:
+  - ALG3
+  - Lecture
 ---
 > [!Proposition]
 > Let $\alpha\in F$. Then, $x-\alpha$ is a root of $f(x)$ and $f'(x)$ $\iff$ $\alpha$ is a multiple root of $f(x)$. 

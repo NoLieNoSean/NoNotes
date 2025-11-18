@@ -3,9 +3,17 @@ id: "338"
 date: 2025-10-30
 time: 09:04
 tags:
+  - ALG3
+  - Lecture
 ---
+# Splitting fields
+
+> [!Definition] Splitting field
+> Let $F$ be a field and $f(x)\in F[x]$. A field extension $K/F$ such that $f$ splits into linear factors in $K$ is called a **splitting field** of $f(x)$.
+
+
 [!Theorem]
-Let $F$ be any field. Then any $f(x)\in F[x]$ of positive degree has a splitting field. 
+Let $F$ be a field. Then any $f(x)\in F[x]$ of positive degree has a splitting field. 
 
 [!Proof]-
 

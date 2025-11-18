@@ -17,3 +17,7 @@ CNF and GNF cannot generate $\epsilon$.
 > 1. $|vwx|\leq n$.
 > 2. $vx\ne \epsilon$.
 > 3. For all $i\geq 0$, $uv^{i}wx^{i}y\in L$.
+
+
+Closed under union
+

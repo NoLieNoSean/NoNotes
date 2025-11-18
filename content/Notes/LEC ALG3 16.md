@@ -5,64 +5,104 @@ time: 09:54
 tags:
   - ALG3
   - Lecture
+  - Processed
 ---
-> [!Definition] Algebraic extension
-> A [[LEC ALG3 15#^cb5039|field extension]] $K/F$ is called an **algebraic extension** if every $\alpha\in K$ is [[LEC ALG3 15#^b33844|algebraic]] over $F$.
-
-> [!Proposition]
-> Let $K/F$ be a field extension. Assume that $\alpha\in K$ is algebraic over $F$. Then $F(\alpha)/F$ is an algebraic extension. 
-> 
-> > [!Proof]-
-> > 
-> > Let $n=\text{deg}(\text{Irr}(\alpha; F))$. Let $\beta\in F(\alpha)$. Then $\{ 1, \beta, \dots, \beta^{n} \}\subseteq F(\alpha)$ is linearly dependent over $F$ by [[LEC ALG3 15#^5c70c9]]. Thus, there exist coefficients $a_{0}, \dots, a_{n}\in F$ not all zero such that $\sum_{i=o}^{n}a_{i}\beta^{i}=0$. Thus, $\beta$ is algebraic over $F$.
-> > 
-> 
-
-> [!Proposition]
-> Let $K/F$ be a field extension and $\alpha\in K$ be algebraic over $F$. Suppose $\text{deg}(\text{irr}(\alpha; F))=n$. If $\beta\in F(\alpha)$, then $\text{deg}(\text{irr}(\beta; F))\leq n$. 
-> 
-> > [!Proof]-
-> > Since $\beta\in F(\alpha)$ and since $F(\beta)$ is the smallest subfield of $F(\alpha)$ containing $\beta$ and $F$, we have $F(\beta)\subseteq F(\alpha)$. Since $\text{dim}_{F}(F(\alpha))=n$, we get $\text{dim}_{F}(F(\beta))\leq n$. We know that $\text{deg}(\text{irr}(\beta; F))=\text{dim}_{F}(F(\beta))\leq n$. 
-> 
-
-> [!Proposition]
-> Let $F\subseteq K$ be a field extension. Suppose $\alpha, \beta\in K$ be algebraic over $F$. If $\text{irr}(\alpha; F)=\text{irr}(\beta; F)$ then there is an isomorphism $\psi:F(\alpha)\to F(\beta)$ fixing elements of $F$ such that $\psi(\alpha)=\beta$. 
-> 
-> > [!proof]-
-> > Consider $\psi$ as in the statement. We want to show that $\psi$ is an isomorphism of rings. Note that by definition, $\psi$ is a ring homomorphism (this actually requires the irreducible polynomials to be equal!). Since $\ker \psi\ne (1)$, and $F[\alpha]$ is a field, we must have $\ker(\psi)=(0)$, that is, $\psi$ is injective. Note that the $F$-basis $\{ 1, \alpha, \dots, \alpha^{n-1} \}$ of $F[\alpha]$ maps to the $F$-basis $\{ 1, \beta, \dots, \beta^{n-1} \}$ of $F[\beta]$. Since $\psi$ is a $F$-linear map, we get $\psi$ is surjective.  
-> 
-
-The converse is not true if we do not assume $\psi(\alpha)=\beta$. Consider $F=\mathbb{R}$, $K=\mathbb{C}$, $\alpha=i$, $\beta=2i$.
-
-"Replace field by a ring, then need monic for finite extension."
-
-[Proposition]
-Let $K, K'$ be field extensions of $F$ and $\psi:K\to K'$ be a ring homomorphism ==fixing $F$==($\psi$ can be extended to a map $\overline{\psi}:K[X]\to K'[X]$). Let $\alpha\in K$ be a root of $f(x)\in F[X]$. Then $\psi(\alpha)$ is a root of $\psi(f)$.
-
-[!Proof]-
-Let $f(x)=\sum_{i=0}^{n}a_{i}x^{i}$. We have $f(\alpha)=0$. Then, 
-$$
-\begin{align}
-  \psi(f)(\psi(\alpha)) & =f(\psi(\alpha)) \\
- & =\sum_{i=0}^{n} a_{i}(\psi(\alpha)^{i}) \\
- & =\psi(f(\alpha)) \\
- & =\psi(0)=0.
-\end{align}
-$$
-
-
-For example, this shows that if $\alpha$ is a root of $f(x)\in \mathbb{R}[x]$, then $\overline{\alpha}$ is also a root of $f(x)$. 
+# Towers of algebraic extensions
 
 > [!Definition]
 > We say $\text{dim}_{F}(K)$ is the **degree** of the field extension $K/F$ and denote it by $[K:F]$. 
 > If $[K:F]$ is finite, we say $K/F$ is a finite (field) extension. 
 
-By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $[F(\alpha):F]< \infty$. 
+> [!Proposition] Multiplicativity
+> Given a tower of fields $L/K/F$, 
+> $$
+> [L:F]=[L:K][K:F].
+> $$
+> > [!Proof]-
+> > 
+> > Let $a=[L:K]$ and $b=[K:F]$. Let $\alpha_{1}, \dots, \alpha_{a}\in L$ be a $K$-basis for $L$. Let $\beta_{1}, \dots, \beta_{b}\in K$ be a $F$-basis for $K$. For $l\in L$, write:
+> > $$
+> > \begin{align}
+> > l & =\sum_{i=1}^{a} k_{i}\alpha_{i}  &  k_{i}\in K \\
+> >  & =\sum_{i=1}^{a} \left( \sum_{j=1}^{b} f_{i, j}\beta_{j} \right)\alpha_{i} & f_{i, j}\in F 
+> > \end{align}
+> > $$
+> > Thus, $\mathcal{B}=\{ \beta_{j}\alpha_{i}:1\leqslant j\leqslant b, 1\leqslant i\leqslant a \}$ spans $L$. $\mathcal{B}$ is also linearly independent, since
+> > $$
+> > \begin{align}
+> >  & \sum_{i=1}^{a} \left( \sum_{j=1}^{b} f_{i, j}\beta_{j} \right)\alpha_{i} =0 \\
+> >  & \implies \sum_{j=1}^{b} f_{i, j}\beta_{j}=0 & \forall i \\
+> >  & \implies f_{i, j}=0 & \forall i, j
+> > \end{align}
+> > $$
+> > So, $\dim_{F}(L)=|\mathcal{B}|=ab$.
+> 
 
-> [!Lemma]
+^ead96e
+
+> [!Remark]
+> 
+> Given a tower $L/K/F$, if $[L:F]$ is finite, then $[L:K]$ and $[K:F]$ are finite too - the former is immediate, and the latter follows from the fact that subspaces of finite dimensional vector spaces are finite dimensional. Thus, *$L/F$ is finite iff $L/K$ is finite and $K/F$ is finite.*
+
+^80680b
+
+
+> [!Proposition]
 > If $[K:F]$ is finite, then $K$ is algebraic over $F$.
 > 
 > > [!Proof]-
 > > 
 > > Suppose $[K:F]=n$. Choose $\alpha\in K$. Then the elements $1, \alpha, \dots, \alpha^{n}$ are linearly dependent over $F$. A relation of linear dependence now gives the desired polynomial in $F[x]$ that $\alpha$ must satisfy. 
 
+^bacf07
+
+In general, it is false that an algebraic extension is finite.
+
+> [!Lemma]
+> Let $F, K$ be fields. Let $\{ F_{i} \}_{i\in \mathbb{N}}$ be fields such that $F_{i}\subseteq F_{i+1}$ and $F\subseteq F_{i}\subseteq K$ for every $i$. Then $\bigcup_{i\in \mathbb{N}}F_{i}$ is a subfield of $K$. 
+
+^9d1148
+
+> [!Remark]
+> If $K/F$ is an [[LEC ALG3 15#^296267|algebraic extension]], is $K/F$ finite? No. Consider
+> $$
+> \mathbb{Q}\subseteq \mathbb{Q}[\sqrt[2]{ 2 }]\subseteq \mathbb{Q}[\sqrt[4]{ 2 }]\subseteq \mathbb{Q}[\sqrt[8]{ 2 }]\subseteq\dots\subseteq \mathbb{Q}[\sqrt[2^{n}]{ 2 }]\subseteq\dots \subseteq \mathbb{C}.
+> $$
+>  $[ \mathbb{Q}[\sqrt[2^{i}]{ 2 }]:\mathbb{Q}]=2^{i}$. $\bigcup_{i\in \mathbb{N}} \mathbb{Q}[\sqrt[2^{i}]{ 2 }]$ is a field by [[#^9d1148]], and is clearly an algebraic extension of $\mathbb{Q}$. However, $\left[ \bigcup_{i\in \mathbb{N}} \mathbb{Q}[\sqrt[2^{i}]{ 2 }]:\mathbb{Q} \right]$ is clearly not finite.
+
+By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $F(\alpha)/F$ is finite. We can state a more general result:
+
+> [!Definition]
+> Let $K/F$ and $\alpha_{1}, \dots, \alpha_r\in K$ be algebraic over $F$. Then $F(\alpha_{1}, \dots, \alpha_{n})$ is the smallest subfield of $K$ containing $\alpha_{1}, \dots, \alpha_{r}$ and $F$.
+
+> [!Proposition]
+> Let $F$ be a field, and let $\alpha_{1}, \dots, \alpha_{n}$ be elements of some extension field such that each $\alpha_{i}$ is algebraic over $F$. Then the extension $F(\alpha_{1}, \dots, \alpha_{n})$ is finite and algebraic.
+> 
+> That is, *a finitely generated algebraic extension is finite*.
+> 
+> > [!Proof]-
+> > 
+> > Each extension $F(\alpha_{1}, \dots, \alpha_{i+1})/F(\alpha_{1}, \dots, \alpha_{i})$ is generated by one element and algebraic, hence finite. Therefore, we get a tower $F(\alpha_{1}, \dots, \alpha_{n})/\dots/F(\alpha_{1})/F$ of finite extensions. It follows from [[#^ead96e]] that $F(\alpha_{1}, \dots, \alpha_{n})/F$ is finite. The extension is algebraic by [[#^bacf07]].
+> 
+
+^167dcc
+
+---
+
+# Finitely generated extensions
+
+> [!Definition]
+> We say that $E$ is **finitely generated** over $F$ if there is a finite family of elements $\alpha_{1}, \dots, \alpha_{n}$ of $E$ such that $E=F(\alpha_{1}, \dots, \alpha_{n})$.
+
+> [!Proposition]
+> A finite extension of fields is a finitely generated extension. The converse is not true.
+> 
+> > [!Proof]-
+> > 
+> > If $\{ \alpha_{1}, \dots, \alpha_{n} \}$ is a basis of $E$ as a vector space of $F$, then of course $E=F(\alpha_{1}, \dots, \alpha_{n})$. 
+> > 
+> > For the converse: If $F$ is any field, then the rational function field $F(t)$ is not a finite extension - the elements $\{ t^{n}:n\in \mathbb{Z} \}$ are independent over $F$.
+> 
+
+
+[^1]: $F(\beta)$ is the smallest subfield of $K$ containing $F$ and $\beta$; $F(\alpha)$ contains $F$ and $\beta$.
