@@ -45,7 +45,9 @@ Since each $f_{n}$ is continuous and vanishes outside $B_{r_{n}/2}(x_{n})$ and t
 # Problem 4
 
 > [!Exercise]
-> Let $f:X\to Y$ be a continuous map onto $Y$ and $X$ compact. Also $g:Y\to Z$ is such that $g\circ f$ is continuous. Show $g$ is continuous.
+> Let $f:X\to Y$ be a continuous map onto $Y$ and $X$ be compact. Also $g:Y\to Z$ is such that $g\circ f$ is continuous. Show $g$ is continuous.
+
+^64d5ef
 
 Let $S\subseteq Z$ be closed. It suffices to prove that $g^{-1}(S)$ is closed in $Y$. Since $g\circ f$ is continuous, we know that $f^{-1}(g^{-1}(S))$ is closed in $X$. Since $X$ is compact, $f^{-1}(g^{-1}(S))$ is compact. Since $f$ is onto, $f(f^{-1}(g^{-1}(S)))=g^{-1}(S)$, which must be compact since $f$ is continuous. Since $Y$ is a metric space, this implies $g^{-1}(S)$ is closed.
 

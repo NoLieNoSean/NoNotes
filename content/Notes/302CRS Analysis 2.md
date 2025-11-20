@@ -45,6 +45,7 @@ CMI, Aug-Nov 2025, R Srinivasan
 [[LEC ANA2 16]] ✅ Hilbert spaces
 [[LEC ANA2 17]] ✅ The Fourier transform, failure of pointwise convergence of the Fourier series
 [[LEC ANA2 18]]
+[[LEC ANA2 19]]
 
 
 ---

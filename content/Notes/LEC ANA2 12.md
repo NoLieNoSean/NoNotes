@@ -95,7 +95,9 @@ It is now clear that $C_{0}(X)$ is an $\mathbb{R}$-algebra.
 > > $$
 > > First, we have to show that $\varphi(f)\in C(\overline{X})$. Let $O$ be an open subset of $\mathbb{R}$ not containing $0$. Then, $(\varphi(f))^{-1}(O)=f^{-1}(O)$, which is open in $\overline{X}$ since it is open in $X$ and doesn't contain $\infty$. Suppose $0\in O$. Let $\epsilon> 0$ be such that $(-\epsilon, \epsilon)\subseteq O$. There exists compact $K\subseteq X$ such that[^2] $f(K^{c})\subseteq(-\epsilon, \epsilon)$, or $f^{-1}((-\epsilon, \epsilon)^{c})\subseteq K$. Note that $f^{-1}(O)^{c}=f^{-1}(O^{c})\subseteq f^{-1}((-\epsilon, \epsilon)^{c})\subseteq K$. Since $O^{c}$ is closed and $f$ is continuous, $f^{-1}(O)^{c}$ is closed in $X$. Since it is a subset of a compact set, it follows that $f^{-1}(O)^{c}$ is compact. It follows that $(\varphi(f))^{-1}(O)$ is open in $\overline{X}$.
 > > 
-> > The map is clearly injective, linear, norm preserving, and a ring homomorphism. Showing that $\varphi$ is onto takes some work, but it is very similar in nature to the preceding paragraph and I can't be bothered.
+> > The map is clearly injective, linear, norm preserving, and a ring homomorphism. We have to show surjectivity. Take any $g\in C(\overline X,\mathbb R)$ with $g(\infty)=0$. Put $f:=g|_{X}$. We need to check $f\in C_{0}(X,\mathbb R)$, i.e. $f$ is continuous on $X$ (obvious) and $f$ vanishes at infinity: for every $\epsilon>0$ there is a compact $K\subset X$ with $|f(x)|<\varepsilon$ for all $x\notin K$. 
+> > 
+> > Since $g$ is continuous at $\infty$ and $g(\infty)=0$ there exists an open neighborhood $U\subset\overline X$ of $\infty$ with $|g(y)|<\varepsilon$ for all $y\in U$. By the definition of the one–point compactification, $K:=\overline X\setminus U$ is compact and $K\subset X$. For any $x\in X$ with $x\not\in K$ we have $x\in U\cap X$, hence $|f(x)|=|g(x)|<\varepsilon$. Finally, $\varphi(f)$ is exactly the extension of $f$ that equals $0$ at $\infty$, so $\varphi(f)=g$. Therefore $\varphi$ is surjective.
 > 
 
 ^a62cff
