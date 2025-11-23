@@ -45,11 +45,11 @@ Thus, $\mathcal{B}$ is not dense in $C(\mathbb{R}, \mathbb{R})$. This does not c
 
 # Problem 4
 
-Consider $\mathcal{B}=\{ f\cdot g:f, g\in C([0, 1]) \}\subseteq C([0, 1]^{2}, \mathbb{R})$. $\mathcal{B}$ is clearly unital. The map $((x, y)\mapsto x)\in \mathcal{B}$ separates $(x_{1}, y_{1}), (x_{2}, y_{2})\in[0, 1]^{2}$ if $x_{1}\ne x_{2}$, and $((x, y)\mapsto y)\in \mathcal{B}$ separates them if $x_{1}=x_{2}$. Thus, $\mathcal{B}$ is dense in $C([0, 1]^{2}, \mathbb{R})$. Thus, there exists a sequence $\{ f_{n}\cdot g_{n} \}_{n=1}^{\infty}\subseteq \mathcal{B}$ such that $f_{n}\cdot g_{n}\rightrightarrows F$. 
+Consider $\mathcal{B}=\text{span}\{ f\cdot g:f, g\in C([0, 1]) \}\subseteq C([0, 1]^{2}, \mathbb{R})$. $\mathcal{B}$ is clearly unital. The map $((x, y)\mapsto x)\in \mathcal{B}$ separates $(x_{1}, y_{1}), (x_{2}, y_{2})\in[0, 1]^{2}$ if $x_{1}\ne x_{2}$, and $((x, y)\mapsto y)\in \mathcal{B}$ separates them if $x_{1}=x_{2}$. Thus, $\mathcal{B}$ is dense in $C([0, 1]^{2}, \mathbb{R})$. Thus, there exists a sequence $\{ b_{n} \}=\left\{ \sum_{i=1}^{k_{n}} f_{i, n}\cdot g_{i, n}  \right\}_{n=1}^{\infty}\subseteq \mathcal{B}$ converging uniformly to $F$. Since $F$ is continuous (hence bounded), we have $b_{n}F\to F^{2}$ uniformly.
 $$
 \begin{align}
-\int_{0}^{1} \int_{0}^{1} F^{2}(x, y) \, dx  \, dy  & =\int_{0}^{1} \int_{0}^{1} \lim_{ n \to \infty } (f_{n}\cdot g_{n})(x, y)F(x, y) \, dx  \, dy \\
-  & = \lim_{ n \to \infty } \int_{0}^{1} \int_{0}^{1} f_{n}(x)g_{n}(y)F(x, y) \, dx  \, dy  \\
+\int_{0}^{1} \int_{0}^{1} F^{2}(x, y) \, dx  \, dy  & =\int_{0}^{1} \int_{0}^{1} \lim_{ n \to \infty } \left( \sum_{i=1}^{k_{n}} f_{i, n}\cdot g_{i, n} \right)(x, y)F(x, y) \, dx  \, dy \\
+  & = \lim_{ n \to \infty } \sum_{i=1}^{k_{n}} \int_{0}^{1} \int_{0}^{1} f_{i, n}(x)g_{i, n}(y)F(x, y) \, dx  \, dy  \\
  & =0,
 \end{align}
 $$

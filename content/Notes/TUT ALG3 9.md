@@ -3,8 +3,13 @@ id: "357"
 date: 2025-11-17
 time: 13:55
 tags:
+  - ALG3
+  - Tutorial
 ---
 # Problem 11
+
+> [!Exercise]
+> Prove that a finite subgroup of the multiplicative group  of any field $F$ is a cyclic group.
 
 Let $G\subseteq F^{\times}$ be of order $n$. Let $A_{d}$ denote the set of elements of $G$ of order $d$. Let $B_{d}$ denote the set of elements of $G$ whose order divides $d$, that is, $\{ x\in G:x^{d}=1 \}$. 
 
@@ -18,9 +23,5 @@ This forces $|A_{d}|=\varphi(d)$ for all $d\ | \ n$. In particular, $|A_{n}|=\va
 
 
 
-> [!Exercise]
-> Prove that a finite subgroup of the multiplicative group  of any field $F$ is a cyclic group.
 
 
-
-Since $\langle y \rangle\subseteq G$ and $|\langle y \rangle|=d$, we must have 

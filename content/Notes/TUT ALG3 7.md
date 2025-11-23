@@ -6,6 +6,59 @@ tags:
   - ALG3
   - Tutorial
 ---
+# Problem 1
+
+Let $R\subseteq S$ be integral domains and let $f(x)=\sum_{i=0}^{n}a_{i}x^{i}\in R[x]$. Define $f'(x)=\sum_{i=1}^{n}a_{i}ix^{i-1}$. Let $a\in S$.
+
+> [!Lemma] Chain rule
+> If $f(x)=g(x)h(x)$, then $f'(x)=g(x)h'(x)+g'(x)h(x)$.
+> 
+> > [!Proof]-
+> > 
+> > $$
+> > \begin{align}
+> > f(x) & = \sum_{i=0}^{m+n} \left( \sum_{j=0}^{i} g_{j}h_{i-j} \right)x^{i} \\
+> >   f'(x) & =\sum_{i=0}^{m+n-1} \left( \sum_{j=0}^{i+1} g_{j}h_{i+1-j} \right)(i+1)x^{i}. \\
+> > \end{align}
+> > $$
+> > $$
+> > \begin{align}
+> > g(x)h'(x)+g'(x)h(x) & = \left( \sum_{i=0}^{n} g_{i}x^{i} \right)\left( \sum_{i=0}^{m-1} h_{i+1}(i+1)x^{i} \right)+\left( \sum_{i=0}^{n-1} g_{i+1}(i+1)x^{i} \right)\left( \sum_{i=0}^{m} h_{i}x^{i} \right) \\
+> >  & =\sum_{i=0}^{m+n-1} \left( \sum_{j=0}^{i} g_{j}h_{i+1-j}(i+1-j) \right)x^{i}+    \sum_{i=0}^{m+n-1} \left( \sum_{j=0}^{i} g_{j+1}h_{i-j}(j+1) \right)x^{i} \\
+> >  & =\sum_{i=0}^{m+n-1} \left( \sum_{j=0}^{i} g_{j}h_{i+1-j}(i+1-j) \right)x^{i}+    \sum_{i=0}^{m+n-1} \left( \sum_{j=1}^{i+1} g_{j}h_{i+1-j}(j) \right)x^{i} \\
+> >  & = \sum_{i=0}^{m+n-1} \left( \sum_{j=0}^{i+1} g_{j}h_{i+1-j} \right)(i+1)x^{i}.
+> > \end{align}
+> > $$
+> > 
+> 
+
+> [!Exercise]
+> Show that $a$ is a multiple root of $f$ iff $f(a)=0$ and $f'(a)=0$.
+
+^3192f5
+
+Suppose $f(a)=0$. Then, $f(x)=(x-a)g(x)=xg(x)-ag(x)$. 
+$$
+\begin{align}
+f'(x)= g(x)+xg'(x)-ag'(x)=g(x)+(x-a)g'(x).
+\end{align}
+$$
+Thus, if $(x-a)\ | \ g(x)$ then $(x-a)\ | \ f'(x)$, and vice versa. 
+
+> [!Exercise]
+> Let $R$ be a field and suppose $\gcd(f, f')=1$ in $S$. Show that $f$ has no multiple roots in $S$.
+
+Suppose $f(a)=0$ for some $a\in S$. Let $u(x), v(x)\in S[x]$ be such that $u(x)f(x)+v(x)f'(x)=1$. If $f'(a)=0$, substituting $a$ into the previous equation yields $0=1$, a contradiction. Thus, by [[#^3192f5]], $a$ is not a multiple root of $f$. 
+
+> [!Exercise]
+> Let $R$ be a field and suppose $f(x)$ is irreducible in $R[x]$ and suppose $f$ has a root in $S$. Show that $f$ has no multiple roots in $S$ iff $f'\ne 0$.
+
+
+
+
+
+---
+
 # Problem 5
 
 > [!Exercise]

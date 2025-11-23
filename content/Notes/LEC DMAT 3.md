@@ -11,7 +11,7 @@ id: "201"
 
 An chain is a subset of a [[ANA1_L2|partial order]] in which any two elements are comparable (basically, a totally ordered subset). Zorn's lemma is equivalent to the axiom of choice.
 
-> [!Lemma] Zorn's Lemma
+> [!Lemma] Zorn
 > Let $(S, \leq)$ be any partially ordered set such that every chain $C$ has an upper bound. Then, $S$ has a maximal element.
 
 ^98db69

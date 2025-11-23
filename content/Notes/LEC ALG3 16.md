@@ -11,7 +11,9 @@ tags:
 
 > [!Definition]
 > We say $\text{dim}_{F}(K)$ is the **degree** of the field extension $K/F$ and denote it by $[K:F]$. 
-> If $[K:F]$ is finite, we say $K/F$ is a finite (field) extension. 
+> If $[K:F]$ is finite, we say $K/F$ is a **finite (field) extension**. 
+
+^62eddf
 
 > [!Proposition] Multiplicativity
 > Given a tower of fields $L/K/F$, 
@@ -56,7 +58,7 @@ tags:
 
 ^bacf07
 
-In general, it is false that an algebraic extension is finite.
+In general, it is false that an algebraic extension is finite. 
 
 > [!Lemma]
 > Let $F, K$ be fields. Let $\{ F_{i} \}_{i\in \mathbb{N}}$ be fields such that $F_{i}\subseteq F_{i+1}$ and $F\subseteq F_{i}\subseteq K$ for every $i$. Then $\bigcup_{i\in \mathbb{N}}F_{i}$ is a subfield of $K$. 
@@ -76,9 +78,9 @@ By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $F(\al
 > Let $K/F$ and $\alpha_{1}, \dots, \alpha_r\in K$ be algebraic over $F$. Then $F(\alpha_{1}, \dots, \alpha_{n})$ is the smallest subfield of $K$ containing $\alpha_{1}, \dots, \alpha_{r}$ and $F$.
 
 > [!Proposition]
-> Let $F$ be a field, and let $\alpha_{1}, \dots, \alpha_{n}$ be elements of some extension field such that each $\alpha_{i}$ is algebraic over $F$. Then the extension $F(\alpha_{1}, \dots, \alpha_{n})$ is finite and algebraic.
+> Let $F$ be a field, and let $\alpha_{1}, \dots, \alpha_{n}$ be elements of some extension field such that each $\alpha_{i}$ is algebraic over $F$. Then the extension $F(\alpha_{1}, \dots, \alpha_{n})/F$ is finite and algebraic.
 > 
-> That is, *a finitely generated algebraic extension is finite*.
+> That is, *a [[#^67e6e4|finitely generated]] algebraic extension is [[#^62eddf|finite]]*.
 > 
 > > [!Proof]-
 > > 
@@ -94,8 +96,10 @@ By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $F(\al
 > [!Definition]
 > We say that $E$ is **finitely generated** over $F$ if there is a finite family of elements $\alpha_{1}, \dots, \alpha_{n}$ of $E$ such that $E=F(\alpha_{1}, \dots, \alpha_{n})$.
 
+^67e6e4
+
 > [!Proposition]
-> A finite extension of fields is a finitely generated extension. The converse is not true.
+> A finite extension of fields is a finitely generated extension. The converse is not true in general.
 > 
 > > [!Proof]-
 > > 
@@ -103,6 +107,8 @@ By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $F(\al
 > > 
 > > For the converse: If $F$ is any field, then the rational function field $F(t)$ is not a finite extension - the elements $\{ t^{n}:n\in \mathbb{Z} \}$ are independent over $F$.
 > 
+
+^3c4cd0
 
 
 [^1]: $F(\beta)$ is the smallest subfield of $K$ containing $F$ and $\beta$; $F(\alpha)$ contains $F$ and $\beta$.

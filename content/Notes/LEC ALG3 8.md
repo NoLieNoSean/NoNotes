@@ -1,10 +1,9 @@
 ---
 id: "113"
 ---
-
 # Ring of fractions
 
-A Commutative ring $R$ is always a subring of a larger ring $Q$, called the *ring of fractions*, in which every nonzero element of $R$ that is not a zero divisor is a unit in $Q$. If $R$ is an integral domain, $Q$ will be a field, called the *field of fractions* of $R$.
+A Commutative ring $R$ is always a subring of a larger ring $Q$, called the *ring of fractions*, in which every nonzero element of $R$ that is not a zero divisor is a unit in $Q$. If $R$ is an integral domain, $Q$ will be a field, called the *field of fractions* of $R$. 
 
 > [!Theorem] @dummitAbstractAlgebra2004 [p. 260] 
 > Let $R$ be a commutative ring. Let $D$ be any nonempty subset of $R$ that does not contain $0$, *does not contain any zero divisors* and is closed under multiplication. Then there is a commutative ring $Q$ such that $Q$ contains $R$ as a subring and every element of $D$ is a unit in $Q$. Also, 
