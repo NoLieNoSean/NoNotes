@@ -94,7 +94,7 @@ We will need this to show that the norm defined above satisfies the triangle ine
 > [!Theorem] Cauchy-Schwarz
 > Let $V$ be an inner product space. For any two $\mathbf{u}, \mathbf{v} \in V$, we have
 > $$
-> \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert \leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
+> \lvert\langle \mathbf{u},\mathbf{v}\rangle\rvert \leqslant  \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
 > $$ 
 > 
 > > [!Proof]-

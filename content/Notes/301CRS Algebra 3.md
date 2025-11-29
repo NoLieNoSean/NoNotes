@@ -38,8 +38,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 20]] ✅ Splitting fields, gcd
 [[LEC ALG3 21]] ✅ Finite fields
 
-
-[[Stuff I'll look at later]]
+🎉
 
 # Tutorials
 

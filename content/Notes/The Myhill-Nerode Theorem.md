@@ -73,7 +73,7 @@ Let $M$ be a DFA for a regular language $R\subseteq\Sigma^{*}$ with no inaccessi
 
 Call any equivalence relation $\equiv$ on $\Sigma^{*}$ a **Myhill-Nerode relation** for $R$ if it satisfies the three properties above, that is, if it is a right congruence of finite index refining $R$.
 
-Given any Myhill-Nerode relation $\equiv$ on $\Sigma^{*}$ for $R$, we can produce a DFA $M_{\equiv}=(Q, \Sigma, \delta, s, F)$ accepting $R$:
+Given any Myhill-Nerode relation $\equiv$ on $\Sigma^{*}$ for $R$, we can produce ar DFA $M_{\equiv}=(Q, \Sigma, \delta, s, F)$ accepting $R$:
 $$
 \begin{align}
 Q & :=\{ [x]\ | \  x\in\Sigma^{*} \}  \\

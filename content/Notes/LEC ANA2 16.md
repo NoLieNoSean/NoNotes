@@ -16,14 +16,16 @@ A Hilbert space is a complete [[LEC ALG1 21#^dd5bbe|inner product space]]. Examp
 > $$
 > \langle f, g \rangle \equiv \frac{1}{b-a}\int_{a}^{b} f\overline{g}.
 > $$
-> Note that $C[a, b]$ is not complete under the norm induced by $\langle , \rangle$. Define $L^{2}([a, b])$ to be the completion of $C[a, b]$ with respect to $\langle , \rangle$. $L^{2}[a, b]$ is a Hilbert space. 
+> Note that $C[a, b]$ is not complete under the norm induced by $\langle , \rangle$, which may be denoted by $\lVert \cdot \rVert_{2}$ or $\lVert \cdot \rVert_{\langle , \rangle}$. Define $L^{2}([a, b])$ to be the completion of $C[a, b]$ with respect to $\langle , \rangle$. $L^{2}[a, b]$ is a Hilbert space. 
 
 > [!Remark]
-> Alternatively, an element of $L^{2}[a, b]$ is an equivalence class of [[Intro to Measure theory#^80e256|measurable]] functions $f:[a, b]\to \mathbb{C}$ for which 
+> Alternatively, elements of $L^{2}[a, b]$ are equivalence classes of [[Intro to Measure theory#^80e256|measurable]] functions $f:[a, b]\to \mathbb{C}$ for which 
 > $$
 > \int_{a}^{b} |f(x)|^{2} \, dx < \infty,
 > $$
-> where two functions are considered the same element of $L^{2}$ iff they do not differ outside of a set of measure zero. Note that while $L^{2}[a, b]$ is a Hilbert space, it is not an algebra, since it is not closed under multiplication.
+> where two functions belong to the same class iff they do not differ outside of a set of measure zero. Note that while $L^{2}[a, b]$ is a Hilbert space, it is not an algebra, since it is not closed under multiplication.
+
+^0109ea
 
 > [!Definition] Orthonormal basis
 > Let $H$ be a Hilbert space. $S\subseteq H$ is an **orthonormal basis** if it is [[LEC ALG1 21#^98652c|orthonormal]] and $\overline{\text{span}(S)}=H$.  
@@ -40,7 +42,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > 
 
 > [!Proposition]
-> Any orthonormal subset of a separable Hilbert space is countable.
+> Any orthonormal subset of a [[LEC CAL1 9#^9c3671|separable]] Hilbert space is countable.
 > 
 > > [!Proof]-
 > > 
@@ -61,7 +63,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > 
 > > [!Proof]-
 > > 
-> > Let $S$ be an orthonormal set. Let $\{ \mathbf{x}_{1}, \dots, \mathbf{x}_{n} \}\subseteq S$. If $\sum_{i=1}^{n}\alpha_{i}\mathbf{x}_{i}=0$, $\alpha_{j}= \left\langle  \sum_{i=1}^{n}\alpha_{i}\mathbf{x}_{i},\mathbf{x}_{j}   \right\rangle=\langle \mathbf{0}, x \rangle= 0$. 
+> > Let $S$ be an orthonormal set. Let $\{ \mathbf{x}_{1}, \dots, \mathbf{x}_{n} \}\subseteq S$. If $\sum_{i=1}^{n}\alpha_{i}\mathbf{x}_{i}=0$, $\alpha_{j}= \left\langle  \sum_{i=1}^{n}\alpha_{i}\mathbf{x}_{i},\mathbf{x}_{j}   \right\rangle=\langle \mathbf{0}, \mathbf{x}_{j} \rangle= 0$. 
 > 
 
 > [!Proposition]
@@ -101,9 +103,10 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > > \left| \langle \mathbf{x}_{n}, \mathbf{y}_{n} \rangle -\langle \mathbf{x}, \mathbf{y} \rangle  \right|  & \leqslant |\langle \mathbf{x}_{n}, \mathbf{y}_{n} \rangle -\langle \mathbf{x}_{n}, \mathbf{y} \rangle |+|\langle \mathbf{x}_{n}, \mathbf{y} \rangle -\langle \mathbf{x}, \mathbf{y} \rangle | \\
 > >  & =|\langle \mathbf{x}_{n}, \mathbf{y}_{n}-\mathbf{y} \rangle |+|\langle \mathbf{x}_{n}-\mathbf{x}, \mathbf{y} \rangle | \\
 > >  & \leqslant \lVert \mathbf{x}_{n} \rVert \lVert \mathbf{y}_{n}-\mathbf{y} \rVert +\lVert \mathbf{x}_{n}-\mathbf{x} \rVert \lVert \mathbf{y} \rVert  \\
-> >  & \to 0 \text{ as }n\to \infty.
+> >  & \to 0 \text{ as }n\to \infty,
 > > \end{align}
 > > $$
+> > where the last inequality follows from [[LEC ALG1 21#^c0606c]]. 
 > > 
 > 
 
@@ -190,13 +193,21 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > > \end{dcases}
 > > \end{align}
 > > $$
-> > Let $\mathscr{C}:=C^{0}([0, 2\pi], \mathbb{C})$ be the space of all continuous periodic complex functions $f$ with period $2\pi$ - essentially, $C(S_{1}, \mathbb{C})$. Observe that $\mathcal{A}:=\text{span}\{ e^{ i nt }:n\in \mathbb{Z} \}$ is a unital self-adjoint [[LEC ANA2 11#^ba6b9c|subalgebra]] of $\mathscr{C}$ which separates points. By [[LEC ANA2 11#^c03f69]], $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\infty})$. Thus, for every $f\in \mathscr{C}$, there exists $\{ f_{n} \}\subseteq \mathcal{A}$ such that $\{ f_{n} \}\rightrightarrows f$. By [[LEC ANA1 33#^9132bb]],
+> > Let $\mathscr{C}:=C^{0}([0, 2\pi], \mathbb{C})$ be the space of all continuous periodic complex functions $f$ with period $2\pi$ - essentially, $C(S_{1}, \mathbb{C})$. Observe that $\mathcal{A}:=\text{span}\{ e^{ i nt }:n\in \mathbb{Z} \}$ is a unital self-adjoint [[LEC ANA2 11#^ba6b9c|subalgebra]] of $\mathscr{C}$ which separates points [^1]. By [[LEC ANA2 11#^c03f69]], $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\infty})$. Thus, for every $f\in \mathscr{C}$, there exists $\{ f_{n} \}\subseteq \mathcal{A}$ such that $\{ f_{n} \}\rightrightarrows f$. It follows that $|f-f_{n}|^{2}\rightrightarrows 0$. By [[LEC ANA1 33#^9132bb]],
 > > $$
 > > \begin{align}
 > > \lim_{ n \to \infty } \int_{0}^{2\pi} |f-f_{n}|^{2} \, dx = 0,
 > > \end{align}
 > > $$
-> > so $\{ f_{n} \}\to f$ under $\lVert \cdot \rVert_{\langle , \rangle}$. It follows that $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{\langle , \rangle})$. Note that $(\mathscr{C}, \lVert \cdot \rVert_{\langle , \rangle})$ is dense in $(C([0, 2\pi], \mathbb{C}), \lVert \cdot \rVert_{\langle , \rangle})$, which is dense in $L^{2}[0, 2\pi]$ by definition. $\mathcal{A}$ is dense in $L^{2}[0, 2\pi]$ by [[LEC ANA2 5#^35d96d]]. 
+> > so $\{ f_{n} \}\to f$ under $\lVert \cdot \rVert_{2}$. It follows that $\mathcal{A}$ is dense in $(\mathscr{C}, \lVert \cdot \rVert_{2})$. Note that $(\mathscr{C}, \lVert \cdot \rVert_{2})$ is dense in $(C([0, 2\pi], \mathbb{C}), \lVert \cdot \rVert_{2})$[^2], which is dense in $L^{2}[0, 2\pi]$ by definition. $\mathcal{A}$ is dense in $L^{2}[0, 2\pi]$ by [[LEC ANA2 5#^35d96d]]. 
 > > 
 
 ^915903
+
+![[image-8.jpeg]]
+
+https://www.desmos.com/3d/djkjo4hqid
+
+[^1]: Note that $0$ and $2\pi$ are considered to be the same point of $S_{1}$!
+
+[^2]: It's pretty obvious if you think about it. Remember that we're claiming density under $\lVert \cdot \rVert_{2}$, not $\lVert \cdot \rVert_{\infty}$. 

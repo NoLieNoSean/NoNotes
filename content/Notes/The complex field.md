@@ -18,7 +18,7 @@ If $z$ and $w$ are complex numbers, then
 - $z-\overline{z}=2i\mathrm{Im}(z)$
 - $z\overline{z}$ is real and positive except when $z=0$.
 
-## The Cauchy-Schwarz inequality in complex numbers
+## The Cauchy-Schwarz inequality for complex numbers
 
 Recall the CS inequality in $\mathbb{R}$:
 $$

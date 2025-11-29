@@ -50,5 +50,7 @@ Intersecting $P$ with $E$ and taking $X=\mathbb{R}^{n}$, one obtains as a coroll
 > 
 
 
-[!Exercise]
-Find a counterexample to unique expressibility if $X$ is not assumed to be complete.
+> [!Exercise]
+> Find a counterexample to unique expressibility if $X$ is not assumed to be complete.
+
+^aa0b2f

@@ -9,9 +9,9 @@ tags:
 ---
 # The Fourier Transform
 
-The following algebras can be identified with each other: $C^{0}([0, 2\pi])$, $C(S_{1})$, and $C^{0}[-\pi, \pi]$, with the norm induced by the inner product. 
+The following algebras can be identified with each other: $C^{0}([0, 2\pi])$, $C(S_{1})$, and $C^{0}([-\pi, \pi])$, with the norm induced by the inner product. 
 
-We have shown ([[LEC ANA2 16#^915903]]) that $S=\{ \varphi_{n}:n\in \mathbb{Z} \}\subseteq L^{2}[0, 2\pi]$ is an [[LEC ANA2 16#^5f2a03|orthonormal basis]] for $L^{2}[0, 2\pi]$, where $\varphi_{n}=e^{ int }$. Therefore, by [[LEC ANA2 16#^754891]], $f\in L^{2}[0, 2\pi]$ can be expressed as
+[[LEC ANA2 16#^915903|We have shown]] that $S=\{ \varphi_{n}:n\in \mathbb{Z} \}\subseteq L^{2}[0, 2\pi]$ is an [[LEC ANA2 16#^5f2a03|orthonormal basis]] for $L^{2}[0, 2\pi]$, where $\varphi_{n}=e^{ int }$. Therefore, by [[LEC ANA2 16#^754891]], $f\in L^{2}[0, 2\pi]$ can be expressed as
 $$
 f=\sum_{n\in \mathbb{Z}}\hat{f}_{n}\varphi_{n},
 $$
@@ -33,7 +33,7 @@ In a sense, the function $f$ and the sequence $\{ \hat{f}_{n} \}$ are duals of e
 > 
 > > [!Proof]-
 > > 
-> > $\zeta$ is injective by [[LEC ANA2 16#^754891]].3 and surjective by [[LEC ANA2 16#^84dbb8]].1,2. It is clear that $\zeta$ is a linear transformation. $\zeta$ preserves the inner product:
+> > $\zeta$ is injective by [[LEC ANA2 16#^754891]].3 and surjective by [[LEC ANA2 16#^84dbb8]].1&2. It is clear that $\zeta$ is a linear transformation. $\zeta$ preserves the inner product:
 > > $$
 > > \begin{align}
 > > \langle f, g \rangle =\sum_{n\in \mathbb{Z}}\langle f, \varphi_{n} \rangle \langle \varphi_{n}, g \rangle =\sum_{n\in \mathbb{Z}}\hat{f}_{n}\overline{\hat{g}}_{n}. 
@@ -42,28 +42,12 @@ In a sense, the function $f$ and the sequence $\{ \hat{f}_{n} \}$ are duals of e
 > > 
 > 
 
-It follows that
+By [[LEC ANA2 16#^754891]].5, we also have
 $$
 \lVert f \rVert ^{2}_{2}=\sum_{n\in \mathbb{Z}}|\hat{f}_{n}|^{2}.
 $$
 
 ^589cb2
-
-## An example: $\sum 1/n^{2}=\pi^{2}/6$
-
-> [!Lemma]
-> Riemann integrable functions on $[a, b]$ are in $L^{2}[a, b]$. 
-> 
-> > [!Proof]-
-> > 
-> > Let $\mathscr{R}[a, b]$ be the collection of equivalence classes of Riemann integrable functions, with $f\sim g$ if $\int_{a}^{b} |g-f|^{2}=0$. This forms a NLS with the inner product defined to be $\langle f, g \rangle=\int_{a}^{b} f\overline{g}$. Next, note that $C[a, b]$ is a dense subspace of $\mathscr{R}[a, b]$: for $f\in \mathscr{R}[a, b]$, for every $\epsilon> 0$ there exists $g\in C[a, b]$ such that 
-> > $$
-> > \int_{a}^{b} |f-g|^{2} \, dt<\epsilon.
-> > $$
-> > Since $L^{2}[a, b]$ was defined as the completion of $C[a, b]$, the classes of Riemann integrable functions embed into $L^{2}[a, b]$.
-> 
-
-^2c1b05
 
 > [!Example]
 > $$
@@ -71,7 +55,7 @@ $$
 > $$
 > > [!Proof]-
 > > 
-> > Let $f:[0, 2\pi]\to \mathbb{C}$ be defined by $f(t)=1$ for $t\in[0, \pi)$, and $f(t)=-1$ for $t\in[\pi, 2\pi)$[^1]. By [[#^2c1b05]], $f\in L^{2}[0, 2\pi]$. Clearly, $\lVert f \rVert_{2}=1$. 
+> > Let $f:[0, 2\pi]\to \mathbb{C}$ be defined by $f(t)=1$ for $t\in[0, \pi)$, and $f(t)=-1$ for $t\in[\pi, 2\pi)$[^1]. It is clear from [[LEC ANA2 16#^0109ea]] that $f\in L^{2}[0, 2\pi]$[^2]. Clearly, $\lVert f \rVert_{2}=1$. 
 > > $$
 > > \begin{align}
 > > \hat{f}_{n} & =\frac{1}{2\pi}\left( \int_{0}^{\pi} e^{ - i nt } \, dt-\int_{\pi}^{2\pi} e^{  -i n t } \, dt   \right)  ;\\\\
@@ -88,8 +72,9 @@ $$
 > > \end{align}
 > > $$
 > > 
+> > 
 > 
- 
+
 ## Convergence of Fourier series
 
 Since functions that differ on a set of measure zero are identified with each other in $L^{2}$, convergence in $L^{2}$ does not imply $S_{N}f(t)\to f(t)$ for all $t\in[0, 2\pi]$. We will now demonstrate the existence of such $f$.
@@ -209,7 +194,18 @@ Define $T_{N}:(C^{0}[0, 2\pi], \lVert \cdot \rVert_{\infty})\to \mathbb{C}$ by $
 > $$
 > is a dense $G_{\delta}$ subset of $C^{0}[0, 2\pi]$.
 
-So, there exists a dense subset of $C^{0}[0, 2\pi]$ for which the Fourier series diverges at $0$! Moreover, we can translate this set to obtain a dense subset for which the Fourier series diverges at any $a\in[0, 2\pi]$. 
+So, there exists a dense subset of $C^{0}[0, 2\pi]$ for which the Fourier series diverges at $0$! Moreover, we can translate this set to obtain a dense subset for which the Fourier series diverges at any $a\in[0, 2\pi]$: for $g(x)=f(x-a)$, 
+$$
+\begin{align}
+(S_{N}g)(t) & = \frac{1}{2\pi}\int_{0}^{2\pi} D_{N}(t-s)f(s-a) \, ds  \\
+ & =\frac{1}{2\pi}\int_{a}^{2\pi+a} D_{N}((t-a)-u)f(u) \, du  \\
+ & =\frac{1}{2\pi}\int_{0}^{2\pi} D_{N}((t-a)-u)f(u) \, du  \\
+ & =(S_{N}f)(t-a),
+\end{align}
+$$
+so if $|(S_{N}f)(0)|$ diverges, $|(S_{N}g)(a)|$ will too.
 
 
 [^1]: Take $f(2\pi)=1$, if you'd like; it doesn't matter.
+
+[^2]: Vasanth claimed in class that all Riemann integrable functions on $[0, 2\pi]$ are in $L^{2}[0, 2\pi]$ - this is incorrect, with $1/\sqrt{ x }$ being a counterexample. All square Riemann integrable functions on $[0, 2\pi]$ are in $L^{2}[0, 2\pi]$. 

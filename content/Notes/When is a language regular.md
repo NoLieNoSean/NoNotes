@@ -31,7 +31,7 @@ $U\subseteq \mathbb{N}$ is said to be **ultimately periodic** if there exist int
 > [!Definition]
 > For words $x, y$ in a language $L\subseteq\Sigma^{*}$, $z\in\Sigma^{*}$ is said to be a **distinguishing suffix** if $xz\in L$ and $yz\not\in L$ or vice versa.
 
-It should be clear that if $\hat{\delta}(s, x)=\hat{\delta}(s, y)$ for $x, y\in\Sigma^{*}$, then $x$ and $y$ do not have a distinguishing suffix. Taking the contrapositive, we have if $x$ and $y$ have a distinguishing suffix, then $\hat{\delta}(s, x)\ne\hat{\delta}(s, y)$. 
+It should be clear that if $\hat{\delta}(s, x)=\hat{\delta}(s, y)$ for all $x, y\in\Sigma^{*}$, then $x$ and $y$ do not have a distinguishing suffix. Taking the contrapositive, we have if $x$ and $y$ have a distinguishing suffix, then $\hat{\delta}(s, x)\ne\hat{\delta}(s, y)$. 
 
 > [!Definition]
 > For a language $L$, a set of strings $x_{1}, \dots, x_{k}$ such that $x_{i}$ and $x_{j}$ have a distinguishing suffix for all $i\ne j$ is called a **Fooling set** of $L$.

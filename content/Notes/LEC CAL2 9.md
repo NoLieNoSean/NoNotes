@@ -173,7 +173,8 @@ $$
 > (2)\quad  & f^{*}(\omega_{1}+\omega_{2} )=f^{*}(\omega_{1})+f^{*}(\omega_{2}) \\
 > (3)\quad  & f^{*}(g\cdot \omega)=(g\circ f)\cdot f^{*}(\omega) \\
 >  (4)\quad  & f^{*}(\omega \wedge \eta)=f^{*}\omega \wedge f^{*}\eta.
-> \end{align}
+>  \\ (5) \quad   &  (g\circ f)^{*}\omega=f^{*}g^{*}\omega.
+\end{align}
 > $$
 > 
 > > [!Proof]-

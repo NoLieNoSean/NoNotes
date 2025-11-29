@@ -14,6 +14,7 @@ Quick preliminary facts:
 2. Since $K$ is finite, it will be finite dimensional when considered as a vector space over $\mathbb{F}_{p}$. Using [[LEC ALG3 16#^bacf07]], this tells us that the extension $K/\mathbb{F}_{p}$ is algebraic. 
 3. Let $r$ denote the degree $[K:F]$. Recall that $[K:F]=r$ implies $K$ has an $F$-basis of size $r$. Thus, as an $F$-vector space, $K$ is isomorphic to the space $F^{r}$ of column vectors, which contains $p^{r}$ elements, customarily denoted by $q$. Fields of order $q$ are denoted by $\mathbb{F}_{q}$.
 4. Conversely, if $K$ is a finite field of order $p^{r}$, we immediately have $\mathbb{F}_{p}\subseteq K$, since we cannot have $p^{r}=p_{1}^{r_{1}}$. 
+5. Do not confuse $\mathbb{F}_{q}$ with the ring $\mathbb{Z}/q\mathbb{Z}$, which isn't a field.
 
 > [!Example]
 > Consider $\mathbb{F}_{4}$. There is just one irreducible polynomial of degree $2$ in $\mathbb{F}_{2}[x]$, namely $f(x)=x^{2}+x+1$, and $\mathbb{F}_{4}$ is obtained by adjoining a root of $\alpha$ of this polynomial to $F$ [^1]
@@ -111,7 +112,12 @@ Quick preliminary facts:
 > > By [[#^977ed1]].4, there is a field $K$ of order $q=p^{r}$. Its degree over $\mathbb{F}_{p}$ is $r$. By [[#^977ed1]].3, $K^{\times}$ is cyclic. Clearly, a generator $\alpha$ for this cyclic group will generate $K$ as an extension field, i.e, $K=\mathbb{F}_{p}(\alpha)$. Since $[K:\mathbb{F}_{p}]=r$, the degree of the irreducible polynomial of $\alpha$ over $\mathbb{F}_{p}$ is $r$ by [[LEC ALG3 15#^5c70c9]]. 
 > 
 
-This also tells us that a field of order $p^{r}$ can be obtained by going modulo an irreducible polynomial of degree $r$ in $\mathbb{F}_{p}[x]$. Conversely, if $f\in \mathbb{F}_{p}[x]$ is irreducible of degree $r$, then the quotient $\mathbb{F}_{p}[x]/(f)$ is a field (because $(f)$ is maximal), and is an $\mathbb{F}_{p}$-vector space of dimension $r$, hence has cardinality $p^{r}$. Therefore it is a field with $p^{r}$ elements, and by [[#^977ed1]].4, isomorphic to $\mathbb{F}_{p^{r}}$. 
+^4e0304
+
+> [!Remark]
+> The proof of [[#^4e0304]] tells us that a field of order $p^{r}$ can be obtained by going modulo an irreducible polynomial of degree $r$ in $\mathbb{F}_{p}[x]$. Conversely, if $f\in \mathbb{F}_{p}[x]$ is irreducible of degree $r$, then the quotient $\mathbb{F}_{p}[x]/(f)$ is a field (because $(f)$ is maximal), and is an $\mathbb{F}_{p}$-vector space of dimension $r$, hence has cardinality $p^{r}$. Therefore it is a field with $p^{r}$ elements, and by [[#^977ed1]].4, isomorphic to $\mathbb{F}_{p^{r}}$. 
+
+^91a225
 
 > [!Proposition]
 > No finite field is algebraically closed.

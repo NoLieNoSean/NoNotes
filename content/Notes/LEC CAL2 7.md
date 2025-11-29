@@ -140,7 +140,7 @@ The following theorem proves soundness and backward compatibility of [[#^1c2a4b]
 > > 
 > > ^77a88a
 > > 
-> > This result, applied to $|f|$, show the convergence of $\sum_{\varphi\in\Psi}\sum_{\psi\in\Psi}\int_{A}\psi\varphi |f|$, and hence of $\sum_{\varphi\in\Psi}\sum_{\psi\in\Psi}\left| \int_{A}\psi\varphi f \right|$. This absolute convergence justifies interchanging the order of summation in [[#^77a88a]]; the resulting expression becomes [^5]
+> > This result, applied to $|f|$, show the convergence of $\sum_{\varphi\in\Phi}\sum_{\psi\in\Psi}\int_{A}\psi\varphi |f|$, and hence of $\sum_{\varphi\in\Phi}\sum_{\psi\in\Psi}\left| \int_{A}\psi\varphi f \right|$. This absolute convergence justifies interchanging the order of summation in [[#^77a88a]]; the resulting expression becomes [^5]
 > > $$
 > > \sum_{\psi\in\Psi}\int_{A}\psi \cdot f.
 > > $$

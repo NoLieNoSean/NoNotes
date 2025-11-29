@@ -122,7 +122,7 @@ Rudin drags his feet in the last part of the proof, since he wants to avoid inte
 ---
 # Misc
 
-> [!Theorem] Rudin 6.13b
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 6.13b
 > If $f\in\mathscr{R}(\alpha)$, then
 > $$
 > |f|\in\mathscr{R}(\alpha)\text{ and } \left|\int_{a}^{b} f \, d\alpha\right|\leq \int_{a}^{b} |f| \, d\alpha  .
@@ -135,4 +135,6 @@ Rudin drags his feet in the last part of the proof, since he wants to avoid inte
 > > \left|\int f\, d\alpha\right|=c\int f\,d\alpha=\int cf\,d\alpha\leq \int |f|\,d\alpha
 > > $$
 > > since $cf\leq |f|$.
+
+^8dfd1e
 

@@ -121,6 +121,8 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
 export const countedCallouts = ["definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise", "remark", "fact", "conjecture"]
+export const calloutContractions = {"definition": "Def", "lemma": "Lem", "theorem": "Thm", "corollary": "Cor", "example": "Exm", "claim": "Clm", "proposition": "Prp", "exercise": "Exr", "remark": "Rmk", "fact": "Fact", "conjecture": "Cnj"}
+
 
 
 const highlightRegex = new RegExp(/==([^=]+)==/g)
@@ -928,7 +930,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 if (callout) {
                   let dataCallout = callout.properties.dataCallout
                   if (node.children[0].value[0] === "^") {
-                    node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.properties.calloutNumber
+                    node.children[0].value = calloutContractions[dataCallout] + " " + callout.properties.calloutNumber
                   }
                   node.properties.href = `#${node.properties.href.slice(4)}`
                 }
@@ -938,7 +940,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   let callout = _ctx.mapping[block_id]
                   let dataCallout = callout.kind
                   if (node.children[0].value[0] === "^") {
-                    node.children[0].value = dataCallout[0].toUpperCase() + dataCallout.slice(1) + " " + callout.note_id+ "."+ callout.callout_count
+                    node.children[0].value = calloutContractions[dataCallout]  + " " + callout.note_id+ "."+ callout.callout_count
                   }
                   // node.properties.href = `#${node.properties.href.slice(4)}`
                 }

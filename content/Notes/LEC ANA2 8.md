@@ -9,9 +9,7 @@ id: "168"
 ---
 Reviewed [[LEC ANA1 21#^8a68b8]]. 
 
----
-
-# Examples for The Arzelà–Ascoli Theorem
+Here's an example application of [[LEC ANA2 7#^d4059b|The Arzelà–Ascoli Theorem]]. 
 
 > [!Example]
 > Let $k:[0, 1]\times[0, 1]\to \mathbb{R}$ be continuous. Define $T_{k}:C[0, 1]\to C[0, 1]$ by
@@ -132,7 +130,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > 
 
 ---
-# Baire Category theorem
+# The Baire Category theorem
 
 > [!Definition]
 > $X$ is a metric space. $S\subseteq X$ is **nowhere dense** if $(\overline{S})^{\circ}=\emptyset$.
@@ -151,7 +149,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > 2. $\mathbb{Q}$ is of first category in $\mathbb{R}$, and of first category in $\mathbb{Q}$. In fact, any countable metric space having no isolated points is of first category in itself.
 
 
-> [!Theorem] Baire Category Theorem
+> [!Theorem] Baire
 > Let $X$ be a complete metric space. Let $\{ U_{n} \}_{n=1}^{\infty}$ be a collection of open and dense subsets of $X$. Then, $U=\bigcap_{n=1}^{\infty}U_{n}$ is dense in $X$.
 > 
 > > [!Proof]-
@@ -183,12 +181,14 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 [^1]: These theorems require $f$ to be bounded, but this can dealt with by extending the definitions to allow for infinite oscillation. 
 
 
-[!Exercise]
-For $f:[0, 1]\to \mathbb{R}$, define
-$$
-(D^{+}f)(a)=\limsup_{x\to a^{+}}\frac{f(x)-f(a)}{x-a}.
-$$
-Prove that for each $a\in[0, 1]$ the set $\{ f\in C[0, 1]:D^{+}f(a)=\infty \}$ is a dense $G_{\delta}$ subset. (A set is said to be $G_{\delta}$ if it is a countable intersection of open sets.)
+> [!Exercise]
+> For $f:[0, 1]\to \mathbb{R}$, define
+> $$
+> (D^{+}f)(a)=\limsup_{x\to a^{+}}\frac{f(x)-f(a)}{x-a}.
+> $$
+> Prove that for each $a\in[0, 1]$ the set $\{ f\in C[0, 1]:D^{+}f(a)=\infty \}$ is a dense $G_{\delta}$ subset. (A set is said to be $G_{\delta}$ if it is a countable intersection of open sets.)
+
+^acf3b7
 
 
 I thought of considering the sets $S_{n}=\{ f\in C[0, 1]:D^{+}f(a)> n \}$ for $n\in \mathbb{N}$, but i do not think these are open.

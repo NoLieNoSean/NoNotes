@@ -8,7 +8,11 @@ CMI, Aug-Nov 2025, C Aiswarya
 @sipserIntroductionTheoryComputation2013, @kozenAutomataComputability1997, @hopcroftIntroductionAutomataTheory2007
 
 $$
-\begin{array}{c}\Huge \equiv=\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{M_{\equiv_{.\,_{.\,_{.}}}}}}}}}}}}}}}\\\tiny{\textsf{Exhibit A: The Nerode Staircase}}\end{array}
+\begin{array}{c}\Huge
+\equiv= \equiv_{M_{\equiv_{M_{\equiv_{M_{\,. _{\,._{\, .}}}}}}}} \\ \\
+
+\small{\textsf{Exhibit A: The Myhill-Nerode staircase}}
+\end{array}
 $$
 
 ![[image-1.jpeg]]
