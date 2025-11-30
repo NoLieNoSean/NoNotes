@@ -56,7 +56,7 @@ Recall [[LEC ANA2 14#^486748]].
 > [!Definition]
 > Define $\mathcal{C}_{0}=[0, 1]$. Express $\mathcal{C}_{n}$, $n\geqslant 0$, as
 > $$
-> \mathcal{C}_{n}=\coprod_{i\in I_{n}}J_{i},
+> \mathcal{C}_{n}=\coprod_{i\in I_{n}}J_{i}^{n},
 > $$
 > where $|I_{n}|=2^{n}$ and
 > $$

@@ -42,6 +42,8 @@ In a sense, the function $f$ and the sequence $\{ \hat{f}_{n} \}$ are duals of e
 > > 
 > 
 
+^d05d4c
+
 By [[LEC ANA2 16#^754891]].5, we also have
 $$
 \lVert f \rVert ^{2}_{2}=\sum_{n\in \mathbb{Z}}|\hat{f}_{n}|^{2}.

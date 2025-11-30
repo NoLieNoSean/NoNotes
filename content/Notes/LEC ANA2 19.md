@@ -6,30 +6,62 @@ tags:
   - ANA2
   - Lecture
 ---
-[!Proposition]
-Let $K\subseteq L^{2}[-\pi, \pi]$ be compact. Then
-$$
-\lim_{ |n| \to \infty } \sup_{f\in K}|\hat{f}_{n}|=0.
-$$
+> [!Proposition]
+> Let $K\subseteq L^{2}[-\pi, \pi]$ be compact. Then
+> $$
+> \lim_{ |n| \to \infty } \sup_{f\in K}|\hat{f}_{n}|=0.
+> $$
+> 
+> > [!Proof]-
+> > 
+> > We will denote $\hat{f}_{n}$ by $\hat{f}(n)$ for national convenience. Let $\epsilon> 0$. Use totally boundedness of $K$ to write $K\subseteq \bigcup_{i=1}^{n}B(f_{i}, \epsilon)$. There exists $N_{i}$ such that $|\hat{f}_{i}(n)|<\epsilon$ for $n\geqslant N_{i}$; let $N=\max N_{i}$. For $f\in K$, and $n\geqslant N$, 
+> > $$
+> > \begin{align}
+> > |\hat{f}(n) | & \leqslant |\hat{f}(n)-\hat{f}_{i}(n)|+|\hat{f}_{i}(n)| \\
+> >  & = |(\widehat{f-f_{i}})(n)|+|\hat{f}_{i}(n)| \\
+> >  & = \lVert \widehat{f-f_{i}} \rVert _{2}+|\hat{f}_{i}(n)| \\
+> >  & =\lVert f-f_{i} \rVert _{2}+|\hat{f}_{i}(n)| \\
+> >  & \leqslant 2\epsilon ,
+> > \end{align}
+> > $$
+> > where the fourth equality follows from [[LEC ANA2 17#^d05d4c]]. 
+> 
 
-[!Proof]-
-
-Goes as expected: use totally boundedness, followed by the triangle inequality.
 
 
 ---
 
 [!Exercise]
-
-Let $f\in C(S_{1})$. Define
+Let $f\in C^{0}[-\pi, \pi]$. 
 $$
-\Delta_{f}(t):=\sup_{s, r\in[-\pi, \pi], |s-r|< t}.
+\Delta_{f}(t):=\sup_{s, r\in[-\pi, \pi], |s-r|< t}|f(s)-f(r)|.
 $$
 Assume
 $$
 \int_{-\pi}^{\pi} \frac{\Delta_{f}(t)}{|t|} \, dt< \infty.
 $$
 Prove that $S_{N}f\to f$ uniformly. 
+
+[Proof]-
+
+We will mimic the proof of [[LEC ANA2 18#^8d8cda]]. 
+
+$$
+\begin{align}
+|(S_{N}f)(t_{0})-f(t_{0})| & =\frac{1}{2\pi}\left| \int_{-\pi}^{\pi} D_{N}(t-t_{0})f(t) \, dt-\int_{-\pi}^{\pi} D_{N}(t)f(t_{0}) \, dt    \right|  \\
+ & =\frac{1}{2\pi}\left| \int_{-\pi}^{\pi} D_{N}(t)f(t+t_{0}) \, dt-\int_{-\pi}^{\pi} D_{N}(t)f(t_{0}) \, dt    \right| \\
+ & = \frac{1}{2\pi}  \left| \int_{-\pi}^{\pi} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t+t_{0})-f(t_{0})) \, dt \right|  \\
+ & \leqslant \frac{1}{2\pi} \left[  \underbrace{ \int_{-\delta}^{\delta} \frac{|f(t+t_{0})-f(t_{0})|}{|\sin t/2|} \, dt }_{ =:\,A^{\delta} }+ \underbrace{ \left|\int_{[-\delta, \delta]^{c}} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t+t_{0})-f(t_{0}))\,dt \right| }_{ =:\,B^{\delta}_{N}  } \right] 
+\end{align}
+$$
+Define $M=\sup \{ (t/2)/(\sin(t/2)) : t\in[-\pi, \pi] \}$. Then, $|\sin(t/2)|\geqslant |t|/2M$. 
+$$
+\begin{align}
+A^{\delta}\leqslant 2M\int_{-\delta}^{\delta} \frac{|f(t+t_{0})-f(t_{0})|}{|t|} \, dt\leqslant 2M\int_{-\delta}^{\delta} \frac{\Delta_{f}(t)}{|t|} \, dt \to 0\quad \text{as}\quad \delta\to 0. 
+\end{align}
+$$
+
+
 
 ---
 
