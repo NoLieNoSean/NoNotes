@@ -36,8 +36,10 @@ We now have the tools to prove [[LEC ANA1 20#^95867f]] more succinctly:
 
 Equicontinuity is the natural generalization of [[LEC ANA1 20#^5d7328|uniform continuity]] to families of functions:
 
-> [!Definition]
+> [!Definition] Equicontinuity
 > Let $X$ be a compact metric space. $\mathcal{F}\subseteq C(X, Y)$ is a family of **equicontinuous** functions if for every $\epsilon> 0$ there exists $\delta> 0$ such that $d_{X}(x, y)<\delta \implies d_{Y}(f(x), f(y))<\epsilon$ for all $x, y\in X$ and for all $f\in \mathcal{F}$. 
+
+^4d28b7
 
 For example, a family of [[LEC CAL1 10#^659739|Lipschitz mappings]] with the same Lipschitz constant is equicontinuous (more generally, their it suffices for their Lipschitz constants to be bounded above).
 
