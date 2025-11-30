@@ -18,6 +18,8 @@ A Hilbert space is a complete [[LEC ALG1 21#^dd5bbe|inner product space]]. Examp
 > $$
 > Note that $C[a, b]$ is not complete under the norm induced by $\langle , \rangle$, which may be denoted by $\lVert \cdot \rVert_{2}$ or $\lVert \cdot \rVert_{\langle , \rangle}$. Define $L^{2}([a, b])$ to be the completion of $C[a, b]$ with respect to $\langle , \rangle$. $L^{2}[a, b]$ is a Hilbert space. 
 
+^2f39a2
+
 > [!Remark]
 > Alternatively, elements of $L^{2}[a, b]$ are equivalence classes of [[Intro to Measure theory#^80e256|measurable]] functions $f:[a, b]\to \mathbb{C}$ for which 
 > $$

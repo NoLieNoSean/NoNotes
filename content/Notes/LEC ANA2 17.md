@@ -55,7 +55,7 @@ $$
 > $$
 > > [!Proof]-
 > > 
-> > Let $f:[0, 2\pi]\to \mathbb{C}$ be defined by $f(t)=1$ for $t\in[0, \pi)$, and $f(t)=-1$ for $t\in[\pi, 2\pi)$[^1]. It is clear from [[LEC ANA2 16#^0109ea]] that $f\in L^{2}[0, 2\pi]$[^2]. Clearly, $\lVert f \rVert_{2}=1$. 
+> > Let $f:[0, 2\pi]\to \mathbb{C}$ be defined by $f(t)=1$ for $t\in[0, \pi)$, and $f(t)=-1$ for $t\in[\pi, 2\pi)$[^1]. It is clear from [[LEC ANA2 16#^0109ea]] that $f\in L^{2}[0, 2\pi]$. Clearly, $\lVert f \rVert_{2}=1$. 
 > > $$
 > > \begin{align}
 > > \hat{f}_{n} & =\frac{1}{2\pi}\left( \int_{0}^{\pi} e^{ - i nt } \, dt-\int_{\pi}^{2\pi} e^{  -i n t } \, dt   \right)  ;\\\\
@@ -75,7 +75,12 @@ $$
 > > 
 > 
 
-## Convergence of Fourier series
+> [!Remark]
+> In general, for a bounded Riemann integrable function $f$ on $[0 , 2\pi]$, continuous $g$ can be found to satisfy $\int_{0}^{2\pi} |f-g|^{2} \, dx<\epsilon$ for every $\epsilon> 0$, so $f\in L^{2}[0, 2\pi]$ by [[LEC ANA2 16#^2f39a2]]. If $f$ is improper Riemann integrable, it may not be in $L^{2}[0, 2\pi]$ - consider $1/\sqrt{ x }$. All square (proper/improper) Riemann integrable functions on $[0, 2\pi]$ are in $L^{2}[0, 2\pi]$. 
+
+^5d1611
+
+## Failure of pointwise convergence of Fourier series
 
 Since functions that differ on a set of measure zero are identified with each other in $L^{2}$, convergence in $L^{2}$ does not imply $S_{N}f(t)\to f(t)$ for all $t\in[0, 2\pi]$. We will now demonstrate the existence of such $f$.
 
@@ -117,6 +122,8 @@ Periodic domains are assumed from here on.
 > > $$
 > > 
 > 
+
+^65b628
 
 Note that $D_{N}\in C^{0}[0, 2\pi]$ for all $N$. 
 
@@ -194,18 +201,27 @@ Define $T_{N}:(C^{0}[0, 2\pi], \lVert \cdot \rVert_{\infty})\to \mathbb{C}$ by $
 > $$
 > is a dense $G_{\delta}$ subset of $C^{0}[0, 2\pi]$.
 
-So, there exists a dense subset of $C^{0}[0, 2\pi]$ for which the Fourier series diverges at $0$! Moreover, we can translate this set to obtain a dense subset for which the Fourier series diverges at any $a\in[0, 2\pi]$: for $g(x)=f(x-a)$, 
+^349268
+
+So, there exists a dense subset of $C^{0}[0, 2\pi]$ for which the Fourier series diverges at $0$! Moreover, we can translate this set to obtain a dense subset for which the Fourier series diverges at any $a\in[0, 2\pi]$: for $f_{a}(x):=f(x-a)$, 
 $$
 \begin{align}
-(S_{N}g)(t) & = \frac{1}{2\pi}\int_{0}^{2\pi} D_{N}(t-s)f(s-a) \, ds  \\
+(S_{N}f_{a})(t) & = \frac{1}{2\pi}\int_{0}^{2\pi} D_{N}(t-s)f(s-a) \, ds  \\
  & =\frac{1}{2\pi}\int_{a}^{2\pi+a} D_{N}((t-a)-u)f(u) \, du  \\
  & =\frac{1}{2\pi}\int_{0}^{2\pi} D_{N}((t-a)-u)f(u) \, du  \\
  & =(S_{N}f)(t-a),
 \end{align}
 $$
-so if $|(S_{N}f)(0)|$ diverges, $|(S_{N}g)(a)|$ will too.
+
+^612194
+
+so if $|(S_{N}f)(0)|$ diverges, $|(S_{N}f_{a})(a)|$ will too.
 
 
 [^1]: Take $f(2\pi)=1$, if you'd like; it doesn't matter.
 
-[^2]: Vasanth claimed in class that all Riemann integrable functions on $[0, 2\pi]$ are in $L^{2}[0, 2\pi]$ - this is incorrect, with $1/\sqrt{ x }$ being a counterexample. All square Riemann integrable functions on $[0, 2\pi]$ are in $L^{2}[0, 2\pi]$. 
+[^2]:
+
+
+
+

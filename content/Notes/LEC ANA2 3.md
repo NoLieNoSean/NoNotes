@@ -75,7 +75,7 @@ Also note that *$B(S)$ with the sup norm is always a Banach space for any set $S
 > Now, consider $C^{1}[0, 1]\subseteq C[0, 1]$, the set of all continuously differentiable functions on $[0, 1]$. $C^{1}[0, 1]$ is a dense subset of $C[0, 1]$[^1], and thus is not complete. However, $C^{1}[0, 1]$ with $\lVert f \rVert_{\infty}^{1}:=\lVert f \rVert_{\infty}+\lVert f' \rVert_{\infty}$ is complete. If $\{ f_{n} \}\subseteq C^{1}[0, 1]$ is Cauchy wrt $\lVert \cdot \rVert^{1}_{\infty}$, then $\{ f_{n} \}$ and $\{ f_{n}' \}$ are both Cauchy in $C[0, 1]$, and thus must converge to functions $f$ and $g$. We can now say that $f'=g$ by [[LEC ANA1 33#^94a1f8]]. 
 
 > [!Remark]
-> For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is compact.
+> For a general metric space $S$, you can still consider $C_{b}(S)$, the space of all bounded continuous functions with the sup norm. This is complete as well; the same proof works. Thus, *$C_{b}(S)$ is a Banach space for all metric spaces $S$*. If $S$ happens to be compact, then $C(S)=C_{b}(S)$ is a Banach space.
 
 ^e12a1f
 
