@@ -98,7 +98,7 @@ A random variable is said to be integrable if it has finite expectation.
 
 Used to justify swapping integrals.
 
-> [!Theorem] Fubini's Theorem
+> [!Theorem] Fubini
 > For a function $g(t, y)$ defined on $\mathbb{R}\times \mathbb{R}$, if
 > $$
 > \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |g(t, y)| \, dy \, dt< \infty 

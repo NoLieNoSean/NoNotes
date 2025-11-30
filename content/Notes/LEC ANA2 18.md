@@ -118,48 +118,49 @@ The hypotheses of [[#^72aad8]] can be relaxed:
 > \int_{-\pi}^{\pi} \frac{|f(t)-f(t_{0})|}{|t-t_{0}|} \, dt< \infty,
 > $$
 > then $(S_{N}f)(t_{0})\to f(t_{0})$ as $N\to \infty$. 
+> 
+> > [!Proof]-
+> > 
+> > First, note that since $e^{ in(t+\pi) }=e^{ in t }(-1)^{n}$, $\{ e^{ in t }:n\in \mathbb{Z} \}$ remains an orthonormal basis for $L^{2}[-\pi, \pi]$. [[LEC ANA2 17#^612194|WLOG]], we can assume $t_{0}=0$. Using [[LEC ANA2 17#^65b628]], 
+> > $$
+> > \begin{align}
+> > |(S_{N}f)(0)-f(0)| & =\left| \frac{1}{2\pi}\int_{-\pi}^{\pi} D_{N}(t)f(t) \, dt -f(0) \right| .
+> > \end{align}
+> > $$
+> > Observe that $\int_{-\pi}^{\pi} D_{N}(t)\,dt=\int_{-\pi}^{\pi} \sum_{-N}^{N}e^{ in t } \, dt=2\pi$. Thus, we can write
+> > $$
+> > \begin{align}
+> > |(S_{N}f)(0)-f(0)| & =\frac{1}{2\pi}\left| \int_{-\pi}^{\pi} D_{N}(t)f(t) \, dt-\int_{-\pi}^{\pi} D_{N}(t)f(0) \, dt    \right| \\
+> >  & = \frac{1}{2\pi}  \left| \int_{-\pi}^{\pi} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t)-f(0)) \, dt \right|  \\
+> >  & \leqslant \frac{1}{2\pi} \left[  \underbrace{ \int_{-\delta}^{\delta} \frac{|f(t)-f(0)|}{|\sin t/2|} \, dt }_{ =:\,A^{\delta} }+ \underbrace{ \left|\int_{[-\delta, \delta]^{c}} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t)-f(0))\,dt \right| }_{ =:\,B^{\delta}_{N}  } \right] 
+> > \end{align}
+> > $$
+> > We will individually bound $A^{\delta}$ and $B^{\delta}_{N}$. 
+> > $$
+> > \begin{align}
+> > B^{\delta}_{N} & =\left| \int_{[-\delta, \delta]^{c}} \underbrace{ \left( \frac{(f(t)-f(0))\cos t/2}{\sin t/2} \right) }_{ =:\,g_{1}(t) }\sin Nt\,dt+\int_{[-\delta, \delta]^{c} }\underbrace{ (f(t)-f(0)) }_{ =:\,g_{2}(t)  }\cos Nt \,dt \right|.
+> > \end{align}
+> > $$
+> > Define both $g_{1}$ and $g_{2}$ to be zero on $[-\delta, \delta]$. Note that $g_{1}$ and $g_{2}$ are bounded and Riemann integrable on $[-\pi, \pi]$, and hence in $L^{2}[-\pi, \pi]$ by [[LEC ANA2 17#^5d1611]]. It follows from [[#^65c770]] that
+> > $$
+> > \begin{align}
+> > \int_{[-\delta, \delta]^{c}}g_{1}(t)\sin Nt\,dt =\int_{-\pi}^{\pi} g_{1}(t)\sin Nt \, dt \to 0 \quad \text{as}\quad N\to \infty.
+> > \end{align}
+> > $$
+> > Ditto for $g_{2}$. Thus, $B^{\delta}_{N}\to 0$ as $N\to \infty$. 
+> > 
+> > Now, $A^{\delta}$'s turn. Define $M=\sup \{ (t/2)/(\sin(t/2)) : t\in[-\pi, \pi] \}$. Then, $|\sin(t/2)|\geqslant |t|/2M$. 
+> > $$
+> > \begin{align}
+> > A^{\delta}\leqslant 2M\int_{-\delta}^{\delta} \frac{|f(t)-f(0)|}{|t|} \, dt.
+> > \end{align}
+> > $$
+> > By hypothesis, $\int_{-\pi}^{\pi} |f(t)-f(0)|/|t| \, dt$ exists. It follows that $\int_{-\delta}^{\delta}  |f(t)-f(0)|/|t| \, dt\to 0$ as $\delta\to 0$. 
+> > 
+> > Now, let $\epsilon> 0$ be given. Choose $\delta$ such that $A^{\delta}<\epsilon/2$, and $N$ such that $B_{N}^{\delta}<\epsilon$. 
+> 
 
 ^8d8cda
-
-[!Proof]-
-
-First, note that since $e^{ in(t+\pi) }=e^{ in t }(-1)^{n}$, $\{ e^{ in t }:n\in \mathbb{Z} \}$ remains an orthonormal basis for $L^{2}[-\pi, \pi]$. [[LEC ANA2 17#^612194|WLOG]], we can assume $t_{0}=0$. Using [[LEC ANA2 17#^65b628]], 
-$$
-\begin{align}
-|(S_{N}f)(0)-f(0)| & =\left| \frac{1}{2\pi}\int_{-\pi}^{\pi} D_{N}(t)f(t) \, dt -f(0) \right| .
-\end{align}
-$$
-Observe that $\int_{-\pi}^{\pi} D_{N}(t)\,dt=\int_{-\pi}^{\pi} \sum_{-N}^{N}e^{ in t } \, dt=2\pi$. Thus, we can write
-$$
-\begin{align}
-|(S_{N}f)(0)-f(0)| & =\frac{1}{2\pi}\left| \int_{-\pi}^{\pi} D_{N}(t)f(t) \, dt-\int_{-\pi}^{\pi} D_{N}(t)f(0) \, dt    \right| \\
- & = \frac{1}{2\pi}  \left| \int_{-\pi}^{\pi} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t)-f(0)) \, dt \right|  \\
- & \leqslant \frac{1}{2\pi} \left[  \underbrace{ \int_{-\delta}^{\delta} \frac{|f(t)-f(0)|}{|\sin t/2|} \, dt }_{ =:\,A^{\delta} }+ \underbrace{ \left|\int_{[-\delta, \delta]^{c}} \left( \frac{\sin{(N+1/2)t}}{\sin t/2} \right)(f(t)-f(0))\,dt \right| }_{ =:\,B^{\delta}_{N}  } \right] 
-\end{align}
-$$
-We will individually bound $A^{\delta}$ and $B^{\delta}_{N}$. 
-$$
-\begin{align}
-B^{\delta}_{N} & =\left| \int_{[-\delta, \delta]^{c}} \underbrace{ \left( \frac{(f(t)-f(0))\cos t/2}{\sin t/2} \right) }_{ =:\,g_{1}(t) }\sin Nt\,dt+\int_{[-\delta, \delta]^{c} }\underbrace{ (f(t)-f(0)) }_{ =:\,g_{2}(t)  }\cos Nt \,dt \right|.
-\end{align}
-$$
-Define both $g_{1}$ and $g_{2}$ to be zero on $[-\delta, \delta]$. Note that $g_{1}$ and $g_{2}$ are bounded and Riemann integrable on $[-\pi, \pi]$, and hence in $L^{2}[-\pi, \pi]$ by [[LEC ANA2 17#^5d1611]]. It follows from [[#^65c770]] that
-$$
-\begin{align}
-\int_{[-\delta, \delta]^{c}}g_{1}(t)\sin Nt\,dt =\int_{-\pi}^{\pi} g_{1}(t)\sin Nt \, dt \to 0 \quad \text{as}\quad N\to \infty.
-\end{align}
-$$
-Ditto for $g_{2}$. Thus, $B^{\delta}_{N}\to 0$ as $N\to \infty$. 
-
-Now, $A^{\delta}$'s turn. Define $M=\sup \{ (t/2)/(\sin(t/2)) : t\in[-\pi, \pi] \}$. Then, $|\sin(t/2)|\geqslant |t|/2M$. 
-$$
-\begin{align}
-A^{\delta}\leqslant 2M\int_{-\delta}^{\delta} \frac{|f(t)-f(0)|}{|t|} \, dt.
-\end{align}
-$$
-By hypothesis, $\int_{-\pi}^{\pi} |f(t)-f(0)|/|t| \, dt$ exists. It follows that $\int_{-\delta}^{\delta}  |f(t)-f(0)|/|t| \, dt\to 0$ as $\delta\to 0$. 
-
-Now, let $\epsilon> 0$ be given. Choose $\delta$ such that $A^{\delta}<\epsilon/2$, and $N$ such that $B_{N}^{\delta}<\epsilon$. 
 
 
 > [!Example]

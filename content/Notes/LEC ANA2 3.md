@@ -93,6 +93,8 @@ Also note that *$B(S)$ with the sup norm is always a Banach space for any set $S
 > 
 > The norms are not [[LEC CAL1 1#^ae90b2|equivalent]], however: there is no constant $c> 0$ such that $c\lVert f \rVert_{\infty}\leq \lVert f \rVert_{1}$ for all $f\in C[0, 1]$, the classic counterexample being the sequence of triangular 'spike' functions of height $1$ and base $1/n$: $\lVert f \rVert_{\infty}=1$ for every $n$, but $\lVert f_{n} \rVert_{1}\to 0$. $(C[0, 1], \lVert \cdot \rVert_{1})$ is not complete, either: $(x^{n})\to 1_{\{ 1 \}}\not\in C[0, 1]$. 
 
+^226f96
+
 
 
 [^1]: Because polynomials are dense in $C[0, 1]$, and every polynomial is in $C^{1}[0, 1]$. Proof uses the Weierstrass approximation theorem. 
