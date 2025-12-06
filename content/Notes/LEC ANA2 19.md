@@ -231,6 +231,7 @@ $$
 > > Choose $n$ such that $n\geqslant  \sum_{k=1}^{N_{\epsilon}}|x_{k}-x|/\epsilon$ and $n\geqslant N_{\epsilon}$. 
 
 
-
 > [!Corollary]
 > If $S_{N}f$ converges, then it must converge to $f$. 
+
+

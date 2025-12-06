@@ -17,9 +17,9 @@ id: "163"
 
 > [!Highlights]
 > - $B(S)$ with the sup norm is always a Banach space for any set $S$.
-> - $C_{b}(S)$ is a subspace of $B(S)$. It is also a Banach space. When $X$ is compact, $C_{b}(S)=C(S)$, and $C(S)$ is a Banach space.
+> - $C_{b}(S)$ is a subspace of $B(S)$. It is also a Banach space. When $S$ is compact, $C_{b}(S)=C(S)$, and $C(S)$ is a Banach space.
 
-*Completeness is not a topological property; it depends on the metric*. Two metrics may generate induce the same topology (generate the same open sets), but the space may be complete under one metric and not complete under the other. For example, both of the metrics
+*Completeness is not a topological property; it depends on the metric*. Two metrics may induce the same topology (generate the same open sets), but the space may be complete under one metric and not complete under the other. For example, both of the metrics
 $$
 d_{1}(n, m)=|n-m|,
 $$

@@ -16,7 +16,7 @@ tags:
 > > 
 > > If $1\in \mathcal{\overline{A}}$, then $\mathcal{\overline{A}}=C(X)$ by [[LEC ANA2 11#^b2e532]].  So assume $1\not\in \mathcal{\overline{A}}$. By [[LEC ANA2 11#^54eba1]], there exists $x_{0}\in X$ such that $f(x_{0})=0$ for all $f\in \mathcal{\overline{A}}$. We will show that $\mathcal{\overline{A}}=\{ f\in C(X):f(x_{0})=0 \}$. 
 > > 
-> > Define $\tilde{\mathcal{A}}:=\{ f+c1:c\in \mathbb{R}, f\in \mathcal{A} \}$. Note that $\tilde{\mathcal{A}}$ is a unital subalgebra of $C(X, \mathbb{R})$. $\tilde{\mathcal{A}}$ separates points since $\mathcal{A}$ separates points. By [[LEC ANA2 11#^b2e532]], $\tilde{A}$ is dense in $C(X, \mathbb{R})$. Suppose $g\in C(X)$ such that $g(x_{0})=0$. There exists a sequence $\{ f_{n}+c_{n} \}\subseteq \tilde{A}$ converging uniformly to $g$. Since $f_{n}(0)=0$ for each $n$, we must have $\{ c_{n} \}\to 0$. It follows that $\{ f_{n} \}$ converges uniformly to $g$. 
+> > Define $\tilde{\mathcal{A}}:=\{ f+c1:c\in \mathbb{R}, f\in \mathcal{A} \}$. Note that $\tilde{\mathcal{A}}$ is a unital subalgebra of $C(X, \mathbb{R})$. $\tilde{\mathcal{A}}$ separates points since $\mathcal{A}$ separates points. By [[LEC ANA2 11#^b2e532]], $\tilde{A}$ is dense in $C(X, \mathbb{R})$. Suppose $g\in C(X)$ such that $g(x_{0})=0$. There exists a sequence $\{ f_{n}+c_{n} \}\subseteq \tilde{A}$ converging uniformly to $g$. Since $f_{n}(x_{0})=0$ for each $n$, we must have $\{ c_{n} \}\to 0$. It follows that $\{ f_{n} \}$ converges uniformly to $g$. 
 > 
 
 ^04f340

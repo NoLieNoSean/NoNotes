@@ -175,10 +175,10 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 > B=\bigcup_{n=1}^{\infty} \{ x\in \mathbb{R}:o(f, x)\geq 1/n \};
 > $$
 > 
-> see [[LEC CAL2 3, 4#^30212b]] and [[LEC CAL2 3, 4#^99db22]][^1]. Thus, if a function from $\mathbb{R}$ to $\mathbb{R}$ which is continuous only on $\mathbb{Q}$ existed, the irrationals would be a countable union of closed sets $\bigcup_{i=1}^{\infty}C_{i}$, but since the irrationals do not contain an interval, neither can any of the $C_{i}$. Therefore, each of the $C_{i}$ would be nowhere dense, and the irrationals would be a meagre set. It would follow that $\mathbb{R}$ is meagre, contradicting [[#^1a2743]].
+> see [[LEC CAL2 3, 4#^30212b]] and [[LEC CAL2 3, 4#^99db22]][^3]. Thus, if a function from $\mathbb{R}$ to $\mathbb{R}$ which is continuous only on $\mathbb{Q}$ existed, the irrationals would be a countable union of closed sets $\bigcup_{i=1}^{\infty}C_{i}$, but since the irrationals do not contain an interval, neither can any of the $C_{i}$. Therefore, each of the $C_{i}$ would be nowhere dense, and the irrationals would be a meagre set. It would follow that $\mathbb{R}$ is meagre, contradicting [[#^1a2743]].
 
 
-[^1]: These theorems require $f$ to be bounded, but this can dealt with by extending the definitions to allow for infinite oscillation. 
+[^3]: These theorems require $f$ to be bounded, but this can dealt with by extending the definitions to allow for infinite oscillation. 
 
 
 > [!Exercise]

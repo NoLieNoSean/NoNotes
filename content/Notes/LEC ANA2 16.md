@@ -75,7 +75,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > 
 > > [!Proof]-
 > > 
-> > $(1)$ is clear. Let $\mathbf{z}=\sum_{i=1}^{n} \langle \mathbf{x}, \mathbf{e}_{i} \rangle \mathbf{e}_{i}$. By $(1)$, $\mathbf{x}$ is orthogonal to $\mathbf{z}$. Using [[#^3a18a6]], 
+> > $(1)$ is clear. Let $\mathbf{z}=\sum_{i=1}^{n} \langle \mathbf{x}, \mathbf{e}_{i} \rangle \mathbf{e}_{i}$. By $(1)$, $\mathbf{x}-\mathbf{z}$ is orthogonal to $\mathbf{z}$. Using [[#^3a18a6]], 
 > > $$
 > > \begin{align}
 > > \lVert \mathbf{x} \rVert ^{2} & =\left\lVert  \mathbf{x}-\mathbf{z} \right\rVert^{2} +\left\lVert  \mathbf{z}  \right\rVert   \\

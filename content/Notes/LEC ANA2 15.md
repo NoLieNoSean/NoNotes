@@ -21,7 +21,7 @@ Recall [[LEC ANA2 14#^486748]].
 > 
 > Indeed, suppose there is a path $\gamma$ connecting $(0, 0)$ and $(1, \sin(1))$. Let $K=\gamma ^{-1}(\{ 0 \}\times[-1, 1])\subseteq[0, 1]$. Since $K$ is compact, we have $t_{0}:=\sup K\in K$; note that $t_{0}\ne1$. For all $t> t_{0}$, $\gamma(t)\in E$. Thus, $\pi_{x}(\gamma(t_{0}))=0$, whereas $\pi_{x}(\gamma(t_{0}+1/k))> 0$ for all $k> 0$. 
 > 
-> Fix $\theta\in[0, 2\pi)$ such that $\sin\theta\ne P_{y}(\gamma(t_{0}))$. Let $\{ t_{i} \}\subseteq(t_{0}, 1]$ be such that $\{ t_{i} \}\to t_{0}$. For each $t_{i}$, there exists $n_{i}\in \mathbb{N}$ such that
+> Fix $\theta\in[0, 2\pi)$ such that $\sin\theta\ne \pi_{y}(\gamma(t_{0}))$. Let $\{ t_{i} \}\subseteq(t_{0}, 1]$ be such that $\{ t_{i} \}\to t_{0}$. For each $t_{i}$, there exists $n_{i}\in \mathbb{N}$ such that
 > $$
 > \pi_{x}(\gamma(t_{0}))=0<\frac{1}{2\pi n_{i}+\theta}< \pi_{x}(\gamma(t_{i})).
 > $$

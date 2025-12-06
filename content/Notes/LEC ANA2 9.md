@@ -73,13 +73,13 @@ id: "169"
 > > 
 > > Define 
 > > $$
-> > E_{N}=\{ f\in C[0, 1] : \exists x_{0}\in C[0, 1]\text{ such that } |f(x)-f(x_{0})|\leq N|x-x_{0}|~~\forall x\in[0, 1]\}.
+> > E_{N}=\{ f\in C[0, 1] : \exists x_{0}\in [0, 1]\text{ such that } |f(x)-f(x_{0})|\leq N|x-x_{0}|~~\forall x\in[0, 1]\}.
 > > $$
 > > Note that if $f$ is differentiable at $x_{0}$, then there exists $N$ such that $|f(x)-f(x_{0})|\leq N|x-x_{0}|$ for all $x\in[0, 1]$: we can bound $|f(x)-f(x_{0})|/|x-x_{0}|$ on $(x_{0}-\epsilon, x_{0}+\epsilon)\setminus \{ x_{0} \}$ for some $\epsilon> 0$ using the fact that its limit exists as $x\to 0$, and it is easy to bound it on $[0, x_{0}-\epsilon]\cup[x_{0}+\epsilon, 1]$ using the fact that $f$ is continuous. It follows that $D\subseteq \bigcup_{N=1}^{\infty}E_{N}$. We only need to prove each $E_{N}$ is closed and $E_{N}^{\circ}=\emptyset$.
 > > 
 > > **Each $E_{N}$ is closed in $C[0, 1]$** 
 > > 
-> > Suppose $\{ f_{n} \}\subseteq E_{N}$ and $f_{n}\to f$ in $C[0, 1]$. For each $f_{n}\in E_{n}$, there exists $x_{n}\in[0, 1]$ such that $|f_{n}(x)-f_{n}(x_{n})|\leq N|x-x_{n}|$ for all $x\in[0, 1]$. $[0, 1]$ is compact; $\{ x_{n} \}$ must have a convergent subsequence; WLOG assume it is $\{ x_{n} \}$. Let $\{ x_{n} \}\to x_{0}$. It suffices to show 
+> > Suppose $\{ f_{n} \}\subseteq E_{N}$ and $f_{n}\to f$ in $C[0, 1]$. For each $f_{n}$, there exists $x_{n}\in[0, 1]$ such that $|f_{n}(x)-f_{n}(x_{n})|\leq N|x-x_{n}|$ for all $x\in[0, 1]$. $[0, 1]$ is compact; $\{ x_{n} \}$ must have a convergent subsequence; WLOG assume it is $\{ x_{n} \}$. Let $\{ x_{n} \}\to x_{0}$. It suffices to show 
 > > $$
 > > |f(x)-f(x_{0})|\leq N|x-x_{0}|
 > > $$
@@ -111,3 +111,6 @@ id: "169"
 > > |g(x)-g(y)|\geq N|x-y|
 > > $$
 > > for all $x, y$. Thus, $g\not\in E_{N}$, and $\lVert f-g \rVert_{\infty}< 2\epsilon$: $\lVert f-(p+h) \rVert\leq \lVert f-p \rVert+\lVert h \rVert<\epsilon$. 
+
+
+^ mistake in the last bit

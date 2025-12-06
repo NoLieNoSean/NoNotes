@@ -53,7 +53,7 @@ The relation induced by path connectedness is an equivalence relation.
 > $$
 > \begin{align}
 >  & K:=  \bigcup_{i=1}^{\infty} \left( \left\{  1/i \right\}\times[0, 1] \right), \\
->  & E:=([0, 1]\times \{ 0 \}), \\
+>  & E:=K\cup([0, 1]\times \{ 0 \}), \\
 >  & \overline{E}=E\cup(\{ 0 \}\times[0, 1]) ,\\
 >  & F:=E\cup \{ (0, 1) \}.
 > \end{align}

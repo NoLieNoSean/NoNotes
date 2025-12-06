@@ -70,9 +70,6 @@ Note that the function being bijective was only used to obtain the target "$f(C)
 >[!Corollary]
 >Continuous maps on compact sets are closed maps.
 
->[!Warning]
->Do not conflate homeomorphisms with [[LEC ALG1 13#Homomorphisms|homomorphisms]].
-
 >[!Info]
 >Let $f:X\to Y$.
 >$P_{1}$: $f(U)$ is open in $Y$ for all $U$ open in $X$.
