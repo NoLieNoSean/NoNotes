@@ -13,7 +13,7 @@ export default ((opts?: Options) => {
     let links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="13" viewBox="0 0 1300 13" preserveAspectRatio="none" stroke="var(--gray)" stroke-width="1" aria-hidden="true" focusable="false" class="dcr-kammsl" style="--darkreader-inline-stroke: var(--darkreader-text--straight-lines, var(--darkreader-text-000000, #e8e6e3));" data-darkreader-inline-stroke="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="13" viewBox="0 0 1300 13" preserveAspectRatio="none" stroke="var(--lightgray)" stroke-width="1" aria-hidden="true" focusable="false">
           <line x1="0" x2="1300" y1="0.5" y2="0.5"></line>
           <line x1="0" x2="1300" y1="4.5" y2="4.5"></line>
           <line x1="0" x2="1300" y1="8.5" y2="8.5"></line>

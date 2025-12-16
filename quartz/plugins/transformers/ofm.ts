@@ -272,7 +272,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       // replace latex blocks with renders from latex-cache
       plugins.push(() => {
         return async (tree: Root, _file) => {
-          console.log("Processing Latex blocks")
           // change this to the public path where the cache will be served
           const cacheBaseUrl = '/latex-cache'; // e.g. "/.obsidian/latex-cache"
 

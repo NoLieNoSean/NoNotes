@@ -82,17 +82,19 @@ In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \cir
 
 The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to H$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
 
-[!Definition]
-Let $\varphi:G\to G'$ be a group homomorphism. $\text{coker}\,\varphi$ is the group equipped with a homomorphism $\pi:G'\to \text{coker}\,\varphi$ which is initial with respect to all morphisms $\alpha$ such that $\alpha \circ\varphi=0$.
-```latex
+> [!Definition]
+> Let $\varphi:G\to G'$ be a group homomorphism. $\text{coker}\,\varphi$ is the group equipped with a homomorphism $\pi:G'\to \text{coker}\,\varphi$ which is initial with respect to all morphisms $\alpha$ such that $\alpha \circ\varphi=0$.
+> ```latex
+> 
+> % latex-id: 118b-3721-d5e5-43d5-976a
+> \begin{tikzcd}
+> G\ar[rr, bend left, "0"]\ar[r, "\varphi"']&G'\ar[r, "\alpha"']\ar[d, two heads, "\pi"]&L\\
+> &\text{coker}\,\varphi \ar[ur, "\exists!\overline{\alpha}"']&
+> \end{tikzcd}
+> 
+> ```
+> 
 
-% latex-id: 118b-3721-d5e5-43d5-976a
-\begin{tikzcd}
-G\ar[rr, bend left, "0"]\ar[r, "\varphi"']&G'\ar[r, "\alpha"']\ar[d, two heads, "\pi"]&L\\
-&\text{coker}\,\varphi \ar[ur, "\exists!\overline{\alpha}"']&
-\end{tikzcd}
-
-```
 Cokernels exist in $\textsf{Ab}$ because $\mathrm{Im}~\varphi \triangleleft G'$. The condition that $\alpha \circ\varphi'$ is trivial says that $\mathrm{Im}~\varphi \subseteq \ker\alpha$, and hence
 $$
 \frac{G'}{\mathrm{Im}~\varphi}\cong \text{coker}\,\varphi
