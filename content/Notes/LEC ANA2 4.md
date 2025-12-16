@@ -18,14 +18,12 @@ id: "164"
 > [!Theorem] Universal property of completions
 > The completion $\tilde{X}$ of a metric space $X$ satisfies the following [[Intro to Category Theory#Universal Properties|universal property]]: if $Y$ is any complete metric space and $f$ is any uniformly continuous function from $X$ to $Y$, then there exists a unique uniformly continuous function $\overline{f}$ from $\tilde{X}$ to $Y$ that extends $f$:
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
+> ```latex
+> % latex-id: fdea-4c9e-2cc9-4d57-b92f
 > \begin{tikzcd}
 > X\ar[d,hook, ""]\ar[r, "f"]&Y\\
 > \tilde{X}\ar[ru, "\exists!\overline{f}"']&
 > \end{tikzcd}
-> \end{document}
 > ```
 > 
 > > [!Proof]-

@@ -356,16 +356,16 @@ The same object can be both initial and final, as singletons are in the category
 > As another trivial example, show that for $G, H\in \textsf{Gp}$, the product group $G\times H$ that we know and love satisfies the universal property of products.
 
 > [!Example] Product topology
+>
+>
+> ```latex 
+> % latex-id: f99b-5022-5814-4351-8f8b
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
 > \begin{tikzcd}
 > &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
 > &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
-> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{4}}\\
-> \end{tikzcd}
-> \end{document}
+> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{5}}\\
+> \end{tikzcd} 
 > ```
 > 
 
@@ -443,14 +443,14 @@ What are coproducts in $\textsf{Gp}$?
 > 
 > For any object $B$ in $\textsf{C}$ and any map between sets $g:X\to B$, there exists a unique morphism $f:A\to B$ in $\textsf{C}$ making this diagram commute:
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
+> ```latex
+> 
+> % latex-id: e25f-e157-69e8-4f71-bb25
 > \begin{tikzcd}
 > A\ar[r, "f"]&B\\
 > X\ar[u, "i"]\ar[ur, "g"']&
 > \end{tikzcd}
-> \end{document}
+> 
 > ```
 > 
 > 
@@ -471,4 +471,3 @@ What are coproducts in $\textsf{Gp}$?
 > $$
 > 
 > a contradiction. Therefore, $n=0$, so $f(x)=g(x)$. Thus, $f=g$ and $\pi$ is a monomorphism.
-

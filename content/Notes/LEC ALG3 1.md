@@ -103,14 +103,12 @@ The ring $R[x]$ is commutative if $R$ is commutative, it is an integral domain i
 > [!Proposition]
 > Let $A=\{ a_{1}, a_{2}, \dots, a_{n} \}$. Let $\mathscr{R}_{A}$ be the category of ordered pairs $(j, R)$, where $R$ is a commutative ring, $j:A\to R$ is a set function, with morphisms $(j_{1}, R_{1})\to(j_{2}, R_{2})$ being commutative diagrams
 > 
-> ```tikz
-> \usepackage{tikz-cd}
-> \begin{document}
+> ```latex
+> % latex-id: ec35-52a8-b066-4cf1-8e20
 > \begin{tikzcd}
 > R_{1}\ar[r, "\varphi"] & R_{2}\\
 > A\ar[u, "j_{1}"]\ar[ur, "j_{2}"'] &
 > \end{tikzcd}
-> \end{document}
 > ```
 > in which $\varphi$ is a ring homomorphism.
 > 
@@ -120,14 +118,14 @@ The ring $R[x]$ is commutative if $R$ is commutative, it is an integral domain i
 > > [!Proof]-
 > > Let $(j, R)$ be an arbitrary object of $\mathscr{R}_{A}$; we have to show that there is a unique morphism $(i, \mathbb{Z}[x_{1}, \dots, x_{n}])\to(j, R)$, that is, there exists exactly one ring homomorphism $\varphi:\mathbb{Z}[x_{1}, \dots, x_{n}]\to R$ such that
 > > 
-> > ```tikz
-> > \usepackage{tikz-cd, amsmath, amssymb}
-> > \begin{document}
+> > ```latex
+> > 
+> > % latex-id: 061b-e609-617b-4374-a8a0
 > > \begin{tikzcd}
 > > \mathbb{Z}[x_{1}, \dots, x_{n}]\ar[r, "\varphi"] & R\\
 > > A\ar[u, "i"]\ar[ur, "j"'] &
 > > \end{tikzcd}
-> > \end{document}
+> > 
 > > ```
 > > commutes. 
 > > 

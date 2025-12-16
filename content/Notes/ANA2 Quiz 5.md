@@ -110,26 +110,3 @@ Thus, $\hat{f}_{k}(n)\to \hat{f}(n)$ uniformly.
 ---
 
 # Problem 4
-## Part a
-
-> [!Exercise]
-> Let $(X, \lVert \cdot \rVert)$ be a NLS. Then $X$ is complete iff for every $\{ x_{n} \}_{n=1}^{\infty}\subseteq X$, 
-> $$
-> \sum_{n=1}^{\infty} \lVert x_{n} \rVert < \infty \implies \sum_{n=1}^{\infty} x_{n}\in X.
-> $$
-> 
-
-$(\implies)$ Suppose $X$ is complete. Let $\{ x_{n} \}\subseteq X$ such that $\sum_{n=1}^{\infty}\lVert x_{n} \rVert< \infty$. It suffices to prove $\sum_{n=1}^{N}x_{n}$ is Cauchy, that is
-$$
-\left\lVert  \sum_{k=n}^{m} x_{n}  \right\rVert \to 0.
-$$
-But, $\left\lVert  \sum_{k=n}^{m}x_{k}  \right\rVert\leq \sum_{k=n}^{m}\lVert x_{n} \rVert\to 0$ by hypothesis.
-
-$(\impliedby)$ Suppose $\{ x_{n} \}\subseteq X$ is Cauchy. There exists $n_{1}$ such that $\lVert x_{n}-x_{n_{1}} \rVert< 1$ for $n\geq n_{1}$. Similarly, there exists $n_{k}$ such that $\lVert x_{n}-x_{n_{k}} \rVert< 1/2^{k}$ for $n\geq n_{k}$. For this subsequence
-$$
-\begin{align}
-\lVert x_{n_{k+1}}-x_{n_{k}} \rVert < 1/2^{k} \\
-\implies \sum_{k=1}^{\infty} \lVert x_{n_{k+1}}-x_{n_{k}} \rVert < \infty.
-\end{align}
-$$
-By hypotheses, $\sum_{k=1}^{N} (x_{n_{k+1}}-x_{n_{k}})$ converges, say to $x$. Then, $x_{n_{N+1}}\to x+x_{n_{1}}$. Thus, $\{ x_{n} \}$ has a convergent subsequence. Since $\{ x_{n} \}$ is Cauchy, $\{ x_{n} \}$ converges.

@@ -54,14 +54,12 @@ The [[LEC ALG2 4#^43c508|mapping property of quotient groups]] provides the scaf
 > [!Theorem] @aluffiAlgebraChapter02009 III.3.8
 > Let $I$ be a two-sided ideal of a ring $R$. Then for every ring homomorphism $\varphi:R\to S$ such that $I\subseteq \ker\varphi$ there exists a unique ring homomorphism $\tilde{\varphi}:R/I\to S$ so that the diagram
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
+> ```latex
+> % latex-id: ab54-7b06-74a7-471b-865e
 > \begin{tikzcd}
 > R\ar[rr, "\varphi"]\ar[rd, "\pi"']&&S\\
 > &R/I\ar[ru, "\exists!\tilde{\varphi}"']&
 > \end{tikzcd}
-> \end{document}
 > ```
 > commutes.
 

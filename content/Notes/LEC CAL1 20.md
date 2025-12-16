@@ -2,7 +2,7 @@
 id: "189"
 ---
 
-## Higher order derivatives
+# Higher order derivatives
 
 Let $f:\mathbb{R}^{n}\to \mathbb{R}$. Then, $f'$ is a map from $\mathbb{R}^{n}$ to $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R})$:
 $$
@@ -68,32 +68,34 @@ The symbol $f^{(m)}(\mathbf{x}, \mathbf{t})$ is similarly defined. Often, $f^{(m
 > f(\mathbf{b})=f(\mathbf{a})+\sum_{k=1}^{m-1} \frac{1}{k!}f^{(k)}(\mathbf{a};\mathbf{b}-\mathbf{a})+\frac{1}{m!}f^{(m)}(\mathbf{z};\mathbf{b}-\mathbf{a}).
 > \end{align}
 > $$
-
-> **Proof**
-> Since $S$ is open, there is a $\delta> 0$ such that $\mathbf{a}+t(\mathbf{b}-\mathbf{a})\in S$ for all $t\in(-\delta, 1+\delta)$. Define $g$ on $(-\delta, 1+\delta)$ by
-> $$
-> g(t)\equiv f(\mathbf{a}+t(\mathbf{b}-\mathbf{a})).
-> $$
-> Then $f(\mathbf{b})-f(\mathbf{a})=g(1)-g(0)$. Note that $g^{(1)}, \dots, g^{(m-1)}$ are continuous on $(-\delta, 1+\delta)$, and $g^{m}$ is defined on $(-\delta, 1+\delta)$. By applying the [[LEC ANA1 25#Taylor's theorem|one dimensional Taylor formula]] to $g$, we get
-> $$
-> g(1)-g(0)=\sum_{k=1}^{m-1} \frac{1}{k!}g^{(k)}(0)+\frac{1}{m!}g^{(m)}(\theta),\quad \quad(*)
-> $$
-> where $0<\theta< 1$. 
 > 
-> Now $g$ is a composite function given by $g(t)=f(\mathbf{p}(t))$, where $\mathbf{p}(t)=\mathbf{a}+t(\mathbf{b}-\mathbf{a})$. From the [[LEC CAL1 17#The chain rule|chain rule]], we have
-> $$
-> \begin{align}
-> g'(t) & =\nabla f(\mathbf{p}(t))\cdot \mathbf{D}\mathbf{p}(t)\\
->   & =\sum_{j=1}^{n} D_{j}f(\mathbf{p}(t))(b_{j}-a_{j}) \\
->  & =f'(\mathbf{p}(t);\mathbf{b}-\mathbf{a}).
-> \end{align}
-> $$
-> Again applying the chain rule,
-> $$
-> \begin{align}
-> g''(t) & = \nabla f'(\mathbf{p}(t);\mathbf{b}-\mathbf{a})\cdot \mathbf{D}\mathbf{p}(t) \\
->  & =\sum_{i=1}^{n} \sum_{j=1}^{n} D_{i, j}f(\mathbf{p}(t))(b_{j}-a_{j})(b_{i}-a_{i}) \\
->  & =f''(\mathbf{p}(t);\mathbf{b}-\mathbf{a}).
-> \end{align}
-> $$
-> Similarly, we find that $g^{(m)}(t)=f^{(m)}(\mathbf{p}(t);\mathbf{b}-\mathbf{a})$. Plugging these into $(*)$ proves the theorem, since $\mathbf{p}(\theta)=\mathbf{a}+\theta(\mathbf{b}-\mathbf{a})\in L(\mathbf{a}, \mathbf{b})$.
+> > [!Proof]-
+> > 
+> > Since $S$ is open, there is a $\delta> 0$ such that $\mathbf{a}+t(\mathbf{b}-\mathbf{a})\in S$ for all $t\in(-\delta, 1+\delta)$. Define $g$ on $(-\delta, 1+\delta)$ by
+> > $$
+> > g(t)\equiv f(\mathbf{a}+t(\mathbf{b}-\mathbf{a})).
+> > $$
+> > Then $f(\mathbf{b})-f(\mathbf{a})=g(1)-g(0)$. Note that $g^{(1)}, \dots, g^{(m-1)}$ are continuous on $(-\delta, 1+\delta)$, and $g^{m}$ is defined on $(-\delta, 1+\delta)$. By applying the [[LEC ANA1 25#Taylor's theorem|one dimensional Taylor formula]] to $g$, we get
+> > $$
+> > g(1)-g(0)=\sum_{k=1}^{m-1} \frac{1}{k!}g^{(k)}(0)+\frac{1}{m!}g^{(m)}(\theta),\quad \quad(*)
+> > $$
+> > where $0<\theta< 1$. 
+> > 
+> > Now $g$ is a composite function given by $g(t)=f(\mathbf{p}(t))$, where $\mathbf{p}(t)=\mathbf{a}+t(\mathbf{b}-\mathbf{a})$. From the [[LEC CAL1 17#The chain rule|chain rule]], we have
+> > $$
+> > \begin{align}
+> > g'(t) & =\nabla f(\mathbf{p}(t))\cdot \mathbf{D}\mathbf{p}(t)\\
+> >   & =\sum_{j=1}^{n} D_{j}f(\mathbf{p}(t))(b_{j}-a_{j}) \\
+> >  & =f'(\mathbf{p}(t);\mathbf{b}-\mathbf{a}).
+> > \end{align}
+> > $$
+> > Again applying the chain rule,
+> > $$
+> > \begin{align}
+> > g''(t) & = \nabla f'(\mathbf{p}(t);\mathbf{b}-\mathbf{a})\cdot \mathbf{D}\mathbf{p}(t) \\
+> >  & =\sum_{i=1}^{n} \sum_{j=1}^{n} D_{i, j}f(\mathbf{p}(t))(b_{j}-a_{j})(b_{i}-a_{i}) \\
+> >  & =f''(\mathbf{p}(t);\mathbf{b}-\mathbf{a}).
+> > \end{align}
+> > $$
+> > Similarly, we find that $g^{(m)}(t)=f^{(m)}(\mathbf{p}(t);\mathbf{b}-\mathbf{a})$. Plugging these into $(*)$ proves the theorem, since $\mathbf{p}(\theta)=\mathbf{a}+\theta(\mathbf{b}-\mathbf{a})\in L(\mathbf{a}, \mathbf{b})$.
+> 

@@ -48,15 +48,13 @@ Note that if only $H<G$, $K<G$, and $H<K$ are true, we can still define $\phi:G/
 
 The group $G\times G'$ is related to $G$ and $G'$ by inclusion and projection maps:
 
-```tikz
-\usepackage{tikz-cd}
-\begin{document}
+```latex
+% latex-id: 0cfe-5bbf-30e1-44e9-8a7f
 \begin{tikzcd}
 G\ar[dr, "i"]&&G\\
 &G\times G'\ar[ur, "p"]\ar[dr, "p'"]&\\
 G'\ar[ur, "i'"]&&G'
 \end{tikzcd}
-\end{document}
 ```
 
 Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection map $(g, g')\mapsto g$. Ditto for $i'$ and $p'$. 

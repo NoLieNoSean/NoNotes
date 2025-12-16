@@ -97,14 +97,14 @@ Thus, $R/I\cong \mathbb{C}[t^{3}, t^{4}, t^{5}]$. Together with the observation 
 
 For my future self: yes, this is immediate. By the mapping property of quotient groups, there exists a unique homomorphism $R/I\to R/\ker \phi$ which makes this diagram commute:
 
-```tikz
-\usepackage{tikz-cd, amsmath, amssymb}
-\begin{document}
+```latex
+
+% latex-id: 8c4a-8378-2a40-4d7b-b8af
 \begin{tikzcd}
 R\ar[rr, "\phi"]\ar[rd, "\pi"']&&R/\ker \phi\\
 &R/I\ar[ru, "\exists!\tilde{\phi}"']&
 \end{tikzcd}
-\end{document}
+
 ```
 
 Note that by construction, $\varphi$ makes this diagram commute. 

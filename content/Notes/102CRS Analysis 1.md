@@ -75,10 +75,10 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 	- Series, convergence tests, the number $e$
 - [[LEC ANA1 31]] ✅
 	- Root test, ratio test, power series
-- [[LEC ANA1 32]] ✅
-	- Real analytic functions
 - [[LEC ANA1 33]] ✅
 	- Uniform convergence
+- [[LEC ANA1 32]] ✅
+	- Real analytic functions
 - [[LEC ANA1 34]] 
 - [[LEC ANA1 35]]
 - [[LEC ANA1 36]]

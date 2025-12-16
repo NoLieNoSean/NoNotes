@@ -46,7 +46,6 @@ export const Citations: QuartzTransformerPlugin<Partial<Options>> = (userOpts) =
               node.properties["data-no-popover"] = true
             }
             if (node.tagName === "div" && node.properties.id === "refs") {
-              console.log(node.properties)
               node.children.splice(0, 0, {
                 type: "element",
                 tagName: "hr",

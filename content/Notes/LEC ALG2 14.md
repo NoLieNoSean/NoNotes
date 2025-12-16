@@ -74,14 +74,14 @@ The next theorem links free abelian groups with free groups.
 > [!Theorem]
 > Let $\mathbb{Z}^{|X|}$ be the free abelian group on $X$. Let $i:X\to \mathbb{Z}^{|X|}$ be the function defined by $i(x)=\hat{e}_{x}$. If $A$ is an abelian group and $\varphi:X\to A$ is any map, then there exists a *unique* homomorphism $\overline{\varphi}:\mathbb{Z}^{|X|}\to A$ that makes the following diagram commute:
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
+> ```latex
+> 
+> % latex-id: 6469-3472-3cd5-4caf-bcfd
 > \begin{tikzcd}
 > X\ar[r, "\varphi"]\ar[d, hook, ""]&A\\
 > \mathbb{Z}^{|X|}\ar[ru, dotted, "\overline{\varphi}"']&\\
 > \end{tikzcd}
-> \end{document}
+> 
 > ```
 > 
 

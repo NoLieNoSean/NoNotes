@@ -1,5 +1,5 @@
 import { QuartzTransformerPlugin } from "../types"
-import { Root, Html, BlockContent, DefinitionContent, Paragraph, Code } from "mdast"
+import { Root, Html, BlockContent, DefinitionContent, Paragraph, Parent } from "mdast"
 import { Element, Literal, Root as HtmlRoot } from "hast"
 import { ReplaceFunction, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
 import rehypeRaw from "rehype-raw"
@@ -121,7 +121,7 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
 export const countedCallouts = ["definition", "lemma", "theorem", "corollary", "example", "claim", "proposition", "exercise", "remark", "fact", "conjecture"]
-export const calloutContractions = {"definition": "Def", "lemma": "Lem", "theorem": "Thm", "corollary": "Cor", "example": "Exm", "claim": "Clm", "proposition": "Prp", "exercise": "Exr", "remark": "Rmk", "fact": "Fact", "conjecture": "Cnj"}
+export const calloutContractions = { "definition": "Def", "lemma": "Lem", "theorem": "Thm", "corollary": "Cor", "example": "Exm", "claim": "Clm", "proposition": "Prp", "exercise": "Exr", "remark": "Rmk", "fact": "Fact", "conjecture": "Cnj" }
 
 
 
@@ -234,7 +234,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       // Spoofing the TMF data at node_modules/@prinsss/dvi2html/lib/tfm/fonts.json works, but i really cant be bothered to fork the 
       // package for this. Just Use \pmb{...} instead.
 
-      // some glyphs, like \Omega, just do not render properly. I threw 4 hours and then some sunk cost fallacy bonus 
+      // some glyphs, like \Omega, just do not render properly. I threw 4 hours and then some sunk cost fallacy bonus time
       // at this and turned up empty. Just do not use \Omega ffs i give up
       plugins.push(() => {
         return async (tree: Root, _file) => {
@@ -267,8 +267,59 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
             }
           }
         }
-
       })
+
+      // replace latex blocks with renders from latex-cache
+      plugins.push(() => {
+        return async (tree: Root, _file) => {
+          console.log("Processing Latex blocks")
+          // change this to the public path where the cache will be served
+          const cacheBaseUrl = '/latex-cache'; // e.g. "/.obsidian/latex-cache"
+
+          // collect code nodes with parent & index so we can replace them safely later
+          const targets: { parent: Parent; index: number; node: Code }[] = [];
+          visit(tree, 'code', (node: Code, index: number | null, parent: Parent | null) => {
+            if (node && node.lang === 'latex' && parent && typeof index === 'number') {
+              targets.push({ parent, index, node });
+            }
+          });
+
+          // process in reverse so that splicing doesn't invalidate later indices
+          for (let i = targets.length - 1; i >= 0; i--) {
+            const { parent, index, node } = targets[i];
+
+            try {
+              // tolerant regex: accepts "% latex-id: <uuid>" possibly with extra % or spaces
+              const m = node.value.match(/^\s*%+\s*latex-id\s*:\s*([0-9a-fA-F-]+)\s*$/m)
+                || node.value.match(/latex-id\s*:\s*([0-9a-fA-F-]+)/i);
+
+              if (!m) {
+                // no id found — skip or optionally insert placeholder
+                console.warn('No latex-id found for a latex block; leaving it unchanged.');
+                continue;
+              }
+
+              const id = m[1];
+              // Build the URL path to the SVG in the cache
+              // If your output expects relative paths, change this to './.obsidian/latex-cache' etc.
+              const svgUrl = `${cacheBaseUrl}/${encodeURIComponent(id)}.svg`;
+
+              // Option A: insert raw HTML <img> (keeps classes/attrs flexible)
+              const imgHtml = `<div class="latex-wrapper"><img src="${svgUrl}" alt="LaTeX" class="latex-rendered theme-responsive" /></div>`;
+              const htmlNode = { type: 'html', value: imgHtml };
+
+              // Option B (alternative): use an actual image node instead of raw HTML
+              // const imageNode = { type: 'image', url: svgUrl, title: null, alt: '' };
+
+              // replace the code node with the HTML node
+              parent.children.splice(index, 1, htmlNode);
+            } catch (err) {
+              console.error(`Failed to process LaTeX block: ${err}`);
+            }
+          }
+        };
+      });
+
 
 
       //Formatting proof envs
@@ -940,7 +991,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   let callout = _ctx.mapping[block_id]
                   let dataCallout = callout.kind
                   if (node.children[0].value[0] === "^") {
-                    node.children[0].value = calloutContractions[dataCallout]  + " " + callout.note_id+ "."+ callout.callout_count
+                    node.children[0].value = calloutContractions[dataCallout] + " " + callout.note_id + "." + callout.callout_count
                   }
                   // node.properties.href = `#${node.properties.href.slice(4)}`
                 }

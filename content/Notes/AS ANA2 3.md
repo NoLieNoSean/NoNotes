@@ -15,14 +15,14 @@ Let $A=\{ z:z=e^{ i\sin t } , t\in \mathbb{R}\}$. $A$ is the image of the connec
 
 Let $\varphi:X\to \{ \pm 1 \}$ be any continuous function. For each $y\in Y$, $f^{-1}(y)$ is connected, so $\varphi$ is constant on $f^{-1}(y)$ by [[LEC ANA2 13#^440651]]. This allows us to define $\psi:Y\to \{ \pm 1 \}$ by $\psi(y)=\varphi(f^{-1}(y))$. Since $f$ is surjective, $X$ is compact, and $\varphi=\psi \circ f$, $\psi$ is continuous by [[AS ANA2 2#^64d5ef|assignment 2, p4]] . Let $C\subseteq Y$ be connected. Then, $\psi$ is constant on $C$. For all $x\in f^{-1}(C)$, $\varphi(x)=\psi(f(x))=\psi(C)$. Thus, $\varphi$ is constant on $f^{-1}(C)$. Since $\varphi$ was chosen to be any arbitrary continuous map, it follows that $f^{-1}(C)$ is connected. 
 
-```tikz
-\usepackage{tikz-cd, amsmath, amssymb}
-\begin{document}
+```latex
+
+% latex-id: 13b2-2943-23fb-49d0-9483
 \begin{tikzcd}
 X\ar[r, "f"]\ar[dr, "\varphi"']&Y\ar[d, "\psi"]\\
 &\{ \pm 1 \}
 \end{tikzcd}
-\end{document}
+
 ```
 
 

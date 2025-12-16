@@ -359,15 +359,15 @@ Try to see the [[LEC ALG2 13#^9ea063|universal property we stated for free group
 
 > [!Example] Product topology
 > 
-> ```tikz
-> \usepackage{tikz-cd, amsmath, amssymb}
-> \begin{document}
+> ```latex
+> 
+> % latex-id: 9e5a-cf0d-8693-4106-b9bc
 > \begin{tikzcd}
 > &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
 > &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
 > X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{4}}\\
 > \end{tikzcd}
-> \end{document}
+> 
 > ```
 > 
 
@@ -380,27 +380,25 @@ Try to see the [[LEC ALG2 13#^9ea063|universal property we stated for free group
 
 > [!Example] Disjoint union of Sets
 > Let $\textsf{C}=\textsf{Set}$. Let $A, B\in \text{Obj}(\textsf{C})$. Consider the disjoint union $A\amalg B$ with the inclusion maps $i_{A}$ and $i_{B}$:
-> ```tikz
-> \usepackage{tikz-cd}
-> \begin{document}
+> ```latex
+> 
+> % latex-id: cfe5-719f-6802-405a-b57c
 > \begin{tikzcd}[row sep = tiny]
 > A\ar[rd, "i_A"]&\\
 > &A\amalg B\\
 > B\ar[ru, "i_B"']&
 > \end{tikzcd}
-> \end{document}
+> 
 > ```
 > Then for every $(Z, f_{A}, f_{B})$, there exists a unique morphism $\sigma:A\amalg B\to Z$ such that
 > 
-> ```tikz
-> \usepackage{tikz-cd}
-> \begin{document}
+> ```latex
+> % latex-id: fda0-5333-3782-40ff-997a
 > \begin{tikzcd}
 > A\ar[rd, "i_A"]\ar[rrd, bend left, "f_A"]&&\\
 > &A\amalg B\ar[r, "\sigma"]&Z\\
 > B\ar[ru, "i_B"']\ar[rru, bend right, "f_B"']&&&
 > \end{tikzcd}
-> \end{document}
 > ```
 > commutes. So, $(A\amalg B, i_{A}, i_{B})$ is initial in $\textsf{C}^{A, B}$.
 

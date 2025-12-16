@@ -68,6 +68,8 @@ Compare with the definition of uniform convergence:
 >   \forall\epsilon>0\ \ \exists N\text{ such that }(\forall x\in E\text{ and }n>N )\implies |f_{n}(x)-f(x)|<\epsilon.
 > $$
 
+^8f4bed
+
 $(f_{n})$ converges uniformly if and only if 
 $$
 \lim_{ n \to \infty } \sup _{x\in E}|f_{n}(x)-f(x)|=0.
