@@ -1,13 +1,11 @@
 ---
 id: "31"
 ---
-
-
 # Products and Coproducts
 
 $\textsf{Gp}$ has products, and the product of two groups $G, H$ is supported on the product $G\times H$ of the underlying sets. Componentwise multiplication defines a group structure on $G\times H$, and it is easy to verify that this group is actually a product in $\textsf{Gp}$ ( @aluffiAlgebraChapter02009 II.3.4). 
 
-$\textsf{Gp}$ also has coproducts, to be dealt with later.
+$\textsf{Gp}$ also has coproducts: See @aluffiAlgebraChapter02009 Exercises 5.6, 5.7, 8.7. 
 
 The nice thing about $\textsf{Ab}$ is that coproducts in $\textsf{Ab}$ coincide with products.
 
@@ -65,10 +63,10 @@ In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \cir
 ## Monomorphisms and epimorphisms
 
 > [!Proposition] @aluffiAlgebraChapter02009 II.6.12
-> The following are equivalent:
+> Let $\varphi:G\to G'$ be a homomorphism. The following are equivalent:
 > 1. $\varphi$ is a [[Intro to Category Theory#^8cec61|monomorphism]];
-> 2. $\ker\varphi=\{ e_{G} \}$
-> 3. $\varphi:G\to G'$ is injective (as a set-function);
+> 2. $\ker\varphi=\{ e_{G} \}$;
+> 3. $\varphi$ is injective (as a set-function).
 > 
 > > [!Proof]-
 > > $(1)\implies(2)$: Consider the parallel compositions
@@ -80,7 +78,7 @@ In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \cir
 
 ^79d9ee
 
-The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to H$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
+The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to G'$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
 
 > [!Definition]
 > Let $\varphi:G\to G'$ be a group homomorphism. $\text{coker}\,\varphi$ is the group equipped with a homomorphism $\pi:G'\to \text{coker}\,\varphi$ which is initial with respect to all morphisms $\alpha$ such that $\alpha \circ\varphi=0$.

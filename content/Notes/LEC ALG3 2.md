@@ -16,7 +16,7 @@ Let $I$ be a subgroup of the abelian group $(R, +)$ of a ring $R$. Subgroups of 
 $$
 \pi:R\to R/I, \quad r\mapsto r+I.
 $$
-What requirements should $I$ meet, in order to have a ring structure on $R/I$, such that $\pi$ becomes a ring homomorphism? If $\pi$ is a ring homomorphism, there is only one way to define a ring structure on $R/I$:
+==What requirements should $I$ meet, in order to have a ring structure on $R/I$, such that $\pi$ becomes a ring homomorphism?== If $\pi$ is a ring homomorphism, there is only one way to define a ring structure on $R/I$:
 $$
 (a+I)(b+I)=\pi(a)\pi(b)=\pi(ab)=ab+I.
 $$

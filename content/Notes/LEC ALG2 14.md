@@ -1,8 +1,7 @@
 ---
 id: "103"
 ---
-
-## Free abelian groups
+# Free abelian groups
 
 The commutator subgroup of a group $G$, denoted by $[G, G]$, is defined to be $\langle aba^{-1}b ^{-1}\ | \ a, b\in G \rangle$.
 
@@ -69,7 +68,7 @@ The next theorem links free abelian groups with free groups.
 > [!Theorem]
 > If $\mathcal{F}$ is the free group of rank $r$, then $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is the free abelian group of rank $r$.
 
-### Universal property of free abelian groups
+## Universal property of free abelian groups
 
 > [!Theorem]
 > Let $\mathbb{Z}^{|X|}$ be the free abelian group on $X$. Let $i:X\to \mathbb{Z}^{|X|}$ be the function defined by $i(x)=\hat{e}_{x}$. If $A$ is an abelian group and $\varphi:X\to A$ is any map, then there exists a *unique* homomorphism $\overline{\varphi}:\mathbb{Z}^{|X|}\to A$ that makes the following diagram commute:

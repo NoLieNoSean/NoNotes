@@ -32,6 +32,8 @@ id: "188"
 > [!Definition]
 > A differentiable mapping $\mathbf{f}$ of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$ is said to be **continuously differentiable** or $C^{1}$ on $E$ if $\mathbf{f}'$ is a continuous mapping of $E$ into $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$.
 
+^de5c61
+
 > [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 9.21
 > Suppose $\mathbf{f}$ maps an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$. Then $\mathbf{f}\in C^{1}(E)$ iff all partial derivatives $D_{i}f_{j}$ exist and are continuous for $1\leq i\leq n$, $1\leq j\leq m$.
 > 

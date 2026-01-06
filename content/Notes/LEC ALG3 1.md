@@ -48,7 +48,7 @@ On the other hand, the image of a non-zero-divisor by a ring homomorphism may we
 
 Remember that a monomorphism is a left cancellable morphism (and not necessarily a left invertible one!). 
 
-The analogue of [[Categorical notes on group theory#^79d9ee]] holds in $\textsf{Ring}$:
+The analogue of [[Categorical notes on groups#^79d9ee]] holds in $\textsf{Ring}$:
 
 > [!Proposition] @aluffiAlgebraChapter02009 III.2.4
 > For a ring homomorphism $\varphi:R\to S$, the following are equivalent:
@@ -207,7 +207,7 @@ If $R_{1}$ and $R_{2}$ are rings, then $R_{1}\times R_{2}$ may be defined by end
 
 ^2daa9c
 
-However, $R_{1}\times R_{2}$ does not satisfy the [[Intro to Category Theory#Coproducts|universal property of coproducts]]: although [[Categorical notes on group theory#^8e8d67|there is]] a unique *group* homomorphism from $R_{1}\times R_{2}$ to $A$ for any $(A, \varphi_{R_{1}}, \varphi_{R_{2}})\in \textsf{C}^{R_{1}, R_{2}}$, this does not respect multiplication, and thus is not a ring homomorphism:
+However, $R_{1}\times R_{2}$ does not satisfy the [[Intro to Category Theory#Coproducts|universal property of coproducts]]: although [[Categorical notes on groups#^8e8d67|there is]] a unique *group* homomorphism from $R_{1}\times R_{2}$ to $A$ for any $(A, \varphi_{R_{1}}, \varphi_{R_{2}})\in \textsf{C}^{R_{1}, R_{2}}$, this does not respect multiplication, and thus is not a ring homomorphism:
 $$
 \begin{align}
  & \varphi(1_{R_{1}\times R_{2}})=\varphi(1_{R_{1}}, 1_{R_{2}}) \\

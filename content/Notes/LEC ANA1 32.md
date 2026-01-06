@@ -86,20 +86,33 @@ Since $f'(x)$ is also an analytic function, we can turn the crank again to get $
 
 ^523f3a
 
-
 The derivatives at $0$ are of particular interest:
 $$
 \begin{align}
-f^{(k)}(0)=k!c_{n}
+f^{(k)}(0)=k!c_{k}
 \end{align}
 $$
 $$
-\implies c_{n}= \frac{f^{(k)}(0)}{k!}.
+\implies c_{k}= \frac{f^{(k)}(0)}{k!}.
 $$
 
 ^b31d2c
 
-This tells us that *if a function is analytic, it must have a unique power series representation*! Additionally, we only need the derivatives at a single point to construct this power series about that point.
+> [!Remark]
+> This tells us that *if a function is analytic, it must have a unique power series representation*! The series
+> $$
+> \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}h^{n}
+> $$
+> Is called the **Taylor series** for $f$ at $0$. Furthermore, the series $\sum a_{r}h^{r}$ from [[#^d04d92]] must be the Taylor series for $g$ at $x$:
+> $$
+> \sum_{n=0}^{\infty} \frac{g^{(n)}(x)}{n!}h^{n}.
+> $$
+> 
+
+^f331cb
+
+
+Additionally, we only need the derivatives at a single point to construct this power series about that point.
 
 > [!Remark]
 > Although a function $f$ may have derivatives of all orders (i.e, be smooth), the series $\sum c_{n}x^{n}$, where $c_{n}$ is computed by [[#^b31d2c]], need not converge to $f(x)$ for any $x\ne 0$. Since if $f$ had a power series representation, it would have to be $\sum c_{n}x^{n}$, this tells us that $f$ is not analytic on any neighborhood of $0$. For example, consider
@@ -107,7 +120,7 @@ This tells us that *if a function is analytic, it must have a unique power serie
 > \begin{align}
 > f(x)=\begin{cases}
 > e^{ -1/x^{2} } & x\ne 0 \\
-> 0 & x=0.
+> 0 & x\leqslant 0.
 > \end{cases}
 > \end{align}
 > $$

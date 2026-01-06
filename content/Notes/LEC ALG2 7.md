@@ -40,7 +40,7 @@ It is easy to see that $\phi_{g}$ is a bijection for all $g\in G$:
 - $gx_{1}=gx_{2}$ $\implies$ $\phi_{g}(x_{1})=\phi_{g}(x_{2})$ $\implies$ $\phi_{g^{-1}}(\phi_{g}(x_{1}))=\phi_{g^{-1}}(\phi_{g}(x_{2}))$ $\implies$ $\phi_{g^{-1}g}(x_{1})=\phi_{g^{-1}g}(x_{2})$ $\implies$ $x_{1}=x_{2}$.
 - for all $x\in X$, $g(g^{-1}x)=x$, $i$.$e$, $\phi_{g}(g^{-1}x)=x$.
 
-Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X)$, the group of all bijections from $X$ to $X$. This along with the defining properties of a group action makes $\phi$ a group homomorphism. 
+Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X)$, the group of all bijections from $X$ to $X$. This along with the defining properties of a group action makes $\phi$ a group homomorphism.
 
 > [!Remark]
 > More generally, an **action** of a group $G$ on an object $A$ of a category $\textsf{C}$ is simply a homomorphism 
@@ -56,18 +56,20 @@ Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X
 > $$
 > (\forall g, h\in G): g\bullet h:=h\cdot g.
 > $$
-> It is easy to verify that $G^{\circ}$ is indeed a group. The identity map $G\to G^{\circ}$ is an isomorphism iff $G$ is commutative. However, even if $G$ is not commutative, the map $G\to G^{\circ}$ given by $x\mapsto x ^{-1}$ is an isomorphism, so $G\cong G^{\circ}$. Now, a right action of $G$ on a set $X$ is a map $\varphi:G\to S_{X}$ such that $\varphi_{a}\circ\varphi_{b}=\varphi_{b\cdot a}$. However, since $\varphi_{b\cdot a}=\varphi_{a\bullet b}$, $\varphi$ is a homomorphism $G^{\circ}\to S_{X}$. Thus, giving a right action of $G$ on a set $X$ is the same as giving a left action of $G^{\circ}$ on $X$. We therefore do not lose anything by restricting our study to left actions[^1]. 
+> It is easy to verify that $G^{\circ}$ is indeed a group. The identity map $G\to G^{\circ}$ is an isomorphism iff $G$ is commutative. However, even if $G$ is not commutative, the map $G\to G^{\circ}$ given by $x\mapsto x ^{-1}$ is an isomorphism, so $G\cong G^{\circ}$. Now, a right action of $G$ on a set $X$ is a map $\varphi:G\to S_{X}$ such that $\varphi_{a}\circ\varphi_{b}=\varphi_{b\cdot a}$. However, since $\varphi_{b\cdot a}=\varphi_{a\bullet b}$, $\varphi$ is a homomorphism $G^{\circ}\to S_{X}$. ==Thus, giving a right action of $G$ on a set $X$ is the same as giving a left action of $G^{\circ}$ on $X$==. We therefore do not lose anything by restricting our study to left actions[^1]. 
 
 ^bee0cf
 
 If $\phi$ is injective, then it is said to be *faithful* or *effective*. 
 
 > [!Example]
-> Let $G=S_{4}$ and $X=\{ \Pi_{1}, \Pi_{2}, \Pi_{3} \}$, the latter as defined [[LEC ALG2 3#Lagrange's theorem|here]]. Let $\phi:G\times X\to X$ be defined by
+> Let $G=S_{4}$ and $X=\{ \Pi_{1}, \Pi_{2}, \Pi_{3} \}$, the latter as defined in [[LEC ALG2 3#^6cf5fb]]. Let $\phi:G\times X\to X$ be defined by
 > $$
 > \left(\tau, \underset{=\{ a, b \}\cup \{ c, d \}}{\Pi_{i}}\right)\mapsto \tau\Pi_{i}\equiv \{ \tau(a), \tau(b) \}\cup \{ \tau(c), \tau(d) \}.
 > $$
 > $\phi$ satisfies the properties of a group action. Note that the curried version of $\phi$ is not injective here, as $|\ker \phi|=4$.
+
+^ec904d
 
 > [!Theorem] Cayley's theorem
 > Any group $G$ of order $n$ is isomorphic to a subgroup of $S_{n}$.

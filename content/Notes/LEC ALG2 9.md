@@ -6,7 +6,7 @@ date: 2025-02-11
 time: 9:10
 id: "98"
 ---
-## Orbit-stabilizer theorem
+# Orbit-stabilizer theorem
 
 > [!Theorem]
 > Let $G$ be a group. Let $\phi:G\times X\to X$ be a group action. The orbits of $x\in X$ partition $X$.
@@ -15,14 +15,15 @@ This was expected, since we saw in the previous lecture that the orbits of eleme
 
 > [!Theorem] Orbit-stabilizer theorem
 > Let $\phi:G\times X\to X$ and $|G|<\infty$. Then, $|G_{x}||\theta_{x}|=|G|$ for all $x\in X$. 
+> 
+> > [!Proof]-
+> > Let $x\in X$. We will construct a bijection between $G/G_{x}$ and $\theta_{x}$, where the former is the set of all left cosets of $G_{x}$ in $G$ (may not be a group, since $G_{x}$ is not necessarily normal). Define the map $\phi:G/G_{x}\to\theta_{x}$ by $aG_{x}\mapsto ax$.  $\phi$ is well defined, because $aG_{x}=bG_{x}$ implies $a=bg$ for some $g\in G_{x}$, so $ax=bgx=bx$. $\phi$ is injective, since $\phi(aG_{x})=\phi(bG_{x})$ implies $b ^{-1}ax=x$, which implies $b ^{-1}a\in G_{x}$, which implies $aG_{x}=bG_{x}$. $\phi$ is surjective since $y\in\theta_{x}$ implies $y=ax$ for some $a\in G$, so $aG_{x}\mapsto y$.  
+> 
 
-> **Proof**
-> Let $x\in X$. We will construct a bijection between $G/G_{x}$ and $\theta_{x}$, where the former is the set of all left cosets of $G_{x}$ in $G$ (may not be a group, since $G_{x}$ is not necessarily normal). Define the map $\phi:G/G_{x}\to\theta_{x}$ by $aG_{x}\mapsto ax$.  $\phi$ is well defined, because $aG_{x}=bG_{x}$ implies $a=bg$ for some $g\in G_{x}$, so $ax=bgx=bx$. $\phi$ is injective, since $\phi(aG_{x})=\phi(bG_{x})$ implies $b ^{-1}ax=x$, which implies $b ^{-1}a\in G_{x}$, which implies $aG_{x}=bG_{x}$. $\phi$ is surjective since $y\in\theta_{x}$ implies $y=ax$ for some $a\in G$, so $aG_{x}\mapsto y$.  
 
-The action of $G$ on $A$ is called *transitive* if there is only one orbit.
 
 ---
-## The class equation
+# The class equation
 
 > [!Definition]
 > Two elements $a$ and $b$ of $G$ are said to be *conjugate* in $G$ if there is some $g\in G$ such that $b=gag^{-1}$ (i.e, iff there are in the same orbit of $G$ [[LEC ALG2 8#Groups acting on themselves|acting on itself by conjugation]]). The orbits of $G$ acting on itself by conjugation are called the *conjugacy classes* of $G$.
@@ -51,7 +52,7 @@ The fact that the orbits partition the set being acted upon yields the following
 Note that all summands on the RHS of the class equation are divisors of $|G|$.
 
 ---
-## p-groups
+# p-groups
 
 Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-groups. 
 
@@ -77,9 +78,9 @@ Groups of order $p^{\alpha}$, $\alpha\geq 1$, where $p$ is prime, are called p-g
 [[LEC ALG2 11#Sylow's theorems|Sylow's theorems]] have a lot more to say about p-groups and subgroups.
 
 ---
-## Conjugacy in Sn
+# Conjugacy in Sn
 
-### Cycle decomposition of conjugates
+## Cycle decomposition of conjugates
 
 > [!Definition]
 > Define an action $*$ of $S_{n}$ on the set $\mathcal{A}$ of all $n$-tuples with distinct entries form $[n]$, $\{ (a_{1}, \dots, a_{n})\ | \ a_{i}\in[n], a_{i}\ne a_{j} \text{ for }i\ne j \}$ as 
@@ -127,7 +128,7 @@ Therefore, given $\sigma\in S_{n}$ and $\mathbf{a}=\tau*\mathbf{e}\in \mathcal{A
 
 This should be reminiscent of how [[LEC ALG1 13#Change of basis|change of basis]] works in linear algebra: If $A\mathbf{a}=\mathbf{b}$, then $PAP^{-1}(P\mathbf{a})=P\mathbf{b}$. 
 
-### Conjugacy classes of Sn
+## Conjugacy classes of Sn
 
 > [!Definition]
 > If $\sigma\in S_{n}$ is the product of disjoint cycles of lengths $n_{1}, n_{2}, \dots, n_{r}$ with $n_{1}\leq n_{2}\leq\dots\leq n_{r}$ (including its 1-cycles) then the integers $n_{1}, n_{2}, \dots, n_{r}$ are called the *cycle type* of $\sigma$.
@@ -136,7 +137,7 @@ This should be reminiscent of how [[LEC ALG1 13#Change of basis|change of basis]
 > Two elements of $S_{n}$ are conjugate in $S_{n}$ iff they have the same cycle type. The number of conjugacy classes of $S_{n}$ equals the number of partitions of $n$.
 
 ---
-## More on Automorphisms
+# More on Automorphisms
 
 > [!Theorem]
 > Let $H\triangleleft G$. Then, $G$ acts by conjugation on $H$ as automorphisms of $H$. The permutation representation of this action is a homomorphism of $G$ into $\text{Aut}(H)$ with kernel $C_{G}(H)$. In particular, $G/C_{G}(H)$ is isomorphic to a subgroup of $\text{Aut}(H)$.
@@ -156,37 +157,40 @@ So, a group $G$ is abelian iff every inner automorphism is trivial.
 
 > [!Theorem] Corollary
 > If $H$ is an abelian normal subgroup of $G$ and $H$ is not contained in $Z(G)$, then there is some $g\in G$ such that conjugation by $g$ restricted to $H$ is not an inner automorphism of $H$. 
-
-> **Proof**
-> If for all $g\in G$, conjugation by $g$ restricted to $H$ is an inner automorphism of $H$ (note that since $H$ is abelian, all inner automorphisms of $H$ are trivial), $ghg^{-1}=h$ for all $h\in H$. This would imply $H\leq Z(G)$, a contradiction.
-
-### Automorphism groups
+> 
+> > [!Proof]-
+> > If for all $g\in G$, conjugation by $g$ restricted to $H$ is an inner automorphism of $H$ (note that since $H$ is abelian, all inner automorphisms of $H$ are trivial), $ghg^{-1}=h$ for all $h\in H$. This would imply $H\leq Z(G)$, a contradiction.
+> 
+## Automorphism groups
 
 > [!Theorem]
 > $\text{Aut}(\mathbb{Z}_{n})\cong U_{n}$, where $U_{n}$ is the group of units modulo $n$.
-
-> **Proof**
-> Let $x$ be a generator of $\mathbb{Z}_{n}$. If $\phi\in \text{Aut}(\mathbb{Z}_{n})$, then $\phi(x)=x^{a}$ for some $a\in \mathbb{Z}$, and $a$ uniquely determines $\phi$. Denote this automorphism by $\phi_{a}$. Since $\phi_{a}$ is an automorphism, $x$ and $x^{a}$ must have the same order, so $(a, n)=1$. Furthermore, for every $a$ relatively prime to $n$, the map $x\mapsto x^{a}$ is an automorphism of $\mathbb{Z}_{n}$. Hence we have a bijective map
-> $$
-> \begin{align}
-> \Phi: \text{Aut}(\mathbb{Z}_{n}) &  \to U_{n}\\
-> \phi_{a} & \mapsto a \mod n
-> \end{align}
-> $$
-> which is a homomorphism because
-> $$
-> \phi_{a}\circ \phi_{b}(x)=\phi_{a}(x^{b})=x^{ab}=\phi_{ab}(x)
-> $$
-> for all $\phi_{a}, \phi_{b}\in \text{Aut}(\mathbb{Z}_{n})$, so that
-> $$
-> \Phi(\phi_{a}\circ \phi_{b})=\Phi(\phi_{ab})=ab\mod n=\Phi(\phi_{a})\Phi(\phi_{b}).
-> $$
+> 
+> > [!Proof]-
+> > 
+> > Let $x$ be a generator of $\mathbb{Z}_{n}$. If $\phi\in \text{Aut}(\mathbb{Z}_{n})$, then $\phi(x)=x^{a}$ for some $a\in \mathbb{Z}$, and $a$ uniquely determines $\phi$. Denote this automorphism by $\phi_{a}$. Since $\phi_{a}$ is an automorphism, $x$ and $x^{a}$ must have the same order, so $(a, n)=1$. Furthermore, for every $a$ relatively prime to $n$, the map $x\mapsto x^{a}$ is an automorphism of $\mathbb{Z}_{n}$. Hence we have a bijective map
+> > $$
+> > \begin{align}
+> > \Phi: \text{Aut}(\mathbb{Z}_{n}) &  \to U_{n}\\
+> > \phi_{a} & \mapsto a \mod n
+> > \end{align}
+> > $$
+> > which is a homomorphism because
+> > $$
+> > \phi_{a}\circ \phi_{b}(x)=\phi_{a}(x^{b})=x^{ab}=\phi_{ab}(x)
+> > $$
+> > for all $\phi_{a}, \phi_{b}\in \text{Aut}(\mathbb{Z}_{n})$, so that
+> > $$
+> > \Phi(\phi_{a}\circ \phi_{b})=\Phi(\phi_{ab})=ab\mod n=\Phi(\phi_{a})\Phi(\phi_{b}).
+> > $$
+> > 
+> 
 
 > [!Theorem]
 > If $G$ and $H$ are two groups whose orders are relatively prime, then $\text{Aut}(G\times H)\cong\text{Aut}(G)\times \text{Aut}(H)$.
 
 
-### Characteristic groups
+## Characteristic groups
 
 > [!Definition]
 > A subgroup $H$ of a group $G$ is called *characteristic* in $G$, denoted $H\blacktriangleleft B$, if every automorphism of $G$ maps $H$ to itself. 

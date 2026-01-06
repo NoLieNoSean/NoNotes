@@ -32,11 +32,12 @@ $\phi$ is called an *automorphism* if $G_{1}=G_{2}$. The set of all automorphism
 
 > [!Lemma] 
 > Let $G$ be a group. Then, $\text{Aut } G$ is a group under composition.
+> 
+> > [!Proof]-
+> > 
+> > The identity isomorphism is the identity element. Let $\phi_{1}, \phi_{2}\in\text{Aut }G$. Consider the map $\phi_{1}\phi_{2}$. Since $\phi_{1}$ and $\phi_{2}$ are bijective, $\phi_{1}\phi_{2}$ is too. It remains to show that $\phi_{1}\phi_{2}$ is a homeomorphism: $(\phi_{1}\circ\phi_{2})(g_{1}g_{2})=\phi_{1}(\phi_{2}(g_{1})\phi_{2}(g_{2}))=\phi_{1}(\phi_{2}(g_{1}))\phi_{1}(\phi_{2}(g_{2}))=(\phi_{1}\circ\phi_{2})(g_{1})(\phi_{1}\circ\phi_{2})(g_{2})$. Thus, $\text{Aut }G$ is closed under composition. For any $\phi\in\text{Aut }G$, $\phi ^{-1}$ is well defined and bijective, is a homomorphism (easy to check), and hence is an isomorphism: $\phi ^{-1}\in\text{Aut }G$. 
 
 ^27ea43
-
-> **Proof**
-> The identity isomorphism is the identity element. Let $\phi_{1}, \phi_{2}\in\text{Aut }G$. Consider the map $\phi_{1}\phi_{2}$. Since $\phi_{1}$ and $\phi_{2}$ are bijective, $\phi_{1}\phi_{2}$ is too. It remains to show that $\phi_{1}\phi_{2}$ is a homeomorphism: $(\phi_{1}\circ\phi_{2})(g_{1}g_{2})=\phi_{1}(\phi_{2}(g_{1})\phi_{2}(g_{2}))=\phi_{1}(\phi_{2}(g_{1}))\phi_{1}(\phi_{2}(g_{2}))=(\phi_{1}\circ\phi_{2})(g_{1})(\phi_{1}\circ\phi_{2})(g_{2})$. Thus, $\text{Aut }G$ is closed under composition. For any $\phi\in\text{Aut }G$, $\phi ^{-1}$ is well defined and bijective, is a homomorphism (easy to check), and hence is an isomorphism: $\phi ^{-1}\in\text{Aut }G$. 
 
 ### Conjugation
 
@@ -44,13 +45,15 @@ The most important type of automorphism is *conjugation*: let $g$ be a fixed ele
 
 Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in G$. Conjugates have similar algebraic behavior, since they are the images of each other under an isomorphism.  
 
-> [!Theorem] Lemma
+> [!Lemma]
 > If $H<G$, $g\in G$, then $gHg^{-1}<G$, and $gHg^{-1}\cong H$. 
+> 
+> > [!Proof]-
+> > 
+> > $gHg^{-1}$ is the image of a group under an homomorphism. 
+> 
 
-> **Proof**
-> $gHg^{-1}$ is the image of a group under an homomorphism. 
-
-> [!Theorem] Corollary
+> [!Corollary]
 > If a group $G$ has just one subgroup $H$ of order $r$, then that subgroup is normal.
 
 ---
@@ -64,6 +67,7 @@ Two elements $x, x'\in G$ are called conjugates if $x=gx'g^{-1}$ for some $g\in 
 > 
 
 ^7dbb5e
+
 $\phi$ is known as a **projection map**. We have the following chain of homomorphisms, where $i_{1}$ and $i_{2}$ are inclusion maps:
 $$
 1_{G}\overset{ i_{1} }{ \to } N\overset{ i_{2} }{ \to } G\overset{ \phi }{ \to } G/N\overset{}{ \to } 1_{G/N}
@@ -73,10 +77,20 @@ Note that the image of one map is the kernel of the following map in the chain. 
 > [!Theorem] First isomorphism theorem
 > Let $\phi:G\to G'$ be a homomorphism, and let $\psi:G\to G/\ker\phi$ be a projection map. Then, there exists a unique injective homomorphism $\overline{\phi}:G/\ker\phi\to G'$ such that $\phi=\psi\circ \overline{\phi}$. In other words, $G/\ker \phi\cong\mathrm{Im}~G$.
 > 
->  ![[Pasted image 20250130111100.png]]
+> ```latex
+> 
+> % latex-id: 6e43-e536-2da6-40a6-9d6f
+> \begin{tikzcd}
+> G\ar[rr, "\phi"]\ar[rd, "\psi"']&&G'\\
+> &G/N\ar[ru, dashed, "\overline{\phi}"']&
+> \end{tikzcd}
+> 
+> ```
 > 
 > > [!Proof]-
+> > 
 > > Define $\overline{\phi}(g\ker\phi)=\phi(g)$. Note that $\overline{\phi}$ is a unique, well defined, injective homomorphism. 
+> 
 
 ^396133
 
@@ -85,8 +99,18 @@ Note that the image of one map is the kernel of the following map in the chain. 
 # Mapping property of quotient groups
 
 > [!Theorem]
-> Let $\varphi:G'\to G$ be a homomorphism, and let $N\trianglelefteq  G'$ such that $N\subseteq \ker\varphi$. Let $\overline{G}'=G'/N$, and let $\pi:G'\to \overline{G}'$ be the canonical projection map $a\mapsto \overline{a}$. The rule $\overline{\varphi}(\overline{a})=\varphi(a)$ defines a unique homomorphism $\overline{\varphi}:\overline{G}'\to G$, and $\overline{\varphi}\circ \pi=\varphi$. 
->![[Pasted image 20250330164452.png|200]]
+> Let $\varphi:G'\to G$ be a homomorphism, and let $N\trianglelefteq  G'$ such that $N\subseteq \ker\varphi$. Let $\overline{G}'=G'/N$, and let $\pi:G'\to \overline{G}'$ be the canonical projection map $a\mapsto \overline{a}$. The rule $\overline{\varphi}(\overline{a})=\varphi(a)$ defines a unique homomorphism $\overline{\varphi}:\overline{G}'\to G$ such that $\overline{\varphi}\circ \pi=\varphi$. 
+> 
+> ```latex
+> 
+> % latex-id: e97c-affd-8c06-4f24-a378
+> \begin{tikzcd}
+> G'\ar[rr, "\varphi"]\ar[rd, "\pi"']&&G\\
+> &\overline{G}'\ar[ru, dashed, "\overline{\varphi}"']&
+> \end{tikzcd}
+>  
+> ```
+> 
 
 ^43c508
 

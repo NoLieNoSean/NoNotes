@@ -39,9 +39,7 @@ The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\
 
 ### Root test
 
-Rudin, 3.33
-
-> [!Theorem]
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.33
 > Given $\sum a_{n}$, define
 > $$
 > \alpha\equiv \limsup _{n\to \infty}\sqrt[n]{ |a_{n}| }.
@@ -50,75 +48,72 @@ Rudin, 3.33
 > 1. if $\alpha<1$, $\sum a_{n}$ converges (in fact, it converges absolutely);
 > 2. if $\alpha>1$, $\sum a_{n}$ diverges;
 > 3. if $\alpha=1$, the test is inconclusive.
-
-> **Proof**
-> If $\alpha<1$, pick $\alpha<\beta<1$. [[LimSup and LimInf#^033332|We know]] that there exists $N$ such that $n\geq N$ implies $\sqrt[n]{ |a_{n}| }<\beta$.
-> $$
-> \begin{align}
-> |a_{n}| & <\beta^{n} \\
-> |a_{n+1}| & <\beta^{n+1}  \\
->  & \vdots
-> \end{align}
-> $$
-> So, for $n>N$, $|a_{n}|<\beta^{n}$. We know $\sum \beta^{n}$ converges. Hence, from the comparison test, $\sum |a_{n}|$ converges. This implies $\sum a_{n}$ converges. 
 > 
-> If $\alpha>1$, we know that for all $N$, there exists $n>N$ such that $\sqrt[n]{ |a_{n }| }>1$, i.e, $|a_{n}|>1$. So, $\lim_{ n \to \infty }|a_{n}|\ne 0$. 
+> > [!Proof]-
+> > If $\alpha<1$, pick $\alpha<\beta<1$. [[LimSup and LimInf#^033332|We know]] that there exists $N$ such that $n\geq N$ implies $\sqrt[n]{ |a_{n}| }<\beta$, i.e, $|a_{n}|<\beta^{n}$. We know $\sum \beta^{n}$ converges. Hence, from the comparison test, $\sum |a_{n}|$ converges. This implies $\sum a_{n}$ converges. 
+> > 
+> > If $\alpha>1$, we know that for all $N$, there exists $n>N$ such that $\sqrt[n]{ |a_{n }| }>1$, i.e, $|a_{n}|>1$. So, $\lim_{ n \to \infty }|a_{n}|\ne 0$. 
+> > 
+> > To prove (3), consider series $\sum \frac{1}{n}$ and $\sum \frac{1}{n^{2}}$. Both have $\alpha=1$ (Rudin, 3.20), but the first diverges, while the second converges. 
 > 
-> To prove (3), consider series $\sum \frac{1}{n}$ and $\sum \frac{1}{n^{2}}$. Both have $\alpha=1$ (Rudin, 3.20), but the first diverges, while the second converges. ❏
 
 ### Ratio test
 
-Rudin, 3.34
-
-> [!Theorem]
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.34
 > The series $\sum a_{n}$
 > 1. converges if $\limsup| \frac{a_{n+1}}{a_{n}}|<1$,
 > 2. diverges if $| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$, where $N_{0}$ is some fixed integer.
-
-> **Proof**
-> If (1) holds, in the same manner as in the previous proof, we can pick $\limsup| \frac{a_{n+1}}{a_{n}}|<\beta<1$ such that there exists $N$ such that for all $n> N$, $| \frac{a_{n+1}}{a_{n}}|<\beta$. In particular, 
-> $$
-> \begin{align}
-> |a_{N+1}| & <\beta |a_{N}| \\
-> |a_{N+2}| & <\beta |a_{N+1}|<\beta^{2} |a_{N}| \\
->  & \vdots \\
-> |a_{N+p}| & <\beta^{p}|a_{N}|
-> \end{align}
-> $$
-> So, $|a_{n}|<(|a_{N}|\beta^{-N})\beta^{n}$ for all $n\geq N$. The result follows from the comparison test.
 > 
-> (2) prevents the limit of individual terms of the sequence from being 0. ❏ 
+> > [!Proof]-
+> > If (1) holds, in the same manner as in the previous proof, we can pick $\limsup| \frac{a_{n+1}}{a_{n}}|<\beta<1$ such that there exists $N$ such that for all $n> N$, $| \frac{a_{n+1}}{a_{n}}|<\beta$. In particular, 
+> > $$
+> > \begin{align}
+> > |a_{N+1}| & <\beta |a_{N}| \\
+> > |a_{N+2}| & <\beta |a_{N+1}|<\beta^{2} |a_{N}| \\
+> >  & \vdots \\
+> > |a_{N+p}| & <\beta^{p}|a_{N}|
+> > \end{align}
+> > $$
+> > So, $|a_{n}|<(|a_{N}|\beta^{-N})\beta^{n}$ for all $n\geq N$. The result follows from the comparison test.
+> > 
+> > (2) prevents the limit of individual terms of the sequence from being 0.
+> 
+
 
 > [!Warning] 
 > Note that $\limsup| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$ for some fixed $N_{0}$ does not guarantee divergence. A counter example can be easily constructed by interlacing two appropriate convergent series.
 
-Read examples at 3.35.
+See @rudinPrinciplesMathematicalAnalysis1976 3.35 for examples.
 
 ---
 ## Power series
 
 > [!Definition] Definition (Rudin, 3.38)
-> The *power series* of a sequence $(c_{n})$ of complex numbers is the series
+> The **power series** of a sequence $(c_{n})$ of complex numbers is the series
 > $$
 > \sum_{n=0}^{\infty}c_{n}z^{n}.
 > $$
 
-> [!Theorem] Theorem (Rudin, 3.39)
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.39
 > Given the power series $\sum c_{n}z^{n}$, define
 > $$
 > \alpha\equiv\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}, \ \ \ \ R\equiv \frac{1}{\alpha}
 > $$
-> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$ and diverges if $|z|>R$.
+> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$ and diverges if $|z|>R$. $R$ is called the **convergence radius** of $\sum c_{n}z^{n}$.
+> 
+> > [!Proof]-
+> > 
+> > Use the root test:
+> > $$
+> > \begin{align}
+> > \limsup_{ n \to \infty } \sqrt[n]{|c_{n}z^{n}| }=|z|\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}= \frac{|z|}{R}
+> > \end{align}
+> > $$
+> > 
+> > 
+> 
 
-> **Proof**
-> Use the root test:
-> $$
-> \begin{align}
-> \limsup_{ n \to \infty } \sqrt[n]{|c_{n}z^{n}| }=|z|\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}= \frac{|z|}{R}
-> \end{align}
-> $$
-
-$R$ is called the *convergence radius* of $\sum c_{n}z^{n}$.
+^2bd39d
 
 > [!Example]
 > 1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.
