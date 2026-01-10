@@ -165,70 +165,67 @@ $$
 > (f^{*}\omega)(p)=f^{*}(\omega(f(p))).
 > $$
 
-> [!Theorem]
-> If $f:\mathbb{R}^{n}\to \mathbb{R}^{m}$ is differentiable, then
-> $$
-> \begin{align}
-> (1)  \quad  & f^{*}(dx_{i})=\sum_{j=1}^{n} D_{j}f_{i}\cdot dx_{j} \\
-> (2)\quad  & f^{*}(\omega_{1}+\omega_{2} )=f^{*}(\omega_{1})+f^{*}(\omega_{2}) \\
-> (3)\quad  & f^{*}(g\cdot \omega)=(g\circ f)\cdot f^{*}(\omega) \\
->  (4)\quad  & f^{*}(\omega \wedge \eta)=f^{*}\omega \wedge f^{*}\eta.
->  \\ (5) \quad   &  (g\circ f)^{*}\omega=f^{*}g^{*}\omega.
-\end{align}
-> $$
-> 
-> > [!Proof]-
-> > 
-> > $(1)$
-> > $$
-> > \begin{align}
-> > { f^{*}(dx_{i}) }(p)(v_{p}) & =f^{*}(dx_{i}(f(p)))(v_{p}) \\
-> >  & = dx_{i}(f(p))(f_{*}(v_{p})) \\
-> >  & =dx_{i}(f(p))(Df(p)(v))_{f(p)} \\
-> >  & =\sum_{j=1}^{n} D_{j}f_{i}\cdot v_{j} \\
-> >  & =\sum_{j=1}^{n} D_{j}f_{i}\cdot dx_{j}(p)(v_{p}) .\\
-> > \end{align}
-> > $$
-> > 
-> > $(2)$
-> > $$
-> > \begin{align}
-> > f^{*}(\omega_{1}+\omega_{2})(p) & =f^{*}((\omega_{1}+\omega_{2})(f(p))) \\
-> >  & =f^{*}(\omega_{1}(f(p))+\omega_{2}(f(p))) \\
-> >  & =f^{*}(\omega_{1}(f(p)))+f^{*}(\omega_{2}(f(p)))  \\
-> >  & =f^{*}(\omega_{1})(p)+f^{*}(\omega_{2})(p)
-> > \end{align}
-> > $$
-> > $(3)$
-> > $$
-> > \begin{align}
-> > f^{*}(g\cdot \omega)(p) & =f^{*}((g\cdot \omega)(f(p))) \\
-> >  & =f^{*}(g(f(p))\cdot \omega(f(p))) \\
-> > 	 & =g(f(p))f^{*}(\omega(f(p))) \\
-> > 	 & =[(g\circ f)\cdot f^{*}(\omega)](p)
-> > \end{align}
-> > $$
-> > $(4)$
-> > $$
-> > \begin{align}
-> > f^{*}(\omega \wedge \eta)(p) & =f^{*}((\omega \wedge \eta)(f(p))) \\
-> >  & =f^{*}(\omega(f(p))\wedge \eta(f(p))) \\
-> >  & =f^{*}(\omega(f(p)))\wedge f^{*}(\eta(f(p))) \\
-> >  & =f^{*}(\omega)(p)\wedge f^{*}(\eta)(p)
-> > \end{align}
-> > $$
-
 [!Theorem]
-1. $d(\omega+\eta)=d\omega+d \eta$. 
-2. If $\omega$ is a $k$-form and $\eta$ is an $l$-form, then $d(\omega \wedge \eta)=d\omega \wedge \eta+(-1)^{k}\omega \wedge d \eta$. 
-3. $d(d\omega)=0$. w
-4. If $\omega$ is a $k$ form on $\mathbb{R}^{m}$ and $f:\mathbb{R}^{n}\to \mathbb{R}^{m}$ is differentiable, then $f^{*}(d\omega)=d(f^{*}\omega)$. 
+If $f:\mathbb{R}^{n}\to \mathbb{R}^{m}$ is differentiable, then
+$$
+\begin{align}
+(1)  \quad  & f^{*}(dx_{i})=\sum_{j=1}^{n} D_{j}f_{i}\cdot dx_{j} \\
+(2)\quad  & f^{*}(\omega_{1}+\omega_{2} )=f^{*}(\omega_{1})+f^{*}(\omega_{2}) \\
+(3)\quad  & f^{*}(g\cdot \omega)=(g\circ f)\cdot f^{*}(\omega) \\
+ (4)\quad  & f^{*}(\omega \wedge \eta)=f^{*}\omega \wedge f^{*}\eta.\\  \\
+(5) \quad   &  (g\circ f)^{*}\omega=f^{*}g^{*}\omega.
+\end{align}
+$$
 
 [!Proof]-
 
+$(1)$
+$$
+\begin{align}
+{ f^{*}(dx_{i}) }(p)(v_{p}) & =f^{*}(dx_{i}(f(p)))(v_{p}) \\
+ & = dx_{i}(f(p))(f_{*}(v_{p})) \\
+ & =dx_{i}(f(p))(Df(p)(v))_{f(p)} \\
+ & =\sum_{j=1}^{n} D_{j}f_{i}\cdot v_{j} \\
+ & =\sum_{j=1}^{n} D_{j}f_{i}\cdot dx_{j}(p)(v_{p}) .\\
+\end{align}
+$$
 
-[!Definition]
-A form $\omega$ is called **closed** if $d\omega=0$ and **exact** if $\omega=d \eta$ for some $\eta$. exact $\implies$ closed.
+$(2)$
+$$
+\begin{align}
+f^{*}(\omega_{1}+\omega_{2})(p) & =f^{*}((\omega_{1}+\omega_{2})(f(p))) \\
+ & =f^{*}(\omega_{1}(f(p))+\omega_{2}(f(p))) \\
+ & =f^{*}(\omega_{1}(f(p)))+f^{*}(\omega_{2}(f(p)))  \\
+ & =f^{*}(\omega_{1})(p)+f^{*}(\omega_{2})(p)
+\end{align}
+$$
+$(3)$
+$$
+\begin{align}
+f^{*}(g\cdot \omega)(p) & =f^{*}((g\cdot \omega)(f(p))) \\
+ & =f^{*}(g(f(p))\cdot \omega(f(p))) \\
+	 & =g(f(p))f^{*}(\omega(f(p))) \\
+	 & =[(g\circ f)\cdot f^{*}(\omega)](p)
+\end{align}
+$$
+$(4)$
+$$
+\begin{align}
+f^{*}(\omega \wedge \eta)(p) & =f^{*}((\omega \wedge \eta)(f(p))) \\
+ & =f^{*}(\omega(f(p))\wedge \eta(f(p))) \\
+ & =f^{*}(\omega(f(p)))\wedge f^{*}(\eta(f(p))) \\
+ & =f^{*}(\omega)(p)\wedge f^{*}(\eta)(p)
+\end{align}
+$$
+
+> [!Theorem]
+> 1. $d(\omega+\eta)=d\omega+d \eta$. 
+> 2. If $\omega$ is a $k$-form and $\eta$ is an $l$-form, then $d(\omega \wedge \eta)=d\omega \wedge \eta+(-1)^{k}\omega \wedge d \eta$. 
+> 3. $d(d\omega)=0$. w
+> 4. If $\omega$ is a $k$ form on $\mathbb{R}^{m}$ and $f:\mathbb{R}^{n}\to \mathbb{R}^{m}$ is differentiable, then $f^{*}(d\omega)=d(f^{*}\omega)$. 
+
+> [!Definition]
+> A form $\omega$ is called **closed** if $d\omega=0$ and **exact** if $\omega=d \eta$ for some $\eta$. exact $\implies$ closed.
 
 
 ![[image-5.jpeg]]

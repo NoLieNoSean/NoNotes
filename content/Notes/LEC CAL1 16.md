@@ -4,7 +4,7 @@ id: "185"
 
 # Total derivatives
 
-> [!Definition]
+> [!Definition] Total derivative
 > Let $\mathbf{f}:S\to \mathbb{R}^{m}$ be defined on $S\subseteq \mathbb{R}^{n}$ and let $\mathbf{c}\in S^{\circ}$. $\mathbf{f}$ is **differentiable** at $\mathbf{c}$ if there exists a linear transformation $\mathbf{T}_{\mathbf{c}}:\mathbb{R}^{n}\to \mathbb{R}^{m}$ such that
 > $$
 > \lim_{ \mathbf{v} \to \mathbf{0} } \frac{1}{\lVert \mathbf{v} \rVert }\left( \mathbf{f}(\mathbf{c}+\mathbf{v})-\mathbf{f}(\mathbf{c})-\mathbf{T}_{\mathbf{c}}(\mathbf{v}) \right)=\mathbf{0},

@@ -2,7 +2,7 @@
 id: "256"
 ---
 
-There are two equivalent definitions of Noetherian ring: A commutative ring with unity is called Noetherian if
+There are two equivalent definitions of Noetherian ring: A commutative ring with unity is called Noetherian if any of the following are true:
 1. every ideal of $A$ is finitely generated.
 2. every ascending chain of ideals in $A$ stabilizes: that is, for every increasing sequence $I_{1}\subseteq I_{2}\subseteq\dots$ of ideals in $A$, there exists an $n$ such that $I_{n}=I_{n+1}=\dots$. 
 

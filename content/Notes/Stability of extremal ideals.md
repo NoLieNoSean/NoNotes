@@ -153,3 +153,6 @@ Find $c_{r}$ such that $(x_{12}, x_{23}, x_{31})=\mathcal{E}^{r}_{3}:(c_{r})$.
 
 
 [^1]: It is clear from [[Associated primes of monomial ideals#^53e841]] that an associated prime of $I$ must contain $I$; A prime ideal that is contained in a minimal prime cannot contain $I$. 
+
+
+hello

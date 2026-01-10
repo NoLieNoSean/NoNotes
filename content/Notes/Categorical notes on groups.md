@@ -59,6 +59,8 @@ When working as a coproduct, the product $G\times H$ of two abelian groups is of
 > ```
 > 
 
+^16ae31
+
 In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \circ\alpha$ is the trivial homomorphism factors uniquely though $\ker\varphi$. Note that $\overline{\alpha}:K\to \ker\varphi$ is just $\alpha$ with restricted target.
 ## Monomorphisms and epimorphisms
 
@@ -78,7 +80,7 @@ In other words, every group homomorphism $\alpha:K\to G$ such that $\varphi \cir
 
 ^79d9ee
 
-The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to G'$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and only provides a proof in $\textsf{Ab}$. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
+The analog of the above statement holds true for epimorphisms: *a homomorphism $\varphi:G\to G'$ is an epimorphism iff it is surjective*. However, Aluffi claims proving epimorphism $\implies$ surjective in $\textsf{Gp}$ is cumbersome, and ==only provides a proof in $\textsf{Ab}$==. He does so by defining cokernels in $\textsf{Ab}$, the universal property for which is obtained by reversing the arrows in the universal property of kernels:
 
 > [!Definition]
 > Let $\varphi:G\to G'$ be a group homomorphism. $\text{coker}\,\varphi$ is the group equipped with a homomorphism $\pi:G'\to \text{coker}\,\varphi$ which is initial with respect to all morphisms $\alpha$ such that $\alpha \circ\varphi=0$.
@@ -93,6 +95,8 @@ The analog of the above statement holds true for epimorphisms: *a homomorphism $
 > ```
 > 
 
+^a56a9d
+
 Cokernels exist in $\textsf{Ab}$ because $\mathrm{Im}~\varphi \triangleleft G'$. The condition that $\alpha \circ\varphi'$ is trivial says that $\mathrm{Im}~\varphi \subseteq \ker\alpha$, and hence
 $$
 \frac{G'}{\mathrm{Im}~\varphi}\cong \text{coker}\,\varphi
@@ -102,7 +106,7 @@ satisfies the universal property ($\overline{\alpha}$ is unique because of [[LEC
 We can now state the analog of [[#^79d9ee]]:
 
 > [!Proposition] @aluffiAlgebraChapter02009 II.8.18
-> Let $\varphi:G\to G'$ be a homomorphism of abelian groups. The following are equivalent:
+> Let $\varphi:G\to G'$ be a homomorphism of ==abelian== groups. The following are equivalent:
 > 1. $\varphi$ is an epimorphism;
 > 2. $\text{coker}\,\varphi$ is trivial;
 > 3. $\varphi:G\to G'$ is surjective (as a set function).
@@ -116,4 +120,7 @@ We can now state the analog of [[#^79d9ee]]:
 
 ^1e7b58
 
-The problem in $\textsf{Gp}$ is that $\mathrm{Im}~\varphi$ is not guaranteed to be normal in $G'$. However, cokernels may still be defined in $\textsf{Gp}$: the universal property is satisfied by $G'/N$, where $N$ is the smallest normal subgroup of $G'$ containing $\mathrm{Im}~\varphi$. But [[#^1e7b58]] fails, because the implication $(2)\implies(3)$ fails.
+> [!Remark]
+> The problem in $\textsf{Gp}$ is that $\mathrm{Im}~\varphi$ is not guaranteed to be normal in $G'$. However, cokernels may still be defined in $\textsf{Gp}$: the universal property is satisfied by $G'/N$, where $N$ is the smallest normal subgroup of $G'$ containing $\mathrm{Im}~\varphi$. But [[#^1e7b58]] fails, because the implication $(2)\implies(3)$ fails.
+
+^fc94af

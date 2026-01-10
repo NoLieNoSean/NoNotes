@@ -7,7 +7,7 @@ date: 2024-10-29
 time: 14:00
 id: "85"
 ---
-## Recall
+Recall:
 
 > [!Lemma] 
 > The [[LEC ALG1 18#Characteristic Polynomial|characteristic Polynomial]] of a linear operator is independent of the basis.
@@ -27,7 +27,7 @@ id: "85"
 - $V = K + W$.
 
 ---
-## Complex vs Real vector spaces
+# Complex vs Real vector spaces
 
 > [!Proposition] 
 > 
@@ -99,9 +99,9 @@ id: "85"
 > If $A$ is an $n \times n$ matrix over a field $\mathbb{F}$ such that its characteristic polynomial is a product of linear factors in $\mathbb{F}$, then there exists an invertible matrix $P$ (with entries in $\mathbb{F}$) such that $PAP^{-1}$ is upper triangular.
 
 ---
-## Diagonalization
+# Diagonalization
 
-Diagonalization of a linear operator $T:V\to V$ entails finding a basis $B$ of $V$ such that $[T]_{BB}$ is a diagonal matrix. Such a basis does not always exist, i.e, not all operators can be diagonalized. 
+Diagonalization of a linear operator $T:V\to V$ ==entails finding a basis $B$ of $V$ such that $[T]_{BB}$ is a diagonal matrix==. Such a basis does not always exist, i.e, not all operators can be diagonalized. 
 
 For operators in $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can be expressed as $A=SDS^{-1}$, where $D$ is a diagonal matrix and $S$ is an invertible matrix with entries in $\mathbb{F}$, i.e, $A$ is similar to a diagonal matrix.
 
@@ -132,13 +132,13 @@ For operators in $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can 
 > 
 
 Obviously, an abstract operator $T:V\to V$ is diagonalizable iff its matrix in any basis is diagonalizable. Thus, it follows that $T$ is diagonalizable iff there exists a basis of $V$ that consists of eigenvectors of $T$.
-### A simple sufficient condition for an operator to be diagonalizable
+## A simple sufficient condition for an operator to be diagonalizable
 
 > [!Theorem]
 > If an operator $T: V \to V$ has exactly $n=\dim V$ *distinct* eigenvalues, then $T$ is diagonalizable.
 > 
 > > [!Proof]-
-> > Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ be the distinct eigenvalues. For each eigenvalue $\lambda_{i}$, let $\mathbf{v}_{i}$ be a corresponding eigenvector. [[LEC ALG1 17#Eigenvectors with distinct eigenvalues are linearly independent|Then]], $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ are linearly independent. Hence, they form a basis of $V$. ❏
+> > Let $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ be the distinct eigenvalues. For each eigenvalue $\lambda_{i}$, let $\mathbf{v}_{i}$ be a corresponding eigenvector. [[LEC ALG1 17#^c1a0c2|Then]], $\mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}$ are linearly independent. Hence, they form a basis of $V$. 
 > 
 
 >[!example]
@@ -229,35 +229,35 @@ Obviously, an abstract operator $T:V\to V$ is diagonalizable iff its matrix in a
 > > **BEHOLD! THE DIAGONALISED MATRIX !!!!!11!!!**
 > > 
 
-### Multiplicity of an eigenvalue
+## Multiplicity of an eigenvalue
 
 To arrive at a stronger criterion of diagonalizability, we need to understand multiplicities of eigenvalues.
 
 >[!Definition]
 >Let $\lambda$ be an eigenvalue of an operator $A$.
->The *Geometric Multiplicity* of $\lambda$ is the dimension of the $\lambda$-eigenspace, $\dim(\ker(A-\lambda I))$.
->The *Algebraic Multiplicity* of $\lambda$ is the number of times $(x-\lambda)$ appears in the factored characteristic polynomial of $A$.
+>1. The *Geometric Multiplicity* of $\lambda$ is the dimension of the $\lambda$-eigenspace, $\dim(\ker(A-\lambda I))$.
+>2. The *Algebraic Multiplicity* of $\lambda$ is the number of times $(x-\lambda)$ appears in the factored characteristic polynomial of $A$.
 
 Let $\{ \lambda_{1}, \lambda_{2},\dots,\lambda_{\gamma} \}$ be the distinct eigenvalues for $A$ (over $\mathbb{C}$). Denote the geometric multiplicity of $\lambda_{i}$ by $g_{i}$ and the algebraic multiplicity of the same by $a_{i}$.
 
 > [!Theorem]
 > 
->  $a_{i} \geq g_{i}$ for each $i$.
+>  $a_{i} \geqslant g_{i}$ for each $i$.
 > 
 > > [!Proof]-
 > > 
-> > Fix $i$, call $\lambda_{i} = \lambda, \ g_{i} = g, \ a_{i} = a$. Take $v_{1}, v_{2},\dots,v_{g}$ to  be the basis of $\ker{A-\lambda I}$. Extend this to a basis of $V$ by appending $v_{g+1}, v_{g+2},\dots,v_{n}$. By writing the matrix of $T$ in this basis we get
+> > Fix $i$, and let $\lambda:=\lambda_{i}, \ g:=g_{i}, \ a := a_{i}$. Take $v_{1}, v_{2},\dots,v_{g}$ to  be a basis of $\ker{A-\lambda I}$. Extend this to a basis of $V$ by appending $v_{g+1}, v_{g+2},\dots,v_{n}$. By writing the matrix of $T$ in this basis we get
 > > $$
 > > \left[
 > > \begin{array}{c|cc}
 > > \lambda I_{g} & *\ \ \\
 > > \hline \mathbf{0} & *\ \
 > > \end{array}
-> > \right]
+> > \right].
 > > $$
-> > The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Now, $h(x)$ may contain a factor of $(x-\lambda)$. Hence the number of times $(x-\lambda)$ appears in $p_{_{T}}(x)$ will be $g + r$ for some $r \in \mathbb{N}$.
+> > The characteristic polynomial of $T$ will be of the form $p_{_{T}}(x) = (x-\lambda)^gh(x)$. Thus, $a\geqslant g$. 
 > 
-### Criterion of diagonalizability
+## Characterizing diagonalizable operators
 
 This theorem holds for vector spaces over general fields.
 
@@ -289,5 +289,7 @@ The theorem can be restated specifically for real matrices:
 > A real $n\times n$ matrix $A$ admits real factorization (i.e representation as $A=SDS^{-1}$ where $S$ and $D$ are real matrices, $D$ is diagonal and $S$ is invertible) iff it admits complex factorization and all eigenvalues of $A$ are real.
 
 Note:
-- The requirement of having $n$ eigenvalues is not moot for real matrices.
+- The requirement of having $n$ eigenvalues is not automatically satisfied for real matrices.
 - The eigenvalues being real forces the eigenvectors to be real, which in turn forces $S$ to be real.
+
+For a general treatment of what happens when $g_{i}< a_{i}$, see https://en.wikipedia.org/wiki/Jordan_normal_form#Complex_matrices.

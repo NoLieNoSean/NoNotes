@@ -5,21 +5,132 @@ time: 15:33
 tags:
   - CANA
 ---
-@steinComplexAnalysis2003 chapter 1.
+# Preliminaries
 
+Holomorphicity is the complex analytic version of differentiability. 
 
+> [!Definition] Holomorphicity
+> $f:\mathbb{C}\to \mathbb{C}$ is said to be **holomorphic** at a point $z\in \mathbb{C}$ if
+> $$
+> \lim_{ h \to 0 } \frac{f(z+h)-f(z)}{h}
+> $$
+> exists. The limit is denoted by $f'(z_{0})$ when it exists, and is called the **derivative** of $f$ at $z_{0}$. $f$ is said to be holomorphic in open $\Omega \subseteq \mathbb{C}$ if $f$ is holomorphic at every point in $\Omega$. 
 
----
+^f94b35
 
-
-[!Definition]
-$f:\mathbb{C}\to \mathbb{C}$ is said to be **holomorphic** at a point $z$ if
+$f$ is holomorphic at $z_{0}\in \Omega$ iff there exists a complex number $f'(z_{0})$ such that
 $$
-\lim_{ h \to 0 } \frac{f(z+h)-f(z)}{h}
+\begin{align}
+f(z_{0}+h)=f(z_{0})+f'(z_{0})h+h\psi(h),
+\end{align}
 $$
-exists. 
 
-$f$ is holomorphic at $p$ $\iff$ $f$ has a power series expansion at $p$, $f(z)=\sum_{n=0}^{\infty}a_{n}z^{n}$. $f$ can be viewed at $u+iv$, where $u$ and $v$ are functions $\mathbb{R}^{2}\to \mathbb{R}$. 
+^6e5afc
 
----
+where $\lim_{ h \to 0 }\psi(h)=0$. 
 
+Some trivialities:
+
+> [!Proposition]
+> 1. If $f$ is holomorphic at $z_{0}$, $f$ is continuous at $z_{0}$. 
+> 2. If $f$ and $g$ are holomorphic in $\Omega$, then
+> 	1. $f+g$ is holomorphic in $\Omega$ and $(f+g)'=f'+g'$.
+> 	2. $fg$ is holomorphic in $\Omega$ and $(fg)'=f'g+f'$.
+> 	3. If $g(z_{0})\ne 0$, then $f/g$ is holomorphic at $z_{0}$ and $(f/g)'=(f'g-fg')/g^{2}$. 
+> 3. If $f:\Omega\to U$ and $g:U\to \mathbb{C}$ are holomorphic, the chain rule holds: $(g\circ f)'=g'(f(z))f'(z)$ for all $z\in \Omega$. 
+
+Holomorphic functions have some really neat properties:
+1. Every holomorphic function is infinitely many times complex differentiable ($C^{\infty}$).
+2. It's better: Every holomorphic function is analytic! Holomorphic and analytic are used synonymously. 
+
+## Complex functions as maps $\mathbb{R}^{2}\to \mathbb{R}^{2}$
+
+For $f:\mathbb{C}\to \mathbb{C}$ with $f=u+iv$, define $F:\mathbb{R}^{2}\to \mathbb{R}^{2}$ by $F(x, y)=(u(x, y), v(x, y))$. For $z=x+iy$, we may write $f(x, y)$ in place of $f(z)$ (treating $f$ as a function $\mathbb{R}^{2}\to \mathbb{C}$).
+
+Contrast [[#^f94b35]] for the derivative of $f$ with [[LEC CAL1 16#^054571]] for the derivative of $F$. Clearly, ==complex differentiability differs significantly from the usual notion of multivariable real differentiability==. 
+
+> [!Example]
+> The function $f(z)=\overline{z}$ is not holomorphic. Indeed, we have
+> $$
+> \begin{align}
+> \frac{f(z_{0}+h)-f(z_{0})}{h}=\frac{\overline{h}}{h}
+> \end{align}
+> $$
+> which has no limit as $h\to 0$. However, when seen as a function from $\mathbb{R}^{2}\to \mathbb{R}^{2}$, the function $(x, y)\mapsto(x, -y)$ is clearly differentiable (indefinitely, even). 
+
+There is, however, a connected between $f'$ (the complex derivative) and $F'$ (the total derivative): for $z_{0}=z_{0}+iy_{0}$, we have
+$$
+\begin{align}
+f'(z_{0}) & =\lim_{ h_{1} \to 0 } \frac{f(x_{0}+h_{1}, y_{0})-f(x_{0}, y_{0})}{h_{1}} \\
+ & = \frac{ \partial f }{ \partial x } (z_{0})\\ \\
+f'(z_{0}) & =\lim_{ h_{2} \to 0 } \frac{f(x_{0}, y_{0}+h_{2})-f(x_{0}, y_{0})}{ih_{2}} \\
+ & = \frac{1}{i}\frac{ \partial f }{ \partial y } (z_{0}).
+\end{align}
+$$
+Therefore, if $f$ is holomorphic, we have
+$$
+\begin{align}
+\frac{ \partial f }{ \partial x } =\frac{1}{i}\frac{ \partial f }{ \partial y } .
+\end{align}
+$$
+Writing $f=u+iv$ and separating real and imaginary parts, we find that ==the partials of $u$ and $v$ exist, and they satisfy what are called the **Cauchy-Riemann** equations==:
+$$
+\frac{ \partial u }{ \partial x } =\frac{ \partial v }{ \partial y } \quad \text{and}\quad \frac{ \partial u }{ \partial y } =-\frac{ \partial v }{ \partial x } .
+$$
+
+^0c7f0a
+
+> [!Definition]
+> $$
+> \begin{align}
+> \frac{ \partial  }{ \partial z } :=\frac{1}{2}\left( \frac{ \partial  }{ \partial x } +\frac{1}{i}\frac{ \partial  }{ \partial y }  \right)\quad \text{and}\quad \frac{ \partial  }{ \partial \overline{z} } :=\frac{1}{2}\left( \frac{ \partial  }{ \partial x } -\frac{1}{i}\frac{ \partial  }{ \partial y }  \right) .
+> \end{align}
+> $$
+
+> [!Proposition]
+> If $f=u+iv$ is holomorphic at $z_{0}$, then 
+> $$
+> \begin{align}
+> \frac{ \partial f }{ \partial \overline{z} } (z_{0})=0 \quad \text{and}\quad f'(z_{0})=\frac{ \partial f }{ \partial z } (z_{0})=2\frac{ \partial u }{ \partial z } (z_{0}).
+> \end{align}
+> $$
+> Also, the real-variate function $F(x, y)=(u(x, y), v(x, y))$ is differentiable, and
+> $$
+> \begin{align}
+> \det F'(x_{0}, y_{0})=|f'(z_{0})|^{2}.
+> \end{align}
+> $$
+> 
+> 
+> > [!Proof]-
+> > 
+> > The first two results are clear. Let $H=(h_{1}, h_{2})$ and $h=h_{1}+ih_{2}$. Using [[#^0c7f0a]],
+> > $$
+> > \begin{align}
+> > F'(x_{0}, y_{0})(H)=\left( \frac{ \partial u }{ \partial x } -i\frac{ \partial u }{ \partial y }  \right) (h_{1}+ih_{2})=f'(z_{0})h,
+> > \end{align}
+> > $$
+> > where a complex number has been identified with the pair of real and imaginary parts. Using [[#^6e5afc]], 
+> > $$
+> > \begin{align}
+> >    & f(z_{0}+h)= f(z_{0})+f'(z_{0})h+h\psi(h) \\
+> >   & \implies  F(x_{0}+h_{1}, x_{0}+h_{2})=F(x_{0}, y_{0})+F'(x_{0}, y_{0})(h_{1}, h_{2})+|h|\underbrace{ \left( \frac{h_{1}\psi_{1}(h)-h_{2}\psi_{2}(h)}{|h|}, \frac{h_{1}\psi_{2}(h)+h_{2}\psi_{1}(h)}{|h|} \right) }_{ \to 0\text{ as }h\to 0 }.
+> > \end{align}
+> > $$
+> > Thus, $F$ is differentiable. The last result is a routine application of [[#^0c7f0a]].
+> > 
+> 
+
+^ca85e1
+
+> [!Remark]
+> In [[#^ca85e1]], $f$ being holomorphic at $z_{0}$ guarantees that the total derivative of $F$ exists at $t_{0}$, but ==does not imply that the partials are continuous== (so [[LEC CAL1 19#^c71feb]] cannot be used in the proof). However, $f$ being holomorphic in a neighborhood of $z_{0}$ does imply the continuity of partials. 
+
+What follows is an attempt at a "converse" of [[#^ca85e1]] (It is actually an iff characterization, but we do not have the tools to prove the reverse implication yet). 
+
+> [!Theorem]
+> Suppose $f=u+iv$ is a complex-valued funciton defined on an open set $\Omega$. If $u, v\in C^{1}$and satisfy the [[#^0c7f0a|Cauchy-Riemann equations]] on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z)=\frac{ \partial f }{ \partial z }$. 
+
+[!Proof]-
+
+Write $u(x+h_{1}, y+h_{2})-u(x, y)$

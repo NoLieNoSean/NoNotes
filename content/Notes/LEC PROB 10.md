@@ -55,7 +55,7 @@ We will use the DCT frequently in the upcoming proofs.
 
 ^0988fa
 
-To put it simply, if a sequence of sequences is bounded by a summable sequence and converges pointwise to a sequence, then the limit of its sum is the sum of its limit. Here, summable means [[LEC ANA1 31#Prologue|absolutely convergent]]. Note that the conclusion that each $f_{n}$ is summable follows from the hypothesis that it is bounded by a summable sequence.
+To put it simply, if a sequence of sequences is bounded by a summable sequence and converges pointwise to a sequence, then the limit of its sum is the sum of its limit. Here, summable means absolutely convergent. Note that the conclusion that each $f_{n}$ is summable follows from the hypothesis that it is bounded by a summable sequence.
 
 > [!Theorem] DCT for sequences of functions
 > Let $f_{n}:\mathbb{R}\to \mathbb{R}$ be a measurable function for $n\in \mathbb{N}$. Assume an integrable positive function $r:\mathbb{R}\to [0, \infty)$ exists such that $|f_{n}|\leq r$ for all $n$. Let the sequence of functions $(f_{n})$ converge to a function $f$ pointwise. Then, $f_{n}$ is integrable, $f$ is integrable, and

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80">
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="10" y="20" font-family="sans-serif" font-size="12" fill="red">LaTeX render failed: Error: Command failed: /Library/TeX/texbin/pdflatex -interaction=nonstopmode -halt-on-error -output-directory /Users/vasudev/Documents/Platypus/content/latex-cache/fb9c-fb94-b270-4400-906c.work /Users/vasudev/Documents/Platypus/content/latex-cache/fb9c-fb94-b270-4400-906c.work/document.tex
+</text>
+</svg>

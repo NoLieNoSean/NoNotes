@@ -39,6 +39,7 @@ $\phi$ is called an *automorphism* if $G_{1}=G_{2}$. The set of all automorphism
 
 ^27ea43
 
+
 ### Conjugation
 
 The most important type of automorphism is *conjugation*: let $g$ be a fixed element of a group $G$. Conjugation by $g$ is the map $\phi:G\to G$ defined by $x\mapsto gxg^{-1}$. This is an automorphism because, first of all, it is a homomorphism, and second, it is bijective because it have an inverse function: conjugation by $g^{-1}$.
@@ -98,20 +99,23 @@ Note that the image of one map is the kernel of the following map in the chain. 
 
 # Mapping property of quotient groups
 
-> [!Theorem]
-> Let $\varphi:G'\to G$ be a homomorphism, and let $N\trianglelefteq  G'$ such that $N\subseteq \ker\varphi$. Let $\overline{G}'=G'/N$, and let $\pi:G'\to \overline{G}'$ be the canonical projection map $a\mapsto \overline{a}$. The rule $\overline{\varphi}(\overline{a})=\varphi(a)$ defines a unique homomorphism $\overline{\varphi}:\overline{G}'\to G$ such that $\overline{\varphi}\circ \pi=\varphi$. 
+This universal property of quotients generalizes the first isomorphism theorem. 
+
+
+> [!Theorem] @aluffiAlgebraChapter02009 II.7.12
+> Let $H\triangleleft G$. Then for every group homomorphism $\varphi:G\to G'$ such that $H\subseteq \ker\varphi$ there exists a unique group homomorphism $\tilde{\varphi}:G/H\to G'$ so that the diagram
 > 
 > ```latex
 > 
 > % latex-id: e97c-affd-8c06-4f24-a378
 > \begin{tikzcd}
-> G'\ar[rr, "\varphi"]\ar[rd, "\pi"']&&G\\
-> &\overline{G}'\ar[ru, dashed, "\overline{\varphi}"']&
+> G\ar[rr, "\varphi"]\ar[rd, "\pi"']&&G'\\
+> &G/H\ar[ru, dashed, "\exists!\tilde{\varphi}"']&
 > \end{tikzcd}
 >  
 > ```
-> 
+> commutes.
 
 ^43c508
 
-This mapping property generalizes the first isomorphism theorem. The hypothesis that $N$ be contained in $\ker\varphi$ is essential, of course. Note that this is essentially @aluffiAlgebraChapter02009 II.7.12.
+

@@ -46,6 +46,8 @@ Let $R$ be a PID.
 
 ^bb9980
 
+Note that the manner in which we constructed the primary decomposition here ensures that it is irredundant, i.e, all the primary ideals are distinct and removing any one of them changes the intersection. 
+
 
 [!Exercise]
 Suppose $I=Q_{1}\cap\dots \cap Q_{n}$, where $Q_{i}=(f_{i}^{n})$ and $f_{i}$ is irreducible for all $i=1, \dots, n$. Let $\sqrt{ I }=\{ r\in R:r^{m}\in I\text{ for some integer } m\geq 1 \}$. Describe $\sqrt{ I }$ in terms of $f_{1}, \dots, f_{n}$.

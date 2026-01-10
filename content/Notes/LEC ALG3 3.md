@@ -19,13 +19,16 @@ The theory of modules is based on the observation that $\text{End}_{\textsf{Ab}}
 > 4. $1m=m$
 > 
 
+^2e9663
+
 (1) and (3) are due to $\sigma$ being a (ring) homomorphism; (2) is $\sigma(r)$ being a (group) endomorphism of $M$. 
 
 Ditto for right $R$ module. Similar to [[LEC ALG2 7#^bee0cf|right group actions]], a right $R$-module structure may be identified with a left-$R^{\circ}$ module structure, where $R^{\circ}$ is the 'opposite ring' obtained by reversing the order of multiplication. However, unlike the case for groups, $R$ and $R^{\circ}$ are *not isomorphic in general*. 
 
 Some trivial facts:
 1. $0\cdot m=0$;
-2. $(-1)\cdot m=-m$.
+2. $r\cdot 0=0$;
+3. $(-1)\cdot m=-m$.
 
 > [!Proposition]
 > Every abelian group is a $\mathbb{Z}$-module, in exactly one way.
@@ -135,6 +138,43 @@ The $R$-module $M/N$ is called the **quotient** of $M$ by $N$.
 > If $R$ is a ring and $I$ is a two-sided ideal of $R$, then all three of $I$, $R$, and the quotient ring $R/I$ are $R$-modules. There are two ways to view the module $R/I$: As the module arising from the canonical projection $R\to R/I$ and [[#^e65692]], or as the quotient of the $R$-module $R$ by its submodule $I$. The latter works even when $R$ is not commutative and $I$ is just a (say) left-ideal: the quotient $R/I$ is not defined as a ring, but it is defined as a left-module. The action of $R$ on $R/I$ is given by left multiplication: $r(a+I)=(ra+I)$. 
 
 The universal property and isomorphism theorems are what you'd expect; see @aluffiAlgebraChapter02009 [p.161, 162]. 
+
+> [!Proposition]
+> Let $N$ be a submodule of an $R$-module $M$. Then for every homomorphism of $R$-modules $\varphi:M\to P$ such that $N\subseteq \ker\varphi$ there exists a unique homomorphism of $R$-modules $\tilde{\varphi}:M/N\to P$ such that the diagram
+> 
+> ```latex
+> 
+> % latex-id: 7a49-3dbf-c79b-4ace-b3ff
+> \begin{tikzcd}
+> M\ar[rr, "\varphi"]\ar[rd, "\pi"']&&P\\
+> &M/N\ar[ru, "\exists !\tilde{\varphi}"']&
+> \end{tikzcd}
+> ```
+> commutes. 
+
+
+> [!Proposition]
+> Every $R$-module homomorphism $\varphi:M\to M'$ may be decomposed as follows:
+> ```latex
+> 
+> 
+> % latex-id: a3c5-ccb5-06fc-40cd-940e
+> \begin{tikzcd}
+> M\ar[rrr, bend left, "\varphi"]\ar[r, "\varphi"]& M/\ker\varphi\ar[swap]{r}{\tilde{\varphi}}[swap]{\sim}& \text{im}\,\varphi\ar[r, hook]&M'
+> \end{tikzcd}
+> ```
+> 
+
+> [!Proposition]
+> Let $N$ be a submodule of an $R$-module $M$, and let $P$ be a submodule of $M$ containing $N$. Then $P/N$ is a submodule of $M/N$, and
+> $$
+> \begin{align}
+> \frac{M/N}{P/N}\cong \frac{M}{P}.
+> \end{align}
+> $$
+> 
+
+Imitate proof of [[LEC ALG3 2#^f12ed2]]. 
 
 ## Finitely generated modules
 

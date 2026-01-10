@@ -228,12 +228,14 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 
 In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and the epimorphisms are precisely the surjective functions.
 
+### Common Fallacies
+
 Several things that we take for granted in $\textsf{Set}$ break in general categories:
-### epic + monic ${\implies}\mathllap{/~~~\,}$ isomorphism
+#### epic + monic ${\implies}\mathllap{/~~~\,}$ isomorphism
 
 In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, i.e iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities.
 
-### epic ${\implies}\mathllap{/~~~\,}$ right invertible,     monic ${\implies}\mathllap{/~~~\,}$ left invertible
+#### epic ${\implies}\mathllap{/~~~\,}$ right invertible,     monic ${\implies}\mathllap{/~~~\,}$ left invertible
 
 While 
 $$
@@ -244,7 +246,7 @@ $$
 $$
 can be easily proven universally, the converse is not generally true (It is true, of course, in $\textsf{Set}$). For example, the map $n\mapsto 2n$ defines a left-cancellable group homomorphism $f:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$. However, there is no group homomorphism $g:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$ such that $gf=\mathrm{id}_{\mathbb{Z}/2\mathbb{Z}}$. Similarly, the map $n\mapsto n\mod 2$ defines a right-cancellable group homomorphism $f:\mathbb{Z}/4\mathbb{Z}\to \mathbb{Z}/2\mathbb{Z}$. However, since every homomorphism $g:\mathbb{Z}/2\mathbb{Z}\to \mathbb{Z}/4\mathbb{Z}$ must map $[1]_{2}$ to $[2]_{4}$, $f$ is not right invertible.
 
-### epic ${\implies}\mathllap{/~~~\,}$ surjective
+#### epic ${\implies}\mathllap{/~~~\,}$ surjective
 
 In $\textsf{Set}$, $\textsf{Gp}$(!) and $\textsf{Ab}$, *epic $\iff$ surjective*.
 
@@ -254,9 +256,9 @@ $$
 $$
 This makes for another example of a morphism which is monic and epic but not an isomorphism.
 
-### monic ${\implies}\mathllap{/~~~\,}$ injective
+#### monic ${\implies}\mathllap{/~~~\,}$ injective
 
-We'll get back to this in a bit.
+We'll get back to this in a bit ([[#^0dd429]]).
 
 ---
 
@@ -327,6 +329,8 @@ The same object can be both initial and final, as singletons are in the category
 > [!Definition] Universal property of products
 > The product of objects $A, B$ in a category $\textsf{C}$ is the isomorphism class of final objects in the category $\textsf{C}_{A, B}$, as defined in [[#^db40b9]]. 
 
+^25bb2d
+
 > [!Example] Products of sets
 > Let $\textsf{C}=\textsf{Set}$, and let $A, B\in \text{Obj}(\textsf{C})$. Consider the product $A\times B$ with the two natural projections:
 > ```tikz
@@ -364,8 +368,8 @@ The same object can be both initial and final, as singletons are in the category
 > \begin{tikzcd}
 > &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
 > &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
-> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{5}}\\
-> \end{tikzcd} 
+> X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{5}}\\ 
+> \end{tikzcd}
 > ```
 > 
 
@@ -374,6 +378,8 @@ The same object can be both initial and final, as singletons are in the category
 
 > [!Definition] Universal property of coproducts
 > The coproduct of objects $A, B$ in a category $\textsf{C}$ is the isomorphism class of initial objects in the category $\textsf{C}^{A, B}$.
+
+^2e3ac5
 
 > [!Example] Disjoint union of Sets
 > Let $\textsf{C}=\textsf{Set}$. Let $A, B\in \text{Obj}(\textsf{C})$. Consider the disjoint union $A\amalg B$ with the inclusion maps $i_{A}$ and $i_{B}$:
@@ -471,3 +477,6 @@ What are coproducts in $\textsf{Gp}$?
 > $$
 > 
 > a contradiction. Therefore, $n=0$, so $f(x)=g(x)$. Thus, $f=g$ and $\pi$ is a monomorphism.
+
+^0dd429
+

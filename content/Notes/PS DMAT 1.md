@@ -118,7 +118,10 @@ A Cantor diagonalization argument is a simple way to show that the set of all bi
 
 **Alternate solution using the Riemann rearrangement theorem**
 
-The Riemann rearrangement theorem states that for any conditionally convergent series $\sum_{n=1}^{\infty}a_{n}$ (e.g., the alternating harmonic series $∑_{n=1}^{∞} \frac{(−1)^{n+1}}{n}$), the terms can be rearranged (via a permutation of $\mathbb{N}$) to converge to **any** real number, or even diverge to $\pm \infty$. 
+> [!Theorem] Riemann rearrangement theorem
+> For any conditionally convergent series $\sum_{n=1}^{\infty}a_{n}$ (e.g., the alternating harmonic series $∑_{n=1}^{∞} \frac{(−1)^{n+1}}{n}$), the terms can be rearranged (via a permutation of $\mathbb{N}$) to converge to **any** real number, or even diverge to $\pm \infty$. 
+
+^1aa425
 
 By the above theorem, for every real number $r$, there must exist at least one permutation $\sigma_{r}:\mathbb{N}\to \mathbb{N}$ such that
 $$

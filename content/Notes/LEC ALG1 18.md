@@ -7,7 +7,7 @@ date: 2024-10-17
 time: 14:00
 id: "84"
 ---
-## Finding eigenstuff
+# Finding eigenstuff
 
 Recall definitions of [[LEC ALG1 17|eigenvalues, eigenvectors, and eigenspaces]].
 
@@ -80,7 +80,7 @@ Here is more involved example of finding eigenvectors given the eigenvalues.
 >[!info]
 >If $0$ is an eigenvalue of $A$, then $\ker (A-0I) = \ker{A}$ is nonzero $\iff A$ is non-invertable.
 
-### Characteristic Polynomial
+## Characteristic Polynomial
 
 We know how to find the eigenvectors of a matrix given its eigenvalues. So, how do we find the eigenvalues?
 
@@ -90,19 +90,22 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 > f(x) = \det(A-xI_{n}).
 >$$
 
->[!Theorem]
+> [!Theorem]
 > $\lambda_{0}$ is an eigenvalue of $A \iff f(\lambda_{0}) = 0$.
+> 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > &\lambda_{0} \text{ is an eigenvalue of A} \\
+> > \iff & (A - \lambda_{0}I)\mathbf{v} =0 \text{ has a non trivial solution} \\
+> > \iff & A-\lambda_{0}I \text{ is not invertable} \\
+> > \iff & \det(A-\lambda_{0} I) = 0 \\
+> > \iff & f(\lambda_{0}) = 0
+> > \end{align}
+> > $$
+> > 
+> 
 
-> **Proof**
-> $$
-> \begin{align}
-> &\lambda_{0} \text{ is an eigenvalue of A} \\
-> \iff & (A - \lambda_{0}I)\mathbf{v} =0 \text{ has a non trivial solution} \\
-> \iff & A-\lambda_{0}I \text{ is not invertable} \\
-> \iff & \det(A-\lambda_{0} I) = 0 \\
-> \iff & f(\lambda_{0}) = 0
-> \end{align}
-> $$
 
 > [!Example]
 > Say we want to find the eigenvalues of
@@ -122,52 +125,54 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 > $$
 > the roots of which are $3 \pm 2\sqrt{2}$.
 
->[!Theorem]
->Let $A$ be a $n\times n$ matrix. Then, the characteristic polynomial of $A$ is of degree $n$ and is of the form $f(x) = (-1)^n\ x^n + (-1)^{n-1}\ \mathrm{Tr}(A)\ x^{n-1}+\dots+\det(A)$.
-
-> **Proof**
-> It is obvious from the nature of the determinant that $f$ is of degree $n$ (this in fact gives another proof of $A$ having at most $n$ eigenvalues). For a $2\times{2}$ matrix $A$, we have
-> $$
-> \begin{align}
-> f(x)=\det \begin{bmatrix}
-> a-x & b \\
-> c & d-x 
-> \end{bmatrix}
->  & =(a-x)(d-x)-bc \\
->  & =x^{2}-(a+d)x+(ad-bc) \\
->  & =x^{2}-\mathrm{Tr}(A)\ x+\det A
-> \end{align}
-> $$
-> Now we shall prove the theorem for general $n$. Observe from the definition of $f$ that $f(0)=\det A$. Thus, the constant term is $\det A$. 
+> [!Theorem]
+> Let $A$ be a $n\times n$ matrix. Then, the characteristic polynomial of $A$ is of degree $n$ and is of the form $f(x) = (-1)^n\ x^n + (-1)^{n-1}\ \mathrm{Tr}(A)\ x^{n-1}+\dots+\det(A)$.
 > 
-> If use [[LEC ALG1 15#Cofactor expansions|cofactor expansion]] along the first row to compute the determinant, observe that only the first term in the expansion will have a $x^{n}$ and $x^{n-1}$ term. Thus, we only need to bother with the first term.
-> $$
-> \begin{align}
-> \det (A-xI_{n}) & =\det \left[\begin{array}{c|ccc}
-> a_{1,1}-x& a_{1, 2}  & \dots & a_{1, n}\\
-> \hline
-> a_{2, 1} \\
-> \vdots &  & {\large B-xI_{n-1}}\\
-> a_{n, 1}
-> \end{array}\right] \\ \\
->  & =(a_{1, 1}-x)\det (B-xI_{n-1}) + \dots
-> \end{align}
-> $$
-> If we proceed inductively with $n=2$ as our base case, we have
-> $$
-> \begin{align}
-> \det(B-xI_{n-1})=(-1)^{n-1}x^{n-1}+(-1)^{n-2}\ \mathrm{Tr}(B)x^{n-2}+\dots
-> \end{align}
-> $$
-> Thus, we have
-> $$
-> \begin{align}
-> (a_{1, 1}-x)\det (B-xI_{n-1}) &  =(a_{1, 1}-x)\ \Big((-1)^{n-1}x^{n-1}+(-1)^{n-2}\ \mathrm{Tr}(B)x^{n-2}+\dots\Big) \\
->  & = (-1)^{n}x^{n}+(-1)^{n-1}\mathrm{Tr}(B)x^{n-1}+a_{1,1}(-1)^{n-1}x^{n-1}+\dots \\
->  & = (-1)^{n}x^{n}+(-1)^{n-1}\mathrm{Tr}(A)x^{n-1}+\dots
-> \end{align}
-> $$
-> ❏
+> > [!Proof]-
+> > 
+> > It is obvious from the nature of the determinant that $f$ is of degree $n$ (this in fact gives another proof of $A$ having at most $n$ eigenvalues). For a $2\times{2}$ matrix $A$, we have
+> > $$
+> > \begin{align}
+> > f(x)=\det \begin{bmatrix}
+> > a-x & b \\
+> > c & d-x 
+> > \end{bmatrix}
+> >  & =(a-x)(d-x)-bc \\
+> >  & =x^{2}-(a+d)x+(ad-bc) \\
+> >  & =x^{2}-\mathrm{Tr}(A)\ x+\det A
+> > \end{align}
+> > $$
+> > Now we shall prove the theorem for general $n$. Observe from the definition of $f$ that $f(0)=\det A$. Thus, the constant term is $\det A$. 
+> > 
+> > If use [[LEC ALG1 15#Cofactor expansions|cofactor expansion]] along the first row to compute the determinant, observe that only the first term in the expansion will have a $x^{n}$ and $x^{n-1}$ term. Thus, we only need to bother with the first term.
+> > $$
+> > \begin{align}
+> > \det (A-xI_{n}) & =\det \left[\begin{array}{c|ccc}
+> > a_{1,1}-x& a_{1, 2}  & \dots & a_{1, n}\\
+> > \hline
+> > a_{2, 1} \\
+> > \vdots &  & {\large B-xI_{n-1}}\\
+> > a_{n, 1}
+> > \end{array}\right] \\ \\
+> >  & =(a_{1, 1}-x)\det (B-xI_{n-1}) + \dots
+> > \end{align}
+> > $$
+> > If we proceed inductively with $n=2$ as our base case, we have
+> > $$
+> > \begin{align}
+> > \det(B-xI_{n-1})=(-1)^{n-1}x^{n-1}+(-1)^{n-2}\ \mathrm{Tr}(B)x^{n-2}+\dots
+> > \end{align}
+> > $$
+> > Thus, we have
+> > $$
+> > \begin{align}
+> > (a_{1, 1}-x)\det (B-xI_{n-1}) &  =(a_{1, 1}-x)\ \Big((-1)^{n-1}x^{n-1}+(-1)^{n-2}\ \mathrm{Tr}(B)x^{n-2}+\dots\Big) \\
+> >  & = (-1)^{n}x^{n}+(-1)^{n-1}\mathrm{Tr}(B)x^{n-1}+a_{1,1}(-1)^{n-1}x^{n-1}+\dots \\
+> >  & = (-1)^{n}x^{n}+(-1)^{n-1}\mathrm{Tr}(A)x^{n-1}+\dots
+> > \end{align}
+> > $$
+> > 
+> 
 
 >[!important]
 > For a upper/lower triangular matrix $A$, the characteristic polynomial is of the form
@@ -177,8 +182,7 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 > since the determinant of a triangular matrix is the [[LEC ALG1 15#Computing the determinant|product of its diagonal entries]]. We can see that the diagonal entries are the eigenvalues of $A$.
 
 ---
-
-## Eigenstuff of abstract operators
+# Eigenstuff of abstract operators
 
 Linear operators can have different matrices. For linear operators in $\mathbb{R}^{2}$ and $\mathbb{R}^{3}$, geometric intuition tells us that eigenvalues should be properties of the map itself, and not the matrix used to represent it. This is true in general.
 
@@ -195,12 +199,13 @@ Note that the determinants of similar matrices are equal. $\det PBP^{-1}=\det P\
 
 One should think of two similar matrices as representing the same abstract linear operator $T:V\to V$ in different bases. For example, if $B$ and $B'$ are bases of $V$, then $[T]_{BB}$ and $[T]_{B'B'}$ are similar matrices, related by $[T]_{BB}=[I]_{BB'}[T]_{B'B'}[I]_{B'B}$. 
 
-From the previous section, we know how to find the eigenvalues of a matrix. How do we find the eigenvalues of an abstract linear operator $T:V\to V$? We pick an arbitrary basis, and compute the eigenvalues of the matrix of the operator in that basis. We can do this because *similar matrices have the same characteristic polynomial*:
-
->Let $A=SBS^{-1}$.
->$A-\lambda I=SBS^{-1}-\lambda SIS^{-1}=S(B-{\lambda I})S^{-1}$.
->So, $\det(A-\lambda I)=\det(B-\lambda I)$.
-
+From the previous section, we know how to find the eigenvalues of a matrix. How do we find the eigenvalues of an abstract linear operator $T:V\to V$? We pick an arbitrary basis, and compute the eigenvalues of the matrix of the operator in that basis. We can do this because *similar matrices have the same characteristic polynomial*: if $A=SBS^{-1}$,
+$$
+\begin{align}
+ & A-\lambda I=SBS^{-1}-\lambda SIS^{-1}=S(B-{\lambda I})S^{-1}\\
+ \implies&  \det(A-\lambda I)=\det(B-\lambda I).
+\end{align}
+$$
 Therefore, we can define the characteristic polynomial of an operator as the characteristic polynomial of its matrix in some basis. As we have discussed above, the result does not depend on the choice of the basis, so characteristic polynomial of an operator is well defined.
 
 >[!Warning] Similar matrices do not have the same eigenvectors!

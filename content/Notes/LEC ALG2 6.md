@@ -8,33 +8,31 @@ id: "95"
 ---
 ## Third isomorphism theorem
 
-> [!Theorem] Third Isomorphism Theorem
-> Let $G$ be a group and let $H\triangleleft G$, $K\triangleleft G$, and $H<K$. Then, $K/H\triangleleft G/H$ and 
+> [!Theorem]
+> Let $H\triangleleft G$, and let $H<N< G$. Then $N/H\triangleleft G/H\iff N\triangleleft G$, and in this case
 > $$
-> \frac{{G/H}}{K/H}\cong G/K.
+> \frac{G/H}{N/H}\cong \frac{G}{N}.
 > $$
 > 
 > > [!Proof]-
-> > First, observe that $H\triangleleft G$ and $H< K< G$ implies $H\triangleleft K$. So, $K/H$ is a group.
-> > Consider $kH\in K/H$, $gH\in G/H$. 
+> > 
+> > If $N$ is normal, then consider the projection
 > > $$
-> > \begin{align}
-> > (gH)(kH)(gH)^{-1} & =gHkHg^{-1}H \\
-> >  & =gkg^{-1}H 
-> > \end{align}
+> > G\to \frac{G}{N}:
 > > $$
-> > Since $K$ is a normal subgroup, $gkg^{-1}\in K$. Thus, $gkg^{-1}H\in K/H$. Since conjugation is an invertible operation, this gives $(gH)(K/H)(gH)^{-1}=K/H$, i.e. $K/H\triangleleft G/H$. 
+> > the subgroup $H$ is contained in the kernel $N$, so by [[LEC ALG2 4#^43c508]] we get an induced homomorphism 
+> > $$
+> > \frac{G}{H}\to\frac{G}{N}.
+> > $$
+> > The subgroup $N/H$ of $G/H$ is the kernel of this homomorphism; therefore it is normal. The stated isomorphism $(G/H)/(N/H)\cong G/N$ follows from the first isomorphism theorem. 
 > > 
-> > Now, consider the map $\phi: G/H\to G/K$ defined by $gH\mapsto gK$. This map is well defined, since if $g$ is in a coset $aK$, $gH$ is also necessarily in $aK$. $\phi$ is also surjective, since for every $aK\in G/K$, $aH\mapsto aK$. 
-> > 
-> > $\phi$ is an homomorphism: $\phi((gH)\circ (g'H))=gg'K$, $\phi(gH)\phi(g'H)=gg'K$. The kernel of $\phi$ is the set of all cosets of $H$ contained in $K$, $K/H$. 
-> > 
-> > From the [[LEC ALG2 4#First isomorphism theorem|first isomorphism theorem]], $\frac{G/H}{K/H}\cong G/K$. 
+> > Conversely, if $N/H$ is normal in $G/H$, consider the composition
+> > $$
+> > G\twoheadrightarrow \frac{G}{H} \twoheadrightarrow \frac{G/H}{N/H}.
+> > $$
+> > The kernel of this homomorphism is $N$; therefore $N$ is normal. 
 > 
 
-^de06fc
-
-Note that if only $H<G$, $K<G$, and $H<K$ are true, we can still define $\phi:G/H\to G/K$ as we did above, but as a set theoretic function. Note that $G/H$ and $G/K$ are only sets of cosets here, not groups. Our reasoning that $\phi$ is well defined did not use the normality of $H$ or $K$, and thus is still valid.
 
 ---
 ## Direct products

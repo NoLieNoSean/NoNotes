@@ -102,8 +102,8 @@ As in the case of groups, quotients by corresponding ideals are isomorphic:
 
 ^f12ed2
 
-> [!Warning]
-> $J/I$ is not a ring! 
+
+==$J/I$ is not a ring!==
 
 ---
 # Ideals

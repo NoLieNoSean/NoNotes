@@ -10,3 +10,5 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 @wegertVisualComplexFunctions2012, @steinComplexAnalysis2003
 
 [[LEC CANA 1]]
+[[LEC CANA 2]]
+

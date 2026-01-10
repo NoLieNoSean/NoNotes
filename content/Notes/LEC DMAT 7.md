@@ -18,11 +18,9 @@ id: "205"
 > [!Theorem]
 > A *tree* is a connected graph without cycles.
 
-> [!Theorem] Cayley's Theorem
+> [!Theorem] Cayley's
 > The number of labelled trees on $n$ vertices is $n^{n-2}$. 
 
-Refer [[Combinatorics Topics, Techniques, Algorithms (Peter J. Cameron).pdf#page=48|Cameron]].
+Refer @cameronCombinatoricsTopicsTechniques2001 [p.38].
 
 Alternate proof exists using [Prüfer sequences](https://en.wikipedia.org/wiki/Pr%C3%BCfer_sequence).
-
-

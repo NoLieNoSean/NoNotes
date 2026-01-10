@@ -72,7 +72,7 @@ $$
  & =2\sum_{n\geq 0}\binom{\frac{1}{2}}{n+1}(-4x)^{n}
 \end{align}
 $$
-(There is a truckload of justification that's required for what we just did, but it's ok to sweep it under the rug for now). 
+(There is a lot to be justified in what we just did, but it's ok to sweep it under the rug for now). 
 
 Finally, the Catalan numbers can be read off the coefficients:
 

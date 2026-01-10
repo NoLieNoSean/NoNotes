@@ -9,7 +9,7 @@ id: "153"
 ---
 ![[1730581827131.jpeg]]
 
-## Prologue
+# Absolutely and conditionally convergent series
 
 > [!Definition]
 > We say $\sum a_{k}$ *converges absolutely* if $\sum |a_{k}|$ converges.
@@ -34,18 +34,19 @@ $$
 $$
 The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\equiv l$. So, the sequence $s_{1}, s_{2}, s_{3}, \dots$ must also converge to $l$ (which is $\ln 2$, btw).
 
+> [!Important]
+> If a convergent series is not absolutely convergent (in which case it is said to be **conditionally convergent**), [[PS DMAT 1#^1aa425|we are not at liberty to rearrange the terms]]. This severely restricts the manipulations we can perform. On the other hand, the limit of an absolutely convergent series is independent of the order in which we sum the terms. 
+
 ---
-## More convergence tests
+# More convergence tests
 
-### Root test
-
-> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.33
+> [!Theorem] Root test, @rudinPrinciplesMathematicalAnalysis1976 3.33
 > Given $\sum a_{n}$, define
 > $$
 > \alpha\equiv \limsup _{n\to \infty}\sqrt[n]{ |a_{n}| }.
 > $$
 > Then, 
-> 1. if $\alpha<1$, $\sum a_{n}$ converges (in fact, it converges absolutely);
+> 1. if $\alpha<1$, $\sum a_{n}$ converges ==absolutely==;
 > 2. if $\alpha>1$, $\sum a_{n}$ diverges;
 > 3. if $\alpha=1$, the test is inconclusive.
 > 
@@ -57,12 +58,13 @@ The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\
 > > To prove (3), consider series $\sum \frac{1}{n}$ and $\sum \frac{1}{n^{2}}$. Both have $\alpha=1$ (Rudin, 3.20), but the first diverges, while the second converges. 
 > 
 
-### Ratio test
+^83e84a
 
-> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.34
+
+> [!Theorem] Ratio test, @rudinPrinciplesMathematicalAnalysis1976 3.34
 > The series $\sum a_{n}$
-> 1. converges if $\limsup| \frac{a_{n+1}}{a_{n}}|<1$,
-> 2. diverges if $| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$, where $N_{0}$ is some fixed integer.
+> 4. converges if $\limsup| \frac{a_{n+1}}{a_{n}}|<1$,
+> 5. diverges if $| \frac{a_{n+1}}{a_{n}}|\geq 1$ for all $n\geq N_{0}$, where $N_{0}$ is some fixed integer.
 > 
 > > [!Proof]-
 > > If (1) holds, in the same manner as in the previous proof, we can pick $\limsup| \frac{a_{n+1}}{a_{n}}|<\beta<1$ such that there exists $N$ such that for all $n> N$, $| \frac{a_{n+1}}{a_{n}}|<\beta$. In particular, 
@@ -86,9 +88,9 @@ The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\
 See @rudinPrinciplesMathematicalAnalysis1976 3.35 for examples.
 
 ---
-## Power series
+# Power series
 
-> [!Definition] Definition (Rudin, 3.38)
+> [!Definition] @rudinPrinciplesMathematicalAnalysis1976 3.38
 > The **power series** of a sequence $(c_{n})$ of complex numbers is the series
 > $$
 > \sum_{n=0}^{\infty}c_{n}z^{n}.
@@ -99,11 +101,11 @@ See @rudinPrinciplesMathematicalAnalysis1976 3.35 for examples.
 > $$
 > \alpha\equiv\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}, \ \ \ \ R\equiv \frac{1}{\alpha}
 > $$
-> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges if $|z|<R$ and diverges if $|z|>R$. $R$ is called the **convergence radius** of $\sum c_{n}z^{n}$.
+> If $\alpha=0$, $R=\infty$ and if $\alpha=\infty$, $R=0$. Then, $\sum c_{n}z^{n}$ converges ==absolutely== if $|z|<R$ and diverges if $|z|>R$. $R$ is called the **convergence radius** of $\sum c_{n}z^{n}$.
 > 
 > > [!Proof]-
 > > 
-> > Use the root test:
+> > Use the [[#^83e84a|root test]]:
 > > $$
 > > \begin{align}
 > > \limsup_{ n \to \infty } \sqrt[n]{|c_{n}z^{n}| }=|z|\limsup_{ n \to \infty } \sqrt[n]{  |c_{n}|}= \frac{|z|}{R}

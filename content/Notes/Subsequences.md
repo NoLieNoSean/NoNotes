@@ -49,7 +49,6 @@ One way to prove this is like so:
 
 See @abbottUnderstandingAnalysis2015 [p. 64] for an alternate proof that uses the [[The real field#Nested interval property|nested interval property]] of $\mathbb{R}$.
 
----
 ### Now, for $\mathbb{R}^{k}$.
 
 We know that the [[Algebraic Limit Theorem in Vector Spaces#Slot-wise convergence|convergence of vectors in R^k]] is tested slot-wise. If a sequence is bounded in $\mathbb{R}^{k}$, it doesn't take much to show that every slot must be bounded too. Thus, the sequence is bounded in the region $[a_{1},b_{1}]\times[a_{2},b_{2}]\times\dots \times[a_{k},b_{k}]$, called a closed box. (I know, we defined being bounded as being within a ball, but you can draw a ball around a box). Since each slot is bounded, we should be able to extract a convergent subsequence for every slot. However, this does not work right away since the indices for the convergent subsequences obtained in slot 1 and slot 2 may have nothing to do with each other. Fortunately, this is easily remedied. First, extract a convergent subsequence in slot 1. Now, throw away all the vectors whose indices do not appear in this subsequence. Repeat the same process for slot 2. Since subsequences of convergent sequences also converge, this ensures that we end up with a subsequence of vectors where every slot converges.

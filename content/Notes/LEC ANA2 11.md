@@ -7,7 +7,6 @@ tags:
   - Processed
 id: "315"
 ---
-
 # Stone Weierstrass Theorem
 
 > [!Note]
@@ -17,7 +16,6 @@ id: "315"
 > 3. [[#^c03f69]]: S-W for $\mathbb{C}$-subalgebras
 > 4. [[LEC ANA2 12#^04f340]]: characterization of $\mathbb{R}$-subalgebras which separate points
 > 5. [[LEC ANA2 12#^8f3e36]]: S-W for $\mathbb{R}$-subalgebras and locally compact spaces
-
 
 > [!Proposition] Dini
 > Let $X$ be a compact metric space. Suppose $\{ f_{n} \}\subseteq C(X)$ is monotone[^1] and converges pointwise to $f\in C(X)$. Then, $\{ f_{n} \}$ converges to $f$ uniformly.

@@ -7,15 +7,20 @@ id: "262"
 ---
 # Primary decomposition
 
-Let $R$ be a [[Noetherian rings|Noetherian]] commutative ring. An ideal $I$ of $R$ is called **primary** if it is a proper ideal and for each pair of elements $x$ and $y$ in $R$ such that $xy\in I$, either $x$ or some power of $y$ is in $I$; equivalently, every zero-divisor in the quotient $R/I$ is nilpotent. The radical of a primary ideal $Q$ is a prime ideal and $Q$ is said to be $\mathfrak{p}$-primary for $\mathfrak{p}=\sqrt{ Q }$.
+Let $R$ be a [[Noetherian rings|Noetherian]] commutative ring. An ideal $I$ of $R$ is called **primary** if it is a proper ideal and for each pair of elements $x$ and $y$ in $R$ such that $xy\in I$, either $x$ or some power of $y$ is in $I$; equivalently, every zero-divisor in the quotient $R/I$ is nilpotent. The [[LEC ALG3 5#^e9f650|radical]] of a primary ideal $Q$ is a prime ideal and $Q$ is said to be $\mathfrak{p}$-primary for $\mathfrak{p}=\sqrt{ Q }$.
 
-Any ideal $I$ in a Noetherian commutative ring ==has== an irredundant **primary decomposition** into primary ideals (see [[TST ALG3 Midsem#^bb9980]]):
+Any ideal $I$ in a Noetherian commutative ring ==has== an irredundant **primary decomposition** into primary ideals[^2]:
 $$
 I=Q_{1} \cap\dots \cap Q_{n}.
 $$
-By irredundant, we mean that removing any of the $Q_{i}$ changes the intersection, *and all the prime ideals $\sqrt{ Q_{i} }$ are distinct* (note that the manner in which we constructed the primary decomposition [[TST ALG3 Midsem#^bb9980|here]] ensures this).
+By irredundant, we mean that removing any of the $Q_{i}$ changes the intersection, *and all the prime ideals $\sqrt{ Q_{i} }$ are distinct*. 
 
-# Associated primes
+## Associated primes
+
+[!Definition]
+Let $R$ be a Noetherian ring and $M$ be a [[LEC ALG3 3#^2e9663|module]] over $R$. An **associated prime** is a prime ideal which is the annihilator of a nonzero element of $M$; that is, $\mathfrak{p}=\text{Ann}(m)$ for some $m\in M$[^3]. Equivalently, a prime ideal $\mathfrak{p}$ is an associated prime of $M$ if there is an injection of $R$-modules $R/\mathfrak{p}\hookrightarrow M$. 
+
+
 
 > [!Definition] Associated primes
 > Given a primary decomposition $I=Q_{1} \cap\dots \cap Q_{n}$, the set $\text{Ass}_{R}(I):=\{ \sqrt{ Q_{i} }\ | \ i \}$ is ==uniquely determined== by $I$, and is called the set of **associated primes** of $I$. Minimal elements in $\text{Ass}_{R}(I)$ are called **isolated primes** while the rest (those properly containing minimal primes) are called **embedded primes**.
@@ -174,3 +179,6 @@ The following Lemma holds in general.
 
 ^84e161
 
+[^2]: we saw this in [[TST ALG3 Midsem#^bb9980]] for the case of $R$ being a PID.
+
+[^3]: this implies $m\ne 0$.
