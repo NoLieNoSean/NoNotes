@@ -49,7 +49,7 @@ Thus, there is only one sensible ring structure on $R/I$, given by $(a+I)(b+I)\e
 
 *Thus, $R/I$ is a ring, in such a way that the canonical projection $\pi:R\to R/I$ is a ring homomorphism, iff $I$ is an ideal of $R$.*
 
-The [[LEC ALG2 4#^43c508|mapping property of quotient groups]] provides the scaffolding for its analogue in $\textsf{Ring}$: the needed (group) homomorphism exists and is unique by the group theoretic theorem; verifying it is a ring homomorphism is immediate.
+The [[LEC ALG2 4#^43c508|universal property of quotient groups]] provides the scaffolding for its analogue in $\textsf{Ring}$: the needed (group) homomorphism exists and is unique by the group theoretic theorem; verifying it is a ring homomorphism is immediate.
 
 > [!Theorem] @aluffiAlgebraChapter02009 III.3.8
 > Let $I$ be a two-sided ideal of a ring $R$. Then for every ring homomorphism $\varphi:R\to S$ such that $I\subseteq \ker\varphi$ there exists a unique ring homomorphism $\tilde{\varphi}:R/I\to S$ so that the diagram

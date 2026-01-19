@@ -12,6 +12,14 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 > A **Group** is a groupoid with a single object.
 
 ---
+
+
+[[Categorical notes on groups]]
+[[Normalizers and Conjugacy]]
+[[Finding all subgroups of S4]]
+[[Assorted questions on groups]]
+[[Group of units mod p is cyclic]]
+
 # Lectures
 
 - [[LEC ALG2 1]] ✅
@@ -47,13 +55,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 - [[LEC ALG2 16]]
 	- Symmetries
 
-[[Group theory questions]]
 
-# Other notes
-
-[[Normalizers and Conjugacy]]
-[[Finding all subgroups of S4]]
-[[Group of units mod p is cyclic]]
 
 
 # Assessments

@@ -30,8 +30,12 @@ A category is called **concrete** if the objects of the category are structured 
 The strength of category theory lies in its abstraction: objects do not have to be sets, and morphisms do not have to be functions.
 
 > [!Example] Finite categories
-> ![[image.jpeg]]
 > 
+> ```latex
+> % latex-id: e522-26cf-18ef-457d-8882
+> \[\begin{tikzcd} &&&&& {*} & \star \\ {*} && {*} & \star &&& \bullet \arrow[from=1-6, to=1-7] \arrow[from=1-6, to=2-7] \arrow[from=1-7, to=2-7] \arrow[from=2-3, to=2-4] \end{tikzcd}\]
+> ```
+ 
 
 > [!Example] The category Rel
 > Take sets as objects and take binary relations as arrows. That is, an arrow $f:A\to B$ is an arbitrary subset $f\subseteq A\times B$. The identity arrow on a set $A$ is the identity relation. Given $R\subseteq A\times B$ and $S\subseteq B\times C$, define composition $S\circ R$ by
@@ -217,7 +221,6 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 > $$
 > In other words, $f$ is a monomorphism if it is *left cancellable*.
 
-
 > [!Definition] Epimorphism
 > Let $\textsf{C}$ be a category. A morphism $f\in \text{Hom}_{\textsf{C}}(A, B)$ is an **epimorphism** if the following holds: for all objects $Z$ of $\textsf{C}$ and all morphisms $\alpha, \alpha'\in \text{Hom}_{\textsf{C}}(B, Z)$, 
 > $$
@@ -228,12 +231,13 @@ Note that defining qualities of morphisms by their actions on 'elements' (as we 
 
 In $\textsf{Set}$, the monomorphisms are precisely the injective functions, and the epimorphisms are precisely the surjective functions.
 
+Clearly, if a morphism is left/right invertible, it is left right cancellable. In particular, an isomorphism is epic and monic. The converse is not true, however. 
 ### Common Fallacies
 
 Several things that we take for granted in $\textsf{Set}$ break in general categories:
 #### epic + monic ${\implies}\mathllap{/~~~\,}$ isomorphism
 
-In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, i.e iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities.
+In $\textsf{Set}$, a function is an isomorphism iff it is both injective and surjective, i.e iff it is both a monomorphism and an epimorphism. But in the category defined by $\leq$ on $\mathbb{Z}$, *every* morphism is both a monomorphism and an epimorphism (since there is at most one morphism between any two objects, the defining conditions become vacuously true), while the only isomorphisms are identities. 
 
 #### epic ${\implies}\mathllap{/~~~\,}$ right invertible,     monic ${\implies}\mathllap{/~~~\,}$ left invertible
 

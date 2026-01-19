@@ -155,7 +155,7 @@ There are four types of symmetries present here.
 4) Vertex Symmetries - 8
 	- $(F\ U\ R)(L\ B\ D)$ and its inverse
 	- $(F\ R\ D)(U\ B\ L)$ and its inverse
-	- $(R\ U\ B)(F\ L\ D)$ and its [[Untitled.gif|inverse]]
+	- $(R\ U\ B)(F\ L\ D)$ and its [[S4.gif|inverse]]
 	- $(R\ D\ B)(F\ U\ L)$ and its inverse
 5) The identity symmetry - 1
 	-  $(R)(L)(F)(B)(U)(D)$

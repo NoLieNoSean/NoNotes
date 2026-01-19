@@ -1,153 +1,179 @@
 ---
 id: "102"
 ---
-
-## The free group
+# Free groups
 
 Refer @balsdonFREEGROUPSGEOMETRY, @suryFreeGroupsBasics2010.
 See @robinsonBANACHTARSKIPARADOX2015 for an interesting application of free groups.
 
-> [!Definition]
-> A set of group elements that satisfy no relations except those implied by the axioms is called *free*, and a group that has a free set of generators is called a *free group*.
+Intuitively, a free group is a group which has no nontrivial relations among its elements - it satisfies the bare minimum requirements to be called a group (the group axioms) and nothing more.
 
-To construct a free group, start with an arbitrary set, say $S=\{ a, b, \dots \}$. Let $S'$ be the set that contains the symbols $a$ and $a^{-1}$ for every $a\in S$, $i$.$e$, $S'=\{ a, a^{-1}, b, b ^{-1} , \dots\}$. The elements of $S'$ are called symbols, and define a word to be a finite string of symbols, in which repetition is allowed. Let $W$ be the set of all words, with the empty string $e$. Define the product operation on $W$ to be concatenation. Obviously, $W$ is not a group, since inverses do not exist (yet).
+> [!Definition]
+> Given a non-empty set $S$, and a map $\theta:S\to F$ into a group $F$, the pair $(F, \theta)$ is said to be a **free group** on the set $S$ if, for any function $\varphi:S\to G$ to any group $G$, there is a ==unique== homomorphism $\overline{\varphi}:F\to G$ such that $\varphi=\overline{\varphi}\circ\theta$. When $\theta$ is an inclusion, we call $\overline{\varphi}$ the unique extension of $\varphi$ to $F$. 
+> 
+> ```latex
+> % latex-id: a143-53a6-14a3-4ad1-90cd
+> \begin{tikzcd}
+> S\ar[r, "\varphi"]\ar[d, "\theta"']&G\\
+> F\ar[ru, dotted, "\overline{\varphi}"']&\\
+> \end{tikzcd}
+> ```
+> 
+> 
+
+^1e47e5
+
+> [!Proposition]
+> If $(F, \theta)$ is a free group on a set $S$, then
+> 1. $\theta$ must be injective.
+> 2. $(F, \text{inclusion})$ is free on $\text{im}(\theta)$. 
+> 3. $\text{im}(\theta)$ generates $F$. 
+> 
+> > [!Proof]-
+> > 
+> >  $(1)$ and $(2)$ are clear, so $S\subseteq F$. Let $i$ be the inclusion $S\hookrightarrow F$. The unique extension of $i$ to $F$ is clearly the identity [^1]. Consider the inclusions $i_{1}:S\hookrightarrow \langle S \rangle$ and $i_{2}:\langle S \rangle\hookrightarrow F$. Clearly, $i=i_{2}\circ i_{1}$. Let $\pi$ be the unique extension of $i_{1}$ to $F$.   Then, we have $i=i_{2}\circ \pi \circ i$, forcing $i_{2}\circ \pi=\text{id}$. Since $i_{2}$ is an inclusion, this forces $\langle S \rangle=F$.  
+> > 
+> > ```latex
+> > % latex-id: a0c9-7ea5-2a53-44ef-bfff
+> > \begin{tikzcd}
+> > S\ar[r, "i_{1}"]\ar[rr, bend left, "i"]\ar[d, hook, "i"']&\langle S \rangle \ar[r, "i_{2}"]&F\\
+> > F\ar[ru, "\pi"]\ar[rru, dashed,  "id"']&&
+> > \end{tikzcd}
+> > ```
+> > 
+> 
+
+## Constructing a free group on any arbitrary set
+
+To construct a free group, start with an arbitrary set, say $S=\{ a, b, \dots \}$. Let $S'$ be the set that contains the symbols $a$ and $a^{-1}$ for every $a\in S$, $i$.$e$, $S'=\{ a, a^{-1}, b, b ^{-1} , \dots\}$. The elements of $S'$ are called symbols. Define a word to be a finite string of symbols, in which repetition is allowed. Let $W$ be the set of all words along with the empty string $e$. Define the product operation on $W$ to be concatenation. Obviously, $W$ is not a group, since inverses do not exist (yet).
 
 If a word looks like $\dots x x ^{-1}\dots$ for some $x\in S'$, we may agree to "cancel" the two symbols $x$ and $x ^{-1}$. Call a word *reduced* if no such reduction can be made. Starting with any $w\in W$, we can make a finite sequence of reductions to arrive at a reduced word $\overline{w}$, which is called the *reduced form* of $w$. There may be more than one way to arrive at the reduced word. If we want the notion of a reduced word to be well defined, we must ensure that all paths lead to $\overline{w}$.
 
-> [!Theorem]
+> [!Lemma]
 > There is only one reduced word for a given word $w$.
 
 Proof by induction on $n$ (easy). See @artinAlgebra2011 [p. 211].
 
 Define an equivalence relation $\sim$ on $W$ by $w\sim w'$ if $w$ and $w'$ have the same reduced word. Next, observe that products of equivalent words are equivalent, that is, $w\sim w'$ and $v\sim v'$ imply $wv\sim w'v'$. Therefore, it follows that the equivalence classes of words can be multiplied.
 
-> [!Theorem]
+> [!Lemma]
 > The set $W/\sim$ of equivalence classes is a group, with the law of composition induced from multiplication in $W$.
 > 
 > > [!Proof]-
 > > The facts that multiplication is associative and that the class of the empty word $e$ is an identity follows from the corresponding facts in $W$. Also, for any $[xy\dots z]\in W/\sim$, $[z^{-1}\dots y^{-1}x ^{-1}]\in W/\sim$ is clearly its inverse.
 > 
 
-The group $W/\sim$ of equivalence classes in $S'$ is called the *free group* on the set $S$, and is denoted by $\mathcal{F}(S)$. 
+Let $F:=W/\sim$. Defining the map $\theta:S\to F$ by $x\mapsto [x]$, let us show that $(F, \theta)$ is free on $S$. 
 
-Thus, for any group $S$, there exists a unique free group generated by $S$. Also, if $|S|=|T|$, the free groups generated by $S$ and $T$ are isomorphic. Thus, the free group of rank $r$ is defined.
+> [!Proposition]
+> $(F, \theta)$ is free on $S$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $\varphi:S\to G$ be a map into any group. Let $S=\{ s_{\alpha}:\alpha\in I \}$, and the image $\text{im}\,(\theta)$ of $S$ in $F$ be denoted by $\{ s'_{\alpha}:\alpha\in I \}$. $\overline{\varphi}$ from [[#^1e47e5]], if it exists, must agree with $\varphi$ on $S$, that is, $\overline{\varphi}(s'_{\alpha})=\varphi(s_{\alpha})$. Since $\text{im}\,(\theta)$ generates $F$, this can be uniquely extended to a homomorphism $F\to G$.
+> 
 
-From now on, we will not distinguish between any two words belonging to the same class in $W/\sim$ (words which are equivalent modulo the group axioms). Thus, "word" will refer to a class in $W/\sim$.
+^383842
 
-### Generators and relations
+Thus, given a set $S$, we have constructed *a* free group on $S$. We will now show that free groups constructed on sets of the same cardinality are isomorphic. 
+## Rank of a free group
+
+> [!Proposition]
+> If $|X_{1}|=|X_{2}|$, then $F(X_{1})\cong F(X_{2})$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $\alpha:X_{1}\to X_{2}$ be an isomorphism, and $(F_{1}, \theta_{1})$, $(F_{2}, \theta_{2})$ be free groups on $X_{1}$ and $X_{2}$ respectively. Let $\varphi_{1}:F_{1}\to F_{2}$ and $\varphi_{2}:F_{2}\to F_{1}$ be the unique homomorphisms given by [[#^1e47e5]]. 
+> > ```latex
+> > % latex-id: c25e-fa32-6ff9-4946-bd81
+> > \begin{tikzcd}[column sep = large]
+> > X_{1} \ar[r, "\alpha"]\ar[rd, "\theta_{2}\circ\alpha"]\ar[d, "\theta_{1}"'] & X_{2}\ar[d, "\theta_{2}"] \\
+> > F_{1}\ar[r, dashed, "\varphi_{1}"'] & F_{2}
+> > \end{tikzcd}
+> > ```
+> > 
+> > For all $x\in X_{1}$, 
+> > $$
+> > \begin{align}
+> > \varphi_{2}(\varphi_{1}(\theta_{1}(x))) & =\varphi_{2}(\theta_{2}(\alpha(x))) \\
+> >  & = \theta_{1}(\alpha ^{-1}(\alpha(x))) \\
+> >  & =\theta_{1}(x).
+> > \end{align}
+> > $$
+> > Therefore, $\varphi_{2}\circ\varphi_{1}$ makes this diagram commute:
+> > ```latex
+> > % latex-id: c902-e655-dfd4-4c9f-94a4
+> > \begin{tikzcd}
+> > X_{1}\ar[r, "\theta_{1}"]\ar[d, "\theta_{1}"'] & F_{1} \\
+> > F_{1}\ar[ru, "\varphi_{2}\circ\varphi_{1}"'] & 
+> > \end{tikzcd}
+> > ```
+> > Since the identity $\text{id}_{F_{1}}:F_{1}\to F_{1}$ also makes the above diagram commute, it follows that $\varphi_{2}\circ \varphi_{1}=\text{id}_{F_{1}}$. Similarly, $\varphi_{1}\circ\varphi_{2}=\text{id}_{F_{2}}$. Thus, $F_{1}\cong F_{2}$. 
+> 
+
+^0409cd
+
+The converse is also true: isomorphic free groups must be on isomorphic sets. 
+
+> [!Proposition]
+> If $F(X_{1})\cong F(X_{2})$, then $|X_{1}|=|X_{2}|$. 
+> 
+> > [!Proof]-
+> > 
+> > Consider the sets $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ and $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ of group homomorphisms to the field $\mathbb{F}_{2}$. These sets are vector spaces over $\mathbb{F}_{2}$ with bases $X_{1}$ and $X_{2}$ respectively. Fixing an isomorphism $\theta:F(X_{1})\to F(X_{2})$,  we have an isomorphism of $\mathbb{F}_{2}$ vector spaces from $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ to $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ given by $\varphi\mapsto\varphi \circ\theta$ [^2]. Thus, [[LEC ALG4 3#^1fd2eb|their bases must have the same cardinality]], which proves $|X_{1}|=|X_{2}|$. 
+> 
+
+^cb59c5
+
+In light of [[#^0409cd]] and [[#^cb59c5]], one may define
 
 > [!Definition]
-> A *relation* among elements $x_{1}, x_{2}, \dots, x_{n}$ of a group $G$ is a word $r$ in the free group on the set $\{ x_{1}, x_{2}, \dots, x_{n} \}$ that evaluates to $1$ in $G$. 
+> The **rank** of any free group is the cardinality of a set $X$ on which it is free. 
 
-> [!Theorem]
-> Let $R$ be a subset of a group $G$. There exists a unique smallest normal subgroup $N$ of $G$ which contains $R$, called the *normal subgroup generated by $R$*. If a normal subgroup of $G$ contains $R$, it contains $N$. The elements of $N$ can be described as follows: Let $R'$ be the set consisting of elements $r$ and $r^{-1}$ with $r\in R$. An element of $G$ is in $N$ if it can be written as a product $y_{1}\dots y_{r}$ of some arbitrary length, where each $y_{v}$ is a conjugate of an element in $R'$.
+## Generators and relations
 
 > [!Definition]
-> Let $\mathcal{F}$ be the free group on a set $S=\{ x_{1}, \dots, x_{n} \}$, and let $R=\{ r_{1}, \dots, r_{k} \}$ be a set of elements of $\mathcal{F}$. The group *generated by $S$ with relations $r_{1}, r_{2}, \dots, r_{k}$* is the quotient group $\mathcal{G}=\mathcal{F}/\mathcal{R}$, where $\mathcal{R}$ is the normal subgroup of $\mathcal{F}$ generated by $R$. $\mathcal{G}$ is denoted by $\langle x_{1}, \dots, x_{n}\ | \ r_{1}, \dots, r_{k} \rangle$.
+> A **relation** among elements $x_{1}, x_{2}, \dots, x_{n}$ of a group $G$ is a word $r$ in the free group on the set $\{ x_{1}, x_{2}, \dots, x_{n} \}$ that evaluates to $1$ in $G$. 
 
-Note that $\mathcal{R}$ is precisely the set of words in $\mathcal{F}$ which equate to the identity in $\mathcal{G}$. Let $R'$ be the set consisting of elements $r$ and $r^{-1}$ with $r\in R$. Let $R^{*}$ be the set of all conjugates of the members of $R'$: $\{ xrx ^{-1}\ | \ x\in \mathcal{F}, r\in R' \}$. Now, any word in $\mathcal{G}$ which evaluates to the identity can be expressed as a product of the elements of $R^{*}$. For example, if $p, q\in \mathcal{F}$, we know that the word $pqr_{1}r_{3}^{-1}q^{-1}r_{2}^{4}p ^{-1}$ evaluates to the identity. It can be represented as a product of the members of $R^{*}$ as 
+The following should be easy to see:
+
+> [!Proposition]
+> Let $R$ be a subset of a group $G$. There exists a unique smallest normal subgroup $N$ of $G$ which contains $R$, called the **normal subgroup generated by $R$**. If a normal subgroup of $G$ contains $R$, it contains $N$. The elements of $N$ can be described as follows: Let $R'$ be the set consisting of elements $r$ and $r^{-1}$ with $r\in R$. An element of $G$ is in $N$ if it can be written as a product $y_{1}\dots y_{r}$ of some arbitrary length, where each $y_{v}$ is a conjugate of an element in $R'$.
+
+> [!Definition]
+> Let $\mathcal{F}$ be the free group on a set $S=\{ x_{1}, \dots, x_{n} \}$, and let $R=\{ r_{1}, \dots, r_{k} \}$ be a set of elements of $\mathcal{F}$. The **group generated by $S$ with relations $r_{1}, r_{2}, \dots, r_{k}$** is the quotient group $\mathcal{G}=\mathcal{F}/\mathcal{R}$, where $\mathcal{R}$ is the normal subgroup of $\mathcal{F}$ generated by $R$. $\mathcal{G}$ is denoted by $\langle x_{1}, \dots, x_{n}\ | \ r_{1}, \dots, r_{k} \rangle$.
+
+Note that $\mathcal{R}$ is precisely the set of words in $\mathcal{F}$ which equate to the identity in $\mathcal{G}$. Let $R'$ be the set consisting of elements $r$ and $r^{-1}$ with $r\in R$. Let $R^{*}$ be the set of all conjugates of the members of $R'$: $\{ xrx ^{-1}\ | \ x\in \mathcal{F}, r\in R' \}$. Observe that any word in $\mathcal{G}$ which evaluates to the identity can be expressed as a product of the elements of $R^{*}$. For example, if $p, q\in \mathcal{F}$, we know that the word $pqr_{1}r_{3}^{-1}q^{-1}r_{2}^{4}p ^{-1}$ evaluates to the identity in $G$. It can be represented as a product of members of $R^{*}$ as 
 $$
 (pqr_{1}q^{-1}p ^{-1})(pqr_{3}^{-1}q^{-1}p ^{-1})(pr_{2}^{4}p ^{-1}).
 $$
 Now, for $x\in \mathcal{F}$, consider the coset $x\mathcal{R}$. These are a set of words whose equivalence can be established using the relations $R$ (observe that since $\mathcal{R}$ is normal, $x\mathcal{R}$ contains every possible word equivalent to $x$ that you can think of: $x\mathcal{R}=\mathcal{R}x=\mathcal{R}x\mathcal{R}=\mathcal{R}x^{2}\mathcal{R}x ^{-1}\mathcal{R}=\dots$). Thus, the cosets of $\mathcal{R}$ in $\mathcal{F}$ correspond to the distinct words in the group $\mathcal{G}$, modulo the relations in $R$. 
 
-> [!Theorem] Mapping property of the Free group / universal property
-> Let $\mathcal{F}$ be the free group on a set $S=\{ a, b, \dots \}$, and let $G$ be a group. Any map of sets $f:S\to G$ *extends uniquely to a group homomorphism* $\varphi:\mathcal{F}\to G$. If we denote the image $f(x)$ of an element $x$ of $S$ by $\overline{x}$ (and define $f(x ^{-1})=\overline{x}^{-1}$), the image of a word $w_{1}w_{2}\dots w_{r}\in \mathcal{F}$ will be $f(w_{1})f(w_{2})\dots f(w_{r})$.
-
-> [!Corollary] 
-> Let $G$ be a group and $S=\{ x_{1}, \dots, x_{n} \}\subseteq G$. $R=\{ r_{1}, \dots, r_{k} \}$ is a set of relations among the elements of $S$ satisfied in $G$, $\mathcal{F}$ is a free group on $S$, and $\mathcal{R}$ is the normal subgroup of $\mathcal{F}$ generated by $R$. Let $\mathcal{G}=\mathcal{F}/\mathcal{R}$.
-> There is a canonical homomorphism $\psi:\mathcal{G}\to G$.
+> [!Theorem] 
+> Let $G$ be a group and $S=\{ x_{1}, \dots, x_{n} \}\subseteq G$. Let $R=\{ r_{1}, \dots, r_{k} \}$ be a set of relations satisfied by the elements of $S$ in $G$. Let $\mathcal{F}$ be the free group on $S$, and $\mathcal{R}$ be the normal subgroup of $\mathcal{F}$ generated by $R$. Let $\mathcal{G}:=\mathcal{F}/\mathcal{R}$. Then, there is a canonical homomorphism $\psi:\mathcal{G}\to G$ which is
+> 1. surjective iff $S$ generates $G$;
+> 2. injective iff every relation among the elements of $S$ is in $\mathcal{R}$. In other words, $\psi$ is injective iff $\mathcal{R}=\ker \psi$. 
+> 
+> If $\psi$ is bijective, we say $R$ forms a **complete set of relations** among the generators $S$, and $G\cong \mathcal{G}$. 
 > 
 > > [!Proof]-
-> > The mapping property gives us a homomorphism $\varphi:\mathcal{F}\to G$ with $\varphi(x_{i})=x_{i}$. Clearly, $R\subseteq \ker\varphi$. Since $\ker\varphi$ is a normal subgroup and thus is closed under the operations we used to construct $\mathcal{R}$, $\mathcal{R}$ must also be contained in $\ker\varphi$. The [[LEC ALG2 4#Mapping property of quotient groups|mapping property of quotient groups]] gives us a map $\overline{\varphi}:\mathcal{G}\to G$. This is the map $\psi$.
+> > 
+> > [[#^1e47e5]] gives us a homomorphism $\varphi:\mathcal{F}\to G$ with $\varphi(x_{i})=x_{i}$. Clearly, $R\subseteq \ker\varphi$. Since $\ker\varphi$ is a normal subgroup and thus is closed under the operations we used to construct $\mathcal{R}$, $\mathcal{R}$ must also be contained in $\ker\varphi$. The [[LEC ALG2 4#^43c508|universal property of quotient groups]] gives us a map $\overline{\varphi}:\mathcal{G}\to G$. This is the map $\psi$.
+> >  
+> > $(1)$ is obvious; to see $(2)$, assume there exists a relation $\rho=1$ among the elements of $S$ which is not present in $\mathcal{R}$. Then, $\mathcal{R}$ and $\rho \mathcal{R}$ will be distinct elements of $\mathcal{F}/\mathcal{R}$. However, since both $\mathcal{R}$ and $\rho \mathcal{R}$ will be contained in $\ker\varphi$, we have $\psi(\mathcal{R})=\psi(\rho \mathcal{R})=1$. 
 > 
 
-Now, 
-1. $\psi$ is surjective iff $S$ generates $G$, and
-2. $\psi$ is injective iff every relation among the elements of $S$ is in $\mathcal{R}$. In other words, $\psi$ is injective iff $\mathcal{R}=\ker\varphi$. 
-
-$(1)$ is obvious; to see $(2)$, assume there exists a relation $\rho=1$ among the elements of $S$ which is not present in $\mathcal{R}$. Then, $\mathcal{R}$ and $\rho \mathcal{R}$ will be distinct cosets in $\mathcal{F}/\mathcal{R}$. However, both $\mathcal{R}$ and $\rho \mathcal{R}$ will be contained in $\ker\varphi$. Thus, $\psi(\mathcal{R})=\psi(\rho \mathcal{R})=1$. Therefore, $\psi$ is not injective.
-
-If the map $\psi$ is bijective, we say $R$ forms a *complete set of relations* among the *generators* $S$, and $G\cong \mathcal{G}$. 
-
-[!Info]- A more rigorous treatment
-Alternatively, you can take the universal property to be the defining property of a free group, and then prove that our previous construction is indeed a free group by showing that it satisfies the universal property: 
-
-> [!Definition]
+> [!Corollary]
+> A group is finitely generated iff it is a quotient of a finitely generated free group.
 > 
-> Let $S$ be a set. A *free group* $F$ generated by $S$ satisfies the following *universal property*: for any group $G$ and any function $\varphi:S\to G$ there is a unique group homomorphism $\overline{\varphi}:F\to G$ extending $\varphi$, so that the following diagram commutes:
-> 
-> ```latex
-> % latex-id: a143-53a6-14a3-4ad1-90cd
-> \begin{tikzcd}
-> S\ar[r, "\varphi"]\ar[d, hook, ""]&G\\
-> F\ar[ru, dotted, "\overline{\varphi}"']&\\
-> \end{tikzcd}
-> ```
+> > [!Proof]-
+> > 
+> > A quotient of a finitely generated group is finitely generated (the image of the generators generate the image). Conversely, let $G$ be a finitely generated group, say generated by the finite set $S\subseteq G$. Let $\mathcal{F}$ be the free group generated by $S$. The homomorphism $\varphi:\mathcal{F}\to G$ supplied by [[#^1e47e5]] is  the identity on $S$, making it surjective. Therefore, $G\cong F/\ker\varphi$. 
 > 
 
 
-where the map from $S$ to $F$ is the inclusion map. We call $S$ a *free generating set* for $F$. 
 
 
-Here's a roadmap:
-- First, we will verify that the group we have constructed in the first section is indeed a free group. 
-- Then, we will prove that any two free groups generated by the same set S are isomorphic. 
-- This universality allows us to treat our specific construction as _the_ free group on S, without loss of generality.
-- Then, we will show that any two free generating sets of a free group $\mathcal{F}$ have the same cardinality, which is equal to $\text{rank}(\mathcal{F})$ (The rank of a group is the smallest cardinality of a generating set of the group).
-- This allows us to define the "free group of rank $r$" to be a free group freely generated by a set of cardinality $r$.
-- Finally, we will show that a group is finitely generated iff it is the quotient of a finitely generated free group.
+[^1]: The identity works, and it must be the only one because it does!
 
-> [!Theorem]
-> 
-> Let $S$ be a set. Consider the group $\mathcal{F}$ of equivalence classes of words on $S'$ modulo the group axioms we constructed in the previous section. $\mathcal{F}$ is a free group.
-
-> **Proof** 
-> 
-> To prove that $\mathcal{F}$ is a free group, we must verify that it satisfies the universal property. Let $G$ be an arbitrary group and $\varphi: S \to G$ be any function. We need to construct a group homomorphism $\overline{\varphi}: \mathcal{F} \to G$ and show it is unique and extends $\varphi$. Since $\mathcal{F}$ is generated by the set $\{[\overline{a}] \mid a \in S\}$ (where $[\overline{a}]$ denotes the equivalence class of the word $a$), and every element of $\mathcal{F}$ is an equivalence class of reduced words formed by concatenating elements of $S' = \{a, a^{-1} \mid a \in S\}$, we define $\overline{\varphi}$ as follows:
-> - For $a \in S$, set $\overline{\varphi}([\overline{a}]) = \varphi(a)$.
-> - For $a^{-1} \in S'$, set $\overline{\varphi}([\overline{a^{-1}}]) = (\varphi(a))^{-1}$, the inverse of $\varphi(a)$ in $G$. 
-> - For a general reduced word $[w] = [x_1 x_2 \cdots x_n]$ in $\mathcal{F}$, where each $x_i \in S'$, define $\overline{\varphi}([w]) = \overline{\varphi}([x_1]) \cdot \overline{\varphi}([x_2]) \cdots \overline{\varphi}([x_n])$, where the product is taken in $G$.
-> 
-> Note that $\overline{\varphi}$ extends $\varphi$ by construction. First, we must check that this is well-defined. Since elements of $\mathcal{F}$ are equivalence classes, $[w] = [w']$ if $w$ and $w'$ reduce to the same reduced word via cancellations. The group structure of $G$ ensures that if $x_i x_{i+1} = e$ in $\mathcal{F}$ (e.g., $x_i = a$, $x_{i+1} = a^{-1}$), then $\overline{\varphi}([x_i]) \cdot \overline{\varphi}([x_{i+1}]) = \varphi(a) \cdot (\varphi(a))^{-1} = e_G$, the identity in $G$. Thus, the value of $\overline{\varphi}([w])$ depends only on the equivalence class $[w]$, and the definition is consistent. 
-> 
-> Next, we verify that $\overline{\varphi}$ is a homomorphism. For $[w] = [x_1 \cdots x_n]$ and $[v] = [y_1 \cdots y_m]$ in $\mathcal{F}$, their product is $[w][v] = [x_1 \cdots x_n y_1 \cdots y_m]$, possibly after reduction. Then: 
-> $$ 
-> \begin{align}
-> \overline{\varphi}([w][v])  & = \overline{\varphi}([x_1 \cdots x_n y_1 \cdots y_m])\\  & = \overline{\varphi}([x_1]) \cdots \overline{\varphi}([x_n]) \cdot \overline{\varphi}([y_1]) \cdots \overline{\varphi}([y_m]) \\ & = \overline{\varphi}([w]) \cdot \overline{\varphi}([v]),
-> \end{align}
-> $$
-> where any cancellations in the concatenation correspond to trivial products (e.g., $e_G$) in $G$. Thus, $\overline{\varphi}$ is a group homomorphism.
-> 
-> Finally, we prove uniqueness. Suppose $\psi: \mathcal{F} \to G$ is another homomorphism satisfying $\psi \circ i = \varphi$. Then, for each $a \in S$, $\psi([\overline{a}]) = \psi(i(a)) = \varphi(a) = \overline{\varphi}([\overline{a}])$. Since $\{[\overline{a}] \mid a \in S\}$ generates $\mathcal{F}$, and $\psi$ and $\overline{\varphi}$ are homomorphisms agreeing on the generators, they must agree on all of $\mathcal{F}$. Hence, $\mathcal{F}$ satisfies the universal property and is a free group generated by $S$.
-
-> [!Theorem]
-> 
-> Let $S$ be a set. Then, up to isomorphism, there is only one free group generated by $S$.
-
-> [!Theorem]
-> 
-> Let $\mathcal{F}$ be a free group and $S\subset F$ be a free generating set, then $\text{rank}(F)=|S|$.
-
-> **Proof**
-> By the universal property, for every function form $S$ to $\mathbb{Z}_2$, there is a homomorphism from $\mathcal{F}$ to $\mathbb{Z}_{2}$; conversely, every homomorphism can be defined this way (since $S$ generates $\mathcal{F}$ and the value of a homomorphism on $S$ determines it uniquely). Hence there are exactly $2^{|S|}$ homomorphisms from $\mathcal{F}$ to $\mathbb{Z}_{2}$. Now, let $S'$ be another generating set of $\mathcal{F}$, not necessarily free. There are $2^{|S'|}$ maps from $S'$ to $\mathbb{Z}_{2}$. However, since $S'$ is not a free generating set, not all of these will extend to well-defined homomorphisms. However, it still remains true that every homomorphism can be defined by a map from $S'$ to $\mathbb{Z}_{2}$. Thus, there are at most $2^{|S'|}$ homomorphisms from $\mathcal{F}$ to $\mathbb{Z}_{2}$. So, $2^{|S'|}$ is an upper bound for $2^{|S|}$, and hence $|S'|> |S|$. Thus, $|S|$ is the smallest cardinality of a generating set of $\mathcal{F}$, and $\text{rank}(\mathcal{F})=|S|$. 
-
-> [!Theorem] Corollary
-> 
-> All free generating sets of $F$ have the same cardinality. In other words, if $\mathcal{F}(X_{1})\cong \mathcal{F}(X_{2})$, then $|X_{1}|=|X_{2}|$.
-
-Using this corollary and the uniqueness of free groups, we can finally define *the* free group of rank $r$.
-
-> [!Definition]
-> 
-> Let $r\in \mathbb{N}$ and let $S=\{ x_{1}, \dots, x_{r} \}$ where $x_{1}, \dots, x_{r}$ are $r$ distinct elements. Then we write $F_{r}$ for the free group freely generated by $S$, and call it the *free group of rank $r$*.
-
-> [!Theorem]
-> 
-> A group is finitely generated iff it is the quotient of a finitely generated free group.
-
-> **Proof**
-> By the first isomorphism theorem, this is equivalent to the statement: a group $G$ is finitely generated iff there exists a finitely generated free group $\mathcal{F}$ and a surjective homomorphism $\mathcal{F}\to G$. Note that a quotient of a finitely generated group is finitely generated (the image of the generators generate the image). Conversely, let $G$ be a finitely generated group, say generated by the finite set $S\subseteq G$. Let $\mathcal{F}$ be the free group generated by $S$, then $\mathcal{F}$ is finitely generated. From the universal property, we find a homomorphism $\varphi:\mathcal{F}\to G$ that is identity on $S$ (hence surjective), then $G\cong F/\ker\varphi$, as desired.
-
-^9ea063
-
+[^2]: This is an easy verification - injectivity and surjectivity of this map follow directly from the invertibility of $\theta$. 

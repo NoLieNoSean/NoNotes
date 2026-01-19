@@ -21,11 +21,11 @@ In this lecture, we will prove that every fdvsp has a basis, and that the cardin
 # Every fdvsp has a basis
 
 >[!Theorem] 
->Every fdvsp has a basis.
+>Every finite dimensional vector space has a basis.
+
+^bc102f
 
 ^ee7fb9
-
-^a005a3
 ## Strategy 1: Augment a linearly independent (or empty) set
 
 Let $V$ be a fdvsp. Any linearly independent set $I\in V$ can be extended to give a basis of $V$. The existence of a finite spanning set  $S\in V$ is guaranteed by definition. Keep adding vectors from $S$ to $I$ that increase the span until you exhaust the spanning set. 

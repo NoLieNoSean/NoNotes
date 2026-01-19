@@ -17,6 +17,9 @@ See @munkresTopology2000 §17, §30, §31, §32.
 
 Clearly, $T_{4}$+$T_{1}$ $\implies$ $T_{3}$+$T_{1}$ $\implies$ $T_{2}$ $\implies$ $T_{1}$.
 
+$T_{1}$ is equivalent to saying that $1$ point sets are closed. 
+
+
 ## Hausdorff spaces
 
 There are several niceties that we take for granted in metric spaces:

@@ -3,125 +3,57 @@ id: "103"
 ---
 # Free abelian groups
 
-The commutator subgroup of a group $G$, denoted by $[G, G]$, is defined to be $\langle aba^{-1}b ^{-1}\ | \ a, b\in G \rangle$.
-
-> [!Lemma]
-> For any group $G$, $[G, G]$ is a normal subgroup.
-> 
-> > [!Proof]-
-> > A subgroup is normal if $g h g^{-1} \in [G, G]$ for all $g \in G$, $h \in [G, G]$. Since $h$ is a product of commutators $c_i = a_i b_i a_i^{-1} b_i^{-1}$:
-> > - Conjugate $c = aba^{-1}b^{-1}$: $g c g^{-1} =$ $(g a g^{-1})(g b g^{-1})(g a^{-1} g^{-1})(g b^{-1} g^{-1}) =$ $a' b' a'^{-1} b'^{-1}$, a commutator with $a' = g a g^{-1}$, $b' = g b g^{-1}$.
-> > - For $h = c_1 \cdots c_n$, $g h g^{-1} = (g c_1 g^{-1}) \cdots (g c_n g^{-1})$, a product of commutators, so $g h g^{-1} \in [G, G]$.
-> > - Inverses follow similarly, as $(g c g^{-1})^{-1}$ is a commutator.
-> > Hence, $[G, G]\triangleleft G$.
-> 
-
-> [!Lemma]
-> If $\mathcal{F}$ is a [[LEC ALG2 13#The free group|free group]], then $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is abelian. 
-> 
-> > [!Proof]-
-> > Let $a[\mathcal{F}, \mathcal{F}]$ and $b[\mathcal{F}, \mathcal{F}]$ be any two elements in $\mathcal{F}$. Since $a^{-1} b ^{-1}ab\in[\mathcal{F}, \mathcal{F}]$, we have $ab[\mathcal{F}, \mathcal{F}]=ba[\mathcal{F}, \mathcal{F}]$. 
-> 
-
-Note that since the quotient of a finitely generated group is finitely generated (the images of the generators generate the image), if $\mathcal{F}$ is a finitely generated free group, $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is also finitely generated. 
-
-We will return to $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ in a bit.
+Free abelian groups are obtained by stating the [[LEC ALG2 13#^1e47e5|universal property for free groups]] in the category $\textsf{Ab}$. 
 
 > [!Definition]
-> A *basis* for an abelian group $A$ is a subset $X\subset A$ with the following properties:
-> 1. $\langle X \rangle=A$, that is, every $a\in A$ may be written as $a=\sum_{x\in X}n_{x}x$ where $n_{x}\ne 0$ for only finitely many $x\in X$.
-> 2. $X$ is independent, that is, for any collection of integers $\{ n_{x} \}_{x\in X}$ such that only finitely many are nonzero we have
-> $$
-> \sum_{x\in X}n_{x}x=0\implies n_{x}=0\text{ for all }x\in X.
-> $$
-
-We will restrict our development to abelian groups with finite bases, so just work with $\langle X \rangle=A$ and $X$ being independent without the additional clauses.
-
-> [!Theorem]
-> Let $A$ be an abelian group with finite basis $X$. Then every element $a\in A$ can be written *uniquely* as $a=\sum_{x\in X}n_{x}x$, $n_{x}\in \mathbb{Z}$. The map $\Theta:\mathbb{Z}^{|X|}\to A$ given by $\Theta(\mathbf{n})=\sum_{x\in X}n_{x}x$ is an isomorphism, and $A\cong\mathbb{Z}^{|X|}$.
-> 
-> > [!Proof]-
-> > It is easy to check that $\Theta$ is a homomorphism.
-> > $$
-> > \begin{align}
-> > \Theta(\mathbf{n}+\mathbf{m}) & =\sum_{x\in X}(n_{x}+m_{x})x \\
-> >  & =\sum_{x\in X}n_{x}x+\sum_{x\in X}m_{x}x & (A\text{ is abelian}) \\
-> >  & =\Theta(\mathbf{n})+\Theta(\mathbf{m}). 
-> > \end{align}
-> > $$
-> > $\Theta$ is onto by property 1 of a basis, and has trivial kernel by property 2. Thus, $\Theta$ is an isomorphism, and unique linear decompositions of elements of $A$ in terms of $X$ follow.
-> 
-
-> [!Definition]
-> The group $\mathbb{Z}^{|X|}$ is called the *free abelian group on $X$*. It has a canonical basis $\{ \hat{e}_{x}\ | \ x\in X \}$ which is in bijective correspondence with $X$.
-
-> [!Theorem]
-> If $m, n$ are nonnegative integers with $\mathbb{Z}^{m}\cong\mathbb{Z}^{n}$, then $n=m$. 
-
-It follows that if $A$ is a free abelian group and $X$ and $Y$ are two bases for $A$, then $|X|=|Y|$. 
-
-> [!Definition]
-> The *free abelian group of rank $r$* is defined to be the free abelian group on the set $\{ x_{1}, \dots, x_{r} \}$, which is isomorphic to $\mathbb{Z}^{r}$.
-
-The next theorem links free abelian groups with free groups.
-
-> [!Theorem]
-> If $\mathcal{F}$ is the free group of rank $r$, then $\mathcal{F}/[\mathcal{F}, \mathcal{F}]$ is the free abelian group of rank $r$.
-
-## Universal property of free abelian groups
-
-> [!Theorem]
-> Let $\mathbb{Z}^{|X|}$ be the free abelian group on $X$. Let $i:X\to \mathbb{Z}^{|X|}$ be the function defined by $i(x)=\hat{e}_{x}$. If $A$ is an abelian group and $\varphi:X\to A$ is any map, then there exists a *unique* homomorphism $\overline{\varphi}:\mathbb{Z}^{|X|}\to A$ that makes the following diagram commute:
+> Given a non-empty set $S$ and a map $\theta:S\to F^{ab}$ into an abelian group $F^{ab}$, the pair $(F^{ab}, \theta)$ is said to be a **free abelian group** on the set $S$ if, for any function $\varphi:S\to G$ to any abelian group $G$, there is a ==unique== homomorphism $\overline{\varphi}:F^{ab}\to G$ such that $\varphi=\overline{\varphi}\circ\theta$. When $\theta$ is an inclusion, we call $\overline{\varphi}$ the unique extension of $\varphi$ to $F^{ab}$. 
 > 
 > ```latex
-> 
-> % latex-id: 6469-3472-3cd5-4caf-bcfd
+> % latex-id: a143-53a6-14a3-4ad1-90cd
 > \begin{tikzcd}
-> X\ar[r, "\varphi"]\ar[d, hook, ""]&A\\
-> \mathbb{Z}^{|X|}\ar[ru, dotted, "\overline{\varphi}"']&\\
+> S\ar[r, "\varphi"]\ar[d, "\theta"']&G\\
+> F^{ab}\ar[ru, dotted, "\overline{\varphi}"']&\\
 > \end{tikzcd}
-> 
 > ```
 > 
 
+Let's first tackle the finite case. Denote by $\mathbb{Z}^{\oplus n}$ the direct sum
+$$
+\underbrace{ \mathbb{Z}\oplus \dots \oplus \mathbb{Z} }_{ n\text{-times} }.
+$$
+[[Categorical notes on groups#^8e8d67|Recall]] that this group is the same as the product $\mathbb{Z}^{n}$ (however, it will be playing the role of a [[Category Theory Preliminaries (Presentation)#Coproducts|coproduct]] in what follows).
 
-This yields the following important corollary:
+> [!Proposition]
+> For $S=\{ 1, 2, \dots, n \}$, $(\mathbb{Z}^{\oplus n}, \theta)$ is a free abelian group on $S$, where $\theta(k)=(0, \dots, 0, 1, 0, \dots, 0)$ (the $1$ is in the $k$th coordinate). 
+> 
+> > [!Proof]-
+> > 
+> > Let $\varphi:S\to G$ be given. For $k\in S$, let $\varphi_{k}:\mathbb{Z}\to G$ be defined by $1\mapsto\varphi(k)$. Let $\iota_{i}:\mathbb{Z}\to \mathbb{Z}^{\oplus n}$ be the coproduct injections. Then, by the universal property of coproducts, there exists a unique map $\Phi:\mathbb{Z}^{\oplus n}\to G$ such that $\Phi \circ\iota_{k}=\varphi_{k}$ for all $1\leqslant k\leqslant n$. 
+> > 
+> > ```latex
+> > % latex-id: bed3-e903-82a4-45d4-a1cc
+> > \[\begin{tikzcd} && {\mathbb{Z}} \\ && {\mathbb{Z}} \\ S && \vdots && {\mathbb{Z}^{\oplus n}} && G \\ && {\mathbb{Z}} \\ && {\mathbb{Z}} \arrow["{\iota_1}"{description}, curve={height=-12pt}, from=1-3, to=3-5] \arrow["{\varphi_1}"{description}, curve={height=-12pt}, from=1-3, to=3-7] \arrow["{\iota_2}"{description}, curve={height=-6pt}, from=2-3, to=3-5] \arrow["{\varphi_2}"{description}, curve={height=-12pt}, from=2-3, to=3-7] \arrow[curve={height=-12pt}, from=3-1, to=1-3] \arrow[curve={height=-6pt}, from=3-1, to=2-3] \arrow[curve={height=-12pt}, from=3-1, to=3-5] \arrow[curve={height=6pt}, from=3-1, to=4-3] \arrow[curve={height=12pt}, from=3-1, to=5-3] \arrow["{\exists ! \Phi}"{description}, dashed, from=3-5, to=3-7] \arrow["{\iota_{n-1}}"{description}, curve={height=6pt}, from=4-3, to=3-5] \arrow["{\varphi_{n-1}}"{description}, curve={height=12pt}, from=4-3, to=3-7] \arrow["{\iota_n}"{description}, curve={height=12pt}, from=5-3, to=3-5] \arrow["{\varphi_{n}}"{description}, curve={height=12pt}, from=5-3, to=3-7] \end{tikzcd}\]   
+> > ```
+> > 
+> > 
 
-> [!Corollary]
-> Every abelian group is a quotient of a free abelian group.
+^ae5ef6
 
-Of interest to us is the finite case: if $A$ is a finitely generated abelian group generated by $n$ generators, then $A\cong \mathbb{Z}^{n}/H$ for some $H\leq \mathbb{Z}^{n}$ (all subgroups of an abelian group are normal).
+Now, let $S$ be any set. Recall that $H^{S}=\text{Hom}_{\textsf{Set}}(S, H)$ has a natural abelian group structure if $H$ is an abelian group; elements of $H^{S}$ are arbitrary set-functions $\alpha:S\to H$. [[Categorical notes on groups#^2cc108|Recall]] that in the general (non-finite) case, the coproduct is the subgroup of the product consisting of tuples with finite support. 
 
-It follows that to classify all the finitely generated abelian groups, we need only classify the subgroups $H$ of $\mathbb{Z}^{n}$ and their corresponding quotient groups.
+Thus, the coproduct $\bigoplus_{s\in S}H$, which we will denote by $H^{\oplus S}$, is given by
+$$
+H^{\oplus S}:=\{ \alpha:S\to H:\alpha(s)\ne e_{H}\text{ for only finitely many elements }s\in S \}.
+$$
+For $H=\mathbb{Z}$ the coproduct injections $\theta:S\to \mathbb{Z}^{\oplus S}$ are obtained by mapping $s\in S$ to the function $\theta_{s}:S\to \mathbb{Z}$ defined by
+$$
+\theta_{s}(x):=\begin{cases}
+1 & x=s  \\
+0 & x\ne s.
+\end{cases}
+$$
 
-> [!Theorem] Invariant factor theorem
-> If $H$ is a subgroup of a free abelian group $G$ or rank $n$, then $H$ is free abelian of rank $r\leq n$. Further, there are bases $\{ e_{1}, \dots, e_{n} \}$ of $G$ and $\{ d_{1}e_{2},\dots, d_{r}e_{r} \}$ of $H$ respectively where $d_{i}$ divides $d_{i+1}$ for $i< r$. The integers $d_{i}$ are uniquely determined up to sign and are called the invariant factors of $H$.
+> [!Proposition]
+> For every set $S$, $F^{ab}(S)\cong \mathbb{Z}^{\oplus S}$. 
 
-> [!Corollary] Structure theorem for finitely generated abelian groups
-> A finitely generated abelian group is isomorphic to $\mathbb{Z}^{m}\times \mathbb{Z}_{d_{1}}\times\dots \times \mathbb{Z}_{d_{r}}$ for some $m\geq 0$ and $d_{i}$ dividing $d_{i+1}$. The integer $m$ as well as all the $d_{i}$s are uniquely determined.
-
-^05ad21
-
-> [!Definition]
-> The integer $m$ in [[#^05ad21]] is called the **free rank** or **Betti number** of $G$ and the integers $d_{1}, \dots, d_{r}$ are called the **invariant factors** of $G$. The description of $G$ in [[#^05ad21]]  is called the **invariant factor decomposition** of $G$. 
-
-> [!Theorem]
-> Let $G$ be an abelian group of order $n> 1$ and let the unique factorization of $n$ into distinct prime powers be
-> $$
-> n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\dots p_{k}^{\alpha_{k}}.
-> $$
-> Then
-> 1. $G\cong A_{1}\times A_{2}\times\dots \times A_{k}$, where $|A_{i}|=p_{i}^{\alpha_{i}}$
-> 2. for each $A\in \{ A_{1}, A_{2}, \dots, A_{k} \}$ with $|A|=p^{\alpha}$, 
-> 	$$
-> 	A\cong \mathbb{Z}_{p^{\beta_{1}}}\times \mathbb{Z}_{p^{\beta_{2}}}\times\dots\times \mathbb{Z}_{p^{\beta_{t}}}
-> 	$$
-> 	with $\beta_{1}\geqslant\beta_{2}\geqslant\dots\geqslant\beta_{t}\geqslant 1$ and $\beta_{1}+\beta_{2}+\dots+\beta_{t}=\alpha$ (where $t$ and $\beta_{1}, \dots, \beta_{t}$ depend on $i$)
-> 3. the decomposition in $(1)$ and $(2)$ is unique.
-
-
-I'm having trouble understanding the invariant factor theorem. Consider the standard basis $e_{1}=(1, 0, \dots, 0), e_{2}, \dots, e_{r}$ for the free abelian group $\mathbb{Z}^{r}$. Let $H$ be the subgroup of $\mathbb{Z}^{r}$ generated by $\{ e_{1}, 2e_{2}, \dots,  re_{r} \}$. Is it correct that the invariant factor theorem says that there exists another basis $e_{1}', \dots, e_{r}'$ of $\mathbb{Z}^{r}$ such that $d_{1}e_{1}', \dots, d_{r}e_{r}'$ is a basis of $H$ and $d_{i}$ divides $d_{i+1}$? If so, can you find me the basis?
-
-Consider the standard basis $e_{1}=(1, 0, \dots, 0), e_{2}, \dots, e_{r}$ for the free abelian group $\mathbb{Z}^{r}$. Let $H$ be the subgroup of $\mathbb{Z}^{r}$ generated by $\{ d_{1}e_{1}, \dots, d_{r}e_{r} \}$ such that $d_{i}$ divides $d_{i+1}$. The invariant factor theorem says that the $d_{i}$s are uniquely determined up to sign. 
-
-Show that there does not exist a basis of $\mathbb{Z}^{r}$ such that the smallest positive integer that occurs as a coefficient in the expression of the elements of $H$ in terms of this basis is less than $d_{1}$.
+The proof is the same as that of [[#^ae5ef6]]; just use the universal property of coproducts.

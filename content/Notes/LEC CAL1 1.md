@@ -21,12 +21,12 @@ Recall what a [[LEC ALG1 21#Normed spaces|normed vector space]] is. We say that 
 
 ^ae90b2
 
-> [!Info]- An aside
-> Two metrics $\rho$ and $\sigma$ on a set $X$ are said to be *equivalent* if there exist positive numbers $c_{1}$ and $c_{2}$ such that for all $x_{1}, x_{2}\in X$, 
+> [!Remark]
+> Two metrics $\rho$ and $\sigma$ on a set $X$ are said to be **equivalent** if there exist positive numbers $c_{1}$ and $c_{2}$ such that for all $x_{1}, x_{2}\in X$, 
 > $$
 > c_{1}\sigma(x_{1}, x_{2})\leq \rho(x_{1}, x_{2})\leq c_{2} \sigma(x_{1}, x_{2}).
 > $$
-> It can be shown that a subset of $X$ is open in the metric space $(X, \rho)$ if and only if it is open in $(X, \sigma)$.
+> It can be shown that a subset of $X$ is open in the metric space $(X, \rho)$ if and only if it is open in $(X, \sigma)$, i.e, $\rho$ and $\sigma$ [[LEC TOP 1#^8fe185|generate the same topology]]. 
 > 
 > Note that if two norms are equivalent, the metrics induced by them are also equivalent for the same $c_{1}$ and $c_{2}$.
 

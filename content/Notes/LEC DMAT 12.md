@@ -7,31 +7,30 @@ date: 2025-02-24
 time: 11:59
 id: "210"
 ---
-## Principle of inclusion and exclusion
-
-Let $X$ be a finite universe.
-$A_{1}, A_{2}, \dots, A_{n}\subset X$.
-Let $I\subseteq[n]$ be an index set.
-$A_{I}\equiv \bigcap_{x\in I}A_{i}$, $A_{\emptyset}\equiv X$.
+# Principle of inclusion and exclusion
 
 > [!Theorem] Principle of inclusion and exclusion
+> Let $X$ be a finite universe. $A_{1}, A_{2}, \dots, A_{n}\subseteq X$. For $I\subseteq[n]$, define $A_{I}:= \bigcap_{i\in I}A_{i}$, $A_{\emptyset}:= X$.
 > $$
 > \left| X\setminus \bigcup_{i=1}^{n} A_{i} \right| =\sum_{I\subseteq[n]}(-1)^{|I|}|A_{I}|.
 > $$
-
-> **Proof**
-> Let $x\in X$. 
-> Contribution of $x$ to the LHS:
-> - $x\in \bigcup A_{i}$ $\implies$ $x$ contributes 0
-> - $x\not\in \bigcup A_{i}$ $\implies$ $x$ contributes 1.
 > 
-> Let $J$ be the largest index set such that that $x\in A_{J}$ (observe that such a set is unique). Let $j=|J|$. Then, contribution of $x$ to the RHS is equal to
-> $$
-> \sum_{I\subseteq J}(-1)^{|I|}=\sum_{i=0}^{j} (-1)^{i}\binom{j}{i}=\begin{cases}
-> (1-1)^{j}=0 & j> 0 ~\left(\iff x\in \bigcup A_{i}\right)\\
-> 1 & j=0 ~\left(\iff x\not\in \bigcup A_{i}\right).
-> \end{cases}
-> $$
+> > [!Proof]-
+> > 
+> > Let $x\in X$. 
+> > Contribution of $x$ to the LHS:
+> > - $x\in \bigcup A_{i}$ $\implies$ $x$ contributes 0
+> > - $x\not\in \bigcup A_{i}$ $\implies$ $x$ contributes 1.
+> > 
+> > Let $J$ be the largest index set such that that $x\in A_{J}$ (observe that such a set is unique). Let $j=|J|$. Then, contribution of $x$ to the RHS is equal to
+> > $$
+> > \sum_{I\subseteq J}(-1)^{|I|}=\sum_{i=0}^{j} (-1)^{i}\binom{j}{i}=\begin{cases}
+> > (1-1)^{j}=0 & j> 0 ~\left(\iff x\in \bigcup A_{i}\right)\\
+> > 1 & j=0 ~\left(\iff x\not\in \bigcup A_{i}\right).
+> > \end{cases}
+> > $$
+> > 
+> 
 
 ### Number of surjections
 
@@ -76,7 +75,7 @@ $$
 
 ### Linear algebraic formulation
 
-Let $X=[n]$. Consider the collection $V=\{f:\mathcal{P}(X)\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$.  Then, for $f, g\in V$, the following two statements are equivalent.
+Let $X=[n]$. Consider the collection $V=\{f:\mathcal{P}(X)\to \mathbb{R}\}$. This forms a $2^{n}$ dimensional vector space over $\mathbb{R}$. Then, for $f, g\in V$, the following two statements are equivalent.
 $$
 \begin{align}
  & 1.~g(I)=\sum_{J\supseteq I} f(J) &  \forall I\in \mathcal{P}(X), \\
@@ -85,7 +84,9 @@ $$
 $$
 Think of it this way: Let the elements of $X$ be different "properties" of elements of another set $S$. An element of $S$ can have any number of properties $x\in X$. For $I\subset X$, Let $A_{I}$ be the set of all $s\in S$ which have each property $i\in I$ (Note that all the properties of $s\in A_{I}$ may be a super set of $I$). Think of $g$ as counting the number of elements in $S$ which have properties $I$ ($g(I)\equiv |A_{I}|$), and $f$ as counting the number of elements in $G$ which have exactly the properties $I$ ($f(I)\equiv|A_{I}\setminus \bigcup_{i\in \overline{I}}A_{i}|$).
 
-> Proof of $1\implies2$:
+> [!Proof]-
+> 
+> $(1\implies 2)$
 > $$
 > \begin{align}
 > \sum_{J\supseteq I}(-1)^{|J\setminus I|}g(J) & =\sum_{J\supseteq I}(-1)^{|J\setminus I|}\left( \sum_{K\supseteq J }f(K) \right) \\
@@ -97,13 +98,14 @@ Think of it this way: Let the elements of $X$ be different "properties" of eleme
 > 
 > $(*)$ is true since for any finite set, the number of subsets of odd cardinality is equal to the number of subsets of even cardinality.
 > 
-> Proof of $2\implies 1$:
+> $(2\implies 1)$
 > 
 > $$
 > \begin{align}
 > \sum_{J \supseteq I} f(J) & =\sum_{J\supseteq I}\sum_{K\supseteq J}(-1)^{|K\setminus J|}g(K) \\
 >  & = \sum_{K\supseteq I}g(K)\sum_{K\supseteq J\supseteq I}(-1)^{|K\setminus J|} \\
 >  & =g(I)+ \sum_{K\supset I}g(K)\underbrace{ \sum_{K\supseteq J\supseteq I}(-1)^{|K\setminus J|} }_{ =~0 } \\
->  & =g(I)
+>  & =g(I).
 > \end{align}
 > $$
+> 

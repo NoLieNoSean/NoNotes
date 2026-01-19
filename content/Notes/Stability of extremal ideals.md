@@ -87,20 +87,249 @@ $\mathcal{E}_{q}$ is a squarefree monomial ideal. There are finitely many monomi
 
 By [[Associated primes of monomial ideals#^d3a486]], the associated primes of higher powers of $\mathcal{E}_{q}$ contain $\text{Min}(\mathcal{E}_{q})$, and maybe additional embedded primes from the pool of monomial prime ideals.
 
-$|\text{Ass}(\mathcal{E}_{q}^{r})|$ sequences
-1. $\mathcal{E}_{2}$: 2; 2
-2. $\mathcal{E}_{3}$: 8, 9; 8, 1
-3. $\mathcal{E}_{4}$: 49, 80, 81; 49, 31, 1
-4. $\mathcal{E}_{5}$: 462, 2095, 2858, 2859; 462, 1633, 763, 1
-5. $\mathcal{E}_{6}$: 6424
+> [!Proposition]
+> $|\text{Min}(\mathcal{E}_{q})|$ is the number of minimal covers of $q$ objects (https://oeis.org/A046165).
+> $$
+> |\text{Min}(\mathcal{E}_{q})|=\sum_{k=0}^{q} \frac{1}{k!}\sum_{i=0}^{k} (-1)^{i}\binom{k}{i}(2^{k}-1-i)^{n}.
+> $$
+> 
 
-Can M2 run on a GPU?
+> [!Data]
+> $|\text{Ass}(\mathcal{E}_{q}^{r})|$ sequences
+> 1. $\mathcal{E}_{2}$: 2; 2
+> 2. $\mathcal{E}_{3}$: 8, 9; 8, 1
+> 3. $\mathcal{E}_{4}$: 49, 80, 81; 49, 31, 1
+> 4. $\mathcal{E}_{5}$: 462, 2095, 2858, 2859; 462, 1633, 763, 1
+> 5. $\mathcal{E}_{6}$: 6424
+
+
+```latex
+% latex-id: 0a8b-914b-36dd-45e2-9a3a
+\begin{tikzcd}
+\mathcal{E}_{q}^{2} \ar[d, "\text{expand}"]\\
+\text{ideal with } \binom{q}{2}+q \text{ generators} \ar[d, "\text{expand}"]\\
+\text{redundant primary intersection}  \ar[d, "\text{discard non-minimal elements}"]\\
+\text{irredundant primary intersection} \ar[d,two head, "\text{group }p\text{-primary componenets}"]\\
+\text{irredundant primary decomposition}  
+\end{tikzcd}
+```
+
+
+
+> [!Data]
+> (\#IPI, \#Ass)
+> 
+> | ⬇️ q ➡️ r | 1        | 2          | 3           | 4           | 5   |
+> | --------- | -------- | ---------- | ----------- | ----------- | --- |
+> | 2         | 2, 2     |            |             |             |     |
+> | 3         | 8, 8     | 17, 9      |             |             |     |
+> | 4         | 49, 49   | 152, 80    | 333, 81     |             |     |
+> | 5         | 462, 462 | 3024, 2095 | 10784, 2858 | 28257, 2859 |     |
+> 
+
+![[Attachments/image-9.jpeg]]
+
+> [!Data] IPI sequences for $q=2, 3, 4$
+> 
+> 2, 3, 4, 5, 6, 7, 8, 9
+> 8, 17, 28, 41, 56, 73, 92, 113, 136, 161, 188, 217, 248, 281
+> 49, 152, 333, 615, 1021, 1574
+
+> [!Conjecture]
+> $|\text{IPI}(\mathcal{E}_{q}^{r})|$ is a polynomial sequence in $r$ for fixed $q$. 
+> $$
+> \begin{align}
+> |\text{IPI}(\mathcal{E}_{2}^{r})| & =r+1 \\
+> |\text{IPI}(\mathcal{E}_{3}^{r})| & = (r+3)^{2}-8 \\
+> |\text{IPI}(\mathcal{E}_{2}^{r})| & = 1+\left( \frac{169}{6} \right)r+16r^{2}+\left( \frac{23}{6} \right)r^{2}.
+> \end{align}
+> $$
+
+
+
+
+> [!Data]-  Irreducible decomposition ($\mathcal{E}_{4}^{2}$)
+>
+> 
+> 1, 2, 3, 4s
+> 1, 2, 3s, 4
+> 1, 2s, 3, 4
+> 1s, 2, 3, 4
+> 
+> 12, 3, 4s
+> 2, 13, 4s
+> 1, 23, 4s
+> 12, 4, 3s
+> 13, 4, 2s
+> 4, 23, 1s
+> 2, 41, 3s
+> 3, 41, 2s
+> 1, 42, 3s
+> 1, 42, 1s
+> 1, 43, 2s
+> 2, 43, 1s
+> 
+> 
+> 12, 13, 4s
+> 12, 23, 4s
+> 13, 23, 4s
+> 12, 41, 3s
+> 13, 41, 2s
+> 12, 42, 3s
+> 42, 23, 1s
+> 41, 42, 3s
+> 13, 43, 2s
+> 23, 43, 1s
+> 41, 42, 2s
+> 42, 41, 1s
+> 
+> 123, 4s
+> 412, 3s
+> 413, 2s
+> 423, 1s
+> 
+> 3, 4, 12s
+> 2, 4, 13s
+> 1, 4, 23s
+> 2, 3, 41s
+> 1, 3, 42s
+> 1, 2, 43s
+> 
+> 4, 12, 13s
+> 4, 13, 12s
+> 4, 12, 23s
+> 4, 13, 23s
+> 4, 23, 12s
+> 4, 23, 13s
+> 3, 12, 41s
+> 2, 13, 41s
+> 3, 41, 12s
+> 2, 41, 13s
+> 3, 12, 42s
+> 1, 23, 42s
+> 3, 41, 42s
+> 3, 42, 12s
+> 1, 42, 23s
+> 3, 42, 41s
+> 2, 13, 43s
+> 1, 23, 43s
+> 2, 41, 43s
+> 1, 42, 43s
+> 2, 43, 13s
+> 1, 43, 23s
+> 2, 43, 41s
+> 1, 43, 42s
+> 
+> 4, 12s, 13s, 23s
+> 
+> 4, 123s
+> 3, 412s
+> 2, 413s
+> 1, 423s
+> 
+> 12, 13, 41s
+> 12, 41, 13s
+> 13, 41, 12s
+> 12, 23, 42s
+> 12, 42, 23s
+> 23, 42, 12s
+> 13, 23, 43s
+> 41, 42, 43s
+> 13, 43, 23s
+> 23, 43, 13s
+> 43, 41, 42s
+> 42, 43, 41s
+> 
+> 23, 41s
+> 41, 23s
+> 13, 42s
+> 42, 13s
+> 12, 43s
+> 43, 12s
+> 
+> 123, 41s
+> 123, 42s
+> 412, 13s
+> 412, 23s
+> 123, 43s
+> 412, 43s
+> 413, 12s
+> 413, 23s
+> 413, 42s
+> 423, 12s
+> 423, 13s
+> 423, 41s
+> 
+> 41, 123s
+> 42, 123s
+> 13, 412s
+> 23, 412s
+> 43, 123s
+> 43, 412s
+> 12, 413s
+> 32, 413s
+> 42, 413s
+> 12, 423s
+> 13, 423s
+> 41, 423s
+> 
+> 
+> 3, 12s, 41s, 42s
+> 2, 13s, 41s, 43s
+> 1, 23s, 42s, 43s
+> 
+> 
+> 3, 123s, 41s, 42s
+> 2, 123s, 41s, 43s
+> 1, 123s, 42s, 43s
+> 2, 412s, 13s, 43s
+> 2, 412s, 23s, 43s
+> 
+> 
+> 123, 412s
+> 412, 123s
+> 123, 413s
+> 412, 413s
+> 413, 123s
+> 413, 412s
+> 123, 423s
+> 412, 423s
+> 413, 423s
+> 423, 123s
+> 423, 412s
+> 423, 413s
+> 
+> 4, 13s, 23s, 412s
+> 4, 12s, 23s, 413s
+> 3, 12s, 42s, 413s
+> 1, 23s, 42s, 413s
+> 4, 12s, 13s, 423s
+> 3, 12s, 41s, 423s
+> 2, 13s, 41s, 423s
+> 
+> 12s, 13s, 23s, 41s, 42s, 43s
+> 
+> 123s, 41s, 42s, 43s
+> 412s, 13s, 23s, 43s
+> 413s, 12s, 23s, 42s
+> 423s, 12s, 13s, 41s
+> 
+> 123s, 412s, 43s
+> 123s, 42s, 413s
+> 23s, 412s, 413s
+> 123s, 41s, 423s
+> 13s, 412s, 423s
+> 12s, 413s, 423s
+> 
+> 123s, 412s, 413s
+> 123s, 412s, 423s
+> 132s, 413s, 423s
+> 412s, 413s, 423s
+> 
+> 1234
 
 > [!Conjecture]
 > $\text{astab}(\mathcal{E}_{q})=q-1$. 
-
-> [!Proposition]
-> $|\text{Min}(\mathcal{E}_{q})|$ is the number of minimal covers of $n$ objects (https://oeis.org/A046165).
 
 ## Finding $\text{astab}(\mathcal{E}_{2})$
 
@@ -153,6 +382,3 @@ Find $c_{r}$ such that $(x_{12}, x_{23}, x_{31})=\mathcal{E}^{r}_{3}:(c_{r})$.
 
 
 [^1]: It is clear from [[Associated primes of monomial ideals#^53e841]] that an associated prime of $I$ must contain $I$; A prime ideal that is contained in a minimal prime cannot contain $I$. 
-
-
-hello

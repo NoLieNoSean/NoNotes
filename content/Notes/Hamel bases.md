@@ -30,7 +30,16 @@ See @vaidyanathanMTH503Functional2017.
 We have [[LEC ALG1 8#^ee7fb9|seen previously]] that every finite dimensional vector space has a basis. With the extension of the notion of basis to infinite dimensional spaces with Hamel bases, this holds for all vector spaces:
 
 > [!Theorem]
-> Every vector space has a basis.
+> Every vector space $V$ has a basis. 
+> 
+> > [!Proof]-
+> > 
+> > Let $\mathcal{F}$ be the family of all linearly independent subsets of $V$. Let $\mathcal{C}\subseteq \mathcal{F}$ be a chain. Clearly, $\tilde{C}:=\bigcup_{C\in \mathcal{C}}C\in \mathcal{F}$, since any finite collection of vectors from $\tilde{C}$ must lie in some $C\in \mathcal{C}$, where they are linearly independent. Thus, every chain in $\mathcal{F}$ has an upper bound. By [[LEC DMAT 3#^98db69|Zorn's lemma]], $\mathcal{F}$ has a maximal element $M$. 
+> > 
+> > Suppose $M$ is not a generating set, that is, there exists $v\in V$ which cannot be expressed as a finite linear combination of the elements of $M$. Then, $M'\cup \{ v \}$ is linearly independent for all $M'\subseteq M$, so $M\cup \{ v \}$ is linearly independent, contradicting the maximality of $M$. Thus, $M$ must be a generating set, making it a basis. 
+> 
+
+^9b8388
 
 Also see [[LEC ANA2 9#^bd2fbe]]. 
 

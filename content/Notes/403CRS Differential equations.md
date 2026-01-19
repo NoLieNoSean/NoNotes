@@ -6,3 +6,5 @@ tags:
   - MOC
   - DQN
 ---
+[[LEC DQN 1]]
+[[LEC DQN 2]]

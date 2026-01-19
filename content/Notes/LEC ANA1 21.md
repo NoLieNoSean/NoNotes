@@ -10,8 +10,10 @@ id: "143"
 ![[1728577113525.jpeg]]
 # Topological spaces
 
->[!Definition]
->A **topological space** is a set $X$ along with a structure called a **topology**, which is a subset $T \subset P(X)$ which is closed under (arbitrary) unions and finite intersections. We call the elements of $T$ **open sets**. 
+>[!Definition] Topological space
+>A **topological space** $(X, T)$ is a set $X$ along with a structure called a **topology**, which is a subset $T \subset P(X)$ which is closed under (arbitrary) unions and finite intersections. We call the elements of $T$ **open sets**. 
+
+^944bb3
 
 Note that $X, \emptyset\in T$. A set $A\subset X$ is called *closed* if $A^{c}\in T$. See that these notions, as defined in terms of open sets, also make sense in topological spaces:
 
@@ -28,7 +30,7 @@ A topological space is the most general type of a mathematical space that allows
 Note that all of our previous proofs using open cover compactness for theorems on metric spaces are applicable verbatim to topological spaces.
 
 ---
-# Homeomorphisms
+# Isomorphisms and homeomorphisms
 
 An isomorphism between two spaces is a *set theoretic bijection* which also *preserves the structure* of the space in *both directions*. For example, one way to think about the structure of a [[Vector spaces|vector space]] $V$ is the unique decomposition of any vector as a linear combination of a [[Bases#Definition|basis]] $B$ of $V$. Preserving the structure is akin preserving the this unique linear combination for all vectors in the image. The class of functions that satisfy this requirement are [[LEC ALG1 11#Linear maps|linear maps]]. Recall that, if $T:V\to W$ is a bijective linear map,  $\mathbf{v}$ and $T(\mathbf{v})$ have the same decomposition in terms of $B$ and $T(B)$. Now, the inverse of any set theoretic bijection is always a bijection, so $T^{-1}:W\to V$ is a bijection. But, we also require $T^{-1}$ to be a linear map! Fortunately, it so happens that $T$ being a bijective linear map forces $T^{-1}$ to also be linear:
 $$

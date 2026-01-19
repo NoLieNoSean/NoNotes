@@ -58,3 +58,26 @@ If $L\in P$, then $\overline{L}\in P$. If $L\in NP$, then $\overline{L}\in\text{
 Observe that a NDTM with time complexity $O(n^{c})$ can be simulated by a DTM with time complexity $O(2^{n^{c}})$, since it has to check every path of a computation tree of height $O(n^{c})$. 
 
 NPSACE and PSPACE definitions
+
+---
+
+
+Many-one reductions
+
+$L_{1}\leqslant_{m}^{\text{poly}}L_{2}$ implies
+1. If there is a polytime algo to determine membership in $L_{2}$, then there is a polytime algo to determine membership in $L_{1}$. 
+2. If there does not exist a polytime algo for $L_{1}$, then there does not exist a polytime algo for $L_{2}$. 
+
+> [!Lemma]
+> Let $L_{1}\leqslant_{m}^{\text{poly}}L_{2}$. If $L_{2}\in \textsf{NP}$, then $L_{1}\in \textsf{NP}$.  
+
+$\leqslant_{m}^{\text{poly}}$ is a transitive relation. 
+
+> [!Definition]
+> $L\subseteq\Sigma^{*}$ is **NP-hard** if forall $L'\subseteq\Sigma^{*}$ such that $L'\in \textsf{NP}$, $L'\leqslant_{m}^{\text{poly}}L$. If, additionally, $L\in \textsf{NP}$, then $L$ is said to be **NP-complete**. 
+
+
+[!Theorem] Cook-Levin
+$\textsf{SAT}$ is NP-complete. 
+
+encode verifying computation histories as a SAT instance. 

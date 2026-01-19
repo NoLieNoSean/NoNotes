@@ -291,8 +291,6 @@ The same object can be both initial and final, as singletons are in the category
 > [!Definition]
 > We say that a construction **satisfies a universal property** when it may be viewed as a terminal object of a category.
 
-Try to see the [[LEC ALG2 13#^9ea063|universal property we stated for free groups]] in the context of this new definition.
-
 > [!Example] Quotienting by equivalence relations
 > Let $\sim$ be an equivalence relation defined on a set $A$. Let $\textsf{C}$ be a category with objects $A\xrightarrow{\varphi} Z$, where $Z$ is any set, satisfying the property
 > $$

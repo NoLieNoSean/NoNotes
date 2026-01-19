@@ -33,8 +33,7 @@ Reviewed metric spaces, vector spaces, [[LEC ALG1 21#Normed spaces|normed spaces
 > $$
 > 2^{1+\frac{2}{p}} = 4 \implies 1+\frac{2}{p} = 2 \implies p = 2.
 > $$
-> Thus, $\ell_{2}$ is the only $\ell_{p}$ space which is an inner product space. An inner product on $\ell_{2}$ can now be obtained from the [[LEC CAL1 4#^c6f497|polarization identity]]; We prescribe it explicitly and give an alternate proof in [[#^02d59c]].
-
+> Thus, *$\ell_{2}$ is the only $\ell_{p}$ space which is an inner product space*. An inner product on $\ell_{2}$ can now be obtained from the [[LEC CAL1 4#^c6f497|polarization identity]]; We prescribe it explicitly and give an alternate proof in [[#^02d59c]].
 
 > [!Proposition]
 > $\ell_{2}$ is an inner product space, with the inner product defined by 
