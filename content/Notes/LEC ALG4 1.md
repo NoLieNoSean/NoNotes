@@ -5,6 +5,7 @@ time: 11:30
 tags:
   - ALG4
   - Processed
+  - Lecture
 ---
 # Existence of bases for vector spaces
 

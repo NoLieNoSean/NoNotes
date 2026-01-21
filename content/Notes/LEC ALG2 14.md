@@ -56,4 +56,6 @@ $$
 > [!Proposition]
 > For every set $S$, $F^{ab}(S)\cong \mathbb{Z}^{\oplus S}$. 
 
+^4898a7
+
 The proof is the same as that of [[#^ae5ef6]]; just use the universal property of coproducts.

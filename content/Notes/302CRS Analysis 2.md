@@ -3,6 +3,7 @@ tags:
   - MOC
   - ANA2
 id: "7"
+date: 2025-08-01
 ---
 CMI, Aug-Nov 2025, R Srinivasan
 @kumaresanTopologyMetricSpaces2005, @rudinPrinciplesMathematicalAnalysis1976, @roydenRealAnalysis2014, @pughRealMathematicalAnalysis2015, [Lecture recordings](https://www.youtube.com/playlist?list=PL7kSnJf1y6KSm3G6NnNA4OthoTRt0TOur)

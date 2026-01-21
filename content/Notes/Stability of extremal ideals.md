@@ -23,6 +23,8 @@ id: "261"
 > \varepsilon_{i}=\prod_{A\subseteq[q], i\in A}y_{A}.
 > $$
 
+^ad860d
+
 ```Macaulay2
 Extremal= q-> (
     S=set {1};

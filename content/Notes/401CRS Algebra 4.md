@@ -20,7 +20,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[Categorical notes on Modules]]
 
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
-[[LEC ALG4 2]] Free modules
+[[LEC ALG4 2]] ✅ Free modules
 [[LEC ALG4 3]] Projective Modules, invariance of cardinality of basis
 [[LEC ALG4 4]] Noetherian Modules
 

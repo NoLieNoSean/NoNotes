@@ -3,6 +3,7 @@ tags:
   - TOC
   - MOC
 id: "42"
+date: 2025-08-01
 ---
 CMI, Aug-Nov 2025, C Aiswarya
 @sipserIntroductionTheoryComputation2013, @kozenAutomataComputability1997, @hopcroftIntroductionAutomataTheory2007

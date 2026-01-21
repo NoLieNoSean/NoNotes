@@ -3,22 +3,25 @@ id: "386"
 date: 2026-01-14
 time: 11:38
 tags:
+  - ALG4
+  - Lecture
 ---
+# Properties of free modules
+
 > [!Proposition]
-> Let $\alpha:M\to N$ be a surjective $R$-module homomorphism, and let $\varphi:F\to N$ be a $R$-module homomorphism with $F$ free. Then, there exists an $R$-module homomorphism $\tilde{\varphi}:F\to M$ such that the following diagram commutes. 
+> Let $\alpha:M\to N$ be a surjective $R$-module homomorphism, and let $\varphi:F\to N$ be a $R$-module homomorphism with $F$ [[LEC ALG4 2#^552c68|free]]. Then, there exists an $R$-module homomorphism $\tilde{\varphi}:F\to M$ such that the following diagram commutes. 
 > ```latex
 > 
 > % latex-id: c16c-5573-b828-44a5-ae94
 > 
-> \begin{tikzcd}
-> & F \ar[dl, dashed, "\exists!\tilde{\varphi}"']\ar[d, "\varphi"]\\
-> M\ar[r, "\alpha"]&N
-> \end{tikzcd}
+> 
+> \[\begin{tikzcd} & F \\ M & N \arrow["{\exists \tilde \varphi}"', dashed, from=1-2, to=2-1] \arrow["\varphi", from=1-2, to=2-2] \arrow["\alpha"', two heads, from=2-1, to=2-2] \end{tikzcd}\]
+> 
 > ```
 > 
-> > [!Proof]
+> > [!Proof]-
 > > 
-> > Let $\{ e_{i}:i\in I \}\subseteq F$ be a basis of $F$. For all $i\in I$, let $x_{i}\in M$ be such that $\alpha(x_{i})=\varphi(e_{i})$ (possible since $\alpha$ is surjective). Extend the map $e_{i}\mapsto x_{i}$ be an $R$-module homomorphism $\tilde{\varphi}:F\to M$. It is now clear that $\alpha \circ    \tilde{\varphi}=\varphi$. 
+> > Let $\{ e_{i}:i\in I \}\subseteq F$ be a basis of $F$. For all $i\in I$, let $x_{i}\in M$ be such that $\alpha(x_{i})=\varphi(e_{i})$ (possible since $\alpha$ is surjective). Extend the map $e_{i}\mapsto x_{i}$ to an $R$-module homomorphism $\tilde{\varphi}:F\to M$. It is now clear that $\alpha \circ    \tilde{\varphi}=\varphi$. 
 > > 
 > 
 
@@ -52,7 +55,8 @@ tags:
 > 
 Coming up: Noetherian rings and modules. 
 
-
+---
+# Projective modules
 
 > [!Definition]
 > A $R$-module $P$ is said to be **projective** if for all surjective $\alpha:M\to N$ and maps $\varphi:P\to N$ there exists a map $\tilde{\varphi}:P\to M$ such that the following diagram commutes:
@@ -75,6 +79,7 @@ Note that free modules are projective.
 > > We have seen that there exists a free module $F$ with a surjective map $\alpha:F\to P$. Use [[#^c05711]] and note in particular that $\beta$ is injective. 
 
 ---
+# Dimension of free modules
 
 > [!Proposition]
 > Let $F$ be a field and $V$ be a vector space over $F$. Let $X$ and $Y$ be bases of $V$. Then $|X|=|Y|$. 

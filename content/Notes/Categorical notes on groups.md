@@ -25,7 +25,7 @@ The nice thing about $\textsf{Ab}$ is that *finite* coproducts in $\textsf{Ab}$ 
 > > \end{tikzcd} 
 > > 
 > > ```
-> > We are forced to define $\varphi(g, e_{H})\equiv\varphi_{G}(g)$ and $\varphi(e_{G}, h)\equiv\varphi_{H}(h)$ for all $g\in G$ and $h\in H$. Since we require $\varphi(g, h)=\varphi(g, e_{H})\varphi(e_{G}, h)$, our definitions determine $\varphi$ over its entire domain. So, we have exactly one candidate for $\varphi$. It it a homomorphism?
+> > We are forced to define $\varphi(g, e_{H})\equiv\varphi_{G}(g)$ and $\varphi(e_{G}, h)\equiv\varphi_{H}(h)$ for all $g\in G$ and $h\in H$. Since we require $\varphi(g, h)=\varphi(g, e_{H})\varphi(e_{G}, h)$ (and every element of $G\times H$ can be expressed uniquely as such a product), our definitions determine $\varphi$ over its entire domain. So, we have exactly one candidate for $\varphi$. It it a homomorphism?
 > > $$
 > > \begin{align}
 > > \varphi(a, b)\varphi(c, d) & =\varphi_{G}(a)\varphi_{H}(b)\varphi_{G}(c)\varphi_{H}(d) \\

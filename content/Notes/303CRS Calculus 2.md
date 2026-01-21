@@ -3,6 +3,7 @@ tags:
   - MOC
   - CAL2
 id: "8"
+date: 2025-08-01
 ---
 CMI, Aug-Nov 2025, Krishna Hanumanthu
 @ramadasMULTIDIMENSIONALINTEGRALCALCULUS, @spivakCalculusManifoldsModern1965 ([errata](https://www.jirka.org/spivak-errata.html)), @rudinPrinciplesMathematicalAnalysis1976, @apostolMathematicalAnalysis1985, @pughRealMathematicalAnalysis2015, @zorichMathematicalAnalysis22016

@@ -1,6 +1,5 @@
 ---
 tags:
-  - MOC
 date: August 2024
 id: "40"
 ---

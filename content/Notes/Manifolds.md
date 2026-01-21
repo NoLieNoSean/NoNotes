@@ -3,7 +3,6 @@ id: "361"
 date: 2025-11-28
 time: 16:19
 tags:
-  - MOC
   - manifolds
 draft: false
 ---
@@ -22,4 +21,6 @@ draft: false
 
 # Preliminaries
 
-When working in $\mathbb{R}^{n}$, just use the standard basis, ffs. 
+[[Analytic functions]]
+
+%% When working in $\mathbb{R}^{n}$, just use the standard basis, ffs. 

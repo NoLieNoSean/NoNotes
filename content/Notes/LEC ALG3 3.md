@@ -52,8 +52,8 @@ Some trivial facts:
 
 > [!Definition] Module homomorphisms
 > A **homomorphism** of $R$-modules is a homomorphism of abelian groups which is compatible with the module structure. That is, if $M, N$ are $R$-modules and $\varphi:M\to N$ is a function, then $\varphi$ is a homomorphism of $R$-modules iff
-> - $\varphi(m_{1}+m_{2})=\varphi(m_{1})+\varphi(m_{2})$, for all $m_{1}, m_{2}\in M$;
-> - $\varphi(rm)=r\varphi(m)$, for all $r\in R$ and $m\in M$.
+> 1. $\varphi(m_{1}+m_{2})=\varphi(m_{1})+\varphi(m_{2})$, for all $m_{1}, m_{2}\in M$;
+> 2. $\varphi(rm)=r\varphi(m)$, for all $r\in R$ and $m\in M$.
 
 ^db10f5
 

@@ -1,6 +1,5 @@
 ---
 tags:
-  - MOC
 date: January 2025
 id: "36"
 ---
