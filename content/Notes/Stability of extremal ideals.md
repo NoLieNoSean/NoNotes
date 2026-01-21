@@ -111,9 +111,9 @@ By [[Associated primes of monomial ideals#^d3a486]], the associated primes of hi
 \mathcal{E}_{q}^{2} \ar[d, "\text{expand}"]\\
 \text{ideal with } \binom{q}{2}+q \text{ generators} \ar[d, "\text{expand}"]\\
 \text{redundant primary intersection}  \ar[d, "\text{discard non-minimal elements}"]\\
-\text{irredundant primary intersection} \ar[d,two head, "\text{group }p\text{-primary componenets}"]\\
+\text{irredundant primary intersection} \ar[d, "\text{group }p\text{-primary componenets}"]\\
 \text{irredundant primary decomposition}  
-\end{tikzcd}
+\end{tikzcd}   
 ```
 
 
