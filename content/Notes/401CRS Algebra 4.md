@@ -21,8 +21,19 @@ CMI, Jan-Apr 2026, Manoj Kummini
 
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
-[[LEC ALG4 3]] Projective Modules, invariance of cardinality of basis
-[[LEC ALG4 4]] Noetherian Modules
+[[LEC ALG4 3]] ✅ Projective Modules, invariance of cardinality of basis
+[[LEC ALG4 4]] Noetherian Modules, Hilbert's basis theorem
+[[LEC ALG4 5]] Generators and relations, torsion free modules
+[[LEC ALG4 6]] Finitely generated torsion modules over PIDs
 
-see short splitting sequences for modules
+
+@isaacsAlgebraGraduateCourse2009, @artinAlgebra2011, @aluffiAlgebraChapter02009, @langAlgebra2002
+
+
+# Tutorials
+
+[[TUT ALG4 1]]
+[[TUT ALG4 2]]
+
+
 

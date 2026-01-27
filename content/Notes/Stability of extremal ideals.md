@@ -119,7 +119,7 @@ By [[Associated primes of monomial ideals#^d3a486]], the associated primes of hi
 
 
 > [!Data]
-> (\#IPI, \#Ass)
+> (\# IPI, \# Ass)
 > 
 > | ⬇️ q ➡️ r | 1        | 2          | 3           | 4           | 5   |
 > | --------- | -------- | ---------- | ----------- | ----------- | --- |

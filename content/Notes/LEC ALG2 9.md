@@ -201,7 +201,7 @@ It should be obvious that characteristic subgroups are normal. Also, if $H$ is t
 
 > [!Theorem]
 > If $K\blacktriangleleft H$ and $H\triangleleft G$, then $K\triangleleft G$. 
-
-> **Proof**
-> Let $g\in G$. Let $\phi_{g}\in \text{Aut}(H)$ be the conjugation $x\mapsto gxg^{-1}$ restricted to $H$. Note that this may not be an inner automorphism of $H$; this is why $K\triangleleft H$ does not suffice. Since $K\blacktriangleleft H$, $\phi_{g}(K)=K$. Thus, $gKg^{-1}=K$ for all $g\in G$, and $K\triangleleft G$. 
-
+> 
+> > [!Proof]-
+> > Let $g\in G$. Let $\phi_{g}\in \text{Aut}(H)$ be the conjugation $x\mapsto gxg^{-1}$ restricted to $H$. Note that this may not be an inner automorphism of $H$; this is why $K\triangleleft H$ does not suffice. Since $K\blacktriangleleft H$, $\phi_{g}(K)=K$. Thus, $gKg^{-1}=K$ for all $g\in G$, and $K\triangleleft G$. 
+> 

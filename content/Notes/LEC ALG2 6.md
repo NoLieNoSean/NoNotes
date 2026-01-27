@@ -6,7 +6,7 @@ date: 2025-01-30
 time: 9:10
 id: "95"
 ---
-## Third isomorphism theorem
+# Third isomorphism theorem
 
 > [!Theorem]
 > Let $H\triangleleft G$, and let $H<N< G$. Then $N/H\triangleleft G/H\iff N\triangleleft G$, and in this case
@@ -35,7 +35,7 @@ id: "95"
 
 
 ---
-## Direct products
+# Direct products
 
 > [!Definition]
 > Let $G$ and $G'$ be two groups. The product set $G\times G'$, the set of pairs of elements $(a, a')$ with $a$ in $G$ and $a'$ in $G'$, can be made into a group, known as the *product group*, by component wise multiplication:
@@ -62,7 +62,17 @@ Here, $i$ is the inclusion map $g\mapsto(g, 1_{G'})$ and $p$ is the projection m
 
 $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$. 
 
-### Recognizing direct products
+## Recognizing direct products
+
+> [!Lemma]
+> Let $H\triangleleft G$, $K\triangleleft G$. Assume $H\cap K=\{ 1 \}$. Then, the elements of $H$ and $K$ commute with each other. 
+> 
+> > [!Proof]-
+> > 
+> > Let $h\in H$, $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
+> 
+
+^d76c9c
 
 > [!Theorem]
 > Let $H$ and $K$ be subgroups of a group $G$, and let $f:H\times K\to G$ be the multiplication map, defined by $f(h, k)=hk$. Its image is the set $HK=\{ hk\ | \ h\in H, k\in K \}$. 
@@ -89,13 +99,24 @@ $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$.
 > > 
 > > $(3)$ 3.1 and 3.2 should be obvious. Given $HK=KH$, $HK$ is closed under multiplication, since $HKHK=HHKK=HK$. Also, $(hk)^{-1}=k^{-1}h^{-1}$ is in $KH=HK$. For the converse, we again have $HKHK=HHKK$, which implies $KH=HK$.
 > > 
-> > $(4)$ The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$. Consider the commutator $(k^{-1}hk)h^{-1}=k^{-1}(hkh^{-1})$. Since $H$ is normal, the left side is in $H$, and since $K$ is normal, the right side is in $K$. Knowing that $H\cap K=\{ 1 \}$, we get $k^{-1}hkh^{-1}=1$. 
-> > 
-> > [!Warning]
-> > Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, 3.1 is not a two way implication.
-> 
+> > $(4)$ The first two conditions ensure $f$ is injective and surjective, making it bijective. According to $(2)$, $f$ is a homomorphism iff $hk=kh$ for all $h\in H$ and $k\in K$, which is true by [[#^d76c9c]]. 
 
-> [!Lemma]
+^1d942d
+
+See [[LEC ALG2 10#^3ff374]] for a more direct recognition theorem.  
+
+> [!Warning]
+> Note that $HK=KH$ does not imply that the elements of $H$ commute with the elements of $K$. Also, [[#^1d942d]].3.1 is not a two way implication.
+
+We obtain the following corollary on relaxing the surjectivity requirement in [[#^1d942d]].4:
+
+> [!Corollary]
+> Let $H\triangleleft G$, $K\triangleleft G$ such that $N\cap H=\{ e \}$.  Then $NH\cong N\times H$. 
+
+^c43d3d
+
+
+> [!Proposition]
 > $$
 > |HK|= \frac{|H||K|}{|H\cap K|}.
 > $$
@@ -111,8 +132,24 @@ $(1, 1)$ generates $\mathbb{Z}_{m}\times \mathbb{Z}_{n}$, and has order $mn$.
 > > $$
 > 
 
+^2f858f
+
+> [!Proposition]
+> If $A\triangleleft G$ and $B\triangleleft H$, then $A\times B\triangleleft G\times H$. Moreover, the quotient of direct products is isomorphic to the direct product of the quotients:
+> $$
+> \frac{G\times H}{A\times B}\cong \frac{G}{A}\times\frac{H}{B}.
+> $$
+> 
+> > [!Proof]-
+> > 
+> > Consider the map $\varphi:G\times H\to(G/A)\times(H/B)$ defined by $(g, h)\mapsto (g+A, h+B)$. It is clear that $\varphi$ is a homomorphism, and that $\ker\varphi=A\times B$. Therefore, $A\times B \triangleleft G\times H$. The [[LEC ALG2 4#^43c508|first isomorphism theorem]] yields the next result.
+> 
+
+^4c9a93
+
+
 ---
-## Example: Chinese remainder theorem
+# Example: Chinese remainder theorem
 
 > [!Theorem] Chinese remainder theorem
 > If positive integers $m$ and $n$ are co-prime,

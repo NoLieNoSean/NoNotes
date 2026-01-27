@@ -22,6 +22,8 @@ These properties can be used to craft a recognition theorem for a group $G$ to l
 > 
 > Then the map $H\times K\to G$ by $(h, k)\mapsto hk$ is an isomorphism.
 
+^3ff374
+
 Note that in place of the third condition, we required $H\triangleleft G$ and $K\triangleleft G$ [[LEC ALG2 6#Direct products|here]]. However, $H\triangleleft G, K\triangleleft G, H\cap K=\{ 1 \}\implies hk=kh~~\forall h\in H, k\in K$, so we're good.
 
 There's another way to construct a group using two groups $H$ and $K$, called the semidirect product. Interesting features include:

@@ -43,7 +43,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 - [[LEC ALG2 10]]
 	- Semidirect products
 - [[LEC ALG2 11]]
-	- Sylow's theorems, proofs from Herstein
+	- Sylow's theorems
 - [[LEC ALG2 12]]
 	- Simplicity of $A_{n}$
 - [[LEC ALG2 13]] ✅

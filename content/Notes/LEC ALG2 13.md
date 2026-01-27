@@ -83,7 +83,7 @@ Thus, given a set $S$, we have constructed *a* free group on $S$. We will now sh
 > 
 > > [!Proof]-
 > > 
-> > Let $\alpha:X_{1}\to X_{2}$ be an isomorphism, and $(F_{1}, \theta_{1})$, $(F_{2}, \theta_{2})$ be free groups on $X_{1}$ and $X_{2}$ respectively. Let $\varphi_{1}:F_{1}\to F_{2}$ and $\varphi_{2}:F_{2}\to F_{1}$ be the unique homomorphisms given by [[#^1e47e5]]. 
+> > Let $\alpha:X_{1}\to X_{2}$ be an isomorphism, and $(F_{1}, \theta_{1})$, $(F_{2}, \theta_{2})$ be free groups on $X_{1}$ and $X_{2}$ respectively. Let $\varphi_{1}:F_{1}\to F_{2}$ and $\varphi_{2}:F_{2}\to F_{1}$ be the unique homomorphisms given by [[#^1e47e5]] corresponding to $\theta_{2}\circ\alpha$ and $\theta_{1}\circ\alpha ^{-1}$ respectively. 
 > > ```latex
 > > % latex-id: c25e-fa32-6ff9-4946-bd81
 > > \begin{tikzcd}[column sep = large]
@@ -120,7 +120,7 @@ The converse is also true: isomorphic free groups must be on isomorphic sets.
 > 
 > > [!Proof]-
 > > 
-> > Consider the sets $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ and $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ of group homomorphisms to the field $\mathbb{F}_{2}$. These sets are vector spaces over $\mathbb{F}_{2}$ with bases $X_{1}$ and $X_{2}$ respectively. Fixing an isomorphism $\theta:F(X_{1})\to F(X_{2})$,  we have an isomorphism of $\mathbb{F}_{2}$ vector spaces from $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ to $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ given by $\varphi\mapsto\varphi \circ\theta$ [^2]. Thus, [[LEC ALG4 3#^1fd2eb|their bases must have the same cardinality]], which proves $|X_{1}|=|X_{2}|$. 
+> > Consider the sets $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ and $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ of group homomorphisms to the field $\mathbb{F}_{2}$. These sets are vector spaces over $\mathbb{F}_{2}$ with bases $X_{1}$ and $X_{2}$ respectively. Fixing an isomorphism $\theta:F(X_{1})\to F(X_{2})$,  we have an isomorphism of $\mathbb{F}_{2}$-vector spaces from $\text{Hom}(F(X_{2}), \mathbb{F}_{2})$ to $\text{Hom}(F(X_{1}), \mathbb{F}_{2})$ given by $\varphi\mapsto\varphi \circ\theta$ [^2]. Thus, [[LEC ALG4 3#^1fd2eb|their bases must have the same cardinality]], which proves $|X_{1}|=|X_{2}|$. 
 > 
 
 ^cb59c5

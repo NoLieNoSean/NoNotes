@@ -5,8 +5,9 @@ time: 11:38
 tags:
   - ALG4
   - Lecture
+  - Processed
 ---
-# Properties of free modules
+# Projective modules
 
 > [!Proposition]
 > Let $\alpha:M\to N$ be a surjective $R$-module homomorphism, and let $\varphi:F\to N$ be a $R$-module homomorphism with $F$ [[LEC ALG4 2#^552c68|free]]. Then, there exists an $R$-module homomorphism $\tilde{\varphi}:F\to M$ such that the following diagram commutes. 
@@ -25,136 +26,164 @@ tags:
 > > 
 > 
 
-> [!Corollary]
-> Let $M\xrightarrow \alpha F$ be a surjective $R$-module homomorphism with $F$ free. Then there exists an $R$-module homomorphism $\beta:F\to M$ such that $\alpha \circ \beta=\text{id}_{F}$. 
+^eba5ed
 
-^d32b0c
+The class of $R$-modules with this property described in [[#^eba5ed]] are called projective modules. 
 
-> [!Proposition]
-> Let $\alpha:M\to F$ be a $R$-module homomorphism such that $\alpha \circ \beta=\text{id}_{F}$, as in [[#^d32b0c]]. Then, 
-> 1. $\alpha$ is surjective and $\beta$ is injective. 
-> 2. $M=\ker\alpha\oplus\text{im}\,\beta$. 
-> 
-> > [!Proof]
-> > 
-> > $(1)$ is just set theory. 
-> > 
-> > $(2)$: Let $x\in M$. Write $y=\beta\alpha(x)$. Note that $\alpha(x-y)=0$. Thus, $x-y\in \ker\alpha$. So, $x=(x-y)+y$, with the latter in $\text{im}\, \beta$. 
-> > 
-> > To show that it is a *direct* sum (i.e, $\ker\alpha \cap\text{im}\,\beta=\{ 0 \}$), let $x\in\ker\alpha \cap\text{im}\,\beta$. Then, there exists $y\in N$ such that $x=\beta(y)$. Now, $0=\alpha(x)=\alpha\beta(y)=y$. Thus, $x=0$. 
-
-^c05711
-
-
-> [!Proposition]
-> Let $M\xrightarrow \pi F$ be a surjective $R$-module homomorphism with $F$ free. Let $X\subseteq F$ be a basis of $F$. 
-> 
-> Let $\varphi:F\to M$ be any map such that $\varphi(x)\in \pi ^{-1}(x)$ for all $x\in X$. Then, 
-> 1. $\pi \circ\varphi:F\to F=\text{id}_{F}$. 
-> 2. $M\cong \ker \pi\oplus\text{im}\,\varphi$. 
-> 
-Coming up: Noetherian rings and modules. 
-
----
-# Projective modules
-
-> [!Definition]
-> A $R$-module $P$ is said to be **projective** if for all surjective $\alpha:M\to N$ and maps $\varphi:P\to N$ there exists a map $\tilde{\varphi}:P\to M$ such that the following diagram commutes:
+> [!Definition] Projective modules
+> A $R$-module $P$ is said to be **projective** if for all surjective $\alpha:M\twoheadrightarrow N$ and $R$-module homomorphisms $\varphi:P\to N$ there exists an $R$-module homomorphism $\tilde{\varphi}:P\to M$ such that the following diagram commutes:
 > 
 > ```latex
 > % latex-id: 7b87-0621-9d7f-4880-b2da
 > \begin{tikzcd}
 > & P \ar[dl, dashed, "\exists\tilde{\varphi}"']\ar[d, "\varphi"]\\
-> M\ar[r, "\alpha"]&N
+> M\ar[r, two heads, "\alpha"']&N
 > \end{tikzcd}
 > ```
 
-Note that free modules are projective. 
+^544d97
+
+Clearly, free modules are projective. 
+
+> [!Warning]
+> [[#^eba5ed]] and [[#^544d97]] are not describing universal properties! As is evident by the proof of [[#^eba5ed]], $\tilde{\varphi}$ does not have to be unique. 
+
+
+> [!Corollary]
+> Let $\alpha:M\twoheadrightarrow P$ be a surjective $R$-module homomorphism with $P$ projective. Then there exists an $R$-module homomorphism $\beta:P\to M$ such that $\alpha \circ \beta=\text{id}_{P}$. 
+
+^d32b0c
+
 
 > [!Proposition]
-> Let $P$ be a projective module. Then it is a direct summand of a free module, that is, there exists a module $Q$ and a free module $F$ such that $P\oplus Q \cong F$.
+> Let $P$ be a projective module. Let $\alpha:M\twoheadrightarrow P$ be a $R$-module homomorphism, and $\beta$ be supplied by [[#^544d97]] such that $\alpha \circ\beta=\text{id}_{P}$. Then,
+> 1. $\alpha$ is surjective and $\beta$ is injective. 
+> 2. $M=\ker\alpha\oplus\text{im}\,\beta$. 
 > 
-> > [!Proof]
+> > [!Proof]-
 > > 
-> > We have seen that there exists a free module $F$ with a surjective map $\alpha:F\to P$. Use [[#^c05711]] and note in particular that $\beta$ is injective. 
+> > $(1)$ is just set theory. 
+> > 
+> > $(2)$ Let $x\in M$. Write $y=\beta\alpha(x)$. Since $\alpha(x-y)=0$, we have $x-y\in \ker\alpha$. So, $x$ can be expressed as $x=(x-y)+y$. Next, let $x\in\ker\alpha \cap\text{im}\,\beta$ and let $y\in P$ be such that $x=\beta(y)$. Then, $0=\alpha(x)=\alpha\beta(y)=y$. Thus, $x=0$. We are done by [[LEC ALG2 10#^3ff374]]. 
+> 
+
+^c05711
+
+> [!Proposition]
+> 1. If $P$ is projective, there exists $Q$ such that $P\oplus Q\cong F$ for free $F$. 
+> 2. If $P\oplus P'$ is projective, then $P$ and $P'$ are projective. 
+> 
+> Thus, $P$ is projective iff it is a direct summand of a free module. 
+> 
+> > [!Proof]-
+> > 
+> > $(1)$ follows from [[LEC ALG4 2#^85f1ce]] and [[#^c05711]]. 
+> > 
+> > For $(2)$, Let $\varphi:P\to N$ and $\alpha:M\twoheadrightarrow N$ be given as in [[#^544d97]]. The trivial map from $P'$ to $N$ together with $\varphi$ determines a map $\varphi':P\oplus P'\to N$ such that $\varphi=\varphi'\circ i_{P}$. Since $P\oplus P'$ is projective, there exists $\tilde{ \varphi}:P\oplus P'\to M$ such that $\varphi'=\alpha \circ  \tilde{\varphi}$. Thus, $\alpha \circ(\tilde{\varphi}\circ i_{P})=(\alpha \circ  \tilde{\varphi})\circ i_{P}=\varphi'\circ i_{P}=\varphi$. Thus, $P$ is projective. 
+> > ```latex
+> > % latex-id: cdcb-e1c0-e19d-4e4e-90f4
+> > \[\begin{tikzcd} && P \\ & {P\oplus P'} \\ M & N \arrow["{i_P}"', from=1-3, to=2-2] \arrow["\varphi", curve={height=-18pt}, from=1-3, to=3-2] \arrow["{\tilde \varphi}"', dotted, from=2-2, to=3-1] \arrow["{\varphi'}"', dashed, from=2-2, to=3-2] \arrow["\alpha"', two heads, from=3-1, to=3-2] \end{tikzcd}\]
+> > ```
+> > A symmetric argument shows that $P'$ is projective. 
+> 
 
 ---
+
 # Dimension of free modules
 
+
 > [!Proposition]
-> Let $F$ be a field and $V$ be a vector space over $F$. Let $X$ and $Y$ be bases of $V$. Then $|X|=|Y|$. 
+> Let $V$ be a $k$-vector space with bases $X$ and $Y$. Then $|X|=|Y|$. 
 > 
-> > [!Proof]
+> > [!Proof]-
 > > 
-> > Assume that $|X|$ and $|Y|$ are infinite (cases both are finite and one of them is finite have been seen in [[101CRS Algebra 1]]). 
+> > We have seen the case when $|X|$ and $|Y|$ are finite in [[LEC ALG1 8#^d11967]]. The case of one being finite and the other being infinite is ruled out by [[LEC ALG1 8#^6a3bec]]. So, assume $|X|$ and $|Y|$ are infinite. 
 > > 
-> > For all $x\in X$, there exists a finite subset $Y_{x}$ of $Y$ such that $x\in \langle Y_{x} \rangle$ ($F$-span, of course). Therefore, 
-> > $$
-> > \begin{align}
-> > \bigcup_{x\in X}Y_{x}\text{ generates }V.
-> > \end{align}
-> > $$
-> > Since no proper subset of $Y$ can generate $V$, we have
+> > For all $x\in X$, there exists a finite subset $Y_{x}$ of $Y$ such that $x\in \langle Y_{x} \rangle$. Therefore, $\bigcup_{x\in X}Y_{x}$ generates $V$. Since no proper subset of $Y$ can generate $V$, we have
 > > $$
 > > Y=\bigcup_{x\in X}Y_{x}.
 > > $$
 > > Since each $Y_{x}$ is finite, basic set theory says $|Y|\leqslant |X|$. Reverse the argument to obtain $|X|=|Y|$. 
+> 
 
 ^1fd2eb
 
-[!Proposition]
-Let $F$ be a free $R$-module with bases $X$ and $Y$. Then $|X|=|Y|$. 
+> [!Proposition]
+> Let $F$ be a free $R$-module with [[LEC ALG4 2#^59c172|bases]] $X$ and $Y$. Then $|X|=|Y|$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $I$ be an ideal of $R$. Define $IF$ to be the submodule of $F$ generated by $\{ rm:r\in I, m\in F \}$:
+> > $$
+> > \begin{align}
+> > IF:=\left\{  \sum_{i=1}^{n} r_{i}m_{i}:n\in \mathbb{N}  , r_{i}\in I, m_{i}\in F\right\}.
+> > \end{align}
+> > $$
+> > Observe that $F/IF$ is an $R/I$-module (this is not true in general; see [[#^b14fe9]]): If $r_{1}+I=r_{2}+I$, 
+> > $$
+> > \begin{align}
+> > (r_{1}+I)(m+IF)=(r_{1}m+IF)=(r_{2}m+IF)\overset{!}{=}(r_{2}+I)(m+IF). 
+> > \end{align}
+> > $$
+> > For $r\in R$ and $m\in F$, we may denote $r+I$ by $\overline{r}$ and $m+IF$ by $\overline{m}$. 
+> > 
+> > 
+> > ---
+> > 
+> > We now claim that $\overline{X}:=\{ \overline{x}:x\in X \}$ is a basis of $F/IF$ as an $R/I$-module. 
+> > 
+> > Firstly, if $Z\subseteq F$ generates $F$ as an $R$-module, then $\{ \overline{z}:z\in Z \}$ generates $F/IF$ as an $R$-module, and hence as an $R/I$-module: For $m+IF\in F/IF$, with a little abuse of notation we can write
+> > $$
+> > \begin{align}
+> > m & =\sum_{i=1}^{n} r_{i}z_{i} & z_{i}\in Z \\
+> > \implies m+IF & =\sum_{i=1}^{n} r_{i}(z_{i}+IF) \\
+> >  \implies m+IF & =\sum_{i=1}^{n} (r_{i}+I)(z_{i}+IF).
+> > \end{align}
+> > $$
+> > Thus, $\overline{X}$ generates $F/IF$ as an $R/I$-module. 
+> > 
+> > It remains to show that $\overline{X}$ is linearly independent. Fix $n\in \mathbb{N}$. Let $r_{i}\in R$ for $1\leqslant i\leqslant n$, $x_{i}\in X$ for $1\leqslant i\leqslant n$, such that
+> > $$
+> > \sum_{i=1}^{n} \overline{r}_{i}\overline{x}_{i}=0.
+> > $$
+> > Equivalently, $\sum_{i=1}^{n} r_{i}x_{i}\in IF$. Thus, $\sum_{i=1}^{n}r_{i}x_{i}$ can be expressed in the form $\sum_{i=1}^{k'}s'_{i}m_{i}$ with $s'_{i}\in I$ and $m_{i}\in F$. Replacing each $m_{i}$ with its expression in the basis $X$, we get
+> > $$
+> > \begin{align}
+> > \sum_{i=1}^{n} r_{i}x_{i}=\sum_{i=1}^{k} s_{i}\tilde{x}_{i}. &  & \tilde{x}_{i}\in X
+> > \end{align}
+> > $$
+> > Since $X$ is a basis, we have $n=k$, and (WLOG) $\tilde{x}_{i}=x_{i}$ and $s_{i}=r_{i}$. Thus, $r_{i}\in I$, and hence $\overline{r}_{i}=0$ for all $i$. 
+> > 
+> > ---
+> > 
+> > Using [[LEC ALG3 6#^5e9db5]], let $I$ be a [[LEC ALG3 4#^a53c12|maximal ideal]] of $R$. This makes $R/I$ a field and $F/IF$ an $R/I$-vector space. We have shown $\overline{X}$ and (similarly defined) $\overline{Y}$ are bases of $F/IF$ over $R/I$. The final result follows from [[#^1fd2eb]]. 
+> 
 
-[!Proof]
+^f64b92
 
-Let $U$ be a $R$ ideal. $IF:=$ submodule of $F$ generated by $\{ rx:r\in I, x\in F \}$:
+
+> [!Remark]
+> 
+> Every $R/I$ module is naturally an $R$-module: $(a, x)\mapsto \overline{a}x$. In general, if $\varphi :R\to S$ is a ring map and $M$ is an $S$-module, we can give $M$ $R$-module structure by $(a, x)\mapsto \varphi(a)x$. This is the unique module structure for $M$ as an $R$ module which is compatible with $\varphi$. 
+> 
+> The converse is generally false - $R$ considered an an $R$-module cannot have a compatible $R/I$-module structure for any nonzero ideal $I$. If $y\in I$ is nonzero, then $(y, 1_{R})$ evaluates to $y$ under the $R$-module structure, while the action of $y+I=0_{R/I}\in R/I$, forced to be the trivial action in any $R/I$-module structure on $R$, yields $(y+I, 1_{R})=0_{R}$. 
+> 
+> However, if $M$ is an $R$-module such that for all $x\in M$ and for all $a\in I$, $ax=0$[^1], then the prescription
+> $$
+> \begin{align}
+>  & R/I\times M\to M \\
+>  & (\overline{a}, x)\mapsto ax
+> \end{align}
+> $$
+> makes $M$ a compatible $R/I$-module.
+
+^b14fe9
+
 $$
-\begin{align}
-\left\{  \sum_{i=1}^{n} r_{i}x_{i}:n\in \mathbb{N}  , r_{i}\in I, x_{i}\in F\right\}.
-\end{align}
-$$
-1. Then, $F/IF$ is an $R/I$ module (Check this!!). 
-2. If $Z\subseteq F$ generates $F$ as an $R$ module, then $\{ \overline{z}:z\in Z \}$ generates $F/IF$ as an $R/I$ module. (first prove that it generates $F/IF$ as an $R$ module, and hence as an $R/I$ module) (needs work here)
-3. $\{ \overline{x}:x\in X \}$ is a basis of $F/IF$ as an $R/I$ module. 
 
-Need to show that $\{ \overline{x}:x\in X \}$ is lin-indep over $R/I$ (we know that it is a generating set by $(2)$). 
-Let $a_{i}\in R$ for $1\leqslant i\leqslant n$, $x_{i}\in X$ for $1\leqslant i\leqslant n$, such that
-$$
-\sum_{i=1}^{n} \overline{a_{i}}\,\overline{x_{i}}=0
-$$
-in $F/IF$. So, 
-$$
-\sum_{i=1}^{n} a_{i}x_{i}\in IF.
-$$
-Thus, there exists $x'_{j}\in X$ for $1\leqslant j\leqslant m$, $b_{j}\in I$ for $1\leqslant j\leqslant m$ such that
-$$
-\begin{align}
-\sum_{i=1}^{n} a_{i}x_{i}=\sum_{j=1}^{m} b_{j}x_{j}'
-\end{align}
-$$
-Since $X$ is a basis, this implies $m=n$, and (WLOG) $x'_{i}=x_{i}$ and $b_{j}=$ 
-
-
-
-
----
-
-[!Remark]
-Every $R/I$ module is naturally an $R$-module: $(a, x)\mapsto \overline{a}x$. 
-In general, if $\varphi :R\to S$ is a ring map and $M$ is an $S$-module we can make it into an $R$ module by $(a, x)\mapsto \varphi(a)x$ (this is the unique module structure as an $R$ module which is compatible with $\varphi$). 
-
-Let $M$ be an $R/I$ module considered an an $R$-module. Then for all $a\in I$ and for all $x\in M$, $ax=0$. 
-
-$R$ considered an an $R$ module cannot be an $R/I$ module for any nonzero $I$ because $\{ a\in R:a\cdot 1=0 \}=\{ 0 \}\ne I$. 
-
-Let $M$ be an $R$-module such that for all $x\in M$ and for all $a\in I$, $ax=0$. THen $M$ is an $R/I$-module. 
-$$
-\begin{align}
- & R/I\times M\to M \\
- & (\overline{a}, x)\mapsto ax
-\end{align}
 $$
 
----
 
 
+
+[^1]: as is the case in the proof of [[#^f64b92]]

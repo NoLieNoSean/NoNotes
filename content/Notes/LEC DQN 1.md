@@ -3,7 +3,27 @@ id: "384"
 date: 2026-01-13
 time: 10:16
 tags:
+  - DQN
+  - Lecture
 ---
+Recall that the general solution for the first-order linear differential equation $\dot{x}=ax$ is $x(t)=ce^{ at }$. 
+
+[!Definition]
+1. An **ordinary DE** is an equation containing an unknown function of one variable real/complex variable $x$ and its derivatives. 
+2. A **Linear DE** is a DE that is linear in the unknown function and its derivatives. 
+3. The **order** of a DE is the highest order of derivative of the unknown function that appears in the DE. 
+4. A system of DEs is said to be **uncoupled** if each DE depends on only one variable. 
+5. A system of DEs is said to be **autonomous** if there is no explicit dependence on the independent variable (for example, time). 
+6. Initial conditions which result in a constant solution are called **equilibrium points**. 
+7. 
+
+
+
+
+
+
+
+
 An example:
 - $x'=ax$. 
 - find soln by integration: $x(t)=k e^{ at }$. 

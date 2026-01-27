@@ -31,6 +31,10 @@ If $A$ has negative eigenvalues $\lambda_{1}, \dots, \lambda_{k}$ and positive e
 > $$
 > converges absolutely and uniformly for all $|t|\leqslant t_{0}$. 
 
+the book shows absolute convergence. Convergence follows form the fact that all norms on $\mathbb{R}^{n}$ are equivalent and [[LEC ANA2 9#^9279fe]]. 
+
+
+
 Use $M$-test. 
 
 [!Definition]

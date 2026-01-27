@@ -66,17 +66,21 @@ It should now be clear that
 # Misc
 
 > [!Proposition]
-> Let $M$ be an $R$-module. Then there exists a free module $F$ and a surjective $R$-module homomorphism $F\to M$. 
+> Let $M$ be an $R$-module. Then there exists a free module $F$ and a surjective $R$-module homomorphism $F\twoheadrightarrow M$. 
 > 
 > > [!Proof]-
 > > 
 > > Let $F$ be the free module with basis $\{ e_{m}:m\in M \}$. Define $\varphi:F\to M$ by $e_{m}\mapsto m$. 
 > 
 
+^85f1ce
+
 If we have a generating set for $M$, we can do better:
 
 > [!Proposition]
 > Let $M$ be an $R$-module. Let $X\subseteq M$ be a generating set. Let $F$ be the free module with basis $X$. Then there exists an $R$-linear surjective map $F\to M$ defined by $\sum r_{x}e_{x}\mapsto \sum r_{x}x$. 
+
+^e839ad
 
 
 [^3]: This proof looks very similar to that of [[Categorical notes on groups#^8e8d67]] - noting that every element of the coproduct can be uniquely expressed via a "basis", using this to define a map, and then verifying that this map is actually a group / module homomorphism. The proofs of [[LEC ALG2 14#^ae5ef6]] / [[LEC ALG2 14#^4898a7]] bypass this by invoking [[Categorical notes on groups#^8e8d67]] / [[Categorical notes on groups#^2cc108]].2 respectively and using the universal property of coproducts. You can see a [[Categorical notes on groups#^8e8d67]]-style proof of [[LEC ALG2 14#^ae5ef6]] at @aluffiAlgebraChapter02009 II.5.4. Indeed, you can prove [[#^e7a50f]] by invoking [[Categorical notes on groups#^2cc108]].2 and the universal property of coproducts instead. 

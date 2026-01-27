@@ -30,6 +30,8 @@ id: "169"
 > > $$
 > > By hypotheses, $\sum_{k=1}^{N} (x_{n_{k+1}}-x_{n_{k}})$ converges, say to $x$. Then, $x_{n_{N+1}}\to x+x_{n_{1}}$. Thus, $\{ x_{n} \}$ has a convergent subsequence. Since $\{ x_{n} \}$ is Cauchy, $\{ x_{n} \}$ converges.
 
+^9279fe
+
 > [!Proposition]
 > A Banach space is not a countable union of proper closed subspaces.
 > 

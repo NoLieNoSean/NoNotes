@@ -117,6 +117,8 @@ What this is essentially saying is that you can "exchange" or "replace" $\mathbf
 > >Assume $m=n+k$ for some $k> 0$. From the previous lemma, $\{ \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n} \}$ must be a spanning set (a subset of a linearly independent set is linearly independent). This implies that $\mathbf{u}_{n+1}, \dots, \mathbf{u}_{k}$ can be expressed as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}$, which implies $I$ cannot be linearly independent (contradiction!). Consequently, we must have  $m\le n$.
 > 
 
+^6a3bec
+
 #### Finally, [[#^d11967]]
 
 Let $B_{1}$ and $B_{2}$ be bases of cardinality $n$ and $m$ respectively.

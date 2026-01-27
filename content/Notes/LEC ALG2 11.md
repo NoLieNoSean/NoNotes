@@ -34,11 +34,13 @@ Alternate proof using induction:
 > [!Definition]
 > Let $G$ be a group and $p$ be a prime. 
 > 
-> 1. A group of order $p^{\alpha}$ for some $\alpha\geqslant 1$ is called a $p$-group. Subgroups of $G$ which are $p$-groups are called $p$-subgroups.
-> 2. If $G$ is a group of order $p^{\alpha}m$, where $p\nmid m$, then a subgroup of order $p^{\alpha}$ is called a Sylow $p$-subgroup of $G$. 
+> 1. A group of order $p^{\alpha}$ for some $\alpha\geqslant 1$ is called a **$p$-group**. Subgroups of $G$ which are $p$-groups are called $p$-subgroups.
+> 2. If $G$ is a group of order $p^{\alpha}m$, where $p\nmid m$, then a subgroup of order $p^{\alpha}$ is called a **Sylow $p$-subgroup** of $G$. 
 > 3. The set of Sylow $p$-subgroups of $G$ is denoted by $\text{Syl}_{p}(G)$ and the number of Sylow $p$-subgroups of $G$ is denoted by $n_{p}(G)$ (or just $n_{p}$ when $G$ is clear from context).
 > 
 > 
+
+^2553c3
 
 > [!Theorem]
 > Let $G$ be a group of order $p^{\alpha}m$, where $p$ is a prime not dividing $m$. Then, 
