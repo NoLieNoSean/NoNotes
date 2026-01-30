@@ -108,6 +108,7 @@ What this is essentially saying is that you can "exchange" or "replace" $\mathbf
 > >
 > 
 
+
 #### Linearly independent sets cannot be larger than spanning sets
 
 > [!Lemma]

@@ -31,7 +31,7 @@ Let $T:V\to W$ is a linear map, with $B_{V}$ and $B_{W}$ being bases of $V$ and 
 > $$
 
 ---
-## Homomorphisms
+# Homomorphisms
 
 > [!Definition]
 >A *homomorphism* is a structure preserving map between two algebraic structures of the same type.
@@ -41,7 +41,7 @@ Contrast with isomorphism, which is a structure preserving map between two struc
 A linear map is a homomorphism of vector spaces. 
 
 $\hom(V,W) \equiv \{ \text{all linear maps} \ T: V \to W \}$.
-### Relation to Matrices
+## Relation to Matrices
 
 For two vector spaces $V$ and $W$ with dimensions $p$ and $q$ and $T:V\to W$, $\mathcal{M}_{B_{V}, B_{W}}(T)$ is a $q \times p$ matrix, as we have [[LEC ALG1 12#Matrices of linear maps in fdvsp|seen]]. As every $T$ has a single matrix for a fixed set of bases,  $\mathcal{M}_{B_{V}, B_{W}}$ is a function. That is,
 $$
@@ -51,7 +51,8 @@ $$
 Thus, $\hom(V,W) \cong \{ q \times p \ \text{matrices} \}$. Therefore $\dim \hom(V,W) = pq$.
 
 ---
-## Change of basis
+# Change of basis
+
 (Ref. 2.4 Hoffman)
 
 Let $V$ be a vector space of dimension $n$. Now, let
@@ -126,7 +127,7 @@ $$
 >$$
 
 ---
-## Composition of linear maps in terms of the matrices
+# Composition of linear maps in terms of matrices
 
 $$
 \begin{matrix}
@@ -136,42 +137,46 @@ $$
 \end{matrix}
 $$
 
->[!Theorem] Claim 
->$\mathcal{M}_{B_{V}, B_{U}}(S\circ T)=\mathcal{M}_{B_{W}, B_{U}}(S)\mathcal{M}_{B_{V}, B_{W}}(T)$
-
->**Proof**
->Let
->$$
->\begin{align}
->A_{q\times p}&=\mathcal{M}_{B_{V}, B_{W}}(T) & = (a_{ij})\\
->B_{r\times q}&=\mathcal{M}_{B_{W}, B_{U}}(S) & = (b_{ij})\\
->C_{r\times p}&=\mathcal{M}_{B_{V}, B_{U}}(S \circ T) & = (c_{ij})
->\end{align}
->$$
->Recall the [[Linear Transformations#Matrix-vector multiplication as a linear transformation|representation of linear transformations as matrices]].
->$$c_{i,j} = \text{Coefficient of} \ \mathbf{u_{i}} \ \text{in} \ (S \circ T)(\mathbf{v_{j}})$$
->Now,
->$$
->\begin{align}
->(S \circ T)(\mathbf{v_{j}}) &= S\left( \sum_{\nu=1}^{q} a_{\nu, j} \mathbf{w_{\nu}}\right) \\
->&= \sum_{\nu=1}^{q} a_{\nu, j} S(\mathbf{w_{\nu}})\\
->&= \sum_{\nu=1}^{q} a_{\nu, j} \sum_{\lambda=1}^{r}b_{\lambda,\nu} \mathbf{u_{\lambda}}.
->\end{align}
->$$
->As we want the coefficient of $\mathbf{u_{i}}$, we will only take the $\lambda = i$ term from the second sum. That is
->$$
->c_{ij} = \sum_{\nu=1}^{q} a_{\nu, j}b_{i, \nu} = (AB)_{ij}.
->$$
->❏
+> [!Theorem]
+> $\mathcal{M}_{B_{V}, B_{U}}(S\circ T)=\mathcal{M}_{B_{W}, B_{U}}(S)\mathcal{M}_{B_{V}, B_{W}}(T)$
+> 
+> > [!Proof]-
+> > 
+> > Let
+> > $$
+> > \begin{align}
+> > A_{q\times p}&=\mathcal{M}_{B_{V}, B_{W}}(T) & = (a_{ij})\\
+> > B_{r\times q}&=\mathcal{M}_{B_{W}, B_{U}}(S) & = (b_{ij})\\
+> > C_{r\times p}&=\mathcal{M}_{B_{V}, B_{U}}(S \circ T) & = (c_{ij})
+> > \end{align}
+> > $$
+> > Recall the [[Linear Transformations#Matrix-vector multiplication as a linear transformation|representation of linear transformations as matrices]].
+> > $$
+> > c_{i,j} = \text{Coefficient of} \ \mathbf{u_{i}} \ \text{in} \ (S \circ T)(\mathbf{v_{j}}).
+> > $$
+> > Now,
+> > $$
+> > \begin{align}
+> > (S \circ T)(\mathbf{v_{j}}) &= S\left( \sum_{\nu=1}^{q} a_{\nu, j} \mathbf{w_{\nu}}\right) \\
+> > &= \sum_{\nu=1}^{q} a_{\nu, j} S(\mathbf{w_{\nu}})\\
+> > &= \sum_{\nu=1}^{q} a_{\nu, j} \sum_{\lambda=1}^{r}b_{\lambda,\nu} \mathbf{u_{\lambda}}.
+> > \end{align}
+> > $$
+> > As we want the coefficient of $\mathbf{u_{i}}$, we will only take the $\lambda = i$ term from the second sum. That is
+> > $$
+> > c_{ij} = \sum_{\nu=1}^{q} a_{\nu, j}b_{i, \nu} = (AB)_{ij}.
+> > $$
+> > 
+> 
 
 ---
-## A "Good" basis for a linear map
+# A "Good" basis for a linear map
 
 Let $T:V\to W$ be a linear map with $\dim V = p$ and $\dim W = q$. We want to choose bases $B_{V}$ and $B_{W}$ such that $\mathcal{M}_{B_{V}, B_{W}}(T)$ is as simple as possible. 
 
 Let $\text{rank} \ T = r$. Now, take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$ (Recall the [[LEC ALG1 11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]]).
 Extend to get a basis of $V$,  $B_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$.
-We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See [[LEC ALG1 11#Rank nullity theorem for general linear maps over fdvsps|here]]).
+We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See proof of [[LEC ALG1 11#^1d9280]]). 
 Extend this to a basis of $W$. $B_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$.
 Now $\mathcal{M}_{B_{V}, B_{W}}(T)$ will be 
 $$

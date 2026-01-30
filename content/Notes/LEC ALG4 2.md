@@ -35,10 +35,12 @@ $R$ is a (commutative) ring, $M$ is a $R$-module.
 
 The construction of such a module generalizes directly the case of [[LEC ALG2 14#Free abelian groups|abelian groups]] [^1], replacing $\mathbb{Z}$ with an arbitrary ring $R$. We will denote the coproduct $\bigoplus_{a\in A}M$ by $M^{\oplus A}$. 
 
+By the virtue of being defined by a universal property, we know that $F^{R}(A)$, if it exists, is unique up to isomorphism for any given set $A$. 
+
 [^1]: Which, remember, are just $\mathbb{Z}$-modules!
 
 > [!Proposition]
-> $F^{R}(A)\cong R^{\oplus A}$.
+> $R^{\oplus A}$ is a free $R$-module on $A$. 
 > 
 > > [!Proof]-
 > > 
@@ -49,10 +51,12 @@ The construction of such a module generalizes directly the case of [[LEC ALG2 14
 > > 0_{R} & a\ne a'
 > > \end{cases}
 > > $$
-> > is a basis for $R^{\oplus A}$. Since we require $f$ from [[#^552c68]] to be a homomorphism, fixing the values of $f$ on $E$ determines $f$ on all of $R^{\oplus A}$. It remains to check that the determined map is indeed an $R$-module homomorphism, which is easily done [^3]. 
+> > is a basis for $R^{\oplus A}$. Commutativity of the diagram from [[#^552c68]] fixes the values of $\varphi$ on $E$;  Since we require $\varphi$ to be a homomorphism, this determines $\varphi$ on all of $R^{\oplus A}$. It remains to check that the determined map is indeed an $R$-module homomorphism, which is easily done [^3]. 
 > 
 
 ^e7a50f
+
+We can now perform the now familiar[^4] ritual of showing $|X_{1}|=|X_{2}| \iff F^{R}(X_{1})\cong F^{R}(X_{2})$, making the notion of rank well-defined and allowing us to call $R^{\oplus n}$ (also denoted by just $R^{n}$) *the* free $R$-module of rank $n$. 
 
 It should now be clear that
 
@@ -82,5 +86,24 @@ If we have a generating set for $M$, we can do better:
 
 ^e839ad
 
+> [!Proposition] @macdonaldIntroductionCommutativeAlgebra Ex. 2.11
+> Let $R$ be commutative.
+> 1. If $\varphi:R^{m}\to R^{n}$ is surjective, then $m\geqslant n$. 
+> 2. If $\varphi:R^{m}\to R^{n}$ is injective, then $m\leqslant n$. 
+
+^27be82
+
+Analogue of [[LEC ALG1 8#^6a3bec]]:
+
+> [!Proposition]
+> Let $R$ be a commutative ring and $M$ a finitely generated $R$-module. Let $X$ be a finite linearly independent subset of $M$, and $Y$ be a finite generating set of $M$. Then, $|X|\leqslant |Y|$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $X=\{ x_{1}, \dots, x_{s} \}$ and $Y=\{ y_{1}, \dots, y_{t} \}$. Let $\sigma:R^{\oplus X}\hookrightarrow M$ and $\pi:R^{\oplus Y}\twoheadrightarrow M$ be defined in the obvious ways. Now write $x_{i}=\sum_{j=1}^{t}a_{ij}y_{j}$ and define $\psi:R^{\oplus X}\to R^{\oplus Y}$ by $\psi(e_{i})=\sum_{j=1}^{t}a_{ij}e_{j}$. Clearly, $\pi \psi=\sigma$, so $\psi$ is injective. By [[#^27be82]], $s\leqslant t$. 
+> 
+
 
 [^3]: This proof looks very similar to that of [[Categorical notes on groups#^8e8d67]] - noting that every element of the coproduct can be uniquely expressed via a "basis", using this to define a map, and then verifying that this map is actually a group / module homomorphism. The proofs of [[LEC ALG2 14#^ae5ef6]] / [[LEC ALG2 14#^4898a7]] bypass this by invoking [[Categorical notes on groups#^8e8d67]] / [[Categorical notes on groups#^2cc108]].2 respectively and using the universal property of coproducts. You can see a [[Categorical notes on groups#^8e8d67]]-style proof of [[LEC ALG2 14#^ae5ef6]] at @aluffiAlgebraChapter02009 II.5.4. Indeed, you can prove [[#^e7a50f]] by invoking [[Categorical notes on groups#^2cc108]].2 and the universal property of coproducts instead. 
+
+[^4]: [[LEC ALG2 14#^b623d8]], [[LEC ALG2 13#^0409cd]], [[LEC ALG2 13#^cb59c5]]

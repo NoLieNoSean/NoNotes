@@ -61,28 +61,33 @@ Neither homogeneity nor additivity alone is enough to imply that a function is a
 ---
 ## Rank nullity theorem for general linear maps over fdvsps
 
->[!Theorem]
->For a linear map $T:V\to W$, where $V$ is a fdvsp, dim(ker T) + dim(im T)= dim V.
+> [!Theorem]
+> For a linear map $T:V\to W$, where $V$ is a fdvsp, dim(ker T) + dim(im T)= dim V.
+> 
+> > [!Proof]-
+> > 
+> > We will show that (Basis of ker $T$) $\cup$ (some disjoint set of size dim Im T)=(a basis of $V$). Take a basis $\mathbf{k}_{1}, \mathbf{k}_{2}, \dots, \mathbf{k}_{t}$ of ker T. Extend it to get a basis $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$ of $V$. Dim Ker $T$ = $r$, dim $V$ = $t+r$. We have to show that Dim Im $T$ = $r$. We guess that $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ is a basis of $\mathrm{Im}(T)$, i.e, they span $\mathrm{Im}(T)$ and are linearly independent.
+> > 
+> > 
+> > **These vectors span Im T**
+> > Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of (in particular, spans) $V$, $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t}), T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ span $T(V)=\mathrm{Im} (T)$. Since $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t})\}$ has span $\{ \mathbf{0} \}$, $\{T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ must span $\mathrm{Im}(T)$. 
+> > 
+> > 
+> > **These vectors are linearly independent**
+> > Consider a linear combination of  the vectors thats equals 0.
+> > 
+> > $\sum_{i=1}^{r}c_{i}T(\mathbf{v}_{i})=\mathbf{0}$.
+> > 
+> > Then, $T\left( \sum_{i=1}^{r}c_{i}\mathbf{v}_{i} \right)=\mathbf{0}$. 
+> > 
+> > Therefore, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}\in\text{Ker }(T)$.
+> > 
+> > So, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}=\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}$.
+> > 
+> > So, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}-\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}=0$.
+> > 
+> > Since $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$  forms a basis of $V$, all $c_{i}$ and $a_{i}$ must be $0$. In particular, all $c_{i}$ must be $0$. Thus, $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ are linearly independent. 
+> 
 
->**Proof**
->We will show that (Basis of ker $T$) $\cup$ (some disjoint set of size dim Im T)=(a basis of $V$). Take a basis $\mathbf{k}_{1}, \mathbf{k}_{2}, \dots, \mathbf{k}_{t}$ of ker T. Extend it to get a basis $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$ of $V$. Dim Ker $T$ = $r$, dim $V$ = $t+r$. We have to show that Dim Im $T$ = $r$. We guess that $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ is a basis of $\mathrm{Im}(T)$, i.e, they span $\mathrm{Im}(T)$ and are linearly independent.
->
->
->**These vectors span Im T**
->Since $\{\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}\}$ is a basis of (in particular, spans) $V$, $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t}), T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ span $T(V)=\mathrm{Im} (T)$. Since $\{T(\mathbf{k}_{1}), \dots, T(\mathbf{k}_{t})\}$ has span $\{ \mathbf{0} \}$, $\{T(\mathbf{v}_{1}), \dots, T(\mathbf{v}_{r})\}$ must span $\mathrm{Im}(T)$. 
->
->
->**These vectors are linearly independent**
->Consider a linear combination of  the vectors thats equals 0.
->
->$\sum_{i=1}^{r}c_{i}T(\mathbf{v}_{i})=\mathbf{0}$.
->
->Then, $T\left( \sum_{i=1}^{r}c_{i}\mathbf{v}_{i} \right)=\mathbf{0}$. 
->
->Therefore, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}\in\text{Ker }(T)$.
->
->So, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}=\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}$.
->
->So, $\sum_{i=1}^{r}c_{i}\mathbf{v}_{i}-\sum_{j=1}^{t}a_{j}\mathbf{k}_{j}=0$.
->
->Since $\mathbf{k}_{1}, \dots, \mathbf{k}_{t}, \mathbf{v}_{1}, \dots, \mathbf{v}_{r}$  forms a basis of $V$, all $c_{i}$ and $a_{i}$ must be $0$. In particular, all $c_{i}$ must be $0$. Thus, $T(\mathbf{v}_{1}), T(\mathbf{v}_{2}), \dots, T(\mathbf{v}_{r})$ are linearly independent. ❏
+^1d9280
+

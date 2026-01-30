@@ -4,42 +4,54 @@ date: 2025-11-08
 time: 10:59
 tags:
   - ANA2
+  - TOP
 ---
 See @munkresTopology2000 §17, §30, §31, §32.
 # Separation axioms
 
 > [!Definition]
-> A topological space in which singletons are closed is called
-> 1. **Fréchet ($T_{1}$)** if for every pair of distinct points, each has a neighborhood not containing the other point.
+> A topological space is called
+> 1. **Fréchet ($T_{1}$)** if singleton subsets are closed. 
 > 2. **Hausdorff ($T_{2}$)** if distinct points have disjoint open neighborhoods.
-> 3. **regular ($T_{3}$)** if every closed set $C$ and point $p\not\in C$ have have disjoint open neighborhoods.
-> 4. **normal ($T_{4}$)** if any two disjoint closed sets have disjoint open neighborhoods.
+> 3. **Regular ($T_{3}+T_{1}$)** if every closed set $C$ and point $p\not\in C$ have have disjoint open neighborhoods, and singletons are closed. 
+> 4. **Normal ($T_{4}+T_{1}$)** if any two disjoint closed sets have disjoint open neighborhoods, and singletons are closed. 
 
 Clearly, $T_{4}$+$T_{1}$ $\implies$ $T_{3}$+$T_{1}$ $\implies$ $T_{2}$ $\implies$ $T_{1}$.
+## Fréchet spaces
 
-$T_{1}$ is equivalent to saying that $1$ point sets are closed. 
+> [!Proposition]
+> $X$ is $T_{1}$ $\iff$ for every pair of distinct points, each has a neighborhood not containing the other point.
+> 
+> > [!Proof]-
+> > 
+> > $(\implies)$ for $x, y\in X$, $\{ x \}^{c}$ and $\{ y \}^{c}$ work. 
+> > 
+> > $(\impliedby)$ Let $x\in X$. For every $y\ne x$, let $U_{y}$ be an open neighborhood of $y$ not containing $x$. Then, $U:=\bigcup_{y\in X, y\ne x}U_{y}$ is open, and $U^{c}=\{ x \}$. 
+> 
 
+> [!Proposition]
+> Let $X$ be a $T_{1}$ space, and $A\subseteq X$. Then the point $x$ is a [[LEC TOP 1#^12841c|limit point]] of $A$ iff every neighborhood of $x$ contains infinitely many points of $A$.
+> 
+> > [!Proof]-
+> > 
+> > Let $U_{1}$ be an open neighborhood of $x$. Since $U_{1}$ must intersect $A$, we can pick $a_{1}\in A\cap U_{1}$. Since $X$ is $T_{1}$, there exists an open neighborhood $U'$ of $x$ which does not contain $a_{1}$. Let $U_{2}:=U_{1}\cap U'$. Again, being an open neighborhood of $x$, $U_{2}$ must contain an element of $A$, say $a_{2}$. Proceeding in this manner, we see that $U_{1}$ must contain infinitely many points of $A$. 
+> 
 
 ## Hausdorff spaces
 
-There are several niceties that we take for granted in metric spaces:
+There are several niceties of metric spaces that we take for granted:
 1. all singletons are closed;
 2. a sequence cannot converge to more than one point.
 
-These are not true for arbitrary topological spaces. As we ascend the classification ladder from $T_{1}$ to $T_{4}$, topological spaces become more well-behaved; the above properties are attained at $T_{2}$.
-
-Merely assuming $T_{1}$ tames the zoo significantly:
-
-> [!Proposition]
-> A topological space $X$ is $T_{1}$ $\iff$ every finite point set in $X$ is closed.
-
-> [!Proposition]
-> Let $X$ be a $T_{1}$ space, and $A\subseteq X$. Then the point $x$ is a limit point of $A$ iff every neighborhood of $x$ contains infinitely many points of $A$.
-
-$T_{2}$ spaces are nicer, and most spaces that arise in math are $T_{2}$. 
+These are not true for arbitrary topological spaces. As we ascend the ladder from $T_{1}$ to $T_{4}$, topological spaces become more well-behaved. As we have seen, merely assuming $T_{1}$ gives us closed singletons; the uniqueness of limits is attained at $T_{2}$. 
 
 > [!Proposition]
 > A sequence of points in a $T_{2}$ space converges to at most one point.
+> 
+> > [!Proof]-
+> > 
+> > Say a sequence $\{ x_{n} \}$ converges to two points, $a$ and $b$. Let $A\ni a$ and $B\ni b$ be disjoint open sets. By definition, there exists $N$ such that for all $n\geqslant N$, $x_{n}\in A$ - but this implies $\{ x_{n} \}$ cannot converge to $b$! 
+> 
 
 > [!Proposition]
 > The product of two $T_{2}$ / $T_{3}$ spaces is a $T_{2}$ / $T_{3}$ space. A subspace of a $T_{2}$ / $T_{3}$ space is a $T_{2}$ / $T_{3}$ space. 

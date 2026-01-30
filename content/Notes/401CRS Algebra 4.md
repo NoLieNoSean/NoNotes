@@ -18,14 +18,16 @@ CMI, Jan-Apr 2026, Manoj Kummini
 # Lecture notes
 
 [[Categorical notes on Modules]]
+[[Splitting of short exact sequences for modules]]
 
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
 [[LEC ALG4 3]] ✅ Projective Modules, invariance of cardinality of basis
-[[LEC ALG4 4]] Noetherian Modules, Hilbert's basis theorem
-[[LEC ALG4 5]] Generators and relations, torsion free modules
+[[LEC ALG4 4]] ✅ Noetherian Modules, Hilbert's basis theorem
+[[LEC ALG4 5]] Generators and relations, decomposition of finitely generated modules into torsion and free components
 [[LEC ALG4 6]] Finitely generated torsion modules over PIDs
-
+[[LEC ALG4 7]]
+	
 
 @isaacsAlgebraGraduateCourse2009, @artinAlgebra2011, @aluffiAlgebraChapter02009, @langAlgebra2002
 
@@ -34,6 +36,15 @@ CMI, Jan-Apr 2026, Manoj Kummini
 
 [[TUT ALG4 1]]
 [[TUT ALG4 2]]
+
+
+
+
+
+
+
+
+
 
 
 

@@ -56,11 +56,14 @@ $$
 $$
 
 > [!Proposition]
-> For every set $S$, $F^{ab}(S)\cong \mathbb{Z}^{\oplus S}$. 
+> For every set $S$, $\mathbb{Z}^{\oplus S}$ is free abelian on $S$. 
+> 
+> > [!Proof]-
+> > 
+> > Same as that of [[#^ae5ef6]]; just use the universal property of coproducts.
+> 
 
 ^4898a7
-
-The proof is the same as that of [[#^ae5ef6]]; just use the universal property of coproducts.
 
 > [!Proposition]
 > 1. If $|X_{1}|=|X_{2}|$, then $F^{ab}(X_{1})\cong F^{ab}(X_{2})$. 
@@ -72,6 +75,8 @@ The proof is the same as that of [[#^ae5ef6]]; just use the universal property o
 > > 
 > > I'm pretty sure that the proofs of [[LEC ALG2 13#^0409cd]] and [[LEC ALG2 13#^cb59c5]] work verbatim here. 
 > 
+
+^b623d8
 
 ---
 
@@ -94,10 +99,10 @@ Thus, our main task amounts to classifying abelian $p$-groups.
 
 # The Invariant Factor Theorem
 
-The key theorem is that a subgroup of a free abelian group is free abelian of rank not exceeding that of the bigger group. 
+The key theorem is that a ==subgroup of a free abelian group is free abelian of rank not exceeding that of the bigger group==. 
 
 > [!Theorem] Invariant factor theorem, @suryFreeGroupsBasics2010 [p. 14]
-> If $H$ is a subgroup of a free abelian group $G$ of rank $n$, then $H$ is free abelian of rank $r\leqslant n$. Further, there are bases $\{ e_{1}, \dots, e_{n} \}$ of $G$ and $\{ d_{1}e_{1}, \dots, d_{r}e_{r} \}$ of $H$ respectively where $d_{i}$ divides $d_{i+1}$ for $i< r$. The integers $d_{i}$ are uniquely determined up to sign and are called the **invariant factors** of $H$. 
+> If $H$ is a subgroup of a free abelian group $G$ of rank $n$, then $H$ is free abelian of rank $r\leqslant n$. Further, there exist bases $\{ e_{1}, \dots, e_{n} \}$ of $G$ and $\{ d_{1}e_{1}, \dots, d_{r}e_{r} \}$ of $H$ respectively where $d_{i}$ divides $d_{i+1}$ for $i< r$. The integers $d_{i}$ are uniquely determined up to sign and are called the **invariant factors** of $H$. 
 > 
 > > [!Proof]-
 > > 

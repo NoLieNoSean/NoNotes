@@ -21,7 +21,7 @@ Linear systems are solved by performing *row reduction* on the [[Matrices#Augmen
 ---
 ## Row operations
 
-There are three *row operations* we can use to perform row reduction. Every row operation as what is called an *elementary matrix* associated with it, and performing the row operation is equivalent to [[Linear Transformations#Matrix multiplication|multiplying]] the augmented matrix by the elementary matrix. Elementary matrices are [[Invertible Transformations#Invertible transformations|invertible]], and hence, performing row operations does not change the solution set of the system of linear equations (All solutions $\mathbf{x}$ of the equation $A\mathbf{x}=\mathbf{b}$ must satisfy $EA\mathbf{x}=E\mathbf{b}$, and any solution to the latter must satisfy $E^{-1}EA\mathbf{x}=E^{-1}E\mathbf{b}$). 
+There are three *row operations* we can use to perform row reduction. Every row operation has what is called an *elementary matrix* associated with it, and performing the row operation is equivalent to [[Linear Transformations#Matrix multiplication|multiplying]] the augmented matrix by the elementary matrix. Elementary matrices are [[Invertible Transformations#Invertible transformations|invertible]], and hence, performing row operations does not change the solution set of the system of linear equations (All solutions $\mathbf{x}$ of the equation $A\mathbf{x}=\mathbf{b}$ must satisfy $EA\mathbf{x}=E\mathbf{b}$, and any solution to the latter must satisfy $E^{-1}EA\mathbf{x}=E^{-1}E\mathbf{b}$). 
 ### Row exchange
 
 Let $E$ be the matrix

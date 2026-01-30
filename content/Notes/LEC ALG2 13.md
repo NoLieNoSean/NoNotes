@@ -6,20 +6,22 @@ id: "102"
 Refer @balsdonFREEGROUPSGEOMETRY, @suryFreeGroupsBasics2010.
 See @robinsonBANACHTARSKIPARADOX2015 for an interesting application of free groups.
 
-Intuitively, a free group is a group which has no nontrivial relations among its elements - it satisfies the bare minimum requirements to be called a group (the group axioms) and nothing more.
+Intuitively, a free group is a group which has no nontrivial relations among its elements - it satisfies the bare minimum requirements to be called a group (the group axioms) and nothing more. ^68d01d
 
 > [!Definition]
 > Given a non-empty set $S$, and a map $\theta:S\to F$ into a group $F$, the pair $(F, \theta)$ is said to be a **free group** on the set $S$ if, for any function $\varphi:S\to G$ to any group $G$, there is a ==unique== homomorphism $\overline{\varphi}:F\to G$ such that $\varphi=\overline{\varphi}\circ\theta$. When $\theta$ is an inclusion, we call $\overline{\varphi}$ the unique extension of $\varphi$ to $F$. 
 > 
 > ```latex
 > % latex-id: a143-53a6-14a3-4ad1-90cd
+> \begin{document}
 > \begin{tikzcd}
-> S\ar[r, "\varphi"]\ar[d, "\theta"']&G\\
-> F\ar[ru, dotted, "\overline{\varphi}"']&\\
-> \end{tikzcd}
+>  S\ar[r, "\varphi"]\ar[d, "\theta"']&G\\
+>  F\ar[ru, dotted, "\overline{\varphi}"']&\\
+>  \end{tikzcd}
+> \end{document}
 > ```
 > 
-> 
+
 
 ^1e47e5
 

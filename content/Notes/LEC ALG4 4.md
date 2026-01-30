@@ -5,6 +5,7 @@ time: 11:17
 tags:
   - ALG4
   - Lecture
+  - Processed
 ---
 # Noetherian modules
 
@@ -66,7 +67,10 @@ Note that $R$ is a [[Noetherian rings|Noetherian ring]] $\iff$ $R$ is a Noetheri
 > > which is free of rank 1[^2]. We are done by [[#^57ac90]]⇐. 
 > 
 
+
 ^e419d5
+
+
 
 > [!Corollary]
 > Let $R$ be a Noetherian ring and $M$ be an $R$-module. Then $M$ is Noetherian iff it is finitely generated.
@@ -79,42 +83,21 @@ Note that $R$ is a [[Noetherian rings|Noetherian ring]] $\iff$ $R$ is a Noetheri
 > 
 
 
-> [!Remark]
-> Let $R$ be a Noetherian ring, and $M$ be a finitely generated $R$-module with generating set $\{ x_{1}, \dots, x_{n} \}$. The kernel of the map $\epsilon:R^{n}\to M$ given by [[LEC ALG4 2#^e839ad]] is exactly all the $R$-linear relations among $\{ x_{1}, \dots, x_{n} \}$. Since $R^{n}$ is Noetherian by [[#^e419d5]], $\ker\epsilon$ is finitely generated, say by $m$ elements. So, there exists a surjective map $\epsilon_{1}:R^{m}\to \ker\epsilon$. Let $\varphi$ be the composite $\iota \circ\epsilon_{1}$. 
+> [!Theorem] Hilbert's basis theorem
+> If $R$ is a Noetherian ring, then $R[X]$ is a Noetherian ring [^3]. 
 > 
-> ```latex
-> % latex-id: af57-3f3f-963d-4f83-9521
-> \begin{document}
-> \begin{tikzcd} 
-> \ker\epsilon \ar[r, hook, "\iota"] & R^{n}\ar[r, "\epsilon"] & M \\
-> R^{m}\ar[u, "\epsilon_{1}"]\ar[ru, "\varphi"'] &  & 
-> \end{tikzcd}
-> \end{document}
-> ```
-> Observe that 
-> $$
-> \frac{R^{n}}{\mathrm{im}\,\varphi}\cong\frac{R^{n}}{\ker\epsilon}\cong\text{im}\,\epsilon\cong M.
-> $$
-> Thus, for Noetherian $R$ and a finitely generated $R$-module $M$, there exists a $R$-module homomorphism $\varphi:R^{m}\to R^{n}$ such that $M\cong \text{coker}\,\varphi$. After choosing a basis for $R^{m}$ and $R^{n}$, $\varphi$ can be represented by a $n\times m$ matrix with entries in $R$. 
-
-^bc04ff
-
-
-[!Theorem] Hilbert's basis theorem
-If $R$ is a Noetherian ring, then $R[X]$ is a Noetherian ring [^3]. 
-
-[!Proof]-
-
-FTSOC, assume that $R[X]$ has a nonzero ideal $I$ that is not finitely generated. Let $f_{1}\in I\setminus 0$ be of the smallest possible degree. For all $k\geqslant 2$, choose $f_{k}\in I\setminus \langle f_{1}, \dots, f_{k-1} \rangle$ of smallest possible degree. Write $d_{i}$ for the degree of $f_{i}$. We have $d_{1}\leqslant d_{2}\leqslant \dots$. For $i\geqslant 1$, let $b_{i}$ be the leading coefficient of $f_{i}$. Let $J=\langle b_{1}, b_{2}, \dots \rangle$ be an ideal of $R$. Since $J$ is finitely generated, there exists $k$ such that $J=\langle b_{1}, \dots, b_{k} \rangle$. 
-
-Now, there exist $r_{1}, \dots, r_{k}\in R$ such that $b_{k+1}=\sum_{i=1}^{k}r_{i}b_{i}$. Consider
-$$
-\begin{align}
-g:=\sum_{i=1}^{k} r_{i}X^{d_{k+1}-d_{i}}f_{i}.
-\end{align}
-$$
-Then $\text{deg}\,g=d_{k+1}$ and its leading coefficient is $b_{k+1}$. We have $g\in \langle f_{1}, \dots, f_{k} \rangle$. $\text{deg}\,f_{k+1}-g\leqslant d_{k+1}$. and $f_{k+1}-g\not\in \langle f_{1}, \dots, f_{k} \rangle$. This contradicts the choice of $f_{k+1}$. Thus, $R[x]$ is Noetherian. 
-
+> > [!Proof]-
+> > 
+> > FTSOC, assume that $R[X]$ has a nonzero ideal $I$ that is not finitely generated. Let $f_{1}\in I\setminus 0$ be of the smallest possible degree. For all $k\geqslant 2$, choose $f_{k}\in I\setminus \langle f_{1}, \dots, f_{k-1} \rangle$ of smallest possible degree. Write $d_{i}$ for the degree of $f_{i}$. We have $d_{1}\leqslant d_{2}\leqslant \dots$. For $i\geqslant 1$, let $b_{i}$ be the leading coefficient of $f_{i}$. Let $J=\langle b_{1}, b_{2}, \dots \rangle$ be an ideal of $R$. Since $J$ is finitely generated, there exists $k$ such that $J=\langle b_{1}, \dots, b_{k} \rangle$. 
+> > 
+> > Now, there exist $r_{1}, \dots, r_{k}\in R$ such that $b_{k+1}=\sum_{i=1}^{k}r_{i}b_{i}$. Consider
+> > $$
+> > \begin{align}
+> > g:=\sum_{i=1}^{k} r_{i}X^{d_{k+1}-d_{i}}f_{i}.
+> > \end{align}
+> > $$
+> > Then $\text{deg}\,g=d_{k+1}$ and its leading coefficient is $b_{k+1}$. We have $g\in \langle f_{1}, \dots, f_{k} \rangle$. $\text{deg}\,(f_{k+1}-g)\leqslant d_{k+1}$, and $f_{k+1}-g\not\in \langle f_{1}, \dots, f_{k} \rangle$. This contradicts the choice of $f_{k+1}$. Thus, $R[x]$ is Noetherian. 
+> 
 
 
 

@@ -7,48 +7,50 @@ date: 2024-10-10
 time: 14:00
 id: "81"
 ---
-## Computing the determinant
+# Computing the determinant
 
 Recall the [[LEC ALG1 14#Determinants|defining properties of the determinant function]] from the previous lecture. We will soon show that the function satisfying these properties is unique. Assuming this to be the case, how would we actually compute the determinant of a given matrix?
 
->[!Theorem] Lemma 1
->If $A$ has a zero row or column, $\det A=0$. 
-
->**Proof**
->Let the $j^{th}$ row of $A$ be a zero row.
->Let $R_{j} \to -R_{j}$ give the matrix $A'$. Then,
->$$
->\begin{align}
->\det A &= - \det A'\\
->\det A &= - \det A\\
->\det A &= 0.
->\end{align} 
->$$
->❏
-
->[!Theorem] Lemma 2
->If $A$ is upper/lower triangular, then $\det A$ is the product of its diagonal entries.
-
-> **Proof**:
-> Let $A$ be an $n\times n$ upper triangular matrix.
+> [!Lemma]
+> If $A$ has a zero row or column, $\det A=0$. 
 > 
-> *Case 1:* One of the diagonal entries of $A$ is zero.
-> Pick the lowest zero on the diagonal, say $a_{ii}$. All the entries to the left of $a_{ii}$ on row $i$ are $0$, since $A$ is upper triangular. All the entries to the right of $a_{ii}$ on row $i$ can be made $0$ using row operations, since $a_{kk}\ne 0, \ i<k\leq n$. Thus, row $i$ can be made a zero row using row operations. From lemma 1 and the property that row operations do not change the determinant, it follows that $\det A=0$. 
-> $$
-> \begin{bmatrix}
->a_{11} \\
->& \ddots \\
->&  & a_{ii} \\
->&  &  & \ddots \\
->&  &  &  & a_{nn}
->\end{bmatrix}
-> $$
-> *Case 2:* None of the diagonal entries of $A$ are zero.
-> Scale row $i$ by $a_{ii}^{-1}$. This gives us an upper triangular matrix with all the diagonal entries equal to $1$. This can be reduced to $I_{n\times n}$ using row operations, which has determinant $1$. So, we have
-> $1={\det A}\ \ a_{11}^{-1}a_{22}^{-1}\dots a_{nn}^{-1}$ $\implies$ $\det A=a_{11}a_{22}\dots a_{nn}$. ❏
+> > [!Proof]-
+> > Let the $j^{th}$ row of $A$ be a zero row.
+> > Let $R_{j} \to -R_{j}$ give the matrix $A'$. Then,
+> > $$
+> > \begin{align}
+> > \det A &= - \det A'\\
+> > \det A &= - \det A\\
+> > \det A &= 0.
+> > \end{align} 
+> > $$
+> > 
+> 
 
->[!Theorem] Proposition
-> We may compute the determinant of a matrix $A$ by using row operations. Let $B$ a row reduced form of $A$. Then, 
+> [!Lemma] 
+> If $A$ is upper/lower triangular, then $\det A$ is the product of its diagonal entries.
+> 
+> > [!Proof]-
+> > Let $A$ be an $n\times n$ upper triangular matrix.
+> > 
+> > *Case 1:* One of the diagonal entries of $A$ is zero.
+> > Pick the lowest zero on the diagonal, say $a_{ii}$. All the entries to the left of $a_{ii}$ on row $i$ are $0$, since $A$ is upper triangular. All the entries to the right of $a_{ii}$ on row $i$ can be made $0$ using row operations, since $a_{kk}\ne 0, \ i<k\leq n$. Thus, row $i$ can be made a zero row using row operations. From lemma 1 and the property that row operations do not change the determinant, it follows that $\det A=0$. 
+> > $$
+> > \begin{bmatrix}
+> > >a_{11} \\
+> > >& \ddots \\
+> > >&  & a_{ii} \\
+> > >&  &  & \ddots \\
+> > >&  &  &  & a_{nn}
+> > >\end{bmatrix}
+> > $$
+> > *Case 2:* None of the diagonal entries of $A$ are zero.
+> > Scale row $i$ by $a_{ii}^{-1}$. This gives us an upper triangular matrix with all the diagonal entries equal to $1$. This can be reduced to $I_{n\times n}$ using row operations, which has determinant $1$. So, we have
+> > $1={\det A}\ \ a_{11}^{-1}a_{22}^{-1}\dots a_{nn}^{-1}$ $\implies$ $\det A=a_{11}a_{22}\dots a_{nn}$. 
+> 
+
+>[!Theorem]
+> We may compute the determinant of a matrix $A$ by using ==row operations==. Let $B$ a row reduced form of $A$. Then, 
 > $$
 > \det A = {(-1)^r}\, \frac{\text{ product of diagonal entries of }B}{\text{product of scaling factors}}
 > $$
@@ -58,7 +60,7 @@ This follows immediately from the preceding lemmas and the properties of the det
 This also shows that $\det A=\det A^{T}$.
 
 ---
-## Another characterization of the determinant
+# Another characterization of the determinant
 
 ### Multilinearity
 
