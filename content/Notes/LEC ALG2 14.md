@@ -1,5 +1,6 @@
 ---
 id: "103"
+date: March 2025
 ---
 # Free abelian groups
 
@@ -9,11 +10,14 @@ Free abelian groups are obtained by stating the [[LEC ALG2 13#^1e47e5|universal 
 > Given a non-empty set $S$ and a map $\theta:S\to F^{ab}$ into an abelian group $F^{ab}$, the pair $(F^{ab}, \theta)$ is said to be a **free abelian group** on the set $S$ if, for any function $\varphi:S\to G$ to any abelian group $G$, there is a ==unique== homomorphism $\overline{\varphi}:F^{ab}\to G$ such that $\varphi=\overline{\varphi}\circ\theta$. When $\theta$ is an inclusion, we call $\overline{\varphi}$ the unique extension of $\varphi$ to $F^{ab}$. 
 > 
 > ```latex
-> % latex-id: a143-53a6-14a3-4ad1-90cd
+> 
+> % latex-id: c2f1-083a-ccf0-4697-9edc
+> \begin{document}
 > \begin{tikzcd}
 > S\ar[r, "\varphi"]\ar[d, "\theta"']&G\\
 > F^{ab}\ar[ru, dotted, "\overline{\varphi}"']&\\
 > \end{tikzcd}
+> \end{document}
 > ```
 > 
 

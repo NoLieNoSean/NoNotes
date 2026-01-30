@@ -2,6 +2,7 @@
 tags:
   - PROB
 id: "234"
+date: February 2025
 ---
 
 ## Infinite sequences of Bernoulli trials

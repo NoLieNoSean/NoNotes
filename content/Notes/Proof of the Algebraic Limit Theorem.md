@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "268"
+date: September 2024
 ---
 
 Statement can be found [[Sequences and convergence#Algebraic limit theorem|here]].

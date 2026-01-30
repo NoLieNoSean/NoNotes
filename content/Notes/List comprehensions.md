@@ -1,5 +1,6 @@
 ---
 id: "250"
+date: September 2024
 ---
 
 Very much like set comprehensions.

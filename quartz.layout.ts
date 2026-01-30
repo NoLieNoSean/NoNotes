@@ -8,9 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "All pages": "/NoNotes/Notes",
+      "All pages": "/NoNotes/Notes/",
       "Home": "/NoNotes/",
-      "GitHub": "https://github.com/NoLieNoSean/NoNotes",
+      "GitHub": "https://github.com/NoLieNoSean/NoNotes/",
     },
   }),
 }

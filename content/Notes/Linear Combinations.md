@@ -2,6 +2,7 @@
 tags:
   - ALG1
 id: "248"
+date: August 2024
 ---
 
 ## Linear combination

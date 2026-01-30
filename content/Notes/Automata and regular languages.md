@@ -2,6 +2,7 @@
 tags:
   - TOC
 id: "26"
+date: August 2025
 ---
 
 > [!Definition]

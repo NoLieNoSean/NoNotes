@@ -1,5 +1,6 @@
 ---
 id: "233"
+date: February 2025
 ---
 
 ## Discrete Random Vector

@@ -2,6 +2,7 @@
 tags:
   - PROB
 id: "292"
+date: October 2025
 ---
 ## Problem 3
 

@@ -1,5 +1,6 @@
 ---
 id: "187"
+date: January 2025
 ---
 
 # The mean value theorem 

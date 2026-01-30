@@ -1,5 +1,6 @@
 ---
 id: "56"
+date: August 2024
 ---
 ## 3.30
 ![[Pasted image 20240827163402.jpeg|300]]

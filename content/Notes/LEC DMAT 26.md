@@ -1,5 +1,6 @@
 ---
 id: "224"
+date: April 2025
 ---
 
 # Directed graphs

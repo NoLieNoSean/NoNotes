@@ -1,5 +1,7 @@
 ---
 id: "71"
+draft: true
+date: December 2024
 ---
 
 # Basic notions

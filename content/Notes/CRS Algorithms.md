@@ -20,7 +20,6 @@ CMI, Aug-Nov 2025, Siddharth Pritam
 (using BST instead of an array makes insertion sort go from a O(n^2) to O(n log n) algorithm)
 [[LEC ALGO 7]] Heaps, heapsort, comparison based sorting algorithms cannot be faster than $O(n\log n)$ 
 
-[[Probabilistic Analysis and Randomized Algorithms]]
 
 [[LEC ALGO 8]] Hash tables, simple uniform hashing, open addressing, linear and quadratic probing
 [[LEC ALGO 9]] When being greedy works - Prim's algorithm
@@ -38,51 +37,3 @@ CMI, Aug-Nov 2025, Siddharth Pritam
 [[AS ALGO 2]]
 [[AS ALGO 3]]
 
-
----
-
-BFS: $O(V+E)=O(E)$.
-Ford Fulkerson: $O(E|f^{*}|)$. 
-Edmonds Karp: $O(VE^{2})$.
-Djikstra with min-heap: $O((E+V)\log V)=O(E\log V)$.
-Prim's algorithm: $O(E\log V)$
-Kruskal's algorithm: $O(E\log V)$
-Bellman-Ford: $O(VE)$.
-
-
-
-
-ALGORITHMS
-
-
-
-Recurrence Relations
-    Master method
-
-Sorting Algorithms
-
-Algorithms
-    Quickselect
-    Median Of Medians
-    Integer Multiplication
-    Convex Hull
-    Minimum Distance
-    0/1 Knapsack
-    Bellman Ford
-    Floyd Warshall
-    Fast Fourier Transform
-
-    ++ Greedy Algorithm, Matroids
-
-Hashing
-    Universal Hashing
-    Simple Uniform Hashing
-    Alpha Multiplication
-    Open Addressing
-
-Compression
-    Fixed Length Coding
-    Prefix Free Coding
-    Hoffman Coding
-    
-NP Hardness

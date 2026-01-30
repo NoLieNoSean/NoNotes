@@ -3,6 +3,7 @@ id: "356"
 date: 2025-11-15
 time: 20:39
 tags:
+  - TOC
 ---
 We say $A\leqslant B$ if there exists a map $\sigma:\Sigma^{*}\to\Sigma^{*}$ such that $s\in A\iff\sigma(s)\in B$. $\sigma$ is called a reduction of $A$ to $B$. If $A\leqslant B$, 
 1. $\overline{A}\leqslant \overline{B}$,

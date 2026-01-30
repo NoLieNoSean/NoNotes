@@ -1,5 +1,6 @@
 ---
 id: "52"
+date: February 2025
 ---
 
 @hersteinAbstractAlgebra1996 [p. 66], problems 37 to 40

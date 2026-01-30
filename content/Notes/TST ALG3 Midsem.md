@@ -1,5 +1,6 @@
 ---
 id: "290"
+date: March 2025
 ---
 
 All rings are commutative with $1$.

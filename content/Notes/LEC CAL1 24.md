@@ -1,5 +1,6 @@
 ---
 id: "193"
+date: January 2025
 ---
 
 ## Extremum problems with side conditions

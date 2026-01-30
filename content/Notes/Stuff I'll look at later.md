@@ -1,5 +1,6 @@
 ---
 id: "278"
+date: October 2025
 ---
 
 [!Fact]

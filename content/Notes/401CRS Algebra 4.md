@@ -18,7 +18,6 @@ CMI, Jan-Apr 2026, Manoj Kummini
 # Lecture notes
 
 [[Categorical notes on Modules]]
-[[Splitting of short exact sequences for modules]]
 
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
@@ -27,6 +26,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 5]] Generators and relations, decomposition of finitely generated modules into torsion and free components
 [[LEC ALG4 6]] Finitely generated torsion modules over PIDs
 [[LEC ALG4 7]]
+[[LEC ALG4 8]]
 	
 
 @isaacsAlgebraGraduateCourse2009, @artinAlgebra2011, @aluffiAlgebraChapter02009, @langAlgebra2002

@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "29"
+date: August 2024
 ---
 ## Boundedness
 

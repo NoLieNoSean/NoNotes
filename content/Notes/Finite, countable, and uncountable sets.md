@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "50"
+date: September 2024
 ---
 
 If there exists a 1-1 mapping of $A$ onto $B$, we say that $A$ and $B$ can be put in 1-1 *correspondence*, or that $A$ and $B$ have the same *cardinal number*, or that $A$ and $B$ are *equivalent*, and denote it by $A\sim B$. 

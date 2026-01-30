@@ -1,5 +1,6 @@
 ---
 id: "184"
+date: January 2025
 ---
 
 # Derivatives of vector valued functions

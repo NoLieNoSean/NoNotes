@@ -2,6 +2,7 @@
 tags:
   - ALG2
 id: "10"
+date: March 2025
 ---
 Consider the symmetries of a cube with faces labelled $F, B, L, R, U,$ and $D$. 
 ![[Pasted image 20250330124602.jpeg]]

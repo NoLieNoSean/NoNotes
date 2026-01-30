@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "47"
+date: August 2024
 ---
 ## Axioms
 A *field* is a set $\mathbb{F}$ with two operations, called addition and multiplication, which satisfy the following field axioms:

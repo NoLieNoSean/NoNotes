@@ -1,5 +1,6 @@
 ---
 id: "289"
+date: March 2025
 ---
 
 **Prove or disprove: Let $G=A_{4}$. There exist proper subgroups $H$ and $K$ such that $A_{4}\cong H\times K$.**

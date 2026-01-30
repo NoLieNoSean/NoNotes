@@ -1,5 +1,6 @@
 ---
 id: "64"
+date: August 2024
 ---
 
 Haskell's if statements are expressions, since the else block is mandated (which ensures that the if statement always returns a value).

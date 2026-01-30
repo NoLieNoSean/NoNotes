@@ -1,5 +1,8 @@
 ---
 id: "35"
+date: October 2025
+tags:
+  - TOC
 ---
 
 See @kozenAutomataComputability1997 lectures 19, 20

@@ -1,5 +1,6 @@
 ---
 id: "230"
+date: January 2025
 ---
 
 ## More properties of the probability function

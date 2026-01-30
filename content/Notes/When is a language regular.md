@@ -1,5 +1,8 @@
 ---
 id: "313"
+date: September 2025
+tags:
+  - TOC
 ---
 
 # The pumping lemma

@@ -2,6 +2,7 @@
 tags:
   - PROB
 id: "236"
+date: April 2025
 ---
 
 # Continuous random variables

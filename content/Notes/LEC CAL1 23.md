@@ -1,5 +1,6 @@
 ---
 id: "192"
+date: January 2025
 ---
 
 ## Extrema of real valued functions of one variable

@@ -1,5 +1,6 @@
 ---
 id: "226"
+date: January 2025
 ---
 
 We know that the electric field at $\mathbf{r}$ is given by

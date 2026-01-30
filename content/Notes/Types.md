@@ -1,5 +1,6 @@
 ---
 id: "310"
+date: August 2024
 ---
 
 In Haskell,

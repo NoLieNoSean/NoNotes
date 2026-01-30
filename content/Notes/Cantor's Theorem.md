@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "30"
+date: September 2024
 ---
 
 >[!Theorem]

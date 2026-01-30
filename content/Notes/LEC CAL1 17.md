@@ -1,5 +1,6 @@
 ---
 id: "186"
+date: January 2025
 ---
 
 # The chain rule

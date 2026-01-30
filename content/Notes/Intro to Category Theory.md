@@ -2,6 +2,7 @@
 tags:
   - CategoryTheory
 id: "65"
+date: May 2025
 ---
 Refer @aluffiAlgebraChapter02009 [pp. 18].
 # Categories

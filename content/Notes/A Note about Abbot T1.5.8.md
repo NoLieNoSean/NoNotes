@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "9"
+date: September 2024
 ---
 
 In Abbot, two versions of the theorem are supplied:

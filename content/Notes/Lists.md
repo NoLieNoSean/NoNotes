@@ -1,5 +1,6 @@
 ---
 id: "251"
+date: August 2024
 ---
 
 >[!Definition] Lists

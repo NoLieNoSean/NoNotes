@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "32"
+date: September 2024
 ---
 ## Cauchy sequences
 

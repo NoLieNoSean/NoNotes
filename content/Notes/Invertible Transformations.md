@@ -2,6 +2,7 @@
 tags:
   - ALG1
 id: "69"
+date: August 2024
 ---
 
 ## Left and right invertibility

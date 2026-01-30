@@ -1,5 +1,6 @@
 ---
 id: "232"
+date: February 2025
 ---
 
 ## More examples of probability mass functions

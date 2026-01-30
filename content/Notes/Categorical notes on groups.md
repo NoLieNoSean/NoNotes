@@ -1,5 +1,6 @@
 ---
 id: "31"
+date: August 2024
 ---
 # Products and Coproducts
 

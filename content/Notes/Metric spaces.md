@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "254"
+date: September 2024
 ---
 >[!Definition]
 >A set $X$, whose elements are called *points*, is said to be a *metric space* if with any two points $p$ and $q$ of $X$ there is associated a real number $d(p,q)$, called the distance between $p$ and $q$, such that 

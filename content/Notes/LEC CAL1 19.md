@@ -1,5 +1,6 @@
 ---
 id: "188"
+date: January 2025
 ---
 
 # A sufficient condition for differentiability

@@ -1,5 +1,6 @@
 ---
 id: "311"
+date: August 2024
 ---
 
 Compile a script using `ghc <file name>`. This generates a binary whose name does not have the .hs extension.

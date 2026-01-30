@@ -2,6 +2,7 @@
 tags:
   - ALG1
 id: "275"
+date: September 2024
 ---
 
 Linear systems are solved by performing *row reduction* on the [[Matrices#Augmented matrix|augmented matrix]] to reduce it to the *echelon form*, from which a solution can easily be written.

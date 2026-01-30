@@ -3,11 +3,8 @@ tags:
   - ALG1
   - Tutorial
 id: "296"
----
-
-2024-09-02
-1834
-
+date: 2024-09-02
+time: 18:34
 ---
 ## Problems
 - find the number of elements in $GL_{2}(\mathbb{F}_{p})$. << this is the set of all nxxn matrices.

@@ -1,6 +1,6 @@
 ---
 id: "61"
-date:
+date: October 2024
 ---
 
 

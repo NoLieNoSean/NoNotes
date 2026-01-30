@@ -1,5 +1,6 @@
 ---
 id: "191"
+date: January 2025
 ---
 
 # Implicit function theorem

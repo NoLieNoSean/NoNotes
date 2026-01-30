@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "11"
+date: August 2024
 ---
 
 Refer Rudin p46, 3.4.

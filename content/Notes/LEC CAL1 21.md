@@ -1,5 +1,6 @@
 ---
 id: "190"
+date: January 2025
 ---
 
 # Functions with non-zero Jacobian determinant

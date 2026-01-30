@@ -2,6 +2,7 @@
 tags:
   - PROB
 id: "237"
+date: April 2025
 ---
 
 # Expectation of continuous random variables

@@ -2,6 +2,7 @@
 tags:
   - ANA1
 id: "247"
+date: October 2024
 ---
 ## Motivation
 If a [[Sequences and convergence#Sequences|sequence]] in $\mathbb{R}$ fails to [[Sequences and convergence#Definition of convergence in real numbers and metric spaces|converge]], we would like to be able to measure the extent of the failure. To do so, we will define *LimSup* and *LimInf*  in the [[The extended real number system|extended real numbers]] (allowing them to possibly be infinity) for every sequence of real numbers. These will always exist. 

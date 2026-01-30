@@ -1,5 +1,6 @@
 ---
 id: "277"
+date: August 2024
 ---
 
 Strings are lists of characters

@@ -2,6 +2,7 @@
 tags:
   - CAL1
 id: "54"
+date: January 2025
 ---
 Given two n-tuples $(x_{1}, x_{2}, \dots, x_{n})$ and $(y_{1}, y_{2}, \dots, y_{n})$, and $p, q\geq 1$ such that $\frac{1}{p}+\frac{1}{q}=1$, we have Holder's inequality:
 $$
