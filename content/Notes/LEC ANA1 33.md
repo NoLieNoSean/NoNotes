@@ -198,6 +198,8 @@ Denote by $\mathscr{R}[0, 1]$ the set of integrable functions in $B[0, 1]$. Then
 > $$
 > 
 
+^da049e
+
 
 > [!Theorem] Rudin 7.17
 > Suppose
@@ -222,7 +224,7 @@ A cuter version with weaker hypothesis:
 
 ### The Cauchy Criterion
 
-> [!Theorem]
+> [!Theorem] Cauchy Criterion
 > The sequence of functions $(f_{n})$ defined on $E$ converges uniformly on $E$ if and only if for every $\epsilon>0$ there exists an integer $N$ such that $m\geq N$, $n\geq N$, $x\in E$ implies 
 > $$
 > |f_{n}(x)-f_{m}(x)|\leq \epsilon.
@@ -244,7 +246,7 @@ A cuter version with weaker hypothesis:
 > 
 ### The M-test
 
-> [!Theorem]
+> [!Theorem] M-test
 > Suppose $(f_{n})$ is a sequence of functions defined on $E$, and suppose 
 > $$
 > |f_{n}(x)|\leq M_{n}\ \ \ \ (x\in E, n=1, 2, 3,\dots).
@@ -258,6 +260,8 @@ A cuter version with weaker hypothesis:
 > > $$
 > > provided $m$ and $n$ are large enough. Uniform convergence follows from the Cauchy criterion for uniform convergence. Note the implicit use of the triangle inequality above.
 > 
+
+^efc447
 
 
 

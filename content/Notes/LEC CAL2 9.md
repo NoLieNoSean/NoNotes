@@ -228,6 +228,16 @@ $$
 > A form $\omega$ is called **closed** if $d\omega=0$ and **exact** if $\omega=d \eta$ for some $\eta$. exact $\implies$ closed.
 
 
+> [!Theorem] Stokes
+> If $\omega$ is a $(k-1)$-form on an open set $A\subseteq \mathbb{R}^{n}$ and $c$ is a $k$-chain in $A$, then
+> $$
+> \int_{c}d\omega=\int_{\partial c}\omega.
+> $$
+> 
+
+^05ab36
+
+
 ![[image-5.jpeg]]
 
 

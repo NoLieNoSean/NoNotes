@@ -61,6 +61,7 @@ The RHS can be made less than $\epsilon$ for any $\epsilon$. Thus, $l_{1}=l_{2}\
 ^83e84a
 
 
+
 > [!Theorem] Ratio test, @rudinPrinciplesMathematicalAnalysis1976 3.34
 > The series $\sum a_{n}$
 > 4. converges if $\limsup| \frac{a_{n+1}}{a_{n}}|<1$,
@@ -90,7 +91,7 @@ See @rudinPrinciplesMathematicalAnalysis1976 3.35 for examples.
 ---
 # Power series
 
-> [!Definition] @rudinPrinciplesMathematicalAnalysis1976 3.38
+> [!Definition]   @rudinPrinciplesMathematicalAnalysis1976 3.38
 > The **power series** of a sequence $(c_{n})$ of complex numbers is the series
 > $$
 > \sum_{n=0}^{\infty}c_{n}z^{n}.
@@ -116,6 +117,11 @@ See @rudinPrinciplesMathematicalAnalysis1976 3.35 for examples.
 > 
 
 ^2bd39d
+
+> [!Remark]
+> In [[#^2bd39d]], the convergence of $\sum c_{n}z^{n}$ is uniform on every closed disc of radius $r< R$ centered at the origin, as you can show using [[LEC ANA1 33#^efc447]]. Thus, it follows that the series converges uniformly on every compact subset of the convergence disc. Uniform convergence on the whole disc fails in general. 
+
+^2ff1e3
 
 > [!Example]
 > 1. The series $\sum n^{n}z^{n}$ has $R=0$, i.e, it converges only when $z=0$.

@@ -39,9 +39,11 @@ Some trivialities:
 > 	3. If $g(z_{0})\ne 0$, then $f/g$ is holomorphic at $z_{0}$ and $(f/g)'=(f'g-fg')/g^{2}$. 
 > 3. If $f:\Omega\to U$ and $g:U\to \mathbb{C}$ are holomorphic, the chain rule holds: $(g\circ f)'=g'(f(z))f'(z)$ for all $z\in \Omega$. 
 
+Proofs are routine.
+
 Holomorphic functions have some really neat properties:
-1. Every holomorphic function is infinitely many times complex differentiable ($C^{\infty}$).
-2. It's better: Every holomorphic function is analytic! Holomorphic and analytic are used synonymously. 
+1. Every holomorphic function is infinitely many times complex differentiable ([[LEC CANA 2#^58d2c9]]). 
+2. It's better: Every holomorphic function is analytic ([[LEC CANA 2#^f3eea8]])! Holomorphic and analytic are used synonymously. [[LEC ANA1 32#^3fdabe|Recall]] that for functions of real variables, analytic functions form a strict subset of smooth functions!
 
 ## Complex functions as maps $\mathbb{R}^{2}\to \mathbb{R}^{2}$
 
@@ -73,7 +75,7 @@ $$
 \frac{ \partial f }{ \partial x } =\frac{1}{i}\frac{ \partial f }{ \partial y } .
 \end{align}
 $$
-Writing $f=u+iv$ and separating real and imaginary parts, we find that ==the partials of $u$ and $v$ exist, and they satisfy what are called the **Cauchy-Riemann** equations==:
+Writing $f=u+iv$ and separating real and imaginary parts, we find that the partials of $u$ and $v$ exist, and they satisfy what are called the **Cauchy-Riemann** equations:
 $$
 \frac{ \partial u }{ \partial x } =\frac{ \partial v }{ \partial y } \quad \text{and}\quad \frac{ \partial u }{ \partial y } =-\frac{ \partial v }{ \partial x } .
 $$
@@ -131,6 +133,57 @@ What follows is an attempt at a "converse" of [[#^ca85e1]] (It is actually an if
 > [!Theorem]
 > Suppose $f=u+iv$ is a complex-valued funciton defined on an open set $\Omega$. If $u, v\in C^{1}$and satisfy the [[#^0c7f0a|Cauchy-Riemann equations]] on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z)=\frac{ \partial f }{ \partial z }$. 
 
-[!Proof]-
+## Power series
 
-Write $u(x+h_{1}, y+h_{2})-u(x, y)$
+Recall [[LEC ANA1 31#^2bd39d]] and [[LEC ANA1 31#^2ff1e3]].
+
+The complex analog of [[LEC ANA1 32#^3ac71d]]:
+
+> [!Theorem] @steinComplexAnalysis2003 1.2.6
+> The power series $f(z)=\sum_{n=0}^{\infty}a_{n}z^{n}$ defines a holomorphic function in its disc of convergence. The derivative of $f$ is also a power series obtained by differentiating term by term the series for $f$. Moreover, $f'$ has the same radius of convergence as $f$. 
+
+This tells us that an analytic function on $\Omega$ is also holomorphic on $\Omega$. We will see ([[LEC CANA 2#^f3eea8]]) that the converse is true, too.
+## Integration along curves
+
+> [!Definition]
+> Given a smooth curve $\gamma$ in $\mathbb{C}$ parameterized by $z:[a, b]\to \mathbb{C}$, and $f$ a continuous function on $\gamma$, we define the **integral of $f$ along $\gamma$** by
+> $$
+> \int_{\gamma}f(z)dz:=\int_{a}^{b} f(z(t))z'(t) \, dt.
+> $$
+> The **length of $\gamma$** is defined to be
+> $$
+> \int_{a}^{b} |z'(t)| \, dt.
+> $$
+> It is easily shown that these definitions are independent of the parameterization $z$. 
+
+> [!Proposition]
+> Let $f$ be continuous and $\gamma$ be piecewise smooth. 
+> $$
+> \begin{align}
+>  1.  \quad &  \int_{\gamma}(\alpha f(z)+\beta g(z))dz=\alpha \int_{\gamma}f(z)dz+\beta \int_{\gamma}g(z)dz. \\\\
+>  2.  \quad &  \int_{\gamma}f(z)dz=-\int_{\gamma^{-}}f(z)dz. \\\\
+>   3.  \quad & \left| \int_{\gamma}f(z)dz \right|  \leqslant \sup_{z\in\gamma}|f(z)|\cdot\text{length}(\gamma).
+> \end{align}
+> $$
+
+
+> [!Theorem]
+> If a continuous function $f$ has a primitive $F$ in $\Omega$, and $\gamma$ is a curve in $\Omega$ that begins at $w_{1}$ and ends at $w_{2}$, then
+> $$
+> \int_{\gamma}f(z)dz=F(w_{1})-F(w_{2}).
+> $$
+> 
+
+Explore connections to [[LEC CAL2 9#^05ab36]]. 
+
+> [!Corollary]
+> If $\gamma$ is a closed curve in an open set $\Omega$, and $f$ is continuous and has a primitive in $\Omega$, then
+> $$
+> \int_{\gamma}f(z)dz=0.
+> $$
+
+^5b02bc
+
+> [!Corollary]
+> If $f$ is holomorphic in a region $\Omega$ and $f'=0$, then $f$ is constant. 
+

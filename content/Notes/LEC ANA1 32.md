@@ -69,6 +69,8 @@ Let $f$ be as in [[#^f743f0]]. Natural questions:
 > $$
 > 
 
+^3ac71d
+
 Since $f'(x)$ is also an analytic function, we can turn the crank again to get $f''(x)$, which is also analytic, and so on. Thus, any analytic function is infinitely differentiable. This yields an explicit formula for the $n$th derivative of $f$:
 
 > [!Corollary]
@@ -110,7 +112,6 @@ $$
 > 
 
 ^f331cb
-
 
 Additionally, we only need the derivatives at a single point to construct this power series about that point.
 

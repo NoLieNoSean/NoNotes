@@ -67,7 +67,7 @@ However, If the domain is compact, it is in fact true that a bijective continuou
 
 ^8a68b8
 
-Note that the function being bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps on compact sets are *closed maps*, i.e, they map closed sets to closed sets.
+Note that the function being bijective was only used to obtain the target "$f(C)$ is closed for every closed $C\subset X$". Thus, we have also proved that continuous maps on compact sets are *closed maps*, i.e, they map closed sets to closed sets. ^499414
 
 >[!Corollary]
 >Continuous maps on compact sets are closed maps.

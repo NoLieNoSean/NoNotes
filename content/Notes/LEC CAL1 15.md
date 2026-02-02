@@ -62,3 +62,4 @@ If $\mathbf{u}=\mathbf{e}_{k}$, then $\mathbf{f}'(\mathbf{c};\mathbf{e}_{k})$ is
 
 A function can have a finite directional derivative $\mathbf{f}'(\mathbf{c};\mathbf{u})$ for every $\mathbf{u}$ but may fail to be continuous at $\mathbf{c}$. The [[LEC CAL1 16#Total derivatives|total derivative]], a more suitable generalization, does guarantee continuity, and also extends the principal theorems of the one-dimensional derivative.
 
+
