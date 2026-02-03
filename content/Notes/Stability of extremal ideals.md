@@ -107,15 +107,16 @@ By [[Associated primes of monomial ideals#^d3a486]], the associated primes of hi
 
 ```latex
 % latex-id: 0a8b-914b-36dd-45e2-9a3a
+\begin{document}
 \begin{tikzcd}
 \mathcal{E}_{q}^{2} \ar[d, "\text{expand}"]\\
 \text{ideal with } \binom{q}{2}+q \text{ generators} \ar[d, "\text{expand}"]\\
-\text{redundant primary intersection}  \ar[d, "\text{discard non-minimal elements}"]\\
+\text{redundant primary intersection (poset)}  \ar[d, "\text{discard non-minimal elements}"]\\
 \text{irredundant primary intersection} \ar[d, "\text{group }p\text{-primary componenets}"]\\
 \text{irredundant primary decomposition}  
 \end{tikzcd}   
+\end{document}
 ```
-
 
 
 > [!Data]
@@ -128,6 +129,8 @@ By [[Associated primes of monomial ideals#^d3a486]], the associated primes of hi
 > | 4         | 49, 49   | 152, 80    | 333, 81     |             |     |
 > | 5         | 462, 462 | 3024, 2095 | 10784, 2858 | 28257, 2859 |     |
 > 
+
+Irredundant primary intersection is given by `irreducibleDecomposition`. 
 
 ![[Attachments/image-9.jpeg]]
 
@@ -148,9 +151,7 @@ By [[Associated primes of monomial ideals#^d3a486]], the associated primes of hi
 > $$
 
 
-
-
-> [!Data]-  Irreducible decomposition ($\mathcal{E}_{4}^{2}$)
+> [!Data]-  Irredundant primary intersection ($\mathcal{E}_{4}^{2}$)
 >
 > 
 > 1, 2, 3, 4s

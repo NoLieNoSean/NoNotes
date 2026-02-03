@@ -27,7 +27,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 6]] Finitely generated torsion modules over PIDs
 [[LEC ALG4 7]]
 [[LEC ALG4 8]]
-	
+
 
 @isaacsAlgebraGraduateCourse2009, @artinAlgebra2011, @aluffiAlgebraChapter02009, @langAlgebra2002
 
@@ -38,8 +38,6 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[TUT ALG4 2]]
 
 
-
-[click here](https://www.canva.com/resumes/templates/) 
 
 
 

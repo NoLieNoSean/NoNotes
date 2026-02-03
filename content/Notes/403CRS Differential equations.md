@@ -38,5 +38,7 @@ CMI, Jan-Apr 2026, Aditya Karnataki
 
 [[LEC DQN 1]]
 [[LEC DQN 2]]
+[[LEC DQN 3]]
+
 
 [[AS DQN 1]]
