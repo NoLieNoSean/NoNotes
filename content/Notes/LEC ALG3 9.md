@@ -48,13 +48,13 @@ In particular, every Euclidean domain is a principal ideal domain.
 
 Clearly, $\gcd(a, b)$ is a generator for the unique smallest principal ideal containing $a$ and $b$. Note that while $\gcd(a, b)$ is not unique, $(\gcd(a, b))$ is.
 
-A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$ (this is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal, so $(1)$ is the unique smallest principal ideal containing $2$ and $x$). It follows that gcds always exist in a principal ideal domain:
+A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$ (this is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal ([[LEC ALG3 4#^f0a74d]]), so $(1)$ is the unique smallest principal ideal containing $2$ and $x$). It follows that gcds always exist in a principal ideal domain:
 
 > [!Proposition]
-> Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. $d$ is a gcd of $a$ and $b$. 
+> Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. Then, $d$ is a gcd of $a$ and $b$. 
 
 > [!Remark]
-> When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$ in $\mathbb{Z}[x]$: $(1)$ is strictly larger than $(2, x)$, and cannot be written as a linear combination of $2$ and $x$.
+> When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$ in $\mathbb{Z}[x]$: $(1)$ is strictly larger than $(2, x)$, and $1$ cannot be written as a linear combination of $2$ and $x$.
 
 ^9467ec
 
@@ -121,7 +121,7 @@ In particular, for one variable polynomial rings over fields, we have these resu
 > [!Theorem]
 > Let $F[x]$ be the polynomial in one variable over a field $F$.
 > 1. Two polynomials $f$ and $g$, not both zero, have a unique monic greatest common divisor $d$, and there are polynomials $r$ and $s$ such that $rf+sg=d$. [[#^9467ec]]
-> 2. Every irreducible polynomial in $F[x]$ is prime. [[LEC ALG3 7#^662472]] (4)
+> 2. Every irreducible polynomial in $F[x]$ is prime. [[LEC ALG3 7#^662472]].4
 > 3. Every monic polynomial in $F[x]$ can be written uniquely as a product of irreducible monic polynomials.
 
 > [!Proposition]

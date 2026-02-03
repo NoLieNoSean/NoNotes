@@ -23,7 +23,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 2]] ✅ Free modules
 [[LEC ALG4 3]] ✅ Projective Modules, invariance of cardinality of basis
 [[LEC ALG4 4]] ✅ Noetherian Modules, Hilbert's basis theorem
-[[LEC ALG4 5]] Generators and relations, decomposition of finitely generated modules into torsion and free components
+[[LEC ALG4 5]] ✅ Generators and relations, decomposition of finitely generated modules into torsion and free components
 [[LEC ALG4 6]] Finitely generated torsion modules over PIDs
 [[LEC ALG4 7]]
 [[LEC ALG4 8]]

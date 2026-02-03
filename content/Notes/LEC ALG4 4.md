@@ -82,6 +82,8 @@ Note that $R$ is a [[Noetherian rings|Noetherian ring]] $\iff$ $R$ is a Noetheri
 > > $(\impliedby)$ Suppose $M$ has a generating set $\{ x_{1}, \dots, x_{n} \}$. By [[LEC ALG4 2#^e839ad]], we have a surjection $R^{n}\twoheadrightarrow M$ which maps $e_{i}\mapsto x_{i}$. By [[#^57ac90]]⇒, it suffices to show that $R^{n}$ is a noetherian $R$-module; we are done by [[#^e419d5]]. 
 > 
 
+^cc0b17
+
 
 > [!Theorem] Hilbert's basis theorem
 > If $R$ is a Noetherian ring, then $R[X]$ is a Noetherian ring [^3]. 

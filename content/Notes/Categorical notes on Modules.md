@@ -27,6 +27,9 @@ $$
 Since $R$-module homomorphisms are in particular abelian group homomorphisms and $M\oplus N$ (as an abelian group) [[Categorical notes on groups#^8e8d67|satisfies]] the universal properties of products and coproducts in $\textsf{Ab}$, we only need to verify that the unique map supplied by the universal properties in $\textsf{Ab}$ respects the $R$-module structure ([[LEC ALG3 3#^db10f5]].2); this is a trivial check.
 
 > [!Remark]
+> Checking weather a module $M$ can be decomposed as a direct sum $N\oplus L$ for submodules $N, L\subseteq M$ is equivalent to checking if the unique homomorphism $\varphi:N\oplus L\to M$ given by the universal property (with the functions from $N$ and $L$ taken to be inclusions, of course) is an isomorphism. It is easily seen that this is equivalent to the conditions $M=L+N$ (surjectivity) and $L\cap N=0$ (injectivity). 
+
+> [!Remark]
 > The infinite case mirrors the [[Categorical notes on groups#^2cc108|situation]] in $\textsf{Ab}$: 
 > 1. The product $\prod_{i\in I}M_{i}$ of $R$-modules consists of ==all== tuples $(m_{i})_{i\in I}$ with componentwise addition and scalar multiplication. 
 > 2. The coproduct $\bigoplus_{i\in I}M_{i}$ is the submodule of the product consisting of tuples with ==finite support==. 
