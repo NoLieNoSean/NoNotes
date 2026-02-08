@@ -4,10 +4,6 @@ tags:
 id: "294"
 date: March 2025
 ---
-
-
-[[Prob Quiz 3.pdf]]
-
 ## Problem 2
 
 For a fixed $k$, the probability of each elementary event with $k$ red draws is equal. 

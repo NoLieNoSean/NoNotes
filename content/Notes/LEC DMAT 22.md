@@ -9,7 +9,7 @@ id: "220"
 ---
 # M-alternating paths
 
-$M$-alternating path proof for Hall's. [[Introduction to Graph Theory (Douglas B. West).pdf#page=131|ref]]
+$M$-alternating path proof for Hall's.
 
 > [!Theorem] Lemma
 > Every component of the symmetric difference of two matchings is a path or an even cycle.

@@ -24,13 +24,10 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 3]] ✅ Projective Modules, invariance of cardinality of basis
 [[LEC ALG4 4]] ✅ Noetherian Modules, Hilbert's basis theorem
 [[LEC ALG4 5]] ✅ Generators and relations, decomposition of finitely generated modules into torsion and free components
-[[LEC ALG4 6]] Finitely generated torsion modules over PIDs
-[[LEC ALG4 7]]
-[[LEC ALG4 8]]
-
-
-@isaacsAlgebraGraduateCourse2009, @artinAlgebra2011, @aluffiAlgebraChapter02009, @langAlgebra2002
-
+[[LEC ALG4 6]] ✅ Finitely generated torsion modules over PIDs
+[[LEC ALG4 7]] Finitely generated $p$-primary modules
+[[LEC ALG4 9]] Jordan block decomposition
+[[LEC ALG4 10]]
 
 # Tutorials
 

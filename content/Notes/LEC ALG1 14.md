@@ -112,7 +112,7 @@ $$
 > 
 
 
-!!!! this seems sus. Take 3 lines in $\mathbb{R}^{2}$.
+!!!! this seems wrong. Take 3 lines in $\mathbb{R}^{2}$.
 
 >[!Theorem] Corollary
 > $$

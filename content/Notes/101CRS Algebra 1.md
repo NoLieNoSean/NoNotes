@@ -77,7 +77,7 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 >	- If $A$ is invertible, its inverse must be unique
 >	- If $A$ is invertible, it must be square
 >	- Vector spaces, subspaces of $\mathbb{R}^{2}$. 
->- [[LEC ALG1 6]]
+>- LEC ALG1 6
 >	- linear combinations, span. function surjectivity relation with spanning property of column vectors, function injectivity relation with unique linear combination of column vectors.
 >	- linear independence
 >- [[LEC ALG1 7]]

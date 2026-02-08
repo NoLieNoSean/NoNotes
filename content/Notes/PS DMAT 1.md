@@ -2,9 +2,6 @@
 id: "270"
 date: January 2025
 ---
-
-[[probsheet1.pdf|Problem sheet 1]].
-
 ## 1
 
 The binary sequences in $\{ 0, 1 \}^{\mathbb{N}}$ can be represented as subsets of $\mathbb{N}$, with the nth bit deciding on whether $n$ is in the subset. 

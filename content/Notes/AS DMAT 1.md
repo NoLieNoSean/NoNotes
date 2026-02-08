@@ -2,10 +2,6 @@
 id: "17"
 date: January 2025
 ---
-
-
-[[assignment1.pdf|Assignment 1]]
-
 # 1
 
 FTSOC, assume $\mathbb{R}$ is a finite dimensional vector space over $\mathbb{Q}$. By definition, this implies that $\mathbb{R}$ has a finite spanning set $(r_{1}, r_{2}, \dots, r_{n})$, i.e, for all $r\in \mathbb{R}$, $r=\sum q_{i}r_{i}, q_{i}\in \mathbb{Q}$. Now, $|\left\{  \sum q_{i}r_{i}\ | \ q_{i}\in \mathbb{Q}  \right\}|\leq |\mathbb{Q}^{n}|=\aleph_{0}$. But, $|\mathbb{R}|>\aleph_{0}$, due to Cantor's theorem. Thus, $\mathbb{R}$ is not a finite dimensional vector space over $\mathbb{Q}$. 

@@ -4,10 +4,6 @@ tags:
 id: "293"
 date: February 2025
 ---
-
-
-[[Quiz 1 Probability Theory 2025.pdf]]
-
 # Problem 1
 
 Define the group operation to be symmetric difference.

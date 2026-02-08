@@ -152,7 +152,7 @@ Clearly, free modules are projective.
 > > \sum_{i=1}^{n} r_{i}x_{i}=\sum_{i=1}^{k} s_{i}\tilde{x}_{i}. &  & \tilde{x}_{i}\in X
 > > \end{align}
 > > $$
-> > Since $X$ is a basis, we have $n=k$, and (WLOG) $\tilde{x}_{i}=x_{i}$ and $s_{i}=r_{i}$. Thus, $r_{i}\in I$, and hence $\overline{r}_{i}=0$ for all $i$. 
+> > Since $X$ is a basis, we have $n=k$, and (WLOG) $\tilde{x}_{i}=x_{i}$ and $s_{i}=r_{i}$. Thus, $r_{i}\in I$, and hence $\overline{r}_{i}=0$ for all $i$[^2]. 
 > > 
 > > ---
 > > 
@@ -161,12 +161,14 @@ Clearly, free modules are projective.
 
 ^f64b92
 
+[^2]: Notice the claim this is implicitly proving: no element of $X$ lies in $IF$. If this were true, say $x'=im\in X$ for some $i\in I$ and $m\in F$, then $x'=im=i\left( \sum_{i=1}^{n}r_{i}x_{i} \right)$ for some $x_{1}, \dots, x_{n}\in X$. On the RHS, $i$ divides every coefficient. Thus, moving $x'$ to the RHS yields a trivial linear combination. 
+
 
 > [!Remark]
 > 
 > Every $R/I$ module is naturally an $R$-module: $(a, x)\mapsto \overline{a}x$. In general, if $\varphi :R\to S$ is a ring map and $M$ is an $S$-module, we can give $M$ $R$-module structure by $(a, x)\mapsto \varphi(a)x$. This is the unique module structure for $M$ as an $R$ module which is compatible with $\varphi$. 
 > 
-> The converse is generally false - $R$ considered an an $R$-module cannot have a compatible $R/I$-module structure for any nonzero ideal $I$. If $y\in I$ is nonzero, then $(y, 1_{R})$ evaluates to $y$ under the $R$-module structure, while the action of $y+I=0_{R/I}\in R/I$, forced to be the trivial action in any $R/I$-module structure on $R$, yields $(y+I, 1_{R})=0_{R}$. 
+> The converse is generally false. For example, $R$ considered an an $R$-module cannot have a compatible $R/I$-module structure for any nonzero ideal $I$. If $y\in I$ is nonzero, then $(y, 1_{R})$ evaluates to $y$ under the $R$-module structure, while the action of $y+I=0_{R/I}\in R/I$, forced to be the trivial action in any $R/I$-module structure on $R$, yields $(y+I, 1_{R})=0_{R}$. 
 > 
 > However, if $M$ is an $R$-module such that for all $x\in M$ and for all $a\in I$, $ax=0$[^1], then the prescription
 > $$
@@ -187,3 +189,4 @@ $$
 
 
 [^1]: as is the case in the proof of [[#^f64b92]]
+

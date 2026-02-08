@@ -9,14 +9,14 @@ tags:
 ---
 # Generators and Relations
 
-Let $R$ be a Noetherian ring, and $M$ be a finitely generated $R$-module with generating set $\{ x_{1}, \dots, x_{n} \}$. The kernel of the map $\epsilon:R^{n}\to M$ given by [[LEC ALG4 2#^e839ad]] is exactly all the $R$-linear relations among $\{ x_{1}, \dots, x_{n} \}$. Since $R^{n}$ is Noetherian by [[LEC ALG4 4#^e419d5]], $\ker\epsilon$ is finitely generated, say by $m$ elements. So, there exists a surjective map $\epsilon_{1}:R^{m}\to \ker\epsilon$. Let $\varphi$ be the composite $\iota \circ\epsilon_{1}$. 
+Let $R$ be a Noetherian ring, and $M$ be a finitely generated $R$-module with generating set $\{ x_{1}, \dots, x_{n} \}$. The kernel of the map $\epsilon:R^{n}\to M$ given by [[LEC ALG4 2#^e839ad]] is exactly all the $R$-linear relations among $\{ x_{1}, \dots, x_{n} \}$. Since $R^{n}$ is Noetherian by [[LEC ALG4 4#^e419d5]], $\ker\epsilon$ is finitely generated, say by $m$ elements. So, there exists a surjective map $\epsilon_{1}:R^{m}\twoheadrightarrow \ker\epsilon$. Let $\varphi$ be the composite $\iota \circ\epsilon_{1}$. 
 
 ```latex
 % latex-id: af57-3f3f-963d-4f83-9521
 \begin{document}
 \begin{tikzcd} 
-\ker\epsilon \ar[r, hook, "\iota"] & R^{n}\ar[r, "\epsilon"] & M \\
-R^{m}\ar[u, "\epsilon_{1}"]\ar[ru, "\varphi"'] &  & 
+\ker\epsilon \ar[r, hook, "\iota"] & R^{n}\ar[r, two heads, "\epsilon"] & M \\
+R^{m}\ar[u, two heads, "\epsilon_{1}"]\ar[ru, "\varphi"'] &  & 
 \end{tikzcd}
 \end{document}
 ```
@@ -134,12 +134,6 @@ For example, $\mathbb{Q}$ is a non-free torsion free $\mathbb{Z}$ module. $\math
 > > Again, by [[#^4998de]] and [[#^fdca90]], $M/\text{tor}(M)$ is free, and hence [[LEC ALG4 3#^544d97|projective]]. By [[LEC ALG4 3#^d32b0c]] and @conradSPLITTINGSHORTEXACT 2.1, the sequence splits. 
 > 
 
-Thus, ==every finitely generated module is a direct sum of a torsion module and a free module==. Free modules have a simple structure that we understand. It remains to study finitely generated torsion modules ($\text{tor}(M)$ must be finitely generated since it is a submodule of $M$, which is Noetherian).
+^1a540b
 
-
-
-
-
-
-
-
+Thus, ==every finitely generated module is a direct sum of a finitely generated torsion module and a finitely generated free module==. Free modules have a simple structure that we understand. It remains to study finitely generated torsion modules ($\text{tor}(M)$ must be finitely generated since it is a submodule of $M$, which is Noetherian).

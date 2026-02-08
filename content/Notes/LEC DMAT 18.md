@@ -47,7 +47,7 @@ id: "216"
 ---
 # Counting spanning trees
 
-[[Introduction to Graph Theory (Douglas B. West).pdf#page=104|ref]]
+See @westIntroductionGraphTheory2001 
 
 Given a graph $G$, we desire to count the number of spanning trees in $G$. 
 

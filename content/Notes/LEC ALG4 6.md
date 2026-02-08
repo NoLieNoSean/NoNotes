@@ -5,6 +5,7 @@ time: 11:50
 tags:
   - ALG4
   - Lecture
+  - Processed
 ---
 # Finitely generated torsion modules over PIDs
 
@@ -30,29 +31,31 @@ Immediate consequences:
 ^567156
 
 > [!Definition]
-> Let $p\in R$ be prime. 
+> Let $a\in R$, $a\ne 0$. 
 > $$
-> M_{p}:=\{ x\in M: \exists e\geqslant  0 \text{ such that }p^{e}x=0 \}.
+> M(a):=\{ x\in M: \exists e\geqslant  0 \text{ such that }a^{e}x=0 \}.
 > $$
 
 > [!Proposition]
 > There exists $e'\geqslant 0$ such that
 > $$
-> M_{p}=\{ x\in M: p^{e'}x=0 \}
+> M(a)=\{ x\in M: a^{e'}x=0 \}
 > $$
 > 
 > > [!Proof]-
 > > 
 > > The ascending chain 
 > > $$
-> > \{ x\in M : px=0\}\subseteq \{ x\in M: p^{2}x =0\}\subseteq\dots
+> > \{ x\in M : ax=0\}\subseteq \{ x\in M: a^{2}x =0\}\subseteq\dots
 > > $$
 > > stabilizes since $M$ is Noetherian. 
 > 
 
+^060841
+
 > [!Proposition]
 > TFAE:
-> 1. $M_{p}\ne 0$;
+> 1. $M(p)\ne 0$;
 > 2. There exists $x\ne 0$ such that $px =0$;
 > 3. $\text{Ann}_{R}(M)\subseteq \langle p \rangle$. 
 > 
@@ -62,46 +65,51 @@ Immediate consequences:
 > > 
 > > $(2 \implies 3)$ Let $x\ne 0$ be such that $px = 0$. Clearly, $\text{Ann}_{R}(M)\subseteq\text{Ann}_{R}(Rx)$ and $\text{Ann}_{R}(Rx)\supseteq \langle p \rangle$. Since [[LEC ALG3 4#^340b52|prime ideals in a PID are maximal]] and $\text{Ann}_{R}(Rx)\ne R$, we have $\text{Ann}_{R}(Rx)=\langle p \rangle$. 
 > > 
-> > $(3 \implies 2)$ By [[#^567156]], write $\text{Ann}_{R}(M)=\langle a \rangle$. Then, $a=pb$ for some $b\in R$. It suffices to prove the existence of a $y\in M$ such that $by\ne 0$. Since the exponent of $p$ in $b$ is one less than in $a$, we have $\langle b \rangle \subsetneq \langle a \rangle$. Thus, $b\not\in\text{Ann}_{R}(M)$, so there must exist $y\in M$ such that $by\ne 0$. 
+> > $(3 \implies 2)$ By [[#^567156]], write $\text{Ann}_{R}(M)=\langle a \rangle$. Then, $a=pb$ for some $b\in R$. It suffices to prove the existence of a $y\in M$ such that $by\ne 0$. Since the exponent of $p$ in $b$ is one less than in $a$, we have $\langle b \rangle \not\subset \langle a \rangle$. Thus, $b\not\in\text{Ann}_{R}(M)$, so there must exist $y\in M$ such that $by\ne 0$. 
 > 
 
 ^56fd10
 
-> [!Corollary]
-> There are only finitely many primes $p\in R$ for which $M_{p}\ne 0$. 
-> 
-> > [!Proof]-
-> > 
-> > We use [[#^56fd10]]. Let $\text{Ann}_{R}(M)=\langle a \rangle$. If $\text{Ann}_{R}(M)\subseteq \langle p \rangle$, then $p\ | \ a$. Since $a$ has a unique finite prime factorization, there exist only finitely many such $p$. 
+> [!Remark]
+> Let $\text{Ann}_{R}(M)=\langle a \rangle$. The primes $p\in R$ for which $M(p)\ne 0$ are precise those which divide $a$, by [[#^56fd10]]. Since $a$ has a unique finite prime factorization, there exist only finitely many such $p$. 
 > 
 
 ^eb9f2e
 
 > [!Proposition]
-> Let $p, \pi\in R$ be distinct primes (modulo units). Then, $M(p)\cap M(\pi)=0$. 
+> Let $b, c\in R$ be relatively prime nonzero nonunits. Then, $M(bc)=M(b)\oplus M(c)$. 
 > 
 > > [!Proof]-
 > > 
-> > Let $x\in M(p)\cap M(\pi)$. Then there exists $e\geqslant 0$ and $\epsilon\geqslant 0$ such that $p^{e}x=0=\pi^{\epsilon}x$. Assume $e, \epsilon\geqslant 1$. Let $up^{e}+v\pi^{\epsilon}=1$ with $u, v\in R$. Then $x=(up^{e}+v\pi^{\epsilon})x=0$. 
+> > Let $x\in M(b)\cap M(c)$. There exist $m, n\geqslant 1$ such that $b^{m}x=0=c^{n}x$. Write $1=\lambda b^{m}+\mu c^{n}$. Then, $x=\lambda b^{m}x+\mu c^{n}x=0$. 
+> > 
+> > Note that $M(b)\subseteq M(bc)$, and $M(c)\subseteq M(bc)$. Thus, the sum $M(b)+M(c)$ is a direct sum inside $M(bc)$. It remains to show that $M(bc)=M(b)+M(c)$. Let $x\in M(bc)\setminus \{ 0 \}$. There exists $N\geqslant 1$ such that $(bc)^{N}x=0$. Write $1=\lambda b^{N}+\mu c^{N}$. Then, $x=\lambda b^{N}x+\mu c^{N}x$, where $b^{N}x\in M(c)$ and $c^{N}x\in M(b)$. 
 > 
 
+^2da73b
 
-[!Theorem]
-Let $R$ be a PID, and $M$ be a finitely generated torsion $R$-module. Let $A(M)$ be the [[#^eb9f2e|finite]] set of primes $p\in R$ for which $M_{p}$ is nonzero. Then, 
-$$
-M=\bigoplus_{p\in\text{A}(M)}M_{p}.
-$$
-[!Proof]-
+> [!Proposition] @langAlgebra2002 3.7.5, p1
+> Let $R$ be a PID, $M$ a finitely generated torsion module. Let $\text{Ann}_{R}(M)=\langle a \rangle$, and $\{ p_{1}, \dots, p_{m} \}$ be the prime divisors of $a$ [^1]. Then, 
+> $$
+> M=\bigoplus_{i=1}^{m}M(p_{i}).
+> $$
+> 
+> > [!Proof]-
+> > 
+> > Induct on $m$. Clear for $m=1$. Write $a=bc$ where $b, c$ are nonunits and $(b, c)=1$. 
+> > $$
+> > a=\underbrace{ p_{1}^{e_{1}}\dots p_{n}^{e_{n}} }_{ b }\underbrace{ p_{n+1}^{e_{n+1}}\dots p_{m}^{e_{m}} }_{ c }.
+> > $$
+> > By [[#^2da73b]], $M=M(a)=M(b)\oplus M(c)$. Using the induction hypothesis, we can write
+> > $$
+> > \begin{align}
+> > M(b)=\bigoplus_{p_{i}\ | \  b}(M(b))(p_{i}), \quad M(c)=\bigoplus_{p_{i}\ | \  c}(M(c))(p_{i}).
+> > \end{align}
+> > $$
+> > Let $p_{i}\ | \ b$. Clearly, $x\in M(p_{i})$ iff $x\in(M(b))(p_{i})$ (ditto for $p_{i}\ | \ c$). Thus, we have required result. 
+> 
 
-We first verify that $\sum_{p\in A(M)}M_{p}$ is indeed a direct sum. 
+^428a07
 
-Suppose $A(M)=\{ p_{1}, \dots, p_{m} \}$. We will show that
-$$
-M_{p_{1}}\cap \sum_{i=2}^{m} M_{p_{i}}=0.
-$$
-Let $y\in M_{p_{1}}\cap \sum_{i=2}^{m}M_{p_{i}}$. Let $y_{i}\in M_{p_{i}}$ for $2\leqslant i\leqslant m$ such that $y=y_{2}+\dots+y_{m}$. 
 
-There exist $e_{1}, e_{2}, \dots, e_{m}\geqslant 0$ such that $p_{i}^{e_{i}}=0$ for each $i$. If $e_{1}=0$, we are done; suppose $e_{1}\geqslant 1$. Let $q=p_{2}^{e_{2}}p_{3}^{e_{3}}\dots p_{m}^{e_{m}}$. Again, WLOG suppose $p\ne 1$. Then, $p:=p_{1}^{e_{1}}$ and $q$ are coprime, so there exist $u, v\in R$ such that $pu+qv=1$. Thus, 
-$$
-y=y(pu+qv)=ypu+(y_{2}+\dots+y_{m})qv=0.
-$$
+[^1]: Or equivalently, by [[#^56fd10]], those primes $p\in R$ for which $M_{p}$ is nonzero.

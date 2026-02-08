@@ -130,3 +130,5 @@ Clearly, it suffices to show that the preimage of every basis (or subbasis) elem
 > [!Proposition]
 > $f$ is continuous $\iff$ $f(\overline{A})\subseteq\overline{f(A)}$ for all $A\subseteq X$. 
 
+[!Proposition] The pasting lemma
+Let $X=A\cup B$, where $A$ and $B$ are closed in $X$. Let $f:A\to Y$ and $g:B\to Y$ be continuous. If $f(x)=g(x)$ for every $x\in A\cap B$, then $f$ and $g$ combine to give a continuous function $h:X\to Y$, defined 

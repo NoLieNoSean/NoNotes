@@ -93,10 +93,6 @@ CMI, Aug-Nov 2024, Upendra Kulkarni
 >- [[ANA1_L3]] ✅
 >- [[ANA1_L4]] ✅
 >- [[ANA1_L5]] ✅
->- [[LEC ANA1 6]] ✅
->- [[LEC ANA1 7]] ✅
->- [[LEC ANA1 8]] ✅
->- [[LEC ANA1 9]] ✅
  %%
 # Homework
 

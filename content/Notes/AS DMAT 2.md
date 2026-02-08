@@ -6,9 +6,6 @@ time: 18:00
 draft: false
 id: "18"
 ---
-
-[[assignment2.pdf]]
-
 # Problem 1
 
 Let $\mathcal{F}$ be a forest. Define a relation by $a\sim b$ if a path exists between $a$ and $b$. $\sim$ is an equivalence relation:

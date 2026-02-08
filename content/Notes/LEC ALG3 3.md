@@ -146,6 +146,8 @@ The $R$-module $M/N$ is called the **quotient** of $M$ by $N$.
 > [!Example]
 > If $R$ is a ring and $I$ is a two-sided ideal of $R$, then all three of $I$, $R$, and the quotient ring $R/I$ are $R$-modules. There are two ways to view the module $R/I$: As the module arising from the canonical projection $R\to R/I$ and [[#^e65692]], or as the quotient of the $R$-module $R$ by its submodule $I$. The latter works even when $R$ is not commutative and $I$ is just a (say) left-ideal: the quotient $R/I$ is not defined as a ring, but it is defined as a left-module. The action of $R$ on $R/I$ is given by left multiplication: $r(a+I)=(ra+I)$. 
 
+^ec98bc
+
 The universal property and isomorphism theorems are what you'd expect; see @aluffiAlgebraChapter02009 [p.161, 162]. 
 
 > [!Proposition]

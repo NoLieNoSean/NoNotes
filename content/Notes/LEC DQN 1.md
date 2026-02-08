@@ -8,82 +8,122 @@ tags:
 ---
 Recall that the general solution for the first-order linear differential equation $\dot{x}=ax$ is $x(t)=ce^{ at }$. 
 
-[!Definition]
-1. An **ordinary DE** is an equation containing an unknown function of one variable real/complex variable $x$ and its derivatives. 
-2. A **Linear DE** is a DE that is linear in the unknown function and its derivatives. 
-3. The **order** of a DE is the highest order of derivative of the unknown function that appears in the DE. 
-4. A system of DEs is said to be **uncoupled** if each DE depends on only one variable. 
-5. A system of DEs is said to be **autonomous** if there is no explicit dependence on the independent variable (for example, time). 
-6. Initial conditions which result in a constant solution are called **equilibrium points**. 
-7. 
+> [!Definition]
+> 1. An **ordinary DE** is an equation containing an unknown function of one variable real/complex variable $x$ and its derivatives. 
+> 2. A **Linear DE** is a DE that is linear in the unknown function and its derivatives. 
+> 3. The **order** of a DE is the highest order of derivative of the unknown function that appears in the DE. 
+> 4. A system of DEs is said to be **uncoupled** if each DE depends on only one variable. 
+> 5. A system of DEs is said to be **autonomous** if there is no explicit dependence on the independent variable (for example, time). 
+> 6. Initial conditions which result in a constant solution are called **equilibrium points**. 
+> 
 
+# Exponentials of operators
 
+A system of linear first order differential equations can be expressed as $\dot{\mathbf{x}}=A\mathbf{x}$. Solving this system is [[#^4f5916|equivalent]] to finding the "exponential matrix" $e^{ At }$, which we will do now. 
 
+[[LEC CAL1 3#Topological properties of linear maps|Recall]] the properties of the operator norm. 
 
+> [!Theorem]
+> Given $T\in \mathcal{L}(\mathbb{R}^{n})$ and $t_{0}> 0$, the series
+> $$
+> \sum_{k=0}^{\infty} \frac{T^{k}t^{k}}{k!}
+> $$
+> is absolutely and uniformly convergent for all $|t|\leqslant t_{0}$. 
 
-
-
-
-An example:
-- $x'=ax$. 
-- find soln by integration: $x(t)=k e^{ at }$. 
-- If $u(t)$ is any solution, then $\frac{d}{dt}(u(t)e^{ -at })=0$ (work this out), so $u(t)e^{ -at }$ must be a constant $k$. Thus, $x(t)=k e^{ at }$ is the only possible family of solutions. 
-- Fit in initial conditions: $u(t)=u(0)e^{ at }$. Since $u$ can by translated by any $t_{0}$, was can assume WLOG that the "initial condition" is at $t=0$. 
-- When $k=0$, $x(t)=0$. These are called *equilibrium points* (where the solution becomes constant). 
-
+The exponential of the linear operator $T$ is defined by the absolutely convergent series
 $$
-x'=ax\left( 1-\frac{x}{N} \right)
+e^{T}:=\sum_{k=0}^{\infty} \frac{T^{k}}{k!}.
 $$
-- Population small: rate $\propto ax$, the size of the population
-- Population exceeds $N$, the rate becomes negative. 
-- Can assume $N=1$ after normalizing $x$ by $N$. 
-- This reduces the dependence of the RHS on just $a$. RHS usually denoted by $f_{\text{parameters}}(x)$, in this case $f_{a}(x)$. 
-- This is an example of a *first order, autonomous(RHS only function of $x$, no explicit dependence on $t$), non-linear* DE. 
-- Solution:
+
+> [!Definition]
+> Let $A$ be an $n\times n$ matrix. Then for $t\in \mathbb{R}$, 
+> $$
+> e^{ At }:=\sum_{k=0}^{\infty} \frac{A^{k}t}{k!}.
+> $$
+
+> [!Proposition]
+> If $P$ and $T$ are linear transformations on $\mathbb{R}^{n}$ and $S=PTP^{-1}$, then $e^{ S }=Pe^{ T }P^{-1}$. 
+
+^2631a8
+
+> [!Corollary]
+> If $A=P\,\text{diag}[\lambda_{j}]\,P^{-1}$, then $e^{ At }=P\,\text{diag}[e^{ \lambda_{j}t }]P^{-1}$. 
+
+^5d7c66
+
+> [!Proposition]
+> If $S$ and $T$ are linear transformations on $\mathbb{R}^{n}$ which commute, then $e^{ S+T }=e^{ S }e^{ T }$. 
+
+> [!Corollary]
+> If $T$ is a linear transformation on $\mathbb{R}^{n}$, the inverse of the linear transformation $e^{ T }$ is given by $(e^{ T })^{-1}=e^{ -T }$. 
+
+> [!Corollary]
+> 1. If $A=\begin{bmatrix}a & -b \\b & a\end{bmatrix}$, then $e^{ A }=e^{ a }\begin{bmatrix}\cos b & -\sin b \\\sin b & \cos b\end{bmatrix}$. 
+> 2. If $A=\begin{bmatrix}a & b \\ 0 & a \end{bmatrix}$, then $e^{ A }=e^{ a }\begin{bmatrix}1 & b \\ 0 & 1\end{bmatrix}$. 
+
+^75eee3
+
+> [!Proposition]
+> Let $A$ be any $2\times 2$ matrix. There exists an invertible $2\times 2$ matrix $P$ (whose columns consist of generalized eigenvectors of $A$) such that the matrix $B=P^{-1}AP$ has one of the following forms:
+> $$
+> B=\begin{bmatrix}
+> \lambda &  \\
+>  & \mu
+> \end{bmatrix}, \quad 
+> B=\begin{bmatrix}
+> \lambda & 1 \\
+>  & \lambda
+> \end{bmatrix}, \quad \text{or}\quad 
+> B=\begin{bmatrix}
+> a & -b \\
+> b & a
+> \end{bmatrix}.
+> $$
+> 
+
+^4de480
+
+We can now compute the matrix $e^{ At }$ for any $2\times {2}$ matrix $A$. Let $B$ be given by [[#^4de480]]. Then, by [[#^5d7c66]] and [[#^75eee3]],  
 $$
-\begin{align}
-\int \frac{dx}{x(1-x) } & =\int adt \\
-x(t)= \frac{ke^{ at }}{1+ke^{ at }}
-\end{align}
+e^{ Bt }=\begin{bmatrix}
+e^{ \lambda t } & \\
+ & e^{ \mu t }
+\end{bmatrix}, \quad 
+e^{ Bt }=e^{ \lambda t }\begin{bmatrix}
+1 & t \\
+ & 1 
+\end{bmatrix},\quad \text{or}\quad 
+e^{ Bt }=e^{ at }\begin{bmatrix}
+\cos bt & -\sin bt \\
+\sin bt & \cos bt
+\end{bmatrix}.
 $$
-we have $k=\frac{x(0)}{1-x(0)}$. 
+By [[#^2631a8]], $e^{ At }$ is given by
 $$
-\begin{align}
-x(t)=\frac{x(0)e^{ at }}{1-x(0)+x(0)e^{ at }}
-\end{align}
+e^{ At }=Pe^{ Bt }P^{-1}.
 $$
-equilibria are attained at $x(0)=1$ ($x(t)=1$) and $x(0)=0$ ($x(t)=0$). 
 
 ---
 
-# Systems of Differential equations
+# The fundamental theorem for linear systems
 
-$$
-\begin{align}
-x_{1}' & =f_{1}(t, x_{1}, \dots, x_{n}) \\
- & \vdots \\
-x_{n}' & =f_{n}(t, x_{1}, \dots, x_{n})
-\end{align}
-$$
-Assume $f_{i}\in C^{\infty}$ for all $i$ (partial derivatives of all orders exist and are continuous). In vector notation, $X'=F(t, X)$. If autonomous, we have $X'=F(X)$. $X_{0}$ such that $F(X_{0})=0$ are equilibrium points, and correspond to solutions $X(t)=X_{0}$. 
+> [!Lemma]
+> Let $A$ be a square matrix, then
+> $$
+> \frac{d}{dt} e^{ At }=Ae^{ At }.
+> $$
 
-We can write second-order diff equations in this form. Consider $mx''+bx'+kx=0$. This can be written as
-$$
-\begin{align}
-x' & =y \\
-y' & =-bx-ay \\
- \\
-\begin{bmatrix}
-x' \\
-y'
-\end{bmatrix} & =\begin{bmatrix}
-0 & 1 \\
--b & -a
-\end{bmatrix}\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-\end{align}
-$$
+> [!Theorem] The fundamental theorem for linear systems
+> Let $A$ be an $n\times n$ matrix. Then for a given $\mathbf{x}_{0}\in \mathbb{R}^{n}$, the initial value problem
+> $$
+> \begin{align}
+> \dot{\mathbf{x}}=A\mathbf{x}, \quad \mathbf{x}(0)=\mathbf{x}_{0}
+> \end{align}
+> $$
+> has a unique solution by
+> $$
+> \mathbf{x}(t)=e^{ At }\mathbf{x}_{0}.
+> $$
+> 
 
-Uncoupled linear systems.
+^4f5916

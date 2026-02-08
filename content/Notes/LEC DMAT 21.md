@@ -87,7 +87,7 @@ As stated before, if we only wish to know whether a perfect matching exists or n
 > 
 > 
 
-In practice, $\mathbb{F}$ is taken to be a sufficiently large [[Finite fields|finite field]] (finite fields are ideal for randomized algorithms because arithmetic over them is well-defined, exact (no floating point issues), and operations can be implemented efficiently). This also allows us to take $S$ to be the entire field and sample freely.
+In practice, $\mathbb{F}$ is taken to be a sufficiently large finite fields (finite fields are ideal for randomized algorithms because arithmetic over them is well-defined, exact (no floating point issues), and operations can be implemented efficiently). This also allows us to take $S$ to be the entire field and sample freely.
 
 So, to test if a perfect matching exists, you
 1. choose a large finite field $\mathbb{F}_p$, typically with prime $p \gg n$;

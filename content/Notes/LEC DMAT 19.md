@@ -13,8 +13,6 @@ id: "217"
 
 ### Kruskal's algorithm for MSTs
 
-[[Introduction to Graph Theory (Douglas B. West).pdf#page=117|ref]]
-
 > [!Algorithm]
 > **Input**: A weighted connected graph.
 > **Idea**: Maintain an acyclic subgraph $H$, enlarging it by edges with low weight to form a spanning tree. Consider edges in nondecreasing order of weight, breaking ties arbitrarily.
@@ -31,7 +29,7 @@ id: "217"
 
 ## A digression: Matroids
 
-[[Combinatorics Topics, Techniques, Algorithms (Peter J. Cameron).pdf#page=214|ref]]
+See @cameronCombinatoricsTopicsTechniques2001
 
 Examples of matroids: 
 - Uniform matroid: all subsets of size $k$
