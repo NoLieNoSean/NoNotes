@@ -10,6 +10,7 @@ date: September 2024
 >- $d(p,p) = 0$
 >- $d(p,q) = d(q,p)$
 >- $d(p,q) \le d(p,r) + d(r,q)$
+>
 >The function $d$ is called a *distance function*, or a *metric*.
 
 ^d8adcc

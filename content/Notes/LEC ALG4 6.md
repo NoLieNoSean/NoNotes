@@ -88,7 +88,7 @@ Immediate consequences:
 
 ^2da73b
 
-> [!Proposition] @langAlgebra2002 3.7.5, p1
+> [!Theorem] @langAlgebra2002 3.7.5, p1
 > Let $R$ be a PID, $M$ a finitely generated torsion module. Let $\text{Ann}_{R}(M)=\langle a \rangle$, and $\{ p_{1}, \dots, p_{m} \}$ be the prime divisors of $a$ [^1]. Then, 
 > $$
 > M=\bigoplus_{i=1}^{m}M(p_{i}).

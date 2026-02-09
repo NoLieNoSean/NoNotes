@@ -81,6 +81,8 @@ A topological space homeomorphic to a metric space is said to be **metrizable**.
 > 1. **First countable** if for each $x\in X$ there is a countable collection $\{ U_{n} \}_{n\in \mathbb{Z}}$ of neighborhoods of $x$ such that any neighborhood $U$ of $x$ contains at least one of the sets $U_{n}$.
 > 2. **Second countable** if $X$ has a countable basis.
 
+^25afed
+
 A metrizable space always satisfies the first countability axiom, but the converse is not true. Not all metric spaces are second countable. 
 
 Both countability axioms are well behaved with respect to the operations of taking subspaces and countable products:

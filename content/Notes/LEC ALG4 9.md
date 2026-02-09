@@ -36,15 +36,14 @@ This makes $V$ into a $k[x]$-module, compatible with the $k$-vector space struct
 > $$
 > Thus, in the basis $\{ \overline{1}, \overline{x} \}$, $T$ is given by the matrix $\begin{bmatrix}0 & 0 \\ 1 & 0\end{bmatrix}$. 
 
-
-
-
 > [!Remark]
 > Suppose $V=V_{1}\oplus V_{2}$ as $k[x]$-modules, where $V_{1}$ and $V_{2}$ are $k[x]$-submodules of the $k[x]$-module $V$. Clearly, $V_{1}$ and $V_{2}$ are also $k$-submodules of the $k$-module $V$. [[Categorical notes on Modules#^af51f1|The conditions]] $V_{1}\cap V_{2}=0$ and $V_{1}+V_{2}=V$, being properties of $V$ as an abelian group, are not impacted by the module structure on $V$. Thus, the equation $V=V_{1}\oplus V_{2}$ continues to hold in $k\textsf{-Mod}$. 
 > 
 > The converse is not true. For example, $k[x]/\langle x^{2} \rangle$, as a $k[x]$-module, cannot be written as a direct sum of two proper submodules[^1]. But as a $k$-vector space, it is isomorphic to $k^{2}$.
 
 ^eddb40
+
+[^1]: $x^{2}(k[x]/\langle x^{2} \rangle)=0$; use [[LEC ALG4 7#^d3994a]]. 
 
 > [!Proposition]
 > $V$ is a torsion $k[x]$-module. 
@@ -60,14 +59,13 @@ This makes $V$ into a $k[x]$-module, compatible with the $k$-vector space struct
 > > Let $p(x)$ be the characteristic polynomial of $T$. Then, by C-H, $p(T)=0\in \text{End}_{k}(V)$. Thus, $p(x)\in k[x]$ annihilates $V$ as a $k[x]$-module. 
 > 
 
-
-
-
-
 Using [[LEC ALG4 6#^428a07]] and [[LEC ALG4 7#^d3994a]], we can now write
 $$
 V= \frac{k[x]}{\langle p_{1}^{e_{1}} \rangle }\oplus\dots \oplus\frac{k[x]}{\langle p_{s}^{e_{s}} \rangle },
 $$
+
+^2fda43
+
 where the $p_{i}$'s are irreducible polynomials (and not necessarily distinct) and $e_{i}\geqslant 1$ for all $i$. 
 
 > [!Proposition]
@@ -95,7 +93,31 @@ where the $p_{i}$'s are irreducible polynomials (and not necessarily distinct) a
 > 
 > where $*_{1}=T|_{V_{1}}$ and $*_{2}=T|_{V_{2}}$. 
 
+Thus, if $B_{1}, \dots, B_{s}$ are $k$-bases for the summands $k[x]/\langle p^{e_{1}} \rangle, \dots, k[x]/\langle p^{e_{s}} \rangle$, $T$ is given by the matrix
+```latex
 
-[!Corollary]
+% latex-id: b0c0-b851-2902-43fc-bd6f
+\usepackage{blkarray}
+\usepackage{amsmath}
 
-[^1]: $x^{2}(k[x]/\langle x^{2} \rangle)=0$; use [[LEC ALG4 7#^d3994a]]. 
+\begin{document}
+
+\[
+\begin{blockarray}{ccccc}
+&B_{1}&B_{2}&\dots&B_{s}\\
+\begin{block}{c[cccc]}
+  B_{1}&*_{1}&0&\dots&0 \\
+  B_{2}&0&*_{2}&\dots&0  \\
+  \vdots &\vdots&\vdots&\ddots&\vdots  \\
+  B_{s}&0&0&\dots&*_{s}  \\
+\end{block}
+\end{blockarray}
+ \]
+
+\end{document}
+```
+Now assume $k$ is [[LEC ALG3 19#^4fa8fa|algebraically closed]], so all primes in $k[x]$ are of the from $x-\lambda$ for some $\lambda\in k$. The summands in [[#^2fda43]] now take the form
+$$
+W_{i}=\frac{k[x]}{\langle (x-\lambda)^{e_{i}} \rangle }.
+$$
+Recall that $\{ 1, \overline{x}, \dots, \overline{x}^{e_{i}-1} \}$ is a $k$-basis for $W_{i}$. 

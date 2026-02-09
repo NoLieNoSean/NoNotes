@@ -99,6 +99,8 @@ tags:
 > 1. A field $k$ is said to be **algebraically closed** if every polynomial in $k[x]$ of degree $\geqslant 1$ has a root in $k$.
 > 2. An **algebraic closure** of a field $k$ is an algebraic extension of $k$ which is algebraically closed.
 
+^4fa8fa
+
 > [!Proposition]
 > Every algebraic extension of an algebraically closed field is trivial.
 > 

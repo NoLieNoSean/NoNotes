@@ -119,7 +119,7 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 
 ^743215
 
-> [!Proposition] @langAlgebra2002 3.7.5, p2
+> [!Theorem] @langAlgebra2002 3.7.5, p2
 > Let $M$ be a finitely generated $p$-primary $R$-module. Let $s=\dim_{R/p}M/pM$. Then, there exist ==unique== $e_{1}\geqslant e_{2}\geqslant \dots\geqslant e_{s}$ such that
 > $$
 > M= \frac{R}{\langle p^{e_{1}} \rangle }\oplus\dots \oplus \frac{R}{\langle p^{e_{s}} \rangle }.
@@ -136,6 +136,7 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 > > \frac{M}{x_{1}R}= \frac{R}{\langle p^{e_{2}} \rangle }\oplus\dots \oplus \frac{R}{\langle p^{e_{s}} \rangle },
 > > $$
 > > with $e_{2}\geqslant \dots\geqslant e_{s}$. Let $\overline{z}_{2}, \dots, \overline{z}_{s}\in M/x_{1}R$ be generators of the $s$ components of the above direct sum with exponents $e_{2}, .., e_{s}$ respectively. They are necessarily independent. Use [[#^7cea38]] to lift these to $z_{2}, \dots, z_{s}\in M$ such that $x_{1}, z_{2}, \dots, z_{s}$ are independent and have exponents $e_{1}\geqslant e_{2}\geqslant\dots\geqslant e_{s}$ (recall that $e_{1}$ is the highest exponent an element of $M$ can have). 
+> > 
 > > These generate $M$: for $m\in M$, we have
 > > $$
 > > \begin{align}
@@ -156,18 +157,18 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 > > We now prove uniqueness. Consider the submodules $pM, p^{2}M, \dots, p^{e_{1}-1}M$ of $M$. Let $n_{k}$ denote the number of $e_{i}$ for which $e_{i}> k$. Let $e_{i_{k}}$ be the smallest $e_{i}$ greater than $k$. Observe that the direct sum
 > > $$
 > > \begin{align}
-> > p^{k}M=p^{k}\frac{R}{\langle p^{e_{1}} \rangle }\oplus\dots \oplus p^{k}\frac{R}{\langle p^{e_{s}} \rangle }=p^{k}\frac{R}{\langle p^{e_{1}} \rangle }\oplus\dots \oplus p^{k}\frac{R}{\langle p^{e_{i_{k}}} \rangle }
+> > p^{k}M=p^{k}\frac{R}{ p^{e_{1}}R  }\oplus\dots \oplus p^{k}\frac{R}{ p^{e_{s}}R  }=p^{k}\frac{R}{ p^{e_{1}}R  }\oplus\dots \oplus p^{k}\frac{R}{ p^{e_{i_{k}}}R  }
 > > \end{align}
 > > $$
-> > has exactly $n_{k}$ nontrivial terms, since $p^{k}R/\langle p^{e_{i}} \rangle$ is $0$ for all $k\geqslant e_{i}$. Now consider the quotient $p^{k}M/p^{k+1}M$. If $n_{k}=n_{k+1}$, then we have
+> > has exactly $n_{k}$ nontrivial summands, since $p^{k}R/ p^{e_{i}}R$ is $0$ for all $k\geqslant e_{i}$. Now consider the quotient $p^{k}M/p^{k+1}M$. If $n_{k}=n_{k+1}$, we have
 > > $$
-> > \frac{p^{k}M}{p^{k+1}M}=\bigoplus_{i=1}^{n_{k}}\left( \frac{\frac{p^{k}R}{\langle p^{e_{i}} \rangle }}{\frac{p^{k+1}R}{\langle p^{e_{i}} \rangle }} \right)\cong\bigoplus_{n_{k}}\frac{R}{pR}
+> > \frac{p^{k}M}{p^{k+1}M}=\bigoplus_{i=1}^{n_{k}}\left( \frac{\frac{p^{k}R}{ p^{e_{i}}R }}{\frac{p^{k+1}R}{ p^{e_{i}}R }} \right)\cong\bigoplus_{n_{k}}\frac{R}{pR}
 > > $$
-> > by the third isomorphism theorem and [[#^743215]]. It is easy to show that even in the case $n_{k}> n_{k+1}$, the above isomorphism continues to hold. Thus, 
+> > by the [[LEC ALG3 3#^7c2d63|third isomorphism theorem]] and [[#^743215]]. It is easy to show that even in the case $n_{k}> n_{k+1}$, the above isomorphism continues to hold. Thus, 
 > > $$
 > > \dim_{R/p}\frac{p^{k}M}{p^{k+1}M}=n_{k}.
 > > $$
-> > Since the dimensions of these quotient spaces are an invariant of $M$, we have that the sequence $n_{1}, \dots, n_{e_{1}-1}$ is an invariant of $M$. Since the sequence $e_{1}, \dots, e_{s}$ is completely determined by $n_{1}, \dots, n_{e_{1}-1}$, we conclude that our decomposition is unique. 
+> > The dimensions of these quotient vector spaces are an invariant of $M$. Since the sequence $e_{1}, \dots, e_{s}$ is completely determined by $n_{0}, \dots, n_{e_{1}-1}$, we conclude that our decomposition is unique. 
 > 
 
 ^d3994a

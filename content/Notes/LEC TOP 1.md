@@ -128,7 +128,114 @@ Clearly, $\overline{A}=A\cup A'$, where $A'$ is the set of all limit points of $
 Clearly, it suffices to show that the preimage of every basis (or subbasis) element is open to prove continuity. 
 
 > [!Proposition]
-> $f$ is continuous $\iff$ $f(\overline{A})\subseteq\overline{f(A)}$ for all $A\subseteq X$. 
+> 1. $f$ is continuous $\iff$ $f(\overline{A})\subseteq\overline{f(A)}$ for all $A\subseteq X$. 
+> 2. The map $f:X\to Y$ is continuous if $X$ can be written as the union of open sets $U_{\alpha}$ such that $f\ | \ _{U_{\alpha}}$ is continuous for each $\alpha$. 
 
-[!Proposition] The pasting lemma
-Let $X=A\cup B$, where $A$ and $B$ are closed in $X$. Let $f:A\to Y$ and $g:B\to Y$ be continuous. If $f(x)=g(x)$ for every $x\in A\cap B$, then $f$ and $g$ combine to give a continuous function $h:X\to Y$, defined 
+> [!Proposition] The pasting lemma
+> Let $X=A\cup B$, where $A$ and $B$ are closed in $X$. Let $f:A\to Y$ and $g:B\to Y$ be continuous. If $f(x)=g(x)$ for every $x\in A\cap B$, then $f$ and $g$ combine to give a continuous function $h:X\to Y$. 
+
+## The product topology
+
+> [!Proposition]
+> If each space $X_{\alpha}$ is Hausdorff, then $\prod_{\alpha}X_{\alpha}$ is Hausdorff in both the box and product topologies. 
+
+> [!Proposition]
+> Let $\{ X_{\alpha} \}$ be an indexed family of spaces; let $A_{\alpha}\subseteq X_{\alpha}$ for each $\alpha$. If $\prod X_{\alpha}$ is given either the product or the box topology, then
+> $$
+> \prod \overline{A}_{\alpha}=\overline{\prod A_{\alpha}}.
+> $$
+> 
+
+> [!Theorem]
+> Let $f:A\to \prod_{\alpha}X_{\alpha}$ be given by $f_{\alpha}$ in each slot. Let $\prod X_{\alpha}$ have the product topology. Then, $f$ is continuous iff $f_{\alpha}$ is continuous for each $\alpha$. 
+
+^0b2ba1
+
+[[#^0b2ba1]] is the motivating requirement for the definition of the product topology. Proving $(\implies)$ requires us to show that each of the projection functions are continuous. It is easily seen that the "product topology" $\mathcal{T}$ is the coarsest topology that makes this happen. In other words, any topology $\mathcal{T}'$ that hopes to satisfy [[#^0b2ba1]] must contain $\mathcal{T}$. In particular, the box topology, being finer than the product topology, also makes the projections continuous. However, the box topology does not satisfy $(\impliedby)$. In fact, while proving $(\impliedby)$, we realize that no topology finer than the product topology works. This is as it should be, since products can be defined using a universal property, and thus should be unique up to isomorphism. 
+
+```latex 
+% latex-id: f99b-5022-5814-4351-8f8b
+% !!! Coupled with Category Theory Preliminaries (Presentation) and LEC TOP 1
+
+\begin{document}
+\begin{tikzcd}
+&&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
+&&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
+X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{5}}\\ 
+\end{tikzcd}
+\end{document}
+```
+
+## The metric topology
+
+> [!Definition]
+> If $X$ is a topological space, $X$ is said to be **metrizable** if there exists a [[Metric spaces#^d8adcc|metric]] $d$ on the set $X$ that induces the topology of $X$. A **metric space** is a metrizable space $X$ together with a specific metric $d$ that gives the topology of $X$. 
+
+> [!Proposition]
+> Let $X$ be a metric space with metric $d$. Define the **standard bounded metric** $\overline{d}:X\times X\to \mathbb{R}$ by 
+> $$
+> \overline{d}(x, y)=\min\{ d(x, y), 1 \}.
+> $$
+> $\overline{d}$ is a metric that induces the same topology as $d$. 
+
+^d37540
+
+> [!Proposition]
+> Let $d$ and $d'$ be two metrics on the set $X$. Let $\mathcal{T}$ and $\mathcal{T}'$ be the topologies they induce, respectively. Then $\mathcal{T}'$ is finer than $\mathcal{T}$ iff for each $x\in X$ and each $\epsilon> 0$, there exists a $\delta> 0$ such that $B_{d'}(x, \delta)\subseteq B_{d}(x, \epsilon)$. 
+
+> [!Definition]
+> Given an index set $J$, and given points $\mathbf{x}, \mathbf{y}\in \mathbb{R}^{J}$, define the **uniform metric** $\overline{\rho}$ on $\mathbb{R}^{J}$ by the equation
+> $$
+> \overline{\rho}(\mathbf{x}, \mathbf{y})=\sup\{ \overline{d}(x_{\alpha}, y_{\alpha}):\alpha\in J \},
+> $$
+> where $\overline{d}$ is the [[#^d37540|standard bounded metric]] on $\mathbb{R}$. The topology induced by $\overline{\rho}$ is called the **uniform topology**. 
+
+> [!Proposition]
+> The uniform topology on $\mathbb{R}^{J}$ is finer than the product topology and coarser than the box topology. These topologies are all different if $J$ is infinite. 
+
+In the case when $J$ is infinite, when is $\mathbb{R}^{J}$ is metrizable in either the box or product topology? Only when $J$ is countable and $\mathbb{R}^{J}$ has the product topology.
+
+> [!Proposition]
+> Let $\overline{d}$ be the standard bounded metric on $\mathbb{R}$. For $\mathbf{x}, \mathbf{y}\in \mathbb{R}^{\omega}$, define
+> $$
+> D(\mathbf{x}, \mathbf{y})=\sup\left\{  \frac{\overline{d}(x_{i}, y_{i})}{i}  \right\}.
+> $$
+> Then $D$ is a metric that induces the product topology on $\mathbb{R}^{\omega}$. 
+
+In general, it is true that countable products of metrizable spaces are metrizable. 
+
+### Sequences and continuity
+
+It would be nice if we could say the following: If $x$ lies in the closure of subset $A$ of the space $X$, then there exists a sequence of points of $A$ converging to $x$. This is not true in general, but it is true for metrizable spaces. 
+
+> [!Definition]
+> A space $X$ is said to have a countable basis at the point $x$ if there is a countable collection $\{ U_{n} \}_{n\in \mathbb{N}}$ of neighborhoods of $x$ such that any neighborhood $U$ of $x$ contains at least one of the sets $U_{n}$. 
+
+Note that if $X$ has a countable basis at each of its points, $X$ is [[Countability and Separation axioms#^25afed|first countable]]. A metrizable space always satisfies the first countability axiom.
+
+> [!Proposition] The sequence lemma
+> Let $X$ be a topological space; let $A\subseteq X$. If there is a sequence of points of $A$ converging to $x$, then $x\in \overline{A}$; the converse holds if $X$ has a countable basis at $x$. 
+
+> [!Proposition]
+> Let $f:X\to Y$. If $f$ is continuous, then for every convergent sequence $\{ x_{n} \}\to x$ in $X$, the sequence $f(x_{n})$ converges to $f(x)$. The converse holds if $X$ has a countable basis at $x$. 
+
+To show that a space is not metrizable, we can show that the sequence lemma does not hold:
+
+> [!Example] @munkresTopology2000 [p. 132]
+> $\mathbb{R}^{\omega}$ in the box topology is not metrizable. 
+> 
+> We show that the sequence lemma does not hold for $R^{\omega}$ using a argument reminiscent of diagonalization using the set $A=\{ \mathbf{x}:x_{i}> 0\,\forall i\in \mathbb{N} \}$ and the point $\mathbf{0}=(0, 0, \dots)$. 
+> 
+> I'm pretty sure the same idea works to prove that $R^{J}$ for uncountable $J$ under the box topology is not metrizable; just work with a fixed countable subset of $J$. 
+
+
+
+> [!Example] @munkresTopology2000 [p. 133]
+> An uncountable product of $\mathbb{R}$ with itself under the product topology is not metrizable. 
+
+
+
+### Constructing continuous functions
+
+Recall the [[LEC ANA1 33#^8504b1|uniform limit theorem]].
+

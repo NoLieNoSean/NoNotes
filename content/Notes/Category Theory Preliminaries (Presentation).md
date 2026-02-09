@@ -364,16 +364,17 @@ The same object can be both initial and final, as singletons are in the category
 > As another trivial example, show that for $G, H\in \textsf{Gp}$, the product group $G\times H$ that we know and love satisfies the universal property of products.
 
 > [!Example] Product topology
->
->
 > ```latex 
 > % latex-id: f99b-5022-5814-4351-8f8b
+> % !!! Coupled with Category Theory Preliminaries (Presentation) and LEC TOP 1
 > 
+> \begin{document}
 > \begin{tikzcd}
 > &&Y\ar[ddl, bend right, "f_{2}"']\ar[ddr, bend left, "f_{3}"]\ar[ddrr, bend left, "f_{4}"]\ar[ddll, bend right, "f_{1}"']\ar[d, "\exists!f"]&&\\
 > &&\prod X\ar[dr, "\pi_{3}"']\ar[dl, "\pi_{2}"]\ar[dll, "\pi_{1}"']\ar[drr, "\pi_{4}"]&&\\
 > X_{\alpha_{1}}&X_{\alpha_{2}}&\dots&X_{\alpha_{3}}&X_{\alpha_{5}}\\ 
 > \end{tikzcd}
+> \end{document}
 > ```
 > 
 

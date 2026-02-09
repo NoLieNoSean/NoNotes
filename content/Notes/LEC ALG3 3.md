@@ -185,6 +185,8 @@ The universal property and isomorphism theorems are what you'd expect; see @aluf
 > $$
 > 
 
+^7c2d63
+
 Imitate proof of [[LEC ALG3 2#^f12ed2]]. 
 
 ## Finitely generated modules
