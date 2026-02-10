@@ -85,7 +85,7 @@
 
 :root[saved-theme="dark"] {
     .theme-responsive {
-        filter: invert(1);
+        filter: invert(1) hue-rotate(180deg);
     }
 }
 

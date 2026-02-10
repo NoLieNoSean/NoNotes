@@ -5,6 +5,7 @@ time: 13:22
 tags:
   - TOP
   - Lecture
+  - Processed
 ---
 # Preliminaries
 
@@ -228,12 +229,8 @@ To show that a space is not metrizable, we can show that the sequence lemma does
 > 
 > I'm pretty sure the same idea works to prove that $R^{J}$ for uncountable $J$ under the box topology is not metrizable; just work with a fixed countable subset of $J$. 
 
-
-
 > [!Example] @munkresTopology2000 [p. 133]
 > An uncountable product of $\mathbb{R}$ with itself under the product topology is not metrizable. 
-
-
 
 ### Constructing continuous functions
 

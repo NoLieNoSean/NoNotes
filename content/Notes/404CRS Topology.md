@@ -48,17 +48,17 @@ CMI, Jan-Apr 2026, Upendra Kulkarni
   % bounding box or axis line
   % \draw[dashed] (-0.1,0) -- ({\n*(\rectw+\gap)-\gap+0.1},0);
 \end{tikzpicture}
-Exhibit B: $\mathcal{T}_{\text{uniform}}\supseteq \mathcal{T}_{\text{product}}$
+Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 \end{document}
 ```
 ---
-# Lectures
 
 [[Countability and Separation axioms]]
 
-[[LEC TOP 1]] Basis and subbasis, subspace topology, product topology
+[[LEC TOP 1]] ✅ Basis and subbasis, subspace topology, product topology, metric topology, continuity
 
-
+[[The quotient topology]]
+[[The fundamental group]]
 
 [[LEC TOP 2]]
 [[LEC TOP 3]]
@@ -66,8 +66,6 @@ Exhibit B: $\mathcal{T}_{\text{uniform}}\supseteq \mathcal{T}_{\text{product}}$
 [[LEC TOP 5]]
 [[LEC TOP 6]]
 
----
 
 
-[[The quotient topology]]
-[[The fundamental group]]
+[[HW TOP 1]]
