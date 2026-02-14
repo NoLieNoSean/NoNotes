@@ -122,7 +122,7 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 > [!Theorem] @langAlgebra2002 3.7.5, p2
 > Let $M$ be a finitely generated $p$-primary $R$-module. Let $s=\dim_{R/p}M/pM$. Then, there exist ==unique== $e_{1}\geqslant e_{2}\geqslant \dots\geqslant e_{s}$ such that
 > $$
-> M= \frac{R}{\langle p^{e_{1}} \rangle }\oplus\dots \oplus \frac{R}{\langle p^{e_{s}} \rangle }.
+> M\cong \frac{R}{\langle p^{e_{1}} \rangle }\oplus\dots \oplus \frac{R}{\langle p^{e_{s}} \rangle }.
 > $$
 > 
 > > [!Proof]-

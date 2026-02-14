@@ -11,11 +11,13 @@ id: "91"
 
 The set of all permutations of $(1, 2, \dots, n)$ form a group, denoted by $S_{n}$. A *cycle* is a special type of permutation. For example, $(1 ~2)$ is what is called a 2-cycle, and represents swapping $1$ and $2$. $(1~2~3)$ is a 3-cycle, and maps 1 to 2, 2 to 3, and 3 to 1. The group operation is composition. Starting from $S_{3}$, they are not abelian.
 
-> [!Theorem] Lemma
+> [!Lemma]
 > Every $\tau\in S_{n}$ can be expressed as a product of cycles.
-
-> **Proof**
-> Let $i$ be the first element in $\{ 1, 2, \dots, n \}$ which is not fixed by $\tau$ (i.e, is not mapped to itself. Fixed elements form cycles of length 1). Consider the cycle $\sigma_{1}=(1~ \tau(1)~ \tau^{2}(1)~\dots)$. Repeat until you have exhausted all elements, at which point $\tau$ can be expressed as a product of disjoint cycles, $\tau=\sigma_{1}\sigma_{2}\dots\sigma _k$. Note that the cycles being disjoint makes their product commutative, i.e, we can write the product in any order. 
+> 
+> > [!Proof]-
+> > 
+> > Let $i$ be the first element in $\{ 1, 2, \dots, n \}$ which is not fixed by $\tau$ (i.e, is not mapped to itself. Fixed elements form cycles of length 1). Consider the cycle $\sigma_{1}=(1~ \tau(1)~ \tau^{2}(1)~\dots)$. Repeat until you have exhausted all elements, at which point $\tau$ can be expressed as a product of disjoint cycles, $\tau=\sigma_{1}\sigma_{2}\dots\sigma _k$. Note that the cycles being disjoint makes their product commutative, i.e, we can write the product in any order. 
+> 
 
 Now, let the sign of a permutation be defined as the number of "disorders" in the permutation, as done [[LEC ALG1 16#Another formula for determinants|here]]. Note with this definition, the sign of a permutation is a well defined quantity. It can easily be verified that if a cycle $\sigma$ has length $k$,  $\text{sgn}(\sigma)=(-1)^{k-1}$. Thus, if $\tau = \sigma_{1}\sigma_{2}\dots\sigma _k$, $\text{sgn}(\tau)=\text{sgn}(\sigma_{1})\text{sgn}(\sigma_{2})\dots\text{sgn}(\sigma_{k})$. 
 
@@ -42,17 +44,18 @@ The kernel of $\phi$ is the set of all elements in $G$ that it maps to the ident
 > 1. $\phi$ will always map $1_{G}$ to $1_{H}$.
 > 2. $\ker\phi<G$.
 > 3. $\mathrm{Im}~ \phi<H$.
+> 
+> > [!Proof]-
+> > 
+> > $\phi(1_{G})=\phi(1_{G}1_{G})=\phi(1_{G})\phi(1_{G})$. It follows that $\phi(1_{G})=1_{H}$.
+> > 
+> > Let $g_{1}, g_{2}\in \ker\phi$. Then, $\phi(g_{1} g_{2})=\phi(g_{1})\phi(g_{2})=1_{H}1_{H}=1_{H}$. Thus, $g_{1} g_{2}\in \ker \phi$. $\phi(1_{G})=1_{H}$, so $1_{G}\in \ker \phi$. Also, $1_{H}=\phi(1_{G})=\phi (g_{1}g_{1}^{-1})=\phi(g_{1})\phi(g_{1}^{-1})=\phi(g_{1}^{-1})$, i.e, $g_{1}^{-1}\in\ker\phi$. Thus, $\ker\phi<G$. 
+> > 
+> > Let $h_{1}, h_{2}\in \mathrm{Im}~\phi$. There must exist $g_{1}, g_{2}\in G$ such that $\phi(g_{1})=h_{1}$ and $\phi(g_{2})=h_{2}$. Then, $\phi(g_{1}g_{2})=\phi(g_{1})\phi(g_{2})=h_{1}h_{2}$. Thus, $h_{1}h_{2}\in \mathrm{Im}~\phi$. Obviously, $1_{H}\in \mathrm{Im}~\phi$. Also, it can be seen from the proof of statement 2 that $h_{1}^{-1}=\phi(g_{1})^{-1}=\phi(g_{1}^{-1})\in \mathrm{Im}~\phi$. Thus, $\mathrm{Im}~\phi<H$. 
+> 
 
 ^76946c
 
-> **Proof of 1**
-> $\phi(1_{G})=\phi(1_{G}1_{G})=\phi(1_{G})\phi(1_{G})$. It follows that $\phi(1_{G})=1_{H}$.
-> 
-> **Proof of 2**
-> Let $g_{1}, g_{2}\in \ker\phi$. Then, $\phi(g_{1} g_{2})=\phi(g_{1})\phi(g_{2})=1_{H}1_{H}=1_{H}$. Thus, $g_{1} g_{2}\in \ker \phi$. $\phi(1_{G})=1_{H}$, so $1_{G}\in \ker \phi$. Also, $1_{H}=\phi(1_{G})=\phi (g_{1}g_{1}^{-1})=\phi(g_{1})\phi(g_{1}^{-1})=\phi(g_{1}^{-1})$, i.e, $g_{1}^{-1}\in\ker\phi$. Thus, $\ker\phi<G$. 
-> 
-> **Proof of 3**
-> Let $h_{1}, h_{2}\in \mathrm{Im}~\phi$. There must exist $g_{1}, g_{2}\in G$ such that $\phi(g_{1})=h_{1}$ and $\phi(g_{2})=h_{2}$. Then, $\phi(g_{1}g_{2})=\phi(g_{1})\phi(g_{2})=h_{1}h_{2}$. Thus, $h_{1}h_{2}\in \mathrm{Im}~\phi$. Obviously, $1_{H}\in \mathrm{Im}~\phi$. Also, it can be seen from the proof of statement 2 that $h_{1}^{-1}=\phi(g_{1})^{-1}=\phi(g_{1}^{-1})\in \mathrm{Im}~\phi$. Thus, $\mathrm{Im}~\phi<H$. 
 
 Note: Actually, $\ker \phi\triangleleft G$, as seen in the next lecture.
 

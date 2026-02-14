@@ -13,6 +13,8 @@ id: "83"
 >1. An **eigenvector** $\mathbf{v}$ of a linear map $A:V\to V$ is a *nonzero* vector $\mathbf{v}$ such that $A\mathbf{v} = \lambda \mathbf{v}$ for some scalar $\lambda$.
 >2. An **eigenvalue** of $A:V\to V$ is a scalar $\lambda$ such that the equation $A\mathbf{v} = \lambda \mathbf{v}$ has a *nontrivial* solution.
 
+^6c94b7
+
 If $A\mathbf{v} = \lambda \mathbf{v}$ for some nontrivial $\mathbf{v}$, then we say
 1. $\mathbf{v}$ is an eigenvector for $\lambda$, and
 2. $\lambda$ is an eigenvalue for $\mathbf{v}$.

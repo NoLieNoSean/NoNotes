@@ -69,3 +69,4 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 
 
 [[HW TOP 1]]
+

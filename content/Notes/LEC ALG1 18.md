@@ -90,6 +90,8 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 > f(x) = \det(A-xI_{n}).
 >$$
 
+^e5c62f
+
 > [!Theorem]
 > $\lambda_{0}$ is an eigenvalue of $A \iff f(\lambda_{0}) = 0$.
 > 
@@ -105,6 +107,8 @@ We know how to find the eigenvectors of a matrix given its eigenvalues. So, how 
 > > $$
 > > 
 > 
+
+^70f7de
 
 
 > [!Example]
@@ -191,6 +195,8 @@ Linear operators can have different matrices. For linear operators in $\mathbb{R
 >$$
 >A=PBP^{-1}.
 >$$
+
+^1f9fb5
 
 Note that the determinants of similar matrices are equal. $\det PBP^{-1}=\det P\det B\det P^{-1}=\det B$.
 

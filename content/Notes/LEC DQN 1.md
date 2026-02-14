@@ -38,7 +38,7 @@ $$
 > [!Definition]
 > Let $A$ be an $n\times n$ matrix. Then for $t\in \mathbb{R}$, 
 > $$
-> e^{ At }:=\sum_{k=0}^{\infty} \frac{A^{k}t}{k!}.
+> e^{ At }:=\sum_{k=0}^{\infty} \frac{A^{k}t^{k}}{k!}.
 > $$
 
 > [!Proposition]
@@ -127,3 +127,50 @@ $$
 > 
 
 ^4f5916
+
+---
+
+# Computing exponential matrices
+
+Complex eigenvalues:
+
+> [!Theorem] 
+> If the $2n\times 2n$ real matrix $A$ has $2n$ distinct complex eigenvalues $\lambda_{j}=a_{j}+ib_{j}$ and $\overline{\lambda}_{j}=a_{j}-ib_{j}$ and corresponding eigenvectors $\mathbf{w}_{j}=\mathbf{u}_{j}+i\mathbf{v}_{j}$ and $\overline{\mathbf{w}}_{j}=\mathbf{u}_{j}-i\mathbf{v}_{j}$, then $\{ \mathbf{v}_{1}, \mathbf{u}_{1}, \dots, \mathbf{v}_{n}, \mathbf{u}_{n} \}$ is a basis for $\mathbb{R}^{2n}$ and the matrix
+> $$
+> P=\begin{bmatrix}
+> \mathbf{v}_{1} & \mathbf{u}_{1} & \mathbf{v}_{2} & \mathbf{u}_{2} & \dots & \mathbf{v}_{n} & \mathbf{u}_{n}
+> \end{bmatrix}
+> $$
+> is invertible and 
+> $$
+> P^{-1}AP=\text{diag}\begin{bmatrix}
+> a_{j} & -b_{j} \\
+> b_{j} & a_{j}
+> \end{bmatrix}.
+> $$
+
+Multiple real eigenvectors
+
+> [!Theorem]
+> Let $A$ be a real $n\times n$ matrix with real eigenvalues $\lambda_{1}, \dots, \lambda_{n}$ repeated according to their multiplicity. Then there exists a basis of generalized eigenvectors for $\mathbb{R}^{n}$. If $\{ \mathbf{v}_{1}, \dots, \mathbf{v}_{n} \}$ is any basis of generalized eigenvectors for $\mathbb{R}^{n}$, the matrix $P=\begin{bmatrix}\mathbf{v}_{1} & \dots & \mathbf{v}_{n} \end{bmatrix}$ is invertible, 
+> $$
+> A=S+N
+> $$
+> where $P^{-1}SP=\text{diag}[\lambda_{j}]$, and $N=A-S$ is nilpotent of order $k\leqslant n$, and $S$ and $N$ commute. 
+
+Multiple complex eigenvalues
+
+> [!Theorem]
+> Let $A$ be a real $2n\times 2n$ matrix with complex eigenvalues $\lambda_{j}=a_{j}+ib_{j}$ and $\overline{\lambda}_{j}=a_{j}-ib_{j}$ for $j=1, \dots, n$. Then there exist generalized eigenvectors $\mathbf{w}_{j}=\mathbf{u}_{j}+i\mathbf{v}_{j}$ and $\overline{\mathbf{w}}_{j}=\mathbf{u}_{j}-i\mathbf{v}_{j}$ for $i=1, \dots, n$ such that $\{ \mathbf{v}_{1}, \mathbf{u}_{1}, \dots, \mathbf{v}_{n}, \mathbf{u}_{n} \}$ is a basis for $\mathbb{R}^{2n}$. For any such basis, the matrix $P=\begin{bmatrix}\mathbf{v}_{1} & \mathbf{u}_{1} & \dots & \mathbf{v}_{n} & \mathbf{u}_{n} \end{bmatrix}$ is invertible, and
+> $$
+> A=S+N
+> $$
+> where
+> $$
+> P^{-1}SP=\text{diag}\begin{bmatrix}
+> a_{j} & -b_{j} \\
+> b_{j} & a_{j}
+> \end{bmatrix},
+> $$
+> the matrix $N=A-S$ is nilpotent of order $k\leqslant 2n$, and $S$ and $N$ commute. 
+

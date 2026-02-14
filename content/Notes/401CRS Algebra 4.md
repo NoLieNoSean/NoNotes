@@ -18,6 +18,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 # Lecture notes
 
 [[Categorical notes on Modules]]
+[[Diagonalizing integer matrices]]
 
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
@@ -26,8 +27,9 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 5]] ✅ Generators and relations, decomposition of finitely generated modules into torsion and free components
 [[LEC ALG4 6]] ✅ Finitely generated torsion modules over PIDs
 [[LEC ALG4 7]] ✅ Finitely generated $p$-primary modules
-[[LEC ALG4 9]] Jordan block decomposition
-[[LEC ALG4 10]]
+[[LEC ALG4 9]] ✅ Jordan block decomposition
+[[LEC ALG4 10]] Cayley-Hamilton
+[[LEC ALG4 11]] Rational canonical form, Tensor products
 
 # Tutorials
 

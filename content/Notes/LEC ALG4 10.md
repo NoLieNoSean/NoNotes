@@ -6,14 +6,27 @@ tags:
   - ALG4
   - Lecture
 ---
-[!Proposition]
-Let $K=\overline{K}$ (i.e, $K$ is algebraically closed). Let $\lambda\in k$, $T:V\to V$ be $k$-linear. Then $T$ has a JCF with eigenvalue $\lambda$ $\iff$ $\lambda$ is an eigenvalue of $T$. 
+# More on the Jordan canonical form
+
+When defining a [[LEC ALG4 9#^d71679|Jordan block]], we referred to its diagonal entry by 'eigenvalue'. Now we see why. 
+
+> [!Theorem]
+> Let $k$ be an algebraically closed field. Let $V$ be a finite dimensional $k$-vector space. Let $\lambda\in k$. Let $T:V\to V$ be $k$-linear. Then $T$ has a JCF $J$ with a Jordan block with eigenvalue $\lambda$ $\iff$ $\lambda$ is an [[LEC ALG1 17#^6c94b7|eigenvalue]] of $T$. 
+> 
+> > [!Proof]-
+> > 
+> > $(\implies)$ Since $J$ is a lower triangular matrix, [[LEC ALG1 15#^d66e29|its determinant is given by the product of its diagonal entries]]. Thus, $(x-\lambda)$ divides the [[LEC ALG1 18#^e5c62f|characteristic polynomial]] of $T$, and by [[LEC ALG1 18#^70f7de]] $\lambda$ is an eigenvalue of $T$.
+> > 
+> > $(\impliedby)$ Conversely, if $\lambda$ is an eigenvalue of $T$, then $\lambda$ is a root of the characteristic polynomial of $T$, and hence must appear on the diagonal of $J$ since it is triangular. 
+> 
+
+We now discuss the extent to which the JCF matrix of a linear operator, the existence of which is guaranteed by [[LEC ALG4 9#^261664]], is unique. [[LEC ALG1 18#Eigenstuff of abstract operators|Recall]] that matrices which represent the same abstract linear operator in different bases are [[LEC ALG1 18#^1f9fb5|similar]]. Thus, all we need to do is find the orbits of matrices in JCF under the conjugation action. 
 
 [!Proposition]
 Let $A$ and $A'$ be matrices in JCF. Then $A$ is similar to $A'$ iff $A'$ can be obtained by permuting the Jordan blocks of $A$. 
 
 [!Proof]-
 
-$(\impliedby)$ exercise. 
+$(\impliedby)$ All permutations of the blocks of a block diagonal matrix can be obtained by conjugating by block permutation matrices. 
 
-$(\implies)$ Let $\{ \lambda _{1}, \dots, \lambda_{r}\}$ be the set of distinct eigenvalues of $A$ (and $A'$). 
+$(\implies)$ 

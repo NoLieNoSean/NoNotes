@@ -49,6 +49,8 @@ Recall the [[LEC ALG1 14#Determinants|defining properties of the determinant fun
 > > $1={\det A}\ \ a_{11}^{-1}a_{22}^{-1}\dots a_{nn}^{-1}$ $\implies$ $\det A=a_{11}a_{22}\dots a_{nn}$. 
 > 
 
+^d66e29
+
 >[!Theorem]
 > We may compute the determinant of a matrix $A$ by using ==row operations==. Let $B$ a row reduced form of $A$. Then, 
 > $$
