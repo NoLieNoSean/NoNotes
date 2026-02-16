@@ -131,7 +131,7 @@ Therefore, we get a metric $d(f, g)=\lVert f-g \rVert$.
 
 1. Uniform limit of continuous functions is continuous.
 2. Uniform limit of Riemann integrable functions is Riemann integrable, and the limit of the integrals is the integral of the limit.
-3. Uniform limit of differentiable functions is differentiable provided that the sequence of derivatives also converge uniformly.
+3. Uniform limit of differentiable functions is differentiable provided that the sequence of derivatives also converge uniformly [^1].
 
 > [!Theorem] Rudin 7.12
 > $f_{n}\rightrightarrows f$ and each $f_{n}$ continuous on $E$ $\implies$ $f$ is continuous on $E$.
@@ -200,8 +200,7 @@ Denote by $\mathscr{R}[0, 1]$ the set of integrable functions in $B[0, 1]$. Then
 
 ^da049e
 
-
-> [!Theorem] Rudin 7.17
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 7.17
 > Suppose
 > - $f_{n}$ are differentiable on $[a, b]$,
 > - $f_{n}'\rightrightarrows\text{ a function, say }g\text{ on }[a, b]$, and
@@ -220,11 +219,13 @@ A cuter version with weaker hypothesis:
 > Then, $f$ is differentiable with $f'=g$
 
 ^94a1f8
+
+
 ## Criteria for uniform convergence
 
 ### The Cauchy Criterion
 
-> [!Theorem] Cauchy Criterion
+> [!Theorem] The Cauchy Criterion
 > The sequence of functions $(f_{n})$ defined on $E$ converges uniformly on $E$ if and only if for every $\epsilon>0$ there exists an integer $N$ such that $m\geq N$, $n\geq N$, $x\in E$ implies 
 > $$
 > |f_{n}(x)-f_{m}(x)|\leq \epsilon.
@@ -266,3 +267,4 @@ A cuter version with weaker hypothesis:
 
 
 
+[^1]: Admittedly, not as neat as the case for integration. However, note that we do have the "nice" version of the result in complex analysis. Compare [[#^94a1f8]] and [[Cauchy's Theorem and Its Applications#^4e9e39]]. 

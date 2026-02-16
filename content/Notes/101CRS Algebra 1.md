@@ -58,38 +58,6 @@ CMI, Aug-Nov 2024, Aditya Karnataki
 - [[LEC ALG1 23]] Bilinear forms, Hermitian forms
 
 [[Spectral theorem]]
-
-%% 
->[!Excalidraw]-
->These notes are either in excalidraw (which cannot be rendered by Quartz) or unformatted.
->- [[ALG1_L1]] Intro, Vector spaces, Fields.
->- [[ALG1_L2]] Matrices, Variables vs equations table
->- [[ALG1_L3]] Row operations, REF, RREF, pivots, free variables, conditions for $A\mathbf{x}=\mathbf{b}$ being inconsistent and consistent
->- [[ALG1_L4]] 
->	- Given $\mathbf{v}$ s.t $A\mathbf{v}=\mathbf{b}$, any other $\mathbf{w}$ s.t $A\mathbf{w}=\mathbf{b}$ can be expressed as $\mathbf{v}+\mathbf{y}$, $\mathbf{y}\in\text{Ker }A$. 
->	- requirements for injectivity and surjectivity in terms of number of pivots
->	- matrix representation of row ops
->	- matrix multiplication as a function
->	- subspaces
->- [[ALG1_L5]]
->	- injectivity and surjectivity requirements in terms of number of rows and columns
->	- Invertible matrices
->	- If $A$ is invertible, its inverse must be unique
->	- If $A$ is invertible, it must be square
->	- Vector spaces, subspaces of $\mathbb{R}^{2}$. 
->- LEC ALG1 6
->	- linear combinations, span. function surjectivity relation with spanning property of column vectors, function injectivity relation with unique linear combination of column vectors.
->	- linear independence
->- [[LEC ALG1 7]]
->	- Any set $S \subset \mathbb{R}^n$ whose span equals $\mathbb{R}^n$ must be of size $\geq n$
->	- Any linearly independent set in $\mathbb{R}^n$ must be of size $\le n$.
->	- basis
->	- defined dimension as cardinality of basis
->	- posed question: does every vector space have a basis?
->	- fdvsp
->- [[TUT ALG1 1]]
->- [[TUT ALG1 2]]
- %%
 # Homework
 
 - [[ALG1_HW1.pdf|ALG1_HW1]]

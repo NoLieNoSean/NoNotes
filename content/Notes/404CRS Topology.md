@@ -60,13 +60,7 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[The quotient topology]]
 [[The fundamental group]]
 
-[[LEC TOP 2]]
-[[LEC TOP 3]]
-[[LEC TOP 4]]
-[[LEC TOP 5]]
-[[LEC TOP 6]]
-
-
+Lecture 6: @munkresTopology2000 section 29
 
 [[HW TOP 1]]
 

@@ -4,8 +4,12 @@ date: 2025-11-28
 time: 16:19
 tags:
   - manifolds
+  - MOC
 draft: true
 ---
 # Preliminaries
 
 [[Analytic functions]]
+[[LEC CAL2 9|Multilinear algebra]]
+[[LEC CAL2 10|Differential forms]]
+

@@ -49,8 +49,6 @@ See @ghorpadeCourseCalculusReal2018 (please don't)
 	- Monotonicity and Bimonotonicity, bounded variation and bivariation
 - [[LEC CAL1 13]] ✅
 	- Convexity and Concavity, paths, local extrema and saddle points
-- [[LEC CAL1 14]]
-	- Intermediate value property
 
 ## Multivariable calculus
 

@@ -5,7 +5,7 @@ date: January 2025
 
 # The chain rule
 
-> [!Theorem]
+> [!Theorem] The chain rule
 > Assume that $\mathbf{g}$ is differentiable at $\mathbf{a}$, with total derivative $\mathbf{g}'(\mathbf{a})$. Let $\mathbf{b}=\mathbf{g}(\mathbf{a})$ and assume that $\mathbf{f}$ is differentiable at $\mathbf{b}$, with total derivative $\mathbf{f}'(\mathbf{b})$. Then the composition function $\mathbf{h}=\mathbf{f}\circ \mathbf{g}$ is differentiable at $\mathbf{a}$ and the total derivative $\mathbf{h}'(\mathbf{a})$ is given by
 > $$
 > \mathbf{h}'(\mathbf{a})=\mathbf{f}'(\mathbf{b})\circ \mathbf{g}'(\mathbf{a}),
@@ -58,6 +58,8 @@ date: January 2025
 > > $$
 > > where $\mathbf{E}(\mathbf{y})\to \mathbf{0}$ as $\mathbf{y}\to \mathbf{0}$. Thus, $\mathbf{h}$ is differentiable at $\mathbf{a}$, with derivative $\mathbf{f}'(\mathbf{b})\circ \mathbf{g}'(\mathbf{a})$.
 > 
+
+^67af50
 
 The matrix of $\mathbf{h}'(\mathbf{a})$ is given by   
 $$

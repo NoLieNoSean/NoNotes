@@ -75,7 +75,7 @@ We can sample the value of the function in an interval instead of using the supr
 Rudin drags his feet in the last part of the proof, since he wants to avoid integrals where the limits of integration are not in the right order, since technically those aren't defined. 
 ## The fun theorem
 
-> [!Theorem] Rudin 6.21, Fundamental theorem of calculus
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 6.21, The fundamental theorem of calculus
 > If $f\in\mathscr R$ on $[a, b]$ and if there is a differentiable function $F$ on $[a, b]$ such that $F'=f$, then
 > $$
 > \int_{a}^{b} f(x) \, dx =F(b)-F(a).

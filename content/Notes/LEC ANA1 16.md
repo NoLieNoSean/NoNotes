@@ -128,6 +128,8 @@ Consider a continuous function $f:X\to \mathbb{R}$, where $X$ is a compact set. 
 >[!Theorem] Extreme value theorem, Rudin 4.16
 >A continuous function from a non-empty compact space to a subset of the real numbers attains a maximum and a minimum value.
 
+^df345d
+
 ---
 # Closed subsets of compact sets are compact
 

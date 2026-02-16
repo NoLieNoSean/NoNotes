@@ -4,6 +4,7 @@ date: 2026-01-05
 time: 15:33
 tags:
   - CANA
+  - Processed
 ---
 # Preliminaries
 
@@ -42,8 +43,8 @@ Some trivialities:
 Proofs are routine.
 
 Holomorphic functions have some really neat properties:
-1. Every holomorphic function is infinitely many times complex differentiable ([[LEC CANA 2#^58d2c9]]). 
-2. It's better: Every holomorphic function is analytic ([[LEC CANA 2#^f3eea8]])! Holomorphic and analytic are used synonymously. [[LEC ANA1 32#^3fdabe|Recall]] that for functions of real variables, analytic functions form a strict subset of smooth functions!
+1. Every holomorphic function is infinitely many times complex differentiable ([[Cauchy's Theorem and Its Applications#^58d2c9]]). 
+2. It's better: Every holomorphic function is analytic ([[Cauchy's Theorem and Its Applications#^f3eea8]])! Holomorphic and analytic are used synonymously. [[LEC ANA1 32#^3fdabe|Recall]] that for functions of real variables, analytic functions form a strict subset of smooth functions!
 
 ## Complex functions as maps $\mathbb{R}^{2}\to \mathbb{R}^{2}$
 
@@ -60,7 +61,7 @@ Contrast [[#^f94b35]] for the derivative of $f$ with [[LEC CAL1 16#^054571]] for
 > $$
 > which has no limit as $h\to 0$. However, when seen as a function from $\mathbb{R}^{2}\to \mathbb{R}^{2}$, the function $(x, y)\mapsto(x, -y)$ is clearly differentiable (indefinitely, even). 
 
-There is, however, a connected between $f'$ (the complex derivative) and $F'$ (the total derivative): for $z_{0}=z_{0}+iy_{0}$, we have
+There is, however, a connection between $f'$ (the complex derivative) and $F'$ (the total derivative): for $z_{0}=z_{0}+iy_{0}$, we have
 $$
 \begin{align}
 f'(z_{0}) & =\lim_{ h_{1} \to 0 } \frac{f(x_{0}+h_{1}, y_{0})-f(x_{0}, y_{0})}{h_{1}} \\
@@ -142,7 +143,9 @@ The complex analog of [[LEC ANA1 32#^3ac71d]]:
 > [!Theorem] @steinComplexAnalysis2003 1.2.6
 > The power series $f(z)=\sum_{n=0}^{\infty}a_{n}z^{n}$ defines a holomorphic function in its disc of convergence. The derivative of $f$ is also a power series obtained by differentiating term by term the series for $f$. Moreover, $f'$ has the same radius of convergence as $f$. 
 
-This tells us that an analytic function on $\Omega$ is also holomorphic on $\Omega$. We will see ([[LEC CANA 2#^f3eea8]]) that the converse is true, too.
+^0db182
+
+This tells us that an analytic function on $\Omega$ is also holomorphic on $\Omega$. We will see ([[Cauchy's Theorem and Its Applications#^f3eea8]]) that the converse is true, too.
 ## Integration along curves
 
 > [!Definition]
@@ -166,6 +169,34 @@ This tells us that an analytic function on $\Omega$ is also holomorphic on $\Ome
 > \end{align}
 > $$
 
+> [!Lemma]
+> Let $F$ be holomorphic in $\Omega$, and $z:[a, b]\to \mathbb{C}$ be smooth. Then, 
+> $$
+> \frac{d}{dt} F(z(t))=F'(z(t))z'(t).
+> $$
+> 
+> > [!Proof]-
+> > 
+> > When $F=u+iv$ is seen as a function form $\mathbb{R}^{2}$ to $\mathbb{R}^{2}$ and $z=z_{1}+iz_{2}$ as a function from $[a, b]$ to $\mathbb{R}^{2}$, we can use [[LEC CAL1 17#^67af50|the multivariable chain rule]] to write
+> > $$
+> > \begin{align}
+> > \frac{d}{dt} F(z(t)) & ={\begin{bmatrix}
+> > \displaystyle\frac{ \partial u }{ \partial x }(z(t))  & \displaystyle\frac{ \partial u }{ \partial y } (z(t)) \\
+> > \displaystyle\frac{ \partial v }{ \partial x } (z(t)) & \displaystyle\frac{ \partial v }{ \partial y } (z(t))
+> > \end{bmatrix}}\begin{bmatrix}
+> > z_{1}'(t) \\
+> > z_{2}'(t)
+> > \end{bmatrix} \\
+> > \end{align}
+> > $$
+> > Using [[#^0c7f0a]], we can see that the RHS above is equal to
+> > $$
+> > \left( \frac{ \partial u }{ \partial x } (z(t)) +\frac{1}{i}\frac{ \partial u }{ \partial y } (z(t))\right)(z_{1}'(t)+iz_{2}'(t)),
+> > $$
+> > which is equal to $F'(z(t))z'(t)$ by [[#^ca85e1]]. 
+> 
+
+^c3084d
 
 > [!Theorem]
 > If a continuous function $f$ has a primitive $F$ in $\Omega$, and $\gamma$ is a curve in $\Omega$ that begins at $w_{1}$ and ends at $w_{2}$, then
@@ -173,6 +204,21 @@ This tells us that an analytic function on $\Omega$ is also holomorphic on $\Ome
 > \int_{\gamma}f(z)dz=F(w_{1})-F(w_{2}).
 > $$
 > 
+> 
+> > [!Proof]-
+> > 
+> > If $\gamma$ is smooth, the proof is a simple application of [[#^c3084d]] and [[LEC ANA1 28#^88e00c|the fundamental theorem of calculus]]. Indeed, if $z(t):[a, b]\to \mathbb{C}$ is a parameterization for $\gamma$, then $z(a)=w_{1}$ and $z(b)=w_{2}$, and we have
+> > $$
+> > \begin{align}
+> > \int_{\gamma}f(z)\,dz & =\int_{a}^{b} f(z(t))z'(t) \, dt \\
+> >   & =\int_{a}^{b} F'(z(t))z'(t) \, dt \\
+> >   & =\int_{a}^{b} \frac{d}{dt} F(z(t)) \, dt  \\
+> >  & = F(z(b))-F(z(a)).
+> > \end{align}
+> > $$
+> > If $\gamma$ is piecewise smooth, then we get a telescoping sum, with the end result unchanged. 
+> 
+
 
 Explore connections to [[LEC CAL2 9#^05ab36]]. 
 
@@ -185,5 +231,7 @@ Explore connections to [[LEC CAL2 9#^05ab36]].
 ^5b02bc
 
 > [!Corollary]
-> If $f$ is holomorphic in a region $\Omega$ and $f'=0$, then $f$ is constant. 
+> If $f$ is holomorphic in a (connected) region $\Omega$ and $f'=0$, then $f$ is constant. 
+
+^f36590
 

@@ -12,6 +12,8 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 ---
 
 
-[[LEC CANA 1]]
-[[LEC CANA 2]]
+[[Preliminaries to Complex Analysis]] @steinComplexAnalysis2003 Ch 1
+[[Cauchy's Theorem and Its Applications]] @steinComplexAnalysis2003 Ch 2
+[[Meromorphic functions and the Logarithm]] @steinComplexAnalysis2003 Ch 3
 
+@langComplexAnalysis1999 Ch6 §2
