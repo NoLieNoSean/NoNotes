@@ -17,3 +17,6 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 [[Meromorphic functions and the Logarithm]] @steinComplexAnalysis2003 Ch 3
 
 @langComplexAnalysis1999 Ch6 §2
+
+
+[[Quiz CANA 2]]

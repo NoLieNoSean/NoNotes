@@ -30,6 +30,9 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 9]] ✅ Jordan block decomposition
 [[LEC ALG4 10]] Cayley-Hamilton
 [[LEC ALG4 11]] Rational canonical form, Tensor products
+[[LEC ALG4 12]]
+[[LEC ALG4 13]]
+
 
 # Tutorials
 

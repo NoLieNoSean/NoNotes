@@ -53,14 +53,20 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 ```
 ---
 
+[[Preliminaries to Topology]] ✅ Basis and subbasis, subspace topology, product topology, metric topology, continuity
 [[Countability and Separation axioms]]
+[[Compactness]]
+[[Urysohn Lemma and applications]]
 
-[[LEC TOP 1]] ✅ Basis and subbasis, subspace topology, product topology, metric topology, continuity
 
 [[The quotient topology]]
 [[The fundamental group]]
 
-Lecture 6: @munkresTopology2000 section 29
+Lecture 6: @munkresTopology2000 §29
 
 [[HW TOP 1]]
 
+feb 18: tietz, @munkresTopology2000 §30, 35
+feb 19: Topological groups. @munkresTopology2000 [p. 145]
+
+Test 1: Ch2, 3, 4 $\setminus$ §22-25, 30, 34

@@ -74,3 +74,4 @@ See @apostolMathematicalAnalysis1985 ch12 & ch13, @rudinPrinciplesMathematicalAn
 	- Extrema of real valued functions
 - [[LEC CAL1 24]]
 	- Extremum problems with side conditions: Lagrange multipliers
+

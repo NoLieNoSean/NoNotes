@@ -145,11 +145,11 @@ The complex analog of [[LEC ANA1 32#^3ac71d]]:
 
 ^0db182
 
-This tells us that an analytic function on $\Omega$ is also holomorphic on $\Omega$. We will see ([[Cauchy's Theorem and Its Applications#^f3eea8]]) that the converse is true, too.
+This tells us that an analytic function on $\Omega$ is also holomorphic on $\Omega$. We will see ([[Cauchy's Theorem and Its Applications#^f3eea8]]) that the converse is true, too. 
 ## Integration along curves
 
 > [!Definition]
-> Given a smooth curve $\gamma$ in $\mathbb{C}$ parameterized by $z:[a, b]\to \mathbb{C}$, and $f$ a continuous function on $\gamma$, we define the **integral of $f$ along $\gamma$** by
+> Given a *smooth* curve $\gamma$ in $\mathbb{C}$ parameterized by $z:[a, b]\to \mathbb{C}$, and $f$ a continuous function on $\gamma$, we define the **integral of $f$ along $\gamma$** by
 > $$
 > \int_{\gamma}f(z)dz:=\int_{a}^{b} f(z(t))z'(t) \, dt.
 > $$
@@ -158,6 +158,8 @@ This tells us that an analytic function on $\Omega$ is also holomorphic on $\Ome
 > \int_{a}^{b} |z'(t)| \, dt.
 > $$
 > It is easily shown that these definitions are independent of the parameterization $z$. 
+
+^ee7cbc
 
 > [!Proposition]
 > Let $f$ be continuous and $\gamma$ be piecewise smooth. 

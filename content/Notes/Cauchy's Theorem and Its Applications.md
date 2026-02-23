@@ -66,6 +66,8 @@ The proof of [[#^870ca5]] also works when $f$ is given to be continuous in an op
 
 ^6ba5d4
 
+
+
 # Toy contours
 
 We call a **toy contour** any closed curve where the notion of interior is "obvious", and a construction similar to that in [[#^870ca5]] is possible in a neighborhood of the curve and its interior. These are useful in evaluating integrals. 
@@ -90,7 +92,7 @@ whenever $f$ is holomorphic in an open set that contains the contour $\gamma$ an
 
 Integrate over the keyhole contour. 
 
-The regularity of holomorphic functions arises as a corollary. 
+The **regularity** of holomorphic functions arises as a corollary. 
 
 > [!Corollary]
 > Let $f$ be holomorphic in an open set $\Omega$. If $C\subseteq \Omega$ is a circle whose interior is also contained in $\Omega$, then for all $z$ in the interior of $C$,
@@ -127,6 +129,9 @@ We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series
 
 ^f3eea8
 
+[[Preliminaries to Complex Analysis#^0db182|Since]] power series define infinitely differentiable functions, [[#^f3eea8]] gives another proof that a holomorphic function function is infinitely differentiable. 
+
+
 > [!Corollary]
 > If $f$ is holomorphic on all of $\mathbb{C}$, [[#^f3eea8]] implies that $f$ has a power series expansion around $0$ that converges in all of $\mathbb{C}$. 
 
@@ -142,6 +147,8 @@ We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series
 > > where $B$ is a bound for $f$. Letting $R\to \infty$ gives the desired result. 
 > 
 
+^a603fe
+
 > [!Example] The fundamental theorem of algebra
 > Every non-constant polynomial $P(z)=a_{n}z^{n}+\dots+a_{0}$ with complex coefficients has a root in $\mathbb{C}$. 
 > 
@@ -156,6 +163,8 @@ We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series
 > > $$
 > > whenever $|z|> R$. Thus, $P$ is bounded from below when $|z|> R$. Since $P$ is continuous and has no roots in the compact disc $|z|\leqslant R$, it is bounded from below in that disc by [[LEC ANA1 16#^df345d]]. This proves the claim. 
 > 
+
+^7800a0
 
 # Analytic continuation
 
@@ -209,6 +218,8 @@ Compare with [[LEC ANA1 33#^94a1f8|the real analytic version]] of the same theor
 > f(z):=\int_{0}^{1} F(z, s) \, ds
 > $$
 > is holomorphic. 
+
+^adaf14
 
 # Schwarz reflection principle
 
