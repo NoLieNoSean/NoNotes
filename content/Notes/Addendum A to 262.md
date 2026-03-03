@@ -10,3 +10,4 @@ Let $R$ be a Noetherian ring and $M$ be a module over $R$. Let $\mathfrak{p}\sub
 [!Proof]-
 
 $(\implies)$ Consider the $R$-module homomorphism $\varphi: R\to M$ defined by $r\mapsto rm$. Clearly, $\ker\varphi=\mathfrak{p}$. By
+

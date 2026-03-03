@@ -174,11 +174,7 @@ $$
 
 Let $T:V\to W$ be a linear map with $\dim V = p$ and $\dim W = q$. We want to choose bases $B_{V}$ and $B_{W}$ such that $\mathcal{M}_{B_{V}, B_{W}}(T)$ is as simple as possible. 
 
-Let $\text{rank} \ T = r$. Now, take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$ (Recall the [[LEC ALG1 11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]]).
-Extend to get a basis of $V$,  $B_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$.
-We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See proof of [[LEC ALG1 11#^1d9280]]). 
-Extend this to a basis of $W$. $B_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$.
-Now $\mathcal{M}_{B_{V}, B_{W}}(T)$ will be 
+Let $\text{rank} \ T = r$. Now, take a basis of $\ker T$, $\{\mathbf{k}_{1}, \dots \mathbf{k}_{p-r}\}$ (Recall the [[LEC ALG1 11#Rank nullity theorem for general linear maps over fdvsps|rank nullity theorem]]). Extend to get a basis of $V$,  $B_{V} = \{ \mathbf{k}_{1}, \dots \mathbf{k}_{p-r}, \mathbf{v}_{1}, \dots \mathbf{v}_{r} \}$. We have shown that $T(\mathbf{v}_{1}) \dots T(\mathbf{v}_{r})$ are a basis of $\text{Im} \ T$ (See proof of [[LEC ALG1 11#^1d9280]]). Extend this to a basis of $W$. $B_{W} = \{ T(\mathbf{k}_{1}) \dots T(\mathbf{k}_r), \mathbf{w}_{1}, \dots \mathbf{w}_{q-r} \}$. Now $\mathcal{M}_{B_{V}, B_{W}}(T)$ will be 
 $$
 \left[\begin{array}{ccccc|ccccc}
 0 & 0 & 0 & \dots & 0 & \mathbf{1} & 0 & 0 & \dots & 0 \\ 
@@ -189,13 +185,13 @@ $$
 \hline 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \dots & 0 & 0 & 0 & 0 & \dots & 0
-\end{array}\right]
+\end{array}\right].
 $$
-More concisely, 
+More concisely, we can write
 $$
 \Large
 \left[\begin{array}{c|c}
 \mathbf{0}_{r\times(p-r)} & I_{r\times r} \\
 \hline\mathbf{0}_{(q-r)\times(p-r)}& \mathbf{0}_{(q-r)\times r}
-\end{array}\right]
+\end{array}\right].
 $$

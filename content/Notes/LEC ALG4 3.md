@@ -89,8 +89,11 @@ Clearly, free modules are projective.
 
 ---
 
-# Dimension of free modules
+# Rank of a free module, à la Kummini
 
+Here's how Kummini proved [[LEC ALG4 2#^428c11]]⇒. 
+
+We first prove the invariance of basis cardinality for vector spaces. 
 
 > [!Proposition]
 > Let $V$ be a $k$-vector space with bases $X$ and $Y$. Then $|X|=|Y|$. 

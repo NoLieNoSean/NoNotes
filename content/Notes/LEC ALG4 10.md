@@ -20,13 +20,24 @@ When defining a [[LEC ALG4 9#^d71679|Jordan block]], we referred to its diagonal
 > > $(\impliedby)$ Conversely, if $\lambda$ is an eigenvalue of $T$, then $\lambda$ is a root of the characteristic polynomial of $T$, and hence must appear on the diagonal of $J$ since it is triangular. 
 > 
 
-We now discuss the extent to which the JCF matrix of a linear operator, the existence of which is guaranteed by [[LEC ALG4 9#^261664]], is unique. [[LEC ALG1 18#Eigenstuff of abstract operators|Recall]] that matrices which represent the same abstract linear operator in different bases are [[LEC ALG1 18#^1f9fb5|similar]]. Thus, all we need to do is find the orbits of matrices in JCF under the conjugation action. 
+We now discuss the extent to which the JCF matrix of a linear operator, the existence of which is guaranteed by [[LEC ALG4 9#^261664]], is unique. [[LEC ALG1 18#Eigenstuff of abstract operators|Recall]] that matrices which represent the same abstract linear operator in different bases are [[LEC ALG1 18#^1f9fb5|similar]]. Thus, given a matrix in JCF, we need to characterize the JCF matrices in its orbit under conjugation. 
 
-[!Proposition]
-Let $A$ and $A'$ be matrices in JCF. Then $A$ is similar to $A'$ iff $A'$ can be obtained by permuting the Jordan blocks of $A$. 
+> [!Proposition]
+> Let $A$ and $B$ be matrices in JCF. Then $A$ is similar to $B$ iff $B$ can be obtained by permuting the Jordan blocks of $A$. 
+> 
+> > [!Proof]-
+> > 
+> > This follows from the following facts:
+> > 1. All permutations of the blocks of a block diagonal matrix can be obtained by conjugating by block permutation matrices. 
+> > 2. Similar matrices have the same characteristic polynomial, so they must have the same eigenvalues $\lambda_{1}, \dots, \lambda_{k}$ [^1]. [[Jordan Form|Recall]] that the number of Jordan blocks of $A$ with eigenvalue $\lambda_{i}$ of size at least $j$ is $\dim\ker(A-\lambda_{i}I)^{j}-\dim\ker(A-\lambda_{i}I)^{j-1}$. Again, since $A$ and $B$ are similar, we have $\dim\ker(A-\lambda_{i}I)^{j}=\dim\ker(B-\lambda_{i}I)^{j}$ for all $i, j$. 
+> 
+> 
 
-[!Proof]-
+We now prove the Cayley-Hamilton theorem. 
 
-$(\impliedby)$ All permutations of the blocks of a block diagonal matrix can be obtained by conjugating by block permutation matrices. 
+[!Theorem] Cayley-Hamilton
+Let $k$ be algebraically closed. Let $V$ be a finite dimensional $k$-vector space. Let $T:V\to V$ be $k$-linear and let $c_{T}$ be the characteristic polynomial of $T$. Then $c_{T}(T)=0$. 
 
-$(\implies)$ 
+
+
+[^1]: However, the characteristic polynomial does not tell us anything about their geometric multiplicities!

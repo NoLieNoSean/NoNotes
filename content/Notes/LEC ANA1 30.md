@@ -142,19 +142,22 @@ Rudin, 3.26
 
 ### The p-series
 
-Rudin, 3.28
-
-> [!Theorem]
+> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976, 3.28
 > $\sum \frac{1}{n^{p}}$ converges if $p>1$ and diverges if $p\leq 1$. 
+> 
+> > [!Proof]-
+> > 
+> > If $p\leq 0$, then the series diverges because $\lim_{ n \to \infty }1/n^{p}\ne 0$. If $p>0$, we can use 3.27. 
+> > $$
+> > \begin{align}
+> > t_{k}=\sum 2^{k}\left( \frac{1}{2^{kp}} \right)=\sum 2^{(1-p)k}.
+> > \end{align}
+> > $$
+> > This is a geometric series. If $p \in (0, 1]$, $2^{1-p}\geq 1$, and $t_{k}$ diverges, implying $\sum \frac{1}{n^{p}}$ diverges. Similarly, if $p>1$, $2^{1-p}<1$, and $t_{k}$ converges, implying $\sum \frac{1}{n^{p}}$ converges.
+> 
 
-> **Proof**
-> If $p\leq 0$, then the series diverges because $\lim_{ n \to \infty }1/n^{p}\ne 0$. If $p>0$, we can use 3.27. 
-> $$
-> \begin{align}
-> t_{k}=\sum 2^{k}\left( \frac{1}{2^{kp}} \right)=\sum 2^{(1-p)k}.
-> \end{align}
-> $$
-> This is a geometric series. If $p \in (0, 1]$, $2^{1-p}\geq 1$, and $t_{k}$ diverges, implying $\sum \frac{1}{n^{p}}$ diverges. Similarly, if $p>1$, $2^{1-p}<1$, and $t_{k}$ converges, implying $\sum \frac{1}{n^{p}}$ converges. ❏
+^464056
+
 
 ---
 ## The number e

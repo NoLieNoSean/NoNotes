@@ -94,13 +94,13 @@ $$
 
 The following theorem provides a general solution for some functions of $X$. 
 
-> [!Theorem]
+> [!Theorem] @hoelIntroductionProbabilityTheory1996 [p. 120] 
 > Let $\phi$ be a differentiable and strictly monotonic function on an interval $I$. Let $X$ be a continuous random variable having density $f$ such that $f(x)=0$ for $x\not\in I$. Then $Y=\phi(X)$ has density $g$ given by $g(y)=0$ for $y\not\in \phi(I)$ and
 > $$
 > g(y)=f(x)\left| \frac{dx}{dy} \right| \quad y\in \phi(I)\quad \text{and}\quad x=\phi ^{-1}(y).
 > $$
 
-[[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=131|proof]]
+
 ## Common density functions
 ### Symmetric densities
 
@@ -251,10 +251,10 @@ This result is similar to the one obtained [[LEC PROB 4#Geometric distribution|h
 
 The above property actually characterizes the family of exponential distributions:
 
-> [!Theorem]
+> [!Theorem] @hoelIntroductionProbabilityTheory1996 [p. 127]
 > Let $X$ be random variable such that $P(X> a)P(X> b)=P(X> a+b)$ holds for all $a, b\in \mathbb{R}$. Then either $P(X\geq 0)=0$ or $X$ is exponentially distributed.
 
-[[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=138|proof]]
+
 ### Cauchy density
 
 > [!Definition]

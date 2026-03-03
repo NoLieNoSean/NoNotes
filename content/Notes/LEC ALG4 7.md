@@ -93,6 +93,8 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 > $$
 > 
 
+^8f3734
+
 > [!Remark]
 > $y_{1}, \dots, y_{m}$ are independent iff the module $\langle y_{1}, \dots, y_{m} \rangle$ has the direct sum decomposition
 > $$

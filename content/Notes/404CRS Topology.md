@@ -4,7 +4,7 @@ date: 2025-12-14
 time: 14:57
 tags:
   - MOC
-  - topology
+  - TOP
 ---
 CMI, Jan-Apr 2026, Upendra Kulkarni
 @munkresTopology2000

@@ -27,6 +27,7 @@ Let $T\in \text{End}_{k}(V)$. The mapping $x\mapsto T$ gives us a map $k[x]\to \
 \[\begin{tikzcd} {k[x]} && {\text{End}_{k}(V)} \\ k \arrow["{x\mapsto T}", from=1-1, to=1-3] \arrow[hook', from=2-1, to=1-1] \arrow["\rho"', from=2-1, to=1-3] \end{tikzcd}\]
 \end{document}
 ```
+
 This makes $V$ into a $k[x]$-module, compatible with the $k$-vector space structure of $V$ when $k$ is considered to be a subring of $k[x]$. Thus, the basis that generates $V$ as a $k$-vector space will continue to generate $V$ as a $k[x]$-module, making $V$ a finitely generated $k[x]$-module. 
 
 > [!Example]
@@ -76,10 +77,11 @@ $$
 V=V_{1}\oplus\dots \oplus V_{s}.
 $$
 Note that since $\varphi$ is a $k[x]$-module homomorphism, multiplying by $x$ in $K$ retains the meaning of 'applying $T$':
+
 ```latex
 % latex-id: 8243-7864-463c-4f46-85bd
 \begin{document}
-\[\begin{tikzcd} \begin{array}{c} v\\ \in V \end{array} && \begin{array}{c} xv=T(v) \\ \in V \end{array} \\ \\ \begin{array}{c} \varphi(v) \\ \in K \end{array} && \begin{array}{c} x\varphi(v)=\varphi(xv)=\varphi(T(v))\\ \in K \end{array} \arrow["{\times x}"{description}, from=1-1, to=1-3] \arrow["\varphi"{description}, from=1-1, to=3-1] \arrow["\varphi"{description}, from=1-3, to=3-3] \arrow["{\times x}"{description}, from=3-1, to=3-3] \end{tikzcd}\]
+\[\begin{tikzcd} \begin{array}{c} v\\ \in V \end{array} && \begin{array}{c} xv=T(v) \\ \in V \end{array} \\ \\ \begin{array}{c} \varphi(v) \\ \in K \end{array} && \begin{array}{c} x\varphi(v)=\varphi(xv)=\varphi(T(v))\\ \in K \end{array} \arrow[maps to, "{\times x}"{description}, from=1-1, to=1-3] \arrow[maps to, "\varphi"{description}, from=1-1, to=3-1] \arrow[maps to, "\varphi"{description}, from=1-3, to=3-3] \arrow[maps to, "{\times x}"{description}, from=3-1, to=3-3] \end{tikzcd}\]
 \end{document}
 ```
 
@@ -116,6 +118,7 @@ We will implicitly identify elements of $K$ with their isomorphic counterparts i
 > 
 
 Thus, if $B_{1}, \dots, B_{s}$ are $k$-bases for the summands $k[x]/\langle p^{e_{1}} \rangle, \dots, k[x]/\langle p^{e_{s}} \rangle$, $T$ is given by the matrix
+
 ```latex
 
 % latex-id: b0c0-b851-2902-43fc-bd6f

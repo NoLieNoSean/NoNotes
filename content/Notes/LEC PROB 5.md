@@ -71,7 +71,7 @@ $$
 > [!Theorem] Proposition
 > Let $f_{1}$ and $f_{2}$ be two probability mass functions. Then, there exists $(\Omega, \mathcal{F}, P)$ and $X, Y:\Omega\to \mathbb{R}$ such that $f_{X}=f_{1}$, $f_{Y}=f_{2}$, and $X$ and $Y$ are independent.
 
-[[Introduction to Probability Theory (Paul G. Hoel, Sidney C. Port, Charles J. Stone).pdf#page=74|Example 14 here]] is pertinent.
+@hoelIntroductionProbabilityTheory1996 [p. 64] Example 14 is pertinent.
 
 ### The multinomial distribution
 

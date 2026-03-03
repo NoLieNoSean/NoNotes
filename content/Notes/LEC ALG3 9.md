@@ -16,6 +16,7 @@ id: "114"
 > 
 
 ^3db377
+
 [^1]:$(1)$ is redundant: every integral domain with $d$ satisfying $(2)$ can be equipped with $d'$ satisfying $(1)$ and $(2)$. See @conradREMARKSEUCLIDEANDOMAINS. 
 
 The two main results about Euclidean domains: A Euclidean Domain is a PID, and the Euclidean algorithm terminates after finitely many steps yielding a gcd. There can be gcds in rings that are not Euclidean, but it may be hard in those rings to compute a gcd by a method that avoids factorization.
@@ -48,7 +49,7 @@ In particular, every Euclidean domain is a principal ideal domain.
 
 Clearly, $\gcd(a, b)$ is a generator for the unique smallest principal ideal containing $a$ and $b$. Note that while $\gcd(a, b)$ is not unique, $(\gcd(a, b))$ is.
 
-A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$ (this is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal ([[LEC ALG3 4#^f0a74d]]), so $(1)$ is the unique smallest principal ideal containing $2$ and $x$). It follows that gcds always exist in a principal ideal domain:
+A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal ideal $(d)$ (this is not a necessary condition: $(2, x)\subseteq \mathbb{Z}[x]$ is a maximal ideal ([[LEC ALG3 4#^f0a74d]]), so $(1)$ is the unique smallest principal ideal containing $2$ and $x$). It follows that ==gcds always exist in a principal ideal domain==:
 
 > [!Proposition]
 > Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. Then, $d$ is a gcd of $a$ and $b$. 
