@@ -28,7 +28,7 @@ tags:
 
 ^eba5ed
 
-The class of $R$-modules with this property described in [[#^eba5ed]] are called projective modules. 
+Modules with the property described in [[#^eba5ed]] are called projective modules. 
 
 > [!Definition] Projective modules
 > A $R$-module $P$ is said to be **projective** if for all surjective $\alpha:M\twoheadrightarrow N$ and $R$-module homomorphisms $\varphi:P\to N$ there exists an $R$-module homomorphism $\tilde{\varphi}:P\to M$ such that the following diagram commutes:
@@ -88,7 +88,6 @@ Clearly, free modules are projective.
 > 
 
 ---
-
 # Rank of a free module, à la Kummini
 
 Here's how Kummini proved [[LEC ALG4 2#^428c11]]⇒. 
@@ -169,7 +168,7 @@ We first prove the invariance of basis cardinality for vector spaces.
 
 > [!Remark]
 > 
-> Every $R/I$ module is naturally an $R$-module: $(a, x)\mapsto \overline{a}x$. In general, if $\varphi :R\to S$ is a ring map and $M$ is an $S$-module, we can give $M$ $R$-module structure by $(a, x)\mapsto \varphi(a)x$. This is the unique module structure for $M$ as an $R$ module which is compatible with $\varphi$. 
+> Every $R/I$ module is naturally an $R$-module: $(a, x)\mapsto \overline{a}x$. In general, if $\varphi :R\to S$ is a ring map and $M$ is an $S$-module, we can give $M$ an $R$-module structure by $(a, x)\mapsto \varphi(a)x$. This is the unique module structure for $M$ as an $R$ module which is compatible with $\varphi$. 
 > 
 > The converse is generally false. For example, $R$ considered an an $R$-module cannot have a compatible $R/I$-module structure for any nonzero ideal $I$. If $y\in I$ is nonzero, then $(y, 1_{R})$ evaluates to $y$ under the $R$-module structure, while the action of $y+I=0_{R/I}\in R/I$, forced to be the trivial action in any $R/I$-module structure on $R$, yields $(y+I, 1_{R})=0_{R}$. 
 > 
@@ -183,13 +182,6 @@ We first prove the invariance of basis cardinality for vector spaces.
 > makes $M$ a compatible $R/I$-module.
 
 ^b14fe9
-
-$$
-
-$$
-
-
-
 
 [^1]: as is the case in the proof of [[#^f64b92]]
 

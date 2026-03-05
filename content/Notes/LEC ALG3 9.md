@@ -19,6 +19,8 @@ id: "114"
 
 [^1]:$(1)$ is redundant: every integral domain with $d$ satisfying $(2)$ can be equipped with $d'$ satisfying $(1)$ and $(2)$. See @conradREMARKSEUCLIDEANDOMAINS. 
 
+$d(a)=1$ iff $a$ is a unit. 
+
 The two main results about Euclidean domains: A Euclidean Domain is a PID, and the Euclidean algorithm terminates after finitely many steps yielding a gcd. There can be gcds in rings that are not Euclidean, but it may be hard in those rings to compute a gcd by a method that avoids factorization.
 
 Clare distinguishes between 'Euclidean ring' (not a domain) and 'Euclidean domain'. For example, If $R$ is a Euclidean domain, and $I$ is a nonprime ideal in $R,$ then $R/I$ is a Euclidean ring which is not a domain.
@@ -54,10 +56,11 @@ A sufficient condition for $\gcd(a, b)$ to exist is $(a, b)$ being a principal i
 > [!Proposition]
 > Let $R$ be a PID, and let $a, b\in R$ not both be zero. Let $(d)=(a, b)$. Then, $d$ is a gcd of $a$ and $b$. 
 
+
 > [!Remark]
 > When it happens that $(\text{gcd}(a, b))=(a, b)$ (in PIDs, for instance), we get to write $\text{gcd}(a, b)=ra+sb$ for some $r, s\in R$. Note that this is not the case with $(2, x)$ in $\mathbb{Z}[x]$: $(1)$ is strictly larger than $(2, x)$, and $1$ cannot be written as a linear combination of $2$ and $x$.
-
 ^9467ec
+
 
 ---
 # Unique Factorization Domains

@@ -18,10 +18,9 @@ CMI, Jan-Apr 2026, Manoj Kummini
 # Lecture notes
 
 [[Categorical notes on Modules]]
-[[Smith normal form]]
-
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
+[[Smith normal form]]
 [[LEC ALG4 3]] ✅ Projective Modules, invariance of cardinality of basis
 [[LEC ALG4 4]] ✅ Noetherian Modules, Hilbert's basis theorem
 [[LEC ALG4 5]] ✅ Generators and relations, decomposition of finitely generated modules into torsion and free components
@@ -34,6 +33,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 13]] Tensor algebras
 [[LEC ALG4 14]] Symmetric algebras
 [[LEC ALG4 15]] Exterior algebras
+[[LEC ALG4 16]]
 
 
 # Tutorials

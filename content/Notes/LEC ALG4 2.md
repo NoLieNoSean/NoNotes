@@ -144,6 +144,15 @@ Since every basis for $M$ is a maximal linearly independent subset, it follows t
 
 ^428c11
 
+> [!Corollary]
+> If $R$ is an integral domain, then 
+> $$
+> R^{m}\cong R^{n}\iff m=n.
+> $$
+> 
+
+^facc1b
+
 We can now make the definition
 
 > [!Definition] Rank and dimension

@@ -6,15 +6,33 @@ tags:
   - ALG4
   - Lecture
 ---
-[!Theorem]
-Let $R$ be a PID and $M$ be a fintiely generated torsion $R$-module. Then there exists unique nonzero elements $q_{1}, \dots, q_{s}\in R$ such that $q_{1}\ | \ q_{2}\ | \ \dots\ | \ q_{s}$ and
-$$
-M\cong \frac{R}{\langle q_{1} \rangle }\oplus\dots \oplus \frac{R}{\langle q_{s} \rangle }.
-$$
+
+
+> [!Proposition]
+> Let $R$ be a PID and $M$ be a finitely generated torsion $R$-module. There exists unique nonzero elements $q_{1}, \dots, q_{s}\in R$ such that $q_{1}\ | \ q_{2}\ | \ \dots\ | \ q_{s}$ and
+> $$
+> M\cong \frac{R}{\langle q_{1} \rangle }\oplus\dots \oplus \frac{R}{\langle q_{s} \rangle }.
+> $$
+> 
+
+^5d2c36
 
 [!Proof]-
-
 What you'd expect; use [[LEC ALG3 6#^1c5a62]]. Look up uniqueness though. 
+
+
+Combining the concluding remarks of [[LEC ALG4 5]] and [[#^5d2c36]], we finally have a classification theorem for finitely generated modules over a PID. 
+
+> [!Theorem]
+> Let $R$ be a PID and $M$ be a finitely generated $R$-module. There exists unique nonzero elements $q_{1}, \dots, q_{s}\in R$ such that $q_{1}\ | \ q_{2}\ | \ \dots\ | \ q_{s}$ and $n\geqslant 0$ such that
+> $$
+> M\cong \frac{R}{\langle q_{1} \rangle }\oplus\dots \oplus \frac{R}{\langle q_{s} \rangle }\oplus R^{n}.
+> $$
+> 
+
+^1be818
+
+
 
 ---
 
