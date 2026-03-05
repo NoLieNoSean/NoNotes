@@ -17,17 +17,29 @@ Let $f(z) = u(x,y) + i v(x,y)$, and assume $u$ and $v$ are harmonic, i.e., $\nab
 Consider $z f(z) = (x + i y)(u + i v) = (x u - y v) + i (x v + y u)$. Let $p(x,y) = x u - y v$ and $q(x,y) = x v + y u$. Assume $p$ and $q$ are also harmonic, i.e., $\nabla^2 p = 0$ and $\nabla^2 q = 0$.
 
 Compute the second partial derivatives of $p$:
-$$p_x = u + x u_x - y v_x, \quad p_{xx} = 2 u_x + x u_{xx} - y v_{xx},$$
-$$p_y = x u_y - v - y v_y, \quad p_{yy} = x u_{yy} - 2 v_y - y v_{yy}.$$
+$$
+p_x = u + x u_x - y v_x, \quad p_{xx} = 2 u_x + x u_{xx} - y v_{xx},
+$$
+$$
+p_y = x u_y - v - y v_y, \quad p_{yy} = x u_{yy} - 2 v_y - y v_{yy}.
+$$
 Thus,
-$$\nabla^2 p = p_{xx} + p_{yy} = x(u_{xx} + u_{yy}) - y(v_{xx} + v_{yy}) + 2 u_x - 2 v_y = 2 u_x - 2 v_y = 0,$$
+$$
+\nabla^2 p = p_{xx} + p_{yy} = x(u_{xx} + u_{yy}) - y(v_{xx} + v_{yy}) + 2 u_x - 2 v_y = 2 u_x - 2 v_y = 0,
+$$
 This simplifies to $u_x = v_y$.
 
 Now compute the second partial derivatives of $q$:
-$$q_x = v + x v_x + y u_x, \quad q_{xx} = 2 v_x + x v_{xx} + y u_{xx},$$
-$$q_y = u + x v_y + y u_y, \quad q_{yy} = 2 u_y + x v_{yy} + y u_{yy}.$$
+$$
+q_x = v + x v_x + y u_x, \quad q_{xx} = 2 v_x + x v_{xx} + y u_{xx},
+$$
+$$
+q_y = u + x v_y + y u_y, \quad q_{yy} = 2 u_y + x v_{yy} + y u_{yy}.
+$$
 Thus,
-$$\nabla^2 q = q_{xx} + q_{yy} = x(v_{xx} + v_{yy}) + y(u_{xx} + u_{yy}) + 2 v_x + 2 u_y = 2 v_x + 2 u_y = 0,$$
+$$
+\nabla^2 q = q_{xx} + q_{yy} = x(v_{xx} + v_{yy}) + y(u_{xx} + u_{yy}) + 2 v_x + 2 u_y = 2 v_x + 2 u_y = 0,
+$$
 This simplifies to $v_x = -u_y$.
 
 The equations $u_x = v_y$ and $u_y = -v_x$ are the Cauchy-Riemann equations. Since $u$ and $v$ are harmonic, they are $C^2$. Therefore, $f$ is analytic.
