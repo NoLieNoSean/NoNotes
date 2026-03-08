@@ -17,6 +17,13 @@ CMI, Jan-Apr 2026, Manoj Kummini
 
 # Lecture notes
 
+> [!Info] Notation
+> 1. Bilinear maps are barred in diagrams.
+> 2. Function composition, when written as $fg$, is left to right. 
+> 3. Maps induced by universal properties are dashed or dotted in diagrams. 
+
+## Modules
+
 [[Categorical notes on Modules]]
 [[LEC ALG4 1]] ✅ Every vector space over a field has a basis
 [[LEC ALG4 2]] ✅ Free modules
@@ -28,11 +35,17 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 7]] ✅ Finitely generated $p$-primary modules
 [[LEC ALG4 9]] ✅ Jordan block decomposition
 [[LEC ALG4 10]] More on JCF, Cayley-Hamilton
-[[LEC ALG4 11]] Rational canonical form, introduction to tensor products
-[[LEC ALG4 12]] Properties of tensor products
+[[LEC ALG4 11]] Rational canonical form
+
+## Tensor products
+
+[[LEC ALG4 12]] ✅ Properties of tensor products
 [[LEC ALG4 13]] Tensor algebras
 [[LEC ALG4 14]] Symmetric algebras
 [[LEC ALG4 15]] Exterior algebras
+
+## Galois Theory
+
 [[LEC ALG4 16]]
 
 

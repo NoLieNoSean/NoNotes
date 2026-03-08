@@ -113,6 +113,11 @@ The formulas of [[#^d3c867]] and [[#^58d2c9]] are called the **Cauchy integral f
 > |f^{(n)}(z_{0})|\leqslant \frac{n!\lVert f \rVert_{C}}{R^{n}},
 > $$
 > where $\lVert f \rVert_{C}=\sup_{z\in C}|f(z)|$. 
+> 
+> > [!Proof]-
+> > 
+> > An easy application of [[#^58d2c9]]. 
+> 
 
 We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series defines a holomorphic function in its disc of convergence. The converse arises as another corollary of the Cauchy integral formulas. 
 
@@ -123,9 +128,18 @@ We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series
 > $$
 > for all $z\in D$, and the coefficients are given by
 > $$
-> a_{n}=\frac{f^{(n)}(z_{0})}{n!}
+> a_{n}=\frac{f^{(n)}(z_{0})}{n!}= \frac{1}{2\pi i} \int_{C} \frac{f(\zeta)}{(\zeta-z_{0})^{n+1}}d\zeta
 > $$
 > for all $n\geqslant 0$. 
+> 
+> > [!Proof]-
+> > 
+> > Use [[#^d3c867]], and write
+> > $$
+> > \frac{1}{\zeta-z}=\frac{1}{\zeta-z_{0}-(z-z_{0})}=\frac{1}{(\zeta-z_{0})}\frac{1}{1-\frac{z-z_{0}}{\zeta-z_{0}}}.
+> > $$
+> > 
+> 
 
 ^f3eea8
 

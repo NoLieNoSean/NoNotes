@@ -183,5 +183,8 @@ We first prove the invariance of basis cardinality for vector spaces.
 
 ^b14fe9
 
-[^1]: as is the case in the proof of [[#^f64b92]]
+[^1]: i.e, $I\subseteq\text{Ann}_{R}(M)$ - as is the case in the proof of [[#^f64b92]]
+
+
+Let $M_{1}$ and $M_{2}$ be $S$-modules. Let $\varphi:R\to S$. When can we say $M_{1}\otimes_{R}M_{2}=M_{1}\otimes_{S}M_{2}$?
 

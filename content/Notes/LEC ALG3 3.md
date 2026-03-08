@@ -163,6 +163,8 @@ The universal property and isomorphism theorems are what you'd expect; see @aluf
 > ```
 > commutes. 
 
+^7d0f31
+
 
 > [!Proposition]
 > Every $R$-module homomorphism $\varphi:M\to M'$ may be decomposed as follows:

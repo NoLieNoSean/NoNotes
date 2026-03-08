@@ -57,13 +57,3 @@ $$
 V\cong \frac{k[x]}{\langle q_{1} \rangle }\oplus\dots \oplus\frac{k[x]}{\langle q_{s} \rangle }
 $$
 as a $k[x]$-module. The rational canonical form of $T$ is a block diagonal matrix whose blocks are companion matrices of the summands above. 
-
-
----
-
-# Tensor products
-
-@bourbakiAlgebra1974 ch 3, 4
-
-[!Motivation]
-Let $M$ be an $R$-module. Suppose $M$ is finitely generated with finitely many relations. 

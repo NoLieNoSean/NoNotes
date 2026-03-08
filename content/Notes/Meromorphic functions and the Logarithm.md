@@ -11,7 +11,7 @@ tags:
 > A **point singularity** of a function $f$ is a complex number $z_{0}$ such that $f$ is defined in a neighborhood of $z_{0}$ but not at the point $z_{0}$ itself. These are also called **isolated singularities**. We call $z_{0}\in \mathbb{C}$ a **zero** for the holomorphic function $f$ if $f(z_{0})=0$. 
 
 > [!Theorem] @steinComplexAnalysis2003 3.1.1
-> Suppose that $f$ is holomorphic in a connected open set $\Omega$, has a *zero* at a point $z_{0}\in \Omega$, and does not vanish identically in $\Omega$. Then there exists a neighborhood $U\subseteq \Omega$ of $z_{0}$, a non-vanishing holomorphic function $g$ on $U$, and a unique positive integer $m$ such that
+> Suppose that $f$ is holomorphic in a connected open set $\Omega$, has a *zero* at a point $z_{0}\in \Omega$, and does not vanish identically in $\Omega$. Then there exists a neighborhood $U\subseteq \Omega$ of $z_{0}$, a ==non-vanishing== holomorphic function $g$ on $U$, and a unique positive integer $m$ such that
 > $$
 > f(z)=(z-z_{0})^{m}g(z)
 > $$
@@ -75,7 +75,6 @@ tags:
 > 
 
 ^6f601e
-
 
 # The residue formula
 
@@ -146,7 +145,7 @@ This theorem can be generalized to the case of finitely many poles.
 > > 
 > > Fix $z\in D$ with $z\ne z_{0}$ and consider a keyhole contour with keyholes around $z_{0}$ and $z$. Letting the sides of the corridors get closer to each other and finally overlap, in the limit we get 
 > > $$
-> > \int_{C}\frac{f(\zeta)}{\zeta-z}\,d\zeta+\int_{\gamma_{\epsilon}}\frac{f(\zeta)}{\zeta-z}\,d\zeta+\int_{\gamma_{\epsilon}'}\frac{f(\zeta)}{\zeta-z}\,d\zeta,
+> > \int_{C}\frac{f(\zeta)}{\zeta-z}\,d\zeta+\int_{\gamma_{\epsilon}}\frac{f(\zeta)}{\zeta-z}\,d\zeta+\int_{\gamma_{\epsilon}'}\frac{f(\zeta)}{\zeta-z}\,d\zeta=0,
 > > $$
 > > where $\gamma_{\epsilon}$ and $\gamma_{\epsilon}'$ are small circles of radius $\epsilon$ with negative orientation centered at $z$ and $z_{0}$ respectively. Using [[Cauchy's Theorem and Its Applications#^d3c867|Cauchy's theorem]], we have
 > > $$
@@ -243,6 +242,8 @@ Note that as a consequence, a rational function is determined up to a multiplica
 
 # The argument principle and applications
 
+The argument principle provides a way to transform order data to residue data.
+
 > [!Theorem] Argument principle, @steinComplexAnalysis2003 3.4.1
 > Suppose $f$ is meromorphic in an open set containing a circle $C$ and its interior. If $f$ has no poles and never vanishes on $C$, then 
 > $$
@@ -270,7 +271,7 @@ The above theorem holds for toy contours.
 ^7ea52e
 
 See @OpenMappingTheorem2026 
-Proof uses [[#^d304b2]].
+Proof uses [[#^d304b2]]. 
 
 > [!Theorem] Maximum modulus principle, @steinComplexAnalysis2003 3.4.5
 > If $f$ is a non-constant holomorphic function in a region $\Omega$, then $f$ cannot attain a maximum in $\Omega$.
@@ -327,6 +328,20 @@ In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(
 > > where $\gamma$ is any curve in $\Omega$ connecting $1$ and $z$. Since $\Omega$ is simply connected, this definition does not depend on the path chosen. Arguing as before, we find that $F$ is holomorphic on $\Omega$ and $F'(z)=1/z$. 
 > 
 
+In the slit plane $\Omega=\mathbb{C}\setminus \{ (-\infty, 0] \}$, we have the **principal branch** of the logarithm
+$$
+\log z=\log r+i\theta
+$$
+where $z=r e^{ i\theta }$ with $|\theta|< \pi$. To prove this, integrate along the path that follows the $x$ axis till $x=r$ followed by an arc. 
+
+For the principal branch of the logarithm the following Taylor expression holds:
+$$
+\log(1+z)=z-\frac{z^{2}}{2}+\frac{z^{3}}{3}-\dots\quad \quad (|z|< 1)
+$$
+Indeed, the derivative of both sides equals $1/(1+z)$, so they must differ by a constant; they are both equal to $0$ at $z=0$. 
+
+Note that $\log(z_{1}z_{2})\ne \log z_{1}+\log z_{2}$ in general. 
+
 > [!Theorem]
 > If $f$ is a nowhere vanishing holomorphic function in a simply connected region $\Omega$, then there exists a holomorphic function $g$ on $\Omega$ such that
 > $$
@@ -352,6 +367,11 @@ In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(
 
 # Fourier series and harmonic functions
 
+Suppose that $f$ is holomorphic in a disc $D_{R}(z_{0})$, so that $f$ has a power series expansion
+$$
+f(z)=\sum_{n=0}^{\infty} a_{n}(z-z_{0})^{n}
+$$
+that converges in that disc. 
 
 > [!Theorem]
 > The coefficients of the power series expansion of $f$ are given by
@@ -363,7 +383,47 @@ In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(
 > 0=\frac{1}{2\pi r^{n}}\int_{0}^{2\pi} f(z_{0}+r e^{i\theta}) \, e^{ -in\theta }d\theta
 > $$
 > whenever $n< 0$. 
+> 
+> > [!Proof]-
+> > 
+> > We know that $a_{n}=f^{(n)}(z_{0})/n!$ from [[Cauchy's Theorem and Its Applications#^f3eea8]]; Just plug the parameterization $\zeta=z_{0}+r e^{ i\theta }$ into [[Cauchy's Theorem and Its Applications#^58d2c9]]. 
+> 
 
+> [!Corollary]
+> If $f$ is holomorphic in a disc $D_{R}(z_{0})$, then
+> $$
+> f(z_{0})=\frac{1}{2\pi}\int_{0}^{2\pi} f(z_{0}+r e^{ i\theta }) \, d\theta\quad \quad 0< r< R. 
+> $$
+> 
+
+^ad7a7c
+
+## Harmonic functions
+
+> [!Definition] Harmonic function
+> Let $u$ be a real-valued function defined on a disc $D$. We call $u$ **harmonic** if $u$ is twice continuously differentiable and $u_{xx}+u_{yy}=0$. 
+
+> [!Proposition] @steinComplexAnalysis2003 Exr 2.12
+> Let $u$ be harmonic on the unit disc $\mathbb{D}$. There exists a holomorphic function $f$ on the unit disc such that $\mathrm{Re}~f=u$. The imaginary part of $f$ is uniquely determined up to an additive (real) constant. 
+> 
+> > [!Proof]-
+> > 
+> > Motivated by [[Preliminaries to Complex Analysis#^ca85e1]], define $g(z)=2\frac{ \partial u }{ \partial z }$. Show that $g$ satisfies the Cauchy-Riemann equations. Let a primitive of $g$ be $F$. If the real part of $F$ is $U$, we have
+> > $$
+> > F'=2\frac{ \partial U }{ \partial z } \implies \frac{ \partial U }{ \partial z } =\frac{ \partial u }{ \partial z } \implies U=u+c,
+> > $$
+> > where $c\in \mathbb{R}$ is a constant. How define $f=F-c$, which works. 
+> > 
+> > If $g$ is another holomorphic function satisfying the condition of the problem, then $\mathrm{Re}~(f-g)=\mathrm{Re}~(f)-\mathrm{Re}~(g)=u-u=0$, which is constant, therefore $\text{Im}(f-g)$ is also constant. 
+
+Taking the real parts of both sides in [[#^ad7a7c]], we have
+
+> [!Corollary]
+> If $u$ is harmonic in a disc $D_{R}(z_{0})$, then
+> $$
+> u(z_{0})=\frac{1}{2\pi}\int_{0}^{2\pi} u(z_{0}+r e^{ i\theta }) \, d\theta\quad \quad  0< r< R
+> $$
+> 
 
 # Winding numbers
 
@@ -377,9 +437,36 @@ In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(
 > [!Lemma]
 > If $\gamma$ is a closed path, then $W(\gamma, \alpha)$ is an integer. 
 
+> [!Warning]
+> Homologous to 0 is not equivalent to homotopic to 0!
+
 > [!Theorem] Cauchy, @langAlgebra2002 4.2.2
-> Let $\gamma$ be a closed chain in an open set $U$, and assume that $\gamma$ is homologous to $0$ in $U$. Let $f$ be holomorphic in $U$. Then
+> Let $\gamma$ be a closed chain in $U$, homologous to $0$ in $U$. Let $f$ be holomorphic in $U$. Then
 > $$
 > \int_{\gamma}f=0.
 > $$
+
+^b051f8
+
+> [!Theorem] @langAlgebra2002 4.2.4
+> Let $U$ be an open set and $\gamma$ a closed chain in $U$ such that $\gamma$ is homologous to $0$ in $U$. Let $z_{1}, \dots, z_{n}$ be a finite number of distinct points of $U$. Let $\gamma_{i}$ ($i=1, \dots, n$) be the boundary of a closed disc $\overline{D}_{i}$ contained in $U$, containing $z_{i}$, and oriented counterclockwise. We assume that $\overline{D}_{i}$ does not intersect $\overline{D}_{j}$ if $i\ne j$. Let $m_{i}=W(\gamma, z_{i})$. Let $U^{*}$ be the set obtained by deleting $z_{1}, \dots, z_{n}$ from $U$. Then $\gamma$ is homologous to $\sum m_{i}\gamma_{i}$ in $U^{*}$. 
 > 
+> It follows from [[#^b051f8]] that if $f$ is holomorphic on $U^{*}$, then
+> $$
+> \int_{\gamma}f=\sum_{i=1}^{n} m_{i}\int_{\gamma_{i}}f.
+> $$
+
+We can now state a generalization of [[Cauchy's Theorem and Its Applications#^d3c867]]. 
+
+> [!Theorem] Cauchy's Formula, @langAlgebra2002 4.2.5
+> Let $\gamma$ be a closed chain in $U$, homologous to $0$ in $U$. Let $f$ be holomorphic on $U$, let $z$ be in $U$ and not on $\gamma$. Then
+> $$
+> \frac{1}{2\pi i} \int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta=W(\gamma, z)f(z).
+> $$
+
+# Laurent expansions
+
+[!Theorem] @langAlgebra2002 5.2.1
+
+
+I want to calculate the integral of $\frac{1}{z(z-1)}$ over a centered at the origin of radius 2. I first split the fraction: $\frac{1}{z-1}-\frac{1}{z}$. I can then use Cauchy's theorem to integrate over the chain which consists of two tiny circles centered at $0$ and $1$. The terms alternatively vanish, and the one that remains contributes its residue. Since the residues are $1$ and $-1$, the integral must be $0$. 

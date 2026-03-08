@@ -52,7 +52,8 @@ x_{n}
 \end{Bmatrix}
 $$
 >[!Note]
->It can be shown that all vector spaces are isomorphic with $\mathbb{R}^n$.
+>It can be shown that all vector spaces are isomorphic with $\mathbb{R}^n$. 
+> (Me, seeing this two years later: remember when your entire universe was finite dimensional vector spaces?). 
 
 $\mathbb{R}^n$ consists of all columns of size $n$. Addition and multiplication are defined entry-wise.
 
