@@ -65,9 +65,9 @@ If $I$ is a prime ideal and $M$ is $I$-primary, the converse holds:
 > > Let $N=\sum_{i=1}^{m}Rx_{i}\subseteq M$. We have to show that $N=M$. Let $y\in M$. There exist $a_{1}, \dots, a_{m}\in R$ such that $\overline{y}=\sum_{i=1}^{m}a_{i}\overline{x}_{i}$. Write $z=\sum_{i=1}^{m}a_{i}x_{i}$. Then, $y-z\in pM$. Thus, for all $y\in M$, there exists $z\in N$ such that $y-z\in pM$. We can now write
 > > $$
 > > \begin{array}{rll}
-> > y-z & = py_{1}  & \in M \\
-> > y-z-pz_{1} & =p^{2}y_{2} & \in pM \\
-> > y-z-pz_{1}-p^{2}z_{2} & =p^{3}y_{3} & \in p^{2}M \\
+> > y-z & = py_{1}  & \in pM \\
+> > y-z-pz_{1} & =p^{2}y_{2} & \in p^{2}M \\
+> > y-z-pz_{1}-p^{2}z_{2} & =p^{3}y_{3} & \in p^{3}M \\
 > >  & \vdots \\
 > > y-z-pz_{1} -\dots-p^{e-1}z_{e-1} & =p^{e}y_{e} & \in p^{e}M=0,
 > > \end{array}
