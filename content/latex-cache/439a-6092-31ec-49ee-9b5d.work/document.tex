@@ -1,0 +1,159 @@
+
+\documentclass[preview]{standalone}
+\usepackage{amsmath,amssymb, tikz-cd, quiver, pgfplots, mathrsfs}
+\usetikzlibrary{lindenmayersystems, nfold}
+\usetikzlibrary{decorations.markings,arrows}
+
+\begin{document}
+[![](https://q.uiver.app/quiver.svg)](https://github.com/varkor/quiver)
+
+![](https://q.uiver.app/quiver-blue.svg)Loading diagram...
+
+Lightness:
+
+Sync label/edge colours:
+
+Preset:
+
+LaTeX:(None)Diagram:
+
+# Keyboard shortcuts⌘/
+
+For a guide on using keyboard shortcuts in **quiver** see [the tutorial](https://github.com/varkor/quiver/blob/master/tutorial.md).
+
+## General
+
+|   |   |
+|---|---|
+|Dismiss errors, and panels; Cancel modification or movement; Hide focus point; Deselect, and dequeue cells|esc|
+|Import from LaTeX|⌘I|
+|Export to LaTeX or Typst|⌘E|
+
+## Navigation
+
+|   |   |
+|---|---|
+|Pan view|Scroll|
+|Enable mouse panning|ctrl,alt|
+|Enable touch panning|Long press|
+|Enable mouse zooming|⇧|
+|Move focus point|←,↑,↓,→|
+|Select next queued cell|⇥|
+|Select previous queued cell|⇧⇥|
+|Select / deselect object|S|
+|Select cells|;|
+|Toggle cell selection|'|
+
+## Modification
+
+|   |   |
+|---|---|
+|Focus / defocus label input|↵|
+|Create object, and connect to selection||
+|Move selected objects|B|
+|Change source|,|
+|Change target|.|
+|Create arrows from selection|/|
+|Copy|⌘C|
+|Cut|⌘X|
+|Paste|⌘V|
+
+## Styling
+
+|   |   |
+|---|---|
+|Reverse arrows|R|
+|Flip arrows|E|
+|Flip labels|F|
+|Left-align labels|V|
+|Centre-align labels|C|
+|Over-align labels|X|
+|Modify label position|I|
+|Modify offset|O|
+|Modify curve|K|
+|Modify radius|N|
+|Modify length|L (hold ⇧ to shorten symmetrically)|
+|Modify level|M|
+|Modify style|D|
+|Display as arrow|A|
+|Display as adjunction|J|
+|Display as pullback/pushout|P (press again to switch corner style)|
+|Modify label colour|Y|
+|Modify arrow colour|U|
+
+## Toolbar
+
+|   |   |
+|---|---|
+|Save diagram in URL|⌘S|
+|Undo|⌘Z|
+|Redo|⇧⌘Z|
+|Select all|⌘A|
+|Select connected components|⇧⌘C|
+|Deselect all|⇧⌘A|
+|Delete|⌫,del|
+|Centre view|G|
+|Zoom out|⌘-|
+|Zoom in|⌘=|
+|Toggle grid|H|
+|Toggle hints|⇧⌘H|
+
+## Export
+
+|   |   |
+|---|---|
+|Toggle diagram centring|C|
+|Toggle ampersand replacement|A|
+|Toggle cramped spacing|R|
+|Toggle standalone|S|
+|Toggle fixed size|F|
+
+# About
+
+**quiver** is a modern, graphical editor for commutative and pasting diagrams, capable of rendering high-quality diagrams for screen viewing, and exporting to LaTeX via `tikz-cd` and Typst via `fletcher`.
+
+Creating and modifying diagrams with **quiver** is orders of magnitude faster than writing the equivalent LaTeX or Typst by hand and, with a little experience, competes with pen-and-paper. To learn how to use **quiver** efficiently, see [the tutorial](https://github.com/varkor/quiver/blob/master/tutorial.md).
+
+The editor is open source and may be found [on GitHub](https://github.com/varkor/quiver). If you would like to request a feature, or want to report an issue, you can [do so here](https://github.com/varkor/quiver/issues).
+
+You can follow **quiver** on [Mastodon](https://mathstodon.xyz/@quiver) or [Twitter](https://twitter.com/q_uiver_app) for updates on new features.
+
+## Thanks to
+
+- [S. C. Steenkamp](https://www.cl.cam.ac.uk/~scs62/), for helpful discussions regarding the aesthetic rendering of arrows.
+
+- [AndréC](https://tex.stackexchange.com/users/138900/andr%c3%a9c), for the custom TikZ style for curves of a fixed height.
+
+- [Andrew Stacey](https://tex.stackexchange.com/users/86/andrew-stacey), for the custom TikZ style for shortened curves.
+
+- [Théophile Cailliau](https://github.com/tjbcg), for implementing Typst support.
+
+- [Nathan Corbyn](https://github.com/doctorn), for adding the ability to export embeddable diagrams to HTML.
+
+- [Paolo Brasolin](https://github.com/paolobrasolin), for adding offline support.
+
+- [Carl Davidson](https://github.com/davidson16807), for discussing and prototyping loop rendering.
+
+- Everyone who has improved **quiver** by submitting pull requests, reporting issues or suggesting improvements.
+
+Created by [varkor](https://github.com/varkor).
+
+# Welcome
+
+**quiver** is a modern, graphical editor for commutative and pasting diagrams, capable of rendering high-quality diagrams for screen viewing, and exporting to LaTeX via `tikz-cd` and Typst via `fletcher`.
+
+**quiver** is intended to be intuitive to use and easy to pick up. Here are a few tips to help you get started:
+
+- Click and drag to create new arrows: the source and target objects will be created automatically.
+- Double-click to create a new object.
+- Edit labels with the input bar at the bottom of the screen.
+- Click and drag the empty space around a object to move it around.
+- Hold Shift (⇧) to select multiple cells to edit them simultaneously.
+
+For a detailed guide to using **quiver**, see [the tutorial](https://github.com/varkor/quiver/blob/master/tutorial.md).
+
+Remember to include `\usepackage{quiver}` in your LaTeX preamble. You can install the package using [CTAN](https://ctan.org/pkg/quiver), or [open `quiver.sty` in a new tab](https://raw.githubusercontent.com/varkor/quiver/master/package/quiver.sty) to copy-and-paste.updated on 2025-07-05
+
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJwXnstMX0oVSkiXSxbMSwwLCJVXFx0aW1lcyBJIl0sWzEsMSwiVSJdLFswLDIsInAiLDJdLFsxLDIsIlxccGlfVSJdLFswLDEsImgiXV0= \[\begin{tikzcd} {p^{-1}(U)} & {U\times I} \\ & U \arrow["h", from=1-1, to=1-2] \arrow["p"', from=1-1, to=2-2] \arrow["{\pi_U}", from=1-2, to=2-2] \end{tikzcd}\]
+\end{document}
+

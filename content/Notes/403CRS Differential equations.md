@@ -7,38 +7,17 @@ tags:
   - DQN
 ---
 CMI, Jan-Apr 2026, Aditya Karnataki
-@perkoDifferentialEquationsDynamical2009
-
-
-```latex
-% latex-id: 07c9-83f5-ed97-439f-9c5d
-
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}[
-    hide axis,
-    colormap/cool,
-]
-\addplot3[
-    mesh,
-    samples=50,
-    domain=-8:8,
-]
-{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
-
+@perkoDifferentialEquationsDynamical2009, @hirschDifferentialEquationsDynamical2013
 
 
 ---
 
 
+[[Linear systems of differential equations]]
+[[Nonlinear systems]]
 
-[[LEC DQN 1]]
-[[LEC DQN 2]]
-[[LEC DQN 3]]
+
+
 
 
 [[AS DQN 1]]

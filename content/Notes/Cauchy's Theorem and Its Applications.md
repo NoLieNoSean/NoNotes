@@ -188,7 +188,9 @@ We have seen ([[Preliminaries to Complex Analysis#^0db182]]) that a power series
 ^172dec
 
 > [!Corollary]
-> Suppose $f$ and $g$ are holomorphic in a region $\Omega$ and $f(z)=g(z)$ for all $z$ in some non-empty open subset of $\Omega$ (or more generally for $z$ in some sequence of distinct points with limit point in $\Omega$). Then $f(z)=g(z)$ throughout $\Omega$. 
+> Suppose $f$ and $g$ are holomorphic in a connected region $\Omega$ and $f(z)=g(z)$ for all $z$ in some non-empty open subset of $\Omega$ (or more generally for $z$ in some sequence of distinct points with limit point in $\Omega$). Then $f(z)=g(z)$ throughout $\Omega$. 
+
+^dd5abc
 
 
 # Morera's theorem

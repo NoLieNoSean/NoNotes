@@ -19,7 +19,7 @@ Recall that the general solution for the first-order linear differential equatio
 
 # Exponentials of operators
 
-A system of linear first order differential equations can be expressed as $\dot{\mathbf{x}}=A\mathbf{x}$. Solving this system is [[#^4f5916|equivalent]] to finding the "exponential matrix" $e^{ At }$, which we will do now. 
+A system of linear first order differential equations can be expressed as $\dot{\mathbf{x}}=A\mathbf{x}$. Solving this system is [[Linear systems of differential equations#^4f5916|equivalent]] to finding the "exponential matrix" $e^{ At }$, which we will do now. 
 
 [[LEC CAL1 3#Topological properties of linear maps|Recall]] the properties of the operator norm. 
 
@@ -83,7 +83,7 @@ $$
 
 ^4de480
 
-We can now compute the matrix $e^{ At }$ for any $2\times {2}$ matrix $A$. Let $B$ be given by [[#^4de480]]. Then, by [[#^5d7c66]] and [[#^75eee3]],  
+We can now compute the matrix $e^{ At }$ for any $2\times {2}$ matrix $A$. Let $B$ be given by [[Linear systems of differential equations#^4de480]]. Then, by [[Linear systems of differential equations#^5d7c66]] and [[Linear systems of differential equations#^75eee3]],  
 $$
 e^{ Bt }=\begin{bmatrix}
 e^{ \lambda t } & \\
@@ -98,7 +98,7 @@ e^{ Bt }=e^{ at }\begin{bmatrix}
 \sin bt & \cos bt
 \end{bmatrix}.
 $$
-By [[#^2631a8]], $e^{ At }$ is given by
+By [[Linear systems of differential equations#^2631a8]], $e^{ At }$ is given by
 $$
 e^{ At }=Pe^{ Bt }P^{-1}.
 $$
@@ -174,3 +174,93 @@ Multiple complex eigenvalues
 > $$
 > the matrix $N=A-S$ is nilpotent of order $k\leqslant 2n$, and $S$ and $N$ commute. 
 
+---
+
+# Stability theory
+
+Let $\mathbf{w}_{j}=\mathbf{u}_{j}+i\mathbf{v}_{j}$ be a generalized eigenvector of the real matrix $A$ corresponding to an eigenvalue $\lambda_{j}=a_{j}+ib_{j}$. Note that if $b_{j}=0$ then $\mathbf{v}_{j}=0$. Let
+$$
+B=\{ \mathbf{u}_{1}, \dots, \mathbf{u}_{k}, \mathbf{u}_{k+1}, \mathbf{v}_{k+1}, \dots, \mathbf{u}_{m}, \mathbf{v}_{m} \}
+$$
+be a basis of $\mathbb{R}^{n}$. 
+
+> [!Definition]
+> Let $\lambda_{j}=a_{j}+ib_{j}$, $\mathbf{w}_{j}=\mathbf{u}_{j}+i\mathbf{v}_{j}$ be as described above. Then
+> $$
+> \begin{align}
+> E^{s} & =\text{span}\{ \mathbf{u}_{j}, \mathbf{v}_{j}:a_{j}< 0 \} \\
+> E^{c} & =\text{span}\{ \mathbf{u}_{j}, \mathbf{v}_{j}:a_{j}=0 \} \\
+> E^{u} & =\text{span}\{ \mathbf{u}_{j}, \mathbf{v}_{j}:a_{j}> 0 \}.
+> \end{align}
+> $$
+> 
+
+## Flow of a linear system
+
+> [!Definition]
+> 1. By the fundamental theorem, the solution to the IVP associated with $\dot{\mathbf{x}}=A\mathbf{x}$ is given by $\mathbf{x}(t)=e^{ At }\mathbf{x}_{0}$. The set of mappings $e^{ At }:\mathbb{R}^{n}\to \mathbb{R}^{n}$ is called the **flow** of the linear system. 
+> 2. If all the eigenvalues of the $n\times n$ matrix $A$ have nonzero real part, then the flow $e^{ At }:\mathbb{R}^{n}\to \mathbb{R}^{n}$ is called a **hyperbolic flow** and the linear system is called a **hyperbolic linear system**. 
+> 3. A subspace $E\subseteq \mathbb{R}^{n}$ is said to be **invariant** with respect to the flow $e^{ At }:\mathbb{R}^{n}\to \mathbb{R}^{n}$ if $e^{ At }E\subseteq E$ for all $t\in \mathbb{R}$. 
+
+> [!Theorem] @perkoDifferentialEquationsDynamical2009 1.9.1
+> Let $A$ be a real $n\times n$ matrix. Then
+> $$
+> \mathbb{R}^{n}=E^{s}\oplus E^{u}\oplus E^{c}.
+> $$
+> Furthermore, $E^{s}$, $E^{u}$, and $E^{c}$ are invariant with respect to the flow $e^{ At }$ of the system $\dot{\mathbf{x}}=A\mathbf{x}$. 
+
+---
+
+# Nonhomogeneous linear systems
+
+We solve the nonhomogeneous linear system
+$$
+\dot{\mathbf{x}}=A\mathbf{x}+\mathbf{b}(t)
+$$
+where $A$ is an $n\times n$ matrix and $\mathbf{b}(t)$ is a continuous vector valued function. 
+
+> [!Definition]
+> A **fundamental matrix solution** of 
+> $$
+> \dot{\mathbf{x}}=A\mathbf{x}
+> $$
+> is any nonsingular $n\times n$ matrix function $\Phi(t)$ that satisfies
+> $$
+> \Phi'(t)=A\Phi(t)\quad \forall t\in \mathbb{R}.
+> $$
+
+For the system $\dot{\mathbf{x}}=A\mathbf{x}$, note that $\Phi(t)=e^{ At }$ is a fundamental matrix solution satisfying $\Phi(0)=I$. Moreover, any fundamental matrix solution $\Phi(t)$ is given by $\Phi(t)=e^{ At }C$ for some invertible matrix $C$ [^1]. 
+
+[^1]: Consider $e^{ -At }\Phi(t)$. Note that $\Phi(t)e^{ -At }$ doesn't work, since $A$ and $\Phi(t)$ do not necessarily commute!
+
+Once we have found a fundamental matrix solution, it is easy to solve the nonhomogeneous system. 
+
+> [!Theorem]
+> If $\Phi(t)$ is any fundamental matrix solution of $\dot{\mathbf{x}}=A\mathbf{x}$, then the solution of the nonhomogeneous linear system $\dot{\mathbf{x}}=A\mathbf{x}+\mathbf{b}(t)$ and the initial condition $\mathbf{x}(0)=\mathbf{x}_{0}$ is unique and is given by
+> $$
+> \mathbf{x}(t)=\Phi(t)\Phi ^{-1}(0)\mathbf{x}_{0}+\int_{0}^{t} \Phi(t)\Phi ^{-1}(\tau)\mathbf{b}(\tau) \, d\tau.
+> $$
+
+> [!Corollary]
+> With $\Phi(t)=e^{ At }$, the solution of the nonhomogeneous linear system $\dot{\mathbf{x}}=A\mathbf{x}+\mathbf{b}(t)$ has the form
+> $$
+> \mathbf{x}(t)=e^{ At }\mathbf{x}_{0}+e^{ At }\int_{0}^{t} e^{ -A\tau }\mathbf{b}(\tau) \, d\tau.
+> $$
+> 
+
+---
+
+> [!Theorem] Lie
+> Assume $\varphi_{t}$ is a $1$-parameter subgroup leaving 
+> $$
+> \frac{dy}{dx} = \frac{Y(x, y)}{X(x, y)}
+> $$
+> stable. Let $\Phi_{p}=\left. \frac{d}{dt}\varphi_{t}(p) \right|_{t=0}$ be given by
+> $$
+> \Phi_{p}=\xi(x, y)\frac{ \partial  }{ \partial x } +\eta(x, y) \frac{ \partial  }{ \partial y } .
+> $$
+> Then there exists a function $U(x, y)$ such that
+> $$
+> \frac{ \partial U }{ \partial x } =\frac{-Y}{X\eta-Y\xi}, \quad \frac{ \partial U }{ \partial y } =\frac{X}{X\eta-Y\xi},
+> $$
+> with $U(x, y)=c$ being solutions to the differential equation.  

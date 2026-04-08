@@ -42,7 +42,7 @@ tags:
 > $$
 > $[k_{2}:\mathbb{Q}]=[k_{2}:k_{1}][k_{1}:\mathbb{Q}]=2\cdot 3=6$. 
 
-> [!Theorem]
+> [!Theorem] @langAlgebra2002 5.3.1
 > Let $K$ be a splitting field of the polynomial $f(x)\in k[x]$. If $E$ is another splitting field of $f$, then there exists an isomorphism $\sigma:E\to K$ inducing the identity on $k$. If $k\subseteq K\subseteq k^{\text{a}}$, where $k^{\text{a}}$ is an algebraic closure of $k$, then any embedding of $E$ in $k^{\text{a}}$ inducing the identity on $k$ must be an isomorphism of $E$ onto $K$. 
 > 
 > > [!Proof]-
@@ -119,9 +119,16 @@ $$
 $$
 by [[LEC ALG3 15#^6a4ad7]]. Thus, $\mathbb{Q}[x]/(x^{3}-2)$ contains the real root $\sqrt[3]{ 2 }$ but does not contain the roots $\omega\sqrt[3]{ 2 }, \omega^{2}\sqrt[3]{ 2 }$. 
 
-> [!Theorem]
+> [!Theorem] Normal extensions, @langAlgebra2002 5.3.3
 > Let $K$ be an algebraic extension of $k$, contained in an algebraic closure $k^{\text{a}}$ of $k$. Then the following conditions are equivalent:
 > 1. Every embedding of $K$ in $k^{\text{a}}$ induces an automorphism of $K$. 
 > 2. $K$ is the splitting field of a family of polynomials in $k[x]$. 
 > 3. Every irreducible polynomial of $k[x]$ which has a root in $K$ splits completely into linear factors in $K$.
-> An extension satisfying one of these properties is called a **normal extension**
+> 
+> An extension satisfying one of these properties is called a **normal extension**.
+
+^b78800
+
+> [!Theorem] @langAlgebra2002 5.3.4
+> Normal extensions remain normal under lifting. If $K\supseteq E\supseteq k$ and $K$ is normal over $k$, then $K$ is normal over $E$. If $K_{1}, K_{2}$ are normal over $k$ and are contained in some field $L$, then $K_{1}K_{2}$ is normal over $k$, and so is $K_{1}\cap K_{2}$. 
+

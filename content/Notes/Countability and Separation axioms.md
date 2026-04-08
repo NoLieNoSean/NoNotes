@@ -183,4 +183,5 @@ Two important consequences of the second countability axiom relate to notions we
 > 1. The space $\mathbb{R}_{\ell}$ is first countable, separable, Lindelöf, but not second countable. 
 > 2. The product of two Lindelöf spaces need not be Lindelöf: $\mathbb{R}_{\ell}^{2}$ is not. 
 > 3. A subspace of a Lindelöf space need not be Lindelöf. The ordered square (being compact) is Lindelöf, but the subspace $[0, 1]\times(0, 1)$ is not. 
+> 4. A subspace of a separable space need not be separable - consider the "off-diagonal" of the $\mathbb{R}_{\ell}^{2}$. 
 

@@ -52,6 +52,8 @@ Note that a function of $n$ variables can have partial derivatives at a point wi
 > $$
 > whenever the limit exists.
 
+^7a4d1e
+
 > [!Warning]
 > You can assume $\lVert \mathbf{u} \rVert=1$ if that helps. However, as defined, $\mathbf{f}'(\mathbf{c};\mathbf{u})$ does depend on $\lVert \mathbf{u} \rVert$. To be precise, $\mathbf{f}'(\mathbf{c};\lambda\mathbf{u})=\lambda \mathbf{f}'(\mathbf{c};\mathbf{u})$.
 

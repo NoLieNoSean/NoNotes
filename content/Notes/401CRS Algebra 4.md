@@ -18,9 +18,8 @@ CMI, Jan-Apr 2026, Manoj Kummini
 # Lecture notes
 
 > [!Info] Notation
-> 1. Bilinear maps are barred in diagrams.
-> 2. Function composition, when written as $fg$, is left to right. 
-> 3. Maps induced by universal properties are dashed or dotted in diagrams. 
+> 1. Function composition, when written as $fg$, is left to right. 
+> 2. Maps induced by universal properties are dashed or dotted in diagrams. 
 
 ## Modules
 
@@ -46,7 +45,15 @@ CMI, Jan-Apr 2026, Manoj Kummini
 
 ## Galois Theory
 
-[[LEC ALG4 16]]
+[[LEC ALG4 16]] ✅ Primitive element theorem
+[[LEC ALG4 17]] ✅ Automorphisms of fields
+[[LEC ALG4 18]] ✅ Some results on finite subgroups of $\text{Aut}_{F}(E)$
+[[LEC ALG4 19]]
+[[LEC ALG4 20]]
+[[LEC ALG4 21]]
+
+[[LEC ALG4 22]]
+[[LEC ALG4 23]]
 
 
 # Tutorials

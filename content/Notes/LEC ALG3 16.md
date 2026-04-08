@@ -7,11 +7,20 @@ tags:
   - Lecture
   - Processed
 ---
-# Towers of algebraic extensions
+# Finite extensions
+
+```latex
+% latex-id: 7a04-80de-f3e5-49e3-8512
+
+\begin{document}
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXHRleHR7ZmluaXRlfSJdLFswLDEsIlxcdGV4dHthbGdlYnJhaWN9Il0sWzIsMSwiXFx0ZXh0e2Zpbi4gZ2VuLn0iXSxbMSwxLCIrIl0sWzAsMSwiIiwyLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwibGV2ZWwiOjJ9XSxbMCwyLCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dLFszLDAsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV1d 
+\[\begin{tikzcd}[column sep=tiny] & {\text{finite}} & \\ {\text{algebraic}} & {+} & {\text{fin. gen.}} \arrow[between={0.2}{0.8}, Rightarrow, from=1-2, to=2-1] \arrow[between={0.2}{0.8}, Rightarrow, from=1-2, to=2-3] \arrow[between={0.2}{0.8}, Rightarrow, from=2-2, to=1-2] \end{tikzcd}\]
+\end{document}
+```
 
 > [!Definition]
 > We say $\text{dim}_{F}(K)$ is the **degree** of the field extension $K/F$ and denote it by $[K:F]$. 
-> If $[K:F]$ is finite, we say $K/F$ is a **finite (field) extension**. 
+> If $[K:F]$ is finite, we say $K/F$ is a **finite extension**. 
 
 ^62eddf
 
@@ -58,14 +67,15 @@ tags:
 
 ^bacf07
 
-In general, it is false that an algebraic extension is finite. 
+> [!Warning]
+> In general, it is false that an algebraic extension is finite. 
 
 > [!Lemma]
 > Let $F, K$ be fields. Let $\{ F_{i} \}_{i\in \mathbb{N}}$ be fields such that $F_{i}\subseteq F_{i+1}$ and $F\subseteq F_{i}\subseteq K$ for every $i$. Then $\bigcup_{i\in \mathbb{N}}F_{i}$ is a subfield of $K$. 
 
 ^9d1148
 
-> [!Remark]
+> [!Example]
 > If $K/F$ is an [[LEC ALG3 15#^296267|algebraic extension]], is $K/F$ finite? No. Consider
 > $$
 > \mathbb{Q}\subseteq \mathbb{Q}[\sqrt[2]{ 2 }]\subseteq \mathbb{Q}[\sqrt[4]{ 2 }]\subseteq \mathbb{Q}[\sqrt[8]{ 2 }]\subseteq\dots\subseteq \mathbb{Q}[\sqrt[2^{n}]{ 2 }]\subseteq\dots \subseteq \mathbb{C}.

@@ -35,7 +35,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[LEC ALG3 16]] ✅ Towers of algebraic extensions
 [[LEC ALG3 17]] ✅ Algebraic elements form a subextension
 [[LEC ALG3 19]] ✅ Algebraic closure
-[[LEC ALG3 20]] ✅ Splitting fields, gcd
+[[LEC ALG3 20]] ✅ Splitting fields, gcd, normal extensions
 [[LEC ALG3 21]] ✅ Finite fields
 
 🎉

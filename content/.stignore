@@ -1,0 +1,13 @@
+.DS_Store
+
+!/Notes
+!/Private
+!/Attachments
+
+.zotero-ft-cache
+.zotero-reader-cache
+.zotero-reader-state
+
+!storage
+
+*

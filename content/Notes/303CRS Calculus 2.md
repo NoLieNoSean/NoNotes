@@ -22,6 +22,7 @@ Intermezzo: [[203CRS Calculus 1|CAL 1]] review
 
 [[LEC CAL2 7]] ✅ Partitions of unity
 [[LEC CAL2 8]] Change of variables
+
 [[LEC CAL2 9]] Multilinear algebra
 [[LEC CAL2 10]] Differential forms
 

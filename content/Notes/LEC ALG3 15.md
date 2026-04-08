@@ -15,7 +15,7 @@ id: "119"
 ^cb5039
 
 > [!Definition] Algebraic elements
-> Let $K/F$ be a field extension and $\alpha\in K$. We say that $\alpha$ is **algebraic over $F$** if $\alpha$ satisfies a polynomial $f(x)\in F[x]$ [^1]. $K$ is said to be **algebraic** if every $\alpha\in K$ is algebraic over $F$. $\alpha\in K$ is said to be **transcendental** over $F$ if it is not algebraic. 
+> Let $K/F$ be a field extension and $\alpha\in K$. We say that $\alpha$ is **algebraic over $F$** if $\alpha$ satisfies a polynomial $f(x)\in F[x]$ [^1]. The extension $K/F$ is said to be **algebraic** if every $\alpha\in K$ is algebraic over $F$. We say $\alpha\in K$ is **transcendental** over $F$ if it is not algebraic. 
 
 ^b33844
 
@@ -70,7 +70,9 @@ If $\alpha$ is algebraic over $F$, the reverse inclusion holds too.
 > 
 > > [!Proof]-
 > > 
-> > Note that for $\psi:F[x]\to F[\alpha]$ given by $x\mapsto\alpha$, we have $\ker(\psi)=(\text{Irr}(\alpha, F))$. Since $\psi$ is surjective, we have $F[x]/\text{Irr}(\alpha, F)\cong F[\alpha]$. Thus, $F[\alpha]$ is a field, and hence $F(\alpha)=F[\alpha]$.  
+> > For $\psi:F[x]\to F[\alpha]$ given by $x\mapsto\alpha$, we have $\ker(\psi)=(\text{Irr}(\alpha, F))$. Since $\psi$ is surjective, $F[x]/\text{Irr}(\alpha, F)\cong F[\alpha]$. Thus, $F[\alpha]$ is a field. Since $F[\alpha]$ contains $F$ and $\alpha$ and $F[\alpha]\subseteq F(\alpha)$, we must have $F[\alpha]=F(\alpha)$. 
+> 
+
 
 ^6a4ad7
 
@@ -107,9 +109,9 @@ If $\alpha$ is algebraic over $F$, the reverse inclusion holds too.
 > > $$
 > > r(x)=\sum_{i=0}^{n-1} a_{i}x^{i}
 > > $$
-> > and hence $r(\alpha)\in\text{span}(B)$. Therefore, $F[\alpha]\subseteq\text{span}(B)$. Since $\text{span}(B)\subseteq F[\alpha]$, we get $F[\alpha]=\text{span}(B)$. 
-> > 
+> > and hence $r(\alpha)\in\text{span}(B)$.
 > 
+
 
 ^5c70c9
 
@@ -122,25 +124,42 @@ If $\alpha$ is algebraic over $F$, the reverse inclusion holds too.
 > Let $K/F$ be a field extension and $\alpha\in K$ be algebraic over $F$. Suppose $\text{deg}(\text{irr}(\alpha; F))=n$. If $\beta\in F(\alpha)$, then $\text{deg}(\text{irr}(\beta; F))\leq n$. 
 > 
 > > [!Proof]-
-> > Clearly, $F(\beta)\subseteq F(\alpha)$[^1]. Since $\text{dim}_{F}(F(\alpha))=n$, we get $\text{dim}_{F}(F(\beta))\leq n$. It follows from [[LEC ALG3 15#^5c70c9]] that $\text{deg}(\text{irr}(\beta; F))=\text{dim}_{F}(F(\beta))\leq n$. 
+> > Clearly, $F(\beta)\subseteq F(\alpha)$. Since $\text{dim}_{F}(F(\alpha))=n$, we get $\text{dim}_{F}(F(\beta))\leq n$. It follows from [[LEC ALG3 15#^5c70c9]] that $\text{deg}(\text{irr}(\beta; F))=\text{dim}_{F}(F(\beta))\leq n$. 
 > 
 
 > [!Proposition]
-> Let $K/F$ be a field extension. Suppose $\alpha, \beta\in K$ are algebraic over $F$. If $\text{irr}(\alpha; F)=\text{irr}(\beta; F)$ then there is an isomorphism $\psi:F(\alpha)\to F(\beta)$ fixing elements of $F$ such that $\psi(\alpha)=\beta$. 
+> Let $K/F$ be a field extension. Suppose $\alpha, \beta\in K$ are algebraic over $F$. Then, 
+> 
+> $\text{irr}(\alpha; F)=\text{irr}(\beta; F)$ $\iff$ there is an isomorphism $\psi:F(\alpha)\to F(\beta)$ fixing elements of $F$ such that $\psi(\alpha)=\beta$. 
 > 
 > > [!proof]-
 > > 
-> > Since $\text{irr}(\alpha; F)=\text{irr}(\beta; F)$, $F(\alpha)\cong F(\beta)$. Consider $\psi$ as in the statement. By definition, $\psi$ is a ring homomorphism (this works only because the irreducible polynomials of $\alpha$ and $\beta$ are equal). Since $\ker \psi\ne (1)$, and $F[\alpha]$ is a field, we must have $\ker(\psi)=(0)$, that is, $\psi$ is injective. Note that the $F$-basis $\{ 1, \alpha, \dots, \alpha^{n-1} \}$ of $F[\alpha]$ maps to the $F$-basis $\{ 1, \beta, \dots, \beta^{n-1} \}$ of $F[\beta]$. Since $\psi$ is a $F$-linear map, we get $\psi$ is surjective.
+> > Let $p(x)=\text{irr}(\alpha;F)=\text{irr}(\beta;F)$. From [[#^6a4ad7]], we have
+> > $$
+> > \begin{align}
+> > \frac{F[x]}{p(x)}  & \underset{\overline{x}\mapsto\alpha}{\cong}F[\alpha] \\
+> > \frac{F[x]}{p(x)} & \underset{\overline{x}\mapsto\beta}{\cong}F[\beta] .
+> > \end{align}
+> > $$
+> > It follows that $\psi:F[\alpha]\to F[\beta]$ mapping $\alpha\mapsto\beta$ is an isomorphism. 
+> > 
+> > Conversely, suppose $\psi$ exists. Then, we have an isomorphism $F[x]/p(x)\to F[\beta]$ which maps $\overline{x}$ to $\beta$:
+> > $$
+> > \begin{align}
+> > \frac{F[x]}{p(x)} \underset{\overline{x}\mapsto\alpha}{\cong}F[\alpha]\overset{ \psi }{ \underset{ \alpha\mapsto\beta }{ \cong } } F[\beta].
+> > \end{align}
+> > $$
+> > Thus, $p$ is the irreducible polynomial of $\beta$ over $F$. 
 > 
 
-The converse is not true if we do not assume $\psi(\alpha)=\beta$. Consider $\mathbb{C}/\mathbb{R}$, $\alpha=i$, $\beta=2i$. $\mathbb{R}(\alpha)=\mathbb{R}(\beta)=\mathbb{C}$. The only $\mathbb{R}$-algebra isomorphisms between $\mathbb{R}(\alpha)=\mathbb{R}[x]/(x^{2}+1)$ and $\mathbb{R}(\beta)=\mathbb{R}[x]/(x^{2}+4)$ are given by
+The converse is not true if we do not assume $\psi(\alpha)=\beta$. Consider $\mathbb{C}/\mathbb{R}$, $\alpha=i$, $\beta=2i$. $\mathbb{R}(\alpha)=\mathbb{R}(\beta)=\mathbb{C}$. The only $\mathbb{R}$-linear isomorphisms between $\mathbb{R}(\alpha)=\mathbb{R}[x]/(x^{2}+1)$ and $\mathbb{R}(\beta)=\mathbb{R}[x]/(x^{2}+4)$ are given by
 $$
 \begin{align}
 [f(x)]_{x^{2}+1} & \mapsto[f(x/2)]_{x^{2}+4}, \\
 [f(x)]_{x^{2}+1} & \mapsto[f(-x/2)]_{x^{2}+4},
 \end{align}
 $$
-that is, by $\alpha\mapsto\beta/2$ and $\alpha\mapsto-\beta/2$. 
+that is, by $\alpha\mapsto\beta/2$ and $\alpha\mapsto-\beta/2$ [^2]. 
 
 ## Algebraic extensions
 
@@ -164,7 +183,7 @@ that is, by $\alpha\mapsto\beta/2$ and $\alpha\mapsto-\beta/2$.
 > 
 > > [!Proof]-
 > > 
-> > Let $\alpha\in L$ be algebraic over $K$. Let $\text{Irr}(\alpha; K)=\sum_{i=0}^{n}a_{n}x^{n}$. The key observation is that $\alpha$ is algebraic over the finitely generated algebraic extension $F(a_{0}, \dots, a_{n})/F$, which is a finite extension by [[LEC ALG3 16#^167dcc]]. Also, the extension $F(a_{0}, \dots, a_{n}, \alpha)/F(a_{0}, \dots, a_{n})$ is finite. By [[LEC ALG3 16#^ead96e]], the extension $F(a_{0}, \dots, a_{n}, \alpha)/F$ is finite, and hence algebraic by [[LEC ALG3 16#^bacf07]]. Thus, $\alpha$ is algebraic over $F$. 
+> > Let $\alpha\in L$ be algebraic over $K$. Let $\text{Irr}(\alpha; K)=\sum_{i=0}^{n}a_{n}x^{n}$. The key observation is that $\alpha$ is algebraic over the finitely generated algebraic extension $F(a_{0}, \dots, a_{n})/F$, which is a finite extension by [[LEC ALG3 16#^167dcc]]. So, $F(a_{0}, \dots, a_{n}, \alpha)/F(a_{0}, \dots, a_{n})$ is finite. By [[LEC ALG3 16#^ead96e]] $F(a_{0}, \dots, a_{n}, \alpha)/F$ is finite and hence algebraic by [[LEC ALG3 16#^bacf07]]. Thus, $\alpha$ is algebraic over $F$. 
 > 
 
 ^1a378a
@@ -207,3 +226,4 @@ For instance, this shows if $\alpha\in \mathbb{C}$ is a root of $f(x)\in \mathbb
 
 
 
+[^2]: the image of $\alpha$ must satisfy $\gamma^{2}+1=0$, and this can have at most two solutions. 

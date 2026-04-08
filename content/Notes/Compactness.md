@@ -96,7 +96,7 @@ For metric spaces, compactness, limit point compactness, and sequential compactn
 > [!Definition]
 > If $Y$ is a compact Hausdorff space and $X$ is a proper subspace of $Y$ whose closure equals $Y$, then $Y$ is said to be a **compactification** of $X$. If $Y\setminus X$ equals a single point, then $Y$ is called the **one-point compactification** of $X$; the use of 'the' is justified by [[#^6514af]]. 
 
-If we assume $X$ is Hausdorff, local compactness permits the kind of formulation we'd expect for a 'local' property:
+If we assume $X$ is Hausdorff, local compactness admits the kind of formulation we'd expect for a 'local' property:
 
 > [!Proposition]
 > Let $X$ be a Hausdorff space. Then $X$ is locally compact iff for each $x\in X$ and each neighborhood $U\ni x$, there is a neighborhood $V\ni x$ such that $\overline{V}$ is compact and is contained in $U$: that is, $x\in V\subseteq \overline{V}\subseteq U$. 
@@ -116,4 +116,7 @@ If we assume $X$ is Hausdorff, local compactness permits the kind of formulation
 > > [!Proof]-
 > > 
 > > X is locally compact Hausdorff, so by [[#^6514af]] it has a one point compactification which is compact Hausdorff hence normal by [[Countability and Separation axioms#^ae93c1]].3. Then $X$ is a subspace of a normal space and hence regular by [[Countability and Separation axioms#^f0873d]].3. In fact, this shows that $X$ is completely regular since [[Urysohn Lemma and applications#^da93d4]]. 
+
+> [!Proposition]
+> The one-point compactification of a locally compact Hausdorff space $X$ is metrizable iff $X$ is second countable. 
 

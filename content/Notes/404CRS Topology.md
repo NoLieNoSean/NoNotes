@@ -60,7 +60,7 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 
 
 [[The quotient topology]]
-[[The fundamental group]]
+[[The fundamental group and covering spaces]]
 
 Lecture 6: @munkresTopology2000 §29
 
@@ -69,4 +69,6 @@ Lecture 6: @munkresTopology2000 §29
 feb 18: tietz, @munkresTopology2000 §30, 35
 feb 19: Topological groups. @munkresTopology2000 [p. 145]
 
-Test 1: Ch2, 3, 4 $\setminus$ §22-25, 30, 34
+---
+
+- Covering spaces generalize to fiber bundles.

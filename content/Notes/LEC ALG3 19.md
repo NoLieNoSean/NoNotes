@@ -219,6 +219,8 @@ An immediate corollary:
 > [!Corollary] Uniqueness of algebraic closures
 > Let $k$ be a field and $E/k$, $E'/k$ be algebraic extensions. Assume that $E, E'$ are algebraically closed. Then there exists an isomorphism $\tau:E\to E'$ over $k$. 
 
+^5c5fed
+
 
 
 [^4]: Note that $f^{\sigma}$ is NOT the image of $f$ under $\sigma$ (which would be $0$)!

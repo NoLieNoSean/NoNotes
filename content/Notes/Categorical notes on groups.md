@@ -141,4 +141,3 @@ We can now state the analog of [[#^79d9ee]]:
 > [!Remark]
 > The problem in $\textsf{Gp}$ is that $\mathrm{Im}~\varphi$ is not guaranteed to be normal in $G'$. However, cokernels may still be defined in $\textsf{Gp}$: the universal property is satisfied by $G'/N$, where $N$ is the smallest normal subgroup of $G'$ containing $\mathrm{Im}~\varphi$. But [[#^1e7b58]] fails, because the implication $(2)\implies(3)$ fails.
 
-^fc94af

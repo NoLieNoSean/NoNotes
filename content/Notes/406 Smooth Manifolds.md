@@ -10,6 +10,10 @@ draft: true
 # Preliminaries
 
 [[Analytic functions]]
+[[Tangent vectors in Rn as derivations]]
+
+%% 
 [[LEC CAL2 9|Multilinear algebra]]
 [[LEC CAL2 10|Differential forms]]
 
+ %%
