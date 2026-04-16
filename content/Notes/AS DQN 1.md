@@ -181,7 +181,7 @@ $$
 
 
 % latex-id: dfa3-007b-112c-42bb-adf5
-\tikzset{
+\tikzset{ 
       myarrowtip/.tip={Straight Barb[length=4pt,width=6pt]},
       arrow data/.style={%
       decoration={%

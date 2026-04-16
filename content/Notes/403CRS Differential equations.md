@@ -16,8 +16,8 @@ CMI, Jan-Apr 2026, Aditya Karnataki
 [[Linear systems of differential equations]]
 [[Nonlinear systems]]
 
-
-
-
-
 [[AS DQN 1]]
+
+[[Questions]]
+
+See @DifferentialEquationsUndetermined for the method of undetermined coefficients. 

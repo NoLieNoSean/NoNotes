@@ -162,8 +162,8 @@ tags:
 
 ^04d08c
 
-> [!Definition]
-> In light of [[The fundamental group and covering spaces#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
+> [!Definition] Covering space
+> In light of [[The fundamental group and covering spaces#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ with $p ^{-1}(U)$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
 > 
 > ```latex
 > % latex-id: b1a7-5b9e-3e80-4b99-adc2

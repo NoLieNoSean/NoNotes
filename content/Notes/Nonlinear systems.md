@@ -11,14 +11,40 @@ $$
 
 ^450f7c
 
-where $\mathbf{f}:E\to \mathbb{R}^{n}$ and $E$ is an open subset of $\mathbb{R}^{n}$. Under certain conditions on the function $\mathbf{f}$, the nonlinear system [[#^450f7c]] has a unique solution through each point $\mathbf{x}_{0}\in E$ defined on a maximal interval of existence $(\alpha, \beta)\subseteq \mathbb{R}$. 
+where $\mathbf{f}:E\to \mathbb{R}^{n}$ and $E$ is an open subset of $\mathbb{R}^{n}$. If we assume $\mathbf{f}$ is [[LEC CAL1 19#^c71feb|continuously differentiable]], the nonlinear system [[#^450f7c]] has a unique solution through each point $\mathbf{x}_{0}\in E$ defined on a maximal interval of existence $(\alpha, \beta)\subseteq \mathbb{R}$. 
 
-- In general, [[#^450f7c]] will have a solution if the function $\mathbf{f}$ is continuous. However, continuity of $\mathbf{f}$ is not sufficient to guarantee uniqueness of the solution. 
+- In general, [[#^450f7c]] will have a solution if the function $\mathbf{f}$ is continuous. However, ==continuity of== $\mathbf{f}$ ==is not sufficient to guarantee uniqueness of the solution==. 
 - Another way in which nonlinear systems differ from linear systems is that even when $\mathbf{f}$ in [[#^450f7c]] is defined and continuous for all $\mathbf{x}\in \mathbb{R}^{n}$, the solution $\mathbf{x}(t)$ may become unbounded at some finite time $t\in\beta$; i.e, the solution may only exist on some proper subinterval $(\alpha, \beta)\subseteq \mathbb{R}$. 
+
+> [!Example]
+> The IVP
+> $$
+> \begin{align}
+> \dot{x} & =3x^{2/3} \\
+> x(0) & =0
+> \end{align}
+> $$
+> has two different solutions through the point $(0, 0)$, namely $u(t)=t^{3}$ and $v(t)=0$ for all $t\in \mathbb{R}$. Notice that the function $f(x)=3x^{2/3}$ is continuous at $x=0$, but not differentiable there. 
+
+> [!Example]
+> Consider the initial value problem
+> $$
+> \begin{align}
+> \dot{x} & =x^{2} \\
+> x(0) & = 1. 
+> \end{align}
+> $$
+> The solution is given by
+> $$
+> x(t)=\frac{1}{1-t},
+> $$
+> and is only defined for $t\in(-\infty, 1)$, and $\lim_{ t \to 1^{-} }=\infty$. 
+
+
 # The existence-uniqueness theorem
 
 > [!Definition]
-> Suppose that $\mathbf{f}\in C(E)$ where $E$ is an open subset of $\mathbb{R}^{n}$. Then $\mathbf{x}(t)$ is a solution of the differential equation [[#^450f7c]] on an interval $I$ if $\mathbf{x}(t)$ is differentiable on $I$ and if for all $t\in I$, $\mathbf{x}(t)\in E$ and 
+> Suppose that $\mathbf{f}\in C(E)$ where $E$ is an open subset of $\mathbb{R}^{n}$. Then $\mathbf{x}(t)$ is a **solution of the differential equation [[#^450f7c]] on an interval $I$** if $\mathbf{x}(t)$ is differentiable on $I$ and if for all $t\in I$, $\mathbf{x}(t)\in E$ and 
 > $$
 > \mathbf{x}'(t)=\mathbf{f}(\mathbf{x}(t)).
 > $$
@@ -73,7 +99,7 @@ for $k=0, 1, 2, \dots$.
 > \Phi(0) & =I
 > \end{align}
 > $$
-> has a unique fundamental matrix solution $\Phi(t)$ on $[-a, a]$. 
+> has a unique solution $\Phi(t)$ on $[-a, a]$. 
 
 ^689702
 
@@ -112,8 +138,14 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 
 ^7d478a
 
+> [!Remark]
+> It follows from the continuity of the solution $\mathbf{u}(t, \mathbf{y})$ from [[#^7d478a]] that for each $t\in[-a, a]$, 
+> $$
+> \lim_{ \mathbf{y} \to \mathbf{x}_{0} } \mathbf{u}(t, \mathbf{y})=\mathbf{u}(t, \mathbf{x}_{0}).
+> $$
+> It follows from the proof that this limit is uniform for all $t\in[-a, a]$. 
 
-> [!Corollary]
+> [!Corollary]-
 > Under the hypothesis of the above theorem, 
 > $$
 > \Phi(t, \mathbf{y})=\frac{ \partial \mathbf{u} }{ \partial \mathbf{y} } (t, \mathbf{y})
@@ -148,8 +180,10 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 > > $$
 > > Also, from the initial condition $\mathbf{u}(0, \mathbf{y})=\mathbf{y}$, differentiating with respect to $\mathbf{y}$ gives $\Phi(0, \mathbf{y})=I$. 
 > > 
-> > $(\impliedby)$ Use [[#^689702]]. 
+> > $(\impliedby)$ Use the uniqueness assertion from [[#^689702]]. 
 > 
+
+^9457ce
 
 > [!Theorem] Dependence on Parameters
 > Let $E$ be an open subset of $\mathbb{R}^{n+m}$ containing the point $(\mathbf{x}_{0}, \boldsymbol{\mu}_{0})$ where $\mathbf{x}_{0}\in \mathbb{R}^{n}$ and $\boldsymbol{\mu}_{0}\in \mathbb{R}^{m}$ and assume that $\mathbf{f}\in C^{1}(E, \mathbb{R}^{n})$. It then follows that there exists an $a> 0$ and a $\delta> 0$ such that for all $\mathbf{y}\in B(\mathbf{x}_{0}, \delta)$ and $\boldsymbol{\mu}\in B(\boldsymbol{\mu}_{0}, \delta)$, the initial value problem
@@ -161,8 +195,7 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 > $$
 > has a unique solution $\mathbf{u}(t, \mathbf{y}, \boldsymbol{\mu})$ with $\mathbf{u}\in C^{1}(G)$, where $G=[-a, a]\times B(\mathbf{x}_{0}, \delta)\times B(\boldsymbol{\mu}_{0}, \delta)$. 
 
-This follows immediately from [[#^7d478a]] by replacing $\mathbf{x}_{0}$, $\mathbf{x}$, $\dot{\mathbf{x}}$, and $\mathbf{y}$ by the vectors $(\mathbf{x}_{0}, \boldsymbol{\mu}_{0})$, $(\mathbf{x}, \boldsymbol{\mu})$, $(\dot{\mathbf{x}}, \mathbf{0})$, and $(\mathbf{y}, \boldsymbol{\mu})$ and $\mathbf{f}$ with $(\mathbf{f}, \mathbf{0})$. 
-
+This follows immediately from [[#^7d478a]] by replacing $\mathbf{x}_{0}$, $\mathbf{x}$, $\dot{\mathbf{x}}$, and $\mathbf{y}$ by the vectors $(\mathbf{x}_{0}, \boldsymbol{\mu}_{0})$, $(\mathbf{x}, \boldsymbol{\mu})$, $(\dot{\mathbf{x}}, \mathbf{0})$, and $(\mathbf{y}, \boldsymbol{\mu})$.
 
 # Maximal interval of existence
 
@@ -181,6 +214,18 @@ $$
 
 > [!Theorem]
 > Let $E$ be an open subset of $\mathbb{R}^{n}$ and assume that $\mathbf{f}\in C^{1}(E)$. Then for each point $\mathbf{x}_{0}\in E$, there is a maximal interval $J$ on which the initial value problem [[#^af443f]] has a unique solution; i.e., if the IVP has a solution $\mathbf{y}(t)$ on an interval $I$ than $I\subseteq J$ and $\mathbf{y}(t)=\mathbf{x}(t)$ for all $t\in I$. Furthermore, $J$ is open. $J$ is called the **maximal interval of existence** of the solution $\mathbf{x}(t)$ of the IVP [[#^af443f]].
+
+
+> [!Theorem] @perkoDifferentialEquationsDynamical2009 Thm 2.4.3
+> Let $E$ be an open subset of $\mathbb{R}^{n}$ containing $\mathbf{x}_{0}$, let $\mathbf{f}\in C^{1}(E)$, and let $(0, \beta)$ be the right maximal interval of existence of the solution $\mathbf{x}(t)$ of the initial value problem [[#^af443f]]. Assume that $\beta< \infty$. Then given any compact set $K\subseteq E$, there exists a $t\in(0, \beta)$ such that $\mathbf{x}(t)\not\in K$. 
+
+> [!Corollary]
+> Under the hypothesis of the above theorem, if $\beta< \infty$, and if $\lim_{ t \to \beta^{-} }\mathbf{x}(t)$ exists then $\lim_{ t \to \beta^{-} }\mathbf{x}(t)\in \partial E$. 
+
+[!Theorem]
+Let $E$ be an open subset of $\mathbb{R}^{n}$ containing $\mathbf{x}_{0}$ and let $\mathbf{f}\in C^{1}(E)$. Suppose that the initial value problem [[#^af443f]]
+
+
 
 # Flow of a differential equation
 
@@ -231,6 +276,12 @@ x_{2}+x_{1}^{2}
 $$
 What is the general method to compute the solution to the IVP $\dot{\mathbf{x}}=\mathbf{f}(\mathbf{x})$ and $\mathbf{x}(0)=\mathbf{c}$ for nonlinear systems like this?
 # Variational equation
+
+
+
+
+
+
 
 
 

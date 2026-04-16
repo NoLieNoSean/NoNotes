@@ -52,9 +52,12 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 20]]
 [[LEC ALG4 21]]
 
+
+
 [[LEC ALG4 22]]
 [[LEC ALG4 23]]
-
+[[LEC ALG4 24]]
+[[LEC ALG4 25]]
 
 # Tutorials
 

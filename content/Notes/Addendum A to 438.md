@@ -9,7 +9,7 @@ draft: true
 
 
 > [!Definition] Fiber bundle, @weissteinFiberBundle
-> A **fiber bundle** with fiber $F$ is a map $f:E\to B$, where $E$ is called the total space of the fiber bundle and $B$ the base space of the fiber bundle, satisfying the following condition: each $b\in B$ has a neighborhood $U$ homeomorphic to $U\times F$ via $h:p ^{-1}(U)\to U\times F$ such that 
+> A **fiber bundle** with fiber $F$ is a map $p:E\to B$, where $E$ is called the total space of the fiber bundle and $B$ the base space of the fiber bundle, satisfying the following condition: each $b\in B$ has a neighborhood $U$ with $p^{-1}(U)$ homeomorphic to $U\times F$ via $h:p ^{-1}(U)\to U\times F$ such that 
 > 
 > ```latex
 > 
@@ -21,7 +21,7 @@ draft: true
 > ```
 > commutes. 
 > 
-> The homeomorphisms $h$ are called **local trivializations** for the fiber bundle $f$. In other words, $E$ looks like the product $B\times F$ (at least locally), except that the fibers $f^{-1}(x)$ for $x\in B$ may be "twisted".
+> The homeomorphisms $h$ are called **local trivializations** for the fiber bundle $p$. In other words, $E$ looks like the product $B\times F$ (at least locally), except that the fibers $p^{-1}(x)$ for $x\in B$ may be "twisted".
 
 ^a3d022
 

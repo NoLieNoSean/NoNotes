@@ -21,4 +21,8 @@ We say that a subset $C$ of $X$ is **saturated** with respective to a surjective
 > 1. If $A$ is either open or closed in $X$, then $q$ is a quotient map. 
 > 2. If $p$ is either an open map or a closed map, then $q$ is a quotient map. 
 
+The composite of two quotient maps is a quotient map. 
+
+> [!Theorem]
+> Let $p:X\to Y$ be a quotient map. Let $Z$ be a space and let $g:X\to Z$ be a map which is constant on the fibers of $p$. Then $g$ induces a map $f:Y\to Z$ such that $f\circ p=g$. The induced map $f$ is continuous iff $g$ is continuous; $f$ is a quotient map iff $g$ is a quotient map. 
 

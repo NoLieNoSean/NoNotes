@@ -61,6 +61,7 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 
 [[The quotient topology]]
 [[The fundamental group and covering spaces]]
+[[Retractions and fixed points]]
 
 Lecture 6: @munkresTopology2000 §29
 

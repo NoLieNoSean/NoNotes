@@ -67,6 +67,8 @@ Let $\phi:G\to \mathcal{G}$ be a homomorphism, and let $H<G$. Consider the restr
 > $$
 > such that $G_{i+1}/G_{i}$ is abelian for $0\leq i\leq s-1$. 
 
+^9d125f
+
 The following generalization of [[LEC ALG2 11#Sylow's theorems|Sylow's theorem]] characterizes finite solvable groups:
 
 > [!Theorem]
