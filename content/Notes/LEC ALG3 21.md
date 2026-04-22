@@ -125,4 +125,13 @@ Quick preliminary facts:
 > > [!Proof]-
 > > 
 > > Let's suppose that $K$ is finite and write $K=\{\alpha_{1}, \ldots , \alpha_{n}\}$. Now take the polynomial $p (x)=(x-\alpha_{1})\ldots (x-\alpha_{n}) +1\in K[x]$. It's easy to see that $p (x)$ doesn't have any roots in $K$. Hence, $K$ is not algebraically closed.
+
+> [!Proposition]
+> Let $K$ be an algebraic closure of $\mathbb{F}_{p}$. Let $\mathbb{F}_{p^{n}}\subseteq K$ be the set of roots of $x^{p^{n}}-x\in \mathbb{F}_{p}[x]$. Then, 
+> $$
+> K=\bigcup_{n\geqslant 1} \mathbb{F}_{p^{n}}.
+> $$
+> > [!Proof]-
+> > 
+> > By definition, the union is contained in $K$. Let $\alpha\in K$. By definition, $\alpha$ is algebraic over $\mathbb{F}_{p}$. The extension $\mathbb{F}_{p}(\alpha)/\mathbb{F}_{p}$ is algebraic and finitely generated, and hence is finite by [[LEC ALG3 16#^167dcc]]. Thus, $\mathbb{F}_{p}(\alpha)$ is a finite field and must be equal to $\mathbb{F}_{p^{n}}$ for some $n$. 
 > 

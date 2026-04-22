@@ -109,7 +109,7 @@ By [[LEC ALG3 15#^5c70c9]], If $K/F$ and $\alpha\in K$ is algebraic, then $F(\al
 ^67e6e4
 
 > [!Proposition]
-> A finite extension of fields is a finitely generated extension. The converse is not true in general.
+> A finite extension of fields is a finitely generated extension. *The converse is not true in general*.
 > 
 > > [!Proof]-
 > > 

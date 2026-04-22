@@ -66,6 +66,48 @@ tags:
 > > 
 > 
 
+^7b54bf
+
+[[#^7b54bf]] can be stated with slightly more general hypotheses.
+
+> [!Lemma]
+> Let $\varphi_{1}:F_{1}\to F_{2}$ be a field isomorphism. Let $f_{1}\in F_{1}[x]$ be irreducible. Write $f_{2}:=\hat{\varphi f_{1}}$. Let $\alpha_{i}\in \overline{F}_{i}$ be a root of $f_{i}$ for $i=1, 2$. Then there exists an isomorphism $\theta: F_{1}(\alpha_{1})\to F_{2}(\alpha_{2})$ extending $\varphi$ such that $\theta(\alpha_{1})=\alpha_{2}$. 
+> 
+> > [!Proof]-
+> > 
+> > $\hat{\varphi}:F_{1}[x]\to F_{2}[x]$ is an isomorphism. Clearly, 
+> > $$
+> > \frac{F_{1}[x]}{f_{1}(x)}\to\frac{F_{2}[x]}{\hat{\varphi}f_{1}(x)}
+> > $$
+> > is an isomorphism. 
+> 
+
+^955372
+
+> [!Theorem] @isaacsAlgebraGraduateCourse2009 17.22
+> Let $\varphi:F_{1}\to F_{2}$ be an isomorphism of fields. Let $f_{1}\in F_{1}[x]$, $f_{2}=\hat{\varphi}f_{1}$. Let $E_{i}$ be a splitting field of $f_{i}$ over $F_{i}$. Then $\varphi$ extends to an isomorphism $E_{1}\to E_{2}$. 
+> 
+> > [!Proof]-
+> > 
+> > Induct on $[E_{1}:F_{1}]$.
+> > 
+> > $[E_{1}:F_{1}]=1$ $\iff$ $f_{1}(x)$ splits into linear factors over $F_{1}$ $\iff$ $f_{2}(x)$ splits into linear factors over $F_{2}$ $\iff$ $E_{2}=F_{2}$; thus $E_{1}\cong E_{2}$. 
+> > 
+> > Next, suppose $[E_{1}:F_{1}]> 1$. Let $\alpha_{1}\in E_{1}\setminus F_{1}$ be a root of $f_{1}$. Let $g_{1}\in F_{1}[x]$ be the minimal polynomial of $\alpha_{1}$. Let $g_{2}=\hat{\varphi}g_{1}$. $g_{2}$ is an irreducible factor of $f_{2}$. Let $\alpha_{2}\in E_{2}$ be a root of $g_{2}$. 
+> > 
+> > By [[#^955372]], there exists $\theta:F_{1}(\alpha)\to F_{2}(\alpha)$ such that the lower rectangle of this diagram commutes, since $[E_{1}:F_{1}(\alpha)]<[E_{1}:F_{1}]$. 
+> > 
+> > ```latex
+> > % latex-id: 8062-ad2a-d22b-4bfb-a6c4
+> > \begin{document}
+> > % https://q.uiver.app/#q=WzAsNixbMCwyLCJGXzEiXSxbMSwyLCJGXzIiXSxbMCwxLCJGXzEoXFxhbHBoYSkiXSxbMSwxLCJGXzIoXFxhbHBoYSkiXSxbMCwwLCJFXzEiXSxbMSwwLCJFXzIiXSxbNCw1LCJcXHRhdSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyLDMsIlxcZXhpc3RzXFx0aGV0YSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsIlxcdmFycGhpIl0sWzAsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMSwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDQsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzMsNSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0= 
+> > \[\begin{tikzcd} {E_1} & {E_2} \\ {F_1(\alpha)} & {F_2(\alpha)} \\ {F_1} & {F_2} \arrow["\tau", dotted, from=1-1, to=1-2] \arrow[hook', from=2-1, to=1-1] \arrow["{\exists\theta}", dashed, from=2-1, to=2-2] \arrow[hook', from=2-2, to=1-2] \arrow[hook', from=3-1, to=2-1] \arrow["\varphi", from=3-1, to=3-2] \arrow[hook', from=3-2, to=2-2] \end{tikzcd}\]
+> > \end{document}
+> > ```
+> > 
+> > By induction, there exists an isomorphism $\tau:E_{1}\to E_{2}$ extending $\theta$. Thus, $\tau$ extends $\varphi$. 
+
+^bcf07f
 
 [^1]: When you multiply $c(x-\beta_{1}^{\tau})\dots(x-\beta_{n}^{\tau})$ out, you just get $f(x)$ with each of its coefficients wrapped in $\tau$, which is just $f(x)$. 
 
@@ -128,6 +170,29 @@ by [[LEC ALG3 15#^6a4ad7]]. Thus, $\mathbb{Q}[x]/(x^{3}-2)$ contains the real ro
 > An extension satisfying one of these properties is called a **normal extension**.
 
 ^b78800
+
+[!Proposition]
+Let $E/F$ be finite. TFAE:
+1. $E/F$ is normal. 
+2. $E$ is a splitting field of a polynomial. 
+3. For all fields $L/E$ and for all $F$-embeddings $\sigma:E\to L$, $\sigma(E)=E$. 
+
+[!Proof]-
+
+Write $E=F(\alpha_{1}, \dots, \alpha_{n})$. Let $g=\prod\text{irr}(F, \alpha_{i})$. 
+
+$(1 \implies 2)$ For all $i$, all the $F$-conjugates of $\alpha_{i}$ are in $E$. $E$ contains all the roots of $g$. Thus, 
+$$
+E=F(\alpha_{1}, \dots, \alpha_{n})\subseteq F(\text{all roots of }g)\subseteq E.
+$$
+So, $E$ is a splitting filed of $g$. 
+
+$(2\implies 3)$ Let $\sigma:E\to L$ be an $F$-embedding. Let $E$ be the splitting field of some $h\in F[x]$. $\sigma(E)$ is a subfield of $L$. $\sigma(E)$ is a splitting field of $h$. $\sigma$ permutes the roots of $h$. Thus, $E=\sigma(E)$. Alternatively, use the uniqueness of splitting fields[^1].
+
+$(3 \implies 1)$ Let $\alpha\in E$, and $f=\text{irr}(F, \alpha)$. Let $L\supseteq E$ be a splitting field of $fg$. Let $\Omega=\{ \beta\in L : f(\beta)=0\}$. Let $\sigma\in \text{Aut}_{F}(L)$. By @isaacsAlgebraGraduateCourse2009 18.3, $\text{Aut}_{F}L$ acts transitively on $\Omega$. Let $\beta\in \Omega$. There exists $\sigma\in \text{Aut}_{F}L$ such that $\sigma(\alpha)=\beta$. Since $\sigma\ | \ _E$ is an $F$-embedding of $E$ into $L$, $\sigma(E)=E$ by hypothesis. Thus, $\beta\in E$, and $\Omega \subseteq E$. But $\Omega$ contains all roots of $f$ in $L$. Thus every $F$-conjugate of $\alpha$ belongs to $E$. 
+
+[^1]: Let $L/F$, $f\in F[x]$. Suppose that $f$ splits over $L$. Then there exists unique $E\subseteq L$ such that $E$ is a splitting field of $f$. 
+
 
 > [!Theorem] @langAlgebra2002 5.3.4
 > Normal extensions remain normal under lifting. If $K\supseteq E\supseteq k$ and $K$ is normal over $k$, then $K$ is normal over $E$. If $K_{1}, K_{2}$ are normal over $k$ and are contained in some field $L$, then $K_{1}K_{2}$ is normal over $k$, and so is $K_{1}\cap K_{2}$. 

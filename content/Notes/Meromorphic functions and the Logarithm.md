@@ -274,7 +274,7 @@ See @OpenMappingTheorem2026
 Proof uses [[#^d304b2]]. 
 
 > [!Theorem] Maximum modulus principle, @steinComplexAnalysis2003 3.4.5
-> If $f$ is a non-constant holomorphic function in a region $\Omega$, then $f$ cannot attain a maximum in $\Omega$.
+> If $f$ is a non-constant holomorphic function in a region $\Omega$, then $|f|$ cannot attain a maximum in $\Omega$.
 
 Proof uses [[#^7ea52e]]. 
 
@@ -285,6 +285,8 @@ Proof uses [[#^7ea52e]].
 > \sup_{z\in \Omega}|f(z)|\leqslant \sup_{z\in \overline{\Omega}\setminus \Omega} |f(z)|.
 > \end{align}
 > $$
+
+^cd86f1
 
 In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(z)|$ attains its maximum in $\overline{\Omega}$; but this cannot be in $\Omega$ if $f$ is non-constant. If $f$ is constant, the conclusion is trivial. 
 

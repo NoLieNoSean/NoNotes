@@ -46,18 +46,15 @@ CMI, Jan-Apr 2026, Manoj Kummini
 ## Galois Theory
 
 [[LEC ALG4 16]] ✅ Primitive element theorem
-[[LEC ALG4 17]] ✅ Automorphisms of fields
-[[LEC ALG4 18]] ✅ Some results on finite subgroups of $\text{Aut}_{F}(E)$
-[[LEC ALG4 19]]
-[[LEC ALG4 20]]
-[[LEC ALG4 21]]
-
-
-
-[[LEC ALG4 22]]
-[[LEC ALG4 23]]
-[[LEC ALG4 24]]
-[[LEC ALG4 25]]
+[[LEC ALG4 17]] ✅ Galois connections, Galois extensions, computing Galois groups, ==symmetric polynomials==
+[[LEC ALG4 18]] ✅ Order of Galois groups
+[[LEC ALG4 19]] ✅ When is a finite extension Galois?
+[[LEC ALG4 20]] ✅ -
+[[LEC ALG4 21]] ✅ The fundamental theorem of Galois theory 
+[[LEC ALG4 22]] ✅ Purely inseparable extensions
+[[LEC ALG4 23]] ✅ Computing Galois groups for degree 2 and 3, the discriminant
+[[LEC ALG4 24]] Cyclotomic extensions
+[[LEC ALG4 25]] Solvability by radicals
 
 # Tutorials
 
