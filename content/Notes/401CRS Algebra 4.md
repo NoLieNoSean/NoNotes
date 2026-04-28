@@ -53,7 +53,7 @@ CMI, Jan-Apr 2026, Manoj Kummini
 [[LEC ALG4 21]] ✅ The fundamental theorem of Galois theory 
 [[LEC ALG4 22]] ✅ Purely inseparable extensions
 [[LEC ALG4 23]] ✅ Computing Galois groups for degree 2 and 3, the discriminant
-[[LEC ALG4 24]] Cyclotomic extensions
+[[LEC ALG4 24]] ✅ Cyclotomic extensions
 [[LEC ALG4 25]] Solvability by radicals
 
 # Tutorials

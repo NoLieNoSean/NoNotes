@@ -53,23 +53,16 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 ```
 ---
 
-[[Preliminaries to Topology]] ✅ Basis and subbasis, subspace topology, product topology, metric topology, continuity
+[[Preliminaries to Topology]] ✅
 [[Countability and Separation axioms]]
 [[Compactness]]
 [[Urysohn Lemma and applications]]
+[[Stone-Čech Compactification]]
 
-
-[[The quotient topology]]
+[[The quotient topology]] ✅
 [[The fundamental group and covering spaces]]
 [[Retractions and fixed points]]
 
-Lecture 6: @munkresTopology2000 §29
+
 
 [[HW TOP 1]]
-
-feb 18: tietz, @munkresTopology2000 §30, 35
-feb 19: Topological groups. @munkresTopology2000 [p. 145]
-
----
-
-- Covering spaces generalize to fiber bundles.

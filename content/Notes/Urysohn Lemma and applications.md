@@ -25,8 +25,10 @@ tags:
 > [!Definition]
 > If $A$ and $B$ are two subsets of the topological space $X$, and if there is a continuous function $f:X\to[0, 1]$ such that $f(A)=\{ 0 \}$ and $f(B)=\{ 1 \}$, we say that $A$ and $B$ can be **separated by a continuous function**. 
 
-> [!Definition]
+> [!Definition] Complete regularity
 > A space $X$ is **completely regular** if one-point sets are closed in $X$ and if for each point $x_{0}$ and each closed set $A$ not containing $x_{0}$, there is a continuous function $f:X\to[0, 1]$ such that $f(x_{0})=1$ and $f(A)=\{ 0 \}$. 
+
+^994616
 
 > [!Proposition]
 > A subspace of a completely regular space is completely regular. A product of completely regular spaces is completely regular. 
@@ -58,6 +60,8 @@ tags:
 > > $(\implies)$ For every pair $(x, U)$, where $x\in X$ and $U$ is an open neighborhood of $x$, let $f_{(x, U)}$ be the function which is $1$ on $x$ and zero on $\overline{U}$. Use [[#^3206b8]] with the collection $\{ f_{(x, U)} \}$. 
 > > 
 > > $(\impliedby)$ Follows immediately from [[#^da93d4]]. 
+
+^72b42d
 
 ---
 

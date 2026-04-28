@@ -5,6 +5,7 @@ time: 12:55
 tags:
   - TOP
 ---
+# Homotopy of paths
 
 > [!Definition] Homotopy
 > A **homotopy** between maps $p, q:X\to Y$ is a continuous map $h:X\times I\to Y$ such that $h(\_{}, 0)=p$ and $h(\_{, 1})=q$, where $I=[0, 1]$. 
@@ -130,12 +131,24 @@ tags:
 
 ^d124dc
 
+---
+
+# The fundamental group
+
 > [!Definition] Fundamental group
 > Define $\pi_{1}(X, x)$ to be the set of equivalence classes of loops that start and end at $x$. By [[The fundamental group and covering spaces#^d124dc]], this is a group. We call this the **fundamental group of $X$ relative the the base point $x$**. 
 
 > [!Proposition]
-> If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$. 
+> If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$; this allows us to speak of "the" fundamental group of $X$. Precisely, every path $\alpha$ from $x_{0}$ to $x_{1}$ induces an isomorphism $\hat{\alpha}:\pi_{1}(X, x_{0})\to \pi_{1}(X, x_{1})$. The isomorphism is independent of the path iff the fundamental group is abelian. 
 
+> [!Remark]
+> The map from the category of pointed topological spaces to $\textsf{Gp}$ which maps $(X, x_{0})\mapsto \pi_{1}(X, x_{0})$ and $h:(X, x_{0})\to(Y, y_{0})$ to
+> $$
+> h_{*}:\pi_{1}(X, x_{0})\to \pi_{1}(Y, y_{0}), \quad [f]\mapsto[h\circ f]
+> $$
+> is a [[Category Theory Preliminaries II#^56cdbe|functor]]. 
+
+^3d339c
 
 [^1]: @munkresTopology2000 51.1
 
@@ -149,7 +162,7 @@ tags:
 > If every point $b\in B$ has a neighborhood $U$ that is evenly covered by $p$, then $p$ is called a **covering map**, and $E$ is said to be a **covering space** of $B$. 
 
 > [!Proposition] @munkresTopology2000 Exr. 53.3
-> Let $p:E\to B$ be a covering map; let $B$ be connected. Show that if $p ^{-1}(b_{0})$ has cardinality $c$, then $p ^{-1}(b)$ has cardinality $c$ for every $b\in B$. In such a case, we call $E$ a **$c$-fold covering** of $B$. 
+> Let $p:E\to B$ be a covering map; let $B$ be connected. Show that if $p ^{-1}(b_{0})$ has cardinality $c$, then $p ^{-1}(b)$ has cardinality $c$ for every $b\in B$. We call $E$ a **$c$-fold covering** of $B$. 
 > 
 > > [!Proof]-
 > > 
@@ -181,3 +194,39 @@ Covering spaces are instances of [[Addendum A to 438#^a3d022|fiber bundles]].
 > 1. for each $b\in B$, the subspace $p ^{-1}(b)\subseteq E$ has the discrete topology. 
 > 2. $p$ is an open map. 
 > 3. $p$ is a local homeomorphism of $E$ with $B$. The converse is not true. 
+
+> [!Proposition]
+> Let $p:E\to B$ be a covering map. If $B_{0}$ is a subspace of $B$, and if $E_{0}=p ^{-1}(B_{0})$, then the map $p_{0}:E_{0}\to B_{0}$ obtained by restricting $p$ is a covering map. 
+
+> [!Theorem]
+> If $p:E\to B$ and $p':E'\to B'$ are covering maps, then
+> $$
+> p\times p':E\times E'\to B\times B'
+> $$
+> is a covering map. 
+
+
+## Covering spaces and fundamental groups
+
+> [!Definition] Lifting
+> Let $p:E\to B$ be a map. If $f$ is a continuous mapping of some space $X$ into $B$, a **lifting** of $f$ is a map $\tilde{f}:X\to E$ such that $p\circ \tilde{f}=f$. 
+
+> [!Theorem]
+> Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Paths $f:[0, 1]\to B$ beginning at $b_{0}$  (homotopies $F:[0, 1]^{2}\to B$ with $F(0, 0)=b_{0}$) have a unique lifting such that $\tilde{f}(0)=e_{0}$ ($\tilde{F}(0, 0)=e_{0}$). If $F$ is a path homotopy, $\tilde{F}$ is a path homotopy. 
+
+Proof apples the [[LEC CAL1 8#Lebesgue covering Lemma|Lebesgue number lemma]] to $f([0, 1])$ ($F([0, 1]^{2})$).
+
+> [!Theorem]
+> Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Let $f$ and $g$ be two paths in $B$ from $b_{0}$ to $b_{1}$. Let $\tilde{f}$ and $\tilde{g}$ be their respective lifts to paths in $E$ beginning at $e_{0}$. If $f$ and $g$ are path homotopic, then $\tilde{f}$ and $\tilde{g}$ end at the same point of $E$ and are path homotopic. 
+
+> [!Definition]
+> Let $p:E\to B$ be a covering map; let $b_{0}\in B$. Choose $e_{0}$ such that $p(e_{0})=b_{0}$. Then, $\pi_{1}(B, b_{0})$ acts on $p ^{-1}(b_{0})$. The map $[f]\mapsto \tilde{f}(1)$, where $\tilde{f}$ is the lift of $f$ starting at $e_{0}$, is called the **lifting correspondence**. 
+
+> [!Theorem]
+> Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. 
+> 1. If $E$ is path connected, the lifting correspondence $\phi:\pi_{1}(B, b_{0})\to p ^{-1}(b_{0})$ is surjective. 
+> 2. If $E$ is simply connected, the lifting correspondence is bijective. 
+> 3. The homomorphism $p_{*}:\pi_{1}(E, e_{0})\to \pi_{1}(B, b_{0})$ is a monomorphism. 
+> 4. Let $H=p_{*}(\pi_{1}(E, e_{0}))$. The lifting correspondence $\phi$ induces an injective map $\pi_{1}(B, b_{0})/H\to p ^{-1}(b_{0})$ of the collection of right cosets of $H$ into $p ^{-1}(b_{0})$, which is injective if $E$ is path connected. 
+> 5. If $f$ is a loop in $B$ based at $b_{0}$, then $[f]\in H$ iff $f$ lifts to a loop in $E$ based at $e_{0}$. 
+

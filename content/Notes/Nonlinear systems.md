@@ -3,6 +3,7 @@ id: "441"
 date: 2026-03-29
 time: 14:41
 tags:
+  - DEQN
 ---
 We will now look at nonlinear autonomous systems of differential equations
 $$
@@ -91,7 +92,21 @@ $$
 for $k=0, 1, 2, \dots$. 
 
 
-> [!Exercise] ✦
+## Non-autonomous systems
+
+> [!Exercise] ✦ @perkoDifferentialEquationsDynamical2009 Exr 2.3
+> Use the method of successive approximations to show that if $\mathbf{f}(\mathbf{x}, t)$ is continuous in $t$ for all $t$ in some interval containing $t=0$ and continuously differentiable in $\mathbf{x}$ for all $\mathbf{x}$ in some open set $E\subseteq \mathbb{R}^{n}$ containing $\mathbf{x}_{0}$, then there exists an $a> 0$ such that the initial value problem
+> $$
+> \begin{align}
+> \mathbf{\dot{x}} & =\mathbf{f}(\mathbf{x}, t) \\
+> \mathbf{x}(0) & =\mathbf{x}_{0}
+> \end{align}
+> $$
+> has a unique solution $\mathbf{x}(t)$ on the interval $[-a, a]$. 
+
+^6cd5e1
+
+> [!Exercise] ✦ @perkoDifferentialEquationsDynamical2009 Exr 2.4
 > Use the method of successive approximations to show that if the matrix valued function $A(t)$ is continuous on $[-a_{0}, a_{0}]$ then there exists an $a> 0$ such that the initial value problem
 > $$
 > \begin{align}
@@ -99,9 +114,35 @@ for $k=0, 1, 2, \dots$.
 > \Phi(0) & =I
 > \end{align}
 > $$
-> has a unique solution $\Phi(t)$ on $[-a, a]$. 
+> has a unique fundamental matrix solution $\Phi(t)$ on $[-a, a]$. 
 
 ^689702
+
+Assume the hypotheses of [[#^689702]]. By [[#^6cd5e1]], for each $\mathbf{x}_{0}\in \mathbb{R}^{n}$ (where $n$ is the rank of $A(t)$), there exists an $a'> 0$ such that the IVP
+$$
+\begin{align}
+\dot{\mathbf{x}} & =A(t)\mathbf{x} \\
+\mathbf{x}(0) & =\mathbf{x}_{0}
+\end{align}
+$$
+has a unique solution $\mathbf{x}(t)$ for $t\in[-a', a']$. However, by [[#^689702]], a fundamental matrix solution $\Phi(t)$ exists for $t\in[-a, a]$, and we see that $\mathbf{\overline{x}}(t)=\Phi(t)\mathbf{x}_{0}$ is a valid solution for the above IVP on that interval. By the uniqueness of $\mathbf{x}(t)$, we must have
+$$
+\mathbf{x}(t)=\Phi(t)\mathbf{x}_{0}
+$$
+on the smaller of the two intervals. 
+
+However, it seems we can do better:
+
+> [!Theorem]
+> Let $A(t)$ be a continuous family of $n\times n$ matrices defined for $t\in[\alpha, \beta]$ containing $0$. Then the initial value problem 
+> $$
+> \begin{align}
+> \dot{\mathbf{x}} & =A(t)\mathbf{x} \\
+> \mathbf{x}(0) & =\mathbf{x}_{0}
+> \end{align}
+> $$
+> has a unique solution that is defined on the entire interval $[\alpha, \beta]$. 
+
 
 # Dependence on Initial conditions and parameters
 
@@ -125,6 +166,26 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 > $$
 > g(t)\leqslant Ce^{ Kt }.
 > $$
+> 
+> > [!Proof]-
+> > 
+> > Let $G(t)=C+K\int_{0}^{t} g(s) \, ds$ for $t\in[0, a]$. Then, $G(t)\geqslant g(t)$ and $G(t)> 0$ for $t\in[0, a]$. Using the fundamental theorem of calculus, we have
+> > $$
+> > \frac{d}{dt} \log G(t)=\frac{G'(t)}{G(t)}=\frac{Kg(t)}{G(t)}\leqslant \frac{KG(t)}{G(t)}=K.
+> > $$
+> > Thus, 
+> > $$
+> > \begin{align}
+> > \log G(t)-\log G(0)\leqslant Kt
+> > \end{align}
+> > $$
+> > or
+> > $$
+> > G(t)\leqslant G(0)e^{ Kt }=Ce^{ Kt }
+> > $$
+> > for all $t\in[0, a]$, which implies $g(t)\leqslant Ce^{ Kt }$ for all $t\in[0, a]$. 
+> 
+
 
 > [!Theorem] Dependence on initial conditions
 > Let $E$ be an open subset of $\mathbb{R}^{n}$ containing $\mathbf{x}_{0}$ and assume that $\mathbf{f}\in C^{1}(E)$. Then there exists an $a> 0$ and a $\delta> 0$ such that for all $\mathbf{y}\in B(\mathbf{x}_{0}, \delta)$ the IVP
@@ -137,6 +198,10 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 > has a unique solution $\mathbf{u}(t, \mathbf{y})$ with $\mathbf{u}\in C^{1}(G)$ where $G=[-a, a]\times B(\mathbf{x}_{0}, \delta)\subseteq \mathbb{R}^{n+1}$; furthermore, for each $\mathbf{y}\in B(\mathbf{x}_{0}, \delta)$, $\mathbf{u}(t, \mathbf{y})$ is a twice continuously differentiable function of $t$ for $t\in[-a, a]$.
 
 ^7d478a
+
+[!Proof]-
+
+
 
 > [!Remark]
 > It follows from the continuity of the solution $\mathbf{u}(t, \mathbf{y})$ from [[#^7d478a]] that for each $t\in[-a, a]$, 
@@ -215,7 +280,6 @@ $$
 > [!Theorem]
 > Let $E$ be an open subset of $\mathbb{R}^{n}$ and assume that $\mathbf{f}\in C^{1}(E)$. Then for each point $\mathbf{x}_{0}\in E$, there is a maximal interval $J$ on which the initial value problem [[#^af443f]] has a unique solution; i.e., if the IVP has a solution $\mathbf{y}(t)$ on an interval $I$ than $I\subseteq J$ and $\mathbf{y}(t)=\mathbf{x}(t)$ for all $t\in I$. Furthermore, $J$ is open. $J$ is called the **maximal interval of existence** of the solution $\mathbf{x}(t)$ of the IVP [[#^af443f]].
 
-
 > [!Theorem] @perkoDifferentialEquationsDynamical2009 Thm 2.4.3
 > Let $E$ be an open subset of $\mathbb{R}^{n}$ containing $\mathbf{x}_{0}$, let $\mathbf{f}\in C^{1}(E)$, and let $(0, \beta)$ be the right maximal interval of existence of the solution $\mathbf{x}(t)$ of the initial value problem [[#^af443f]]. Assume that $\beta< \infty$. Then given any compact set $K\subseteq E$, there exists a $t\in(0, \beta)$ such that $\mathbf{x}(t)\not\in K$. 
 
@@ -280,8 +344,9 @@ What is the general method to compute the solution to the IVP $\dot{\mathbf{x}}=
 
 
 
+---
 
-
+# Linearization
 
 
 

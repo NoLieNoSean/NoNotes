@@ -3,6 +3,8 @@ id: "446"
 date: 2026-04-10
 time: 11:54
 tags:
+  - Lecture
+  - ALG4
 ---
 # Cyclotomic extensions
 
@@ -36,7 +38,7 @@ Let $F$ be a field of characteristic $0$. An **$n$th root of unity** in $F$ is a
 > 
 > > [!Proof]-
 > > 
-> > Firstly, it is clear that all the coefficients of $\Phi_{n}(x)$ are real (by grouping complex conjugates). The claim is true for $n=1$. 
+> > First, it is clear that all the coefficients of $\Phi_{n}(x)$ are real (by grouping complex conjugates). The claim is true for $n=1$. 
 > > 
 > > Assume $n> 1$. Assume for all $d\ | \ n$ and $d< n$, $\Phi_{d}(x)\in \mathbb{Z}[x]$. Further, each $\Phi_{d}(x)$ is monic. Thus, 
 > > $$
@@ -59,22 +61,17 @@ Let $F$ be a field of characteristic $0$. An **$n$th root of unity** in $F$ is a
 > The $n$th cyclotomic field extension of $\mathbb{Q}$ is defined to be $E_{n}:=\mathbb{Q}[\zeta_{n}]$. 
 
 > [!Remark]
-> 1. $E_{n}=\mathbb{Q}[\zeta_{n}^{k}]$ for any $(n, k)=1$. 
-> 2. $E_{n}$ is the splitting field $(\subseteq \mathbb{C})$ ov $x^{n}-1$ over $\mathbb{Q}$. 
+> 4. $E_{n}=\mathbb{Q}[\zeta_{n}^{k}]$ for any $(n, k)=1$. 
+> 5. $E_{n}$ is the splitting field $(\subseteq \mathbb{C})$ of $x^{n}-1$ over $\mathbb{Q}$. 
 
 > [!Proposition]
 > $\text{Aut}(E_{n})\quad(=\text{Aut}_{\mathbb{Q}}(E_{n}))\quad\cong \text{Aut}_{\textsf{Gp}}(\mathbb{Z}/n\mathbb{Z})\cong(\mathbb{Z}/n\mathbb{Z})^{\times}$.
 
 
-
 ---
 
-[!Theorem]
-Let $G$ be finite abelian. Then there exists a finite Galois extension $F/\mathbb{Q}$ such that $\text{Aut}_{\mathbb{Q}}(F)\cong G$. 
+> [!Theorem]
+> Let $G$ be finite abelian. Then there exists a finite Galois extension $F/\mathbb{Q}$ such that $\text{Aut}_{\mathbb{Q}}(F)\cong G$. 
 
-
-[!Theorem] @isaacsAlgebraGraduateCourse2009 20.13
-For all $n> 1$, there exist infinitely many prime numbers $p$ such that $p\equiv1 \mod n$. 
-
-[!Proof]-
-For all $n> 1$, $p\ | \ \Phi_{n}(n)\implies p\equiv 1 \mod n$. 
+> [!Theorem] @isaacsAlgebraGraduateCourse2009 20.14
+> For all $n> 1$, there exist infinitely many prime numbers $p$ such that $p\equiv1 \mod n$. 

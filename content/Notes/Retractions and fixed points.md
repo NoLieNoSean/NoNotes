@@ -12,6 +12,13 @@ tags:
 > 1. $h$ is nullhomotopic. 
 > 2. $h$ extends to a continuous map $k:B^{2}\to X$. 
 > 3. $h_{*}$ is the trivial homomorphism of fundamental groups. 
+> 
+> > [!Proof]-
+> > 
+> > $(1\implies 2)$ Use the [[The quotient topology#^461a5c|universal property of quotient maps]]. 
+> > $(2\implies 3)$ Use [[The fundamental group and covering spaces#^3d339c|funtoriality]] of the map $h\mapsto h_{*}$. 
+> > $(3 \implies 1)$ Use the [[The quotient topology#^461a5c|universal property of quotient maps]]. 
+> 
 
 > [!Theorem]
 > Given a nonvanishing vector field on $B^{2}$, there exists a point of $S^{1}$ where the vector field points directly inward and a point of $S^{1}$ where it points directly outward. 

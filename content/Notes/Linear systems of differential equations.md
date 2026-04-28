@@ -3,8 +3,7 @@ id: "384"
 date: 2026-01-13
 time: 10:16
 tags:
-  - DQN
-  - Lecture
+  - DEQN
 ---
 Recall that the general solution for the first-order linear differential equation $\dot{x}=ax$ is $x(t)=ce^{ at }$. 
 
@@ -247,20 +246,3 @@ Once we have found a fundamental matrix solution, it is easy to solve the nonhom
 > \mathbf{x}(t)=e^{ At }\mathbf{x}_{0}+e^{ At }\int_{0}^{t} e^{ -A\tau }\mathbf{b}(\tau) \, d\tau.
 > $$
 > 
-
----
-
-> [!Theorem] Lie
-> Assume $\varphi_{t}$ is a $1$-parameter subgroup leaving 
-> $$
-> \frac{dy}{dx} = \frac{Y(x, y)}{X(x, y)}
-> $$
-> stable. Let $\Phi_{p}=\left. \frac{d}{dt}\varphi_{t}(p) \right|_{t=0}$ be given by
-> $$
-> \Phi_{p}=\xi(x, y)\frac{ \partial  }{ \partial x } +\eta(x, y) \frac{ \partial  }{ \partial y } .
-> $$
-> Then there exists a function $U(x, y)$ such that
-> $$
-> \frac{ \partial U }{ \partial x } =\frac{-Y}{X\eta-Y\xi}, \quad \frac{ \partial U }{ \partial y } =\frac{X}{X\eta-Y\xi},
-> $$
-> with $U(x, y)=c$ being solutions to the differential equation.  

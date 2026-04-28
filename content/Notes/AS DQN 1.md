@@ -3,7 +3,7 @@ id: "395"
 date: 2026-01-26
 time: 13:08
 tags:
-  - DQN
+  - DEQN
 ---
 
 # Problem 1.4

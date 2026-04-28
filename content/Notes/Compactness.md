@@ -53,6 +53,11 @@ For metric spaces, we get a refinement of compactness: the [[LEC CAL1 8#Lebesgue
 > > First, show that given any nonempty open set $U$ of $X$ and any point $x$ of $X$, there exists a nonempty open set $V$ contained in $U$ such that $x\not\in \overline{V}$; this used the Hausdorff hypothesis. Then, show that given $f:\mathbb{Z}_{+}\to X$, $f$ is not surjective by constructing a descending chain of closed intervals $\overline{V}_{1}\supseteq \overline{V}_{2}\supseteq\dots$ such that $\overline{V}_{n}$ does not contain $x_{n}$. Using the finite intersection property, $\bigcap \overline{V}_{n}$ is nonempty, and the element contained in this intersection cannot be in the image of $f$. 
 > 
 
+> [!Exercise]
+> A compact subspace of a Hausdorff space is closed. 
+
+^935571
+
 
 ---
 
@@ -83,6 +88,8 @@ For metric spaces, compactness, limit point compactness, and sequential compactn
 > [!Definition] Local compactness
 > A space $X$ is called **locally compact** at $x$ if there is a compact subspace $C$ of $X$ that contains a neighborhood $V$ of $x$: that is, $x\in V\subseteq C\subseteq X$. A space is locally compact if it is locally compact at $x$ for all $x\in X$. 
 
+Clearly, a compact space is locally compact. 
+
 > [!Theorem]
 > Let $X$ be a space. Then $X$ is locally compact Hausdorff iff there exists a space $Y$ satisfying the following conditions:
 > 1. $X$ is a subspace of $Y$. 
@@ -93,13 +100,24 @@ For metric spaces, compactness, limit point compactness, and sequential compactn
 
 ^6514af
 
-> [!Definition]
-> If $Y$ is a compact Hausdorff space and $X$ is a proper subspace of $Y$ whose closure equals $Y$, then $Y$ is said to be a **compactification** of $X$. If $Y\setminus X$ equals a single point, then $Y$ is called the **one-point compactification** of $X$; the use of 'the' is justified by [[#^6514af]]. 
+> [!Definition] 
+> 1. If $Y$ is a compact Hausdorff space and $X$ is a proper subspace of $Y$ whose closure equals $Y$, then $Y$ is said to be a **compactification** of $X$. 
+> 2. If $Y\setminus X$ equals a single point, then $Y$ is called the **one-point compactification** of $X$; the use of 'the' is justified by [[#^6514af]]. 
+> 3. Two compactifications $Y_{1}$ and $Y_{2}$ of $X$ are said to be **equivalent** if there is a homeomorphism $h:Y_{1}\to Y_{2}$ such that $h|_{X}=\mathrm{id}_{X}$. 
+
+^c3fe5a
 
 If we assume $X$ is Hausdorff, local compactness admits the kind of formulation we'd expect for a 'local' property:
 
 > [!Proposition]
-> Let $X$ be a Hausdorff space. Then $X$ is locally compact iff for each $x\in X$ and each neighborhood $U\ni x$, there is a neighborhood $V\ni x$ such that $\overline{V}$ is compact and is contained in $U$: that is, $x\in V\subseteq \overline{V}\subseteq U$. 
+> Let $X$ be a Hausdorff space. Then $X$ is locally compact iff for each $x\in X$ and each neighborhood $U\ni x$, there is a neighborhood $V\ni x$ such that $\overline{V}$ is compact and is contained in $U$, i.e., $x\in V\subseteq \overline{V}\subseteq U$. 
+> 
+> > [!Proof]-
+> > 
+> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $C$ be compact such that $x\in W\subseteq C$ for open $W$. Let $V=W\cap U$. Since $X$ is Hausdorff, $C$ is closed by [[#^935571]]. Thus, $\overline{V}\subseteq C$ and $\overline{V}$ is compact. 
+> > 
+> > $(\impliedby)$ is clear. 
+> 
 
 > [!Proposition]
 > Let $X$ be locally compact Hausdorff. Let $A\subseteq X$. If $A$ is closed in $X$ or open in $X$, then $A$ is locally compact. 
@@ -110,6 +128,7 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 > [!Corollary]
 > A space $X$ is homeomorphic to an open subspace of a compact Hausdorff space iff $X$ is locally compact Hausdorff; follows from [[#^6514af]] and [[#^01fa69]]. 
 
+
 > [!Proposition] @munkresTopology2000 §32 Exr 3
 > Every locally compact Hausdorff space is regular. 
 > 
@@ -119,4 +138,11 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 
 > [!Proposition]
 > The one-point compactification of a locally compact Hausdorff space $X$ is metrizable iff $X$ is second countable. 
+
+---
+
+# The Tychonoff Theorem
+
+> [!Theorem] Tychonoff, @munkresTopology2000 37.3
+> An arbitrary product of compact spaces is compact in the product topology. 
 

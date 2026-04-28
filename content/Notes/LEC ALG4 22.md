@@ -27,10 +27,19 @@ tags:
 
 > [!Lemma] @isaacsAlgebraGraduateCourse2009 19.15
 > Let $F$ be a field and let $\alpha, \beta\in \overline{F}$ be separable over $F$. Then $E[\alpha, \beta]/F$ is a separable extension. 
-
+> 
+> > [!Proof]-
+> > 
+> > Let $f$ (resp. $g$) be the minpoly of $\alpha$ (resp. $\beta$) over $F$. Then $F(\alpha, \beta)\subseteq F'$, where $F'$ is a splitting field of $fg$. Since $f$ and $g$ are separable, $fg$ is separable, and $F'/F$ is Galois. Thus, $F(\alpha, \beta)$ is separable over $F$. 
+> 
 
 > [!Theorem]
 > Let $E/F$ be a finite extension. Then $\text{Gal}(E/F)=\text{Gal}(E_{\text{sep}}/F)$. 
 
-
----
+> [!Exercise]
+> Let $E/F$ be a normal extension. Let $K=\{ \alpha\in E:\alpha \text{ separable over }F \}$. Show the following:
+> 1. For all $\sigma\in \text{Gal}(E/F)$, $\sigma(K)\subseteq K$. Hence consider the map $\Phi:\text{Gal}(E/F)\to \text{Gal}(K/F)$, $\sigma\mapsto\sigma | _K$. 
+> 2. If $\sigma|_{K}=\mathrm{id}_{K}$, then $\sigma=\mathrm{id}_{E}$. Hence $\Phi$ is injective. 
+> 3. Let $\alpha\in E$ and $\tau\in \text{Gal}(K/F)$. Then there exists unique $\beta\in \overline{E}$ such that $\beta^{p^{n}}=\tau(\alpha^{p^{n}})$ for all $n\geqslant 0$ such that $\alpha^{p^{n}}\in K$. 
+> 	1. Let $f(x)\in F[x]$ be the minimal polynomial of $\alpha$. Show that $f(\beta)=0$. Hence $\beta\in E$. 
+> 	2. Define $\sigma:E\to E$ by $\alpha\mapsto\beta$. Note that $\sigma|_{K}=\tau$. Show that $\sigma\in \text{Gal}(E/F)$. Hence $\Phi$ is surjective. 

@@ -3,6 +3,8 @@ id: "448"
 date: 2026-04-15
 time: 11:57
 tags:
+  - ALG4
+  - Lecture
 ---
 Let $F$ be a field of characteristic zero. Let $f\in F[x]$ be irreducible. 
 1. $\text{deg}\,f=2$: roots of $f$ are in $F[\sqrt{ a^{2}-4b }]$ 
