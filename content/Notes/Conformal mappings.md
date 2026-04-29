@@ -11,6 +11,19 @@ tags:
 
 > [!Proposition] @steinComplexAnalysis2003 Prp 8.1.1
 > If $f:U\to V$ is holomorphic and injective, then $f'(z)\ne 0$ for all $z\in U$. In particular, the inverse of $f$ defined on its range is holomorphic, and this the inverse of a conformal map is also holomorphic. 
+> 
+> > [!Proof]-
+> > 
+> > We argue by contradiction. Suppose that $f'(z_{0})=0$ for some $z_{0}\in U$. Then, by [[Cauchy's Theorem and Its Applications#^f3eea8]], there is a neighborhood $W$ of $z_{0}$ such that for all $z\in W$, 
+> > $$
+> > f(z)-f(z_{0})=a(z-z_{0})^{k}+G(z)
+> > $$
+> > with $a\ne 0$, $k\geqslant 2$, and $G$ vanishing to order $k+1$ at $z_{0}$. For sufficiently small $w$, we write
+> > $$
+> > f(z)-f(z_{0})-w=F(z)+G(z),
+> > $$
+> > where $F(z)=a(z-z_{0})^{k}-w$. Note that $|G(z)|< |F(z)|$ on a small circle centered at $z_{0}$, and $F$ has at least two zeroes inside that circle. By [[Meromorphic functions and the Logarithm#^d304b2|Rouché's theorem]], $f(z)-f(z_{0})-w$ has at least two zeroes there. Since $f'(z)\ne 0$ for all $z\ne z_{0}$ sufficiently close to $z_{0}$ it follows that the roots of $f(z)-f(z_{0})-w$ are distinct, hence $f$ is not injective, a contradiction. 
+> 
 
 > [!Theorem]
 > Let
@@ -20,6 +33,20 @@ tags:
 > $F:\mathbb{H}\to \mathbb{D}$ is a conformal map with inverse $G$. 
 
 ^c5b41a
+
+Algorithm to show a pair of maps $F, G$ are conformal:
+1. Show that they are holomorphic in their respective domains. 
+2. show that their ranges are correct.
+3. show that they are inverses of each other.
+
+[!Examples]
+1. Translations and dilations of $\mathbb{C}$.
+2. $z\mapsto z^{n}$ maps the appropriate sector to $\mathbb{H}$ 
+3. $f(z)=(1+z)/(1-z)$ takes the upper half disc to the first quadrant.
+4. $z\mapsto \log z$ takes $\mathbb{H}$ to a strip of width $\pi$.
+5. $f(z)=-\frac{1}{2}(z+1/z)$ maps the half disc to $\mathbb{H}$. 
+6. $f(z)=e^{iz}$ takes half strip to half disc
+7. $f(z)=\sin z$ 
 
 ---
 
@@ -103,6 +130,9 @@ Denote $SL_{2}(\mathbb{R})$ by $\mathcal{G}$.
 > 1. $\mathcal{F}$ is uniformly continuous on every compact subset of $\Omega$. 
 > 2. $\mathcal{F}$ is a normal family. 
 
+Proving $(1)$ requires the [[Cauchy's Theorem and Its Applications#^d3c867|Cauchy's integral formula]]. 
+
 > [!Proposition]
 > If $\Omega$ is a connected open subset of $\mathbb{C}$ and $\{ f_{n} \}$ a sequence of injective holomorphic functions on $\Omega$ that converges uniformly on every compact subset of $\Omega$ to a (holomorphic) function $f$, then $f$ is either injective or constant.
 
+Uses the [[Meromorphic functions and the Logarithm#^86a327|Argument principle]]. 

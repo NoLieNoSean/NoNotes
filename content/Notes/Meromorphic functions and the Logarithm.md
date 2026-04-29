@@ -43,7 +43,7 @@ tags:
 ^2a8b64
 
 > [!Theorem] @steinComplexAnalysis2003 3.1.2
-> If $f$ has a *pole* at $z_{0}\in \Omega$, then there exists a neighborhood $U$ of $z_{0}$, a non-vanishing function $h$ holomorphic on $U$ and a unique positive integer $n$ such that 
+> If $f$ has a *pole* at $z_{0}\in \Omega$, then there exists a neighborhood $U$ of $z_{0}$, a ==non-vanishing== function $h$ holomorphic on $U$ and a unique positive integer $n$ such that 
 > $$
 > f(z)=(z-z_{0})^{-n}h(z)\quad\quad  (z\in U\setminus \{ z_{0} \}).
 > $$
@@ -253,6 +253,8 @@ The argument principle provides a way to transform order data to residue data.
 > $$
 > where the zeroes and poles are counted with their multiplicities. 
 
+^86a327
+
 The above theorem holds for toy contours. 
 
 > [!Theorem] Rouchè, @steinComplexAnalysis2003 3.4.3
@@ -291,7 +293,6 @@ Proof uses [[#^7ea52e]].
 In fact, since $f(z)$ is continuous on the compact set $\overline{\Omega}$, $|f(z)|$ attains its maximum in $\overline{\Omega}$; but this cannot be in $\Omega$ if $f$ is non-constant. If $f$ is constant, the conclusion is trivial. 
 
 # Homotopies and simply connected domains
-
 
 > [!Proposition]
 > If $f$ is holomorphic in $\Omega$, then

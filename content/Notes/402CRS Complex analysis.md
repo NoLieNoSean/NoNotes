@@ -15,8 +15,8 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 [[Preliminaries to Complex Analysis]] @steinComplexAnalysis2003 Ch 1
 [[Cauchy's Theorem and Its Applications]] @steinComplexAnalysis2003 Ch 2
 [[Meromorphic functions and the Logarithm]] @steinComplexAnalysis2003 Ch 3
-[[The Gamma and Zeta functions]]
-[[Conformal mappings]]
+[[The Gamma and Zeta functions]] @steinComplexAnalysis2003 Ch 6
+[[Conformal mappings]] @steinComplexAnalysis2003 Ch 8
 
 
 @langComplexAnalysis1999 Ch6 §2
@@ -34,9 +34,3 @@ Monotone convergence
 Tonelli/Fubini
 
 ---
-
-Midterm portions
-+ Gamma function from bak and newman
-+ Zeta function from stein
-- Conformal mappings first three sections stein
-- The exercise section of the chapter on zeta and a gamma function
