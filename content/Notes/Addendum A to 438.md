@@ -3,10 +3,8 @@ id: "439"
 date: 2026-03-27
 time: 14:44
 tags:
-draft: true
+draft: false
 ---
-
-
 
 > [!Definition] Fiber bundle, @weissteinFiberBundle
 > A **fiber bundle** with fiber $F$ is a map $p:E\to B$, where $E$ is called the total space of the fiber bundle and $B$ the base space of the fiber bundle, satisfying the following condition: each $b\in B$ has a neighborhood $U$ with $p^{-1}(U)$ homeomorphic to $U\times F$ via $h:p ^{-1}(U)\to U\times F$ such that 

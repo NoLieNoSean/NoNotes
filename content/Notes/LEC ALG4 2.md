@@ -107,11 +107,13 @@ In summary, using the results of this section and [[Addendum A to 373]], we have
 > 2. $A$ is a maximal linearly independent subset of $M$; 
 > 3. $A$ is a minimal generating set of $M$. 
 > 
-> Further, we have the following:
+> Further, they imply the following:
 > 
 > 4. $M$ is free.
 > 5. If $S$ is a linearly independent subset of $M$, there exists a basis $S'$ of $M$ containing $S$. 
 > 6. If $S$ is a generating subset of $M$, there exists a basis $S'$ of $M$ contained in $S$. 
+
+^2d4089
 
 When working with modules over integral domains, you can easily reduce the problem to the case of a vector space over a field by passing to the [[LEC ALG3 8#Ring of fractions|field of fractions]]:
 

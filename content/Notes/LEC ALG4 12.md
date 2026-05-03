@@ -12,9 +12,16 @@ tags:
 See also @bourbakiAlgebra1974 ch 3, 4
 
 > [!Definition] Bilinear map
-> Let $M, N, P$ be $R$-modules. A map $\varphi:M\times N\to P$ is called **$R$-bilinear** if $\varphi(x, -):N\to P$ and $\varphi(-, y):M\to P$ are $R$-linear for all $x\in M$ and $y\in N$. 
+> Let $M, N, P$ be $R$-modules. A map $\varphi:M\times N\to P$ is called **$R$-bilinear** if $\varphi(x, \_):N\to P$ and $\varphi(\_, y):M\to P$ are $R$-linear for all $x\in M$ and $y\in N$. 
 
-Note that $\varphi$ itself is *not* linear. 
+Note that $\varphi$ itself is *not* linear (we don't use a module structure on the domain $M\times N$). For this reason, bilinear maps lack some features:
+1. There is no kernel of a bilinear map $M\times N\to P$, since $M\times N$ is not a module.
+2. The image of a bilinear map $M\times N\to P$ need not form a submodule of $P$. 
+
+> [!Lemma]
+> If $M\times N\xrightarrow{B} P$ is bilinear and $P\xrightarrow{L} Q$ is linear, the composite $M\times N\xrightarrow{L\circ B} Q$ is bilinear. 
+
+We will construct the tensor product of $M$ and $N$ as a solution to the following universal problem:
 
 > [!Definition] Universal property of tensor products
 > Let $M, N$ be $R$-modules. We call a pair $(T, \tau)$ the **tensor product** of $M$ and $N$, where $T$ is an $R$-module and $\tau:M\times N\to T$ is $R$-bilinear, if for all bilinear $\varphi:M\times N\to P$, there exists unique $R$-linear $\overline{\varphi}:T\to P$ such that the following diagram commutes. 
@@ -86,6 +93,128 @@ I do not know where you got the idea from, but $\tau$ is *not* an inclusion!
 > [!Proposition]
 > Let $M$ and $N$ be $R$-modules. If $\{ x_{\lambda}\in M:\lambda\in\Lambda \}$ generates $M$ and $\{ y_{\gamma}:\gamma\in\Gamma \}$ generates $N$ then $\{ x_{\lambda }\otimes y_{\gamma}:\lambda\in\Lambda, \gamma\in\Gamma \}$ generates $M\otimes_{R}N$. 
 
+^3e8e97
+
+Tensor products behave in a way that might seem strange at first - for example, the tensor product of two nonzero modules may be zero:
+
+> [!Example]
+> If $A$ is a finite abelian group, $\mathbb{Q}\otimes_{\mathbb{Z}}A=0$ since every pure tensor is $0$: for $a\in A$, let $na=0$ for some positive integer $n$. Then in $\mathbb{Q}\otimes_{\mathbb{Z}}A$, $r\otimes a=n(r/n)\otimes a=r/n\otimes na=0$. Since every tensor is a sum of elementary tensors, all tensors are $0$. 
+> 
+> To show $\mathbb{Q}\otimes_{\mathbb{Z}}A=0$, we don't need $A$ to be finite, but only that each element of $A$ has finite order. Since $\mathbb{Q}/\mathbb{Z}$ has that property, $\mathbb{Q}\otimes_{\mathbb{Z}}(\mathbb{Q}/\mathbb{Z})=0$. Similarly, $\mathbb{Q}/\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Q}/\mathbb{Z}=0$. 
+
+^af777c
+
+> [!Remark]
+> In particular, $m\otimes n\in M\otimes_{R} N$ may be zero even when $m$ and $n$ are nonzero. *This happens exactly when every bilinear map out of $M\times N$ vanishes at $(m, n)$.* Indeed, if $m\otimes n=0$ then for each bilinear map $B:M\times N\to P$, we have a unique linear map $L:M\otimes_{R}N\to P$ satisfying $L\circ \otimes=B$, so $B(m, n)=L(m\otimes n)=L(0)=0$. Conversely, if every bilinear map out of $M\times N$ sends $(m, n)$ to $0$ then the canonical bilinear map $M\times N\to M\otimes_{R}N$, being a bilinear map, sends $(m, n)$ to $0$. 
+> 
+> Similarly, *the tensor product $M\otimes_{R}N$ is $0$ iff every bilinear map out of $M\times N$ is identically zero.* 
+
+^2e2ee7
+
+> [!Proposition]
+> For positive integers $a$ and $b$ with $d=(a, b)$, $\mathbb{Z}/a\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/b\mathbb{Z}\cong \mathbb{Z}/d\mathbb{Z}$ as $\mathbb{Z}$-modules. In particular, $\mathbb{Z}/a\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/b\mathbb{Z}=0$ iff $(a, b)=1$. 
+
+This is a special case of the following theorem:
+
+> [!Theorem] @conradTensorProducts 4.5
+> For ideals $I$ and $J$ in $R$, there is a unique $R$-module isomorphism
+> $$
+> R/I\otimes _{R}R/J\cong R/(I+J)
+> $$
+> where $\overline{x}\otimes \overline{y}\mapsto \overline{xy}$. In particular, taking $I=J=0$, $R\otimes_{R}R\cong R$ by $x\otimes y\mapsto xy$. 
+> 
+> > [!Proof]-
+> > 
+> > Start with the function $R/I\times R/J\to R/(I+J)$ given by $(\overline{x}, \overline{y})\mapsto \overline{xy}$. This is well-defined and bilinear, so from the universal property of the tensor product, we get a linear map $f:R/I\otimes_{R}R/J\to R/(I+J)$ such that $f(\overline{x}\otimes \overline{y})=\overline{xy}$. 
+> > 
+> > To write down the inverse map, let $R\to R/I\otimes_{R}R/J$ by $r\mapsto r(\overline{1}\otimes \overline{1})$. This is linear, and maps $I$ and $J$ and hence $I+J$ to $0$. Therefore, $I+J$ is contained in the kernel, so we get a linear map $g:R/(I+J)\to R/I\otimes_{R}R/J$ by $g(\overline{r})=r(\overline{1}\otimes \overline{1})$. 
+> > 
+> > That $f\circ g=\mathrm{id}$ is immediate:
+> > $$
+> > f(g(\overline{r}))=f(r(\overline{1}\otimes \overline{1}))=\overline{r}.
+> > $$
+> > Since each tensor in $R/I\otimes_{R}R/J$ is a scalar multiple of $\overline{1}\otimes \overline{1}$, it follows that
+> > $$
+> > g(f(r(\overline{1}\otimes \overline{1})))=rg(\overline{1})=r(\overline{1}\otimes \overline{1}).
+> > $$
+> > 
+> 
+
+> [!Theorem]
+> For an ideal $I\subseteq R$ and $R$-module $M$, there is a unique $R$-module isomorphism
+> $$
+> (R/I)\otimes _{R}M\cong M/IM
+> $$
+> such that $\overline{r}\otimes m\mapsto \overline{rm}$. In particular, taking $I=(0)$, we get $R\otimes_{R}M\cong M$. 
+
+> [!Theorem]
+> If $F$ and $F'$ are free $R$-modules, with respective bases $\mathcal{B}=\{ e_{i} \}_{i\in I}$ and $\mathcal{B}'=\{ e'_{j} \}_{j\in J}$, then $F\otimes_{R}F'$ is a free $R$-module with basis $\mathcal{C}=\{ e_{i}\otimes e'_{j} \}_{(i, j)\in I\times J}$. 
+> 
+> > [!Proof]-
+> > 
+> > By [[#^3e8e97]], $\mathcal{C}$ spans $F\otimes_{R}F'$ as an $R$-module. To show $\mathcal{C}$ is linearly independent, suppose $\sum_{i, j}c_{ij}e_{i}\otimes e'_{j}=0$. Pick two basis vectors $e_{i_{0}}$ and $e'_{j_{0}}$ in $F$ and $F'$. To show the coefficient $c_{i_{0}j_{0}}$ is $0$, consider the bilinear function $F\times F'\to R$ by $(v, w)\mapsto v_{i_{0}}w_{j_{0}}$, where $v_{i_{0}}$ and $w_{j_{0}}$ are the coefficients of $e_{i_{0}}$ and $e'_{j_{0}}$ in $v$ and $w$ respectively. By the universal property, there is a linear map $f:F\otimes_{R}F'\to R$ such that $f(v\otimes w)=v_{i_{0}}w_{j_{0}}$ on each elementary tensor $v\otimes w$. In particular, $f(e_{i_{0}}\otimes e'_{j_{0}})=1$ and $f(e_{i}\otimes e'_{j})=0$ for all $(i, j)\ne(i_{0}, j_{0})$. Applying $f$ to the equation $\sum_{i, j}c_{ij}e_{i}\otimes e'_{j}=0$, we see that $c_{i_{0}j_{0}}=0$. 
+> 
+
+^31557d
+
+> [!Example] @conradTensorProducts 4.11
+> For $R\ne 0$, let $F$ and $F'$ be finite free $R$-modules of rank $\geqslant 2$ with bases $\{ e_{1}, \dots, e_{m} \}$ and $\{ e_{1}', \dots, e'_{n} \}$. In $F\otimes_{R}F'$, $e_{1}\otimes e_{1}'+e_{2}\otimes e_{2}'$ is a *tensor that is provably not an elementary tensor*. 
+
+> [!Theorem]
+> If $M$ is an $R$-module and $F$ is a free $R$-module with basis $\{ e_{i} \}_{i\in I}$, then every element of $M\otimes_{R}F$ has a unique representation in the form $\sum_{i\in I}m_{i}\otimes e_{i}$, where all but finitely many $m_{i}$ equal $0$. 
+> 
+> > [!Proof]-
+> > 
+> > Consider the surjective linear map $f:\bigoplus_{i\in I}M\to M\otimes_{R}F$ given by $(m_{i})_{i\in I}\mapsto \sum_{i\in I} m_{i}\otimes e_{i}$. 
+> > 
+> > To construct an inverse to $f$, consider the function $M\times F\to \bigoplus_{i\in I}M$ by $\left( m, \sum_{i\in I}r_{i}e_{i} \right)\mapsto(r_{i}m)_{i\in I}$. This is a bilinear function, so there is a linear map $g:M\otimes_{R}F\to \bigoplus_{i\in I}M$ sending $\sum_{i\in I}r_{i}m\otimes r_{i}\mapsto(r_{i}m)_{i\in I}$. 
+> > 
+> > It remains to check that $f\circ g$ and $g\circ f$ are identities. For the latter, since pure tensors span $M\otimes_{R}F$, it suffices to prove that $f\circ g=\mathrm{id}$ on pure tensors. That $g\circ f=\mathrm{id}$ is immediate. 
+> 
+
+> [!Theorem]
+> If $M$ is a nonzero finitely generated $R$-module then $M^{\otimes k}\ne 0$ for all $k$. 
+> 
+> > [!Proof]-
+> > 
+> > In light of [[#^2e2ee7]], construct a nontrivial multilinear map $M^{k}\to R/I$. 
+> 
+
+Recall from [[#^af777c]] that if $M$ is not finitely generated, $M\otimes_{R}M$ may well be $0$. 
+
+> [!Theorem]
+> Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. There is an $R$-module isomorphism $K\otimes_{R}V\cong V$ where $x\otimes v\mapsto xv$. 
+
+We can prove something more general:
+
+> [!Theorem]
+> Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. For each nonzero $R$-module $M\subseteq K$, $M\otimes_{R}V\cong V$ as $R$-modules by $m\otimes v\mapsto mv$. In particular, $I\otimes_{R}K\cong K$ as $R$-modules for every nonzero ideal $I\subseteq R$. 
+> 
+> > [!Proof]-
+> > 
+> > Multiplication gives a function $M\times V\to V$ that is $R$-bilinear, so we get an $R$-linear map $f:M\otimes_{R}V\to V$ where $f(m\otimes v)=mv$. Show $f$ is onto. To show that $f$ is injective, first show that all tensors in $M\otimes_{R}V$ are pure. 
+> 
+
+> [!Theorem]
+> Let $R$ be a domain and $F$ and $F'$ be free $R$-modules. If $x$ and $x'$ are nonzero in $F$ and $F'$, then $x\otimes x'\ne 0$ in $F\otimes_{R}F'$. 
+> 
+> > [!Proof]-
+> > 
+> > If we were working with vector spaces this would be trivial, since $x$ and $x'$ can each be extended to a basis of $F$ and $F'$ ([[LEC ALG4 2#^2d4089]].5), so $x\otimes x'$ is part of a basis of $F\otimes_{R}F'$ ([[#^31557d]]). In a free module over a commutative ring, a nonzero element need not be part of a basis, so our proof needs to be a little more careful. 
+> > 
+> > Pick a basis $\{ e_{i} \}$ for $F$ and $\{ e'_{i} \}$ for $F'$. Write $x=\sum_{i}a_{i}e_{i}$ and $x'=\sum_{j}a'_{j}e'_{j}$. Since $x$ and $x'$ are nonzero, they each have some nonzero coefficient, say $a_{i_{0}}$ and $a'_{j_{0}}$. Since $R$ is a domain, $a_{i_{0}}a'_{j_{0}}\ne 0$, so $x\otimes x'$ has a nonzero coordinate in the basis $\{ e_{i}\otimes e'_{j} \}$ for $F\otimes_{R}F'$.
+> 
+
+[!Theorem]
+Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. 
+1. For all $R$-modules $M$, there is an $R$-module isomorphism $V\otimes_{R}M\cong V\otimes_{R}(M/\text{tor}(M))$. 
+2. For $R$-modules $M$, if $M$ is torsion then $V\otimes_{R}M=0$ and if $M$ is not torsion and $V$ is nonzero then $V\otimes_{R}M\ne 0$. 
+3. If $M$ is an $R$-module and $N$ is a submodule such that $M/N$ is a torsion $R$-module then $V\otimes_{R}N\cong V\otimes_{R}M$ as $R$-modules by $v\otimes n\mapsto v\otimes n$. 
+
+[!Corollary]
+Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. Then, $v\otimes m=0$ in $V\otimes_{R}M$ iff $v=0$ or $m\in \text{tor}(M)$. In particular, $\text{tor}(M)=\ker(M\to K\otimes_{R}M)$ where $m\mapsto 1\otimes m$. 
+
+
 > [!Proposition]
 > Let $M_{1}, M_{2}, N_{1}, N_{2}$ be $R$-modules. Let $\varphi:M_{1}\to M_{2}$ be $R$-linear. Then there exists an $R$-linear map
 > $$
@@ -115,20 +244,12 @@ I do not know where you got the idea from, but $\tau$ is *not* an inclusion!
 > > ```
 > > 
 
-Since the diagram
-
-```latex
-% latex-id: 84c9-b4e7-d1e8-4492-afc1
-\begin{document}
-% https://q.uiver.app/#q=WzAsNCxbMCwwLCJNXzEiXSxbMiwwLCJNXzIiXSxbMCwyLCJNXzFcXG90aW1lc19SIE4iXSxbMiwyLCJNXzJcXG90aW1lc19SIE4iXSxbMCwyLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCJcXHZhcnBoaSIsMV0sWzIsMywiXFx2YXJwaGlcXG90aW1lc19SXFx0ZXh0e2lkfV9OIiwxXSxbNiw3LCIiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV1d 
-\[\begin{tikzcd} {M_1} && {M_2} \\ \\ {M_1\otimes_R N} && {M_2\otimes_R N} \arrow[""{name=0, anchor=center, inner sep=0}, "\varphi"{description}, from=1-1, to=1-3] \arrow[dotted, from=1-1, to=3-1] \arrow[dotted, from=1-3, to=3-3] \arrow[""{name=1, anchor=center, inner sep=0}, "{\varphi\otimes_R\text{id}_N}"{description}, from=3-1, to=3-3] \arrow[between={0.2}{0.8}, Rightarrow, from=0, to=1] \end{tikzcd}\]
-\end{document}
-```
-
-clearly commutes, it is evident that
+It is evident that
 
 > [!Proposition]
-> $\_{}\otimes_{R}N:R\textsf{-Mod}\to R\textsf{-Mod}$ is a [[Category Theory Preliminaries II#^56cdbe|functor]]; it is defined by  $M\mapsto M\otimes_{R}N$ and $\varphi\mapsto\varphi \otimes_{R}\mathrm{id}_{N}$. 
+> $\_{}\otimes_{R}N:R\textsf{-Mod}\to R\textsf{-Mod}$ is a covariant [[Category Theory Preliminaries II#^56cdbe|functor]]; it is defined by  $M\mapsto M\otimes_{R}N$ and $\varphi\mapsto\varphi \otimes_{R}\mathrm{id}_{N}$. 
+
+The same can be said about $N\otimes_{R}\_$. 
 
 > [!Proposition] The Hom-Tensor adjunction
 > Consider the three functors $(R\textsf{-Mod})^{op}\times (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}$ defined by
@@ -212,16 +333,16 @@ clearly commutes, it is evident that
 > [!Proposition] Tensor is right exact
 > Let $\varphi:M_{1}\to M_{2}$ be $R$-linear. Then $\text{coker}\,\varphi\otimes N\cong\text{coker}(\varphi \otimes\text{id}_{N})$. 
 > 
-> In other words, given an exact sequence
+> In other words, given a right exact sequence
 > $$
 > M_{1}\xhookrightarrow{\varphi}M_{2}\xtwoheadrightarrow{\epsilon}M_{3}\to 0,
 > $$
-> the following sequence is also exact:
+> the following sequence is also right exact:
 > $$
 > M_{1}\otimes N\xrightarrow{\varphi \otimes \mathrm{id}_{N}}M_{2}\otimes N\xrightarrow{\epsilon \otimes \mathrm{id}_{N}}M_{3}\otimes N\to 0.
 > $$
 > 
-> Equivalently, the functor $\_\otimes_{R}N$ is right exact. 
+> We say that the functor $\_\otimes_{R}N$ is **right exact**. 
 > 
 > > [!Proof]-
 > > 
@@ -280,6 +401,7 @@ clearly commutes, it is evident that
 > s\left( \sum t_{i}\otimes m_{i} \right):= \sum (st_{i} \otimes m_{i}).
 > $$
 > $S\otimes_{R}M$ also satisfies the following upgraded universal property: for all $S$-modules $N$ and maps $f:S\times M\to N$ which are $R$-bilinear and $S$-linear in the first slot, there exists a unique $S$-linear map $\tilde{f}:S\otimes_{R}M\to N$ which makes the following diagram commute.
+> 
 > ```latex
 > 
 > % latex-id: 2443-1cfe-ce8c-4e0f-b802
@@ -288,6 +410,8 @@ clearly commutes, it is evident that
 > \[\begin{tikzcd} {S\times M} && N \\ {S\otimes_R M} \arrow["f", from=1-1, to=1-3] \arrow[from=1-1, to=2-1] \arrow["{\tilde f}"', dashed, from=2-1, to=1-3] \end{tikzcd}\]
 > \end{document}
 > ```
+> 
+> It follows that *$S\otimes_{R}\_$ is a covariant functor from $R\textsf{-Mod}$ to $S\textsf{-Mod}$*. 
 > 
 > > [!Proof]-
 > > 
@@ -333,14 +457,14 @@ clearly commutes, it is evident that
 > \[\begin{tikzcd} R & B \\ A \arrow["\beta", from=1-1, to=1-2] \arrow["\alpha"', from=1-1, to=2-1] \arrow["\varphi"', from=2-1, to=1-2] \end{tikzcd}\]
 > \end{document}
 > ```
-> commutes. We've [[#^931795|seen]] that $A\otimes_{R}B\in R\textsf{-Mod}, A\textsf{-Mod}, B\textsf{-Mod}$. We can upgrade it to an $R$-algebra: the multiplication $(a_{1}\otimes b_{1})\cdot(a_{2}\otimes b_{2}):=a_{1}a_{2}\otimes b_{1}b_{2}$ makes it into a ring, and the map $R\to A\otimes_{R}B$ given by 
+> commutes. We've [[#^931795|seen]] that $A\otimes_{R}B\in R\textsf{-Mod}, A\textsf{-Mod}, B\textsf{-Mod}$. We can upgrade it to an $R$-algebra: the multiplication $(a_{1}\otimes b_{1})\cdot(a_{2}\otimes b_{2}):=a_{1}a_{2}\otimes b_{1}b_{2}$ makes it into a ring, and the map $R\to A\otimes_{R}B$ is given by 
 > $$
 > r\mapsto\alpha(r)\otimes1_{B}=(r\cdot 1_{A})\otimes 1_{B}=1_{A}\otimes (r\cdot1_{B})=1_{A}\otimes \beta(r).
 > $$
 > 
 > > [!Proof]-
 > > 
-> > To show that the multiplication $(A\otimes_R B)\times( A\otimes_RB)\to A\otimes_{R }B$ defined above is indeed well defined, by use the universal property from [[#^1e6488]]: 
+> > To show that the multiplication $(A\otimes_R B)\times( A\otimes_RB)\to A\otimes_{R }B$ defined above is indeed well defined, use the universal property from [[#^1e6488]]: 
 > > 
 > > ```latex
 > > % latex-id: aa1b-b322-cc44-4f96-8e4c

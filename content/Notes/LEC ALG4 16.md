@@ -24,7 +24,7 @@ If $E/F$ and $\alpha\in E$ is algebraic over $F$, we will denote the [[LEC ALG3 
 > [!Example] Inseparable element
 > Let $F:=\mathbb{F}_{p}(t^{p})\subseteq \mathbb{F}_{p}(t)=:E$. Observe that $t\in E$ satisfies $x^{p}-t^{p}\in F[x]$. Thus, $m_{F, t}(x)$ divides $x^{p}-t^{p}$ in $F[x]$. The same statement holds in $\overline{F}[x]$ too, where $x^{p}-t^{p}=(x-t)^{p}$. Thus, $m_{F, t}(x)=(x-t)^{e}$ for some $e> 1$. Thus, $t$ is not separable over $F$. 
 
-We now show that there is no easier example, i.e., one must look to fields of characteristic $p$ for examples of inseparable extensions. 
+We now show that there is no easier example, i.e., one must look to infinite fields of characteristic $p$ for examples of inseparable extensions. 
 
 > [!Lemma]
 > Let $f\in F[x]$ be nonzero and irreducible. Then, $f$ is separable iff $\text{gcd}(f, f')=1$ [^1] iff $f'\not\equiv 0$, where $f'$ is the formal derivative of $f$. 

@@ -63,7 +63,7 @@ It follows that a two sided zero divisor can not be a two sided unit.
 
 > [!Definition] 
 > 1. A ring $R$ with identity $1\ne 0$ is called a **division ring** if every nonzero $a\in R$ is a unit.
-> 2. A commutative ring $R$ with identity $1\ne 0$ is called an **integral domain** if it has no zero divisors.
+> 2. A commutative ring $R$ with identity $1\ne 0$ is called an **integral domain** if it has no zero divisors. More generally, a ring with no zero divisors is called a **domain**. 
 > 
 
 A commutative division ring is a [[Fields#Axioms|field]]. A finite integral domain is also a field (Immediate proof from [[#^357946]]). Another equivalent way to arrive at a field is to make $(R^{\times}, \cdot)$ an abelian group for any ring $R$.

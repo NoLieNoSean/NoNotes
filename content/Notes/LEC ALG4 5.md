@@ -125,8 +125,6 @@ Here's another mechanism in which a module may fail to be free.
 > Let $R=\mathbb{Z}[x]$, and let $I=(2, x)$. Then $I$ is not a free $R$-module. More generally, any nonprincipal ideal of an integral domain $R$ is a torsion-free module which is not free. Indeed, if $I$ were free, its rank would have to be $1$ at most, by [[LEC ALG4 2#^e70c6c]]; thus one element would suffice to generate $I$, and $I$ would be principal. 
 
 
-
-
 > [!Lemma]
 > Let $M$ be a finitely generated $R$-module. Then, $M/\text{tor}(M)$ is torsion free (and finitely generated).
 > 

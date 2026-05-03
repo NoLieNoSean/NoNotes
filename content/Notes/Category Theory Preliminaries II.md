@@ -45,7 +45,7 @@ tags:
 > commutes. A **natural isomorphism** is a natural transformation $\nu$ such that $\nu_{X}$ is an isomorphism for every $X$. 
 
 > [!Definition] Adjoint
-> Let $\textsf{C}, \textsf{D}$ be categories, and let $\mathscr{F}: \textsf{C}\to \textsf{D}$, $\mathscr{G}: \textsf{C}\to \textsf{D}$ be functors. We say that $\mathscr{F}$ and $\mathscr{G}$ are **adjoint** (and we say that $\mathscr{G}$ is right-adjoint to $\mathscr{F}$ and $\mathscr{F}$ is left-adjoint to $\mathscr{G}$) if there are *natural* isomorphisms
+> Let $\textsf{C}, \textsf{D}$ be categories, and let $\mathscr{F}: \textsf{C}\to \textsf{D}$, $\mathscr{G}: \textsf{D}\to \textsf{C}$ be functors. We say that $\mathscr{F}$ and $\mathscr{G}$ are **adjoint** (and we say that $\mathscr{G}$ is right-adjoint to $\mathscr{F}$ and $\mathscr{F}$ is left-adjoint to $\mathscr{G}$) if there are *natural* isomorphisms
 > $$
 > \text{Hom}_{\textsf{C}}(X, \mathscr{G}(Y)) \xrightarrow{\sim}\text{Hom}_{\textsf{D}}(\mathscr{F}(X), Y)
 > $$

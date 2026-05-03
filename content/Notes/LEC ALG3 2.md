@@ -112,7 +112,7 @@ As in the case of groups, quotients by corresponding ideals are isomorphic:
 
 > [!Definition]
 > Let $R$ be a commutative ring with $1$. Let $I, J$ be ideals of $R$.
-> 1. $I+J:=\{ i+j\ | \ i\in I, j\in J \}$. This is a subring of $R$.
+> 1. $I+J:=\{ i+j\ | \ i\in I, j\in J \}$.
 > 2. $IJ:=\{ i_{1}j_{1}+\dots+i_{n}j_{n}\ | \ i_{k}\in I, j_{k}\in J , n\geq 1\}$.
 
 1. Clearly, $IJ\subseteq I\cap J$. 
