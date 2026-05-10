@@ -5,11 +5,12 @@ time: 11:56
 tags:
   - ALG4
   - Lecture
+  - Processed
 ---
 > [!Question]
 > Given an irreducible separable polynomial $f\in F[x]$, what is $\text{Gal}(E/F)$, where $E$ is a splitting field of $f$?
 
-We will write $\text{Gal}(f)$ for $\text{Gal}(E/F)$. Suppose $E=F(\alpha_{1}, \dots, \alpha_{n})$, where $\alpha_{1}, \dots, \alpha_{n}$ are the roots of $f$. By [[LEC ALG4 17#^c54c9e]].2, there exists an embedding $\text{Gal}(f)\hookrightarrow \mathfrak{S}_{n}$. Moreover, by [[LEC ALG4 17#^c54c9e]].3, $\text{Gal}(f)$ acts transitively on $\alpha_{1}, \dots, \alpha_{n}$. Note that $E/F$ is a Galois extension.
+We will write $\text{Gal}(f)$ for $\text{Gal}(E/F)$. Suppose $E=F(\alpha_{1}, \dots, \alpha_{n})$, where $\alpha_{1}, \dots, \alpha_{n}$ are the roots of $f$. By [[LEC ALG4 17#^c54c9e]].2, there exists an embedding $\text{Gal}(f)\hookrightarrow \mathfrak{S}_{n}$. Moreover, by [[LEC ALG4 17#^c54c9e]].3, $\text{Gal}(f)$ acts ==transitively== on $\alpha_{1}, \dots, \alpha_{n}$, so $\text{Gal}(f)$ must be a transitive subgroup of $\mathfrak{S}_{n}$. Note that $E/F$ is a Galois extension.
 # The discriminant
 
 > [!Definition] Discriminant
@@ -57,7 +58,7 @@ Observe that for all $\sigma\in S_{n}$, $\sigma\delta=(-1)^{\sigma}\delta$.
 >  & =a_{1}^{2}-4a_{2}.
 > \end{align}
 > $$
-> Using [[#^9de803]], $\text{Gal}(f)=\mathbb{Z}/2\mathbb{Z}$ when $a_{1}^{2}-4a_{2}\not\in F$, and $\text{Gal}(f)=\{ 1 \}$ when $a_{1}^{2}-4a_{2}\in F$. 
+> Using [[#^9de803]], $\text{Gal}(f)=\mathbb{Z}/2\mathbb{Z}$ when $a_{1}^{2}-4a_{2}$ is not a square in $F$, and $\text{Gal}(f)=\{ 1 \}$ when $a_{1}^{2}-4a_{2}$ is a square in $F$. 
 
 > [!Proposition]
 > Let $f\in F[x]$ be a cubic irreducible separable polynomial, with $\text{char}(F)\ne 2$. Then

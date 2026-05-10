@@ -69,11 +69,11 @@ How can we prove that a given finite extension $E/F$ is Galois? We need to show 
 > > 
 > > $(2)$ Suppose that $E$ is generated over $F$ by the elements of $\Omega$. Since $G$ acts on $\Omega$ by $(1)$, we have a natural homomorphism $G\to \text{Sym}(\Omega)$; we only have to show that the kernel $K$ is trivial. Let $\sigma\in K$. Since $E=F(\Omega)$ and $\sigma$ fixes $\Omega$, $\sigma$ must fix $E$, i.e., $\sigma=\mathrm{id}$. Thus, the homomorphism is an embedding. 
 > > 
-> > $(3)$ Suppose $f$ is irreducible in $F[x]$ and $E$ is the splitting field over $F$ of some irreducible polynomial $g\in F[x]$. Let $\alpha, \beta\in \Omega$; we need to produce $\sigma\in G$ such that $\sigma(\alpha)=\beta$. Let $\varphi:F(\alpha)\to F(\beta)$ be the $F$-isomorphism sending $\alpha\mapsto\beta$. Since $g\in F[x]$, we have $\hat{\varphi}g=g$. Using [[LEC ALG3 20#^bcf07f]], we get an $F$-isomorphism $\tilde{\varphi}:E\to E$ extending $\varphi$, i.e., sending $\alpha\mapsto\beta$. 
+> > $(3)$ Suppose $f$ is irreducible in $F[x]$ and $E$ is the splitting field over $F$ of some polynomial $g\in F[x]$. Let $\alpha, \beta\in \Omega$; we need to produce $\sigma\in G$ such that $\sigma(\alpha)=\beta$. Let $\varphi:F(\alpha)\to F(\beta)$ be the $F$-isomorphism sending $\alpha\mapsto\beta$. Since $g\in F[x]$, we have $\hat{\varphi}g=g$. Using [[LEC ALG3 20#^bcf07f]], we get an $F$-isomorphism $\tilde{\varphi}:E\to E$ extending $\varphi$, i.e., sending $\alpha\mapsto\beta$. 
+> 
 
 ^c54c9e
 
- 
 ## Examples: Computing Galois groups
 
 > [!Remark]

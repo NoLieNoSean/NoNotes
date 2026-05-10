@@ -5,6 +5,7 @@ time: 11:54
 tags:
   - Lecture
   - ALG4
+  - Processed
 ---
 # Cyclotomic extensions
 
@@ -69,6 +70,10 @@ Let $F$ be a field of characteristic $0$. An **$n$th root of unity** in $F$ is a
 
 
 ---
+
+# Extensions of Q associated with finite abelian groups
+
+Given any group $G$, we can always find a field extension $E/E^{G}$ with Galois group $G$, where $E=F(x_{1}, \dots, x_{n})$ and $n$ is such that $G\hookrightarrow \mathfrak{S}_{n}$. However, this does not let us control the base field $E^{G}$. We can construct extensions with base field $\mathbb{Q}$ having any desired Galois group if the group is abelian:
 
 > [!Theorem]
 > Let $G$ be finite abelian. Then there exists a finite Galois extension $F/\mathbb{Q}$ such that $\text{Aut}_{\mathbb{Q}}(F)\cong G$. 

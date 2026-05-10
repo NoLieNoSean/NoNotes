@@ -10,7 +10,7 @@ tags:
 # Order of Galois groups
 
 > [!Lemma] E Artin
-> Let $E$ be a field and $G$ be a finite group of automorphisms of $E$. Then $[E:E^{G}]\leqslant |G|$. 
+> Let $G\subseteq \text{Aut}(E)$ be finite. Then $[E:E^{G}]\leqslant |G|$. 
 > 
 > > [!Proof]-
 > > 
@@ -28,7 +28,7 @@ tags:
 > > $$
 > > \sum_{j=1}^{m} (\sigma_{k}\sigma_{i})(\alpha_{j})(\sigma_{k}(x_{j}))=0.
 > > $$
-> > Since $\sigma_{i}\mapsto\sigma_{k}\sigma_{i}$ is a permutation of $G$, this is the same system. Thus, $\sigma(\mathbf{x})=(\sigma_{k}(x_{1}), \sigma_{k}(x_{2}), \dots, \sigma_{k}(x_{r}), \sigma_{k}(1), 0, \dots, 0)\in E^{n}$ is a solution of the system. Since $\sigma_{k}(1)=1$ and $\sigma_{k}(x_{1})\ne x_{1}$, $\mathbf{x}-\sigma(\mathbf{x})$ is a solution of the system with fewer nonzero components than $\mathbf{x}$, contradicting the minimality of $\mathbf{x}$. 
+> > Since $\sigma_{i}\mapsto\sigma_{k}\sigma_{i}$ is a permutation of $G$, this is the same system. Thus, $\sigma_{k}(\mathbf{x})=(\sigma_{k}(x_{1}), \sigma_{k}(x_{2}), \dots, \sigma_{k}(x_{r}), \sigma_{k}(1), 0, \dots, 0)\in E^{n}$ is a solution of the system. Since $\sigma_{k}(1)=1$ and $\sigma_{k}(x_{1})\ne x_{1}$, $\mathbf{x}-\sigma(\mathbf{x})$ is a nontrivial solution of the system with fewer nonzero components than $\mathbf{x}$, contradicting the minimality of $\mathbf{x}$. 
 > 
 
 ^89ae5e
@@ -42,11 +42,11 @@ tags:
 > 
 > > [!Proof]-
 > > 
-> > Let $f(x):=\prod_{i=1}^{r}(x-\alpha_{i})$. Since each $\sigma\in G$ permutes $\Lambda$, it follows that the corresponding automorphism $\hat{\sigma}$ of $E$ permutes the factors of $f$, and thus $\hat{\sigma }f=f$. Thus, $f$ has coefficients in $E^{G}$, and thus $f\in F[x]$. Since $f(\alpha)=0$, $\alpha$ is algebraic over $F$. Let $p=\text{min}_{F, \alpha}$. We immediately have $p\ | \ f$. 
+> > Let $f(x):=\prod_{i=1}^{r}(x-\alpha_{i})$. By [[LEC ALG4 17#^c54c9e]].1, $\text{Gal}(E/F)$ permutes $\Lambda$. In particular, $G\subseteq \text{Gal}(E/F)$ (equality may not hold, since we did not assume $G$ to be finite!) permutes $\Lambda$. It follows that for each $\sigma\in G$, $\hat{\sigma}$ permutes the factors of $f$, and thus $\hat{\sigma }f=f$. Thus, $f$ has coefficients in $E^{G}$, and thus $f\in F[x]$. Since $f(\alpha)=0$, $\alpha$ is algebraic over $F$. Let $p=\text{min}_{F, \alpha}$. We immediately have $p\ | \ f$. 
 > > 
-> > By [[LEC ALG4 17#^c54c9e]].1, $\text{Gal}(E/F)$ permutes the roots of $p$. In particular, $G\subseteq \text{Gal}(E/F)$ (equality may not hold, since we did not assume $G$ to be finite!) permutes the roots of $p$. Thus, every element of $\Lambda$ is a root of $p$ and $\text{deg}\,p\geqslant |\Lambda|=\text{deg}\, f$ and we conclude that $f=p$. 
-> > 
+> > Since $G$ permutes the roots of $p$ too, every element of $\Lambda$ is a root of $p$ and $\text{deg}\,p\geqslant |\Lambda|=\text{deg}\, f$ and we conclude that $f=p$. 
 > 
+
 
 ^dbed4e
 

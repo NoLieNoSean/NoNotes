@@ -24,6 +24,7 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 
 [[Quiz CANA 2]]
 [[AS CANA 1]]
+[[AS CANA 2]]
 
 
 

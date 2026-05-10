@@ -26,7 +26,7 @@ tags:
 > Let $E/F$ be an algebraic extension and let $S=\{ \alpha\in E:\alpha \text{ is separable over }F \}$. Then $S$ is a field. It is the unique intermediate field that is separable over $F$ and over which $E$ is purely inseparable. We may denote $S$ by $E_{\text{sep}}$.
 
 > [!Lemma] @isaacsAlgebraGraduateCourse2009 19.15
-> Let $F$ be a field and let $\alpha, \beta\in \overline{F}$ be separable over $F$. Then $E[\alpha, \beta]/F$ is a separable extension. 
+> Let $F$ be a field and let $\alpha, \beta\in \overline{F}$ be separable over $F$. Then $F(\alpha, \beta)/F$ is a separable extension. 
 > 
 > > [!Proof]-
 > > 

@@ -95,7 +95,7 @@ tags:
 > > 
 > > Next, suppose $[E_{1}:F_{1}]> 1$. Let $\alpha_{1}\in E_{1}\setminus F_{1}$ be a root of $f_{1}$. Let $g_{1}\in F_{1}[x]$ be the minimal polynomial of $\alpha_{1}$. Let $g_{2}=\hat{\varphi}g_{1}$. $g_{2}$ is an irreducible factor of $f_{2}$. Let $\alpha_{2}\in E_{2}$ be a root of $g_{2}$. 
 > > 
-> > By [[#^955372]], there exists $\theta:F_{1}(\alpha)\to F_{2}(\alpha)$ such that the lower rectangle of this diagram commutes, since $[E_{1}:F_{1}(\alpha)]<[E_{1}:F_{1}]$. 
+> > By [[#^955372]], there exists $\theta:F_{1}(\alpha)\to F_{2}(\alpha)$ such that the lower rectangle of this diagram commutes:
 > > 
 > > ```latex
 > > % latex-id: 8062-ad2a-d22b-4bfb-a6c4
@@ -105,7 +105,8 @@ tags:
 > > \end{document}
 > > ```
 > > 
-> > By induction, there exists an isomorphism $\tau:E_{1}\to E_{2}$ extending $\theta$. Thus, $\tau$ extends $\varphi$. 
+> > Since $[E_{1}:F_{1}(\alpha)]<[E_{1}:F_{1}]$, there exists by induction an isomorphism $\tau:E_{1}\to E_{2}$ extending $\theta$. Thus, $\tau$ extends $\varphi$. 
+> 
 
 ^bcf07f
 
