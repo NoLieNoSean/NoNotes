@@ -14,7 +14,7 @@ Recall what a [[Compactness#^c3fe5a|compactification]] is.
 > 
 > > [!Proof]-
 > > 
-> > Given $h$, let $X_{0}$ denote the subspace $h(X)$ of $Z$, and let $Y_{0}$ denote its closure in $Z$. Then $Y_{0}$ is a [[Compactness#^935571|compact]] Hausdorff space and $\overline{X_{0}}=Y_{0}$; therefore, $Y_{0}$ is a compactification of $X_{0}$. We con construct $Y\supseteq X$ such that $h$ can be extended to a homeomorphism $H$ of $Y$ onto $Y_{0}$. 
+> > Given $h$, let $X_{0}$ denote the subspace $h(X)$ of $Z$, and let $Y_{0}$ denote its closure in $Z$. Then $Y_{0}$ is a compact Hausdorff space and $\overline{X_{0}}=Y_{0}$; therefore, $Y_{0}$ is a compactification of $X_{0}$. We con construct $Y\supseteq X$ such that $h$ can be extended to a homeomorphism $H$ of $Y$ onto $Y_{0}$. 
 > > 
 > > Now suppose $Y_{i}$ is a compactification of $X$ and that $H_{i}:Y_{i}\to Z$ is an imbedding that is an extension of $h$ for $i=1, 2$. [[Preliminaries to Topology#^1b4b44|Since]] $H_{i}$ is continuous, we have $H_{i}(Y_{i})=H_{i}(\overline{X})\subseteq\overline{H_{i}(X)}=Y_{0}$. Thus, $H_{2}^{-1}\circ H_{1}$ defines a homeomorphism of $Y_{1}$ with $Y_{2}$ that equals the identity on $X$. 
 > 

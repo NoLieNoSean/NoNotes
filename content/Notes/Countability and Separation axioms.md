@@ -168,6 +168,8 @@ Both countability axioms are well behaved with respect to the operations of taki
 > 1. A subspace of a (first/second) countable space is (first/second) countable. 
 > 2. A countable product of (first/second) countable spaces is (first/second) countable.
 
+^54d9fd
+
 In a first countable space, convergent sequence are adequate to detect limit points of sets and to check continuity of functions; see [[Preliminaries to Topology#^0d769b]]. 
 
 Two important consequences of the second countability axiom relate to notions we have encountered before in the context of metric spaces. 

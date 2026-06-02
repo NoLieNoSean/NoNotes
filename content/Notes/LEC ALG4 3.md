@@ -48,7 +48,6 @@ Clearly, free modules are projective.
 > [!Warning]
 > [[#^eba5ed]] and [[#^544d97]] are not describing universal properties! As is evident by the proof of [[#^eba5ed]], $\tilde{\varphi}$ does not have to be unique. 
 
-
 > [!Corollary]
 > Let $\alpha:M\twoheadrightarrow P$ be a surjective $R$-module homomorphism with $P$ projective. Then there exists an $R$-module homomorphism $\beta:P\to M$ such that $\alpha \circ \beta=\text{id}_{P}$. 
 

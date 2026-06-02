@@ -78,8 +78,10 @@ tags:
 
 We have shown that every second countable regular space can be imbedded in the infinite dimensional euclidean space $\mathbb{R}^{\omega}$. Under what conditions can a space $X$ be imbedded in some finite dimensional euclidean space $\mathbb{R}^{N}$?
 
-> [!Definition] $m$-manifold
+> [!Definition] $m$-manifold, @munkresTopology2000 §36
 > An $m$-manifold is a second countable Hausdorff space $X$ such that each point $x$ of $X$ has a neighborhood that is homeomorphic with an open subset of $\mathbb{R}^{m}$. 
+
+^6bc1cb
 
 > [!Definition]
 > If $\varphi:X\to \mathbb{R}$, then the **support** of $\varphi$ is defined to be the closure of the set $\varphi ^{-1}(\mathbb{R}\setminus \{ 0 \})$. Thus, if $x$ lies outside of the support of $\varphi$, there is some neighborhood of $x$ on which $\varphi$ vanishes. 

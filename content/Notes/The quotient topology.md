@@ -18,7 +18,9 @@ Clearly, surjective continuous open/closed maps are quotient maps.
 ^3b95fe
 
 > [!Definition] Quotient topology
-> If $X$ is a space and $A$ is a set and if $p:X\to A$ is a surjective map, then  there exists exactly one topology $\mathcal{T}$ on $A$ relative to which $p$ is a quotient map; it is called the **quotient topology** induced by $p$. 
+> If $X$ is a space and $A$ is a set and if $p:X\to A$ is a surjective map, then  there exists exactly one topology $\mathcal{T}$ on $A$ relative to which $p$ is a quotient map (==open sets are exactly the images of saturated open sets==); it is called the **quotient topology** induced by $p$. 
+
+^4fa85d
 
 > [!Definition] Quotient space
 > Let $X$ be a topological space, and let $X^{*}$ be a partition of $X$ into disjoint subsets whose union is $X$. Let $p:X\to X^{*}$ be the surjective map that carries each point of $X$ to the element of $X^{*}$ containing it. In the quotient topology induced by $p$, the space $X^{*}$ is called a **quotient space** of $X$. 
@@ -35,7 +37,24 @@ Note:
 2. The product of two quotient maps need *not* be a quotient map. 
 3. Even if $X$ is Hausdorff, the quotient space $X^{*}$ need *not* be Hausdorff. 
 
-> [!Theorem] Universal property of quotient maps
+> [!Theorem] Characterization of quotient maps, @leeIntroductionTopologicalManifolds2000 3.31
+> Let $X$ and $Y$ be topological spaces, and let $\pi:X\to Y$ be any surjective map. Then $\pi$ is a quotient map iff the following property holds: For any topological space $B$, an map $f:Y\to B$ is continuous iff the composite map $f\circ \pi$ is continuous. 
+> 
+> ```latex
+> % latex-id: b40b-e323-1d38-452c-a49d
+> \begin{document}
+> % https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzAsMSwiWSJdLFsxLDEsIkIiXSxbMCwxLCJcXHBpIiwyXSxbMCwyLCJmXFxjaXJjIFxccGkiXSxbMSwyLCJmIiwyXV0= 
+> \[\begin{tikzcd} X & \\ Y & B \arrow["\pi"', from=1-1, to=2-1] \arrow["{f\circ \pi}", from=1-1, to=2-2] \arrow["f"', from=2-1, to=2-2] \end{tikzcd}\]
+> \end{document}
+> ```
+> 
+
+The following theorem shows that quotient spaces are uniquely determined up to homeomorphism by the identifications made by their quotient maps. 
+ 
+> [!Theorem] Uniqueness of Quotient Spaces, @leeIntroductionTopologicalManifolds2000 3.32
+> Suppose $\pi_{1}:X\to Y_{1}$ and $\pi_{2}:X\to Y_{2}$ are quotient maps that make the same identifications. Then there is a unique homeomorphism $\varphi:Y_{1}\to Y_{2}$ such that $\varphi \circ \pi_{1}=\pi_{2}$. 
+
+> [!Theorem] Passing to the quotient
 > Let $p:X\to Y$ be a quotient map. Let $Z$ be a space and let $g:X\to Z$ be a map which is constant on the fibers of $p$. Then $g$ induces a map $f:Y\to Z$ such that $f\circ p=g$. The induced map $f$ is continuous iff $g$ is continuous; $f$ is a quotient map iff $g$ is a quotient map. 
 > 
 > ```latex
@@ -54,6 +73,9 @@ Note:
 > 
 
 ^461a5c
+
+#q Is this even a universal property??
+
 
 > [!Corollary]
 > Let $g:X\to Z$ be a surjective continuous map. Let $X^{*}$ be the collection of fibers of $g$. Give $X^{*}$ the quotient topology. Then, the map $g$ induces a bijective continuous map $f:X^{*}\to Z$, which is a homeomorphism iff $g$ is a quotient map. If $Z$ is Hausdorff, so is $X^{*}$. 

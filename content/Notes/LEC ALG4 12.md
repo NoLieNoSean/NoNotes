@@ -23,19 +23,19 @@ Note that $\varphi$ itself is *not* linear (we don't use a module structure on t
 
 We will construct the tensor product of $M$ and $N$ as a solution to the following universal problem:
 
-> [!Definition] Universal property of tensor products
-> Let $M, N$ be $R$-modules. We call a pair $(T, \tau)$ the **tensor product** of $M$ and $N$, where $T$ is an $R$-module and $\tau:M\times N\to T$ is $R$-bilinear, if for all bilinear $\varphi:M\times N\to P$, there exists unique $R$-linear $\overline{\varphi}:T\to P$ such that the following diagram commutes. 
-> 
-> ```latex
-> % latex-id: 9c99-9bd5-c96e-44af-b3cd
-> 
-> \begin{document}
-> % https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXFx0aW1lcyBOIl0sWzEsMCwiUCJdLFswLDEsIlQiXSxbMCwxLCJcXHZhcnBoaSJdLFswLDIsIlxcdGF1IiwyXSxbMiwxLCJcXGV4aXN0cyFcXG92ZXJsaW5le1xcdmFycGhpfSIsMl1d 
-> \[\begin{tikzcd} {M\times N} & P \\ T \arrow["\varphi", from=1-1, to=1-2] \arrow["\tau"', from=1-1, to=2-1] \arrow["{\exists!\overline{\varphi}}"', from=2-1, to=1-2] \end{tikzcd}\]
-> \end{document}
-> 
-> ```
-> We denote $\tau(x, y)$ by $x\otimes y$. 
+[!Definition] Universal property of tensor products
+Let $M, N$ be $R$-modules. We call a pair $(T, \tau)$ the **tensor product** of $M$ and $N$, where $T$ is an $R$-module and $\tau:M\times N\to T$ is $R$-bilinear, if for all bilinear $\varphi:M\times N\to P$, there exists unique $R$-linear $\overline{\varphi}:T\to P$ such that the following diagram commutes. 
+
+```latex
+% latex-id: 9c99-9bd5-c96e-44af-b3cd
+
+\begin{document}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXFx0aW1lcyBOIl0sWzEsMCwiUCJdLFswLDEsIlQiXSxbMCwxLCJcXHZhcnBoaSJdLFswLDIsIlxcdGF1IiwyXSxbMiwxLCJcXGV4aXN0cyFcXG92ZXJsaW5le1xcdmFycGhpfSIsMl1d 
+\[\begin{tikzcd} {M\times N} & P \\ T \arrow["\varphi", from=1-1, to=1-2] \arrow["\tau"', from=1-1, to=2-1] \arrow["{\exists!\overline{\varphi}}"', from=2-1, to=1-2] \end{tikzcd}\]
+\end{document} 
+
+```
+We denote $\tau(x, y)$ by $x\otimes y$. 
 
 ^2dca86
 
@@ -84,6 +84,8 @@ I do not know where you got the idea from, but $\tau$ is *not* an inclusion!
 > > 
 > > How do we know that $\overline{\varphi}$ is unique? Well, suppose $\psi$ is another map such that $\psi \circ \otimes=\varphi$. Since $\otimes=\pi \circ j$, we have $\varphi=\psi \circ(\pi \circ j)=(\psi \circ \pi)\circ j$ . This forces $\psi \circ \pi=\tilde{\varphi}$, which then forces $\psi=\overline{\varphi}$!
 > 
+
+^bb57f4
 
 > [!Warning]
 > Elements of the form $m\otimes n$ are called **pure tensors**. Not every element of the tensor product is a pure tensor! Pure tensors are nevertheless very useful, as a set of generators for the tensor product. For example, if two homomorphisms $\alpha, \beta:M\otimes_{R}N\to P$ coincide on pure tensors, then $\alpha=\beta$.
@@ -498,3 +500,7 @@ The same can be said about $N\otimes_{R}\_$.
 > 
 
 [^2]: Note that the universal property of coproducts does NOT require the maps into the coproduct to be injective - indeed, this is not the case in $R\textsf{-Alg}$. For example, consider $\mathbb{Z}/4\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/6\mathbb{Z}\cong \mathbb{Z}/2\mathbb{Z}$ - there's no way to have an injection from $\mathbb{Z}/4\mathbb{Z}$ to $\mathbb{Z}/2\mathbb{Z}$!
+
+
+@biswasLatticePointsArising2026
+

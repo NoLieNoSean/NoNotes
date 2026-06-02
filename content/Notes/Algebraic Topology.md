@@ -8,5 +8,3 @@ draft: true
 ---
 [[The quotient topology]]
 [[The fundamental group and covering spaces]]
-
-

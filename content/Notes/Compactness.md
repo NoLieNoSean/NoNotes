@@ -19,6 +19,8 @@ tags:
 > > $(4)$ If $A\subseteq X$ is closed in $X$, then $A$ is compact. Therefore, $f(A)$ is compact. Since $Y$ is Hausdorff, $f(A)$ is closed in $Y$. 
 > 
 
+^c93857
+
 
 > [!Lemma] Tube lemma
 > Consider the product space $X\times Y$, where $Y$ is compact. If $N$ is an open set of $X\times Y$ containing the slice $x_{0}\times Y$ of $X\times Y$, then $N$ contains some tube $W\times Y$ about $x_{0}\times Y$, where $W$ is a neighborhood of $x_{0}$ in $X$. 
@@ -53,11 +55,12 @@ For metric spaces, we get a refinement of compactness: the [[LEC CAL1 8#Lebesgue
 > > First, show that given any nonempty open set $U$ of $X$ and any point $x$ of $X$, there exists a nonempty open set $V$ contained in $U$ such that $x\not\in \overline{V}$; this used the Hausdorff hypothesis. Then, show that given $f:\mathbb{Z}_{+}\to X$, $f$ is not surjective by constructing a descending chain of closed intervals $\overline{V}_{1}\supseteq \overline{V}_{2}\supseteq\dots$ such that $\overline{V}_{n}$ does not contain $x_{n}$. Using the finite intersection property, $\bigcap \overline{V}_{n}$ is nonempty, and the element contained in this intersection cannot be in the image of $f$. 
 > 
 
-> [!Exercise]
-> A compact subspace of a Hausdorff space is closed. 
-
-^935571
-
+> [!Proposition] Closed Map Lemma, @leeIntroductionTopologicalManifolds2000 4.25
+> Suppose $F$ is a continuous map from a compact space to a Hausdorff space. 
+> 1. $F$ is a closed map. 
+> 2. If $F$ is surjective, it is a quotient map.
+> 3. If $F$ is injective, it is a topological embedding 
+> 4. If $F$ is bijective, it is a homeomorphism. 
 
 ---
 
@@ -114,7 +117,7 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 > 
 > > [!Proof]-
 > > 
-> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $C$ be compact such that $x\in W\subseteq C$ for open $W$. Let $V=W\cap U$. Since $X$ is Hausdorff, $C$ is closed by [[#^935571]]. Thus, $\overline{V}\subseteq C$ and $\overline{V}$ is compact. 
+> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $C$ be compact such that $x\in W\subseteq C$ for open $W$. Let $V=W\cap U$. Since $X$ is Hausdorff, $C$ is closed by [[#^c93857]].2. Thus, $\overline{V}\subseteq C$ and $\overline{V}$ is compact. 
 > > 
 > > $(\impliedby)$ is clear. 
 > 
