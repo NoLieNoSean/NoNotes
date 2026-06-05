@@ -87,4 +87,4 @@ The following theorem shows that quotient spaces are uniquely determined up to h
 > \[\begin{tikzcd} X & \\ {X^{*}} & Z \arrow["p"', from=1-1, to=2-1] \arrow["g", from=1-1, to=2-2] \arrow["f"', dashed, from=2-1, to=2-2] \end{tikzcd}\]
 > \end{document}
 > ```
-> 
+

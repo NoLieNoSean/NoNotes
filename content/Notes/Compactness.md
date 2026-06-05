@@ -62,6 +62,9 @@ For metric spaces, we get a refinement of compactness: the [[LEC CAL1 8#Lebesgue
 > 3. If $F$ is injective, it is a topological embedding 
 > 4. If $F$ is bijective, it is a homeomorphism. 
 
+> [!Proposition] @leeIntroductionTopologicalManifolds2000, 4.26
+> Let $K$ be a compact convex subset of $\mathbb{R}^{n}$ with nonempty interior. Then $K$ is homeomorphic to the closed unit ball $\overline{\mathbb{B}^{n}}$, by a homeomorphism that sends $\mathbb{S}^{n-1}$ to $\partial K$. 
+
 ---
 
 # Limit point compactness
