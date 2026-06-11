@@ -55,15 +55,10 @@ For metric spaces, we get a refinement of compactness: the [[LEC CAL1 8#Lebesgue
 > > First, show that given any nonempty open set $U$ of $X$ and any point $x$ of $X$, there exists a nonempty open set $V$ contained in $U$ such that $x\not\in \overline{V}$; this used the Hausdorff hypothesis. Then, show that given $f:\mathbb{Z}_{+}\to X$, $f$ is not surjective by constructing a descending chain of closed intervals $\overline{V}_{1}\supseteq \overline{V}_{2}\supseteq\dots$ such that $\overline{V}_{n}$ does not contain $x_{n}$. Using the finite intersection property, $\bigcap \overline{V}_{n}$ is nonempty, and the element contained in this intersection cannot be in the image of $f$. 
 > 
 
-> [!Proposition] Closed Map Lemma, @leeIntroductionTopologicalManifolds2000 4.25
-> Suppose $F$ is a continuous map from a compact space to a Hausdorff space. 
-> 1. $F$ is a closed map. 
-> 2. If $F$ is surjective, it is a quotient map.
-> 3. If $F$ is injective, it is a topological embedding 
-> 4. If $F$ is bijective, it is a homeomorphism. 
-
 > [!Proposition] @leeIntroductionTopologicalManifolds2000, 4.26
 > Let $K$ be a compact convex subset of $\mathbb{R}^{n}$ with nonempty interior. Then $K$ is homeomorphic to the closed unit ball $\overline{\mathbb{B}^{n}}$, by a homeomorphism that sends $\mathbb{S}^{n-1}$ to $\partial K$. 
+
+Proof follows standard convex geometric arguments.
 
 ---
 
@@ -115,14 +110,15 @@ Clearly, a compact space is locally compact.
 
 If we assume $X$ is Hausdorff, local compactness admits the kind of formulation we'd expect for a 'local' property:
 
-> [!Proposition]
+> [!Proposition] @munkresTopology2000 29.2
 > Let $X$ be a Hausdorff space. Then $X$ is locally compact iff for each $x\in X$ and each neighborhood $U\ni x$, there is a neighborhood $V\ni x$ such that $\overline{V}$ is compact and is contained in $U$, i.e., $x\in V\subseteq \overline{V}\subseteq U$. 
 > 
 > > [!Proof]-
 > > 
-> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $C$ be compact such that $x\in W\subseteq C$ for open $W$. Let $V=W\cap U$. Since $X$ is Hausdorff, $C$ is closed by [[#^c93857]].2. Thus, $\overline{V}\subseteq C$ and $\overline{V}$ is compact. 
+> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $Y$ be the one-point compactification $X$, and let $C$ be the set $Y\setminus U$. Then $C$ is closed in $Y$, so that $C$ is a compact subspace of $Y$. Apply [[Countability and Separation axioms#^5ad38e]] to choose disjoint open sets $V$ and $W$ containing $x$ and $C$ respectively. Then the closure $\overline{V}$ of $V$ in $Y$ is compact, and $\overline{V}$ is disjoint from $C$, so that $\overline{V}\subseteq U$. 
 > > 
 > > $(\impliedby)$ is clear. 
+> > 
 > 
 
 > [!Proposition]

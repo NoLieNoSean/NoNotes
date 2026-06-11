@@ -21,6 +21,8 @@ The interior of a $k$-simplex is sometimes called an **open** $k$-simplex. Note 
 > [!Definition] SImplicial map
 > A map $f:\sigma\to \tau$ between simplices is called a **simplicial map** if it is the restriction of an affine map that takes vertices of $\sigma$ to vertices of $\tau$. 
 
+^5a9dc6
+
 > [!Proposition]
 > 4. Simplicial maps between a given pair of simplices are in bijection with maps between their vertices. 
 > 5. Any two $k$-simplices are homeomorphic by a simplicial homeomorphism. 
@@ -42,6 +44,10 @@ Thus, a $k$-simplex is a $k$-dimensional manifold with boundary.
 > The **dimension** of $K$ is the maximum dimension of any simplex in $K$. 
 > 
 > Given a Euclidean complex $K$, the union of all the simplices in $K$ with the subspace topology is denoted by $|K|$ and called the **(Euclidean) polyhedron** of $K$. 
+
+^bc164d
+
+The simplicial complex $K$ is frequently identified with its polyhedron $|K|$. 
 
 > [!Definition]
 > 4. Let $K$ be a Euclidean simplicial complex. Any subset $K'\subseteq K$ this is itself a simplicial complex is called a **subcomplex** of $K$. In particular, for any nonnegative integer $k$, the subset $K^{(k)}\subseteq K$ consisting of all simplices of dimension less than or equal to $k$ is a subcomplex, called the $k$-skeleton of $K$. 
@@ -107,9 +113,11 @@ Clearly, given a collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subsets of a set
 > % latex-id: 046a-a238-f267-4657-b797
 > \begin{document}
 > % https://q.uiver.app/#q=WzAsNCxbMCwwLCJLIl0sWzEsMCwiXFxtYXRoY2Fse0t9Il0sWzEsMSwifFxcbWF0aGNhbHtLfXwiXSxbMCwxLCJ8S3wiXSxbMCwxXSxbMCwzXSxbMSwyXSxbMywyLCJcXHNpbSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dXQ== 
-> \[\begin{tikzcd} K & {\mathcal{K}} \\ {|K|} & {|\mathcal{K}|} \arrow[from=1-1, to=1-2] \arrow[from=1-1, to=2-1] \arrow[from=1-2, to=2-2] \arrow["\sim"', tail reversed, from=2-1, to=2-2] \end{tikzcd}\]
+> \[\begin{tikzcd} K & {\mathcal{K}} \\ {|K|} & {|\mathcal{K}|} \arrow[from=1-1, to=1-2] \arrow[from=1-1, to=2-1] \arrow[from=1-2, to=2-2] \arrow["\sim"', from=2-1, to=2-2] \end{tikzcd}\]
 > \end{document}
 > ```
+
+The [[The quotient topology#^7113cb|uniqueness of quotient spaces]] is used to exhibit the homeomorphism. 
 
 > [!Question]
 > When is an abstract simplicial complex the vertex scheme of an Euclidean simplicial complex? That is, what are the conditions required on $\mathcal{K}$ for $|\mathcal{K}|$ to embed into $\mathbb{R}^{n}$ for some $n$?
@@ -152,6 +160,8 @@ Clearly, given a collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subsets of a set
 > [!Theorem] @moiseGeometricTopologyDimensions1977 8.3
 > Every $2$-manifold admits a triangulation by a $2$-dimensional simplicial complex, in which each edge lies on exactly two $2$-simplices.
 
+^9d61f9
+
 It is possible to prove these, although we will not:
 
 > [!Theorem]
@@ -159,3 +169,4 @@ It is possible to prove these, although we will not:
 
 > [!Proposition]
 > In every triangulated manifold, every $(n-1)$-simplex is a face of no more than tow $n$-simplices. 
+

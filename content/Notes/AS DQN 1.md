@@ -42,7 +42,7 @@ $$
 
 ```latex
 % latex-id: b422-0924-d4ae-4588-8547
-\tikzset{
+\tikzset{ 
       myarrowtip/.tip={Straight Barb[length=4pt,width=6pt]},
       arrow data/.style={%
       decoration={%
@@ -88,6 +88,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
+
 
 ## Part b
 

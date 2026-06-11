@@ -6,7 +6,3 @@ Pull requests are welcome!
 
 !!@!@!@!!!@!@!@@!@!@!@@. <span style="font-size: 0.5em"><a href="https://www.youtube.com/watch?v=T-d0ZJ7tWgE">No Lie No Sean</a></span> 
 # [MOC List](tags/MOC)
-
-
-@hibiHomologicalInvariantsCameronWalker2020
-

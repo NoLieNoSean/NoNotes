@@ -7,6 +7,8 @@
 .zotero-ft-cache
 .zotero-reader-cache
 .zotero-reader-state
+(?d).zotero-reader-state
+
 
 !storage
 

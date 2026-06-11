@@ -10,6 +10,8 @@ tags:
 > 1. Let $X$ and $Y$ be topological spaces, let $p:X\to Y$ be a surjective map. The map $p$ is said to be a **quotient map** provided a subset $U$ of $Y$ is open in $Y$ iff $p ^{-1}(U)$ is open in $X$. 
 > 2. We say that a subset $C$ of $X$ is **saturated** with respective to a surjective map $p:X\to Y$ if $C$ is a union of sets of the form $p ^{-1}(\{ y \})$ for $y\in Y$. Thus, $p$ is a quotient map iff it is *continuous* and *maps saturated open sets of $X$ to open sets of $Y$*. 
 
+^da2c9c
+
 Clearly, surjective continuous open/closed maps are quotient maps. 
 
 > [!Example] quotient map which is neither open nor closed
@@ -54,6 +56,8 @@ The following theorem shows that quotient spaces are uniquely determined up to h
 > [!Theorem] Uniqueness of Quotient Spaces, @leeIntroductionTopologicalManifolds2000 3.32
 > Suppose $\pi_{1}:X\to Y_{1}$ and $\pi_{2}:X\to Y_{2}$ are quotient maps that make the same identifications. Then there is a unique homeomorphism $\varphi:Y_{1}\to Y_{2}$ such that $\varphi \circ \pi_{1}=\pi_{2}$. 
 
+^7113cb
+
 > [!Theorem] Passing to the quotient
 > Let $p:X\to Y$ be a quotient map. Let $Z$ be a space and let $g:X\to Z$ be a map which is constant on the fibers of $p$. Then $g$ induces a map $f:Y\to Z$ such that $f\circ p=g$. The induced map $f$ is continuous iff $g$ is continuous; $f$ is a quotient map iff $g$ is a quotient map. 
 > 
@@ -74,9 +78,6 @@ The following theorem shows that quotient spaces are uniquely determined up to h
 
 ^461a5c
 
-#q Is this even a universal property??
-
-
 > [!Corollary]
 > Let $g:X\to Z$ be a surjective continuous map. Let $X^{*}$ be the collection of fibers of $g$. Give $X^{*}$ the quotient topology. Then, the map $g$ induces a bijective continuous map $f:X^{*}\to Z$, which is a homeomorphism iff $g$ is a quotient map. If $Z$ is Hausdorff, so is $X^{*}$. 
 > 
@@ -88,3 +89,24 @@ The following theorem shows that quotient spaces are uniquely determined up to h
 > \end{document}
 > ```
 
+---
+
+# Examples
+
+The [[#^7113cb|uniqueness of quotient spaces]] and the following lemma are used frequently when working with quotient spaces:
+
+> [!Lemma] Closed Map Lemma, @leeIntroductionTopologicalManifolds2000 4.25
+> Suppose $F$ is a continuous map from a compact space to a Hausdorff space. 
+> 1. $F$ is a closed map. 
+> 2. If $F$ is surjective, it is a quotient map.
+> 3. If $F$ is injective, it is a topological embedding 
+> 4. If $F$ is bijective, it is a homeomorphism. 
+
+^c8571b
+
+For first examples, see how spaces like the 2-torus, 2-sphere, and the [[Real projective space|projective plane]] can be obtained as quotients of the square by identifying edges in pairs. 
+
+> [!Example] Torus as a quotient
+> Define an equivalence relation on $I\times I$ by $(x, 0)\sim (x, 1)$ for all $x\in I$ and $(0, y)\sim (1, y)$ for all $y\in I$; this defines a quotient map by [[#^4fa85d]].  Construct another map $q:I\times I\to \mathbb{T}^{2}$ by setting $q(u, v)=(\cos 2\pi u, \sin 2\pi u, \cos 2\pi v, \sin 2\pi v)$. By the [[#^c8571b|closed map lemma]], this is a quotient map. Since it makes the same identifications as the quotient map we started with, the original quotient of $I\times I$ must be homeomorphic to the torus by the [[#^7113cb|uniqueness of quotient spaces]]. 
+
+See @leeIntroductionTopologicalManifolds2000 Prop 6.2, Prop 6.3 for $\mathbb{S}^{2}$ and $\mathbb{P}^{2}$ respectively. 

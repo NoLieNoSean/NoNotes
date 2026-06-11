@@ -98,7 +98,6 @@ We have shown that every second countable regular space can be imbedded in the i
 > [!Proposition]
 > Let $\{ U_{1}, \dots, U_{n} \}$ be a finite open covering of the normal space $X$. Then there exists a partition of unity dominated by $\{ U_{i} \}$. 
 
-
 > [!Theorem]
 > If $X$ is a compact $m$-manifold, then $X$ can be imbedded in $\mathbb{R}^{N}$ for some positive integer $N$. 
 

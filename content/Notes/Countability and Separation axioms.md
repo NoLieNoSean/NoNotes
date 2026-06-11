@@ -142,6 +142,8 @@ There is no analogue of [[#^f0873d]] for normal spaces.
 > [!Corollary]
 > Compact subsets of a Hausdorff space can be separated by disjoint open sets. 
 
+^5ad38e
+
 > [!Proposition]
 > Every well-ordered set $X$ is normal in the order topology. 
 

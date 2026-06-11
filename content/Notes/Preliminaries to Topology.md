@@ -127,7 +127,8 @@ Clearly, it suffices to show that the preimage of every basis (or subbasis) elem
 
 > [!Proposition]
 > 1. $f$ is continuous $\iff$ $f(\overline{A})\subseteq\overline{f(A)}$ for all $A\subseteq X$. 
-> 2. The map $f:X\to Y$ is continuous if $X$ can be written as the union of open sets $U_{\alpha}$ such that $f\ | \ _{U_{\alpha}}$ is continuous for each $\alpha$. 
+> 2. $f$ is closed iff $f(\overline{A})\supseteq \overline{f(A)}$ for all $A\subseteq X$. 
+> 3. The map $f:X\to Y$ is continuous if $X$ can be written as the union of open sets $U_{\alpha}$ such that $f\ | \ _{U_{\alpha}}$ is continuous for each $\alpha$. 
 
 ^1b4b44
 
