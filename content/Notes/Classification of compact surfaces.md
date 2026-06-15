@@ -148,11 +148,14 @@ Thus, we have standard presentations for
 > > This is easily resolved, however: If $\pi_{K}$ identifies $v$ and $v'$ without an edge identification requiring it, it can be shown that any neighborhood of $v$ is disconnected by removing $v$, disqualifying $|K|$ as a manifold. 
 > 
 
+> [!Lemma]
+> The Klein bottle is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
 
-[!Lemma]
-The Klein bottle is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
+> [!Proposition] Attaching a Disk
+> Let $X$ be a path-connected topological space, and let $\tilde{X}$ be the space obtained by attaching a closed $2-$cell $D$ to $X$ along an attaching map $\varphi:\partial D\to X$. Let $v\in \partial D$, $\tilde{v}=\varphi(v)\in X$, and $\gamma=\varphi_{*}(\alpha)\in \pi_{1}(X, \tilde{v})$, where $\alpha$ is a generator of the infinite cyclic group $\pi_{1}(\partial D, v)$. Then the homomorphism $\pi_{1}(X, \tilde{v})\to \pi_{1}(\tilde{X}, \tilde{v})$ induced by the inclusion $X\hookrightarrow \tilde{X}$ is surjective, and its kernel is the smallest normal subgroup containing $\gamma$. 
 
-
+> [!Theorem]
+> Let $M$ be a topological space with a polygonal presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$ with one face, in which all vertices are identified to a single point. Then $\pi_{1}(M)$ has the presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$. 
 
 > [!Theorem] Classification of compact surfaces, @leeIntroductionTopologicalManifolds2000 Thm 6.14
 > Every nonempty, compact, connected 2-manifold is homeomorphic to exactly one of these surfaces:
@@ -162,3 +165,7 @@ The Klein bottle is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$.
 > 
 
 
+This immediately leads to a classification of compact $2$-manifolds with boundary. 
+
+> [!Theorem]
+> Every compact $2$-manifold with boundary is homeomorphic to a compact $2$-manifold with finitely many open cells removed. 

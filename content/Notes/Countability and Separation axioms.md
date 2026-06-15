@@ -181,6 +181,8 @@ Two important consequences of the second countability axiom relate to notions we
 > 1. Every open covering of $X$ contains a countable subcover. ([[LEC CAL1 9#^0bd0b5]])
 > 2. $X$ is [[LEC CAL1 9#^9c3671|separable]]. ([[LEC CAL1 9#^b788c7]], $\impliedby$)
 
+^c0f7b5
+
 1. A space for which every open cover contains a countable subcover is called a **Lindelöf space**. 
 2. The Lindelöf property and separability are weaker in general than the second countability axiom. 
 3. separability and first countability together do not imply second countable either; the proof of ([[LEC CAL1 9#^b788c7]], $\implies$) does not go through when the metric space hypothesis is replaced by first countability.

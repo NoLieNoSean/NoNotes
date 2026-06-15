@@ -7,6 +7,8 @@ tags:
 ---
 # The Urysohn Lemma
 
+The following theorem expresses the most important property of normal spaces. Informally, it says that "closed subsets of a normal space can be separated by continuous functions". 
+
 > [!Theorem] Urysohn lemma
 > Let $X$ be a normal space, let $A$ and $B$ be disjoint closed subsets of $X$. Let $[a, b]$ be a closed interval in the real line. Then there exists a continuous map
 > $$
@@ -76,7 +78,7 @@ tags:
 
 # Imbeddings of Manifolds
 
-We have shown that every second countable regular space can be imbedded in the infinite dimensional euclidean space $\mathbb{R}^{\omega}$. Under what conditions can a space $X$ be imbedded in some finite dimensional euclidean space $\mathbb{R}^{N}$?
+We have shown that every second countable regular space can be imbedded in the infinite dimensional euclidean space $\mathbb{R}^{\omega}$. We will now show that for compact manifolds, an imbedding into finite dimensional euclidean space $\mathbb{R}^{N}$ can be achieved. 
 
 > [!Definition] $m$-manifold, @munkresTopology2000 §36
 > An $m$-manifold is a second countable Hausdorff space $X$ such that each point $x$ of $X$ has a neighborhood that is homeomorphic with an open subset of $\mathbb{R}^{m}$. 
@@ -100,4 +102,9 @@ We have shown that every second countable regular space can be imbedded in the i
 
 > [!Theorem]
 > If $X$ is a compact $m$-manifold, then $X$ can be imbedded in $\mathbb{R}^{N}$ for some positive integer $N$. 
+
+^e4f9b0
+
+The preceding theorem is true without the compactness hypothesis. See @leeIntroductionTopologicalManifolds2011 p. 116 for an outline; see the exercises of @munkresTopology2000 §50 for details.
+
 

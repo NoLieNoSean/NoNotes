@@ -58,11 +58,12 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[Compactness]]
 [[Urysohn Lemma and applications]]
 [[Stone-Čech Compactification]]
+[[Topological dimension]]
 
 [[The quotient topology]] ✅
 [[The fundamental group and covering spaces]]
 [[Retractions and fixed points]]
 
-
+[[The Van-Kampen theorem]]
 
 [[HW TOP 1]]

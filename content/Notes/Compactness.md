@@ -10,13 +10,13 @@ tags:
 > 1. Every closed subspace of a compact space is compact. 
 > 2. Every compact subspace of a Hausdorff space is closed. 
 > 3. The image of a compact space under a continuous map is compact. 
-> 4. Let $f:X\to Y$ be a bijective continuous function. If $X$ is compact and $Y$ is Hausdorff, then $f$ is a homeomorphism. 
+> 4. A continuous map from a compact space to a Hausdorff space is a closed map. 
 > 
 > > [!Proof]-
 > > 
 > > $(2)$ Proof proceed in the same way as that of [[Countability and Separation axioms#^ae93c1]].3; show that every point not in the subspace has a neighborhood in the complement. 
 > > 
-> > $(4)$ If $A\subseteq X$ is closed in $X$, then $A$ is compact. Therefore, $f(A)$ is compact. Since $Y$ is Hausdorff, $f(A)$ is closed in $Y$. 
+> > $(4)$ Let $f:X\to Y$ be such a map. If $A\subseteq X$ is closed in $X$, then $A$ is compact. Therefore, $f(A)$ is compact. Since $Y$ is Hausdorff, $f(A)$ is closed in $Y$. 
 > 
 
 ^c93857
@@ -86,8 +86,15 @@ For metric spaces, compactness, limit point compactness, and sequential compactn
 
 # Local compactness
 
+A generalization of the notion of compactness. 
+
 > [!Definition] Local compactness
-> A space $X$ is called **locally compact** at $x$ if there is a compact subspace $C$ of $X$ that contains a neighborhood $V$ of $x$: that is, $x\in V\subseteq C\subseteq X$. A space is locally compact if it is locally compact at $x$ for all $x\in X$. 
+> 1. A subset $A$ of a topological space $X$ is said to be **precompact** in $X$ if $\overline{A}$ is compact. 
+> 2. A space $X$ is called **locally compact at $x$** if $x$ has a precompact neighborhood. 
+> 3. A space is **locally compact** if it is locally compact at $x$ for all $x\in X$. 
+
+^f8dbab
+
 
 Clearly, a compact space is locally compact. 
 
@@ -143,6 +150,55 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 
 ---
 
+# Paracompactness
+
+Another generalization of compactness; becomes important in the study of manifolds. 
+
+> [!Definition] Local finiteness
+> 1. Let $X$ be a topological space. A collection $\mathcal{A}$ of subsets of $X$ is said to be **locally finite** if each point of $X$ has a neighborhood that intersects at most finitely many of the sets in $\mathcal{A}$. 
+> 2. Given a cover $\mathcal{A}$ of $X$, another cover $\mathcal{B}$ is called a **refinement of $\mathcal{A}$** if for each $B\in \mathcal{B}$ there exists some $A\in \mathcal{A}$ such that $B\subseteq A$; it is an **open refinement** if each $B\in \mathcal{B}$ is an open subset of $X$. 
+
+> [!Definition] Paracompactness
+> A space $X$ is said to be **paracompact** if every open cover of $X$ admits a locally finite open refinement. 
+> 
+
+We will use the following lemma to prove that manifolds are paracompact.
+
+> [!Lemma] @leeIntroductionTopologicalManifolds2011 4.76
+> A second countable, locally compact Hausdorff space admits an exhaustion by compact sets (a sequence $(K_{i})_{i=1}^{\infty}$ of compact subsets of $X$ such that $X=\bigcup_{i}K_{i}$ and $K_{i}\subseteq K_{i+1}^{\circ}$ for each $i$). 
+> 
+> > [!Proof]-
+> > 
+> > If $X$ is a locally compact Hausdorff space, it has a basis of precompact open subsets; if in addition $X$ is second countable, it is covered by countably many such sets. Let $\{ U_{i} \}_{i=1}^{\infty}$ be such a countable cover. 
+> > 
+> > To prove the theorem, it suffices to construct a sequence $\{ K_{j} \}_{j=1}^{\infty}$ of compact sets satisfying $U_{j}\subseteq K_{j}$ and $K_{j}\subseteq K_{j+1}^{\circ}$ for each $j$. 
+> > 
+> > Begin by setting $K_{1}=\overline{U}_{1}$. For $k\geqslant 1$, suppose we have defined $K_{1}, \dots, K_{k}$ satisfying $U_{j}\subseteq K_{j}$ for $1\leqslant j\leqslant k$ and $K_{j}\subseteq K_{j+1}^{\circ}$ for $1\leqslant j\leqslant k-1$. Extract a finite subcover $\{ U_{\alpha} \}_{\alpha\in A}$ of $K_{k}$ from $\{ U_{i} \}_{i=1}^{\infty}$, and define $K_{k+1}$ to be $\overline{U}_{k+1}\cup\bigcup_{\alpha\in A}\overline{U}_{\alpha}$. 
+> 
+
+> [!Theorem] @leeIntroductionTopologicalManifolds2011 4.77
+> Every second countable, locally compact Hausdorff space (and in particular, every topological manifold with or without boundary) is paracompact. 
+> 
+> > [!Proof]-
+> > 
+> > ![[-20260614185108001.jpg|400]]
+> > 
+> > Suppose $X$ is second countable, locally compact Hausdorff. Suppose $\mathcal{U}$ is an open cover for $X$. Let $\{ K_{j} \}_{j=1}^{\infty}$ be an exhaustion of $X$ by compact sets. For each $j$, let $A_{j}=K_{j+1}\setminus K_{j}^{\circ}$ and $W_{j}=K_{j+2}^{\circ}\setminus K_{j-1}$. Then $A_{j}$ is a compact subset contained in the open subset $W_{j}$. For each $x\in A_{j}$, choose $U_{x}\in \mathcal{U}$ containing $x$, and let $V_{x}=U_{x}\cap W_{j}$ The collection of all such sets $V_{x}$ as $x$ ranges over $A_{j}$ is an open cover of $A_{j}$, and thus has a finite subcover. The union of all such finite subcovers as $j$ ranges over $\mathbb{N}$ forms an open cover of $M$ that refines $\mathcal{U}$. Because $W_{j}$ intersects $W_{j'}$ only for $j-2\leqslant j'\leqslant j+2$, the resulting cover is locally finite. 
+> 
+
+^6e5ca5
+
+We have seen that [[Countability and Separation axioms#^ae93c1|compact Hausdorff spaces are normal]]; we now show that we can relax the compactness requirement to paracompactness. 
+
+> [!Theorem] @leeIntroductionTopologicalManifolds2011 4.81
+> Every paracompact Hausdorff space is normal. 
+
+> [!Example]
+> 1. Clearly, every compact space is paracompact, since a finite subcover is a locally finite open refinement. 
+> 2. $\mathbb{R}^{n}$ is paracompact, by [[#^6e5ca5]]. 
+> 3. The Sorgenfrey line is paracompact, even though it is neither compact, locally compact, second countable, nor metrizable.
+
+---
 # The Tychonoff Theorem
 
 > [!Theorem] Tychonoff, @munkresTopology2000 37.3

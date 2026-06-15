@@ -125,10 +125,12 @@ Clearly, $\overline{A}=A\cup A'$, where $A'$ is the set of all limit points of $
 
 Clearly, it suffices to show that the preimage of every basis (or subbasis) element is open to prove continuity. 
 
-> [!Proposition]
+> [!Proposition] @leeIntroductionTopologicalManifolds2011 2.30
+> Suppose $X$ and $Y$ are topological spaces, and $f:X\to Y$ is any map. 
 > 1. $f$ is continuous $\iff$ $f(\overline{A})\subseteq\overline{f(A)}$ for all $A\subseteq X$. 
-> 2. $f$ is closed iff $f(\overline{A})\supseteq \overline{f(A)}$ for all $A\subseteq X$. 
-> 3. The map $f:X\to Y$ is continuous if $X$ can be written as the union of open sets $U_{\alpha}$ such that $f\ | \ _{U_{\alpha}}$ is continuous for each $\alpha$. 
+> 2. $f$ is closed $\iff$ $f(\overline{A})\supseteq \overline{f(A)}$ for all $A\subseteq X$. 
+> 3. $f$ is continuous $\iff$ $f^{-1}(B^{\circ})\subseteq(f^{-1}(B))^{\circ}$ for all $B\subseteq Y$. 
+> 4. $f$ is open $\iff$ $f^{-1}(B^{\circ})\supseteq(f^{-1}(B))^{\circ}$ for all $B\subseteq Y$. 
 
 ^1b4b44
 
@@ -136,6 +138,14 @@ Clearly, it suffices to show that the preimage of every basis (or subbasis) elem
 > Let $X=A\cup B$, where $A$ and $B$ are closed in $X$. Let $f:A\to Y$ and $g:B\to Y$ be continuous. If $f(x)=g(x)$ for every $x\in A\cap B$, then $f$ and $g$ combine to give a continuous function $h:X\to Y$. 
 
 ^7cc29d
+
+> [!Proposition] @leeIntroductionTopologicalManifolds2011 Prop 3.69
+> Suppose $X$ and $Y$ are topological spaces, and $f:X\to Y$ is a continuous map that is either open or closed. 
+> 1. If $f$ is injective, it is a topological embedding. 
+> 2. If $f$ is surjective, it is a [[The quotient topology#^da2c9c|quotient map]]. 
+> 3. If $f$ is bijective, it is a homeomorphism. 
+
+^151d8e
 
 # The product topology
 

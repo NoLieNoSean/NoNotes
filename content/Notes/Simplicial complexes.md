@@ -98,6 +98,8 @@ Thus, two Euclidean simplicial complexes are simplicially homeomorphic iff their
 > [!Definition]
 > Given any collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subspaces of a topological space $X$ whose union is $X$, the topology of $X$ is said to be **coherent** with the subspaces $S_{\alpha}$ if a set is open in $X$ iff its intersection with each $S_{\alpha}$ is open in $S_{\alpha}$. 
 
+^81c464
+
 Clearly, given a collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subsets of a set $X$ and topologies $\tau_{\alpha}$ for each $S_{\alpha}$, there is a unique topology on $X$ that is coherent with the collection $\{ (S_{\alpha}, \tau_{\alpha}) \}_{\alpha\in A}$. 
 
 > [!Lemma]
