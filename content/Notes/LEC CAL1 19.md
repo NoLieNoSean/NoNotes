@@ -31,7 +31,7 @@ date: January 2025
 ^e95072
 
 > [!Definition]
-> A differentiable mapping $\mathbf{f}$ of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$ is said to be **continuously differentiable** or $C^{1}$ on $E$ if $\mathbf{f}'$ is a continuous mapping of $E$ into $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$.
+> A mapping $\mathbf{f}$ of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{m}$ is said to be **continuously differentiable** or $C^{1}$ on $E$ if $\mathbf{f}$ is differentiable and $\mathbf{f}'$ is a continuous mapping of $E$ into $\mathcal{L}(\mathbb{R}^{n}, \mathbb{R}^{m})$.
 
 ^de5c61
 
@@ -83,7 +83,7 @@ date: January 2025
 
 ^c71feb
 
-Turns out you can slightly relax the hypothesis and still have $\mathbf{f}$ to be differentiable.
+Turns out you can slightly relax the hypothesis and still have $\mathbf{f}$ to be differentiable, although I cannot see myself ever using this:
 
 > [!Theorem] @apostolMathematicalAnalysis1985
 > Assume that one of the partial derivatives $D_{1}\mathbf{f}, \dots, D_{n}\mathbf{f}$ exist at $\mathbf{c}$ and that the remaining $n-1$ partial derivatives exist in some $n$-ball $B(\mathbf{c})$ and are continuous at $\mathbf{c}$. Then $\mathbf{f}$ is differentiable at $\mathbf{c}$.
@@ -207,11 +207,13 @@ Note that this is not a necessary condition for $\mathbf{f}$ to be differentiabl
 > > Next, define $H(x)=f(h, x)-f(0, x)$ and note that $\Delta h=H(h)-H(0)$. The same procedure yields $\lim_{ h \to 0 }\Delta h/h^{2}=D_{1, 2}f(0, 0)$. 
 > 
 
-> [!Theorem] Corollary
+> [!Corollary]
 > If both partial derivatives $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ exist in an $n$-ball $B(\mathbf{c})$ and if both $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ are continuous at $\mathbf{c}$, then
 > $$
 > D_{r, k}\mathbf{f}(\mathbf{c})=D_{k, r}\mathbf{f}(\mathbf{c}).
 > $$
+
+^1c8495
 
 As in the previous theorem, it suffices to prove this when $n=2$ and $\mathbf{f}$ is real valued. The proof is very similar to the previous one; use a second application of MVT.
 

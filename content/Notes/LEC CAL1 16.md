@@ -101,17 +101,7 @@ $$
 
 ### When does the total derivative exist?
 
-The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point $\mathbf{c}\in \mathbb{R}^{n}$ where all the partial derivatives $D_{k}f_{i}(\mathbf{c})$ exist. However, recall that the existence of all partial derivatives does not guarantee that the total derivative exists (given that a function is differentiable at a point, its derivative must be given by the Jacobian matrix, of course). So, when is a function differentiable? A simple criterion for differentiability can be stated as follows:
-
-> [!Definition]
-> A function is **continuously differentiable** on $U\subseteq \mathbb{R}^{n}$ if all of its partial derivatives exist and are continuous on $U$. Such a function is called a $C^{1}$ function.
-
-^fc978c
-
-> [!Theorem] @hubbardVectorCalculusLinear2015 1.9.8
-> If $U$ is an open subset of $\mathbb{R}^{n}$, and $\mathbf{f}:U\to \mathbb{R}^{m}$ is a $C^{1}$ mapping, then $\mathbf{f}$ is differentiable on $U$, and its derivative is given by its Jacobian matrix.
-
-This is a special case of a [[LEC CAL1 19#A sufficient condition for differentiability|more general criterion]] which relaxes the hypothesis slightly.
+The Jacobian matrix $\mathbf{D}\mathbf{f}(\mathbf{c})$ is defined at each point $\mathbf{c}\in \mathbb{R}^{n}$ where all the partial derivatives $D_{k}f_{i}(\mathbf{c})$ exist. However, recall that the existence of all partial derivatives does not guarantee that the total derivative exists (given that a function is differentiable at a point, its derivative must be given by the Jacobian matrix, of course). So, when is a function differentiable? We will develop a simple criterion in the coming lectures. 
 
 ---
 

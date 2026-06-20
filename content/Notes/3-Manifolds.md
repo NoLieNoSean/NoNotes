@@ -4,10 +4,18 @@ date: 2026-05-26
 time: 00:42
 tags:
   - MOC
+  - 3MAN
+---
+IISERB, May-July 2026, Kashyap Rajeevsarathy
+
+
+
 ---
 # W22
 
-## [[Topological preliminaries for manifolds]]
+## [[Topological manifolds]]
+
+## [[Differentiable manifolds]]
 
 ## CW and simplicial complexes
 
@@ -29,3 +37,14 @@ Simplicial complexes are instances of the more general CW complex.
 
 Of course, this classifies the disconnected ones too, because it implies that each connected component of a disconnected $1$-manifold is a line or a circle, so every $1$-manifold is homeomorphic to a countable disjoint union of lines and/or circles. 
 ## [[Classification of compact surfaces]]
+
+---
+
+# W24
+
+
+---
+
+# W25
+
+[[SEM 3MAN Actions on surfaces]]

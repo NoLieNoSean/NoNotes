@@ -9,7 +9,8 @@ id: "305"
 We will show that $S^{1}=\{ (x, y)\ | \ x^{2}+y^{2}=1 \}$ has [[LEC CAL2 3, 4#^aeb6a3|measure zero]] in $\mathbb{R}^{^{2}}$.
 
 [!Lemma]
-Measure zero is preserved under [[LEC CAL1 16#^fc978c|continuously differentiable]] functions. That is, if $f:\overline{B}\subseteq \mathbb{R}^{n}\to \mathbb{R}^{n}\in C^{1}(\overline{B})$ (where $B$ is an open ball), $A\subseteq B$ has measure $0$ $\implies$ $f(A)$ has measure zero.
+Measure zero is preserved under continuously differentiable functions. That is, if $f:\overline{B}\subseteq \mathbb{R}^{n}\to \mathbb{R}^{n}\in C^{1}(\overline{B})$ (where $B$ is an open ball), $A\subseteq B$ has measure $0$ $\implies$ $f(A)$ has measure zero.
+
 
 [!Proof]-
 $\mathbf{D}_{p}f:\mathbb{R}^{n}\to \mathbb{R}^{n}\in \text{Hom}(\mathbb{R}^{n}, \mathbb{R}^{n})$.

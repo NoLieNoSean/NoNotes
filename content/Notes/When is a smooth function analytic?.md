@@ -6,8 +6,6 @@ tags:
 ---
 Recall [[LEC ANA1 32#^d04d92]]. We have seen that [[LEC ANA1 32#^523f3a|every analytic function is smooth]] but [[LEC ANA1 32#^3fdabe|not every smooth function is analytic]], that is, $C^{\omega}\subsetneq C^{\infty}$. 
 
-# When is a smooth function analytic?
-
 Let $f:(a, b)\to \mathbb{R}$ be smooth. The Taylor series for $f$ at $x\in(a, b)$ is
 $$
 \sum_{k=0}^{\infty} \frac{f^{(k)}(x)}{k!}h^{k}.
