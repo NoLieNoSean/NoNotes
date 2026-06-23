@@ -6,24 +6,16 @@ tags:
   - MOC
   - 3MAN
 ---
-IISERB, May-July 2026, Kashyap Rajeevsarathy
-
-
+IISERB, May 2026 - , Kashyap Rajeevsarathy
 
 ---
-# W22
+# W22 Perspectives on manifolds
 
 ## [[Topological manifolds]]
-
+## [[Triangulable manifolds]]
 ## [[Differentiable manifolds]]
-
-## CW and simplicial complexes
-
-We classify 1-manifolds (curves), 2-manifolds (surfaces), and 3-manifolds using a technique called **triangulation**, which requires understanding simplicial complexes.
-### [[Simplicial complexes]]
-
-Simplicial complexes are instances of the more general CW complex. 
-### [[CW complexes]]
+## [[Geometric manifolds]]
+## [[Categorical notes on manifolds]]
 
 ---
 # W23

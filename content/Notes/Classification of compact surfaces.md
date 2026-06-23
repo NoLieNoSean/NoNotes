@@ -10,7 +10,7 @@ tags:
 [[The quotient topology|Recall]] how the torus, sphere, and projective plane can be represented as a quotient of the square by identifying edges. Now we define a general method for building surfaces by identifying edges of geometric figures. 
 
 > [!Definition] Polygonal region
-> Say that a subset $P\subseteq \mathbb{R}^{2}$ is a **polygonal region** if it is a compact subset whose boundary is a ==finite== $1$-dimensional [[Simplicial complexes#^bc164d|Euclidean simplicial complex]], satisfying the following conditions:
+> Say that a subset $P\subseteq \mathbb{R}^{2}$ is a **polygonal region** if it is a compact subset whose boundary is a ==finite== $1$-dimensional [[Triangulable manifolds#^bc164d|Euclidean simplicial complex]], satisfying the following conditions:
 > 1. Each point $q$ of an edge other than a vertex has a neighborhood $U$ in $\mathbb{R}^{2}$ such that $P\cap U$ is equal to the intersection with $U$ of some closed half-plane.
 > 2. Each vertex $v$ has a neighborhood $V$ in $\mathbb{R}^{2}$ such that $P\cap V$ is equal to the intersection of $V$ with two closed half-planes whose boundaries intersect only at $v$. 
 
@@ -21,7 +21,7 @@ Examining [[#^2b04d4]].2 reveals that connected components of polygonal regions 
 It is a general fact that quotients of polygonal regions obtained by identifying edges in pairs are always surfaces. 
 
 > [!Lemma] @leeIntroductionTopologicalManifolds2000 Prop 6.4
-> Let $P$ be a polygonal region in the plane with an even number of edges, and suppose we are given an equivalence relation on $P$ that identifies each edge with exactly one other edge by means of a [[Simplicial complexes#^5a9dc6|simplicial]] homeomorphism. The resulting quotient space is a compact $2$-manifold.
+> Let $P$ be a polygonal region in the plane with an even number of edges, and suppose we are given an equivalence relation on $P$ that identifies each edge with exactly one other edge by means of a [[Triangulable manifolds#^5a9dc6|simplicial]] homeomorphism. The resulting quotient space is a compact $2$-manifold.
 > 
 > > [!Proof]-
 > > 
@@ -43,7 +43,7 @@ It is a general fact that quotients of polygonal regions obtained by identifying
 Connected sums allow us to construct new manifolds by gluing together simpler ones. 
 
 > [!Definition] Connected sum
-> Let $M_{1}$ and $M_{2}$ be connected $n$-manifolds. Let $B_{i}\subseteq M_{i}$ be [[3-Manifolds#^49ffed|regular Euclidean balls]]. Choose a homeomorphism $\sigma:\partial B_{1}\to \partial B_{2}$ (such a homeomorphism exists because both boundaries are homeomorphic to $\mathbb{S}^{n-1}$). Let $M_{i}'=M_{i}\setminus B_{i}$. Define a quotient space of $M_{1}'\coprod M_{2}'$ by identifying each $q\in \partial B_{1}$ with $\sigma(q)\in \partial B_{2}$. The resulting quotient space is called a **connected sum** of $M_{1}$ and $M_{2}$ and is denoted by $M_{1}\#M_{2}$. 
+> Let $M_{1}$ and $M_{2}$ be connected $n$-manifolds. Let $B_{i}\subseteq M_{i}$ be [[3-Manifolds#^49ffed|regular Euclidean balls]]. Choose a homeomorphism $\sigma:\partial B_{1}\to \partial B_{2}$ (such a homeomorphism exists because both boundaries are homeomorphic to $\mathbb{S}^{n-1}$). Let $M_{i}'=M_{i}\setminus B_{i}$. Define a quotient space of $M_{1}'\coprod M_{2}'$ by identifying each $q\in \partial B_{1}$ with $\sigma(q)\in \partial B_{2}$. The resulting quotient space is called a **connected sum** of $M_{1}$ and $M_{2}$ and is denoted by $M_{1}\#M_{2}$. In the case that $M_{1}$ and $M_{2}$ are [[Differentiable manifolds#^dbdef9|oriented]], we further require that the identification of the boundaries of $B_{1}$ and $B_{2}$ be via an [[Topological manifolds#^5125c8|orientation-reversing]] homeomorphism (with respect to the induced boundary orientations on $\partial B_{1}$ and $\partial B_{2}$). 
 
 ^9cb3a2
 
@@ -73,9 +73,31 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 > 
 
 
-[^1]: This is not any homeomorphism; the geometric particulars do matter here. Specifically, this homeomorphism must not alter the radial component. In particular, it must map $A_{(1, 2)}$ onto $A_{(1, 2)}$. 
+[^1]: This is not any homeomorphism; the geometric particulars matter. Specifically, this homeomorphism must not alter the radial component. In particular, it must map $A_{(1, 2)}$ onto $A_{(1, 2)}$. 
 
-The definition of $M_{1}\#M_{2}$ depends on the choices of $B_{i}$ and the homeomorphism $\sigma$. It can be shown that it is possible to obtain at most two nonhomeomorphic manifolds as connected sums of a given pair $M_{1}$ and $M_{2}$, corresponding to the cases in which $f$ preserves or reverses orientation. 
+We will need the following two theorems[^2] to discuss the impact of the choices of $B_{i}$ and the homeomorphism $\sigma$ on the connected sum $M_{1}\#M_{2}$:
+
+> [!Definition] Isotopy
+> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[The fundamental group and covering spaces#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an embedding. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+
+> [!Theorem] 
+> Every orientation-preserving homeomorphism of an $n$-ball or $n$-sphere is isotopic to the identity. 
+
+^3cb419
+
+> [!Theorem] @schultensIntroduction3manifolds2014 1.6.4
+> If $B_{1}$, $B_{2}$ are ( #q regular?) $n$-balls in the interior of a connected $n$-manifold $M$, then there is an isotopy $f:M\times I\to M$ such that $f(\_{, 0}) | _{B_{1}}$ is the identity and $f(\_{, 1})|_{B_{2}}$ is a homeomorphism onto $B_{2}$. 
+> 
+
+^2ac7d4
+
+#t Prove all claims made in the following text. 
+
+[[#^2ac7d4]] ensures that the choice of $B_{1}$ and $B_{2}$ is inconsequential. If $M_{1}$ and $M_{2}$ are oriented, then [[#^3cb419]] tells us that any two choices of identification of $\partial B_{1}$ and $-\partial B_{2}$ are isotopic and it follows that the manifolds obtained via this identification are homeomorphic. Thus for oriented manifolds $M_{1}, M_{2}$, there is a unique connected sum. 
+
+For orientable (but not oriented) manifolds it is possible to have two non-homeomorphic connected sums of $M_{1}$ and $M_{2}$. Specifically, endow $M_{1}$, $M_{2}$ with orientations and consider $M_{1}\#M_{2}$ and $M_{1}\#(-M_{2})$. 
+
+If at least one of $M_{1}, M_{2}$, is non-orientable, then there is a unique connected sum $M_{1}\#M_{2}$: since every non-orientable $n$-manifold $M$ contains an orientation-reversing closed $1$-dimensional submanifold (by [[Differentiable manifolds#^ccbd4e]]), 
 
 In the special case of surfaces, it turns out that the two possible connected sums that can be formed form a pair of manifolds are in fact homeomorphic to each other:
 
@@ -134,7 +156,7 @@ Thus, we have standard presentations for
 > 
 > > [!Proof]-
 > > 
-> > Let $M$ be a compact surface. It follows from [[Simplicial complexes#^9d61f9]] and [[#^309fd2]] that $M$ is homeomorphic to the polyhedron of a finite $2$-dimensional simplicial complex $K$, in which each $1$-simplex is a face of exactly two $2$-simplices. 
+> > Let $M$ be a compact surface. It follows from [[Triangulable manifolds#^9d61f9]] and [[#^309fd2]] that $M$ is homeomorphic to the polyhedron of a finite $2$-dimensional simplicial complex $K$, in which each $1$-simplex is a face of exactly two $2$-simplices. 
 > > 
 > > From this complex, we can construct a surface presentation $\mathcal{P}$ with one word of length $3$ for each $2$-simplex. We with to show that the geometric realization of $\mathcal{P}$ is homeomorphic to that of $K$. 
 > > 
@@ -169,3 +191,5 @@ This immediately leads to a classification of compact $2$-manifolds with boundar
 
 > [!Theorem]
 > Every compact $2$-manifold with boundary is homeomorphic to a compact $2$-manifold with finitely many open cells removed. 
+
+[^2]: These are stated in and are true for all dimensions in $\textsf{Triang}$. 

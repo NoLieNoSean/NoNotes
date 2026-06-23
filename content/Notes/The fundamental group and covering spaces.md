@@ -7,7 +7,7 @@ tags:
 ---
 # Homotopy of paths
 
-> [!Definition] Homotopy
+> [!Definition] Homotopy and Path Homotopy
 > A **homotopy** between maps $p, q:X\to Y$ is a continuous map $h:X\times I\to Y$ such that $h(\_{}, 0)=p$ and $h(\_{, 1})=q$, where $I=[0, 1]$. 
 > 
 > Let $X$ be a space. For $x\in X$, define $c_{x}$ to be the constant map $I\to \{ x \}$. Two paths $f, g:I\to X$ are said to be **path homotopic** if they are homotopic *though paths from $x$ to $y$*. In other symbols, there must exist a homotopy $h:I\times I\to X$ such that
@@ -52,6 +52,8 @@ tags:
 > Homotopy and path homotopy are denoted by $\simeq$ and $\simeq_{p}$ respectively, and are equivalence relations[^1].
 > 
 > We write $[f]$ for the path homotopy equivalence class of $f$. We say that $f$ is a loop if $f(0)=f(1)$. 
+
+^ccf037
 
 > [!Definition] Straight line homotopy
 > Let $f$ and $g$ be any two maps of a space $X$ into a convex subspace $Y$ of $\mathbb{R}^{n}$. Then, $f$ and $g$ are homotopic by the **straight-line homotopy** 
@@ -214,7 +216,7 @@ Covering spaces are instances of [[Addendum A to 438#^a3d022|fiber bundles]].
 > [!Theorem]
 > Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Paths $f:[0, 1]\to B$ beginning at $b_{0}$  (homotopies $F:[0, 1]^{2}\to B$ with $F(0, 0)=b_{0}$) have a unique lifting such that $\tilde{f}(0)=e_{0}$ ($\tilde{F}(0, 0)=e_{0}$). If $F$ is a path homotopy, $\tilde{F}$ is a path homotopy. 
 
-Proof apples the [[LEC CAL1 8#Lebesgue covering Lemma|Lebesgue number lemma]] to $f([0, 1])$ ($F([0, 1]^{2})$).
+Proof applies the [[LEC CAL1 8#Lebesgue covering Lemma|Lebesgue number lemma]] to $f([0, 1])$ ($F([0, 1]^{2})$).
 
 > [!Theorem]
 > Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Let $f$ and $g$ be two paths in $B$ from $b_{0}$ to $b_{1}$. Let $\tilde{f}$ and $\tilde{g}$ be their respective lifts to paths in $E$ beginning at $e_{0}$. If $f$ and $g$ are path homotopic, then $\tilde{f}$ and $\tilde{g}$ end at the same point of $E$ and are path homotopic. 

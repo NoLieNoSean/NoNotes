@@ -5,16 +5,20 @@ time: 17:11
 tags:
 ---
 > [!Abstract]
-> I've collected basic definitions and topological facts about manifolds here. 
+> Definitions and topological facts related to topological manifolds. 
 
-Recall [[Urysohn Lemma and applications#^6bc1cb]]: a topological $n$-manifold is a [[Countability and Separation axioms#^25afed|second countable]] [[Countability and Separation axioms#^e86df7|Hausdorff]] space which is locally Euclidean of dimension $n$. Alternatively, we can define define a topological $n$-manifold to be a second countable Hausdorff space with an atlas:
+Recall [[Urysohn Lemma and applications#^6bc1cb]]: A topological $n$-manifold is a [[Countability and Separation axioms#^25afed|second countable]] [[Countability and Separation axioms#^e86df7|Hausdorff]] space which is locally Euclidean of dimension $n$. Alternatively, we can define define a topological $n$-manifold to be a second countable Hausdorff space with an atlas:
 
-> [!Definition] Charts and Atlases
-> Let $M$ be a topological $n$-manifold. A family of pairs $\{ (M_{\alpha}, \phi_{\alpha}) \}$ with the following properties is called an **atlas**:
+> [!Definition] Topological manifold
+> Let $M$ be a topological space. A family of pairs $\{ (M_{\alpha}, \phi_{\alpha}) \}$ with the following properties is called an **atlas**:
 > 1. $M_{\alpha}$ is an open subset of $M$ for all $\alpha$ and $M=\bigcup_{\alpha}M_{\alpha}$; 
 > 2. $\phi_{\alpha}$ is a homeomorphism from $M_{\alpha}$ to an open subset of $\mathbb{R}^{n}$ for all $\alpha$. 
 > 
-> A pair $(M_{\alpha}, \phi_{\alpha})$ is called a **chart** of $M$. 
+> A pair $(M_{\alpha}, \phi_{\alpha})$ is called a **chart** of $M$. A space which admits an atlas with charts to $\mathbb{R}^{n}$ is called a **topological $n$-manifold**. 
+> 
+> By a **$n$-manifold**, we mean a topological $n$-manifold, unless otherwise specified. 
+
+^8eb8ab
 
 Since the Hausdorff property and second countability are hereditary[^2], open subsets of $n$-manifolds are $n$-manifolds. 
 
@@ -22,11 +26,14 @@ Since the Hausdorff property and second countability are hereditary[^2], open su
 > The product of two manifolds is a manifold. 
 > 
 > > [!Proof]-
+> > 
+> > The collection $\{ (M_{\alpha}\times N_{\beta}, \phi_{\alpha}\times \psi_{\beta}) \}$ is an atlas:
+> > 
 > > ```latex
 > > % latex-id: 825b-8c79-a429-49f2-ab01
 > > \begin{document}
-> > % https://q.uiver.app/#q=WzAsNyxbMSwxLCJNX1xcYWxwaGFcXHRpbWVzIE5fXFxiZXRhIl0sWzAsMV0sWzAsMCwiTV9cXGFscGhhIl0sWzAsMiwiTl9cXGJldGEiXSxbMiwxLCJVXFx0aW1lcyBWIl0sWzMsMCwiVSJdLFszLDIsIlYiXSxbMCwyXSxbMCwzXSxbNCw1XSxbNCw2XSxbMiw1LCJcXHBoaV9cXGFscGhhIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzMsNiwiXFxwc2lfXFxhbHBoYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFswLDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDYsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDQsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9LCJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0= 
-> > \[\begin{tikzcd} {M_\alpha} &&& U \\ {} & {M_\alpha\times N_\beta} & {U\times V} \\ {N_\beta} &&& V \arrow["{\phi_\alpha}", tail reversed, from=1-1, to=1-4] \arrow[from=2-2, to=1-1] \arrow[dashed, from=2-2, to=1-4] \arrow[dotted, tail reversed, from=2-2, to=2-3] \arrow[from=2-2, to=3-1] \arrow[dashed, from=2-2, to=3-4] \arrow[dashed, from=2-3, to=1-1] \arrow[from=2-3, to=1-4] \arrow[dashed, from=2-3, to=3-1] \arrow[from=2-3, to=3-4] \arrow["{\psi_\alpha}"', tail reversed, from=3-1, to=3-4] \end{tikzcd}\]
+> > % https://q.uiver.app/#q=WzAsNyxbMSwxLCJNX1xcYWxwaGFcXHRpbWVzIE5fXFxiZXRhIl0sWzAsMV0sWzAsMCwiTV9cXGFscGhhIl0sWzAsMiwiTl9cXGJldGEiXSxbMiwxLCJVXFx0aW1lcyBWIl0sWzMsMCwiVSJdLFszLDIsIlYiXSxbMCwyXSxbMCwzXSxbNCw1XSxbNCw2XSxbMiw1LCJcXHBoaV9cXGFscGhhIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzMsNiwiXFxwc2lfXFxiZXRhIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzAsNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNCwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== 
+> > \[\begin{tikzcd} {M_\alpha} &&& U \\ {} & {M_\alpha\times N_\beta} & {U\times V} \\ {N_\beta} &&& V \arrow["{\phi_\alpha}", tail reversed, from=1-1, to=1-4] \arrow[from=2-2, to=1-1] \arrow[dashed, from=2-2, to=1-4] \arrow[dotted, tail reversed, from=2-2, to=2-3] \arrow[from=2-2, to=3-1] \arrow[dashed, from=2-2, to=3-4] \arrow[dashed, from=2-3, to=1-1] \arrow[from=2-3, to=1-4] \arrow[dashed, from=2-3, to=3-1] \arrow[from=2-3, to=3-4] \arrow["{\psi_\beta}"', tail reversed, from=3-1, to=3-4] \end{tikzcd}\]
 > > \end{document}
 > > ```
 > > 
@@ -97,5 +104,12 @@ None of the defining properties of manifolds (locally Euclidean, Hausdorff, seco
 
 A key topological fact about manifolds is that [[Compactness#^6e5ca5|they are all paracompact]]; this is a consequence of second countability. In fact, for spaces that are Hausdorff and locally Euclidean with countably many components, the two conditions are equivalent. 
 
+# Orientability 
+
+Defining a notion of orientability for topological manifolds requires an understanding of homology; I'm putting it off for now. See @HomologyOrientabilityGeneral2025
 
 
+> [!Definition] Orientation-preserving maps
+> stub
+
+^5125c8

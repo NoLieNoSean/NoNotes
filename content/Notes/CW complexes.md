@@ -23,5 +23,5 @@ Notes of caution:
 > [!Definition] CW complex
 > A **CW complex** is a [[#^ec3f7d|cell complex]] $(X, \mathcal{E})$ satisfying the following additional conditions:
 > 	**(C)losure finiteness:** The closure of each cell is contained in a union of finitely many cells. 
-> 	**(W)eak topology:** The topology of $X$ is [[Simplicial complexes#^81c464|coherent]] with the family of closed subspaces $\{ \overline{e}: e\in \mathcal{E} \}$. 
+> 	**(W)eak topology:** The topology of $X$ is [[Triangulable manifolds#^81c464|coherent]] with the family of closed subspaces $\{ \overline{e}: e\in \mathcal{E} \}$. 
 

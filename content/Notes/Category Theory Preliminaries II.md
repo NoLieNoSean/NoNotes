@@ -44,6 +44,11 @@ tags:
 > ```
 > commutes. A **natural isomorphism** is a natural transformation $\nu$ such that $\nu_{X}$ is an isomorphism for every $X$. 
 
+> [!Definition] Equivalence of categories
+> Two categories $\textsf{C}$ and $\textsf{D}$ are said to be **equivalent** if there exist functors $\mathscr{F}:\textsf{C}\to \textsf{D}$ and $\mathscr{G}:\textsf{D}\to \textsf{C}$ such that $\mathscr{F}\circ \mathscr{G}$ is naturally isomorphic to $\mathrm{id}_{\textsf{D}}$ and $\mathscr{G}\circ \mathscr{F}$ is naturally isomorphic to $\mathrm{id}_{\textsf{C}}$. 
+
+^4af834
+
 > [!Definition] Adjoint
 > Let $\textsf{C}, \textsf{D}$ be categories, and let $\mathscr{F}: \textsf{C}\to \textsf{D}$, $\mathscr{G}: \textsf{D}\to \textsf{C}$ be functors. We say that $\mathscr{F}$ and $\mathscr{G}$ are **adjoint** (and we say that $\mathscr{G}$ is right-adjoint to $\mathscr{F}$ and $\mathscr{F}$ is left-adjoint to $\mathscr{G}$) if there are *natural* isomorphisms
 > $$

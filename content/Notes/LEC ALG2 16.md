@@ -3,11 +3,12 @@ id: "105"
 date: April 2025
 ---
 
-> [!Definition]
-> An **isometry** of $\mathbb{R}^{n}$ is a distance preserving map $f$ from $\mathbb{R}^{n}$ to itself, a map such that, for all $u$ and $v$ in $\mathbb{R}^{n}$, 
+> [!Definition] Rigid motion
+> An **isometry** of $\mathbb{R}^{n}$ is a map $f:\mathbb{R}^{n}\to \mathbb{R}^{n}$ satisfying 
 > $$
-> |f(u)-f(v)|=|u-v|.
+> |f(u)-f(v)|=|u-v|
 > $$
+> for all $u, v\in \mathbb{R}^{n}$. 
 
 Artin composes isometries from the right.
 

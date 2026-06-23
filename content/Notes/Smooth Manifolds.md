@@ -9,7 +9,7 @@ draft: true
 ---
 # Preliminaries
 
-[[When is a smooth function analytic?]]
+[[When is a smooth function analytic]]
 [[Smooth and analytic multivariable functions]]
 [[Tangent vectors in Rn as derivations]]
 

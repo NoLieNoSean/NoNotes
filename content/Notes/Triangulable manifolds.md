@@ -5,7 +5,7 @@ time: 16:07
 tags:
 ---
 > [!Abstract]
-> We develop the theory of Euclidean and abstract simplicial complexes, and show that 1, 2, and 3-manifolds are triangulable. 
+> We develop the theory of Euclidean and abstract simplicial complexes, define objects in the category TRIANG, and show that 1, 2, and 3-dimensional [[Topological manifolds#^8eb8ab|topological manifolds]] are triangulable. 
 # Euclidean simplicial complexes
 
 An **affine map** between vector spaces is a map $f:V\to W$ of the form $f(x)=a(x)+b$, where $a$ is a linear map and $b\in W$. 
@@ -46,6 +46,8 @@ Thus, a $k$-simplex is a $k$-dimensional manifold with boundary.
 > Given a Euclidean complex $K$, the union of all the simplices in $K$ with the subspace topology is denoted by $|K|$ and called the **(Euclidean) polyhedron** of $K$. 
 
 ^bc164d
+
+Simplicial complexes are instances of the more general [[CW complexes|CW complex]]. 
 
 The simplicial complex $K$ is frequently identified with its polyhedron $|K|$. 
 
@@ -106,10 +108,10 @@ Clearly, given a collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subsets of a set
 > The topology of $|\mathcal{K}|$ is the unique topology coherent with the collection of subspaces $\{ |\sigma|:\sigma\in \mathcal{K} \}$. 
 
 > [!Definition]
-> Any [[#^32a8ce|simplicial map]] $f:\mathcal{K}\to \mathcal{L}$ between abstract complexes induces a continuous map $|f|:|\mathcal{K}|\to |\mathcal{L}|$, where $|f|$ restricted to each simplex $|\sigma|$ is just the Euclidean simplicial map determined by the vertex map of $f$. 
+> Any [[Triangulable manifolds#^32a8ce|simplicial map]] $f:\mathcal{K}\to \mathcal{L}$ between abstract complexes induces a continuous map $|f|:|\mathcal{K}|\to |\mathcal{L}|$, where $|f|$ restricted to each simplex $|\sigma|$ is just the Euclidean simplicial map determined by the vertex map of $f$. 
 
 > [!Lemma]
-> If $\mathcal{K}$ is the [[#^bdba91|vertex scheme]] of a Euclidean simplicial complex $K$, then the [[#^551fbf|geometric realization]] of $\mathcal{K}$ is homeomorphic to $|K|$. 
+> If $\mathcal{K}$ is the [[Triangulable manifolds#^bdba91|vertex scheme]] of a Euclidean simplicial complex $K$, then the [[Triangulable manifolds#^551fbf|geometric realization]] of $\mathcal{K}$ is homeomorphic to $|K|$. 
 > 
 > ```latex
 > % latex-id: 046a-a238-f267-4657-b797
@@ -140,16 +142,36 @@ The [[The quotient topology#^7113cb|uniqueness of quotient spaces]] is used to e
 
 [^1]: #q Why can't we just take the subspace topology here? Is it because the complex may not be finite dimensional?
 
-# Triangulation theorems
+# Triangulable manifolds
+
+> [!Definition] Triangulable manifold
+> A triangulable manifold is a pair $(M, \mathcal{K})$, where $M$ is a topological $n$-manifold and is the [[#^d8556a|polyhedron]] of $\mathcal{K}$. 
+
+^d2b6e8
+
+> [!Proposition]
+> In every triangulated manifold, every $(n-1)$-simplex is a face of no more than two $n$-simplices. 
+
+^57ba94
+
+> [!Definition] Orientability in TRIANG, @leeIntroductionTopologicalManifolds2000 p.107
+> 1. Let $\sigma$ be an abstract $k$-simplex. Define an equivalence relation on the set of all orderings of vertices of $\sigma$ by saying that two orderings are equivalent if they differ by an even permutation. A choice of equivalence class of vertex orderings is called an **orientation** of $\sigma$. 
+> 2. An **oriented simplex** is a simplex together with a choice of orientation. 
+> 3. If $\sigma=[v_{0}, \dots, v_{k}]$ is an oriented $k$-simplex, the orientation of $\sigma$ determines an orientation on each of its boundary faces by the following rule: The induced orientation on the face $\tau_{i}=\langle c_{0}, \dots, \hat{v}_{i}, \dots, v_{k} \rangle$ is defined to be $(-1)^{i}[v_{0}, \dots, \hat{v}_{i}, \dots, v_{k}]$. 
+> 4. Suppose $(M, \mathcal{K})$ is a triangulated manifold. If $\sigma$ and $\sigma'$ are two $n$-simplices that share a boundary face $\tau$ (this is the only case we need to consider, by [[#^57ba94]]), we say that the orientations of $\sigma$ and $\sigma'$ are **consistent** if they induce opposite orientations on $\tau$. 
+> 5. An **orientation** on $(M, \mathcal{K})$ is a choice of orientation of each $n$-simplex in such a way that any two simplices that intersect in an $(n-1)$-face are consistently oriented. 
+> 6. If a triangulated manifold $(M, \mathcal{K})$ admits an orientation, it is said to be **orientable**. 
+
+# Triangulation theorems for 1, 2, and 3-manifolds
 
 > [!Definition]
-> A **Graph** is a $1$-dimensional [[#^d8556a|polyhedron]] with a given triangulation. A **subgraph** of a graph is the polyhedron of a $1$-dimensional subcomplex. 
+> A **Graph** is a $1$-dimensional [[Triangulable manifolds#^d8556a|polyhedron]] with a given triangulation. A **subgraph** of a graph is the polyhedron of a $1$-dimensional subcomplex. 
 
 > [!Lemma]
 > Suppose $X$ is a topological space, and $G_{1}, \dots, G_{k}$ are finitely many closed subspaces of $X$ whose union is $X$. Then, the topology of $X$ is coherent with these subspaces. 
 
 > [!Theorem] @leeIntroductionTopologicalManifolds2000 5.10, 5.11
-> Every $1$-manifold can be [[#^d8556a|triangulated]] by a $1$-dimensional simplicial complex $\mathcal{K}$ such that each vertex of $\mathcal{K}$ lies on exactly two edges.
+> Every $1$-manifold can be [[Triangulable manifolds#^d8556a|triangulated]] by a $1$-dimensional simplicial complex $\mathcal{K}$ such that each vertex of $\mathcal{K}$ lies on exactly two edges.
 > 
 > > [!Proof]-
 > > 
@@ -169,6 +191,5 @@ It is possible to prove these, although we will not:
 > [!Theorem]
 > Every $3$-manifold is triangulable.
 
-> [!Proposition]
-> In every triangulated manifold, every $(n-1)$-simplex is a face of no more than tow $n$-simplices. 
+^50152f
 
