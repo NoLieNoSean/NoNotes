@@ -67,8 +67,10 @@ Motivated by this observation, we define
 > [!Definition] Abstract simplicial complex
 > 1. An **(abstract) simplicial complex** is a collection $\mathcal{K}$ of nonempty finite sets called **(abstract) simplices** subject to one condition: if $\sigma\in \mathcal{K}$, then every nonempty subset of $\sigma$ is in $\mathcal{K}$. 
 > 2. Any element of a simplex $\sigma\in \mathcal{K}$ is called a **vertex** of $\sigma$, and any nonempty subset of $\sigma$ is called a **face** of $\sigma$. 
-> 3. The dimension of an abstract simplex consisting of $k+1$ vertices is defined to be $k$. The dimension of a simplicial complex is the maximum of the dimensions of its simplices, if it exists. 
+> 3. The **dimension** of an abstract simplex consisting of $k+1$ vertices is defined to be $k$. The dimension of a simplicial complex is the maximum of the dimensions of its simplices, if it exists. 
 > 4. We say that $\mathcal{K}$ is a **finite complex** if $\mathcal{K}$ is a finite set, and **locally finite** if every vertex belongs to only finitely many simplices. 
+
+^7ae140
 
 > [!Definition] Simplicial map
 > Given two abstract complexes $\mathcal{K}, \mathcal{L}$, a map $f:\mathcal{K}\to \mathcal{L}$ is called a **simplicial map** if it is of the form $f(\{ v_{0}, \dots, v_{k} \})=\{ f_{0}(v_{0}), \dots, f_{0} (v_{k})\}$ for some map $f_{0}:\mathcal{K}^{(0)}\to \mathcal{L}^{(0)}$, called the **vertex map** of $f$ (which must have the property that $\{ f(v_{0}), \dots, f(v_{k}) \}\in \mathcal{L}$ whenever $\{ v_{0}, \dots, v_{k} \}\in \mathcal{K}$ ). 
@@ -91,7 +93,7 @@ Thus, two Euclidean simplicial complexes are simplicially homeomorphic iff their
 > [!Definition] Geometric realization of an abstract complex
 > Let $\mathcal{K}$ be an abstract simplicial complex. Let $|\mathcal{K}|$ denote the union of all the geometric realizations of the simplices of $\mathcal{K}$, with points in two simplices identified whenever they have the same expression as linear combinations of vertices. 
 > 
-> Let $\coprod_{\sigma\in \mathcal{K}}|\sigma|$ be the disjoint union of the geometric realizations of all the simplices of $\mathcal{K}$, with the disjoint union topology. Let $\pi:\coprod_{\sigma\in \mathcal{K}}|\sigma|\to |\mathcal{K}|$ be the natural map that sends $|\sigma|$ to itself. We give $|\mathcal{K}|$ the [[The quotient topology#^4fa85d|quotient topology]] with respect to $\pi$. [^1]
+> Let $\coprod_{\sigma\in \mathcal{K}}|\sigma|$ be the disjoint union of the geometric realizations of all the simplices of $\mathcal{K}$, with the disjoint union topology. Let $\pi:\coprod_{\sigma\in \mathcal{K}}|\sigma|\to |\mathcal{K}|$ be the natural map that sends $|\sigma|$ to itself. We give $|\mathcal{K}|$ the [[The Quotient Topology#^4fa85d|quotient topology]] with respect to $\pi$. [^1]
 > 
 > With this topology, $|\mathcal{K}|$ is called the **geometric realization** of $\mathcal{K}$. 
 
@@ -121,7 +123,7 @@ Clearly, given a collection $\{ S_{\alpha} \}_{\alpha\in A}$ of subsets of a set
 > \end{document}
 > ```
 
-The [[The quotient topology#^7113cb|uniqueness of quotient spaces]] is used to exhibit the homeomorphism. 
+The [[The Quotient Topology#^7113cb|uniqueness of quotient spaces]] is used to exhibit the homeomorphism. 
 
 > [!Question]
 > When is an abstract simplicial complex the vertex scheme of an Euclidean simplicial complex? That is, what are the conditions required on $\mathcal{K}$ for $|\mathcal{K}|$ to embed into $\mathbb{R}^{n}$ for some $n$?
@@ -145,7 +147,7 @@ The [[The quotient topology#^7113cb|uniqueness of quotient spaces]] is used to e
 # Triangulable manifolds
 
 > [!Definition] Triangulable manifold
-> A triangulable manifold is a pair $(M, \mathcal{K})$, where $M$ is a topological $n$-manifold and is the [[#^d8556a|polyhedron]] of $\mathcal{K}$. 
+> A **triangulable manifold** is a pair $(M, \mathcal{K})$, where $M$ is a topological $n$-manifold, $\mathcal{K}$ is a [[#^7ae140|simplicial complex]], and $M$ is the [[#^d8556a|polyhedron]] of $\mathcal{K}$. 
 
 ^d2b6e8
 
@@ -161,6 +163,15 @@ The [[The quotient topology#^7113cb|uniqueness of quotient spaces]] is used to e
 > 4. Suppose $(M, \mathcal{K})$ is a triangulated manifold. If $\sigma$ and $\sigma'$ are two $n$-simplices that share a boundary face $\tau$ (this is the only case we need to consider, by [[#^57ba94]]), we say that the orientations of $\sigma$ and $\sigma'$ are **consistent** if they induce opposite orientations on $\tau$. 
 > 5. An **orientation** on $(M, \mathcal{K})$ is a choice of orientation of each $n$-simplex in such a way that any two simplices that intersect in an $(n-1)$-face are consistently oriented. 
 > 6. If a triangulated manifold $(M, \mathcal{K})$ admits an orientation, it is said to be **orientable**. 
+
+One concept that is easily defined in the $\textsf{Triang}$ category is the following:
+
+> [!Definition] Euler characteristic
+> The **Euler characteristic** of a finite simplicial complex $\mathcal{K}$ is computed via the following formula:
+> $$
+> \chi(K)=\sum_{i=0}^{k} (-1)^{i}\#\{ \text{simplices of dimension }i\text{ in }\mathcal{K} \}.
+> $$
+> 
 
 # Triangulation theorems for 1, 2, and 3-manifolds
 
@@ -192,4 +203,5 @@ It is possible to prove these, although we will not:
 > Every $3$-manifold is triangulable.
 
 ^50152f
+
 

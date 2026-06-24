@@ -7,7 +7,7 @@ tags:
 > [!Abstract]
 > We see that every compact surface can be 'built' up from $\mathbb{S}^{2}$, $\mathbb{T}^{2}$, and $\mathbb{P}^{2}$. 
 
-[[The quotient topology|Recall]] how the torus, sphere, and projective plane can be represented as a quotient of the square by identifying edges. Now we define a general method for building surfaces by identifying edges of geometric figures. 
+[[The Quotient Topology|Recall]] how the torus, sphere, and projective plane can be represented as a quotient of the square by identifying edges. Now we define a general method for building surfaces by identifying edges of geometric figures. 
 
 > [!Definition] Polygonal region
 > Say that a subset $P\subseteq \mathbb{R}^{2}$ is a **polygonal region** if it is a compact subset whose boundary is a ==finite== $1$-dimensional [[Triangulable manifolds#^bc164d|Euclidean simplicial complex]], satisfying the following conditions:
@@ -58,7 +58,7 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 > > 
 > > The regular balls $B_{i}$ for $i=1, 2$ come with neighborhoods $U_{i}$ containing $\overline{B}_{i}$ and homeomorphisms $\varphi_{i}:U_{i}\to B_{2}(0)$ taking $U_{i}\setminus B_{i}$ onto the annulus $A_{[1, 2)}$. Note that $\varphi_{i}$ sends $\partial B_{i}$ to the unit sphere. 
 > > 
-> > We will construct a homeomorphism between $\pi(X)$ and the open annulus $A_{(1/2, 2)}$. To do so, we first have to define a map $X\to A_{(1/2, 2)}$ which makes the same identifications as $\sigma$ (we can then use [[The quotient topology#^461a5c]] to obtain a map $\pi(X)\to A_{(1/2, 2)}$). 
+> > We will construct a homeomorphism between $\pi(X)$ and the open annulus $A_{(1/2, 2)}$. To do so, we first have to define a map $X\to A_{(1/2, 2)}$ which makes the same identifications as $\sigma$ (we can then use [[The Quotient Topology#^461a5c]] to obtain a map $\pi(X)\to A_{(1/2, 2)}$). 
 > > 
 > > We first need to compensate for the fact that $\varphi_{2}^{-1}\circ\varphi_{1}$ does not make the same identifications between $\partial B_{1}$ and $\partial B_{2}$ as $\sigma$ does. We extend the homeomorphism $\beta: \varphi_{2}\circ\sigma \circ\varphi_{1}^{-1}:\mathbb{S}^{n-1}\to \mathbb{S}^{n-1}$ to a homeomorphism $\tilde{\beta}: B_{2}(0)\to B_{2}(0)$[^1] and define $\tilde{\varphi}_{1}=\tilde{\beta}\circ\varphi_{1}$. We can now define $\Phi:X\to A_{(1/2, 2)}$ by
 > > $$
@@ -78,7 +78,7 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 We will need the following two theorems[^2] to discuss the impact of the choices of $B_{i}$ and the homeomorphism $\sigma$ on the connected sum $M_{1}\#M_{2}$:
 
 > [!Definition] Isotopy
-> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[The fundamental group and covering spaces#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an embedding. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an embedding. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
 
 > [!Theorem] 
 > Every orientation-preserving homeomorphism of an $n$-ball or $n$-sphere is isotopic to the identity. 
@@ -91,7 +91,7 @@ We will need the following two theorems[^2] to discuss the impact of the choices
 
 ^2ac7d4
 
-#t Prove all claims made in the following text. 
+#td Prove all claims made in the following text. 
 
 [[#^2ac7d4]] ensures that the choice of $B_{1}$ and $B_{2}$ is inconsequential. If $M_{1}$ and $M_{2}$ are oriented, then [[#^3cb419]] tells us that any two choices of identification of $\partial B_{1}$ and $-\partial B_{2}$ are isotopic and it follows that the manifolds obtained via this identification are homeomorphic. Thus for oriented manifolds $M_{1}, M_{2}$, there is a unique connected sum. 
 

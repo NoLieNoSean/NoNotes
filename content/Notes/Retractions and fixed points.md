@@ -4,8 +4,18 @@ date: 2026-04-13
 time: 14:19
 tags:
 ---
+> [!Abstract]
+> We use our knowledge of the [[Covering Spaces and the Fundamental Group#^91f4c3|fundamental group of the circle]] to prove some classical results in topology. 
+
+> [!Definition] Retraction
+> If $A\subseteq X$, a **retraction** of $X$ onto $A$ is a continuous map $r:X\to A$ such that $r\ | \ A=\mathrm{id}_{A}$. If such a map $r$ exists, we say that $A$ is a retract of $X$. 
+
+^cda84f
+
 > [!Lemma]
 > If $A$ is a retract of $X$, then the homomorphism induced by the the inclusion $j:A\to X$ is injective. 
+
+^e945e8
 
 > [!Lemma]
 > Let $h:S^{1}\to X$ be a continuous map. Then the following conditions are equivalent. 
@@ -15,28 +25,15 @@ tags:
 > 
 > > [!Proof]-
 > > 
-> > $(1\implies 2)$ Use the [[The quotient topology#^461a5c|universal property of quotient maps]]. 
-> > $(2\implies 3)$ Use [[The fundamental group and covering spaces#^3d339c|funtoriality]] of the map $h\mapsto h_{*}$. 
-> > $(3 \implies 1)$ Use the [[The quotient topology#^461a5c|universal property of quotient maps]]. 
+> > $(1\implies 2)$ Use the [[The Quotient Topology#^461a5c|universal property of quotient maps]]. 
+> > $(2\implies 3)$ Use [[Covering Spaces and the Fundamental Group#^3d339c|funtoriality]] of the map $h\mapsto h_{*}$. 
+> > $(3 \implies 1)$ Use the [[The Quotient Topology#^461a5c|universal property of quotient maps]]. 
 > 
 
 > [!Theorem]
-> Given a nonvanishing vector field on $B^{2}$, there exists a point of $S^{1}$ where the vector field points directly inward and a point of $S^{1}$ where it points directly outward. 
+> Given a nonvanishing vector field[^1] on $B^{2}$, there exists a point of $S^{1}$ where the vector field points directly inward and a point of $S^{1}$ where it points directly outward. 
 
-> [!Theorem]
+> [!Theorem] Brouwer fixed point theorem for the disc
 > If $f:B^{2}\to B^{2}$ is continuous, then there exists a point $x\in B^{2}$ such that $f(x)=x$. 
 
----
-
-# Deformation retracts and homotopy type
-
-> [!Lemma]
-> Let $h, k:(X, x_{0})\to (Y, y_{0})$ be continuous maps. If $h$ and $k$ are homotopic, and if the image of the base point $x_{0}$ of $X$ remains fixed at $y_{0}$ during the homotopy, then the homomorphisms $h_{*}$ and $k_{*}$ are equal. 
-
-> [!Theorem]
-> Let $A$ be a deformation retract of $X$; let $x_{0}\in A$. Then the inclusion map
-> $$
-> j:(A, x_{0})\to(X, x_{0})
-> $$
-> induces an isomorphism of fundamental groups. 
-
+[^1]: A vector field on $B^{2}$ is an ordered pair $(x, v(x))$ where $x$ is in $B^{2}$ and $v$ is a continuous map of $B^{2}$ into $\mathbb{R}^{2}$. 

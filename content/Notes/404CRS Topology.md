@@ -56,17 +56,16 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 ```
 ---
 
-[[Preliminaries to Topology]] ✅
-[[Countability and Separation axioms]]
+[[Preliminaries to Topology]] 
+[[Countability and Separation Axioms]]
 [[Compactness]]
-[[Urysohn Lemma and applications]]
+[[Urysohn Lemma and Applications]]
 [[Stone-Čech Compactification]]
-[[Topological dimension]]
-
-[[The quotient topology]] ✅
-[[The fundamental group and covering spaces]]
-[[Retractions and fixed points]]
-
-[[The Van-Kampen theorem]]
+[[The Quotient Topology]] 
+[[Covering Spaces and the Fundamental Group]] 
+[[Retractions and Fixed Points]]
+[[Deformation Retracts and Homotopy Type]]
+[[The Fundamental Groups of Some Surfaces]]
+[[The Van-Kampen Theorem]]
 
 [[HW TOP 1]]

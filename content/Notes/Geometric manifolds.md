@@ -14,7 +14,7 @@ Recall that an isometry is an invertible map between metric spaces that preserve
 
 #q @schultensIntroduction3manifolds2014 1.5.7 says connected Euclidean manifolds have a well-defined metric. How?
 
-> [!Proposition] #q
+> [!Proposition] #td
 > 1. $\mathbb{T}^{n}$ is a Euclidean manifold. 
 > 2. $\mathbb{S}^{1}$ is a Euclidean manifold. 
 > 3. $\mathbb{S}^{n}$ is not a Euclidean manifold for $n> 1$. 

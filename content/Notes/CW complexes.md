@@ -18,7 +18,7 @@ Any compact convex subset of $\mathbb{R}^{n}$ with nonempty interior is a closed
 
 Notes of caution:
 1. Although each $e\in \mathcal{E}$ is an open cell, it is not necessarily an open subset of $X$. 
-2. By [[The quotient topology#^c8571b]].1 and [[Preliminaries to Topology#^1b4b44]], the image of a characteristic map for $e\in \mathcal{E}$ is equal to $\overline{e}$, so each cell is [[Compactness#^f8dbab|precompact]] in $X$; bit its closure might not be a closed cell, because the characteristic map need not be injective on the boundary. 
+2. By [[The Quotient Topology#^c8571b]].1 and [[Preliminaries to Topology#^1b4b44]], the image of a characteristic map for $e\in \mathcal{E}$ is equal to $\overline{e}$, so each cell is [[Compactness#^f8dbab|precompact]] in $X$; bit its closure might not be a closed cell, because the characteristic map need not be injective on the boundary. 
 
 > [!Definition] CW complex
 > A **CW complex** is a [[#^ec3f7d|cell complex]] $(X, \mathcal{E})$ satisfying the following additional conditions:

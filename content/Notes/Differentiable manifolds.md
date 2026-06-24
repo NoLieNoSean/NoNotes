@@ -88,7 +88,7 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 > A manifold $M$ is non-orientable iff $M$ contains an orientation reversing closed $1$-dimensional submanifold.
 > 
 > > [!Proof]-
-> > #t 
+> > #td 
 > 
 
 ^ccbd4e

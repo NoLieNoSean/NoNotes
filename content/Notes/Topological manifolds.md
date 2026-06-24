@@ -7,7 +7,7 @@ tags:
 > [!Abstract]
 > Definitions and topological facts related to topological manifolds. 
 
-Recall [[Urysohn Lemma and applications#^6bc1cb]]: A topological $n$-manifold is a [[Countability and Separation axioms#^25afed|second countable]] [[Countability and Separation axioms#^e86df7|Hausdorff]] space which is locally Euclidean of dimension $n$. Alternatively, we can define define a topological $n$-manifold to be a second countable Hausdorff space with an atlas:
+Recall [[Urysohn Lemma and Applications#^6bc1cb]]: A topological $n$-manifold is a [[Countability and Separation Axioms#^25afed|second countable]] [[Countability and Separation Axioms#^e86df7|Hausdorff]] space which is locally Euclidean of dimension $n$. Alternatively, we can define define a topological $n$-manifold to be a second countable Hausdorff space with an atlas:
 
 > [!Definition] Topological manifold
 > Let $M$ be a topological space. A family of pairs $\{ (M_{\alpha}, \phi_{\alpha}) \}$ with the following properties is called an **atlas**:
@@ -54,7 +54,7 @@ Since the Hausdorff property and second countability are hereditary[^2], open su
 > Every manifold has a countable basis of regular Euclidean balls. 
 > 
 
-[^2]: [[Countability and Separation axioms#^f0873d]], [[Countability and Separation axioms#^54d9fd]] 
+[^2]: [[Countability and Separation Axioms#^f0873d]], [[Countability and Separation Axioms#^54d9fd]] 
 
 We also have the following:
 
@@ -64,7 +64,7 @@ We also have the following:
 > $\mathbb{H}^{n}$ itself is obviously a manifold with boundary; its boundary is defined to be the set of points where $x_{n}=0$. If $M$ is a manifold with boundary, a point that is in the inverse image of $\partial \mathbb{H}^{n}$ under some chart is called a **boundary point of $M$**, and a point that is in the inverse image of $\text{Int}\,\mathbb{H}^{n}$ is called an **interior point**. The **boundary of $M$** is defined to be the set of all boundary points of $M$. 
 > 
 
-It is true that for a $n$-manifold with boundary $M$, $M=\partial M \sqcup\text{Int}\,M$. We will prove this later #q. An $n$-manifold is an $n$-manifold with boundary (with empty boundary). 
+It is true that for a $n$-manifold with boundary $M$, $M=\partial M \sqcup\text{Int}\,M$. We will prove this later #td. An $n$-manifold is an $n$-manifold with boundary (with empty boundary). 
 
 > [!Definition] Submanifold, @schultensIntroduction3manifolds2014 1.1.16
 > Let $M$ be an $n$-manifold with boundary. A **$p$-dimensional submanifold** of $M$ is a *closed* subset $L$ of $M$ for which there exists an atlas $\{ (M_{\alpha}, \phi_{\alpha}) \}$ of $M$ and $p\in \{ 0, \dots, n \}$ such that for all $x\in L$ in the interior of $M$ there is a chart in the atlas with $x\in M_{\alpha}$ and
@@ -97,7 +97,7 @@ None of the defining properties of manifolds (locally Euclidean, Hausdorff, seco
 > Suppose $P$ is a second countable space and $M$ is a quotient space of $P$. If $M$ is locally Euclidean, then it is second countable. Thus if $M$ is locally Euclidean and Hausdorff, it is a manifold. 
 > 
 > > [!Proof]-
-> > Let $q:P\to M$ denote the quotient map, and let $\mathcal{U}$ be a cover of $M$ by coordinate balls. The collection $\{ q^{-1}(U):U\in \mathcal{U} \}$ is an open cover of $P$, which has a countable subcover by [[Countability and Separation axioms#^c0f7b5]].1. Let $\mathcal{U}'\subseteq \mathcal{U}$ denote a countable subset of $\mathcal{U}$ such that $\{ q^{-1}(U):U\in \mathcal{U}' \}$ covers $P$. Then, $\mathcal{U}'$ is a countable cover of $M$ by coordinate balls. Each such ball is second countable, so $M$ is second countable. 
+> > Let $q:P\to M$ denote the quotient map, and let $\mathcal{U}$ be a cover of $M$ by coordinate balls. The collection $\{ q^{-1}(U):U\in \mathcal{U} \}$ is an open cover of $P$, which has a countable subcover by [[Countability and Separation Axioms#^c0f7b5]].1. Let $\mathcal{U}'\subseteq \mathcal{U}$ denote a countable subset of $\mathcal{U}$ such that $\{ q^{-1}(U):U\in \mathcal{U}' \}$ covers $P$. Then, $\mathcal{U}'$ is a countable cover of $M$ by coordinate balls. Each such ball is second countable, so $M$ is second countable. 
 > 
 
 # Manifolds are paracompact

@@ -120,13 +120,13 @@ tags:
 ^7d451b
 
 > [!Proposition] @munkresTopology2000 51.2
-> The operation defined in [[The fundamental group and covering spaces#^e71ea2]] is associative and admits left and right identities and inverses.
+> The operation defined in [[Covering Spaces and the Fundamental Group#^e71ea2]] is associative and admits left and right identities and inverses.
 > 
 > > [!Proof]-
 > > 
-> > Associativity is proven by using the fact that any two paths in $I$ form $0$ to $1$ are homotopic and [[The fundamental group and covering spaces#^7d451b]].1. 
+> > Associativity is proven by using the fact that any two paths in $I$ form $0$ to $1$ are homotopic and [[Covering Spaces and the Fundamental Group#^7d451b]].1. 
 > > 
-> > Let $f:x\to y$ be a path in $X$. Consider the paths let $i$ be $\mathrm{id}_{I}$, which is a path in $I$ form $0$ to $1$. Since $I$ is convex, there exists a homotopy $G$ between $i$ and $e_{0}i$. By [[The fundamental group and covering spaces#^7d451b]], $f\circ G$ is a homotopy between $f\circ i=f$ and $f\circ (e_{0}i)=(f\circ e_{0})(f\circ i)=e_{x}f$. Similarly, $e_{y}$ is a right identity. 
+> > Let $f:x\to y$ be a path in $X$. Consider the paths let $i$ be $\mathrm{id}_{I}$, which is a path in $I$ form $0$ to $1$. Since $I$ is convex, there exists a homotopy $G$ between $i$ and $e_{0}i$. By [[Covering Spaces and the Fundamental Group#^7d451b]], $f\circ G$ is a homotopy between $f\circ i=f$ and $f\circ (e_{0}i)=(f\circ e_{0})(f\circ i)=e_{x}f$. Similarly, $e_{y}$ is a right identity. 
 > > 
 > > Finally, note that $ii^{-1}$ is a path beginning and ending at $0$, and so is the constant path $e_{0}$; thus, there exists a homotopy between $ff^{-1}$ and $e_{x}$ (and $f^{-1}f$ and $e_{y}$). 
 > 
@@ -138,7 +138,9 @@ tags:
 # The fundamental group
 
 > [!Definition] Fundamental group
-> Define $\pi_{1}(X, x)$ to be the set of equivalence classes of loops that start and end at $x$. By [[The fundamental group and covering spaces#^d124dc]], this is a group. We call this the **fundamental group of $X$ relative the the base point $x$**. 
+> Define $\pi_{1}(X, x)$ to be the set of equivalence classes of loops that start and end at $x$. By [[Covering Spaces and the Fundamental Group#^d124dc]], this is a group. We call this the **fundamental group of $X$ relative the the base point $x$**. 
+
+^b75e77
 
 > [!Proposition]
 > If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$; this allows us to speak of "the" fundamental group of $X$. Precisely, every path $\alpha$ from $x_{0}$ to $x_{1}$ induces an isomorphism $\hat{\alpha}:\pi_{1}(X, x_{0})\to \pi_{1}(X, x_{1})$. The isomorphism is independent of the path iff the fundamental group is abelian. 
@@ -158,10 +160,12 @@ tags:
 
 # Covering spaces
 
-> [!Definition] 
+> [!Definition] Covering space
 > Let $p:E\to B$ be a continuous surjective map. The open set $U$ of $B$ is said to be **evenly covered** by $p$ if the inverse image $p ^{-1}(U)$ can be written as the union of disjoint open sets $V_{\alpha}$ in $E$ such that for each $\alpha$, the restriction of $p$ to $V_{\alpha}$ is a homeomorphism of $V_{\alpha}$ onto $U$. The collection $\{ V_{\alpha} \}$ will be called a partition of $p ^{-1}(U)$ into **slices**. 
 > 
 > If every point $b\in B$ has a neighborhood $U$ that is evenly covered by $p$, then $p$ is called a **covering map**, and $E$ is said to be a **covering space** of $B$. 
+
+^03ba68
 
 > [!Proposition] @munkresTopology2000 Exr. 53.3
 > Let $p:E\to B$ be a covering map; let $B$ be connected. Show that if $p ^{-1}(b_{0})$ has cardinality $c$, then $p ^{-1}(b)$ has cardinality $c$ for every $b\in B$. We call $E$ a **$c$-fold covering** of $B$. 
@@ -178,7 +182,7 @@ tags:
 ^04d08c
 
 > [!Definition] Covering space
-> In light of [[The fundamental group and covering spaces#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ with $p ^{-1}(U)$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
+> In light of [[Covering Spaces and the Fundamental Group#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ with $p ^{-1}(U)$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
 > 
 > ```latex
 > % latex-id: b1a7-5b9e-3e80-4b99-adc2
@@ -200,15 +204,26 @@ Covering spaces are instances of [[Addendum A to 438#^a3d022|fiber bundles]].
 > [!Proposition]
 > Let $p:E\to B$ be a covering map. If $B_{0}$ is a subspace of $B$, and if $E_{0}=p ^{-1}(B_{0})$, then the map $p_{0}:E_{0}\to B_{0}$ obtained by restricting $p$ is a covering map. 
 
-> [!Theorem]
-> If $p:E\to B$ and $p':E'\to B'$ are covering maps, then
+> [!Proposition]
+> If $p:E\to B$ and $p':E'\to B'$ are covering maps, then the product map
 > $$
 > p\times p':E\times E'\to B\times B'
 > $$
 > is a covering map. 
 
+^0cd693
 
-## Covering spaces and fundamental groups
+> [!Theorem] @munkresTopology2000 53.1
+> The map $p:\mathbb{R}\to \mathbb{S}^{1}$ given by $p(x)=(\cos 2\pi x, \sin 2\pi x)$ is a covering map. 
+
+^162985
+
+> [!Corollary]
+> It follows from [[#^162985]] and [[#^0cd693]] that the map $p\times p:\mathbb{R}^{2}\to \mathbb{T}^{2}$ is a covering map. 
+
+^944522
+
+## Lifting properties of covering maps
 
 > [!Definition] Lifting
 > Let $p:E\to B$ be a map. If $f$ is a continuous mapping of some space $X$ into $B$, a **lifting** of $f$ is a map $\tilde{f}:X\to E$ such that $p\circ \tilde{f}=f$. 
@@ -224,11 +239,22 @@ Proof applies the [[LEC CAL1 8#Lebesgue covering Lemma|Lebesgue number lemma]] t
 > [!Definition]
 > Let $p:E\to B$ be a covering map; let $b_{0}\in B$. Choose $e_{0}$ such that $p(e_{0})=b_{0}$. Then, $\pi_{1}(B, b_{0})$ acts on $p ^{-1}(b_{0})$. The map $[f]\mapsto \tilde{f}(1)$, where $\tilde{f}$ is the lift of $f$ starting at $e_{0}$, is called the **lifting correspondence**. 
 
-> [!Theorem]
+The following theorem helps us use covering maps to compute fundamental groups. 
+
+> [!Theorem] @munkresTopology2000 54.4 & 54.6
 > Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. 
 > 1. If $E$ is path connected, the lifting correspondence $\phi:\pi_{1}(B, b_{0})\to p ^{-1}(b_{0})$ is surjective. 
 > 2. If $E$ is simply connected, the lifting correspondence is bijective. 
 > 3. The homomorphism $p_{*}:\pi_{1}(E, e_{0})\to \pi_{1}(B, b_{0})$ is a monomorphism. 
-> 4. Let $H=p_{*}(\pi_{1}(E, e_{0}))$. The lifting correspondence $\phi$ induces an injective map $\pi_{1}(B, b_{0})/H\to p ^{-1}(b_{0})$ of the collection of right cosets of $H$ into $p ^{-1}(b_{0})$, which is injective if $E$ is path connected. 
+> 4. Let $H=p_{*}(\pi_{1}(E, e_{0}))$. The lifting correspondence $\phi$ induces an injective map $\pi_{1}(B, b_{0})/H\to p ^{-1}(b_{0})$ of the collection of right cosets of $H$ into $p ^{-1}(b_{0})$, which is bijective if $E$ is path connected. 
 > 5. If $f$ is a loop in $B$ based at $b_{0}$, then $[f]\in H$ iff $f$ lifts to a loop in $E$ based at $e_{0}$. 
+
+^334a74
+
+## The fundamental group of the circle
+
+> [!Theorem] @munkresTopology2000 54.5
+> The fundamental group of $S^{1}$ is isomorphic to $\mathbb{Z}$. 
+
+^91f4c3
 

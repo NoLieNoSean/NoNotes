@@ -14,7 +14,7 @@ tags:
 > 
 > > [!Proof]-
 > > 
-> > $(2)$ Proof proceed in the same way as that of [[Countability and Separation axioms#^ae93c1]].3; show that every point not in the subspace has a neighborhood in the complement. 
+> > $(2)$ Proof proceed in the same way as that of [[Countability and Separation Axioms#^ae93c1]].3; show that every point not in the subspace has a neighborhood in the complement. 
 > > 
 > > $(4)$ Let $f:X\to Y$ be such a map. If $A\subseteq X$ is closed in $X$, then $A$ is compact. Therefore, $f(A)$ is compact. Since $Y$ is Hausdorff, $f(A)$ is closed in $Y$. 
 > 
@@ -122,7 +122,7 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 > 
 > > [!Proof]-
 > > 
-> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $Y$ be the one-point compactification $X$, and let $C$ be the set $Y\setminus U$. Then $C$ is closed in $Y$, so that $C$ is a compact subspace of $Y$. Apply [[Countability and Separation axioms#^5ad38e]] to choose disjoint open sets $V$ and $W$ containing $x$ and $C$ respectively. Then the closure $\overline{V}$ of $V$ in $Y$ is compact, and $\overline{V}$ is disjoint from $C$, so that $\overline{V}\subseteq U$. 
+> > $(\implies)$ Let $x\in X$ have neighborhood $U$. Let $Y$ be the one-point compactification $X$, and let $C$ be the set $Y\setminus U$. Then $C$ is closed in $Y$, so that $C$ is a compact subspace of $Y$. Apply [[Countability and Separation Axioms#^5ad38e]] to choose disjoint open sets $V$ and $W$ containing $x$ and $C$ respectively. Then the closure $\overline{V}$ of $V$ in $Y$ is compact, and $\overline{V}$ is disjoint from $C$, so that $\overline{V}\subseteq U$. 
 > > 
 > > $(\impliedby)$ is clear. 
 > > 
@@ -143,7 +143,7 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 > 
 > > [!Proof]-
 > > 
-> > X is locally compact Hausdorff, so by [[#^6514af]] it has a one point compactification which is compact Hausdorff hence normal by [[Countability and Separation axioms#^ae93c1]].3. Then $X$ is a subspace of a normal space and hence regular by [[Countability and Separation axioms#^f0873d]].3. In fact, this shows that $X$ is completely regular since [[Urysohn Lemma and applications#^da93d4]]. 
+> > X is locally compact Hausdorff, so by [[#^6514af]] it has a one point compactification which is compact Hausdorff hence normal by [[Countability and Separation Axioms#^ae93c1]].3. Then $X$ is a subspace of a normal space and hence regular by [[Countability and Separation Axioms#^f0873d]].3. In fact, this shows that $X$ is completely regular since [[Urysohn Lemma and Applications#^da93d4]]. 
 
 > [!Proposition]
 > The one-point compactification of a locally compact Hausdorff space $X$ is metrizable iff $X$ is second countable. 
@@ -188,7 +188,7 @@ We will use the following lemma to prove that manifolds are paracompact.
 
 ^6e5ca5
 
-We have seen that [[Countability and Separation axioms#^ae93c1|compact Hausdorff spaces are normal]]; we now show that we can relax the compactness requirement to paracompactness. 
+We have seen that [[Countability and Separation Axioms#^ae93c1|compact Hausdorff spaces are normal]]; we now show that we can relax the compactness requirement to paracompactness. 
 
 > [!Theorem] @leeIntroductionTopologicalManifolds2011 4.81
 > Every paracompact Hausdorff space is normal. 

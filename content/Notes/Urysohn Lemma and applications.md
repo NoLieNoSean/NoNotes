@@ -59,9 +59,9 @@ The following theorem expresses the most important property of normal spaces. In
 > 
 > > [!Proof]-
 > > 
-> > $(\implies)$ For every pair $(x, U)$, where $x\in X$ and $U$ is an open neighborhood of $x$, let $f_{(x, U)}$ be the function which is $1$ on $x$ and zero on $\overline{U}$. Use [[#^3206b8]] with the collection $\{ f_{(x, U)} \}$. 
+> > $(\implies)$ For every pair $(x, U)$, where $x\in X$ and $U$ is an open neighborhood of $x$, let $f_{(x, U)}$ be the function which is $1$ on $x$ and zero on $\overline{U}$. Use [[Urysohn Lemma and Applications#^3206b8]] with the collection $\{ f_{(x, U)} \}$. 
 > > 
-> > $(\impliedby)$ Follows immediately from [[#^da93d4]]. 
+> > $(\impliedby)$ Follows immediately from [[Urysohn Lemma and Applications#^da93d4]]. 
 
 ^72b42d
 

@@ -27,9 +27,11 @@ Clearly, surjective continuous open/closed maps are quotient maps.
 ^4fa85d
 
 > [!Definition] Quotient space
-> Let $X$ be a topological space, and let $X^{*}$ be a partition of $X$ into disjoint subsets whose union is $X$. Let $p:X\to X^{*}$ be the surjective map that carries each point of $X$ to the element of $X^{*}$ containing it. In the quotient topology induced by $p$, the space $X^{*}$ is called a **quotient space** of $X$. 
+> Let $X$ be a topological space, and let $X^{*}$ be a partition of $X$ into disjoint subsets whose union is $X$. Let $p:X\to X^{*}$ be the surjective map that carries each point of $X$ to the element of $X^{*}$ containing it. Together with the [[#^4fa85d|quotient topology]] induced by $p$, the space $X^{*}$ is called a **quotient space** of $X$. 
 
-[[#^3b95fe]] shows that a restriction a of quotient map to a subspace need not be a quotient map. 
+^a08554
+
+[[The Quotient Topology#^3b95fe]] shows that a restriction a of quotient map to a subspace need not be a quotient map. 
 
 > [!Proposition]
 > Let $p:X\to Y$ be a quotient map; let $A$ be a subspace of $X$ that is saturated with respect to $p$. Let $q:A\to p(A)$ be the map obtained by restricting $p$. 
@@ -93,7 +95,7 @@ The following theorem shows that quotient spaces are uniquely determined up to h
 
 ## Examples
 
-The [[#^7113cb|uniqueness of quotient spaces]] and the following lemma (which is just a combination of [[Compactness#^c93857]].4 and [[Preliminaries to Topology#^151d8e]]) are used frequently when working with quotient spaces:
+The [[The Quotient Topology#^7113cb|uniqueness of quotient spaces]] and the following lemma (which is just a combination of [[Compactness#^c93857]].4 and [[Preliminaries to Topology#^151d8e]]) are used frequently when working with quotient spaces:
 
 > [!Lemma] Closed Map Lemma, @leeIntroductionTopologicalManifolds2000 4.25
 > Suppose $F$ is a continuous map from a compact space to a Hausdorff space. 
@@ -104,10 +106,10 @@ The [[#^7113cb|uniqueness of quotient spaces]] and the following lemma (which is
 
 ^c8571b
 
-For first examples, see how spaces like the 2-torus, 2-sphere, and the [[Real projective space|projective plane]] can be obtained as quotients of the square by identifying edges in pairs. 
+For first examples, see how spaces like the 2-torus, 2-sphere, and the [[The Fundamental Groups of Some Surfaces#^d70a95|projective plane]] can be obtained as quotients of the square by identifying edges in pairs. 
 
 > [!Example] Torus as a quotient
-> Define an equivalence relation on $I\times I$ by $(x, 0)\sim (x, 1)$ for all $x\in I$ and $(0, y)\sim (1, y)$ for all $y\in I$; this defines a quotient map by [[#^4fa85d]].  Construct another map $q:I\times I\to \mathbb{T}^{2}$ by setting $q(u, v)=(\cos 2\pi u, \sin 2\pi u, \cos 2\pi v, \sin 2\pi v)$. By the [[#^c8571b|closed map lemma]], this is a quotient map. Since it makes the same identifications as the quotient map we started with, the original quotient of $I\times I$ must be homeomorphic to the torus by the [[#^7113cb|uniqueness of quotient spaces]]. 
+> Define an equivalence relation on $I\times I$ by $(x, 0)\sim (x, 1)$ for all $x\in I$ and $(0, y)\sim (1, y)$ for all $y\in I$; this defines a quotient map by [[The Quotient Topology#^4fa85d]].  Construct another map $q:I\times I\to \mathbb{T}^{2}$ by setting $q(u, v)=(\cos 2\pi u, \sin 2\pi u, \cos 2\pi v, \sin 2\pi v)$. By the [[The Quotient Topology#^c8571b|closed map lemma]], this is a quotient map. Since it makes the same identifications as the quotient map we started with, the original quotient of $I\times I$ must be homeomorphic to the torus by the [[The Quotient Topology#^7113cb|uniqueness of quotient spaces]]. 
 
 See @leeIntroductionTopologicalManifolds2000 Prop 6.2, Prop 6.3 for $\mathbb{S}^{2}$ and $\mathbb{P}^{2}$ respectively. 
 

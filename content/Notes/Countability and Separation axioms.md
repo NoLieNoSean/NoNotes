@@ -65,7 +65,7 @@ These are not true for arbitrary topological spaces. As we ascend the ladder fro
 > > Say a sequence $\{ x_{n} \}$ converges to two points, $a$ and $b$. Let $A\ni a$ and $B\ni b$ be disjoint open sets. By definition, there exists $N$ such that for all $n\geqslant N$, $x_{n}\in A$ - but this implies $\{ x_{n} \}$ cannot converge to $b$! 
 > 
 
-[[#^e86df7]] can be reformulated in the following useful way:
+[[Countability and Separation Axioms#^e86df7]] can be reformulated in the following useful way:
 
 > [!Proposition]
 > Let $X$ be a $T_{1}$ space. 
@@ -95,15 +95,15 @@ These are not true for arbitrary topological spaces. As we ascend the ladder fro
 > > 
 > > $(2)$ Let $\{ X_{\alpha} \}$ be a family of Hausdorff spaces. Let $\mathbf{x}=(x_{\alpha})$ and $\mathbf{y}=(y_{\alpha})$ be distinct points of the product space $\prod X_{\alpha}$. Because $\mathbf{x}\ne \mathbf{y}$, there is some index $\beta$ such that $x_{\beta}\ne y_{\beta}$. Choose disjoint open sets $U$ and $V$ in $X_{\beta}$ containing $X_{\beta}$ containing $x_{\beta}$ and $y_{\beta}$ respectively. Then the sets $\pi_{\beta}^{-1}(U)$ and $\pi_{\beta}^{-1}(V)$ are disjoint open sets in $\prod X_{\alpha}$ containing $\mathbf{x}$ and $\mathbf{y}$ respectively. 
 > > 
-> > $(4)$ Let $\{ X_{\alpha} \}$ be a family of regular spaces; let $X=\prod X_{\alpha}$. By $(2)$, $X$ is $T_{2}$, so $X$ is $T_{1}$. We use [[#^6d74b4]]. Let $\mathbf{x}\in X$, $U$ be a neighborhood of $\mathbf{x}$ in $X$. Choose a basis element $\prod U_{\alpha}$ about $\mathbf{x}$ contained in $U$. Choose, for each $\alpha$, a neighborhood $V_{\alpha}$ of $x_{\alpha}$ in $X_{\alpha}$ such that $\overline{V}_{\alpha}\subseteq U_{\alpha}$; if it happens that $U_{\alpha}=X_{\alpha}$, chose $V_{\alpha}=X_{\alpha}$. Then $V=\prod V_{\alpha}$ is a neighborhood of $x$ in $X$. Since $\overline{V}=\prod \overline{V}_{\alpha}$ by [[Preliminaries to Topology#^0adb41]], it follows that $\overline{V}\subseteq \prod U_{\alpha}\subseteq U$. 
+> > $(4)$ Let $\{ X_{\alpha} \}$ be a family of regular spaces; let $X=\prod X_{\alpha}$. By $(2)$, $X$ is $T_{2}$, so $X$ is $T_{1}$. We use [[Countability and Separation Axioms#^6d74b4]]. Let $\mathbf{x}\in X$, $U$ be a neighborhood of $\mathbf{x}$ in $X$. Choose a basis element $\prod U_{\alpha}$ about $\mathbf{x}$ contained in $U$. Choose, for each $\alpha$, a neighborhood $V_{\alpha}$ of $x_{\alpha}$ in $X_{\alpha}$ such that $\overline{V}_{\alpha}\subseteq U_{\alpha}$; if it happens that $U_{\alpha}=X_{\alpha}$, chose $V_{\alpha}=X_{\alpha}$. Then $V=\prod V_{\alpha}$ is a neighborhood of $x$ in $X$. Since $\overline{V}=\prod \overline{V}_{\alpha}$ by [[Preliminaries to Topology#^0adb41]], it follows that $\overline{V}\subseteq \prod U_{\alpha}\subseteq U$. 
 > 
 
 ^f0873d
 
-There is no analogue of [[#^f0873d]] for normal spaces. 
+There is no analogue of [[Countability and Separation Axioms#^f0873d]] for normal spaces. 
 
 
-[[#^ae93c1]] provides three sufficient conditions for a space to be normal:
+[[Countability and Separation Axioms#^ae93c1]] provides three sufficient conditions for a space to be normal:
 
 > [!Proposition]
 > 1. Every regular second countable space is normal.

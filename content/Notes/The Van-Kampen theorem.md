@@ -19,7 +19,7 @@ tags:
 ## Special cases
 
 [!Corollary]
-Assume the hypothesis of [[#^faa3c4]], and suppose in addition that $U$ is simply connected. Then the inclusion $l:V\hookrightarrow X$ induces an isomorphism
+Assume the hypothesis of [[The Van-Kampen Theorem#^faa3c4]], and suppose in addition that $U$ is simply connected. Then the inclusion $l:V\hookrightarrow X$ induces an isomorphism
 $$
 \pi_{1}(X, p)\cong \pi_{1}(V, p)/\overline{j_{*}\pi_{1}(U\cap V, p)},
 $$

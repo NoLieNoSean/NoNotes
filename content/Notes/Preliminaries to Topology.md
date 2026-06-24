@@ -142,7 +142,7 @@ Clearly, it suffices to show that the preimage of every basis (or subbasis) elem
 > [!Proposition] @leeIntroductionTopologicalManifolds2011 Prop 3.69
 > Suppose $X$ and $Y$ are topological spaces, and $f:X\to Y$ is a continuous map that is either open or closed. 
 > 1. If $f$ is injective, it is a topological embedding. 
-> 2. If $f$ is surjective, it is a [[The quotient topology#^da2c9c|quotient map]]. 
+> 2. If $f$ is surjective, it is a [[The Quotient Topology#^da2c9c|quotient map]]. 
 > 3. If $f$ is bijective, it is a homeomorphism. 
 
 ^151d8e
@@ -245,7 +245,7 @@ It would be nice if we could say the following: If $x$ lies in the closure of su
 > [!Definition] Countable basis at a point
 > A space $X$ is said to have a **countable basis at the point $x$** if there is a countable collection $\{ U_{n} \}_{n\in \mathbb{N}}$ of neighborhoods of $x$ such that any neighborhood $U$ of $x$ contains at least one of the sets $U_{n}$. 
 
-Note that if $X$ has a countable basis at each of its points, $X$ is [[Countability and Separation axioms#^25afed|first countable]]. A metrizable space always satisfies the first countability axiom.
+Note that if $X$ has a countable basis at each of its points, $X$ is [[Countability and Separation Axioms#^25afed|first countable]]. A metrizable space always satisfies the first countability axiom.
 
 
 > [!Proposition] The sequence lemma

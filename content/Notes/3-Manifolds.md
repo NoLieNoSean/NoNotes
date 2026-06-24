@@ -34,9 +34,16 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W24
 
+[[Branched Covering Spaces]]
 
 ---
 
 # W25
 
 [[SEM 3MAN Actions on surfaces]]
+
+---
+
+# W26
+
+[[SEM TEICH 1]]

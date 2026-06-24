@@ -26,9 +26,9 @@ There are several ways to compactify a space. For example, $S^{1}$, $[0, 1]$, an
 > [!Question]
 > Given a compactification $Y$ of $X$, under what conditions can a continuous function defined on $X$ be extended continuously to $Y$?
 
-We will see that the hypotheses of [[Urysohn Lemma and applications#^994616|complete regularity]] of $X$ and the codomain being compact Hausdorff guarantees the existence of a *unique* $Y$ which admits *unique* extensions. 
+We will see that the hypotheses of [[Urysohn Lemma and Applications#^994616|complete regularity]] of $X$ and the codomain being compact Hausdorff guarantees the existence of a *unique* $Y$ which admits *unique* extensions. 
 
-To begin, observe that it follows from [[Urysohn Lemma and applications#^72b42d]] and [[Stone-Čech Compactification#^ff3c2e]] that a space is completely regular iff it has a compactification. We can prove something much stronger, making progress toward answering our question:
+To begin, observe that it follows from [[Urysohn Lemma and Applications#^72b42d]] and [[Stone-Čech Compactification#^ff3c2e]] that a space is completely regular iff it has a compactification. We can prove something much stronger, making progress toward answering our question:
 
 > [!Theorem] @munkresTopology2000 38.2
 > Let $X$ be a completely regular space. There exists a compactification $Y$ of $X$ having the property that every bounded continuous map $f:X\to \mathbb{R}$ extends *uniquely* to a continuous map of $Y$ into $\mathbb{R}$. 
@@ -39,7 +39,7 @@ To begin, observe that it follows from [[Urysohn Lemma and applications#^72b42d]
 > > $$
 > > h(x)=(f_{\alpha}(x))_{\alpha\in J}.
 > > $$
-> > By the Tychonoff theorem, $\prod I_{\alpha}$ is compact. Because $X$ is completely regular, the collection $\{ f_{\alpha} \}$ separates points from closed sets in $X$. By [[Urysohn Lemma and applications#^3206b8]], $h$ is an imbedding. 
+> > By the Tychonoff theorem, $\prod I_{\alpha}$ is compact. Because $X$ is completely regular, the collection $\{ f_{\alpha} \}$ separates points from closed sets in $X$. By [[Urysohn Lemma and Applications#^3206b8]], $h$ is an imbedding. 
 > > 
 > > Let $Y$ be the compactification of $X$ induced by $h$, per [[Stone-Čech Compactification#^ff3c2e]]. Then there is an imbedding $H:Y\to \prod I_{\alpha}$ that equals $h$ when restricted to the subspace $X$ of $Y$. Given a bounded continuous real valued function $f_{\beta}$ on $X$, the continuous map $\pi_{\beta}\circ H:Y\to I_{\beta}$ is the desired extension of $f$. Uniqueness of the extension follows from the following lemma.
 > 
@@ -54,7 +54,7 @@ To begin, observe that it follows from [[Urysohn Lemma and applications#^72b42d]
 > 
 > > [!Proof]-
 > > 
-> > $C$ is [[Countability and Separation axioms#^ae93c1|normal]], hence completely regular, hence can be [[Urysohn Lemma and applications#^72b42d|imbedded]] in $[0, 1]^{J}$ for some $J$. So we may as well assume $C\subseteq[0, 1]^{J}$. Then each component function $f_{\alpha}$ of the map $f$ is a bounded continuous real-valued function on $X$. By hypothesis, $f_{\alpha}$ can be extended to a continuous map $g_{\alpha}:Y\to \mathbb{R}$. Define $g:Y\to \mathbb{R}^{J}$ by setting $g(y)=(g_{\alpha}(y))_{\alpha\in J}$; then $g$ is continuous because $\mathbb{R}^{J}$ has the product topology. Continuity of $g$ implies
+> > $C$ is [[Countability and Separation Axioms#^ae93c1|normal]], hence completely regular, hence can be [[Urysohn Lemma and Applications#^72b42d|imbedded]] in $[0, 1]^{J}$ for some $J$. So we may as well assume $C\subseteq[0, 1]^{J}$. Then each component function $f_{\alpha}$ of the map $f$ is a bounded continuous real-valued function on $X$. By hypothesis, $f_{\alpha}$ can be extended to a continuous map $g_{\alpha}:Y\to \mathbb{R}$. Define $g:Y\to \mathbb{R}^{J}$ by setting $g(y)=(g_{\alpha}(y))_{\alpha\in J}$; then $g$ is continuous because $\mathbb{R}^{J}$ has the product topology. Continuity of $g$ implies
 > > $$
 > > g(Y)=g(\overline{X})\subseteq \overline{g(X)}=\overline{f(X)}\subseteq \overline{C}=C.
 > > $$
