@@ -78,7 +78,9 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 We will need the following two theorems[^2] to discuss the impact of the choices of $B_{i}$ and the homeomorphism $\sigma$ on the connected sum $M_{1}\#M_{2}$:
 
 > [!Definition] Isotopy
-> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an embedding. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+
+^d2add7
 
 > [!Theorem] 
 > Every orientation-preserving homeomorphism of an $n$-ball or $n$-sphere is isotopic to the identity. 
@@ -113,12 +115,14 @@ Thus, given any two compact connected surfaces, we can talk about *the* connecte
 > 3. A polygonal presentation is called a **surface presentation** if each symbol $a\in S$ occurs exactly twice in $W_{1}, \dots, W_{k}$. By [[#^b1c5a6]], the geometric realization of a surface presentation is a compact surface. 
 > 4. If two presentations $\mathcal{P}_{1}$ and $\mathcal{P}_{2}$ have homeomorphic geometric realizations, we will say that they are **topologically equivalent** and write $\mathcal{P}_{1}\approx P_{2}$. 
 
-> [!Example]
+> [!Definition] Standard presentations
 > The following surfaces are determined by these polygonal presentations, which we call their **standard presentations**. 
 > 1. The sphere: $\langle a\ | \ aa^{-1} \rangle$ or $\langle a, b\ | \ abb ^{-1}a^{-1} \rangle$.
 > 2. The torus: $\langle a, b \ | \ aba^{-1}b ^{-1}\rangle$.
 > 3. The projective plane: $\langle a\ | \ aa \rangle$ or $\langle a, b\ | \ abab \rangle$. 
 > 4. The Klein bottle: $\langle a, b\ | \ abab ^{-1} \rangle$. 
+
+^9b12c0
 
 > [!Definition] Elementary transformations
 > Relabeling, subdividing, consolidation, reflecting, rotating, cutting, pasting, folding, and unfolding. See [@leeIntroductionTopologicalManifolds2000 p.134]. 
@@ -136,9 +140,12 @@ We will now find standard presentations for connected sums.
 > > It's easier to think of it this way: let $v$ be as in the text, triangulate $P_{1}'$ such that $Q'$ is contained in a $2$-simplex, and use the technique from the proof of [[#^b1c5a6]] to show that the open vertex star $V$ at $v$ is homeomorphic to an open ball in $\mathbb{R}^{2}$. This proves the claim, since $V$ is a neighborhood of $Q'$. I have no clue why Lee makes it so clunky. 
 > 
 
-Thus, we have standard presentations for
-1. Connected sum of $n$ tori: $\langle a_{1}, b_{1}, \dots, a_{n}, b_{n}\ | \ a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\dots a_{n}b_{n}a_{n}^{-1}b_{n}^{-1} \rangle$. 
-2. Connected sum of $n$ projective planes: $\langle a_{1}, \dots, a_{n}\ | \ a_{1}a_{1}\dots a_{n}a_{n} \rangle$. 
+> [!Remark]
+> Thus, we have standard presentations for
+> 1. Connected sum of $n$ tori: $\langle a_{1}, b_{1}, \dots, a_{n}, b_{n}\ | \ a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\dots a_{n}b_{n}a_{n}^{-1}b_{n}^{-1} \rangle$. 
+> 2. Connected sum of $n$ projective planes: $\langle a_{1}, \dots, a_{n}\ | \ a_{1}a_{1}\dots a_{n}a_{n} \rangle$. 
+
+^17470d
 
 # Classification of surfaces
 
@@ -170,8 +177,11 @@ Thus, we have standard presentations for
 > > This is easily resolved, however: If $\pi_{K}$ identifies $v$ and $v'$ without an edge identification requiring it, it can be shown that any neighborhood of $v$ is disconnected by removing $v$, disqualifying $|K|$ as a manifold. 
 > 
 
-> [!Lemma]
+> [!Lemma] @leeIntroductionTopologicalManifolds2011 6.16
 > The Klein bottle is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
+
+> [!Lemma] @leeIntroductionTopologicalManifolds2011 6.17
+> The connected sum $\mathbb{T}^{2}\#\mathbb{P}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
 
 > [!Proposition] Attaching a Disk
 > Let $X$ be a path-connected topological space, and let $\tilde{X}$ be the space obtained by attaching a closed $2-$cell $D$ to $X$ along an attaching map $\varphi:\partial D\to X$. Let $v\in \partial D$, $\tilde{v}=\varphi(v)\in X$, and $\gamma=\varphi_{*}(\alpha)\in \pi_{1}(X, \tilde{v})$, where $\alpha$ is a generator of the infinite cyclic group $\pi_{1}(\partial D, v)$. Then the homomorphism $\pi_{1}(X, \tilde{v})\to \pi_{1}(\tilde{X}, \tilde{v})$ induced by the inclusion $X\hookrightarrow \tilde{X}$ is surjective, and its kernel is the smallest normal subgroup containing $\gamma$. 
@@ -180,12 +190,11 @@ Thus, we have standard presentations for
 > Let $M$ be a topological space with a polygonal presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$ with one face, in which all vertices are identified to a single point. Then $\pi_{1}(M)$ has the presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$. 
 
 > [!Theorem] Classification of compact surfaces, @leeIntroductionTopologicalManifolds2000 Thm 6.14
-> Every nonempty, compact, connected 2-manifold is homeomorphic to exactly one of these surfaces:
+> Every nonempty, compact, connected 2-manifold is homeomorphic to *exactly* one of these surfaces:
 > 1. the sphere $\mathbb{S}^{2}$; 
 > 2. a connected sum $\mathbb{T}^{2}\#\dots\# \mathbb{T}^{2}$; or
 > 3. a connected sum $\mathbb{P}^{2}\#\dots\#\mathbb{P}^{2}$.
 > 
-
 
 This immediately leads to a classification of compact $2$-manifolds with boundary. 
 
@@ -193,3 +202,16 @@ This immediately leads to a classification of compact $2$-manifolds with boundar
 > Every compact $2$-manifold with boundary is homeomorphic to a compact $2$-manifold with finitely many open cells removed. 
 
 [^2]: These are stated in and are true for all dimensions in $\textsf{Triang}$. 
+
+# The Euler characteristic
+
+Note that every polygonal presentation determines a finite simplicial complex, and thus has a well-defined [[Triangulable manifolds#^7ccd26|Euler characteristic]]. The Euler characteristic of a polygonal presentation is unchanged by elementary transformations. 
+
+We can't yet claim to know the Euler characteristics for arbitrary compact surfaces, since we haven't proven Euler's theorem yet, but we can easily compute $\chi$ for the standard surface presentations we've worked with above:
+
+> [!Proposition] Euler characteristics of compact surfaces, @leeIntroductionTopologicalManifolds2011 6.19
+> The Euler characteristic of a standard surface presentation ([[#^9b12c0]], [[#^17470d]]) is equal to
+> 1. $2$ for the sphere, 
+> 2. $2-2n$ for the connected sum of $n$ tori,
+> 3. $2-n$ for the connected sum of $n$ projective planes.
+

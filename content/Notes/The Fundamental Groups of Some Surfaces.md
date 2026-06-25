@@ -32,7 +32,7 @@ tags:
 > The real projective space $\mathbb{P}^{n}$ is an $n$-manifold. 
 
 $\mathbb{P}^{2}$ can also be obtained by identifying the edges of a square in the following manner; see @leeIntroductionTopologicalManifolds2000 Prop 6.3. 
-![[-20260605165100230.jpg|200]]
+![[-20260624233259202.jpg|200]]
 @nyimaM435Ep32019 visually shows how the two descriptions are equivalent.  
 
 

@@ -34,13 +34,17 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W24
 
+[[General Position]]
 [[Branched Covering Spaces]]
+[[Homotopy and Isotopy on Surfaces]]
+[[The Mapping Class Group]]
 
 ---
 
 # W25
 
 [[SEM 3MAN Actions on surfaces]]
+[[Preliminaries on 3-Manifolds]]
 
 ---
 

@@ -173,6 +173,9 @@ One concept that is easily defined in the $\textsf{Triang}$ category is the foll
 > $$
 > 
 
+^7ccd26
+
+The Euler characteristic is a topological invariant: if $X$ and $Y$ are polyhedra (or finite CW-complexes) whose underlying topological spaces are homeomorphic, then $\chi(X)=\chi(Y)$. 
 # Triangulation theorems for 1, 2, and 3-manifolds
 
 > [!Definition]
