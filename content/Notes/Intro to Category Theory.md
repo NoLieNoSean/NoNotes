@@ -1,6 +1,6 @@
 ---
 tags:
-  - CategoryTheory
+  - CATT
 id: "65"
 date: May 2025
 ---

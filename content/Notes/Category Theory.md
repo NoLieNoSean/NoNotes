@@ -4,7 +4,7 @@ date: 2026-01-19
 time: 19:24
 tags:
   - MOC
-  - CategoryTheory
+  - CATT
 ---
 Reading group, CMI
 

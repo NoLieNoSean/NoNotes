@@ -35,12 +35,12 @@ export default ((opts?: Options) => {
 
 
           </div>
-          <div class="license-notice">
+          {/* <div class="license-notice">
             <div>
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
             </div>
             <img class="noAI" src="https://100r.co/media/interface/noai.png" alt="noAI"/>
-          </div>
+          </div> */}
         </div>
       </footer>
     )
