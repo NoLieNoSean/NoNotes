@@ -6,7 +6,7 @@ tags:
 ---
 Stuff about general position
 
-Bundles, [[Addendum A to 438]] 
+Bundles, [[ADD 438 A]] 
 Examples of fiber bundles`3
 The mapping torus: isotopy class of homeomorphism determines the mapping torus. 
 Trivial and Non-trivial bundle over mobius band: show that these are different using boundaries and the mapping torus

@@ -15,7 +15,7 @@ Taken from @internationalcentrefortheoreticalsciencesIntroductionContactGeometry
 ---
 
 [!Definition] Contact structure
-Let $M$ be a $2n+1$ dimensional smooth manifold. A codimension 1 hyperplane field $\xi$ (i.e, a sub[[Addendum A to 438#^a3d022|bundle]] of $TM$ of corank 1) is a **contact structure** if for any 1-form $\alpha$ (locally defined) with $\ker\alpha=\xi$, we have $\alpha \wedge(d\alpha)^{n}\ne 0$ everywhere. 
+Let $M$ be a $2n+1$ dimensional smooth manifold. A codimension 1 hyperplane field $\xi$ (i.e, a sub[[ADD 438 A#^a3d022|bundle]] of $TM$ of corank 1) is a **contact structure** if for any 1-form $\alpha$ (locally defined) with $\ker\alpha=\xi$, we have $\alpha \wedge(d\alpha)^{n}\ne 0$ everywhere. 
 
 [!Theorem] Frobenius
 A hyperplane field given by $\ker\alpha$ is integrable iff $\alpha \wedge d\alpha$ is identically zero. 

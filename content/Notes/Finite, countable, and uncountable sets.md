@@ -34,7 +34,7 @@ If a set can be arranged into a single list, then deleting some elements from th
 >S = \bigcup_{n=1}^{\infty}E_{n}
 >$$
 >is countable.
->[[A Note about Abbot T1.5.8|A lil note]]
+>[[ADD 50 A|A lil note]]
 
 >[!Theorem]
 >Let $A$ be a countable set, and let $B_{n}$ be the set of all $n$-tuples $(a_{1}, a_{2}, \dots a_{n})$ where $a_{k}\in A, 1\le k\le n$, and the elements $a_{1}, \dots, a_{n}$ need not be distinct. Then, $B_{n}$ is countable.

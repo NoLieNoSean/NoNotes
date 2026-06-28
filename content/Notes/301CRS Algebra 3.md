@@ -53,4 +53,4 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 [[TUT ALG3 9]]
 
 [[TST ALG3 Midsem]]
-[[TST ALG3 Quiz2]]
+[[TST ALG3 Quiz 2]]

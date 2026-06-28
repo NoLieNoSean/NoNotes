@@ -73,7 +73,7 @@ A simple application of Zorn's lemma shows that every module has maximal linearl
 
 ^331aed
 
-See [[Addendum A to 373]] for results analogous results on minimal generating sets. 
+See [[ADD 373 A]] for results analogous results on minimal generating sets. 
 
 We also see that being free is equivalent to having a basis.
 
@@ -99,7 +99,7 @@ v=\sum_{i=1}^{t} \frac{c_{i}}{c_{0}}a_{i},
 $$
 proving that $v\in \langle A \rangle$. 
 
-In summary, using the results of this section and [[Addendum A to 373]], we have
+In summary, using the results of this section and [[ADD 373 A]], we have
 
 > [!Proposition]
 > Let $M$ be a $k$-module. For $A\subseteq M$, TFAE:
@@ -202,6 +202,6 @@ Analogue of [[LEC ALG1 8#^6a3bec]]:
 
 [^1]: Which, remember, are just $\mathbb{Z}$-modules!
 
-[^3]: This proof looks very similar to that of [[Categorical notes on groups#^8e8d67]] - noting that every element of the coproduct can be uniquely expressed via a "basis", using this to define a map, and then verifying that this map is actually a group / module homomorphism. The proofs of [[LEC ALG2 14#^ae5ef6]] / [[LEC ALG2 14#^4898a7]] bypass this by invoking [[Categorical notes on groups#^8e8d67]] / [[Categorical notes on groups#^2cc108]].2 respectively and using the universal property of coproducts. You can see a [[Categorical notes on groups#^8e8d67]]-style proof of [[LEC ALG2 14#^ae5ef6]] at @aluffiAlgebraChapter02009 II.5.4. Indeed, you can prove [[#^e7a50f]] by invoking [[Categorical notes on groups#^2cc108]].2 and the universal property of coproducts instead. 
+[^3]: This proof looks very similar to that of [[Categorical Notes on Groups#^8e8d67]] - noting that every element of the coproduct can be uniquely expressed via a "basis", using this to define a map, and then verifying that this map is actually a group / module homomorphism. The proofs of [[LEC ALG2 14#^ae5ef6]] / [[LEC ALG2 14#^4898a7]] bypass this by invoking [[Categorical Notes on Groups#^8e8d67]] / [[Categorical Notes on Groups#^2cc108]].2 respectively and using the universal property of coproducts. You can see a [[Categorical Notes on Groups#^8e8d67]]-style proof of [[LEC ALG2 14#^ae5ef6]] at @aluffiAlgebraChapter02009 II.5.4. Indeed, you can prove [[#^e7a50f]] by invoking [[Categorical Notes on Groups#^2cc108]].2 and the universal property of coproducts instead. 
 
 [^4]: [[LEC ALG2 14#^b623d8]], [[LEC ALG2 13#^0409cd]], [[LEC ALG2 13#^cb59c5]]

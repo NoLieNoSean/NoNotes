@@ -17,7 +17,7 @@ Reading group, CMI
 
 [[Intro to Category Theory]]
 [[Category Theory Preliminaries (Presentation)]]
-[[Categorical notes on groups]]
+[[Categorical Notes on Groups]]
 [[Categorical notes on Modules]]
 [[Category Theory Preliminaries II]]
 

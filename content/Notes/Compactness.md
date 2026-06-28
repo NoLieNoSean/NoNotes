@@ -204,3 +204,6 @@ We have seen that [[Countability and Separation Axioms#^ae93c1|compact Hausdorff
 > [!Theorem] Tychonoff, @munkresTopology2000 37.3
 > An arbitrary product of compact spaces is compact in the product topology. 
 
+^24c980
+
+The proof of [[#^24c980]] uses the AoC!

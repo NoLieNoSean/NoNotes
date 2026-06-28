@@ -22,7 +22,7 @@ CMI, Jan-Apr 2026, B Ramakrishnan
 @langComplexAnalysis1999 Ch6 §2
 
 
-[[Quiz CANA 2]]
+[[TST CANA Quiz 2]]
 [[AS CANA 1]]
 [[AS CANA 2]]
 

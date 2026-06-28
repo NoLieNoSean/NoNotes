@@ -6,7 +6,10 @@ date: August 2024
 
 $\textsf{Gp}$ has products, and the product of two groups $G, H$ is supported on the product $G\times H$ of the underlying sets. Componentwise multiplication defines a group structure on $G\times H$, and it is easy to verify that this group is actually a product in $\textsf{Gp}$ ( @aluffiAlgebraChapter02009 II.3.4). 
 
-$\textsf{Gp}$ also has coproducts: See @aluffiAlgebraChapter02009 Exercises 5.6, 5.7, 8.7. 
+$\textsf{Gp}$ also has coproducts, and they are realized by the *free product* construction: See @aluffiAlgebraChapter02009 Exercises 5.6, 5.7, 8.7. 
+
+> [!Proposition] Free product
+> Let $G=\langle S_{G}\ | \ R_{G} \rangle$, $H=\langle S_{H}\ | \ R_{H} \rangle$ be groups. The **free product** of $G$ and $H$, defined by $G*H=\langle S_{G}\cup S_{H}\ | \ R_{G}\cup R_{H} \rangle$, satisfies the universal property of the coproduct of $G$ and $H$ in $\textsf{Gp}$. 
 
 The nice thing about $\textsf{Ab}$ is that *finite* coproducts in $\textsf{Ab}$ coincide with *finite* products.
 
@@ -121,7 +124,7 @@ $$
 $$
 satisfies the universal property ($\overline{\alpha}$ is unique because of [[LEC ALG2 4#^43c508|the universal property of quotient groups]]). 
 
-We can now state the analog of [[#^79d9ee]]:
+We can now state the analog of [[Categorical Notes on Groups#^79d9ee]]:
 
 > [!Proposition] @aluffiAlgebraChapter02009 II.8.18
 > Let $\varphi:G\to G'$ be a homomorphism of ==abelian== groups. The following are equivalent:
@@ -139,5 +142,5 @@ We can now state the analog of [[#^79d9ee]]:
 ^1e7b58
 
 > [!Remark]
-> The problem in $\textsf{Gp}$ is that $\mathrm{Im}~\varphi$ is not guaranteed to be normal in $G'$. However, cokernels may still be defined in $\textsf{Gp}$: the universal property is satisfied by $G'/N$, where $N$ is the smallest normal subgroup of $G'$ containing $\mathrm{Im}~\varphi$. But [[#^1e7b58]] fails, because the implication $(2)\implies(3)$ fails.
+> The problem in $\textsf{Gp}$ is that $\mathrm{Im}~\varphi$ is not guaranteed to be normal in $G'$. However, cokernels may still be defined in $\textsf{Gp}$: the universal property is satisfied by $G'/N$, where $N$ is the smallest normal subgroup of $G'$ containing $\mathrm{Im}~\varphi$. But [[Categorical Notes on Groups#^1e7b58]] fails, because the implication $(2)\implies(3)$ fails.
 

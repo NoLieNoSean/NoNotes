@@ -14,7 +14,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 ---
 
 
-[[Categorical notes on groups]]
+[[Categorical Notes on Groups]]
 [[Normalizers and Conjugacy]]
 [[Finding all subgroups of S4]]
 [[Assorted questions on groups]]
@@ -43,7 +43,7 @@ CMI, Jan-Apr 2025, Clare D'Cruz
 
 [[TST ALG2 Quiz 1]]
 [[TST ALG2 Quiz 2]]
-[[TST ALG2 EndSem]]
+[[TST ALG2 Final]]
 # Tutorials
 
 [[TUT ALG2 4]]

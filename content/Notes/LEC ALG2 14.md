@@ -27,7 +27,7 @@ Let's first tackle the finite case. Denote by $\mathbb{Z}^{\oplus n}$ the direct
 $$
 \underbrace{ \mathbb{Z}\oplus \dots \oplus \mathbb{Z} }_{ n\text{-times} }.
 $$
-[[Categorical notes on groups#^8e8d67|Recall]] that this group is the same as the product $\mathbb{Z}^{n}$ (however, it will be playing the role of a [[Category Theory Preliminaries (Presentation)#Coproducts|coproduct]] in what follows).
+[[Categorical Notes on Groups#^8e8d67|Recall]] that this group is the same as the product $\mathbb{Z}^{n}$ (however, it will be playing the role of a [[Category Theory Preliminaries (Presentation)#Coproducts|coproduct]] in what follows).
 
 > [!Proposition]
 > For $S=\{ 1, 2, \dots, n \}$, $(\mathbb{Z}^{\oplus n}, \theta)$ is a free abelian group on $S$, where $\theta(k)=(0, \dots, 0, 1, 0, \dots, 0)$ (the $1$ is in the $k$th coordinate). 
@@ -45,7 +45,7 @@ $$
 
 ^ae5ef6
 
-Now, let $S$ be any set. Recall that $H^{S}=\text{Hom}_{\textsf{Set}}(S, H)$ has a natural abelian group structure if $H$ is an abelian group; elements of $H^{S}$ are arbitrary set-functions $\alpha:S\to H$. [[Categorical notes on groups#^2cc108|Recall]] that in the general (non-finite) case, the coproduct is the subgroup of the product consisting of tuples with finite support. 
+Now, let $S$ be any set. Recall that $H^{S}=\text{Hom}_{\textsf{Set}}(S, H)$ has a natural abelian group structure if $H$ is an abelian group; elements of $H^{S}$ are arbitrary set-functions $\alpha:S\to H$. [[Categorical Notes on Groups#^2cc108|Recall]] that in the general (non-finite) case, the coproduct is the subgroup of the product consisting of tuples with finite support. 
 
 Thus, the coproduct $\bigoplus_{s\in S}H$, which we will denote by $H^{\oplus S}$, is given by
 $$

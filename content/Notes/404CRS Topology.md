@@ -66,6 +66,6 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[Retractions and Fixed Points]]
 [[Deformation Retracts and Homotopy Type]]
 [[The Fundamental Groups of Some Surfaces]]
-[[The Van-Kampen Theorem]]
+[[The Seifert-Van Kampen theorem]]
 
-[[HW TOP 1]]
+[[AS TOP 1]]

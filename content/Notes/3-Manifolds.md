@@ -15,7 +15,7 @@ IISERB, May 2026 - , Kashyap Rajeevsarathy
 ## [[Triangulable manifolds]]
 ## [[Differentiable manifolds]]
 ## [[Geometric manifolds]]
-## [[Categorical notes on manifolds]]
+## [[Categorical Notes on Manifolds]]
 
 ---
 # W23

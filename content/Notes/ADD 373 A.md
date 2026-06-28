@@ -12,7 +12,7 @@ An analogous true statement to [[LEC ALG4 2#^331aed]] can be formulated for mini
 > 
 > > [!Proof]-
 > > 
-> > Call a subset $X\subseteq M$ **independent** if $\langle X \rangle\ne \langle X\setminus \{ x \} \rangle$ for all $x\in X$ (see [[#^661092]]). Let $\mathcal{I}$ be the family of independent subsets of $S$. Partially order $\mathcal{I}$ by inclusion. Let $\mathcal{C}\subseteq \mathcal{I}$ be a chain. Let $X=\bigcup_{A\in \mathcal{C}}A$. We contend that $X$ is independent. Indeed, if $x\in X$ is such that $\langle X \rangle=\langle X\setminus \{ x \} \rangle$, then $x$ can be expressed as a finite linear combination $\sum_{i=1}^{n}\alpha_{i}x_{i}$, where $x_{i}\in X$. There must be an $A\in \mathcal{C}$ which contains the finite set  $\{ x, x_{1}, x_{2}, \dots, x_{n} \}$, which results in a contradiction since $\langle A \rangle=\langle A\setminus \{ x \} \rangle$. 
+> > Call a subset $X\subseteq M$ **independent** if $\langle X \rangle\ne \langle X\setminus \{ x \} \rangle$ for all $x\in X$ (see [[ADD 373 A#^661092]]). Let $\mathcal{I}$ be the family of independent subsets of $S$. Partially order $\mathcal{I}$ by inclusion. Let $\mathcal{C}\subseteq \mathcal{I}$ be a chain. Let $X=\bigcup_{A\in \mathcal{C}}A$. We contend that $X$ is independent. Indeed, if $x\in X$ is such that $\langle X \rangle=\langle X\setminus \{ x \} \rangle$, then $x$ can be expressed as a finite linear combination $\sum_{i=1}^{n}\alpha_{i}x_{i}$, where $x_{i}\in X$. There must be an $A\in \mathcal{C}$ which contains the finite set  $\{ x, x_{1}, x_{2}, \dots, x_{n} \}$, which results in a contradiction since $\langle A \rangle=\langle A\setminus \{ x \} \rangle$. 
 > > 
 > > By Zorn's lemma, $\mathcal{I}$ has a maximal element, say $Y$. We contend that $Y$ generates $M$. If this is not the case, there must exist $s\in S$ such that $s\not\in \langle Y \rangle$; then $Y\cup \{ s \}$ is independent, contradicting the maximality of $Y$. Thus, $Y$ generates $M$. No proper subset of $Y$ can generate $M$, since $Y$ is independent. 
 > 
@@ -23,13 +23,13 @@ An analogous true statement to [[LEC ALG4 2#^331aed]] can be formulated for mini
 > We've encountered several different definitions of independence that are not to be confused:
 > 1. linear independence, as defined in [[LEC ALG4 2#^59c172]];
 > 2. term-wise independence, as defined in [[LEC ALG4 7#^8f3734]]; 
-> 3. non-redundancy independence, as defined in the proof of [[#^1e7fcf]]. 
+> 3. non-redundancy independence, as defined in the proof of [[ADD 373 A#^1e7fcf]]. 
 > 
 > Clearly, $(1)\implies(2)\implies(3)$; the reverse implications are generally false. For example, $\{ 2, 3 \}\subseteq \mathbb{Z}$ are non-redundant, but not term-wise independent, since $3(2)+(-2)(3)=0$. 
 
 ^661092
 
-Using [[#^1e7fcf]], we can provide another proof of the fact that modules over fields are free. Let $M$ be a $k$-module. Let $A$ be a minimal generating set of $M$; we will show that that $A$ is a basis. We have a surjection $\varphi:k^{\oplus A}\twoheadrightarrow M$. Suppose $\ker\varphi$ is nontrivial, i.e, there exists a relation $\sum_{i=1}^{n} c_{i}a_{i}=0$ in $M$, where $a_{1}, \dots, a_{n}\in A$. Since $k$ is a field, we can write
+Using [[ADD 373 A#^1e7fcf]], we can provide another proof of the fact that modules over fields are free. Let $M$ be a $k$-module. Let $A$ be a minimal generating set of $M$; we will show that that $A$ is a basis. We have a surjection $\varphi:k^{\oplus A}\twoheadrightarrow M$. Suppose $\ker\varphi$ is nontrivial, i.e, there exists a relation $\sum_{i=1}^{n} c_{i}a_{i}=0$ in $M$, where $a_{1}, \dots, a_{n}\in A$. Since $k$ is a field, we can write
 $$
 \begin{align}
 a_{1}=\sum_{i=2}^{n} \frac{c_{i}}{c_{1}}a_{i},

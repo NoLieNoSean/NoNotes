@@ -58,6 +58,6 @@ CMI, Aug-Nov 2025, R Srinivasan
 [[TST ANA2 Quiz 1]]
 [[TST ANA2 Quiz 2]]
 [[TST ANA2 Quiz 4]]
-[[ANA2 Quiz 5]]
+[[TST ANA2 Quiz 5]]
 
 [[TUT ANA2 1]]

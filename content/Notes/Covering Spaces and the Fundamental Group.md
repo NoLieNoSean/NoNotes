@@ -145,12 +145,12 @@ tags:
 > [!Proposition]
 > If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$; this allows us to speak of "the" fundamental group of $X$. Precisely, every path $\alpha$ from $x_{0}$ to $x_{1}$ induces an isomorphism $\hat{\alpha}:\pi_{1}(X, x_{0})\to \pi_{1}(X, x_{1})$. The isomorphism is independent of the path iff the fundamental group is abelian. 
 
-> [!Remark]
+> [!Remark] Induced homomorphisms
 > The map from the category of pointed topological spaces to $\textsf{Gp}$ which maps $(X, x_{0})\mapsto \pi_{1}(X, x_{0})$ and $h:(X, x_{0})\to(Y, y_{0})$ to
 > $$
 > h_{*}:\pi_{1}(X, x_{0})\to \pi_{1}(Y, y_{0}), \quad [f]\mapsto[h\circ f]
 > $$
-> is a [[Category Theory Preliminaries II#^56cdbe|functor]]. 
+> is a [[Category Theory Preliminaries II#^56cdbe|functor]]. We refer to $h_{*}$ as the homomorphism **induced by $h$**. 
 
 ^3d339c
 
@@ -193,7 +193,7 @@ tags:
 > ```
 > commutes. 
 
-Covering spaces are instances of [[Addendum A to 438#^a3d022|fiber bundles]]. 
+Covering spaces are instances of [[ADD 438 A#^a3d022|fiber bundles]]. 
 
 > [!Proposition]
 > Let $p:E\to B$ be a covering map. Then, 

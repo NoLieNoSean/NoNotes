@@ -24,7 +24,7 @@ Topics: Deck transformations, classification of covering spaces
 > If $(E, B, p)$ is a covering, where $B$ is a connected polyhedron of a [[Triangulable manifolds#^7ae140|finite simplicial complex]] $\mathcal{K}$ and $p ^{-1}(b)$ is finite for all $b\in B$, then $\chi(E)=\#\{ p ^{-1}(b) \}\cdot \chi(B)$. 
 
 [!Proof]-
-
+#t
 
 
 > [!Definition] Branched covering
