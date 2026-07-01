@@ -18,7 +18,7 @@ tags:
 ^d70a95
 
 > [!Proposition]
-> The map $p:\mathbb{S}^{n}\to \mathbb{P}^{n}$ defined by $p(\mathbf{x})=[\mathbf{x}]=[-\mathbf{x}]$ is a [[Covering Spaces and the Fundamental Group#^03ba68|covering map]]. 
+> The map $p:\mathbb{S}^{n}\to \mathbb{P}^{n}$ defined by $p(\mathbf{x})=[\mathbf{x}]=[-\mathbf{x}]$ is a [[Homotopy, Covering Spaces and the Fundamental Group#^03ba68|covering map]]. 
 
 ^e32251
 
@@ -26,7 +26,7 @@ tags:
 > $\pi_{1}(\mathbb{P}^{2})\cong \mathbb{Z}/2\mathbb{Z}$.
 > 
 > > [!Proof]-
-> > The [[The Quotient Topology#^da2c9c|quotient map]] $p:\mathbb{S}^{2}\to \mathbb{P}^{2}$ is a [[Covering Spaces and the Fundamental Group#^03ba68|covering map]], and $\mathbb{P}^{2}$ is a compact surface. Since $\mathbb{S}^{2}$ is simply connected, we can apply [[Covering Spaces and the Fundamental Group#^334a74]], which tells us that $|\pi_{1}(P^{2})|=2$. Any group of order $2$ is isomorphic to $\mathbb{Z}/2\mathbb{Z}$. 
+> > The [[The Quotient Topology#^da2c9c|quotient map]] $p:\mathbb{S}^{2}\to \mathbb{P}^{2}$ is a [[Homotopy, Covering Spaces and the Fundamental Group#^03ba68|covering map]], and $\mathbb{P}^{2}$ is a compact surface. Since $\mathbb{S}^{2}$ is simply connected, we can apply [[Homotopy, Covering Spaces and the Fundamental Group#^334a74]], which tells us that $|\pi_{1}(P^{2})|=2$. Any group of order $2$ is isomorphic to $\mathbb{Z}/2\mathbb{Z}$. 
 
 > [!Proposition]
 > The real projective space $\mathbb{P}^{n}$ is an $n$-manifold. 

@@ -5,7 +5,7 @@ time: 14:19
 tags:
 ---
 > [!Abstract]
-> We use our knowledge of the [[Covering Spaces and the Fundamental Group#^91f4c3|fundamental group of the circle]] to prove some classical results in topology. 
+> We use our knowledge of the [[Homotopy, Covering Spaces and the Fundamental Group#^91f4c3|fundamental group of the circle]] to prove some classical results in topology. 
 
 > [!Definition] Retraction
 > If $A\subseteq X$, a **retraction** of $X$ onto $A$ is a continuous map $r:X\to A$ such that $r\ | \ A=\mathrm{id}_{A}$. If such a map $r$ exists, we say that $A$ is a retract of $X$. 
@@ -13,9 +13,15 @@ tags:
 ^cda84f
 
 > [!Lemma]
-> If $A$ is a retract of $X$, then the homomorphism induced by the the inclusion $j:A\to X$ is injective. 
+> If $A$ is a [[#^cda84f|retract]] of $X$, then the homomorphism induced by the the inclusion $j:A\to X$ is injective. 
+> 
+> > [!Proof]-
+> > 
+> > Let $r: X\to A$ be a retraction. The composition $r\circ j:A\to A$ is equal to $\mathrm{id}_{A}$. By [[Homotopy, Covering Spaces and the Fundamental Group#^3d339c]], $\mathrm{id}_{\pi_{1}(A)}=(r\circ j)_{*}=r_{*}\circ j_{*}$. Thus, $j_{*}$ must be injective. 
+> 
 
 ^e945e8
+
 
 > [!Lemma]
 > Let $h:S^{1}\to X$ be a continuous map. Then the following conditions are equivalent. 
@@ -26,7 +32,7 @@ tags:
 > > [!Proof]-
 > > 
 > > $(1\implies 2)$ Use the [[The Quotient Topology#^461a5c|universal property of quotient maps]]. 
-> > $(2\implies 3)$ Use [[Covering Spaces and the Fundamental Group#^3d339c|funtoriality]] of the map $h\mapsto h_{*}$. 
+> > $(2\implies 3)$ Use [[Homotopy, Covering Spaces and the Fundamental Group#^3d339c|funtoriality]] of the map $h\mapsto h_{*}$. 
 > > $(3 \implies 1)$ Use the [[The Quotient Topology#^461a5c|universal property of quotient maps]]. 
 > 
 

@@ -120,13 +120,13 @@ tags:
 ^7d451b
 
 > [!Proposition] @munkresTopology2000 51.2
-> The operation defined in [[Covering Spaces and the Fundamental Group#^e71ea2]] is associative and admits left and right identities and inverses.
+> The operation defined in [[Homotopy, Covering Spaces and the Fundamental Group#^e71ea2]] is associative and admits left and right identities and inverses.
 > 
 > > [!Proof]-
 > > 
-> > Associativity is proven by using the fact that any two paths in $I$ form $0$ to $1$ are homotopic and [[Covering Spaces and the Fundamental Group#^7d451b]].1. 
+> > Associativity is proven by using the fact that any two paths in $I$ form $0$ to $1$ are homotopic and [[Homotopy, Covering Spaces and the Fundamental Group#^7d451b]].1. 
 > > 
-> > Let $f:x\to y$ be a path in $X$. Consider the paths let $i$ be $\mathrm{id}_{I}$, which is a path in $I$ form $0$ to $1$. Since $I$ is convex, there exists a homotopy $G$ between $i$ and $e_{0}i$. By [[Covering Spaces and the Fundamental Group#^7d451b]], $f\circ G$ is a homotopy between $f\circ i=f$ and $f\circ (e_{0}i)=(f\circ e_{0})(f\circ i)=e_{x}f$. Similarly, $e_{y}$ is a right identity. 
+> > Let $f:x\to y$ be a path in $X$. Consider the paths let $i$ be $\mathrm{id}_{I}$, which is a path in $I$ form $0$ to $1$. Since $I$ is convex, there exists a homotopy $G$ between $i$ and $e_{0}i$. By [[Homotopy, Covering Spaces and the Fundamental Group#^7d451b]], $f\circ G$ is a homotopy between $f\circ i=f$ and $f\circ (e_{0}i)=(f\circ e_{0})(f\circ i)=e_{x}f$. Similarly, $e_{y}$ is a right identity. 
 > > 
 > > Finally, note that $ii^{-1}$ is a path beginning and ending at $0$, and so is the constant path $e_{0}$; thus, there exists a homotopy between $ff^{-1}$ and $e_{x}$ (and $f^{-1}f$ and $e_{y}$). 
 > 
@@ -138,12 +138,14 @@ tags:
 # The fundamental group
 
 > [!Definition] Fundamental group
-> Define $\pi_{1}(X, x)$ to be the set of equivalence classes of loops that start and end at $x$. By [[Covering Spaces and the Fundamental Group#^d124dc]], this is a group. We call this the **fundamental group of $X$ relative the the base point $x$**. 
+> Define $\pi_{1}(X, x)$ to be the set of equivalence classes of loops that start and end at $x$. By [[Homotopy, Covering Spaces and the Fundamental Group#^d124dc]], this is a group. We call this the **fundamental group of $X$ relative the the base point $x$**. 
 
 ^b75e77
 
 > [!Proposition]
-> If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$; this allows us to speak of "the" fundamental group of $X$. Precisely, every path $\alpha$ from $x_{0}$ to $x_{1}$ induces an isomorphism $\hat{\alpha}:\pi_{1}(X, x_{0})\to \pi_{1}(X, x_{1})$. The isomorphism is independent of the path iff the fundamental group is abelian. 
+> If $X$ is path connected and $x_{0}$ and $x_{1}$ are two points of $X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$; this allows us to speak of "the" fundamental group of $X$. Precisely, every path $\alpha$ from $x_{0}$ to $x_{1}$ induces an *isomorphism* $\hat{\alpha}:\pi_{1}(X, x_{0})\to \pi_{1}(X, x_{1})$ by $[f]\mapsto[\alpha ^{-1}*f*\alpha]$. The isomorphism is independent of the path iff the fundamental group is abelian. 
+
+^5fc6cf
 
 > [!Remark] Induced homomorphisms
 > The map from the category of pointed topological spaces to $\textsf{Gp}$ which maps $(X, x_{0})\mapsto \pi_{1}(X, x_{0})$ and $h:(X, x_{0})\to(Y, y_{0})$ to
@@ -182,7 +184,7 @@ tags:
 ^04d08c
 
 > [!Definition] Covering space
-> In light of [[Covering Spaces and the Fundamental Group#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ with $p ^{-1}(U)$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
+> In light of [[Homotopy, Covering Spaces and the Fundamental Group#^04d08c]], we can redefine a covering space as follows. Let $p:E\to B$ be a continuous surjective map, with $B$ connected. Let $I$ be a discrete space. We call $(E, p)$ a covering space if each $b\in B$ has a neighborhood $U$ with $p ^{-1}(U)$ homeomorphic to $U\times I$ via $h:p ^{-1}(U)\to U\times I$ such that 
 > 
 > ```latex
 > % latex-id: b1a7-5b9e-3e80-4b99-adc2
@@ -219,7 +221,7 @@ Covering spaces are instances of [[ADD 438 A#^a3d022|fiber bundles]].
 ^162985
 
 > [!Corollary]
-> It follows from [[#^162985]] and [[#^0cd693]] that the map $p\times p:\mathbb{R}^{2}\to \mathbb{T}^{2}$ is a covering map. 
+> It follows from [[Homotopy, Covering Spaces and the Fundamental Group#^162985]] and [[Homotopy, Covering Spaces and the Fundamental Group#^0cd693]] that the map $p\times p:\mathbb{R}^{2}\to \mathbb{T}^{2}$ is a covering map. 
 
 ^944522
 

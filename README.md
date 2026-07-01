@@ -2,8 +2,6 @@
 
 https://nolienosean.github.io/NoNotes/
 
-Notes from my undergraduate studies at CMI, with additional contributions from Karan and Aniruda.
+This is where my notes live.
 
-These are written primarily for personal use; I make no claims about their quality, completeness, or accuracy. 
-
-Pull requests are welcome!
+These are written for personal use; I make no claims about their quality, completeness, or accuracy. You are free to use the contents of the repo in whatever way you please.

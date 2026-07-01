@@ -44,10 +44,27 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 # W25
 
 [[SEM 3MAN Actions on surfaces]]
-[[Preliminaries on 3-Manifolds]]
+[[Preliminaries to 3-Manifolds]]
 
 ---
 
 # W26
 
-[[SEM TEICH 1]]
+---
+
+# W27
+
+# Page 59
+
+```button
+name Go
+type link
+action obsidian://shell-commands/?vault=content&execute=9uwggqud98&_page_no=59
+```
+
+## Annotation 59.1
+It should say "Either $h(c)$ is entirely contained in $\mathbb{T}^{2}\setminus c$, or every component of $h(c)$ crosses $\mathbb{T}^{2}\setminus c$". 
+
+I'm trying to read the proof of the fact that homotopy and isotopy classes of simple closed curves coincide on surfaces from Schulten's 3-manifolds, and need some help. 
+
+The first two pictures are for context, I'm quoting from the third one (highlighted in yellow): "The above argument allows us to assume that, after isotopy, $h(m)$ coincides with $m$". I understand this as "$h$ is isotopic to a homeomorphism $h'$ such that $h'$ restricted to $m$ is the identity". If I am correct, how are we making the leap from "$h$ restricted to $c$ is isotopic to id restricted to $c$" to "$h$ is isotopic to $h$', such that $h'$ is id when restricted to $c$". How do we extending the isotopy from $c$ to the entire torus?

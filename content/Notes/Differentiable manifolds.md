@@ -77,6 +77,11 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 > [!Definition] 
 > In a non-orientable manifold $M$ each chart defines a local orientation. If $c$ is a closed $1$-dimensional submanifold of $M$, then the transition maps for those charts of $M$ that meet $c$ may or may not have Jacobians with positive determinants. If there is an atlas for $M$ for which all charts that meet $c$ have transition maps whose Jacobians have positive determinants, then we say that $c$ is an **orientation-preserving** closed $1$-dimensional submanifold. If there is no such atlas, then $c$ is an **orientation-reversing** closed $1$-dimensional submanifold of $M$. 
 
+> [!Definition] Induced orientation
+> #td uses the language of differential forms
+
+^1b8061
+
 > [!Proposition]
 > The product of two orientable manifolds is an orientable manifold. 
 > 

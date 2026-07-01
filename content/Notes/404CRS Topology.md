@@ -62,10 +62,13 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[Urysohn Lemma and Applications]]
 [[Stone-Čech Compactification]]
 [[The Quotient Topology]] 
-[[Covering Spaces and the Fundamental Group]] 
+[[Homotopy, Covering Spaces and the Fundamental Group]] 
 [[Retractions and Fixed Points]]
 [[Deformation Retracts and Homotopy Type]]
 [[The Fundamental Groups of Some Surfaces]]
-[[The Seifert-Van Kampen theorem]]
+[[The Seifert-Van Kampen Theorem]]
+[[CW complexes]]
+
+---
 
 [[AS TOP 1]]

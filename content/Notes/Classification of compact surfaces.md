@@ -7,6 +7,9 @@ tags:
 > [!Abstract]
 > We see that every compact surface can be 'built' up from $\mathbb{S}^{2}$, $\mathbb{T}^{2}$, and $\mathbb{P}^{2}$. 
 
+> [!Note]
+> I've referred to both @leeIntroductionTopologicalManifolds2000 and @leeIntroductionTopologicalManifolds2011 for this article. The former develops its theory while sticking to simplicial complexes, while the latter has moved onto CW complexes and frequently uses CW decompositions in proofs; things can look a little rough around the edges until I find the time to rewrite certain sections to ensure proper translation.
+
 [[The Quotient Topology|Recall]] how the torus, sphere, and projective plane can be represented as a quotient of the square by identifying edges. Now we define a general method for building surfaces by identifying edges of geometric figures. 
 
 > [!Definition] Polygonal region
@@ -43,7 +46,7 @@ It is a general fact that quotients of polygonal regions obtained by identifying
 Connected sums allow us to construct new manifolds by gluing together simpler ones. 
 
 > [!Definition] Connected sum
-> Let $M_{1}$ and $M_{2}$ be connected $n$-manifolds. Let $B_{i}\subseteq M_{i}$ be [[3-Manifolds#^49ffed|regular Euclidean balls]]. Choose a homeomorphism $\sigma:\partial B_{1}\to \partial B_{2}$ (such a homeomorphism exists because both boundaries are homeomorphic to $\mathbb{S}^{n-1}$). Let $M_{i}'=M_{i}\setminus B_{i}$. Define a quotient space of $M_{1}'\coprod M_{2}'$ by identifying each $q\in \partial B_{1}$ with $\sigma(q)\in \partial B_{2}$. The resulting quotient space is called a **connected sum** of $M_{1}$ and $M_{2}$ and is denoted by $M_{1}\#M_{2}$. In the case that $M_{1}$ and $M_{2}$ are [[Differentiable manifolds#^dbdef9|oriented]], we further require that the identification of the boundaries of $B_{1}$ and $B_{2}$ be via an [[Topological manifolds#^5125c8|orientation-reversing]] homeomorphism (with respect to the induced boundary orientations on $\partial B_{1}$ and $\partial B_{2}$). 
+> Let $M_{1}$ and $M_{2}$ be connected $n$-manifolds. Let $B_{i}\subseteq M_{i}$ be [[3-Manifolds#^49ffed|regular Euclidean balls]]. Choose a homeomorphism $\sigma:\partial B_{1}\to \partial B_{2}$ (such a homeomorphism exists because both boundaries are homeomorphic to $\mathbb{S}^{n-1}$). Let $M_{i}'=M_{i}\setminus B_{i}$. Define a quotient space of $M_{1}'\coprod M_{2}'$ by identifying each $q\in \partial B_{1}$ with $\sigma(q)\in \partial B_{2}$. The resulting quotient space is called a **connected sum** of $M_{1}$ and $M_{2}$ and is denoted by $M_{1}\#M_{2}$. In the case that $M_{1}$ and $M_{2}$ are [[Differentiable manifolds#^dbdef9|oriented]], we further require that the identification of the boundaries of $B_{1}$ and $B_{2}$ be via an [[Topological manifolds#^5125c8|orientation-reversing]] homeomorphism (with respect to the [[Differentiable manifolds#^1b8061|induced boundary orientations]] on $\partial B_{1}$ and $\partial B_{2}$). 
 
 ^9cb3a2
 
@@ -78,7 +81,7 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 We will need the following two theorems[^2] to discuss the impact of the choices of $B_{i}$ and the homeomorphism $\sigma$ on the connected sum $M_{1}\#M_{2}$:
 
 > [!Definition] Isotopy
-> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Homotopy, Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
 
 ^d2add7
 
@@ -147,6 +150,9 @@ We will now find standard presentations for connected sums.
 
 ^17470d
 
+> [!Remark]
+> A polygonal presentation determines a [[CW complexes#^ec3f7d|CW decomposition]] of its geometric realization if a natural way. 
+
 # Classification of surfaces
 
 > [!Lemma]
@@ -183,11 +189,11 @@ We will now find standard presentations for connected sums.
 > [!Lemma] @leeIntroductionTopologicalManifolds2011 6.17
 > The connected sum $\mathbb{T}^{2}\#\mathbb{P}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
 
-> [!Proposition] Attaching a Disk
-> Let $X$ be a path-connected topological space, and let $\tilde{X}$ be the space obtained by attaching a closed $2-$cell $D$ to $X$ along an attaching map $\varphi:\partial D\to X$. Let $v\in \partial D$, $\tilde{v}=\varphi(v)\in X$, and $\gamma=\varphi_{*}(\alpha)\in \pi_{1}(X, \tilde{v})$, where $\alpha$ is a generator of the infinite cyclic group $\pi_{1}(\partial D, v)$. Then the homomorphism $\pi_{1}(X, \tilde{v})\to \pi_{1}(\tilde{X}, \tilde{v})$ induced by the inclusion $X\hookrightarrow \tilde{X}$ is surjective, and its kernel is the smallest normal subgroup containing $\gamma$. 
+> [!Theorem] Fundamental groups of polygonal presentations
+> Let $M$ be a topological space with a polygonal presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$ with one face, in which *all vertices are identified to a single point* [^3]. Then $\pi_{1}(M)$ has the presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$. 
 
-> [!Theorem]
-> Let $M$ be a topological space with a polygonal presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$ with one face, in which all vertices are identified to a single point. Then $\pi_{1}(M)$ has the presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$. 
+[^3]: For example, the polygonal presentation $\langle a, b\ | \ abab \rangle$ does not identify all vertices, and hence the theorem does not apply to this presentation (Indeed, read as a group presentation, it is isomorphic to $\mathbb{Z}*(\mathbb{Z}/2\mathbb{Z})$). Use the presentation $\langle a\ | \ aa \rangle$ instead. 
+
 
 > [!Theorem] Classification of compact surfaces, @leeIntroductionTopologicalManifolds2000 Thm 6.14
 > Every nonempty, compact, connected 2-manifold is homeomorphic to *exactly* one of these surfaces:
@@ -195,6 +201,9 @@ We will now find standard presentations for connected sums.
 > 2. a connected sum $\mathbb{T}^{2}\#\dots\# \mathbb{T}^{2}$; or
 > 3. a connected sum $\mathbb{P}^{2}\#\dots\#\mathbb{P}^{2}$.
 > 
+
+> [!Definition] Genus
+> For an orientable surface, the number of tori in this connected sum is called the **genus**. For a non-orientable surface, the number of projective planes is called the **genus**. 
 
 This immediately leads to a classification of compact $2$-manifolds with boundary. 
 
@@ -214,4 +223,5 @@ We can't yet claim to know the Euler characteristics for arbitrary compact surfa
 > 1. $2$ for the sphere, 
 > 2. $2-2n$ for the connected sum of $n$ tori,
 > 3. $2-n$ for the connected sum of $n$ projective planes.
+
 
