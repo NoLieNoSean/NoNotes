@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=2a7f5ecd06f8425f8c526a40c6b0dcec"></script>
+    
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #calculator {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Hello!</p>
+
+<div id="calculator"></div>
+
+<script>
+const calculator = Desmos.Calculator3D(
+    document.getElementById("calculator"),
+    {
+        expressions: true,
+        expressionsCollapsed: true,
+    }
+);
+
+const params = new URLSearchParams(window.location.search);
+const graph = params.get("graph");
+
+if (!graph) {
+    document.body.innerHTML = "<pre>No graph specified.</pre>";
+} else {
+    fetch(graph)
+        .then(response => {
+            if (!response.ok)
+                throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        })
+        .then(json => {
+            // Accept either a raw state object or { state: ... }
+            calculator.setState(json.state ?? json);
+        })
+        .catch(err => {
+            document.body.innerHTML =
+                `<pre>Failed to load graph:\n${err}</pre>`;
+        });
+}
+</script>
+
+</body>
+</html>
