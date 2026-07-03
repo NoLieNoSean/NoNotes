@@ -5,7 +5,9 @@ time: 22:38
 tags:
 ---
 > [!Definition] Differentiable manifold, @schultensIntroduction3manifolds2014 1.2.2
-> A **$C^{q}$-manifold**, for $q\in \mathbb{Z}_{\geqslant 0}$, is a [[Topological manifolds|topological manifold]] $M$ with an atlas that satisfies the additional requirement of being $C^{q}$, meaning that for any pair of charts $(M_{\alpha}, \phi_{\alpha})$, $(M_{\beta}, \phi_{\beta})$ in this atlas, the map $\phi_{\beta}\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$. A $C^{\infty}$ manifold is also called a **smooth manifold**. 
+> A **$C^{q}$-manifold**, for $q\in \mathbb{Z}_{\geqslant 0}$, is a [[Topological manifolds|topological manifold]] $M$ with an atlas that satisfies the additional requirement of being $C^{q}$, meaning that for any pair of charts $(M_{\alpha}, \phi_{\alpha})$, $(M_{\beta}, \phi_{\beta})$ in this atlas, the map $\phi_{\beta}\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$[^1]. A $C^{\infty}$ manifold is also called a **smooth manifold**. 
+
+[^1]: [[Smooth and analytic multivariable functions#^861ecb]]
 
 > [!Proposition]
 > The product of smooth manifolds is smooth. 
@@ -30,6 +32,19 @@ tags:
 > [!Definition] Morphisms in DIFF, @schultensIntroduction3manifolds2014 1.2.6
 > 1. Let $M$ be a manifold with atlas $\{(M_{\alpha}, \phi_{\alpha}) \}$ and let $N$ be a manifold with atlas $\{ (N_{\beta}, \psi_{\beta}) \}$. We say that a map $f:M\to N$ is $C^{q}$ if for all $\alpha, \beta$, the map $\psi_{\beta}\circ f\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$. A $C^{\infty}$ map is said to be smooth.
 > 2. A $C^{q}$-map between $C^{q}$-manifolds with a $C^{q}$ inverse is called a **$C^{q}$-diffeomorphism**.
+
+# $\epsilon$-Neighborhoods
+
+$\epsilon$-Neighborhoods are the $\textsf{Diff}$ category equivalent of [[Topological manifolds#^a8b826|regular neighborhoods]] from $\textsf{Top}$. 
+
+[[Urysohn Lemma and applications#^e4f9b0|Manifolds are metrizable spaces]]. Thus, if $Y$ is a submanifold of $X$, we can look at all points within a distance $\epsilon$ of $Y$. The following theorem gives us an explicit description of this set. 
+
+> [!Theorem] The $\epsilon$-Neighborhood Theorem
+> Let $Y$ be a compact $k$-dimensional submanifold of the $n$-manifold $X$. Let $Y^{\epsilon}$ denote the set of all points in $X$ with distance less than $\epsilon$ from $Y$. If $\epsilon$ is sufficiently small, then $Y^{\epsilon}$ is a $I^{n-k}$-[[Fiber bundles#^a3d022|bundle]] over $Y$, in which case $Y^{\epsilon}$ is called an **$\epsilon$-neighborhood** of $Y$. 
+
+
+#q How does one define regular neighborhoods, and how is the equivalence with $\epsilon$-neighborhoods established? See how regular neighborhoods relate to the definition of [[Topological manifolds#^49ffed|regular balls]]; ideally, regular balls should just end up being regular neighborhoods of points ($0$-dimensional manifolds), but [[Topological manifolds#^bd0bcd]] satisfies the definition of an $\epsilon$-neighborhood without being regular, so there's more that goes into translating between $\epsilon$-neighborhoods and regular neighborhoods. 
+# Orientability
 
 > [!Definition] Orientability in DIFF, @schultensIntroduction3manifolds2014 1.3.1
 > A $C^{\infty}$-manifold $M$ with boundary is **orientable** if it has an atlas such that the [[LEC CAL1 16#Total derivative in terms of partial derivatives|Jacobians]] of all transition maps have *positive* determinant. Otherwise $M$ is non-orientable. An **orientation** of $M$ is such an atlas. We often write $(M, \{ \phi_{\alpha} \})$ to denote an oriented manifold. 
@@ -74,8 +89,10 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 ![[Differentiable manifolds 2026-06-19 18.21.46.excalidraw.dark.png]]
 %%[[Differentiable manifolds 2026-06-19 18.21.46.excalidraw.md|🖋 Edit in Excalidraw]], and the [[Differentiable manifolds 2026-06-19 18.21.46.excalidraw.light.png|light exported image]]%%
 
-> [!Definition] 
+> [!Definition] Orientation-preserving curves
 > In a non-orientable manifold $M$ each chart defines a local orientation. If $c$ is a closed $1$-dimensional submanifold of $M$, then the transition maps for those charts of $M$ that meet $c$ may or may not have Jacobians with positive determinants. If there is an atlas for $M$ for which all charts that meet $c$ have transition maps whose Jacobians have positive determinants, then we say that $c$ is an **orientation-preserving** closed $1$-dimensional submanifold. If there is no such atlas, then $c$ is an **orientation-reversing** closed $1$-dimensional submanifold of $M$. 
+
+^b6cdf3
 
 > [!Definition] Induced orientation
 > #td uses the language of differential forms
@@ -98,6 +115,9 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 
 ^ccbd4e
 
+# [[Transversality]]
+# Misc Results
+
 > [!Theorem]
 > Differentiable manifolds are [[Triangulable manifolds#^d2b6e8|triangulable]]. 
 
@@ -107,3 +127,6 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 ^f317d8
 
 #q what is a "differentiable structure" in this context?
+
+
+

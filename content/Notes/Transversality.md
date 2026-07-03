@@ -8,7 +8,7 @@ See @schultensIntroduction3manifolds2014 Appendix A; #td Add stuff from @guillem
 
 Transversality is to $\textsf{Diff}$ what general position is to $\textsf{Top}$. 
 
-#td Look at how the tangent bundle is an instance of a [[ADD 438 A#^a3d022|fiber bundle]]. 
+#td Look at how the tangent bundle is an instance of a [[Fiber bundles#^a3d022|fiber bundle]]. 
 
 > [!Theorem] Sard
 > The set of critical values of a differentiable map from one manifold to another has Lebesgue measure $0$. 
@@ -29,7 +29,9 @@ $$
 with equality interpreted appropriately. 
 
 > [!Remark]
-> Let $X$ be a manifold of dimension $n_{x}$ with submanifolds $Y$, $Z$ of dimensions $n_{y}$, $n_{z}$. If $Y\pitchfork Z$, then it is a consequence of [[#^d8fe66]] that the dimension of $Y\cap Z$ is $n_{y}+n_{z}-n_{x}$. 
+> Let $X$ be a manifold of dimension $n_{x}$ with submanifolds $Y$, $Z$ of dimensions $n_{y}$, $n_{z}$. If $Y\pitchfork Z$, then it is a consequence of [[Transversality#^d8fe66]] that the dimension of $Y\cap Z$ is $n_{y}+n_{z}-n_{x}$. 
+
+^47e8ef
 
 The following theorem tells us that transversality is attainable via small [[Classification of compact surfaces#^d2add7|isotopies]] called **perturbations**. #q But the theorem only mentions homotopies, not isotopies?
 

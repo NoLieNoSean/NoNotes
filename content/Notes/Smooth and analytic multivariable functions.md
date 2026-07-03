@@ -17,6 +17,8 @@ tags:
 > $$
 > of all orders $j\leqslant k$ exist and are continuous at $p$ [^1]. The function $f:U\to \mathbb{R}$ is $C^{\infty}$ or **smooth** at $p$ if it is $C^{k}$ for all $k\geqslant 0$. A vector-valued function $f:U\to \mathbb{R}^{m}$ is said to be $C^{k}$ at $p$ if all of its component functions $f^{1}, \dots, f^{m}$ are $C^{k}$ at $p$. We say that $f:U\to \mathbb{R}^{m}$ is $C^{k}$ on $U$ if it is $C^{k}$ at every point in $U$. A similar definition holds for a $C^{\infty}$ function on an open set $U$. 
 
+^861ecb
+
 [^1]: Nice to note that the mixed partials are invariant under permutation, by [[LEC CAL1 19#^1c8495]]. 
 
 > [!Definition] Diffeomorphism

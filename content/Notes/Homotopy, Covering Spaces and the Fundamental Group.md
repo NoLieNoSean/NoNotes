@@ -195,7 +195,7 @@ tags:
 > ```
 > commutes. 
 
-Covering spaces are instances of [[ADD 438 A#^a3d022|fiber bundles]]. 
+Covering spaces are instances of [[Fiber bundles#^a3d022|fiber bundles]]. 
 
 > [!Proposition]
 > Let $p:E\to B$ be a covering map. Then, 

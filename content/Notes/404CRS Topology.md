@@ -68,6 +68,7 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[The Fundamental Groups of Some Surfaces]]
 [[The Seifert-Van Kampen Theorem]]
 [[CW complexes]]
+[[Homology]]
 
 ---
 

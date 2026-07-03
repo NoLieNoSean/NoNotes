@@ -27,6 +27,8 @@ Since the Hausdorff property and second countability are hereditary[^2], open su
 > 
 > > [!Proof]-
 > > 
+> > #td You wrote this when you had an incorrect understanding of how the product map is constructed; check if it still holds. 
+> > 
 > > The collection $\{ (M_{\alpha}\times N_{\beta}, \phi_{\alpha}\times \psi_{\beta}) \}$ is an atlas:
 > > 
 > > ```latex
@@ -37,18 +39,16 @@ Since the Hausdorff property and second countability are hereditary[^2], open su
 > > \end{document}
 > > ```
 > > 
+> > 
 > 
 
 ^5ea3e2
 
-> [!Definition] Euclidean and regular balls
+> [!Definition] Euclidean balls
 > We call any open subset of an $n$-manifold $M$ that is homeomorphic to a ball in $\mathbb{R}^{n}$ a **Euclidean ball** in $M$. 
-> 
-> A Euclidean ball $B\subseteq M$ is called **regular** if it has the following properties:
-> 1. There is a Euclidean ball $B'\subseteq M$ containing $\overline{B}$.
-> 2. For some $r> 0$, there is a chart $\varphi:B'\to B_{2r}(0)\subseteq \mathbb{R}^{n}$ that sends $\overline{B}$ onto $\overline{B}_{r}(0)$. 
 
-^49ffed
+^aca45c
+
 
 > [!Proposition] @leeIntroductionTopologicalManifolds2000, 4.31
 > Every manifold has a countable basis of regular Euclidean balls. 
@@ -81,14 +81,43 @@ It is true that for a $n$-manifold with boundary $M$, $M=\partial M \sqcup\text{
 > $$
 > 
 
+^8517b5
+
 [^3]: Lee requires $x_{n}\geq 0$ instead. 
 
 [^4]: Schultens writes $\{ \mathbf{0} \}\times \partial \mathbb{H}^{p}$ here; I believe this is a mistake, since we want the interior of $\mathbb{H}^{p}$ to sit inside the interior of $\mathbb{H}^{n}$ 
+
 
 > [!Remark]
 > The boundary $\partial M$ of an $n$-manifold $M$ is not a submanifold of $M$, though it is an $(n-1)$-dimensional manifold that is contained in $M$. 
 
 Schultens calls an $n$-manifold **closed** if $M$ is compact and $\partial M=\emptyset$. 
+# Regular Neighborhoods
+
+@leeIntroductionTopologicalManifolds2000 defines the following notion:
+
+> [!Definition] Regular balls
+> A [[#^aca45c|Euclidean ball]] $B\subseteq M$ is called **regular** if it has the following properties:
+> 1. There is a Euclidean ball $B'\subseteq M$ containing $\overline{B}$.
+> 2. For some $r> 0$, there is a chart $\varphi:B'\to B_{2r}(0)\subseteq \mathbb{R}^{n}$ that sends $\overline{B}$ onto $\overline{B}_{r}(0)$. 
+
+^49ffed
+
+
+> [!Example]
+> $S_{1}\setminus \{ p \}$ for any $p\in S_{1}$ is a Euclidean ball, but not a regular ball. 
+
+^bd0bcd
+
+More generally, we have
+
+> [!Definition] Regular Neighborhood, @schultensIntroduction3manifolds2014 3.1.12
+> Let $M$ be an $n$-manifold. Let $S$ be a [[#^8517b5|submanifold]] of $M$ of dimension $m$. A **regular neighborhood** of $S$ is a submanifold $N(S)$ of $M$ of dimension $n$ that is the total space of a bundle over $S$ with fiber $I^{n-m}$. A regular neighborhood of a $1$-manifold in a $3$-manifold is also called a **tubular** neighborhood. A regular neighborhood of an $(n-1)$-dimensional submanifold of an $n$-manifold that is a trivial bundle is also called a **collar**. An **open regular neighborhood** of $S$ is the interior of a regular neighborhood of $S$. 
+
+^a8b826
+
+Thus, a regular ball is just an open regular neighborhood of a point.
+
 # Manifolds as quotient spaces
 
 None of the defining properties of manifolds (locally Euclidean, Hausdorff, second countable) are automatically inherited by quotient spaces. If we wish to prove that a given quotient space is a manifold, we have to prove at least that it is locally Euclidean and Hausdorff:
@@ -108,8 +137,11 @@ A key topological fact about manifolds is that [[Compactness#^6e5ca5|they are al
 
 Defining a notion of orientability for topological manifolds requires an understanding of homology; I'm putting it off for now. See @HomologyOrientabilityGeneral2025
 
-
 > [!Definition] Orientation-preserving maps
 > stub
 
 ^5125c8
+
+# General position
+
+According to Schultens, it is easier to understand and use the analogous concept in $\textsf{Diff}$, [[Transversality]]. 

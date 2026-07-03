@@ -184,7 +184,9 @@ We will now find standard presentations for connected sums.
 > 
 
 > [!Lemma] @leeIntroductionTopologicalManifolds2011 6.16
-> The Klein bottle is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
+> The Klein bottle $\mathbb{K}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
+
+^358ad7
 
 > [!Lemma] @leeIntroductionTopologicalManifolds2011 6.17
 > The connected sum $\mathbb{T}^{2}\#\mathbb{P}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}\#\mathbb{P}^{2}$. 

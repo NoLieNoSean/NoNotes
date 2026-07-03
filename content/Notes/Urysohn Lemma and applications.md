@@ -76,7 +76,7 @@ The following theorem expresses the most important property of normal spaces. In
 
 ---
 
-# Imbeddings of Manifolds
+# Whitney embedding theorem
 
 We have shown that every second countable regular space can be imbedded in the infinite dimensional euclidean space $\mathbb{R}^{\omega}$. We will now show that for compact manifolds, an imbedding into finite dimensional euclidean space $\mathbb{R}^{N}$ can be achieved. 
 
@@ -100,7 +100,7 @@ We have shown that every second countable regular space can be imbedded in the i
 > [!Proposition]
 > Let $\{ U_{1}, \dots, U_{n} \}$ be a finite open covering of the normal space $X$. Then there exists a partition of unity dominated by $\{ U_{i} \}$. 
 
-> [!Theorem]
+> [!Theorem] Whitney
 > If $X$ is a compact $m$-manifold, then $X$ can be imbedded in $\mathbb{R}^{N}$ for some positive integer $N$. 
 
 ^e4f9b0
