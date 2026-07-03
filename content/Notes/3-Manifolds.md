@@ -45,10 +45,13 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 [[SEM 3MAN Actions on surfaces]]
 [[Preliminaries to 3-Manifolds]]
+[[Incompressible surfaces]]
 
 ---
 
 # W26
+
+[[Seifert Fibered Spaces]]
 
 ---
 
