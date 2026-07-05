@@ -8,6 +8,9 @@ tags:
 ---
 IISERB, May 2026 - , Kashyap Rajeevsarathy
 
+> [!Notation]-
+> $\mathbb{B}^{n}$ and $\mathbb{D}^{n}$ both refer to the closed $n$-ball.
+
 ---
 # W22 Perspectives on manifolds
 

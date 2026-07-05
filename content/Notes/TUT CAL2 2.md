@@ -3,7 +3,7 @@ tags:
   - CAL2
   - Tutorial
   - 
-date: 2026-06-25
-time: 17:48
-id: "485"
+date: 2026-07-04
+time: 18:47
+id: "492"
 ---

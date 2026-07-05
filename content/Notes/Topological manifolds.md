@@ -66,6 +66,15 @@ We also have the following:
 
 It is true that for a $n$-manifold with boundary $M$, $M=\partial M \sqcup\text{Int}\,M$. We will prove this later #td. An $n$-manifold is an $n$-manifold with boundary (with empty boundary). 
 
+# Submanifolds
+
+A definition of submanifold that is used in textbooks is the following:
+
+> [!Definition] Submanifold, @guilleminDifferentialTopology1974
+> Let $M$ be an $n$-manifold. A subspace $N\subseteq M$ is **$p$-dimensional submanifold** if $N$ is a topological $p$-manifold. 
+
+However, this is regarded as a weak definition in geometric topology, since it admits wild embeddings (see [[Preliminaries to 3-Manifolds#The Schönflies Theorem]]). The strengthened version Schultens uses also demands **local flatness**: for every $x\in N$, there must be a neighborhood $U$ of $x$ in $M$ and a homeomorphism of pairs $(U, U\cap N)\cong(\mathbb{R}^{n}, \mathbb{R}^{p})$ (or $(\mathbb{H}^{n}, \mathbb{H}^{p})$ at boundary points). 
+
 > [!Definition] Submanifold, @schultensIntroduction3manifolds2014 1.1.16
 > Let $M$ be an $n$-manifold with boundary. A **$p$-dimensional submanifold** of $M$ is a *closed* subset $L$ of $M$ for which there exists an atlas $\{ (M_{\alpha}, \phi_{\alpha}) \}$ of $M$ and $p\in \{ 0, \dots, n \}$ such that for all $x\in L$ in the interior of $M$ there is a chart in the atlas with $x\in M_{\alpha}$ and
 > $$

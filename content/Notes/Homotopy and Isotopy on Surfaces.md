@@ -12,8 +12,10 @@ tags:
 > [!Definition] Simple closed curve
 > A **simple closed curve** in a surface $S$ is a compact connected $1$-dimensional submanifold of $S$ without boundary. A **simple arc** in a surface $S$ is a compact connected $1$-dimensional submanifold of $S$ with non-empty boundary. 
 
+^ecc097
+
 > [!Definition] Transverse intersection
-> Let $a, b$ be simple closed curves in a surface $S$. We say that $a, b$ intersect **transversely** and write $a\pitchfork b$ if for all $x\in a \cap b$, there is a chart $(U_{\gamma}, \phi_{\gamma})$ with $\phi_{\gamma}(U_{\gamma})=\mathbb{R}^{2}$ such that $\phi_{\gamma}$ maps $x$ to $(0, 0)$, $a$ to the $x$-axis, and $b$ to the $y$-axis. 
+> Let $a, b$ be [[#^ecc097|simple closed curves]] in a surface $S$. We say that $a, b$ intersect **transversely** and write $a\pitchfork b$ if for all $x\in a \cap b$, there is a chart $(U_{\gamma}, \phi_{\gamma})$ with $\phi_{\gamma}(U_{\gamma})=\mathbb{R}^{2}$ such that $\phi_{\gamma}$ maps $x$ to $(0, 0)$, $a$ to the $x$-axis, and $b$ to the $y$-axis. 
 
 Note:
 1. For an [[Differentiable manifolds#^dbdef9|oriented]] surface $S$, the chart $(U_{\gamma}, \phi_{\gamma})$ can always be chosen to be in the orientation of $S$. 
@@ -70,12 +72,21 @@ Note:
 > 
 > > [!Proof]-
 > > 
-> > Schultens provides a proof for $\mathbb{T}^{2}$; she starts by considering an arbitrary homeomorphism $h:F\to F$ that is homotopic to the identity. For any simple closed curve $c$, we may replace $c$ with an isotopic curve $c'$[^1] such that $c'\pitchfork h(c)$ by [[Transversality#^c993d4]]. We then show that $c'$ is in fact isotopic to $h(c)$ (from which it follows that $c$ is isotopic to $h(c)$). We next apply this to the curve $m$ from [[Homotopy and Isotopy on Surfaces#^d60470]] to obtain an isotopy between $m$ and $h(m)$. 
+> > Schultens provides a proof for $\mathbb{T}^{2}$; she starts by considering an arbitrary homeomorphism $h:F\to F$ that is homotopic to the identity. For any simple closed curve $c$, we may replace $c$ with an isotopic curve $c'$[^1] such that $c'\pitchfork h(c)$ by [[Transversality#^c993d4]]. We then show[^3] that $c'$ is in fact isotopic to $h(c)$ (from which it follows that $c$ is isotopic to $h(c)$)[^4]. We next apply this to the curve $m$ from [[Homotopy and Isotopy on Surfaces#^d60470]] to obtain an isotopy between $m$ and $h(m)$. 
 > > 
 > > Schultens now surreptitiously invokes [[#^397fe5|the isotopy extension theorem]] to extend the isotopy of $h(m)$ with $m$ to an isotopy of $h$ with a homeomorphism which restricts to the identity on $m$. We then show that this homeomorphism can further be isotoped to a homeomorphism $\varphi$ which fixes $l$. We now lift $\varphi$ up the quotient, apply the [[#^3cebcd|Alexander trick]][^2] to obtain an isotopy to $\mathrm{id}_{I^{2}}$, and note that the isotopy descends down to one between $\varphi$ and $\mathrm{id}_{\mathbb{T}^{2}}$. 
 > 
+
+^dfbd2b
+
+#q How does [[#^dfbd2b]] imply homotopy and isotopy classes of $F$ are equivalent?
+
 
 
 [^1]: Schultens just replaces the symbol $c$ with $c'$ when she goes "We may assume that $c\pitchfork h(c)$", which threw me off on my first read (I thought we were replacing the map $h$, not the curves). 
 
 [^2]: I wonder why it's called a *trick*? 
+
+[^3]: The lemma used to remove intersections between $c$ and $h(c)$ where subarcs of $c$ and $h(c)$ cobound a disc is very similar to @schultensIntroduction3manifolds2014 Lem 3.2.3
+
+[^4]: This argument works in general to show that homotopic simple closed curves in $F$ are isotopic!
