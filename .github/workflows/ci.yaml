@@ -38,16 +38,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Generate build info
-        shell: bash
-        run: |
-          cat > quartz/util/buildInfo.ts <<EOF
-          export const gitHash = "$(git rev-parse --short HEAD)"
-          export const gitFullHash = "$GITHUB_SHA"
-          export const gitBranch = "$GITHUB_REF_NAME"
-          export const gitCommit = $(node -p "JSON.stringify(require('child_process').execSync('git log -1 --pretty=%s').toString().trim())")
-          EOF
-
       - name: Check types and style
         run: npm run check
 

@@ -26,6 +26,17 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
+
+      - name: Generate build info
+        shell: bash
+        run: |
+          cat > quartz/util/buildInfo.ts <<EOF
+          export const gitHash = "$(git rev-parse --short HEAD)"
+          export const gitFullHash = "$GITHUB_SHA"
+          export const gitBranch = "$GITHUB_REF_NAME"
+          export const gitCommit = $(node -p "JSON.stringify(require('child_process').execSync('git log -1 --pretty=%s').toString().trim())")
+          EOF
+          
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
