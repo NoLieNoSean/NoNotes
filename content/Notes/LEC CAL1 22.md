@@ -47,8 +47,11 @@ The linear version of the implicit function theorem is as follows:
 > $$
 > \mathbf{h}=-(A_{x})^{-1}A_{y}\mathbf{k}.
 > $$
-> **Proof**
-> $A(\mathbf{h}, \mathbf{k})=\mathbf{0}$ iff $A_{x}\mathbf{h}+A_{y}\mathbf{k}=\mathbf{0}$. Given $\mathbf{k}\in \mathbb{R}^{m}$, this can be solved uniquely for $\mathbf{h}$ iff $A_{x}$ is invertible, in which case $\mathbf{h}=-(A_{x})^{-1}A_{y}\mathbf{k}$. 
+> 
+> > [!Proof]-
+> > 
+> > $A(\mathbf{h}, \mathbf{k})=\mathbf{0}$ iff $A_{x}\mathbf{h}+A_{y}\mathbf{k}=\mathbf{0}$. Given $\mathbf{k}\in \mathbb{R}^{m}$, this can be solved uniquely for $\mathbf{h}$ iff $A_{x}$ is invertible, in which case $\mathbf{h}=-(A_{x})^{-1}A_{y}\mathbf{k}$. 
+> 
 
 >[!Theorem]
 >

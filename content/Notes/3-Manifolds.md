@@ -9,7 +9,8 @@ tags:
 IISERB, May 2026 - , Kashyap Rajeevsarathy
 
 > [!Notation]-
-> $\mathbb{B}^{n}$ and $\mathbb{D}^{n}$ both refer to the closed $n$-ball.
+> 1. $\mathbb{B}^{n}$ and $\mathbb{D}^{n}$ both refer to the closed $n$-ball.
+> 2. "$S$ bounds $B$" means $S$ is the boundary of a $B$-submanifold. It does NOT mean that a $B$-submanifold lies in the interior of $S$. 
 
 ---
 # W22 Perspectives on manifolds
@@ -60,3 +61,6 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W27
 
+---
+
+# W28

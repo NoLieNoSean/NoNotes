@@ -66,6 +66,12 @@ We also have the following:
 
 It is true that for a $n$-manifold with boundary $M$, $M=\partial M \sqcup\text{Int}\,M$. We will prove this later #td. An $n$-manifold is an $n$-manifold with boundary (with empty boundary). 
 
+> [!Definition] Closed manifold
+> An $n$-manifold $M$ is **closed** if $M$ is compact and $\partial M=\emptyset$. 
+
+^5cf87b
+
+
 # Submanifolds
 
 A definition of submanifold that is used in textbooks is the following:
@@ -100,7 +106,6 @@ However, this is regarded as a weak definition in geometric topology, since it a
 > [!Remark]
 > The boundary $\partial M$ of an $n$-manifold $M$ is not a submanifold of $M$, though it is an $(n-1)$-dimensional manifold that is contained in $M$. 
 
-Schultens calls an $n$-manifold **closed** if $M$ is compact and $\partial M=\emptyset$. 
 # Regular Neighborhoods
 
 @leeIntroductionTopologicalManifolds2000 defines the following notion:

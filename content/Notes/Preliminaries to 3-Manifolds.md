@@ -98,11 +98,6 @@ $\mathbb{S}^{3}$ is boundary irreducible, since it has no boundary. The solid to
 
 # 3-Manifolds that are Prime but Reducible
 
-> [!Definition] Prime manifold
-> An $n$-manifold $M$ is **prime** if $M=M_{1}\#M_{2}$ implies either $M_{1}$ or $M_{2}$ is the $n$-sphere, i.e, that the [[Classification of compact surfaces#^9cb3a2|connected sum]] $M=M_{1}\#M_{2}$ is trivial. 
-
-^c04f97
-
 > [!Definition] Separating submanifold
 > A submanifold $A$ of a connected manifold $X$ is **separating** if $X\setminus A$ has at least two components; otherwise it is **non-separating**. 
 
@@ -111,8 +106,10 @@ Mirroring our discussion above, we now consider two mapping tori of $\mathbb{S}^
 These two $3$-manifolds contain non-separating $2$-spheres. The following theorem shows that this is a rare property. 
 
 > [!Theorem] @schultensIntroduction3manifolds2014 3.3.4
-> An [[#^bcc199|irreducible]] closed connected $3$-manifold is [[#^c04f97|prime]]. A closed connected prime $3$-manifold is either irreducible or $\mathbb{S}^{2}\times \mathbb{S}^{1}$ or $\mathbb{S}^{2} \tilde{\times}\mathbb{S}^{1}$. 
+> 1. An [[#^bcc199|irreducible]] [[Topological manifolds#^5cf87b|closed]] connected $3$-manifold is [[Classification of compact surfaces#^c04f97|prime]].
+> 2. An orientable closed connected prime $3$-manifold is either irreducible or $\mathbb{S}^{2}\times \mathbb{S}^{1}$. 
+> 3. A non-orientable closed connected prime $3$-manifold is either irreducible or $\mathbb{S}^{2} \tilde{\times}\mathbb{S}^{1}$. 
 
 [^1]: [[Topological manifolds#^a8b826]] defines regular neighborhoods for *submanifolds*. Schultens is probably invoking the definition form PL topology, where regular neighborhoods are defined for arbitrary polyhedra. 
 
-[^2]: Schulten's particular choice of words are "Any $2$-sphere in $\mathbb{R}^{3}$ bounds a $3$-ball". I mean... I guess I really jumped the gun with this book, huh?
+[^2]: Schultens' particular choice of words are "Any $2$-sphere in $\mathbb{R}^{3}$ bounds a $3$-ball". I mean... I guess I really jumped the gun with this book, huh?

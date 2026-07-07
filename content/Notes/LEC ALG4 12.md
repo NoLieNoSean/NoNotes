@@ -9,7 +9,7 @@ tags:
 ---
 # Tensor products
 
-See also @bourbakiAlgebra1974 ch 3, 4
+See @bourbakiAlgebra1974 Ch 3, 4, @aluffiAlgebraChapter02009 Ch 8§2
 
 > [!Definition] Bilinear map
 > Let $M, N, P$ be $R$-modules. A map $\varphi:M\times N\to P$ is called **$R$-bilinear** if $\varphi(x, \_):N\to P$ and $\varphi(\_, y):M\to P$ are $R$-linear for all $x\in M$ and $y\in N$. 
@@ -23,19 +23,19 @@ Note that $\varphi$ itself is *not* linear (we don't use a module structure on t
 
 We will construct the tensor product of $M$ and $N$ as a solution to the following universal problem:
 
-[!Definition] Universal property of tensor products
-Let $M, N$ be $R$-modules. We call a pair $(T, \tau)$ the **tensor product** of $M$ and $N$, where $T$ is an $R$-module and $\tau:M\times N\to T$ is $R$-bilinear, if for all bilinear $\varphi:M\times N\to P$, there exists unique $R$-linear $\overline{\varphi}:T\to P$ such that the following diagram commutes. 
-
-```latex
-% latex-id: 9c99-9bd5-c96e-44af-b3cd
-
-\begin{document}
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXFx0aW1lcyBOIl0sWzEsMCwiUCJdLFswLDEsIlQiXSxbMCwxLCJcXHZhcnBoaSJdLFswLDIsIlxcdGF1IiwyXSxbMiwxLCJcXGV4aXN0cyFcXG92ZXJsaW5le1xcdmFycGhpfSIsMl1d 
-\[\begin{tikzcd} {M\times N} & P \\ T \arrow["\varphi", from=1-1, to=1-2] \arrow["\tau"', from=1-1, to=2-1] \arrow["{\exists!\overline{\varphi}}"', from=2-1, to=1-2] \end{tikzcd}\]
-\end{document} 
-
-```
-We denote $\tau(x, y)$ by $x\otimes y$. 
+> [!Definition] Universal property of tensor products
+> Let $M, N$ be $R$-modules. We call a pair $(T, \tau)$ the **tensor product** of $M$ and $N$, where $T$ is an $R$-module and $\tau:M\times N\to T$ is $R$-bilinear, if for all bilinear $\varphi:M\times N\to P$, there exists unique $R$-linear $\overline{\varphi}:T\to P$ such that the following diagram commutes. 
+> 
+> ```latex
+> % latex-id: 9c99-9bd5-c96e-44af-b3cd
+> 
+> \begin{document}
+> % https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXFx0aW1lcyBOIl0sWzEsMCwiUCJdLFswLDEsIlQiXSxbMCwxLCJcXHZhcnBoaSJdLFswLDIsIlxcdGF1IiwyXSxbMiwxLCJcXGV4aXN0cyFcXG92ZXJsaW5le1xcdmFycGhpfSIsMl1d 
+> \[\begin{tikzcd} {M\times N} & P \\ T \arrow["\varphi", from=1-1, to=1-2] \arrow["\tau"', from=1-1, to=2-1] \arrow["{\exists!\overline{\varphi}}"', from=2-1, to=1-2] \end{tikzcd}\]
+> \end{document} 
+> 
+> ```
+> We denote $\tau(x, y)$ by $x\otimes y$. 
 
 ^2dca86
 
@@ -88,14 +88,11 @@ I do not know where you got the idea from, but $\tau$ is *not* an inclusion!
 ^bb57f4
 
 > [!Warning]
-> Elements of the form $m\otimes n$ are called **pure tensors**. Not every element of the tensor product is a pure tensor! Pure tensors are nevertheless very useful, as a set of generators for the tensor product. For example, if two homomorphisms $\alpha, \beta:M\otimes_{R}N\to P$ coincide on pure tensors, then $\alpha=\beta$.
+> Elements of the form $m\otimes n$ are called **pure tensors**. Not every element of the tensor product is a pure tensor (see [[#^55f33d]])! Pure tensors are nevertheless very useful, as a set of generators for the tensor product. For example, if two homomorphisms $\alpha, \beta:M\otimes_{R}N\to P$ coincide on pure tensors, then $\alpha=\beta$.
 
-## Basic properties
+## Examples of Tensor Products
 
-> [!Proposition]
-> Let $M$ and $N$ be $R$-modules. If $\{ x_{\lambda}\in M:\lambda\in\Lambda \}$ generates $M$ and $\{ y_{\gamma}:\gamma\in\Gamma \}$ generates $N$ then $\{ x_{\lambda }\otimes y_{\gamma}:\lambda\in\Lambda, \gamma\in\Gamma \}$ generates $M\otimes_{R}N$. 
-
-^3e8e97
+### Vanishing Tensor Products
 
 Tensor products behave in a way that might seem strange at first - for example, the tensor product of two nonzero modules may be zero:
 
@@ -113,12 +110,16 @@ Tensor products behave in a way that might seem strange at first - for example, 
 
 ^2e2ee7
 
+### Tensoring with a quotient of the ring
+
+We explore tensors of the type $(R/I)\otimes_{R}M$, where $M$ is an $R$-module and $I\subseteq R$ is an ideal ([[LEC ALG3 3#^ec98bc|recall]] that this makes $R/I$ and $R$-module). 
+
 > [!Proposition]
 > For positive integers $a$ and $b$ with $d=(a, b)$, $\mathbb{Z}/a\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/b\mathbb{Z}\cong \mathbb{Z}/d\mathbb{Z}$ as $\mathbb{Z}$-modules. In particular, $\mathbb{Z}/a\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/b\mathbb{Z}=0$ iff $(a, b)=1$. 
 
 This is a special case of the following theorem:
 
-> [!Theorem] @conradTensorProducts 4.5
+> [!Theorem] @conradTensorProducts 4.3
 > For ideals $I$ and $J$ in $R$, there is a unique $R$-module isomorphism
 > $$
 > R/I\otimes _{R}R/J\cong R/(I+J)
@@ -142,14 +143,21 @@ This is a special case of the following theorem:
 > > 
 > 
 
-> [!Theorem]
+> [!Theorem] @conradTensorProducts 4.5
 > For an ideal $I\subseteq R$ and $R$-module $M$, there is a unique $R$-module isomorphism
 > $$
 > (R/I)\otimes _{R}M\cong M/IM
 > $$
 > such that $\overline{r}\otimes m\mapsto \overline{rm}$. In particular, taking $I=(0)$, we get $R\otimes_{R}M\cong M$. 
 
-> [!Theorem]
+### Tensor products with nonelementary tensors
+
+> [!Lemma] @conradTensorProducts 3.3
+> Let $M$ and $N$ be $R$-modules. If $\{ x_{\lambda}\in M:\lambda\in\Lambda \}$ generates $M$ and $\{ y_{\gamma}:\gamma\in\Gamma \}$ generates $N$ then $\{ x_{\lambda }\otimes y_{\gamma}:\lambda\in\Lambda, \gamma\in\Gamma \}$ generates $M\otimes_{R}N$. 
+
+^3e8e97
+
+> [!Theorem] @conradTensorProducts 4.9
 > If $F$ and $F'$ are free $R$-modules, with respective bases $\mathcal{B}=\{ e_{i} \}_{i\in I}$ and $\mathcal{B}'=\{ e'_{j} \}_{j\in J}$, then $F\otimes_{R}F'$ is a free $R$-module with basis $\mathcal{C}=\{ e_{i}\otimes e'_{j} \}_{(i, j)\in I\times J}$. 
 > 
 > > [!Proof]-
@@ -161,6 +169,10 @@ This is a special case of the following theorem:
 
 > [!Example] @conradTensorProducts 4.11
 > For $R\ne 0$, let $F$ and $F'$ be finite free $R$-modules of rank $\geqslant 2$ with bases $\{ e_{1}, \dots, e_{m} \}$ and $\{ e_{1}', \dots, e'_{n} \}$. In $F\otimes_{R}F'$, $e_{1}\otimes e_{1}'+e_{2}\otimes e_{2}'$ is a *tensor that is provably not an elementary tensor*. 
+
+^55f33d
+
+[[#^31557d]] holds up pretty well when we demote one of the free modules to a vanilla module:
 
 > [!Theorem]
 > If $M$ is an $R$-module and $F$ is a free $R$-module with basis $\{ e_{i} \}_{i\in I}$, then every element of $M\otimes_{R}F$ has a unique representation in the form $\sum_{i\in I}m_{i}\otimes e_{i}$, where all but finitely many $m_{i}$ equal $0$. 
@@ -174,6 +186,8 @@ This is a special case of the following theorem:
 > > It remains to check that $f\circ g$ and $g\circ f$ are identities. For the latter, since pure tensors span $M\otimes_{R}F$, it suffices to prove that $f\circ g=\mathrm{id}$ on pure tensors. That $g\circ f=\mathrm{id}$ is immediate. 
 > 
 
+### Nonvanishing Tensor Products
+
 > [!Theorem]
 > If $M$ is a nonzero finitely generated $R$-module then $M^{\otimes k}\ne 0$ for all $k$. 
 > 
@@ -183,6 +197,8 @@ This is a special case of the following theorem:
 > 
 
 Recall from [[#^af777c]] that if $M$ is not finitely generated, $M\otimes_{R}M$ may well be $0$. 
+
+### Tensoring with the field of fractions
 
 > [!Theorem]
 > Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. There is an $R$-module isomorphism $K\otimes_{R}V\cong V$ where $x\otimes v\mapsto xv$. 
@@ -207,81 +223,27 @@ We can prove something more general:
 > > Pick a basis $\{ e_{i} \}$ for $F$ and $\{ e'_{i} \}$ for $F'$. Write $x=\sum_{i}a_{i}e_{i}$ and $x'=\sum_{j}a'_{j}e'_{j}$. Since $x$ and $x'$ are nonzero, they each have some nonzero coefficient, say $a_{i_{0}}$ and $a'_{j_{0}}$. Since $R$ is a domain, $a_{i_{0}}a'_{j_{0}}\ne 0$, so $x\otimes x'$ has a nonzero coordinate in the basis $\{ e_{i}\otimes e'_{j} \}$ for $F\otimes_{R}F'$.
 > 
 
-[!Theorem]
-Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. 
-1. For all $R$-modules $M$, there is an $R$-module isomorphism $V\otimes_{R}M\cong V\otimes_{R}(M/\text{tor}(M))$. 
-2. For $R$-modules $M$, if $M$ is torsion then $V\otimes_{R}M=0$ and if $M$ is not torsion and $V$ is nonzero then $V\otimes_{R}M\ne 0$. 
-3. If $M$ is an $R$-module and $N$ is a submodule such that $M/N$ is a torsion $R$-module then $V\otimes_{R}N\cong V\otimes_{R}M$ as $R$-modules by $v\otimes n\mapsto v\otimes n$. 
-
-[!Corollary]
-Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. Then, $v\otimes m=0$ in $V\otimes_{R}M$ iff $v=0$ or $m\in \text{tor}(M)$. In particular, $\text{tor}(M)=\ker(M\to K\otimes_{R}M)$ where $m\mapsto 1\otimes m$. 
+> [!Theorem] @conradTensorProducts 4.27
+> Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. 
+> 1. For all $R$-modules $M$, there is an $R$-module isomorphism $V\otimes_{R}M\cong V\otimes_{R}(M/\text{tor}(M))$. 
+> 2. For $R$-modules $M$, if $M$ is torsion then $V\otimes_{R}M=0$ and if $M$ is not torsion and $V$ is nonzero then $V\otimes_{R}M\ne 0$. 
+> 3. If $M$ is an $R$-module and $N$ is a submodule such that $M/N$ is a torsion $R$-module then $V\otimes_{R}N\cong V\otimes_{R}M$ as $R$-modules by $v\otimes n\mapsto v\otimes n$. 
 
 
-> [!Proposition]
-> Let $M_{1}, M_{2}, N_{1}, N_{2}$ be $R$-modules. Let $\varphi:M_{1}\to M_{2}$ be $R$-linear. Then there exists an $R$-linear map
-> $$
-> \begin{array}{cccc}
-> \varphi \otimes\text{id}_{N}: & M_{1}\otimes_{R}N & \to  & M_{2}\otimes_{R}N,  \\
->  & x\otimes y & \mapsto  & \varphi(x)\otimes y.
-> \end{array}
-> $$
-> More generally, if $\psi:N_{1}\to N_{2}$ is $R$-linear then there exists $R$-linear map
-> $$
-> \begin{array}{cccc}
-> \varphi \otimes \psi: & M_{1}\otimes_{R}N_{1} & \to  & M_{2}\otimes_{R}N_{2},  \\
->  & x\otimes y & \mapsto  & \varphi(x)\otimes \psi(y).
-> \end{array}
-> $$
-> 
-> > [!Proof]-
-> > 
-> > It is easy to verify that the map $\Phi:M_{1}\times N_{1}\to M_{2}\otimes_{R}N_{2}$ defined by $(x, y)\mapsto\varphi(x)\otimes \psi(y)$ is bilinear. The universal property then yields the required $R$-linear map. 
-> > 
-> > ```latex
-> > % latex-id: 1aef-ef50-d4c5-4240-8a07
-> > \begin{document}
-> > % https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXzFcXHRpbWVzIE5fMVxcXFwgKHgsIHkpIl0sWzIsMCwiTV8yXFxvdGltZXNfUiBOXzIgXFxcXFxcdmFycGhpKHgpXFxvdGltZXNcXHBzaSh5KSJdLFswLDIsIk1fMVxcb3RpbWVzX1IgTl8xXFxcXCB4XFxvdGltZXMgeSJdLFswLDEsIiIsMix7Im9mZnNldCI6LTMsInNob3J0ZW4iOnsic291cmNlIjoxMCwidGFyZ2V0IjoxMH19XSxbMCwxLCIiLDAseyJvZmZzZXQiOjMsInNob3J0ZW4iOnsic291cmNlIjoxMCwidGFyZ2V0IjoxMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMCwyLCIiLDIseyJvZmZzZXQiOi0zLCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MTB9fV0sWzAsMiwiIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MTB9LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzIsMSwiIiwyLHsib2Zmc2V0IjotMywic2hvcnRlbiI6eyJzb3VyY2UiOjEwLCJ0YXJnZXQiOjIwfX1dLFsyLDEsIiIsMSx7Im9mZnNldCI6NSwic2hvcnRlbiI6eyJzb3VyY2UiOjEwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ== 
-> > \[\begin{tikzcd} \begin{array}{c} M_1\times N_1\\ (x, y) \end{array} && \begin{array}{c} M_2\otimes_R N_2 \\\varphi(x)\otimes\psi(y) \end{array} \\ \\ \begin{array}{c} M_1\otimes_R N_1\\ x\otimes y \end{array} \arrow[shift left=3, between={0.1}{0.9}, from=1-1, to=1-3] \arrow[shift right=3, between={0.1}{0.9}, maps to, from=1-1, to=1-3] \arrow[shift left=3, between={0.2}{0.9}, from=1-1, to=3-1] \arrow[shift right=5, between={0.2}{0.9}, maps to, from=1-1, to=3-1] \arrow[shift left=3, between={0.1}{0.8}, from=3-1, to=1-3] \arrow[shift right=5, between={0.1}{0.8}, maps to, from=3-1, to=1-3] \end{tikzcd}\]
-> > \end{document}
-> > ```
-> > 
+> [!Corollary]
+> Let $R$ be a domain with fraction field $K$ and $V$ be a $K$-vector space. Then, $v\otimes m=0$ in $V\otimes_{R}M$ iff $v=0$ or $m\in \text{tor}(M)$. In particular, $\text{tor}(M)=\ker(M\to K\otimes_{R}M)$ where $m\mapsto 1\otimes m$. 
 
-It is evident that
+## General Properties of Tensor Products
 
-> [!Proposition]
-> $\_{}\otimes_{R}N:R\textsf{-Mod}\to R\textsf{-Mod}$ is a covariant [[Category Theory Preliminaries II#^56cdbe|functor]]; it is defined by  $M\mapsto M\otimes_{R}N$ and $\varphi\mapsto\varphi \otimes_{R}\mathrm{id}_{N}$. 
-
-The same can be said about $N\otimes_{R}\_$. 
-
-> [!Proposition] The Hom-Tensor adjunction
-> Consider the three functors $(R\textsf{-Mod})^{op}\times (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}$ defined by
-> $$
-> \begin{align}
-> (M, N, P)\mapsto \begin{cases}
-> 
-> \text{Hom}_{R\textsf{\textsf{-Mod}}}(M, \text{Hom}_{R\textsf{\textsf{-Mod}}}(N, P) )  \\ 
-> \text{Bi-linear}_{R}(M\times N, P) \\
-> \text{Hom}_{R\textsf{-Mod}}(M\otimes _{R}N, P). 
-> \end{cases}
-> \end{align}
-> $$
-> These are naturally isomorphic. In particular, if we consider the covariant functors $R\textsf{-Mod}\to R\textsf{-Mod}$ given by $\mathscr{F}=\text{Hom}_{R}(N, \_{})$ and $\mathscr{G}=\_\otimes_{R}N$, we have
-> $$
-> \text{Hom}_{R}(M, \mathscr{F}(P)) \cong \text{Hom}_{R}(\mathscr{G}(M), P),
-> $$
-> i.e, $\mathscr{F}$ and $\mathscr{G}$ are [[Category Theory Preliminaries II#^a625a6|adjoint]]. In words, the tensor product is left adjoint to $\text{Hom}$. 
-
-^5f390d
-
-> [!Proposition]
+> [!Proposition] Commutativity of The Tensor Product, @conradTensorProducts 5.1
 > The map $M\otimes_{R}N\to N\otimes_{R}M$ defined on pure tensors by $x\otimes y\mapsto y\otimes x$ is an $R$-module isomorphism. 
 > 
 > > [!Proof]-
 > > 
 > > The map $M\times N\to N\otimes_{R}M$ defined by $(x, y)\mapsto y\otimes x$ is $R$-bilinear. It is easily seen that the induced map is bijective. 
 
-> [!Proposition]
-> The tensor product is associative: $(M_{1}\otimes_{R}M_{2})\otimes_{R}M_{3}\cong M_{1}\otimes_{R}(M_{2}\otimes_{R} M_{3})$. 
+> [!Proposition] Associativity of The Tensor Product, @conradTensorProducts 5.2
+> There is a unique $R$-module isomorphism $(M_{1}\otimes_{R}M_{2})\otimes_{R}M_{3}\cong M_{1}\otimes_{R}(M_{2}\otimes_{R} M_{3})$ where $(m\times n)\otimes p\mapsto m\otimes(n\otimes p)$. 
 > 
 > > [!Proof]-
 > > 
@@ -305,32 +267,45 @@ The same can be said about $N\otimes_{R}\_$.
 
 ^1e6488
 
-> [!Proposition]
-> The tensor product distributes over direct sums, i.e, 
-> $M\otimes_{R}(N_{1}\oplus N_{2})=M\otimes_{R}N_{1}\oplus M\otimes_{R}N_{2}$. 
-> 
-> > [!Proof]-
-> > 
-> > Consider the exact sequence
-> > $$
-> > 0\to N_{1}\xhookrightarrow{i_{1}} N_{1}\oplus N_{2}\xtwoheadrightarrow{\pi_{2}} N_{2}\to 0.
-> > $$
-> > Since tensor is right exact, we get that
-> > $$
-> > M\otimes N_{1}\to M\otimes (N_{1}\oplus N_{2})\to M\otimes N_{2}\to 0
-> > $$
-> > is exact; we need to show that $\mathrm{id}_{M}\otimes i_{1}$ is injective, since tensor products usually do not preserve that. This follows from functoriality: $\pi_{1}\circ i_{1}=\mathrm{id}_{N_{1}}$, so $(\mathrm{id}_{M}\otimes \pi_{1})\circ(\mathrm{id}_{M}\otimes i_{1})=\mathrm{id}_{M\otimes N_{1}}$, so $\mathrm{id}_{M}\otimes i_{1}$ must be injective. Thus, 
-> > $$
-> > 0\to M\otimes N_{1}\to M\otimes (N_{1}\oplus N_{2})\to M\otimes N_{2}\to 0
-> > $$
-> > is exact; furthermore, while proving injectivity, we have also shown than $\mathrm{id}_{M}\otimes i_{1}$ has a left inverse. Thus, the above sequence is a split exact sequence, and we are done. 
-> > 
-> 
+It is evident that
 
-^af3762
+> [!Proposition] Tensor is Functor
+> $\_{}\otimes_{R}N:R\textsf{-Mod}\to R\textsf{-Mod}$ is a covariant [[Category Theory Preliminaries II#^56cdbe|functor]]; it is defined by  $M\mapsto M\otimes_{R}N$ and $\varphi\mapsto\varphi \otimes_{R}\mathrm{id}_{N}$. 
+
+The same can be said about $N\otimes_{R}\_$. 
+
+[!Proposition] The Hom-Tensor Adjunction
+Consider the three functors $(R\textsf{-Mod})^{op}\times (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}$ defined by [^3]
+$$
+\begin{align}
+(M, N, P)\mapsto \begin{cases}
+
+\text{Hom}_{R\textsf{\textsf{-Mod}}}(M, \text{Hom}_{R\textsf{\textsf{-Mod}}}(N, P) )  \\ 
+\text{Bi-linear}_{R}(M\times N, P) \\
+\text{Hom}_{R\textsf{-Mod}}(M\otimes _{R}N, P). 
+\end{cases}
+\end{align}
+$$
+These are [[Category Theory Preliminaries II#^e1d19e|naturally isomorphic]]. In particular, if we consider the covariant functors $R\textsf{-Mod}\to R\textsf{-Mod}$ given by $\mathscr{F}=\text{Hom}_{R}(N, \_{})$ and $\mathscr{G}=\_\otimes_{R}N$, the natural isomorphism between the first and third functors above yields a natural isomorphism [^4]
+$$
+(R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}:\text{Hom}_{R}(M, \mathscr{F}(P)) \cong \text{Hom}_{R}(\mathscr{G}(M), P),
+$$
+i.e, $\mathscr{F}$ and $\mathscr{G}$ are [[Category Theory Preliminaries II#^a625a6|adjoint]]. In words, the tensor product is left adjoint to $\text{Hom}$. 
+
+^5f390d
 
 > [!Remark]
-> Arguing as in the proof of [[#^af3762]], we can show that ==tensor preserves *split* exact sequences==. 
+> A functor $\textsf{A}^{op}\times \textsf{C}^{op}\times \textsf{D}\to \textsf{E}$ is contravariant in the first two slots and covariant in the third:
+> 
+> ```latex
+> % latex-id: ec64-8709-981e-42d3-9640
+> \begin{document}
+> % https://q.uiver.app/#q=WzAsOCxbMCwwLCIoXFxxcXVhZCBNLCJdLFsxLDAsIk4sIl0sWzIsMCwiUFxccXF1YWQpIl0sWzAsMSwiKFxccXF1YWQgXFx0aWxkZXtNfSwiXSxbMSwxLCJcXHRpbGRle059LCJdLFsyLDEsIlxcdGlsZGV7UH1cXHFxdWFkKSJdLFs0LDAsIlxcdGV4dHtIb219KE0sIFxcdGV4dHtIb219KE4sIFApICkiXSxbNCwxLCJcXHRleHR7SG9tfShcXHRpbGRlIE0sIFxcdGV4dHtIb219KFxcdGlsZGUgTiwgXFx0aWxkZSBQKSApIl0sWzMsMCwiXFxhbHBoYSIsMCx7Im9mZnNldCI6NH1dLFs0LDEsIlxcYmV0YSJdLFsyLDUsIlxcZ2FtbWEiLDIseyJvZmZzZXQiOjR9XSxbNiw3LCJcXGRlbHRhXFxtYXBzdG8gKFxcZXBzaWxvblxcbWFwc3RvXFxnYW1tYVxcY2lyYyhcXGRlbHRhXFxjaXJjXFxhbHBoYShcXGVwc2lsb24pKVxcY2lyY1xcYmV0YSIsMCx7Im9mZnNldCI6NX1dLFsyLDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDcsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiIiwyLHsic2hvcnRlbiI6eyJzb3VyY2UiOjMwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+> \[\begin{tikzcd} {(\qquad M,} & {N,} & {P\qquad)} && {\text{Hom}(M, \text{Hom}(N, P) )} \\ {(\qquad \tilde{M},} & {\tilde{N},} & {\tilde{P}\qquad)} && {\text{Hom}(\tilde M, \text{Hom}(\tilde N, \tilde P) )} \arrow[dashed, from=1-3, to=1-5] \arrow[""{name=0, anchor=center, inner sep=0}, "\gamma"', shift right=4, from=1-3, to=2-3] \arrow[""{name=1, anchor=center, inner sep=0}, "{\delta\mapsto (\epsilon\mapsto\gamma\circ(\delta\circ\alpha(\epsilon))\circ\beta}", shift right=5, from=1-5, to=2-5] \arrow["\alpha", shift right=4, from=2-1, to=1-1] \arrow["\beta", from=2-2, to=1-2] \arrow[dashed, from=2-3, to=2-5] \arrow[between={0.3}{0.8}, Rightarrow, dashed, from=0, to=1] \end{tikzcd}\] 
+> 
+> \end{document}
+> ```
+> 
 
 > [!Proposition] Tensor is right exact
 > Let $\varphi:M_{1}\to M_{2}$ be $R$-linear. Then $\text{coker}\,\varphi\otimes N\cong\text{coker}(\varphi \otimes\text{id}_{N})$. 
@@ -396,6 +371,66 @@ The same can be said about $N\otimes_{R}\_$.
 > > 
 > > We know that tensor is [[#^5f390d|left adjoint]]; it thus preserves colimits. In particular, it preserves cokernels. 
 > 
+
+^3f67ec
+
+> [!Proposition] Distributivity of The Tensor Product
+> There is a unique $R$-module isomorphism $M\otimes_{R}(N_{1}\oplus N_{2})\cong (M\otimes_{R}N_{1})\oplus (M\otimes_{R}N_{2})$ where $m\otimes(n, p)\mapsto(m\otimes n, m\otimes p)$. 
+> 
+> > [!Proof]-
+> > 
+> > Consider the exact sequence
+> > $$
+> > 0\to N_{1}\xhookrightarrow{i_{1}} N_{1}\oplus N_{2}\xtwoheadrightarrow{\pi_{2}} N_{2}\to 0.
+> > $$
+> > Since [[#^3f67ec|tensor is right exact]], we get that
+> > $$
+> > M\otimes N_{1}\to M\otimes (N_{1}\oplus N_{2})\to M\otimes N_{2}\to 0
+> > $$
+> > is exact; we need to show that $\mathrm{id}_{M}\otimes i_{1}$ is injective, since tensor products usually do not preserve that. This follows from functoriality: $\pi_{1}\circ i_{1}=\mathrm{id}_{N_{1}}$, so $(\mathrm{id}_{M}\otimes \pi_{1})\circ(\mathrm{id}_{M}\otimes i_{1})=\mathrm{id}_{M\otimes N_{1}}$, so $\mathrm{id}_{M}\otimes i_{1}$ must be injective. Thus, 
+> > $$
+> > 0\to M\otimes N_{1}\to M\otimes (N_{1}\oplus N_{2})\to M\otimes N_{2}\to 0
+> > $$
+> > is exact; furthermore, while proving injectivity, we have also shown than $\mathrm{id}_{M}\otimes i_{1}$ has a left inverse. Thus, the above sequence is a split exact sequence by [[Splitting of Short Exact Sequences for Modules#^0ea915]], and we are done. 
+> > 
+> > See @conradTensorProducts 5.3 for an elementary proof. 
+> 
+
+
+^af3762
+
+> [!Remark]
+> Arguing as in the proof of [[#^af3762]], we can show that tensor preserves [[Splitting of Short Exact Sequences for Modules#^ac830c|split exact sequences]]. 
+
+
+> [!Proposition]
+> Let $M_{1}, M_{2}, N_{1}, N_{2}$ be $R$-modules. Let $\varphi:M_{1}\to M_{2}$ be $R$-linear. Then there exists an $R$-linear map
+> $$
+> \begin{array}{cccc}
+> \varphi \otimes\text{id}_{N}: & M_{1}\otimes_{R}N & \to  & M_{2}\otimes_{R}N,  \\
+>  & x\otimes y & \mapsto  & \varphi(x)\otimes y.
+> \end{array}
+> $$
+> More generally, if $\psi:N_{1}\to N_{2}$ is $R$-linear then there exists $R$-linear map
+> $$
+> \begin{array}{cccc}
+> \varphi \otimes \psi: & M_{1}\otimes_{R}N_{1} & \to  & M_{2}\otimes_{R}N_{2},  \\
+>  & x\otimes y & \mapsto  & \varphi(x)\otimes \psi(y).
+> \end{array}
+> $$
+> 
+> > [!Proof]-
+> > 
+> > It is easy to verify that the map $\Phi:M_{1}\times N_{1}\to M_{2}\otimes_{R}N_{2}$ defined by $(x, y)\mapsto\varphi(x)\otimes \psi(y)$ is bilinear. The universal property then yields the required $R$-linear map. 
+> > 
+> > ```latex
+> > % latex-id: 1aef-ef50-d4c5-4240-8a07
+> > \begin{document}
+> > % https://q.uiver.app/#q=WzAsMyxbMCwwLCJNXzFcXHRpbWVzIE5fMVxcXFwgKHgsIHkpIl0sWzIsMCwiTV8yXFxvdGltZXNfUiBOXzIgXFxcXFxcdmFycGhpKHgpXFxvdGltZXNcXHBzaSh5KSJdLFswLDIsIk1fMVxcb3RpbWVzX1IgTl8xXFxcXCB4XFxvdGltZXMgeSJdLFswLDEsIiIsMix7Im9mZnNldCI6LTMsInNob3J0ZW4iOnsic291cmNlIjoxMCwidGFyZ2V0IjoxMH19XSxbMCwxLCIiLDAseyJvZmZzZXQiOjMsInNob3J0ZW4iOnsic291cmNlIjoxMCwidGFyZ2V0IjoxMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMCwyLCIiLDIseyJvZmZzZXQiOi0zLCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MTB9fV0sWzAsMiwiIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MTB9LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzIsMSwiIiwyLHsib2Zmc2V0IjotMywic2hvcnRlbiI6eyJzb3VyY2UiOjEwLCJ0YXJnZXQiOjIwfX1dLFsyLDEsIiIsMSx7Im9mZnNldCI6NSwic2hvcnRlbiI6eyJzb3VyY2UiOjEwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ== 
+> > \[\begin{tikzcd} \begin{array}{c} M_1\times N_1\\ (x, y) \end{array} && \begin{array}{c} M_2\otimes_R N_2 \\\varphi(x)\otimes\psi(y) \end{array} \\ \\ \begin{array}{c} M_1\otimes_R N_1\\ x\otimes y \end{array} \arrow[shift left=3, between={0.1}{0.9}, from=1-1, to=1-3] \arrow[shift right=3, between={0.1}{0.9}, maps to, from=1-1, to=1-3] \arrow[shift left=3, between={0.2}{0.9}, from=1-1, to=3-1] \arrow[shift right=5, between={0.2}{0.9}, maps to, from=1-1, to=3-1] \arrow[shift left=3, between={0.1}{0.8}, from=3-1, to=1-3] \arrow[shift right=5, between={0.1}{0.8}, maps to, from=3-1, to=1-3] \end{tikzcd}\]
+> > \end{document}
+> > ```
+> > 
 
 > [!Proposition] Upgrading structure, I
 > Let $S$ be an $R$-[[LEC ALG3 3#^419c68|algebra]] ($\varphi:R\to S$) and $M$ be an $R$-module. The $R$-module structure of $S\otimes_{R}M$ can be extended to that of an $S$-module, with the action of $S$ defined by 
@@ -501,6 +536,6 @@ The same can be said about $N\otimes_{R}\_$.
 
 [^2]: Note that the universal property of coproducts does NOT require the maps into the coproduct to be injective - indeed, this is not the case in $R\textsf{-Alg}$. For example, consider $\mathbb{Z}/4\mathbb{Z}\otimes_{\mathbb{Z}}\mathbb{Z}/6\mathbb{Z}\cong \mathbb{Z}/2\mathbb{Z}$ - there's no way to have an injection from $\mathbb{Z}/4\mathbb{Z}$ to $\mathbb{Z}/2\mathbb{Z}$!
 
+[^3]: Recall [[LEC ALG3 3#^e7f7db]]. 
 
-@biswasLatticePointsArising2026
-
+[^4]: We're fixing $N$, the middle component.

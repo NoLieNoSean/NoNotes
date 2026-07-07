@@ -79,9 +79,6 @@ Note:
 
 ^dfbd2b
 
-#q How does [[#^dfbd2b]] imply homotopy and isotopy classes of $F$ are equivalent?
-
-
 
 [^1]: Schultens just replaces the symbol $c$ with $c'$ when she goes "We may assume that $c\pitchfork h(c)$", which threw me off on my first read (I thought we were replacing the map $h$, not the curves). 
 

@@ -130,6 +130,8 @@ Thus, given any two compact connected surfaces, we can talk about *the* connecte
 > [!Definition] Elementary transformations
 > Relabeling, subdividing, consolidation, reflecting, rotating, cutting, pasting, folding, and unfolding. See [@leeIntroductionTopologicalManifolds2000 p.134]. 
 
+^a6c664
+
 > [!Proposition]
 > Each elementary transformation of a polygonal presentation produces a topologically equivalent presentation. 
 
@@ -183,6 +185,8 @@ We will now find standard presentations for connected sums.
 > > This is easily resolved, however: If $\pi_{K}$ identifies $v$ and $v'$ without an edge identification requiring it, it can be shown that any neighborhood of $v$ is disconnected by removing $v$, disqualifying $|K|$ as a manifold. 
 > 
 
+^b5a14b
+
 > [!Lemma] @leeIntroductionTopologicalManifolds2011 6.16
 > The Klein bottle $\mathbb{K}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
 
@@ -190,6 +194,8 @@ We will now find standard presentations for connected sums.
 
 > [!Lemma] @leeIntroductionTopologicalManifolds2011 6.17
 > The connected sum $\mathbb{T}^{2}\#\mathbb{P}^{2}$ is homeomorphic to $\mathbb{P}^{2}\#\mathbb{P}^{2}\#\mathbb{P}^{2}$. 
+
+^baa6b6
 
 > [!Theorem] Fundamental groups of polygonal presentations
 > Let $M$ be a topological space with a polygonal presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$ with one face, in which *all vertices are identified to a single point* [^3]. Then $\pi_{1}(M)$ has the presentation $\langle a_{1}, \dots, a_{n}\ | \ W \rangle$. 
@@ -204,10 +210,24 @@ We will now find standard presentations for connected sums.
 > 3. a connected sum $\mathbb{P}^{2}\#\dots\#\mathbb{P}^{2}$.
 > 
 
+^d016cb
+
+> [!Definition] Prime manifold
+> An $n$-manifold $M$ is **prime** if $M=M_{1}\#M_{2}$ implies either $M_{1}$ or $M_{2}$ is the $n$-sphere, i.e, that the [[Classification of compact surfaces#^9cb3a2|connected sum]] $M=M_{1}\#M_{2}$ is trivial. 
+
+^c04f97
+
+> [!Corollary]
+> It follows from [[#^d016cb]] and [[#^baa6b6]] that $\mathbb{S}^{2}$, $\mathbb{T}^{2}$, and $\mathbb{P}^{2}$ are the only prime compact surfaces.
+
+^677962
+
+Schultens takes a different route to [[#^677962]]: She first shows that a compact surface being prime is equivalent to it containing no essential separating simple closed curve, introduces [[#^b5a14b]], and proceeds to show that $\mathbb{S}^{2}$, $\mathbb{P}^{2}$ and $\mathbb{T}^{2}$ are prime by considering simple closed curves on their polygonal presentations. She then shows that these are the only compact prime surfaces using Lee's [[#^a6c664|elementary transformations]], after which comes the classification theorem. 
+
 > [!Definition] Genus
 > For an orientable surface, the number of tori in this connected sum is called the **genus**. For a non-orientable surface, the number of projective planes is called the **genus**. 
 
-This immediately leads to a classification of compact $2$-manifolds with boundary. 
+[[#^d016cb]] immediately leads to a classification of compact $2$-manifolds with boundary. 
 
 > [!Theorem]
 > Every compact $2$-manifold with boundary is homeomorphic to a compact $2$-manifold with finitely many open cells removed. 

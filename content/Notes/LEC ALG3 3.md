@@ -106,7 +106,7 @@ Such a structure is called an $R$-algebra.
 > $$
 > The remaining group axioms are easily verified.
 > 
-> Similarly, if $R$ is a commutative ring, each set $\text{Hom}_{R\textsf{-Mod}}(M, N)$ can be seen as an element of $R\textsf{-Mod}$. Indeed, let $M$ and $N$ be $R$-modules. Since homomorphisms of $R$-modules are in particular homomorphisms of abelian groups, 
+> Similarly, *if $R$ is a commutative ring, each set $\text{Hom}_{R\textsf{-Mod}}(M, N)$ can be seen as an element of $R\textsf{-Mod}$*. Indeed, let $M$ and $N$ be $R$-modules. Since homomorphisms of $R$-modules are in particular homomorphisms of abelian groups, 
 > $$
 > \text{Hom}_{R\textsf{-Mod}}(M, N)\subseteq \text{Hom}_{\textsf{Ab}}(M, N).
 > $$

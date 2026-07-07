@@ -2,6 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import style from "./styles/footer.scss"
 import { version } from "../../package.json"
 import { i18n } from "../i18n"
+import { gitHash, gitBranch, gitCommit } from "../util/buildInfo"
 
 interface Options {
   links: Record<string, string>
@@ -39,7 +40,6 @@ export default ((opts?: Options) => {
             <div>
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
             </div>
-            <img class="noAI" src="https://100r.co/media/interface/noai.png" alt="noAI"/>
           </div> */}
         </div>
       </footer>

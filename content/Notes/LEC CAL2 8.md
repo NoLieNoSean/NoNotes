@@ -21,7 +21,7 @@ $$
 $$
 
 
-[!Proof]-
+*This is essentially a pullback!*
 
 
 
