@@ -21,19 +21,21 @@ export default ((opts?: Options) => {
           <line x1="0" x2="1300" y1="12.5" y2="12.5"></line>
         </svg>
 
-        
+
         <div class="wrapper">
           <div class="footer-text">
             <ul>
-          {Object.entries(links).map(([text, link]) => (
-            <li>
-              <a href={link}>{text}</a>
-            </li>
-          ))}
-        </ul>
+              {Object.entries(links).map(([text, link]) => (
+                <li>
+                  <a href={link}>{text}</a>
+                </li>
+              ))}
+            </ul>
             {i18n(cfg.locale).components.footer.createdWith}{" "}
             <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>
-
+            <div class="build-info">
+               {gitBranch}@{gitHash} — {gitCommit}
+            </div>
 
           </div>
           {/* <div class="license-notice">
