@@ -55,11 +55,15 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W26
 
+[[Dehn's Lemma]]
+[[Hierarchies]]
 [[Seifert Fibered Spaces]]
 
 ---
 
 # W27
+
+[[Heegaard splittings]]
 
 ---
 

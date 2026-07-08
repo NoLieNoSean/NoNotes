@@ -27,6 +27,9 @@ Topics: Deck transformations, classification of covering spaces
 #td
 
 
+> [!Example]
+> Every non-orientable compact surface of genus $n\geq 1$ has a two-sheeted covering by an orientable one of genus $n-1$. See @hiatusAnswerCoveringSpace2013 
+
 > [!Definition] Branched covering
 > Let $E$, $B$ be manifolds, $E'$ a submanifold of $E$, $B'$ a submanifold of $B$, and $p:E\to B$ a continuous map. The quintet $(E, E', B, B', p)$ is a **branched covering** if 
 > 1. $p|_{E\setminus E'}:E\setminus E'\to B\setminus B'$ is a [[Homotopy, Covering Spaces and the Fundamental Group#^03ba68|covering map]]; 

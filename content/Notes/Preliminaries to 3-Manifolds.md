@@ -38,6 +38,8 @@ Another way is to look at $M$ and $\tilde{M}$ as mapping tori of $\mathbb{B}^{2}
 > [!Definition] Mapping Torus
 > Let $S$ be a closed connected $n$-manifold and $f:S\to S$ a homeomorphism. The **mapping torus** $M_{f}$ of $f$ is the $(n+1)$-manifold obtained from $S\times[-1, 1]$ by identifying the points $(x, -1)$ and $(f(x), 1)$ for all $x\in S$. The mapping torus of $f$ is a $S$-bundle over $\mathbb{S}^{1}$. 
 
+^8cfc5c
+
 Note that changing $f$ by an isotopy doesn't change the resulting manifold, so in fact $M_{f}$ only depends on the [[The Mapping Class Group#^fb44bb|mapping class]] of $\phi$. 
 
 If we let $f$ denote a reflection of $\mathbb{B}^{2}$ and $\tilde{f}$ denote the antipodal map of $\mathbb{B}^{2}$, then we have $M=M_{f}$ and $\tilde{M}=M_{\tilde{f}}$. It is clear that $f$ and $\tilde{f}$ are not isotopic ( #td write an argument for this), so it follows that $M$ and $\tilde{M}$ are not equivalent.

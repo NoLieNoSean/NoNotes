@@ -45,6 +45,9 @@ However, there exist spaces that are not strong deformation retracts of each oth
 
 For example, if $A$ is a strong deformation retract of $X$, then $A$ has the same homotopy type as $X$: if we let $j:A\hookrightarrow X$ be the inclusion and let $r:X\to A$ be the retraction mapping, then the composite $r\circ j$ *equals* the identity map of $A$, and the composite $j\circ r$ is by hypothesis homotopic to $\mathrm{id}_{X}$. 
 
+Cuz I'm daft: homotopy equivalence does not imply two spaces are homeomorphic. 
+The theta space and the figure eight space are both strong deformation retracts of the doubly punctured plane. Therefore, they are homotopy equivalent to each other. However, the figure eight space can be disconnected by removing a single point, a property the theta space does not share. 
+
 We now show that two spaces that have the same homotopy type have isomorphic fundamental groups. 
 
 > [!Lemma]
@@ -65,9 +68,20 @@ We now show that two spaces that have the same homotopy type have isomorphic fun
 > $$
 > is an isomorphism.
 
-The theta space and the figure eight space are both strong deformation retracts of the doubly punctured plane. Therefore, they are homotopy equivalent to each other. 
+^7765cb
 
-In fact, two spaces $X$ and $Y$ have the same homotopy type iff they are homeomorphic to strong deformation retracts of a single space: the mapping cylinder of a homotopy equivalence $f:X\to Y$ strong deformation retracts onto homeomorphic images of $X$ and $Y$. 
+It can be shown that homotopy equivalence preserves all higher fundamental groups. 
+
+> [!Example]
+> 
+> The converse of [[#^7765cb]] is emphatically false. Take $\mathbb{S}^{2}$ and a single point $\{ * \}$ for instance - both of them have the trivial fundamental group, but $\pi_{2}(\mathbb{S}^{2})\cong \mathbb{Z}$ while $\pi_{2}(\{ * \})=\{ 1 \}$. For a slightly overkill example, consider the [[Hierarchies#^0dc48d|lens spaces]] $L(5, 1)$ and $L(5, 2)$: they have isomorphic fundamental groups (and the same homology), but do not have the same homotopy type. 
+> 
+> As another reminder that homotopy equivalence does not imply homotopy equivalence, consider $L(7, 1)$ and $L(7, 2)$: these have the same homotopy type (and thus isomorphic fundamental groups and homology), but not the same homeomorphism type. 
+> 
+> #cn
+
+
+Two spaces $X$ and $Y$ have the same homotopy type iff they are homeomorphic to strong deformation retracts of a single space: the mapping cylinder of a homotopy equivalence $f:X\to Y$ strong deformation retracts onto homeomorphic images of $X$ and $Y$. 
 
 > [!Definition] Mapping cylinder
 > The **mapping cylinder** of a continuous map $f:X\to Y$ is defined by the [[The Quotient Topology#^a08554|quotient]]
