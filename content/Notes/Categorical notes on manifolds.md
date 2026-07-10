@@ -4,7 +4,7 @@ date: 2026-06-22
 time: 01:52
 tags:
 ---
-The key idea, except in $\textsf{Triang}$, is the following: Choose a subgroup $G\subseteq X$, where $X$ is the subgroup of all continuous/differentiable/isometric symmetries of $\mathbb{R}^{n}$, and require all the transition maps to belong to $G$.   
+The key idea, except in $\textsf{Triang}$, is the following: Choose a subgroup $G\subseteq X$, where $X$ is the subgroup of all continuous/differentiable/isometric symmetries of $\mathbb{R}^{n}$, and require all the transition maps to belong to $G$.
 
 > [!Exercise]
 > #td See how the manifolds you are familiar with in these categories fit into this view.

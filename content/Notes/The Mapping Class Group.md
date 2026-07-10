@@ -48,15 +48,15 @@ tags:
 > > 
 > > Given a simple closed curve $\gamma$ on $\mathbb{T}^{2}$, we define an integer vector
 > > $$
-> > i(\gamma)=([\gamma]\cdot[m], [\gamma]\cdot[l]),
+> > i(\gamma)=([\gamma]\cdot[-l], [\gamma]\cdot[m]),
 > > $$
-> > where $m$ and $l$ are the filling curves form [[Homotopy and Isotopy on Surfaces#^d60470]] ($i$ defines coordinates on the [[Homology#^2e2c68|homology group]] $H_{1}(\mathbb{T}^{2}, \mathbb{Z})$, which is isomorphic to $\mathbb{Z}^{2}$). 
+> > where $m$ and $l$ are the filling curves form [[Homotopy and Isotopy on Surfaces#^d60470]] satisfying $[l]\cdot[m]=1$. ($i$ defines coordinates on the [[Homology#^2e2c68|homology group]] $H_{1}(\mathbb{T}^{2}, \mathbb{Z})$, which is isomorphic to $\mathbb{Z}^{2}$). 
 > > 
-> > Then, given a homeomorphism $f\in \text{Homeo}(\mathbb{T}^{2})$, we define the matrix $A_{f}$, whose columns are the vectors $i(f(l))$ and $i(f(m))$:
+> > Then, given a homeomorphism $f\in \text{Homeo}(\mathbb{T}^{2})$, we define the matrix $A_{f}$, whose columns are the vectors $i(f(m))$ and $i(f(l))$:
 > > $$
 > > A_{f}=\begin{bmatrix}
-> > [f(l)]\cdot[m] & [f(m)]\cdot[m] \\
-> > [f(l)]\cdot[l] & [f(m)]\cdot[l]
+> > [f(m)]\cdot[-l] & [f(m)]\cdot[-l] \\
+> > [f(m)]\cdot[m] & [f(m)]\cdot[m]
 > > \end{bmatrix}
 > > $$
 > > We note that the matrix $A_{f}$ completely determines the isotopy class of $f$ ( #q why?), that the map $\eta:f\mapsto A_{f}$ is a homomorphism from $\text{Homeo}(\mathbb{T}^{2})$ to $\text{Aut}(H_{1}(\mathbb{T}^{2}, \mathbb{Z}))\cong GL(2, \mathbb{Z})$, and that this map descends to a homomorphism $H: \text{Mod}(\mathbb{T}^{2})\to GL(2, \mathbb{Z})$. We then proceed to show that $H$ is an isomorphism on $SL(2, \mathbb{Z})$ (which makes sense from a distance, since $f$ is orientation preserving). 
@@ -66,9 +66,11 @@ tags:
 
 <iframe src="https://www.desmos.com/3d/ebsdaadrli" width="100%" height= "500px"></iframe>
 
+
+^^^ The conventions here need to be updated! #td
 # Dehn twists
 
-A simple closed curve $c$ in a surface $S$ has a regular neighborhood: When $c$ is [[Differentiable manifolds#^b6cdf3]], this means there is an embedding of an annuls $f:\mathbb{S}^{1}\times[0, 1]\to S$ such that $c=f(\mathbb{S}^{1}\times \{ 1/2 \})$ whose image is the regular neighborhood. If $c$ is orientation reversing, an analogous statement holds with the annulus replaced by a Möbius band. 
+A simple closed curve $c$ in a surface $S$ has a regular neighborhood: When $c$ is [[Differentiable manifolds#^b6cdf3|orientation preserving]], this means there is an embedding of an annuls $f:\mathbb{S}^{1}\times[0, 1]\to S$ such that $c=f(\mathbb{S}^{1}\times \{ 1/2 \})$ whose image is the regular neighborhood. If $c$ is orientation reversing, an analogous statement holds with the annulus replaced by a Möbius band. 
 
 > [!Definition] Dehn twist
 > Let $c$ be an orientation-preserving simple closed curve in a compact surface $S$ and let $N(c)$ be a regular neighborhood of $c$ that is oriented via the parameterization $i:\mathbb{S}^{1}\times[0, 1]\to \eta(c)$. A map $f:S\to S$ is called a **left Dehn twist** around $c$ if

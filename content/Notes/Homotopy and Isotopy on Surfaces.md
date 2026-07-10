@@ -43,8 +43,10 @@ Note:
 > Let $F$ be a surface and let $\mathcal{C}=\{ c_{1}, \dots, c_{n} \}$ be a collection of simple closed curves in $F$ that have been isotoped to intersect in a minimal number of points. We say that $\mathcal{C}$ is **filling** if $F\setminus(c_{1}\cup\dots \cup c_{n})$ is a union of disks. 
 
 > [!Example]
-> The pair of curves (usually denoted by $\{ l, m \}$) on $\mathbb{T}^{2}$ pictured below is filling. 
-> ![[-20260702175058733.jpg|400]]
+> The pictured pair of curves, usually denoted by $\{ l, m \}$ for longitudinal (blue) and meridional (red), on $\mathbb{T}^{2}$ is filling. Note that $[l]\cdot[m]=1$. 
+> 
+> ![[Screenshot 2026-07-09 at 23.50.46.png]]
+> 
 
 ^d60470
 

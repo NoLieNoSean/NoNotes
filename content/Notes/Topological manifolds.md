@@ -126,11 +126,17 @@ However, this is regarded as a weak definition in geometric topology, since it a
 More generally, we have
 
 > [!Definition] Regular Neighborhood, @schultensIntroduction3manifolds2014 3.1.12
-> Let $M$ be an $n$-manifold. Let $S$ be a [[#^8517b5|submanifold]] of $M$ of dimension $m$. A **regular neighborhood** of $S$ is a submanifold $N(S)$ of $M$ of dimension $n$ that is the total space of a bundle over $S$ with fiber $I^{n-m}$. A regular neighborhood of a $1$-manifold in a $3$-manifold is also called a **tubular** neighborhood. A regular neighborhood of an $(n-1)$-dimensional submanifold of an $n$-manifold that is a trivial bundle is also called a **collar**. An **open regular neighborhood** of $S$ is the interior of a regular neighborhood of $S$. 
+> Let $M$ be an $n$-manifold. Let $S$ be a [[#^8517b5|submanifold]] of $M$ of dimension $m$. A **regular neighborhood** of $S$ is a submanifold $N(S)$ of $M$ of dimension $n$ that is the total space of a [[Fiber bundles#^a3d022|bundle]] over $S$ with fiber $I^{n-m}$. A regular neighborhood of a $1$-manifold in a $3$-manifold is also called a **tubular** neighborhood. A regular neighborhood of an $(n-1)$-dimensional submanifold of an $n$-manifold that is a trivial bundle is also called a **collar**. An **open regular neighborhood** of $S$ is the interior of a regular neighborhood of $S$. 
 
 ^a8b826
 
 Thus, a regular ball is just an open regular neighborhood of a point.
+
+> [!Theorem] The $\epsilon$-Neighborhood Theorem, @schultensIntroduction3manifolds2014 A.0.21
+> Let $Y$ be a compact $k$-dimensional submanifold of the $n$-manifold $X$. Let $Y^{\epsilon}$ denote the set of all points in $X$ with distance less than $\epsilon$ from $Y$. If $\epsilon$ is sufficiently small, then $Y^{\epsilon}$ is a $\mathbb{B}^{n-k}$-bundle over $Y$.
+
+^b1346e
+
 
 # Manifolds as quotient spaces
 

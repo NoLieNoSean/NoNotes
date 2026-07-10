@@ -74,7 +74,7 @@ It can be shown that homotopy equivalence preserves all higher fundamental group
 
 > [!Example]
 > 
-> The converse of [[#^7765cb]] is emphatically false. Take $\mathbb{S}^{2}$ and a single point $\{ * \}$ for instance - both of them have the trivial fundamental group, but $\pi_{2}(\mathbb{S}^{2})\cong \mathbb{Z}$ while $\pi_{2}(\{ * \})=\{ 1 \}$. For a slightly overkill example, consider the [[Hierarchies#^0dc48d|lens spaces]] $L(5, 1)$ and $L(5, 2)$: they have isomorphic fundamental groups (and the same homology), but do not have the same homotopy type. 
+> The converse of [[#^7765cb]] is emphatically false. Take $\mathbb{S}^{2}$ and a single point $\{ * \}$ for instance - both of them have the trivial fundamental group, but $\pi_{2}(\mathbb{S}^{2})\cong \mathbb{Z}$ while $\pi_{2}(\{ * \})=\{ 1 \}$. For a slightly overkill example, consider the [[Haken Manifolds#^0dc48d|lens spaces]] $L(5, 1)$ and $L(5, 2)$: they have isomorphic fundamental groups (and the same homology), but do not have the same homotopy type. 
 > 
 > As another reminder that homotopy equivalence does not imply homotopy equivalence, consider $L(7, 1)$ and $L(7, 2)$: these have the same homotopy type (and thus isomorphic fundamental groups and homology), but not the same homeomorphism type. 
 > 

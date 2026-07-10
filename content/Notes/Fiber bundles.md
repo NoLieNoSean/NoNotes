@@ -25,7 +25,7 @@ draft: false
 
 In other words, $E$ looks like the product $B\times F$ (at least locally), except that the fibers $p^{-1}(x)$ for $x\in B$ may be "twisted".
 
-A simple nontrivial example is the Möbius strip, which is a nontrivial fiber bundle over the circle with fiber $I$. 
+A simple nontrivial example is the Möbius strip, which is a nontrivial fiber bundle over the circle with fiber $I$ (note that you can't think of the Möbius strip as an $\mathbb{S}^{1}$ bundle over $I$!). 
 
 > [!Definition] Isomorphism of bundles
 > Suppose that $(E, F, B, p)$ and $(E', F, B', p')$ are $F$-bundles. An **isomorphism** between the bundles is a pair of homeomorphisms $h:E\to E'$ and $f:B\to B'$ such that the following diagram commutes:

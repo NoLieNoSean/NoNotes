@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torus in S³ — Ball Model Visualization</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; overflow: hidden; background: #0a0a1a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        #controls {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(20, 20, 40, 0.92);
+            color: #e0e0ff;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 100, 200, 0.3);
+            z-index: 100;
+            width: 330px;
+            backdrop-filter: blur(5px);
+        }
+        #controls h2 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #a0a0ff;
+        }
+        #controls .subtitle {
+            font-size: 11px;
+            color: #8080aa;
+            margin-bottom: 15px;
+        }
+        #controls label {
+            display: block;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+        #controls input[type="range"] {
+            width: 140px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        #controls .val {
+            display: inline-block;
+            width: 45px;
+            text-align: right;
+            font-family: monospace;
+            color: #a0c0ff;
+        }
+        #controls hr {
+            border: none;
+            border-top: 1px solid rgba(100, 100, 200, 0.2);
+            margin: 12px 0;
+        }
+        #controls button {
+            background: rgba(80, 80, 160, 0.5);
+            color: #c0c0ff;
+            border: 1px solid rgba(100, 100, 200, 0.4);
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        #controls button:hover {
+            background: rgba(100, 100, 200, 0.6);
+        }
+        #controls .checkbox-label {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        #controls .curve-label {
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .label-l { background: rgba(255, 40, 40, 0.2); color: #ff6060; border: 1px solid rgba(255, 40, 40, 0.4); }
+        .label-m { background: rgba(40, 255, 40, 0.2); color: #60ff60; border: 1px solid rgba(40, 255, 40, 0.4); }
+        
+        #info {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #a0a0cc;
+            font-size: 11px;
+            background: rgba(10, 10, 30, 0.85);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(80, 80, 150, 0.3);
+            max-width: 420px;
+            line-height: 1.5;
+        }
+        #info b { color: #c0c0ff; }
+        #info .red { color: #ff6060; }
+        #info .green { color: #60ff60; }
+    </style>
+</head>
+<body>
+    <div id="controls" style="display:none">
+        <h2>Torus in S³</h2>
+        <div class="subtitle">Ball model: B³ with ∂B³ identified to a point</div>
+        
+        <label>Direction 1 (x₁↔x₃): <input type="range" id="t1" min="-1.57" max="1.57" step="0.01" value="0"><span class="val" id="v1">0.00</span></label>
+        <label>Direction 2 (x₂↔x₄): <input type="range" id="t2" min="-1.57" max="1.57" step="0.01" value="0"><span class="val" id="v2">0.00</span></label>
+        <label>Direction 3 (x₁↔x₄): <input type="range" id="t3" min="-1.57" max="1.57" step="0.01" value="0"><span class="val" id="v3">0.00</span></label>
+        
+        <hr>
+        
+        <label>Torus R (r=√(1−R²)): <input type="range" id="R" min="0.05" max="0.95" step="0.01" value="0.707"><span class="val" id="vR">0.707</span></label>
+        
+        <hr>
+        
+        <div>
+            <label class="checkbox-label"><input type="checkbox" id="showBoundary" checked> ∂B³</label>
+            <label class="checkbox-label"><input type="checkbox" id="showWireframe" checked> Wireframe</label>
+        </div>
+        <div style="margin-top: 8px;">
+            <label class="curve-label label-l"><input type="checkbox" id="showL" checked> <b>l</b> longitudinal</label>
+            <label class="curve-label label-m"><input type="checkbox" id="showM" checked> <b>m</b> meridional</label>
+        </div>
+        <div style="margin-top: 8px;">
+            <label class="checkbox-label"><input type="checkbox" id="showMarkers" checked> Direction markers</label>
+        </div>
+        
+        <hr>
+        
+        <div style="font-size: 12px; color: #a0a0ff; margin-bottom: 5px;"><b>Curve Settings</b></div>
+        <label>Loc of <span id="lblLocL" style="color:#ff6060">l</span> (β): <input type="range" id="locL" min="0" max="6.283" step="0.01" value="0"><span class="val" id="vLocL">0.00</span></label>
+        <label class="checkbox-label"><input type="checkbox" id="revL"> Reverse <span id="lblRevL" style="color:#ff6060">l</span></label>
+        
+        <label>Loc of <span id="lblLocM" style="color:#60ff60">m</span> (α): <input type="range" id="locM" min="0" max="6.283" step="0.01" value="0"><span class="val" id="vLocM">0.00</span></label>
+        <label class="checkbox-label"><input type="checkbox" id="revM"> Reverse <span id="lblRevM" style="color:#60ff60">m</span></label>
+        
+        <div style="margin-top: 12px;">
+            <button id="resetBtn">Reset</button>
+            <button id="animateBtn">Auto-animate</button>
+            <button id="swapColorsBtn" title="Swap colors of l and m">🔄 Swap Colors</button>
+        </div>
+    </div>
+    
+    <div id="info" style="display:none">
+        <b>S³ = B³ ∪ {∞}</b> — the 3-sphere as a 3-ball with boundary collapsed to a single point.<br>
+        <span id="infoLblL" class="red"><b>l</b></span> = longitudinal curve (α varies, fixed β) &nbsp;|&nbsp; 
+        <span id="infoLblM" class="green"><b>m</b></span> = meridional curve (β varies, fixed α)<br>
+        Arrows indicate direction of increasing parameter.<br>
+        <em>Drag to orbit • Scroll to zoom • Use sliders to move the torus and curves</em>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script>
+        // ============================================================
+        // SCENE SETUP
+        // ============================================================
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x000000);
+        scene.fog = new THREE.Fog(0x0a0a1a, 8, 20);
+
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0, 0.5, 3.2);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        document.body.appendChild(renderer.domElement);
+
+        const orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
+        orbitControls.enableDamping = true;
+        orbitControls.dampingFactor = 0.08;
+        orbitControls.minDistance = 1.5;
+        orbitControls.maxDistance = 8;
+
+        // ============================================================
+        // LIGHTING
+        // ============================================================
+        scene.add(new THREE.AmbientLight(0x505070, 0.6));
+        const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.9);
+        dirLight1.position.set(3, 4, 5);
+        scene.add(dirLight1);
+        const dirLight2 = new THREE.DirectionalLight(0x6060ff, 0.4);
+        dirLight2.position.set(-3, -2, -4);
+        scene.add(dirLight2);
+        const pointLight = new THREE.PointLight(0xff8040, 0.3, 10);
+        pointLight.position.set(0, 2, 0);
+        scene.add(pointLight);
+
+        // ============================================================
+        // BOUNDARY SPHERE (∂B³)
+        // ============================================================
+        const boundaryGroup = new THREE.Group();
+        
+        const boundaryWire = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 48, 48),
+            new THREE.MeshBasicMaterial({ 
+                color: 0x4466ff, 
+                wireframe: true, 
+                transparent: true, 
+                opacity: 0.2 
+            })
+        );
+        boundaryGroup.add(boundaryWire);
+        
+        const boundarySolid = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 48, 48),
+            new THREE.MeshPhongMaterial({ 
+                color: 0x1a1a66, 
+                transparent: true, 
+                opacity: 0.04, 
+                side: THREE.DoubleSide,
+                depthWrite: false
+            })
+        );
+        boundaryGroup.add(boundarySolid);
+        scene.add(boundaryGroup);
+
+        // ============================================================
+        // TORUS MESH SETUP
+        // ============================================================
+        const NA = 144;
+        const NB = 144;
+
+        const torusGeom = new THREE.BufferGeometry();
+        
+        const indices = [];
+        for (let i = 0; i < NA; i++) {
+            for (let j = 0; j < NB; j++) {
+                const a = (i + 1) % NA;
+                const b = (j + 1) % NB;
+                const i00 = i * NB + j;
+                const i10 = a * NB + j;
+                const i01 = i * NB + b;
+                const i11 = a * NB + b;
+                indices.push(i00, i10, i01);
+                indices.push(i10, i11, i01);
+            }
+        }
+        torusGeom.setIndex(indices);
+        torusGeom.setAttribute('position', new THREE.Float32BufferAttribute(new Array(NA * NB * 3).fill(0), 3));
+        torusGeom.setAttribute('color', new THREE.Float32BufferAttribute(new Array(NA * NB * 3).fill(0), 3));
+
+        const torusMat = new THREE.MeshPhongMaterial({
+            vertexColors: true,
+            side: THREE.DoubleSide,
+            shininess: 80,
+            specular: 0x404060,
+            transparent: true,
+            opacity: 0.85
+        });
+        const torusMesh = new THREE.Mesh(torusGeom, torusMat);
+        scene.add(torusMesh);
+
+        const wireframeMat = new THREE.MeshBasicMaterial({
+            color: 0x000000,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.06
+        });
+        const wireframeMesh = new THREE.Mesh(torusGeom, wireframeMat);
+        scene.add(wireframeMesh);
+
+        // ============================================================
+        // CURVE SETUP (l and m)
+        // ============================================================
+        const NUM_CURVE_PTS = 256;
+        const NUM_MARKERS = 12;
+
+        // --- Longitudinal curve l ---
+        const curveLGeom = new THREE.BufferGeometry();
+        curveLGeom.setAttribute('position', new THREE.Float32BufferAttribute(new Array(NUM_CURVE_PTS * 3).fill(0), 3));
+        const curveLMat = new THREE.LineBasicMaterial({ 
+            color: 0xff3030, 
+            linewidth: 2,
+            transparent: true,
+            opacity: 0.95,
+            depthTest: true
+        });
+        const curveLLine = new THREE.Line(curveLGeom, curveLMat);
+        curveLLine.renderOrder = 2;
+        scene.add(curveLLine);
+
+        // --- Meridional curve m ---
+        const curveMGeom = new THREE.BufferGeometry();
+        curveMGeom.setAttribute('position', new THREE.Float32BufferAttribute(new Array(NUM_CURVE_PTS * 3).fill(0), 3));
+        const curveMMat = new THREE.LineBasicMaterial({ 
+            color: 0x30ff30, 
+            linewidth: 2,
+            transparent: true,
+            opacity: 0.95,
+            depthTest: true
+        });
+        const curveMLine = new THREE.Line(curveMGeom, curveMMat);
+        curveMLine.renderOrder = 2;
+        scene.add(curveMLine);
+
+        // --- Directional markers (cones) ---
+        const markerGeomL = new THREE.ConeGeometry(0.018, 0.045, 6);
+        const markerMatL = new THREE.MeshPhongMaterial({ 
+            color: 0xff4040, 
+            emissive: 0x401010,
+            shininess: 60
+        });
+        
+        const markerGeomM = new THREE.ConeGeometry(0.018, 0.045, 6);
+        const markerMatM = new THREE.MeshPhongMaterial({ 
+            color: 0x40ff40, 
+            emissive: 0x104010,
+            shininess: 60
+        });
+
+        const markersL = [];
+        const markersM = [];
+        const markerGroupL = new THREE.Group();
+        const markerGroupM = new THREE.Group();
+        markerGroupL.renderOrder = 3;
+        markerGroupM.renderOrder = 3;
+
+        for (let i = 0; i < NUM_MARKERS; i++) {
+            const coneL = new THREE.Mesh(markerGeomL, markerMatL);
+            markerGroupL.add(coneL);
+            markersL.push(coneL);
+
+            const coneM = new THREE.Mesh(markerGeomM, markerMatM);
+            markerGroupM.add(coneM);
+            markersM.push(coneM);
+        }
+        scene.add(markerGroupL);
+        scene.add(markerGroupM);
+
+        // ============================================================
+        // COLOR STATE
+        // ============================================================
+        let colorL = { r: 0xff, g: 0x30, b: 0x30 }; // Red
+        let colorM = { r: 0x30, g: 0xff, b: 0x30 }; // Green
+
+        function applyColors() {
+            // Update line materials
+            curveLMat.color.setRGB(colorL.r / 255, colorL.g / 255, colorL.b / 255);
+            curveMMat.color.setRGB(colorM.r / 255, colorM.g / 255, colorM.b / 255);
+            
+            // Update marker materials
+            markerMatL.color.setRGB(colorL.r / 255, colorL.g / 255, colorL.b / 255);
+            markerMatL.emissive.setRGB(colorL.r / 5 / 255, colorL.g / 5 / 255, colorL.b / 5 / 255);
+            
+            markerMatM.color.setRGB(colorM.r / 255, colorM.g / 255, colorM.b / 255);
+            markerMatM.emissive.setRGB(colorM.r / 5 / 255, colorM.g / 5 / 255, colorM.b / 5 / 255);
+
+            // Update UI labels
+            const hexL = '#' + colorL.r.toString(16).padStart(2,'0') + colorL.g.toString(16).padStart(2,'0') + colorL.b.toString(16).padStart(2,'0');
+            const hexM = '#' + colorM.r.toString(16).padStart(2,'0') + colorM.g.toString(16).padStart(2,'0') + colorM.b.toString(16).padStart(2,'0');
+            
+            document.getElementById('lblLocL').style.color = hexL;
+            document.getElementById('lblRevL').style.color = hexL;
+            document.getElementById('lblLocM').style.color = hexM;
+            document.getElementById('lblRevM').style.color = hexM;
+            
+            document.getElementById('infoLblL').style.color = hexL;
+            document.getElementById('infoLblM').style.color = hexM;
+        }
+
+        function swapColors() {
+            const temp = { ...colorL };
+            colorL = { ...colorM };
+            colorM = { ...temp };
+            applyColors();
+        }
+
+        // ============================================================
+        // PROJECTION: S³ → B³
+        // ============================================================
+        function projectToBall(x1, x2, x3, x4) {
+            const x4sq = x4 * x4;
+            const s = Math.sqrt(Math.max(0, 1 - x4sq));
+            const denom = 1 - x4 + s;
+            
+            if (denom < 1e-4) {
+                const norm = Math.sqrt(x1*x1 + x2*x2 + x3*x3);
+                if (norm < 1e-6) return [0, 0, 0.999];
+                return [x1/norm * 0.999, x2/norm * 0.999, x3/norm * 0.999];
+            }
+            
+            let U = x1 / denom;
+            let V = x2 / denom;
+            let W = x3 / denom;
+            
+            const dist = Math.sqrt(U*U + V*V + W*W);
+            if (dist > 0.999) {
+                const scale = 0.999 / dist;
+                U *= scale; V *= scale; W *= scale;
+            }
+            
+            return [U, V, W];
+        }
+
+        // ============================================================
+        // TRANSFORM HELPER
+        // ============================================================
+        function transformPoint(x1, x2, x3, x4, cosT1, sinT1, cosT2, sinT2, cosT3, sinT3) {
+            // Rotation 1: in (x1, x3) plane
+            let nx1 = x1 * cosT1 - x3 * sinT1;
+            let nx3 = x1 * sinT1 + x3 * cosT1;
+            x1 = nx1; x3 = nx3;
+            
+            // Rotation 2: in (x2, x4) plane
+            let nx2 = x2 * cosT2 - x4 * sinT2;
+            let nx4 = x2 * sinT2 + x4 * cosT2;
+            x2 = nx2; x4 = nx4;
+            
+            // Rotation 3: in (x1, x4) plane
+            nx1 = x1 * cosT3 - x4 * sinT3;
+            nx4 = x1 * sinT3 + x4 * cosT3;
+            x1 = nx1; x4 = nx4;
+            
+            return projectToBall(x1, x2, x3, x4);
+        }
+
+        // ============================================================
+        // UPDATE TORUS + CURVES + MARKERS
+        // ============================================================
+        const _up = new THREE.Vector3(0, 1, 0);
+        const _dir = new THREE.Vector3();
+        const _pos = new THREE.Vector3();
+        const _posNext = new THREE.Vector3();
+        const _quat = new THREE.Quaternion();
+
+        function updateTorus(t1, t2, t3, R) {
+            const r = Math.sqrt(Math.max(0, 1 - R * R));
+            const positions = torusGeom.attributes.position.array;
+            const colors = torusGeom.attributes.color.array;
+            
+            const cosT1 = Math.cos(t1), sinT1 = Math.sin(t1);
+            const cosT2 = Math.cos(t2), sinT2 = Math.sin(t2);
+            const cosT3 = Math.cos(t3), sinT3 = Math.sin(t3);
+            
+            const color = new THREE.Color();
+            let maxDist = 0;
+            
+            // --- Read new settings ---
+            const betaLocL = parseFloat(document.getElementById('locL').value);
+            const alphaLocM = parseFloat(document.getElementById('locM').value);
+            const revL = document.getElementById('revL').checked;
+            const revM = document.getElementById('revM').checked;
+            
+            document.getElementById('vLocL').textContent = betaLocL.toFixed(2);
+            document.getElementById('vLocM').textContent = alphaLocM.toFixed(2);
+
+            // --- Update torus surface ---
+            for (let i = 0; i < NA; i++) {
+                const alpha = (i / NA) * 2 * Math.PI;
+                const cosA = Math.cos(alpha), sinA = Math.sin(alpha);
+                
+                for (let j = 0; j < NB; j++) {
+                    const beta = (j / NB) * 2 * Math.PI;
+                    const cosB = Math.cos(beta), sinB = Math.sin(beta);
+                    
+                    let x1 = R * cosA;
+                    let x2 = R * sinA;
+                    let x3 = r * cosB;
+                    let x4 = r * sinB;
+                    
+                    const [U, V, W] = transformPoint(x1, x2, x3, x4, cosT1, sinT1, cosT2, sinT2, cosT3, sinT3);
+                    
+                    const idx = (i * NB + j) * 3;
+                    positions[idx]     = U;
+                    positions[idx + 1] = V;
+                    positions[idx + 2] = W;
+                    
+                    const d = Math.sqrt(U*U + V*V + W*W);
+                    if (d > maxDist) maxDist = d;
+                    
+                    const hue = alpha / (2 * Math.PI);
+                    const lightness = 0.3 + 0.45 * ((x4 + 1) / 2);
+                    color.setHSL(hue, 0.7, lightness);
+                    colors[idx]     = color.r;
+                    colors[idx + 1] = color.g;
+                    colors[idx + 2] = color.b;
+                }
+            }
+            
+            torusGeom.attributes.position.needsUpdate = true;
+            torusGeom.attributes.color.needsUpdate = true;
+            torusGeom.computeVertexNormals();
+            
+            // --- Generate points for longitudinal curve l ---
+            // l: varies alpha, beta is fixed (slider value)
+            const ptsL = [];
+            for (let k = 0; k < NUM_CURVE_PTS; k++) {
+                const t = (k / NUM_CURVE_PTS) * 2 * Math.PI;
+                // If reversed, traverse alpha backwards
+                const alpha = revL ? (2 * Math.PI - t) : t;
+                const beta = betaLocL;
+                
+                const x1 = R * Math.cos(alpha);
+                const x2 = R * Math.sin(alpha);
+                const x3 = r * Math.cos(beta);
+                const x4 = r * Math.sin(beta);
+                
+                ptsL.push(transformPoint(x1, x2, x3, x4, cosT1, sinT1, cosT2, sinT2, cosT3, sinT3));
+            }
+
+            // Update l geometry buffer
+            const posL = curveLGeom.attributes.position.array;
+            for (let k = 0; k < NUM_CURVE_PTS; k++) {
+                posL[k * 3]     = ptsL[k][0];
+                posL[k * 3 + 1] = ptsL[k][1];
+                posL[k * 3 + 2] = ptsL[k][2];
+            }
+            curveLGeom.attributes.position.needsUpdate = true;
+
+            // --- Generate points for meridional curve m ---
+            // m: varies beta, alpha is fixed (slider value)
+            const ptsM = [];
+            for (let k = 0; k < NUM_CURVE_PTS; k++) {
+                const t = (k / NUM_CURVE_PTS) * 2 * Math.PI;
+                // If reversed, traverse beta backwards
+                const beta = revM ? (2 * Math.PI - t) : t;
+                const alpha = alphaLocM;
+                
+                const x1 = R * Math.cos(alpha);
+                const x2 = R * Math.sin(alpha);
+                const x3 = r * Math.cos(beta);
+                const x4 = r * Math.sin(beta);
+                
+                ptsM.push(transformPoint(x1, x2, x3, x4, cosT1, sinT1, cosT2, sinT2, cosT3, sinT3));
+            }
+
+            // Update m geometry buffer
+            const posM = curveMGeom.attributes.position.array;
+            for (let k = 0; k < NUM_CURVE_PTS; k++) {
+                posM[k * 3]     = ptsM[k][0];
+                posM[k * 3 + 1] = ptsM[k][1];
+                posM[k * 3 + 2] = ptsM[k][2];
+            }
+            curveMGeom.attributes.position.needsUpdate = true;
+
+            // --- Update directional markers for l ---
+            // Map markers to points in ptsL
+            // We place NUM_MARKERS evenly along the ptsL array
+            for (let k = 0; k < NUM_MARKERS; k++) {
+                // Index in ptsL corresponding to marker k
+                const idx = Math.floor((k / NUM_MARKERS) * NUM_CURVE_PTS);
+                const idxNext = (idx + 1) % NUM_CURVE_PTS;
+                
+                const p0 = ptsL[idx];
+                const p1 = ptsL[idxNext];
+                
+                _pos.set(p0[0], p0[1], p0[2]);
+                _posNext.set(p1[0], p1[1], p1[2]);
+                
+                _dir.subVectors(_posNext, _pos).normalize();
+                
+                if (_dir.length() > 1e-6) {
+                    _quat.setFromUnitVectors(_up, _dir);
+                    markersL[k].quaternion.copy(_quat);
+                }
+                markersL[k].position.copy(_pos);
+            }
+
+            // --- Update directional markers for m ---
+            for (let k = 0; k < NUM_MARKERS; k++) {
+                const idx = Math.floor((k / NUM_MARKERS) * NUM_CURVE_PTS);
+                const idxNext = (idx + 1) % NUM_CURVE_PTS;
+                
+                const p0 = ptsM[idx];
+                const p1 = ptsM[idxNext];
+                
+                _pos.set(p0[0], p0[1], p0[2]);
+                _posNext.set(p1[0], p1[1], p1[2]);
+                
+                _dir.subVectors(_posNext, _pos).normalize();
+                
+                if (_dir.length() > 1e-6) {
+                    _quat.setFromUnitVectors(_up, _dir);
+                    markersM[k].quaternion.copy(_quat);
+                }
+                markersM[k].position.copy(_pos);
+            }
+
+            // --- Boundary glow ---
+            const glow = Math.max(0, (maxDist - 0.75) / 0.25);
+            boundaryWire.material.opacity = 0.15 + 0.4 * glow;
+            boundaryWire.material.color.setHSL(0.65, 0.6, 0.4 + 0.3 * glow);
+        }
+
+        // ============================================================
+        // UI CONTROLS
+        // ============================================================
+        const slider1 = document.getElementById('t1');
+        const slider2 = document.getElementById('t2');
+        const slider3 = document.getElementById('t3');
+        const sliderR = document.getElementById('R');
+        const chkBoundary = document.getElementById('showBoundary');
+        const chkWireframe = document.getElementById('showWireframe');
+        const chkL = document.getElementById('showL');
+        const chkM = document.getElementById('showM');
+        const chkMarkers = document.getElementById('showMarkers');
+
+        function onInput() {
+            const t1 = parseFloat(slider1.value);
+            const t2 = parseFloat(slider2.value);
+            const t3 = parseFloat(slider3.value);
+            const R = parseFloat(sliderR.value);
+            
+            document.getElementById('v1').textContent = t1.toFixed(2);
+            document.getElementById('v2').textContent = t2.toFixed(2);
+            document.getElementById('v3').textContent = t3.toFixed(2);
+            document.getElementById('vR').textContent = R.toFixed(3);
+            
+            updateTorus(t1, t2, t3, R);
+            
+            boundaryGroup.visible = chkBoundary.checked;
+            wireframeMesh.visible = chkWireframe.checked;
+            curveLLine.visible = chkL.checked;
+            curveMLine.visible = chkM.checked;
+            markerGroupL.visible = chkMarkers.checked && chkL.checked;
+            markerGroupM.visible = chkMarkers.checked && chkM.checked;
+        }
+
+        slider1.addEventListener('input', onInput);
+        slider2.addEventListener('input', onInput);
+        slider3.addEventListener('input', onInput);
+        sliderR.addEventListener('input', onInput);
+        document.getElementById('locL').addEventListener('input', onInput);
+        document.getElementById('locM').addEventListener('input', onInput);
+        document.getElementById('revL').addEventListener('change', onInput);
+        document.getElementById('revM').addEventListener('change', onInput);
+        
+        chkBoundary.addEventListener('change', onInput);
+        chkWireframe.addEventListener('change', onInput);
+        chkL.addEventListener('change', onInput);
+        chkM.addEventListener('change', onInput);
+        chkMarkers.addEventListener('change', onInput);
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            slider1.value = 0; slider2.value = 0; slider3.value = 0;
+            sliderR.value = 0.707;
+            document.getElementById('locL').value = 0;
+            document.getElementById('locM').value = 0;
+            document.getElementById('revL').checked = false;
+            document.getElementById('revM').checked = false;
+            
+            // Reset colors
+            colorL = { r: 0xff, g: 0x30, b: 0x30 };
+            colorM = { r: 0x30, g: 0xff, b: 0x30 };
+            applyColors();
+            
+            autoRotate = false;
+            document.getElementById('animateBtn').textContent = 'Auto-animate';
+            onInput();
+        });
+
+        document.getElementById('swapColorsBtn').addEventListener('click', swapColors);
+
+        let autoRotate = true;
+        let autoRotateTime = 0;
+        document.getElementById('animateBtn').addEventListener('click', () => {
+            autoRotate = !autoRotate;
+            document.getElementById('animateBtn').textContent = autoRotate ? 'Stop' : 'Auto-animate';
+        });
+
+        // Initialize colors
+        applyColors();
+        onInput();
+
+        // ============================================================
+        // ANIMATION LOOP
+        // ============================================================
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (autoRotate) {
+                autoRotateTime += 0.003;
+                slider1.value = (Math.sin(autoRotateTime * 0.7) * 1.3).toFixed(2);
+                slider2.value = (Math.sin(autoRotateTime * 1.1 + 1) * 1.3).toFixed(2);
+                slider3.value = (Math.sin(autoRotateTime * 0.5 + 2) * 1.3).toFixed(2);
+                onInput();
+            }
+            
+            orbitControls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // ============================================================
+        // RESIZE HANDLER
+        // ============================================================
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

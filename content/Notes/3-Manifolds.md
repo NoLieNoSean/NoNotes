@@ -8,9 +8,13 @@ tags:
 ---
 IISERB, May 2026 - , Kashyap Rajeevsarathy
 
+<iframe src="./Demos/Torus-in-S3.html" width="100%" height= "500px" style="border: none"></iframe>
+
+$\textsf{Exhibit C}$: $\mathbb{T}^{2}$ sauntering around in $\mathbb{S}^{3}$, visualized using $\mathbb{B}^{3}/\partial \mathbb{B}^{3}$
+
 > [!Notation]-
 > 1. $\mathbb{B}^{n}$ and $\mathbb{D}^{n}$ both refer to the closed $n$-ball.
-> 2. "$S$ bounds $B$" means $S$ is the boundary of a $B$-submanifold. It does NOT mean that a $B$-submanifold lies in the interior of $S$. 
+> 2. "$S$ bounds $B$" means $S$ is the boundary of a $B$-submanifold. It does NOT mean that a $B$-submanifold lies in the interior of $S$. Idiot. 
 
 ---
 # W22 Perspectives on manifolds
@@ -19,11 +23,12 @@ IISERB, May 2026 - , Kashyap Rajeevsarathy
 ## [[Triangulable manifolds]]
 ## [[Differentiable manifolds]]
 ## [[Geometric manifolds]]
-## [[Categorical Notes on Manifolds]]
+## [[Categorical notes on Manifolds]]
 
 ---
 # W23
 
+![[IMG_20260603_122808.jpg]]
 ## Classification of curves
 
 > [!Theorem] @leeIntroductionTopologicalManifolds2000 6.1
@@ -38,33 +43,42 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W24
 
-[[Transversality]]
-[[Branched Covering Spaces]]
-[[Homotopy and Isotopy on Surfaces]]
-[[The Mapping Class Group]]
+![[IMG_20260607_174037.jpg]]
+
+## [[Transversality]]
+## [[Branched Covering Spaces]]
+## [[Homotopy and Isotopy on Surfaces]]
+## [[The Mapping Class Group]]
 
 ---
 
 # W25
 
 [[SEM 3MAN Actions on surfaces]]
-[[Preliminaries to 3-Manifolds]]
-[[Incompressible surfaces]]
+## [[Preliminaries to 3-Manifolds]]
+## [[Haken Manifolds]]
 
 ---
 
 # W26
 
-[[Dehn's Lemma]]
-[[Hierarchies]]
-[[Seifert Fibered Spaces]]
+![[-20260710233926184.jpg]]
+
+## [[Dehn's Lemma]]
+
+## [[Seifert Fibered Spaces]]
 
 ---
 
 # W27
 
-[[Heegaard splittings]]
+## [[Heegaard splittings]]
 
 ---
 
 # W28
+
+![[-20260710233620622.jpg]]
+
+## [[PRE Lens spaces]]
+
