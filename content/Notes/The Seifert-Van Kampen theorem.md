@@ -7,7 +7,6 @@ tags:
 > [!Abstract]
 > The Seifert-Van Kampen theorem gives a formula for the fundamental group of a space that can be decomposed as the union of two open, path-connected subsets whose intersection is also path-connected. 
 
-
 Let $X$ be a topological space, let $U, V\subseteq X$ be open subsets whose union is $X$ and whose intersection is nonempty, and choose any base point $p\in U\cap V$. The four inclusion maps
 
 ```latex
@@ -90,7 +89,7 @@ The other special case is that in which one of the open subsets, say $U$, is sim
 > 
 > A point $p$ in a topological space $X$ is said to be a **nondegenerate base point** if $p$ has a neighborhood that admits a [[Deformation Retracts and Homotopy Type#^136a06|strong deformation retraction]] onto $p$ [^1]. 
 > 
-> Let $(X_{1}, p_{1}), \dots, (X_{n}, p_{n})$ be pointed topological spaces with nondegenerate base points. Their **wedge sum**, denoted by $(X_{1}, p_{1})\vee\dots \vee(X_{n}, p_{n})$ or $X_{1}\vee\dots \vee X_{n}$, is defined as the [[Notes/The Quotient Topology#^a08554|quotient]] of $\coprod_{j}X_{j}$ by the equivalence relation $p_{1}\sim\dots\sim p_{n}$. 
+> Let $(X_{1}, p_{1}), \dots, (X_{n}, p_{n})$ be pointed topological spaces with nondegenerate base points. Their **wedge sum**, denoted by $(X_{1}, p_{1})\vee\dots \vee(X_{n}, p_{n})$ or $X_{1}\vee\dots \vee X_{n}$, is defined as the [[The quotient topology#^a08554|quotient]] of $\coprod_{j}X_{j}$ by the equivalence relation $p_{1}\sim\dots\sim p_{n}$. 
 > 
 > Observe that the inclusion of $X_{j}$ into $\coprod_{j}X_{j}$ followed by projection onto the quotient induces injective maps $i_{j}:X_{j}\to X_{1}\vee\dots \vee X_{n}$; each of these maps is an embedding. Thus, we can consider $X_{j}$ as a subspace of the wedge sum. We let $*$ denote the point in the wedge sum that is the equivalence class of the base points; it is a nondegenerate base point of the wedge sum. 
 

@@ -1,11 +1,12 @@
 ---
 id: "499"
-date: 2026-07-10
-time: 04:03
+date: 2026-07-11
+time: 12:10
 tags:
   - PRE
   - 3MAN
 ---
+
 # Lens spaces
 
 ![[Haken Manifolds#^0dc48d]]
@@ -76,7 +77,7 @@ Recall the Seifert-Van Kampen Theorem:
 \end{document}
 ```
 
-![[The Seifert-Van Kampen theorem#^faa3c4]]
+![[The Seifert-Van Kampen Theorem#^faa3c4]]
 
 
 ---
@@ -106,6 +107,8 @@ $$
 \pi_{1}(L(p, q))=\langle l_{1}, l_{2}\ | \  l_{2}^{p}=e, l_{1}=l_{2}^{r} \rangle =\mathbb{Z}/p\mathbb{Z}.
 $$
 
+<iframe src="https://www.desmos.com/3d/3jgsafbiss" width="100%" height= "500px"></iframe>
+
 ---
 
 # L(1, 0)
@@ -120,7 +123,7 @@ Consider $\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}\in\text{Mod}(\mathbb{T}^{2
 
 # Trick: Move *into* one of the spaces
 
-We're now inside $T_{1}$! We've reoriented the surface closest to us to have normals pointing outwards. Notice how this makes the boundary identification orientation preserving. 
+We're now inside $T_{1}$! We've reoriented the surface closest to us to have normals pointing towards us. Notice how this makes the boundary identification orientation preserving.
 
 ![[Screenshot 2026-07-10 at 05.35.31.png]]
 

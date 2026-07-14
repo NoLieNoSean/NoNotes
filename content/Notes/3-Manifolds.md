@@ -10,7 +10,7 @@ IISERB, May 2026 - , Kashyap Rajeevsarathy
 
 <iframe src="./Demos/Torus-in-S3.html" width="100%" height= "500px" style="border: none"></iframe>
 
-$\textsf{Exhibit C}$: $\mathbb{T}^{2}$ sauntering around in $\mathbb{S}^{3}$, visualized using $\mathbb{B}^{3}/\partial \mathbb{B}^{3}$
+$\textsf{Exhibit C}$. $\mathbb{T}^{2}$ sauntering around in $\mathbb{S}^{3}$, visualized using $\mathbb{B}^{3}/\partial \mathbb{B}^{3}$
 
 > [!Notation]-
 > 1. $\mathbb{B}^{n}$ and $\mathbb{D}^{n}$ both refer to the closed $n$-ball.
@@ -81,4 +81,13 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 ![[-20260710233620622.jpg]]
 
 ## [[PRE Lens spaces]]
+
+
+---
+
+# Questions
+
+- Quotient orbifold of $\mathbb{T}^{2}$ by $\pi/2$ rotation; relation of non-trivial orbits with cone points
+- Mapping torus of the torus resulting form the $\pi/2$ rotation. 
+- Mapping torus of $\begin{bmatrix}2 & 1 \\ 1 & 1\end{bmatrix}$. Is is Seifert Fibered?
 
