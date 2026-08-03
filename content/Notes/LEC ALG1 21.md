@@ -11,8 +11,8 @@ id: "87"
 
 The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
 
->[!Definition]
-> A vector space $V$ over $\mathbb{F} = \mathbb{R}, \mathbb{C}$ is an *inner product space* if for any two $\mathbf{v}, \mathbf{w} \in V$, there is defined an element $\langle \mathbf{v},\mathbf{w} \rangle \in \mathbb{F}$ such that it satisfies the following properties:
+>[!Definition] Inner product space
+> A vector space $V$ over $\mathbb{F} = \mathbb{R}, \mathbb{C}$ is an **inner product space** if for any two $\mathbf{v}, \mathbf{w} \in V$, there is defined an element $\langle \mathbf{v},\mathbf{w} \rangle \in \mathbb{F}$ such that it satisfies the following properties:
 >  - $\langle \mathbf{v},\mathbf{w} \rangle$ = $\overline{\langle \mathbf{w},\mathbf{v} \rangle}$;
 >  - $\langle \mathbf{v},\mathbf{v} \rangle \geq 0$;
 >  - $\langle \mathbf{v},\mathbf{v} \rangle = 0 \iff \mathbf{v} = 0$;
@@ -78,7 +78,7 @@ The motivation behind this is to define a notion of length and perpendicularity 
 >It is easy to see that this satisfies all the requirements of the inner product.
 ## Norm
 
->[!Definition]
+>[!Definition] Standard norm on an inner product space
 > Given an inner product space, one defines a *norm* on it by 
 > $$
 > \lVert \mathbf{v} \rVert  = \sqrt{ \langle \mathbf{v}, \mathbf{v}\rangle }.
@@ -173,7 +173,8 @@ We have shown that the norm $\lVert \mathbf{v} \rVert$ [[#^2ffc13|derived from t
 
 Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a number $\lVert \mathbf{v} \rVert$ such that the above four properties are satisfied. Then, we say that the function $\mathbf{v}\mapsto \lVert \mathbf{v} \rVert$ is a **norm**. A vector space equipped with a norm is called a **normed space**.
 
-*Any inner product space is a normed space*, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, *not all normed spaces are inner product spaces*.
+> [!Important]
+> *Any inner product space is a normed space*, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, *not all normed spaces are inner product spaces*.
 
 ## Orthogonality
 

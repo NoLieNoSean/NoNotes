@@ -5,7 +5,7 @@ time: 00:06
 tags:
 ---
 > [!Abstract]
-> [[Classification of compact surfaces#^d2add7|Isotopies]] are always homotopies. The converse is not true in general. However, for surfaces, we see that homotopy classes of simple closed curves correspond to isotopy classes of simple closed curves. 
+> [[Differentiable manifolds#^d2add7|Isotopies]] are always homotopies. The converse is not true in general. However, for surfaces, we see that homotopy classes of simple closed curves correspond to isotopy classes of simple closed curves. 
 
 # Oriented intersections
 

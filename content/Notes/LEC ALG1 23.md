@@ -10,14 +10,21 @@ id: "89"
 
 We will now generalize the notion of the inner product. We will see that the [[LEC ALG1 21#Inner Product Spaces|inner product, as defined in the previous lecture]], is a positive definite symmetric (bilinear) form on a real vector space, and a positive definite Hermitian form on a complex vector space. 
 
-> [!Definition]
-> A *bilinear form* on a real vector space $V$ is a map $V\times V\to \mathbb{R}$. Given a pair of vectors $\mathbf{v}$ and $\mathbf{w}$, the form returns a real number denoted from now on by $\langle \mathbf{v}, \mathbf{w} \rangle$. (This is no longer the inner product from the previous lecture!) A bilinear form is linear in each variable.
+> [!Definition] Bilinear form
+> A **bilinear form** on a real vector space $V$ is a bilinear map $V\times V\to \mathbb{R}$. Given a pair of vectors $\mathbf{v}$ and $\mathbf{w}$, the form returns a real number denoted from now on by $\langle \mathbf{v}, \mathbf{w} \rangle$ (This is no longer the inner product from the previous lecture!)
 > $$
 > \left\langle  \sum x_{i}\mathbf{v}_{i}, \mathbf{w}  \right\rangle=\sum x_{i}\langle \mathbf{v}_{i}, \mathbf{w} \rangle
 > $$
 > $$
 > \left\langle  \mathbf{v}, \sum \mathbf{w}_{j}y_{j}  \right\rangle =\sum \langle \mathbf{v}, \mathbf{w}_{j} \rangle y_{i}
 > $$
+> 
+
+^5b93ce
+
+## The Matrix of a Bilinear Form
+
+^a5c64f
 
 Let $\langle \,, \rangle$ be a bilinear form on $V$. Let $V$ have a basis $\mathcal{B}=( \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n} )$. Let $\mathbf{v}, \mathbf{w}\in V$. Then, 
 $$
@@ -54,7 +61,7 @@ for some $n\times n$ matrix $A$. Note that we didn't have to choose a basis to a
 
 ## Change of basis
 
-The matrix of a bilinear form $\langle \,, \rangle$ depends on our choice of basis, as must be evident from the above discussion. How does this matrix change when we change the basis?
+The matrix of a bilinear form $\langle \,, \rangle$ evidently depends on our choice of basis. How does this matrix change when we change the basis?
 
 Let $\langle \,, \rangle$ be a bilinear form on a real vector space $V$, and let $A$ and $A'$ be its matrices with respect to bases $\mathcal {B}$ and $\mathcal {B'}$. Let $P$ be the the [[LEC ALG1 13#Change of basis|change of basis matrix]] from $\mathcal {B}$ to $\mathcal {B'}$ (i.e, $[\mathbf{v}]_{\mathcal {B}}=P[\mathbf{v}]_{\mathcal {B'}}$ for all $\mathbf{v}\in V$). Then, 
 
@@ -73,7 +80,12 @@ Thus, we have $A'=P^{T}AP$.
 
 ## Symmetric forms
 
-A bilinear form is *symmetric* if $\langle \mathbf{v}, \mathbf{w} \rangle=\langle \mathbf{w}, \mathbf{v} \rangle$ for all $\mathbf{v}, \mathbf{w}\in V$. "symmetric form" is short for "symmetric bilinear form". 
+> [!Definition] Symmetric form
+> A [[#^5b93ce|bilinear form]] is **symmetric** if $\langle \mathbf{v}, \mathbf{w} \rangle=\langle \mathbf{w}, \mathbf{v} \rangle$ for all $\mathbf{v}, \mathbf{w}\in V$. 
+
+^00968f
+
+"Symmetric form" is short for "symmetric bilinear form". 
 
 Let $A$ be an $n\times n$ matrix. Say the form defined by $\mathbf{v}^{T}A\mathbf{w}$ on $\mathbb{R}^{n}$ is symmetric. Then, we must have $\langle \mathbf{e}_{i}, \mathbf{e}_{j} \rangle=\langle \mathbf{e}_{j}, \mathbf{e}_{i} \rangle$ for all $i, j$. Note that $\mathbf{e}_{i}^{T}A\mathbf{e}_{j}=a_{ij}$. Thus, we have $a_{ij}=a_{ji}$ for all $i, j$, i.e, $A$ is symmetric! Is the converse true? Let $A$ be symmetric. Thinking of $\mathbf{v}^{T}A\mathbf{w}$ as a $1\times 1$ matrix, it is equal to its transpose. Thus, we have $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}A\mathbf{w}=\mathbf{w}^{T}A^{T}\mathbf{v}=\mathbf{w}^{T}A\mathbf{v}=\langle \mathbf{w}, \mathbf{v} \rangle$. 
 
@@ -87,7 +99,12 @@ Now consider a bilinear form $\langle \,, \rangle$ on an abstract vector space $
 
 ## Positive definite forms
 
-A bilinear form is positive definite if $\langle \mathbf{v}, \mathbf{v} \rangle>0$ for all nonzero vectors $\mathbf{v}$. The dot product is a symmetric, positive definite form on $\mathbb{R}^{n}$. The matrix of the dot product on $\mathbb{R}^{n}$ is the identity matrix. Thus, if $\langle \,, \rangle$ is the dot product, $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}\mathbf{w}$. If we change basis to $\mathcal {B}$ using a change of basis matrix $P$, then $\langle \mathbf{v}, \mathbf{w} \rangle=[\mathbf{v}]_{\mathcal {B}}P^{T}P[\mathbf{w}]_{B}$, i.e, the matrix of the dot product becomes $P^{T}P$. If the change of basis is [[LEC ALG1 21#^d11820|orthogonal]], $P^{T}P$ is the identity matrix, and $\langle \mathbf{v}, \mathbf{w} \rangle=\langle [\mathbf{v}]_{\mathcal {B}}, [\mathbf{w}]_{\mathcal {B}} \rangle$. 
+> [!Definition] Positive definite form
+> A [[#^5b93ce|bilinear form]] is positive definite if $\langle \mathbf{v}, \mathbf{v} \rangle>0$ for all nonzero vectors $\mathbf{v}$. 
+
+^922e66
+
+The dot product is a symmetric, positive definite form on $\mathbb{R}^{n}$. The matrix of the dot product on $\mathbb{R}^{n}$ is the identity matrix. Thus, if $\langle \,, \rangle$ is the dot product, $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}\mathbf{w}$. If we change basis to $\mathcal {B}$ using a change of basis matrix $P$, then $\langle \mathbf{v}, \mathbf{w} \rangle=[\mathbf{v}]_{\mathcal {B}}P^{T}P[\mathbf{w}]_{B}$, i.e, the matrix of the dot product becomes $P^{T}P$. If the change of basis is [[LEC ALG1 21#^d11820|orthogonal]], $P^{T}P$ is the identity matrix, and $\langle \mathbf{v}, \mathbf{w} \rangle=\langle [\mathbf{v}]_{\mathcal {B}}, [\mathbf{w}]_{\mathcal {B}} \rangle$. 
 
 Analogously to the terminology for positive forms, we say a matrix $A$ is positive definite if the form defined by $A$ on $\mathbb{R}^{n}$ is positive definite, i.e, $\mathbf{x}^{T}A\mathbf{x}>0$ for all nonzero column vectors $\mathbf{x}$. Evidently, if the form $\mathbf{x}^{T}A\mathbf{x}$ is equivalent to the dot product (which is positive definite), $A$ must be positive definite.
 

@@ -79,7 +79,7 @@ A definition of submanifold that is used in textbooks is the following:
 > [!Definition] Submanifold, @guilleminDifferentialTopology1974
 > Let $M$ be an $n$-manifold. A subspace $N\subseteq M$ is **$p$-dimensional submanifold** if $N$ is a topological $p$-manifold. 
 
-However, this is regarded as a weak definition in geometric topology, since it admits wild embeddings (see [[Preliminaries to 3-Manifolds#The Schönflies Theorem]]). The strengthened version Schultens uses also demands **local flatness**: for every $x\in N$, there must be a neighborhood $U$ of $x$ in $M$ and a homeomorphism of pairs $(U, U\cap N)\cong(\mathbb{R}^{n}, \mathbb{R}^{p})$ (or $(\mathbb{H}^{n}, \mathbb{H}^{p})$ at boundary points). 
+However, this is regarded as a weak definition in geometric topology, since it admits wild embeddings (see [[Preliminaries to 3-Manifolds#The Schönflies Theorem]]). The strengthened version Schultens uses also demands **local flatness**: for every $x\in N$, there must be a neighborhood $U$ of $x$ in $M$ and a homeomorphism of pairs $(U, U\cap N)\cong(\mathbb{R}^{n}, \mathbb{R}^{p})$ (or $(\mathbb{H}^{n}, \mathbb{H}^{p})$ at boundary points). [^5]
 
 > [!Definition] Submanifold, @schultensIntroduction3manifolds2014 1.1.16
 > Let $M$ be an $n$-manifold with boundary. A **$p$-dimensional submanifold** of $M$ is a *closed* subset $L$ of $M$ for which there exists an atlas $\{ (M_{\alpha}, \phi_{\alpha}) \}$ of $M$ and $p\in \{ 0, \dots, n \}$ such that for all $x\in L$ in the interior of $M$ there is a chart in the atlas with $x\in M_{\alpha}$ and
@@ -132,12 +132,19 @@ More generally, we have
 
 Thus, a regular ball is just an open regular neighborhood of a point.
 
+Regular neighborhoods exist and are unique up to isotopy:
+
+> [!Definition] Isotopy
+> Two topological embeddings $f_{0}, f_{1}:M\to N$ of topological manifolds are **isotopic** if there is a [[Homotopy, Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is a topological *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two [[#^8517b5|topological submanifolds]] $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+
+^b8c761
+
+> [!Theorem] @schultensIntroduction3manifolds2014 3.1.13
+> Let $M$ be an $n$-manifold and let $S$ be a $k$-submanifold in $M$. There exists a [[#^a8b826|regular neighborhood]] $N(S)$ for $S$ in $M$. Furthermore, any two regular neighborhoods of $S$ in $M$ are [[#^b8c761|isotopic]]. 
+
+^4bfc8c
 
 
-> [!Theorem] The $\epsilon$-Neighborhood Theorem, @schultensIntroduction3manifolds2014 A.0.21
-> Let $Y$ be a compact $k$-dimensional submanifold of the $n$-manifold $X$. Let $Y^{\epsilon}$ denote the set of all points in $X$ with distance less than $\epsilon$ from $Y$. If $\epsilon$ is sufficiently small, then $Y^{\epsilon}$ is a $\mathbb{B}^{n-k}$-bundle over $Y$.
-
-^b1346e
 
 
 # Manifolds as quotient spaces
@@ -167,3 +174,5 @@ Defining a notion of orientability for topological manifolds requires an underst
 # General position
 
 According to Schultens, it is easier to understand and use the analogous concept in $\textsf{Diff}$, [[Transversality]]. 
+
+[^5]: Typically, local flatness is used along with smoothness - Schultens proves almost all her results in $\textsf{Diff}$. So we will mostly be using the $\textsf{Diff}$ version [[Differentiable manifolds#^ae0294]].

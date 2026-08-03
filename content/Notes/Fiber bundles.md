@@ -20,6 +20,8 @@ draft: false
 > commutes. 
 > 
 > The homeomorphisms $h$ are called **local trivializations** for the fiber bundle $p$. Bundles with fiber $F$ are called **$F$-bundles**. 
+> 
+> A **section** of the bundle is a map $s:B\to E$ such that $p\circ s=\mathrm{id}_{B}$. 
 
 ^a3d022
 
@@ -40,4 +42,9 @@ A simple nontrivial example is the Möbius strip, which is a nontrivial fiber bu
 > ```
 > 
 
+^326e32
 
+> [!Definition] Smooth fiber bundles
+> In [[#^a3d022]], if $E$ and $B$ are [[Differentiable manifolds#^183f6b|smooth manifolds]] and $p$ is a [[Differentiable manifolds#^bd5ec1|smooth map]], then the bundle is said to be **smooth**; the collection of open sets $U$ may be replaced by an atlas. A **section** of the smooth bundle is a *smooth* map $s:B\to E$ such that $\pi \circ s=\mathrm{id}_{B}$. Two smooth bundles are said to be **isomorphic** if they are isomorphic per [[#^326e32]] and $h, f$ are smooth. 
+
+^2a8fcb

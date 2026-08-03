@@ -178,7 +178,7 @@ Here's the one variable version:
 > > Since $f'$ is continuous at $a$, we can pick a neighborhood $U$ of $a$ on which $f'$ is non-zero. Let $V=f(U)$.  is open since strictly monotone continuous maps are open. $f$ is monotone on $U$, so $f$ is injective on $U$. $f^{-1}$ is clearly continuous, so $f$ is a $C^{1}$ homeomorphism. By @pughRealMathematicalAnalysis2015 4.15, we are done.
 > 
 
-> [!Theorem] @rudinPrinciplesMathematicalAnalysis1976 9.24
+> [!Theorem] Inverse function theorem, @rudinPrinciplesMathematicalAnalysis1976 9.24
 > Suppose $\mathbf{f}$ is a $C^{1}$ mapping of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{n}$, and $\mathbf{f}'(\mathbf{a})$ is invertible for some $\mathbf{a}\in E$. Then,
 > 1. there exist open sets $U$ and $V$ in $\mathbb{R}^{n}$ such that $\mathbf{a}\in U$, $\mathbf{f}(\mathbf{a})\in V$, $\mathbf{f}$ is injective on $U$, and $\mathbf{f}(U)=V$;
 > 2. the inverse $\mathbf{g}$ of $\mathbf{f}$ (which exists by the previous point), defined in $V$ by $\mathbf{g}(\mathbf{f}(\mathbf{x}))=\mathbf{x}$ for $\mathbf{x}\in U$, is a $C^{1}$ mapping, with its derivative given by $\mathbf{g}'(\mathbf{y})=\mathbf{f}'(\mathbf{g}(\mathbf{y}))^{-1}$ for $\mathbf{y}\in V$.

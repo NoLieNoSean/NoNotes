@@ -60,18 +60,21 @@ Analog of [[LEC ANA1 28#^8dfd1e]]:
 # Rectifiable curves
 
 > [!Definition] @rudinPrinciplesMathematicalAnalysis1976 6.26
-> A [[LEC ANA1 11#Definition|continuous]] mapping $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{k}$ is called a *curve*. If $\boldsymbol{\gamma}$ is injective, it is called an *arc*. If $\boldsymbol{\gamma}(b)=\boldsymbol{\gamma}(a)$, $\boldsymbol{\gamma}$ is called a *closed curve*. 
+> A [[LEC ANA1 11#Definition|continuous]] mapping $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{k}$ is called a **curve**. If $\boldsymbol{\gamma}$ is injective, it is called an **arc**. If $\boldsymbol{\gamma}(b)=\boldsymbol{\gamma}(a)$, $\boldsymbol{\gamma}$ is called a **closed curve**. 
 
-Consider a [[LEC ANA1 26#^d118a8|partition]] $P=\{ x_{0}, x_{1}, \dots, x_{n} \}$ of $[a, b]$. Define
-$$
-\begin{align}
-\Lambda(P, \boldsymbol{\gamma})\equiv\sum_{i=1}^{n} |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|; \\
-\end{align}
-$$
-$$
-\Lambda(\boldsymbol{\gamma})\equiv \sup \Lambda(P, \boldsymbol{\gamma}).
-$$
-If $\Lambda(\boldsymbol{\gamma})$ is finite, we say $\boldsymbol{\gamma}$ is *rectifiable*, and has length $\Lambda(\boldsymbol{\gamma})$.
+> [!Definition] Rectifiable curve
+> Consider a [[LEC ANA1 26#^d118a8|partition]] $P=\{ x_{0}, x_{1}, \dots, x_{n} \}$ of $[a, b]$. Define
+> $$
+> \begin{align}
+> \Lambda(P, \boldsymbol{\gamma})\equiv\sum_{i=1}^{n} |\boldsymbol{\gamma}(x_{i})-\boldsymbol{\gamma}(x_{i-1})|; \\
+> \end{align}
+> $$
+> $$
+> \Lambda(\boldsymbol{\gamma})\equiv \sup \Lambda(P, \boldsymbol{\gamma}).
+> $$
+> If $\Lambda(\boldsymbol{\gamma})$ is finite, we say $\boldsymbol{\gamma}$ is **rectifiable**, and has length $\Lambda(\boldsymbol{\gamma})$.
+
+The Weierstrass function [@WeierstrassFunction2026] is an example of a curve that is *not* rectifiable. #td also have a look at the Koch snowflake
 
 To motivate what's coming, let $f:[a, b]\to \mathbb{R}$ and let $\boldsymbol{\gamma}:[a, b]\to \mathbb{R}^{2}$, $x\xmapsto{\boldsymbol{\gamma}}(x, f(x))$ be the curve of $f$. Recall the high school formula for finding the length of the curve of $f$:
 $$
@@ -128,3 +131,5 @@ One way to ensure integrability is to require $\boldsymbol{\gamma}'$ to be conti
 > > $$
 > > 
 > 
+
+^f26daa

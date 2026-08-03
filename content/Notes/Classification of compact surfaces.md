@@ -80,18 +80,13 @@ Connected sums allow us to construct new manifolds by gluing together simpler on
 
 We will need the following two theorems[^2] to discuss the impact of the choices of $B_{i}$ and the homeomorphism $\sigma$ on the connected sum $M_{1}\#M_{2}$:
 
-> [!Definition] Isotopy
-> Two embeddings $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Homotopy, Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
-
-^d2add7
-
 > [!Theorem] 
-> Every orientation-preserving homeomorphism of an $n$-ball or $n$-sphere is isotopic to the identity. 
+> Every orientation-preserving homeomorphism of an $n$-ball or $n$-sphere is [[Differentiable manifolds#^d2add7|isotopic]] to the identity. 
 
 ^3cb419
 
 > [!Theorem] @schultensIntroduction3manifolds2014 1.6.4
-> If $B_{1}$, $B_{2}$ are ( #q regular?) $n$-balls in the interior of a connected $n$-manifold $M$, then there is an isotopy $f:M\times I\to M$ such that $f(\_{, 0}) | _{B_{1}}$ is the identity and $f(\_{, 1})|_{B_{2}}$ is a homeomorphism onto $B_{2}$. 
+> If $B_{1}$, $B_{2}$ are ( #q regular?) $n$-balls in the interior of a connected $n$-manifold $M$, then there is an [[Differentiable manifolds#^d2add7|isotopic]] $f:M\times I\to M$ such that $f(\_{, 0}) | _{B_{1}}$ is the identity and $f(\_{, 1})|_{B_{2}}$ is a homeomorphism onto $B_{2}$. 
 > 
 
 ^2ac7d4

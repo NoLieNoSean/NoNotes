@@ -55,7 +55,7 @@ The **Jordan curve theorem** (aka the Schönflies theorem) states that for any s
 
 The analogous statement in $3$ dimensions does not hold: The Alexander horned sphere is an embedding $\mathbb{S}^{2}\hookrightarrow \mathbb{R}^{3}$ such that $\pi_{1}(D_{\text{ext}})\ne \emptyset$, so the embedding cannot be extended to a homeomorphism of $\mathbb{R}^{3}$. 
 
-However, it is true that every **locally flat** embedding of $\mathbb{S}^{2}$ into $\mathbb{R}^{3}$ extends to a homeomorphism of $\mathbb{R}^{3}$. This is known as the generalized Schönflies theorem. We can pretend to have completely salvaged the Jordan curve theorem by defining our submanifolds to be locally flat embeddings, [[Topological manifolds#^8517b5|as Schultens does]]. On observing the fact that homeomorphisms take submanifolds to submanifolds, The generalized Schönflies theorem now reads 
+However, *in the $\textsf{Diff}$ category*, it is true that every **locally flat** embedding of $\mathbb{S}^{2}$ into $\mathbb{R}^{3}$ extends to a homeomorphism of $\mathbb{R}^{3}$. This is known as the generalized Schönflies theorem. We can pretend to have completely salvaged the Jordan curve theorem by defining submanifolds in the $\textsf{Diff}$ category to be locally flat embeddings, [[Topological manifolds#^8517b5|as Schultens does]]. On observing the fact that homeomorphisms take submanifolds to submanifolds, The generalized Schönflies theorem now reads 
 
 > [!Theorem] Generalized Schönflies
 > Any $\mathbb{S}^{2}$-submanifold of $\mathbb{R}^{3}$ is the boundary of a $\mathbb{B}^{3}$-submanifold of $\mathbb{R}^{3}$[^2]. 

@@ -7,7 +7,49 @@ tags:
 > [!Definition] Differentiable manifold, @schultensIntroduction3manifolds2014 1.2.2
 > A **$C^{q}$-manifold**, for $q\in \mathbb{Z}_{\geqslant 0}$, is a [[Topological manifolds|topological manifold]] $M$ with an atlas that satisfies the additional requirement of being $C^{q}$, meaning that for any pair of charts $(M_{\alpha}, \phi_{\alpha})$, $(M_{\beta}, \phi_{\beta})$ in this atlas, the map $\phi_{\beta}\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$[^1]. A $C^{\infty}$ manifold is also called a **smooth manifold**. 
 
+^183f6b
+
+We will exclusively work with smooth manifolds, so the adjectives differentiable and smooth are synonymous.
+
 [^1]: [[Smooth and analytic multivariable functions#^861ecb]]
+
+
+> [!Definition] Morphisms in DIFF, @schultensIntroduction3manifolds2014 1.2.6
+> 1. Let $M$ be a manifold with atlas $\{(M_{\alpha}, \phi_{\alpha}) \}$ and let $N$ be a manifold with atlas $\{ (N_{\beta}, \psi_{\beta}) \}$. We say that a map $f:M\to N$ is **$C^{q}$** if for all $\alpha, \beta$, the map $\psi_{\beta}\circ f\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$. A $C^{\infty}$ map is said to be **smooth**.
+> 2. A $C^{q}$-map between $C^{q}$-manifolds with a $C^{q}$ inverse is called a **$C^{q}$-diffeomorphism**.
+
+^bd5ec1
+
+
+> [!Definition] Smooth Submanifold, @martelliIntroductionGeometricTopology2025 Def 1.1.7
+> Essentially [[Topological manifolds#^8517b5]], but with a smooth atlas. 
+
+^ae0294
+
+
+
+> [!Definition] Tangent space
+> Let $M$ be a smooth manifold of dimension $n$. We associate for each point $p\in M$ an $n$-dimensional *vector space* $T_{p}M$ called the **tangent space**. The space $T_{p}M$ may be defined as the set of all curves $\gamma:(-a, a)\to M$ such that $\gamma(0)=p$ and $a> 0$ is arbitrary, considered up to the following equivalence relation: we identify two curves that, read on some chart $(U_{i}, \varphi_{i})$, have the same tangent vector[^3] at $\varphi_{i}(p)$. *This definition does not depend on the chart chosen.* [^2]
+
+^995b96
+
+> [!Remark]
+> A chart identifies $T_{p}M$ with the usual tangent space $\mathbb{R}^{n}$ at $\varphi_{i}(p)$ in the open set $V_{i}=\varphi_{i}(U_{i})$. *Two distinct charts $\varphi_{i}$ and $\varphi_{j}$ provide different identifications with $\mathbb{R}^{n}$, which differ by a linear isomorphism.* The structure of $T_{p}M$ as a vector space is therefore well-defined, while its identification with $\mathbb{R}^{n}$ is not. 
+
+^59fc8b
+
+Every smooth map $f:M\to N$ between differentiable manifolds induces at each point $p\in M$ a linear map $df_{p}:T_{p}M\to T_{f(p)}N$ between tangent spaces by $\gamma\mapsto f\circ\gamma$. 
+
+> [!Definition] Local diffeomorphism
+> A smooth map $f:M\to N$ is a **local diffeomorphism** at a point $p\in M$ if there are two open sets $U\subseteq M$ and $V\subseteq N$ containing respectively $p$ and $f(p)$ such that $f|_{U}:U\to V$ is a diffeomorphism. 
+
+^42f88b
+
+The [[LEC CAL1 21#^ccd2d7|inverse function theorem]] in $\mathbb{R}^{n}$ implies its analog for smooth manifolds:
+
+> [!Theorem] @martelliIntroductionGeometricTopology2025 1.1.6
+> Let $f:M\to N$ be a smooth map between manifolds of the same dimension. The map is a [[#^42f88b|local diffeomorphism]] at $p\in M$ iff the differential $df_{p}:T_{p}M\to T_{f(p)}N$ is invertible. 
+
 
 > [!Proposition]
 > The product of smooth manifolds is smooth. 
@@ -28,22 +70,90 @@ tags:
 
 ^576aa3
 
+# The Tangent and Normal bundles
 
-> [!Definition] Morphisms in DIFF, @schultensIntroduction3manifolds2014 1.2.6
-> 1. Let $M$ be a manifold with atlas $\{(M_{\alpha}, \phi_{\alpha}) \}$ and let $N$ be a manifold with atlas $\{ (N_{\beta}, \psi_{\beta}) \}$. We say that a map $f:M\to N$ is $C^{q}$ if for all $\alpha, \beta$, the map $\psi_{\beta}\circ f\circ \phi_{\alpha}^{-1}$ (where it is defined) is $C^{q}$. A $C^{\infty}$ map is said to be smooth.
-> 2. A $C^{q}$-map between $C^{q}$-manifolds with a $C^{q}$ inverse is called a **$C^{q}$-diffeomorphism**.
 
-# $\epsilon$-Neighborhoods
 
-$\epsilon$-Neighborhoods are the $\textsf{Diff}$ category equivalent of [[Topological manifolds#^a8b826|regular neighborhoods]] from $\textsf{Top}$. 
+> [!Definition] Vector bundle
+> 1. A **smooth vector bundle** is a [[Fiber bundles#^2a8fcb|smooth fiber bundle]] with $F=\mathbb{R}^{n}$ where $h:p ^{-1}(v)\to F$ is isomorphism of vector spaces[^1] for each $v\in B$ and $p$ defined on a neighborhood of $v$. 
+> 2. The **zero-section** of a smooth vector bundle is the section $s:B\to E$ that sends $v$ to $\mathbf{0}\in p ^{-1}(v)$. The image $s(B)$ of the zero-section is typically identified with $B$ via $s$. 
 
-[[Urysohn Lemma and applications#^e4f9b0|Manifolds are metrizable spaces]]. Thus, if $Y$ is a submanifold of $X$, we can look at all points within a distance $\epsilon$ of $Y$. The following theorem gives us an explicit description of this set. 
+^69790c
+
+[^1]: This is not a _requirement_ - it is merely specifying that we vector spaceize $p ^{-1}(v)$ by pulling back the vector space structure on $F$ via $h$. 
+
+> [!Definition] Tangent bundle, @martelliIntroductionGeometricTopology2025 1.1.6
+> Let $M$ be a differentiable manifold of dimension $n$. The union of all [[#^995b96|tangent spaces]]
+> $$
+> TM=\bigcup_{p\in M}T_{p}M
+> $$
+> is naturally a differentiable manifold of double dimension $2n$, called the **tangent bundle**. The tangent bundle $TM$ is naturally a [[#^69790c|smooth vector bundle]] over $M$, the fiber over $p\in M$ being the tangent space $T_{p}M$. 
+
+^a4f970
+
+> [!Definition] Normal bundle, @martelliIntroductionGeometricTopology2025 1.1.6
+> Let $M\subseteq N$ be a [[#^ae0294|smooth submanifold]] of $N$. The **normal space** at a point $p\in M$ is the quotient vector space $\nu_{p}M:=T_{p}N/T_{p}M$. The **normal bundle** $\nu M$ is the union
+> $$
+> \nu M:=\bigcup_{p\in M}\nu_{p}M
+> $$
+> and is also naturally a [[#^69790c|smooth vector bundle]] over $M$. 
+
+^3bf73d
+
+The normal bundle is not canonically contained in $TN$ like the tangent bundle, but it may be embedded directly in $N$. 
+
+> [!Definition] Vector field, @martelliIntroductionGeometricTopology2025 1.1.7
+> A **vector field** $X$ on a smooth manifold $M$ is a [[Fiber bundles#^2a8fcb|section]] of its [[#^a4f970|tangent bundle]]. 
+
+# Immersions, Embeddings, and Isotopies
+
+> [!Definition] Immersions and embeddings, @martelliIntroductionGeometricTopology2025 1.1.8
+> A smooth map $f:M\to N$ between smooth manifolds is an **immersion** if its differential is everywhere injective (this does not imply that $f$ is injective). The map is an **embedding** if its image is a [[#^ae0294|smooth submanifold]] and $f:M\to f(M)$ is a diffeomorphism. 
+
+^4f491f
+
+> [!Proposition] 
+> If $M$ is compact, every injective [[#^4f491f|immersion]] $f:M\to N$ is an embedding. 
+
+> [!Definition] Isotopy
+> Two [[#^4f491f|embeddings]] $f_{0}, f_{1}:M\to N$ are **isotopic** if there is a [[Homotopy, Covering Spaces and the Fundamental Group#^ccf037|homotopy]] $H:M\times I\to N$ such that for all $t\in[0, 1]$, the map $f_{t}$ defined by $H(\_{, t})$ is an *embedding*. The map $H$ is called an **isotopy** between $f_{0}$ and $f_{1}$. Two submanifolds $S_{0}$, $S_{1}$ of $M$ are **isotopic** if their inclusion maps are isotopic. 
+
+^d2add7
+
+> [!Definition] Ambient isotopy
+> An **ambient isotopy** on $N$ is an [[#^d2add7|isotopy]] between $\mathrm{id}_{N}$ and some other diffeomorphism $\varphi:N\to N$ such that every level is a diffeomorphism. Two [[#^4f491f|embeddings]] $\varphi, \psi:M\to N$ are **ambiently isotopic** if there is an ambient isotopy $F$ of $N$ such that $\psi=F_{1}\circ\varphi$.  
+ 
+^42e788
+
+> [!Proposition]
+> If $M$ is compact, two [[#^4f491f|embeddings]] $\varphi, \psi:M\to N$ are [[#^d2add7|isotopic]] iff they are [[#^42e788|ambiently isotopic]]. 
+
+
+# Tubular Neighborhoods
+
+
+Tubular neighborhoods are the $\textsf{Diff}$ category equivalent of [[Topological manifolds#^a8b826|regular neighborhoods]] from $\textsf{Top}$. An easy way to obtain tubular neighborhoods is via the [[Urysohn Lemma and applications#^e4f9b0|Whitney embedding]] - if $Y$ is a submanifold of $X$, we can look at all points within a distance $\epsilon$ of $Y$. The following theorem gives us an explicit description of this set. 
 
 > [!Theorem] The $\epsilon$-Neighborhood Theorem
 > Let $Y$ be a compact $k$-dimensional submanifold of the $n$-manifold $X$. Let $Y^{\epsilon}$ denote the set of all points in $X$ with distance less than $\epsilon$ from $Y$. If $\epsilon$ is sufficiently small, then $Y^{\epsilon}$ is a $I^{n-k}$-[[Fiber bundles#^a3d022|bundle]] over $Y$, in which case $Y^{\epsilon}$ is called an **$\epsilon$-neighborhood** of $Y$. 
 
+^759a38
 
 #q How does one define regular neighborhoods, and how is the equivalence with $\epsilon$-neighborhoods established? See how regular neighborhoods relate to the definition of [[Topological manifolds#^49ffed|regular balls]]; ideally, regular balls should just end up being regular neighborhoods of points ($0$-dimensional manifolds), but [[Topological manifolds#^bd0bcd]] satisfies the definition of an $\epsilon$-neighborhood without being regular, so there's more that goes into translating between $\epsilon$-neighborhoods and regular neighborhoods. 
+
+
+Alternatively, you can define the tubular neighborhood using the normal bundle:
+
+> [!Definition] Tubular neighborhood, @martelliIntroductionGeometricTopology2025 1.1.10
+> Let $M\subseteq N$ be a smooth submanifold. A **tubular neighborhood** of $M$ is an open subset $U\subseteq N$ diffeomorphic to the [[#^3bf73d|normal bundle]] via a diffeomorphism $\nu M\to U$ sending identically the [[#^69790c|zero-section]] onto $M$. 
+
+^b4f283
+
+The $\textsf{Diff}$ analog of [[Topological manifolds#^4bfc8c]] becomes 
+
+> [!Theorem] @martelliIntroductionGeometricTopology2025 Thm 1.1.11
+> Let $M\subseteq N$ be a closed smooth submanifold. A [[#^b4f283|tubular neighborhood]] for $M$ exists and is unique up to an [[#^d2add7|isotopy]] fixing $M$ and up to pre-composing with a bundle isomorphism of $\nu M$. 
+
 # Orientability
 
 > [!Definition] Orientability in DIFF, @schultensIntroduction3manifolds2014 1.3.1
@@ -128,5 +238,9 @@ so $\phi_{\alpha'}\circ \psi_{\beta'}^{-1}$ and $\phi_{\alpha}\circ \psi_{\beta}
 
 #q what is a "differentiable structure" in this context?
 
+> [!Proposition] @martelliIntroductionGeometricTopology2025 Prop 1.1.13
+> A connected compact manifold $M$ has a unique line bundle $E\to M$ up to isomorphism with [[#^dbdef9|orientable]] total space $E$. 
 
+[^2]: Give a reasonable definition of addition here - I think the obvious idea works. Also see @guilleminDifferentialTopology1974
 
+[^3]: Note that different parameterizations of the same curve yield parallel tangent vectors with different magnitudes!

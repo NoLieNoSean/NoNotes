@@ -8,7 +8,7 @@ tags:
 Recall that the general solution for the first-order linear differential equation $\dot{x}=ax$ is $x(t)=ce^{ at }$. 
 
 > [!Definition]
-> 1. An **ordinary DE** is an equation containing an unknown function of one variable real/complex variable $x$ and its derivatives. 
+> 1. An **ordinary DE** is an equation containing an unknown function of one variable real/complex $x$ and its derivatives. 
 > 2. A **Linear DE** is a DE that is linear in the unknown function and its derivatives. 
 > 3. The **order** of a DE is the highest order of derivative of the unknown function that appears in the DE. 
 > 4. A system of DEs is said to be **uncoupled** if each DE depends on only one variable. 

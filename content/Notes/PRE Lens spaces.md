@@ -62,7 +62,8 @@ To familiarize ourselves with Lens spaces, let us compute their fundamental grou
 
 ![[Topological manifolds#^a8b826]]
 
-![[Topological manifolds#^b1346e]]
+
+![[Differentiable manifolds#^759a38]]
 
 ---
 
@@ -138,3 +139,85 @@ This is the perspective from which we'll interpret the glueing map.
 Use the same trick!
 
 <iframe src="https://www.desmos.com/3d/sel16qrao7" width="100%" height= "500px"></iframe>
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# Lens spaces: Reprise
+
+
+![[-20260716122425550.jpg]]
+
+
+
+
+
+
+
+
+
+
+---
+
+# Meridian and longitude
+
+If you're given just a torus $\mathbb{T}^{2}$, then
+$$
+H_{1}(\mathbb{T}^{2})≅\mathbb{Z}^{2}.
+$$
+Choosing a pair $(m, l)$ is nothing more than choosing an **ordered basis** of this free abelian group. 
+
+Any other basis  
+$$
+(m',l')=(am+bl, cm+dl)  
+$$
+with  
+$$
+\begin{pmatrix}  
+a&b\\  
+c&d  
+\end{pmatrix}\in GL(2,\mathbb Z)  
+$$
+is just as valid.
+
+On an abstract torus, **all primitive bases are equivalent** under homeomorphisms.
+
+---
+
+# A torus as the boundary of a solid torus
+
+This is where "meridian" and "longitude" become meaningful.
+
+Suppose  
+$$
+T=\partial(\mathbb{B}^2\times \mathbb{S}^1).
+$$
+The meridian of $T$ is now distinguished by the topology of the filling: it is the **unique primitive homology class that becomes trivial in the solid torus**.
+
+However, the longitude is **not unique**. If $l$ is a longitude, then so is  
+$$
+l+km,\qquad k\in\mathbb Z,  
+$$
+since these also intersect the meridian once.
+
+---

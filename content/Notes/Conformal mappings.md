@@ -6,6 +6,9 @@ tags:
   - CANA
 ---
 
+
+#td Rewrite this. 
+
 > [!Definition]
 > A bijective holomorphic function $f:U\to V$ is called a **conformal map** or **biholomorphism**. Given such $f$, we say that $U$ and $V$ are **conformally equivalent**. 
 
@@ -115,6 +118,16 @@ Denote $SL_{2}(\mathbb{R})$ by $\mathcal{G}$.
 ---
 
 # The Riemann mapping theorem
+
+The problem is to determine conditions on an open set $\Omega$ that guarantee the existence of a conformal map $F:\Omega\to \mathbb{D}$. 
+
+There are some clear necessary conditions: 
+1. If $\Omega=\mathbb{C}$, there can be no conformal map $F:\Omega\to \mathbb{D}$, since by Lioville's theorem $F$ would have to be constant. Therefore, $\Omega\ne \mathbb{C}$ is a necessary condition. 
+2. Since $\mathbb{D}$ is simply connected, we much also impose the requirement that $\Omega$ is simply connected. 
+
+Remarkably, these conditions on $\Omega$ are also sufficient to guarantee the existence of a biholomorphism from $\Omega$ to $\mathbb{D}$. 
+
+
 
 > [!Theorem] Riemann
 > Suppose $\Omega$ is proper and simply connected. If $z_{0}\in \Omega$, then there exists a unique conformal map $F:\Omega\to \mathbb{D}$ such that

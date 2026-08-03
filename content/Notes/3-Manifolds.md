@@ -28,7 +28,7 @@ $\textsf{Exhibit C}$. $\mathbb{T}^{2}$ sauntering around in $\mathbb{S}^{3}$, vi
 ---
 # W23
 
-![[IMG_20260603_122808.jpg]]
+
 ## Classification of curves
 
 > [!Theorem] @leeIntroductionTopologicalManifolds2000 6.1
@@ -42,8 +42,6 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 ---
 
 # W24
-
-![[IMG_20260607_174037.jpg]]
 
 ## [[Transversality]]
 ## [[Branched Covering Spaces]]
@@ -62,8 +60,6 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W26
 
-![[-20260710233926184.jpg]]
-
 ## [[Dehn's Lemma]]
 
 ## [[Seifert Fibered Spaces]]
@@ -78,9 +74,15 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 
 # W28
 
-![[-20260710233620622.jpg]]
-
 ## [[PRE Lens spaces]]
+
+## [[Intro to Riemannian Geometry]]
+
+---
+
+# W29
+
+[[Hyperbolic space]]
 
 
 ---

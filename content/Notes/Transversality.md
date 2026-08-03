@@ -33,7 +33,7 @@ with equality interpreted appropriately.
 
 ^47e8ef
 
-The following theorem tells us that transversality is attainable via small [[Classification of compact surfaces#^d2add7|isotopies]] called **perturbations**. #q But the theorem only mentions homotopies, not isotopies?
+The following theorem tells us that transversality is attainable via small [[Differentiable manifolds#^d2add7|isotopies]] called **perturbations**. #q But the theorem only mentions homotopies, not isotopies?
 
 > [!Theorem] The Transversality Homotopy Theorem, @schultensIntroduction3manifolds2014 A.0.19
 > For any smooth map $f:Z\to X$ and any submanifold $Y$ of $X$ there exists a smooth map $g:Z\to X$ homotopic to $f$ that is transverse to $Y$. Moreover, suppose that $H:Z\times I\to X$ is a homotopy between $f$ and $g$. Then for all $\epsilon> 0$, there map $g_{\epsilon}:Z\to X$ defined by $g_{\epsilon}(z)=H(z, \epsilon)$ is also transverse to $Y$. 
