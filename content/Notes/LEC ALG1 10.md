@@ -7,32 +7,10 @@ date: 2024-09-12
 time: 14:00
 id: "76"
 ---
-## Recall
-
->[!Recall]
->[[LEC ALG1 9#Example 3|Example 3]] from yesterday
-
-In the previous lecture, we found a basis for the null space of a matrix. We now want to find a basis for the image of a matrix.
+Recall [[LEC ALG1 9#Example 3|Example 3]] from yesterday, where we found a basis for the null space of a matrix. We now want to find a basis for the image of a matrix.
 
 ---
-## The quest for a basis for the image of $f_{A}$ (column space)
-
-### Strategy 1
-
-Make rows into columns and vice versa, i.e, take the transpose. Not elaborated upon in class.
-#### Transpose
-
-Defined [[Matrices#Transpose|transpose]].
-
-Properties of transpose:
-- distributes over sums
-- $(AB)^{T}=B^{T}A^{T}$. Observe that inverses work similarly.
-
-$A\mathbf{x}=B$ is equivalent to $\mathbf{x}^{T}A^{T}=B^{T}$. Can solve the latter type of equations using *column operations*. Doing a column operations is the same as multiplying on the right by an elementary matrix.
-$$
-A\underset{ \text{Column operations} }{ \longrightarrow }AE
-$$
-### Strategy 2
+# Finding a basis of the column space
 
 Exploit properties of RREF.
 
@@ -51,7 +29,7 @@ Any set of columns of RREF(A) is linearly dependent/independent $\iff$ the corre
 
 Thus, a basis of $\text{Col }A=\{ \text{Columns of A corresponding to the pivot columns of RREF(A)} \}$
 
->[!Note] A better explanation
+>[!Note] Another explanation
 >We want to find a basis for the column space of $A$. We consider the pivot columns of $R=$RREF($A$). You can easily show that these are linearly independent, and span $\text{Col }R$. Thus, they are a basis for $\text{Col }R$. Now, it must be that $R=EA$, for some invertible matrix $E$. Thus, $R$ and $A$ are isomorphic, with $f_{E}$ being an isomorphism. If $f_{E}$ is an isomorphism, $f_{E}^{-1}$ is also an isomorphism. We know that an isomorphism maps a basis to a basis. Thus, the image of the pivot columns of $R$ under $f_{E}^{-1}$ (which are basically the corresponding columns in $A$) form a basis of $\text{Col }A$.
 
 ---

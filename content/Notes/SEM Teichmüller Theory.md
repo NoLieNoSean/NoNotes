@@ -4,6 +4,10 @@ date: 2026-06-24
 time: 12:01
 tags:
 ---
+Seminar at IISERB by Anurenj
+
+---
+
 [!Definition] Riemann surface
 Smooth $2$-manifold with holomorphic transition maps. 
 

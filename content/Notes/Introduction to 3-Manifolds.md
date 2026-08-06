@@ -6,7 +6,7 @@ tags:
   - MOC
   - 3MAN
 ---
-IISERB, May 2026 - , Kashyap Rajeevsarathy
+IISERB, May - July 2026, Kashyap Rajeevsarathy
 
 <iframe src="./Demos/Torus-in-S3.html" width="100%" height= "500px" style="border: none"></iframe>
 
@@ -75,15 +75,6 @@ Of course, this classifies the disconnected ones too, because it implies that ea
 # W28
 
 ## [[PRE Lens spaces]]
-
-## [[Intro to Riemannian Geometry]]
-
----
-
-# W29
-
-[[Hyperbolic space]]
-
 
 ---
 

@@ -41,6 +41,7 @@ There is a natural inclusion
 $$
 \bigwedge^{m}V^{*}\xrightarrow{i}  \bigotimes^{m}V^{*}.
 $$
+
 Define $\text{Alt}:\bigotimes^{m}V^{*}\to\bigotimes^{m}V^{*}$ by
 $$
 \text{Alt}(w)= \frac{1}{|\mathfrak{S}_{m}|}\sum_{\mathfrak{\sigma}\in \mathfrak{S}_{m}}(-1)^{\sigma}(\sigma.w),

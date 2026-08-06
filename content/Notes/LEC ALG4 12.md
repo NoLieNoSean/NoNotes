@@ -274,23 +274,23 @@ It is evident that
 
 The same can be said about $N\otimes_{R}\_$. 
 
-[!Proposition] The Hom-Tensor Adjunction
-Consider the three functors $(R\textsf{-Mod})^{op}\times (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}$ defined by [^3]
-$$
-\begin{align}
-(M, N, P)\mapsto \begin{cases}
-
-\text{Hom}_{R\textsf{\textsf{-Mod}}}(M, \text{Hom}_{R\textsf{\textsf{-Mod}}}(N, P) )  \\ 
-\text{Bi-linear}_{R}(M\times N, P) \\
-\text{Hom}_{R\textsf{-Mod}}(M\otimes _{R}N, P). 
-\end{cases}
-\end{align}
-$$
-These are [[Category Theory Preliminaries II#^e1d19e|naturally isomorphic]]. In particular, if we consider the covariant functors $R\textsf{-Mod}\to R\textsf{-Mod}$ given by $\mathscr{F}=\text{Hom}_{R}(N, \_{})$ and $\mathscr{G}=\_\otimes_{R}N$, the natural isomorphism between the first and third functors above yields a natural isomorphism [^4]
-$$
-(R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}:\text{Hom}_{R}(M, \mathscr{F}(P)) \cong \text{Hom}_{R}(\mathscr{G}(M), P),
-$$
-i.e, $\mathscr{F}$ and $\mathscr{G}$ are [[Category Theory Preliminaries II#^a625a6|adjoint]]. In words, the tensor product is left adjoint to $\text{Hom}$. 
+> [!Proposition] The Hom-Tensor Adjunction
+> Consider the three functors $(R\textsf{-Mod})^{op}\times (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}$ defined by [^3]
+> $$
+> \begin{align}
+> (M, N, P)\mapsto \begin{cases}
+> 
+> \text{Hom}_{R\textsf{\textsf{-Mod}}}(M, \text{Hom}_{R\textsf{\textsf{-Mod}}}(N, P) )  \\ 
+> \text{Bi-linear}_{R}(M\times N, P) \\
+> \text{Hom}_{R\textsf{-Mod}}(M\otimes _{R}N, P). 
+> \end{cases}
+> \end{align}
+> $$
+> These are [[Category Theory Preliminaries II#^e1d19e|naturally isomorphic]]. In particular, if we consider the covariant functors $R\textsf{-Mod}\to R\textsf{-Mod}$ given by $\mathscr{F}=\text{Hom}_{R}(N, \_{})$ and $\mathscr{G}=\_\otimes_{R}N$, the natural isomorphism between the first and third functors above yields a natural isomorphism [^4]
+> $$
+> (R\textsf{-Mod})^{op}\times R\textsf{-Mod}\to R\textsf{-Mod}:\text{Hom}_{R}(M, \mathscr{F}(P)) \cong \text{Hom}_{R}(\mathscr{G}(M), P),
+> $$
+> i.e, $\mathscr{F}$ and $\mathscr{G}$ are [[Category Theory Preliminaries II#^a625a6|adjoint]]. In words, the tensor product is left adjoint to $\text{Hom}$. 
 
 ^5f390d
 

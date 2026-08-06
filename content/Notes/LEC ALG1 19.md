@@ -103,7 +103,7 @@ Recall:
 
 Diagonalization of a linear operator $T:V\to V$ ==entails finding a basis $B$ of $V$ such that $[T]_{BB}$ is a diagonal matrix==. Such a basis does not always exist, i.e, not all operators can be diagonalized. 
 
-For operators in $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can be expressed as $A=SDS^{-1}$, where $D$ is a diagonal matrix and $S$ is an invertible matrix with entries in $\mathbb{F}$, i.e, $A$ is similar to a diagonal matrix.
+For operators on $\mathbb{F}^{n}$, the diagonalizability of $A$ implies $A$ can be expressed as $A=SDS^{-1}$, where $D$ is a diagonal matrix and $S$ is an invertible matrix with entries in $\mathbb{F}$, i.e, $A$ is similar to a diagonal matrix.
 
 > [!Proposition]
 > 

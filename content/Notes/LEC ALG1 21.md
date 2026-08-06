@@ -176,6 +176,15 @@ Now, suppose in a vector space $V$ we assigned to each vector $\mathbf{v}$ a num
 > [!Important]
 > *Any inner product space is a normed space*, as $\lVert \mathbf{v} \rVert=\sqrt{ \langle \mathbf{v}, \mathbf{v} \rangle }$ satisfies the above properties. However, *not all normed spaces are inner product spaces*.
 
+The **parallelogram identity** completely characterizes norms obtained from an inner product:
+
+> [!Theorem]
+> A norm in a normed space is obtained from some inner product iff it satisfies the parallelogram identity
+> $$
+> \lVert \mathbf{u}+\mathbf{v} \rVert ^{2}+\lVert \mathbf{u}-\mathbf{v} \rVert ^{2}=2(\lVert \mathbf{u} \rVert ^{2}+\lVert \mathbf{v} \rVert ^{2})\quad \forall \mathbf{u}, \mathbf{v}\in V.
+> $$
+> 
+
 ## Orthogonality
 
 If $\mathbf{u}, \mathbf{v} \in V$ then  is said to be **orthogonal** to  if $\langle \mathbf{u}, \mathbf{v}\rangle = 0$. If $\mathbf{u}$ is orthogonal to  then $\mathbf{v}$ is orthogonal to $\mathbf{u}$ as $\langle \mathbf{v}, \mathbf{u}\rangle = \overline{\langle \mathbf{u}, \mathbf{v}\rangle} = 0$.
