@@ -9,3 +9,4 @@ tags:
 CMI, Aug-Nov 2026, Akashdeep Dey
 
 [[LEC DGT 1]]
+[[LEC DGT 2]]

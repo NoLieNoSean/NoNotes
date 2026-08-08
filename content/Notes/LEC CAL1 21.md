@@ -283,7 +283,7 @@ Here's the one variable version:
 > > 
 > > Since $\mathbf{g}$ is differentiable on $V$, it is continuous on $V$. If we denote the set of all invertible elements of $\mathcal{L}(\mathbb{R}^{n})$ by $\Omega$, $\mathbf{f}':U\to \Omega$ is continuous, and the inversion map $\Omega\to \Omega$ is also continuous by [[LEC CAL1 3#^a7608b]]. Thus, $\mathbf{g}'$ is continuous, and $g$ is $C^{1}$.
 > 
-
+s
 > [!Corollary]
 > If $\mathbf{f}$ is a $C^{1}$ mapping of an open set $E\subset \mathbb{R}^{n}$ into $\mathbb{R}^{n}$ and if $\mathbf{f}'(\mathbf{x})$ is invertible for every $\mathbf{x}\in E$, then $\mathbf{f}(W)$ is an open subset of $\mathbb{R}^{n}$ for every open set $W\subset E$. In other words, $\mathbf{f}$ is an open mapping of $E$ into $\mathbb{R}^{n}$.
 

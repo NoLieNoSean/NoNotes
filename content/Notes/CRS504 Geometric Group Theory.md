@@ -6,3 +6,5 @@ tags:
 ---
 CMI, Aug-Nov 2026, P Shankaran
 
+[[LEC GGT 1]]
+
