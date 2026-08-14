@@ -6,3 +6,5 @@ tags:
   - MOC
   - QM1
 ---
+[[LEC QM1 1]]
+[[LEC QM 2]]

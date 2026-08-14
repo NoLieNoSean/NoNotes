@@ -9,25 +9,32 @@ id: "97"
 ---
 # Orbit, stabilizer and kernel
 
-> [!Definition]
-> Let $\phi:G\times X\to X$ be a [[LEC ALG2 7#Group actions|group action]]. For $x\in X$, define the *orbit of $x$* by
+> [!Definition] Orbit
+> Let $\phi:G\to \text{Sym}(X)$ be a [[LEC ALG2 7#Group actions|group action]]. For $x\in X$, define the **orbit of $x$** by
 > $$
 > \theta_{x}\equiv \{ gx\ | \  g\in G \}.
 > $$
->  The action of $G$ on $X$ is called *transitive* if there is only one orbit.
+>  The action of $G$ on $X$ is called **transitive** if there is only one orbit.
 
 Note that $\theta_{x}\subset X$, and does not have any group structure.
 
-> [!Definition]
-> Let $\phi:G\times X\to X$ be a group action. For $x\in X$, define the *stabilizer of $x$* by
+
+> [!Definition] Stabilizer
+> Let $\phi:G\to \text{Sym}(X)$ be a group action. For $x\in X$, define the **isotropy group** or **stabilizer of $x$**  by
 > $$
 > G_{x}\equiv \{ g\in G\ | \  gx=x \}.
 > $$
 
-It is easy to verify that $G_{x}<G$ for all $x\in X$.
+It is easy to verify that $G_{x}\leqslant G$ for all $x\in X$.
 
-> [!Definition]
-> The *kernel* of a group action $\phi$ is the set of all elements $g\in G$ for which $\phi_{g}$ is the identity on $S$:
+> [!Definition] Faithful and Free Actions
+> Let $\phi:G\to \text{Sym}(X)$ be a group action. 
+> 1. If $\phi$ is injective, then it is said to be **faithful** or **effective**. 
+> 2. $\phi$ is said to be **free** if the stabilizer of every $x\in X$ is trivial - in other words, no non-trivial element of $G$ fixes an element of $X$. 
+
+
+> [!Definition] Kernel
+> The **kernel** of a group action $\phi$ is the set of all elements $g\in G$ for which $\phi_{g}$ is the identity on $S$:
 > $$
 > \ker \phi=\{ g\in G\ | \  \phi_{g}(s)=s~\forall s\in S \}.
 > $$

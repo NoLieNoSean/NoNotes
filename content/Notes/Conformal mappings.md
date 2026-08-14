@@ -9,8 +9,12 @@ tags:
 
 #td Rewrite this. 
 
-> [!Definition]
-> A bijective holomorphic function $f:U\to V$ is called a **conformal map** or **biholomorphism**. Given such $f$, we say that $U$ and $V$ are **conformally equivalent**. 
+> [!Definition] Conformal map
+> Let $U, V\subseteq \mathbb{C}$ be open. A bijective holomorphic function $f:U\to V$ is called a **conformal map** or **biholomorphism**. Given such $f$, we say that $U$ and $V$ are **conformally equivalent**. 
+
+> [!Remark]
+> There is another notion of 'conformal map', which requires a holomorphic map $f:U\to V$ to satisfy $f'(z)\ne 0$ for all $z\in U$. A holomorphic map that satisfies this condition preserves angles. 
+
 
 > [!Proposition] @steinComplexAnalysis2003 Prp 8.1.1
 > If $f:U\to V$ is holomorphic and injective, then $f'(z)\ne 0$ for all $z\in U$. In particular, the inverse of $f$ defined on its range is holomorphic, and this the inverse of a conformal map is also holomorphic. 
@@ -37,19 +41,21 @@ tags:
 
 ^c5b41a
 
+<iframe src="https://www.desmos.com/calculator/g9asjc6xph" width="100%" height= "500px"></iframe>
+
 Algorithm to show a pair of maps $F, G$ are conformal:
 1. Show that they are holomorphic in their respective domains. 
 2. show that their ranges are correct.
 3. show that they are inverses of each other.
 
-[!Examples]
-1. Translations and dilations of $\mathbb{C}$.
-2. $z\mapsto z^{n}$ maps the appropriate sector to $\mathbb{H}$ 
-3. $f(z)=(1+z)/(1-z)$ takes the upper half disc to the first quadrant.
-4. $z\mapsto \log z$ takes $\mathbb{H}$ to a strip of width $\pi$.
-5. $f(z)=-\frac{1}{2}(z+1/z)$ maps the half disc to $\mathbb{H}$. 
-6. $f(z)=e^{iz}$ takes half strip to half disc
-7. $f(z)=\sin z$ 
+> [!Examples]
+> 1. Translations and dilations of $\mathbb{C}$.
+> 2. $z\mapsto z^{n}$ maps the appropriate sector to $\mathbb{H}$ 
+> 3. $f(z)=(1+z)/(1-z)$ takes the upper half disc to the first quadrant.
+> 4. $z\mapsto \log z$ takes $\mathbb{H}$ to a strip of width $\pi$.
+> 5. $f(z)=-\frac{1}{2}(z+1/z)$ maps the half disc to $\mathbb{H}$. 
+> 6. $f(z)=e^{iz}$ takes half strip to half disc
+> 7. $f(z)=\sin z$ 
 
 ---
 

@@ -182,108 +182,111 @@ Here's the one variable version:
 > Suppose $\mathbf{f}$ is a $C^{1}$ mapping of an open set $E\subseteq \mathbb{R}^{n}$ into $\mathbb{R}^{n}$, and $\mathbf{f}'(\mathbf{a})$ is invertible for some $\mathbf{a}\in E$. Then,
 > 1. there exist open sets $U$ and $V$ in $\mathbb{R}^{n}$ such that $\mathbf{a}\in U$, $\mathbf{f}(\mathbf{a})\in V$, $\mathbf{f}$ is injective on $U$, and $\mathbf{f}(U)=V$;
 > 2. the inverse $\mathbf{g}$ of $\mathbf{f}$ (which exists by the previous point), defined in $V$ by $\mathbf{g}(\mathbf{f}(\mathbf{x}))=\mathbf{x}$ for $\mathbf{x}\in U$, is a $C^{1}$ mapping, with its derivative given by $\mathbf{g}'(\mathbf{y})=\mathbf{f}'(\mathbf{g}(\mathbf{y}))^{-1}$ for $\mathbf{y}\in V$.
-> 
-> > [!Proof]-
-> > 
-> > Put $\mathbf{f}'(\mathbf{a})=A$, and let 
-> > $$
-> > \lambda=\frac{1}{2\lVert A^{-1} \rVert}.
-> > $$
-> > 
-> > ^f4c340
-> > 
-> > Since $\mathbf{f}'$ is continuous at $\mathbf{a}$, there is an open ball $U\subset E$ with center $\mathbf{a}$ such that
-> > $$
-> > \lVert \mathbf{f}'(\mathbf{x})-A \rVert<\lambda\quad \quad (\mathbf{x}\in U).
-> > $$
-> > 
-> > ^f8852a
-> > 
-> > **$f|_{U}$ is an injection**
-> > 
-> > Associate with each $\mathbf{y}\in \mathbb{R}^{n}$ a function $\varphi_{\mathbf{y}}$, defined by
-> > $$
-> > \varphi_{\mathbf{y}}(\mathbf{x})=\mathbf{x}+A^{-1}(\mathbf{y}-\mathbf{f}(\mathbf{x}))\quad \quad (\mathbf{x}\in E).
-> > $$
-> > Note that $\mathbf{f}(\mathbf{x})=\mathbf{y}$ iff $\mathbf{x}$ is a fixed point of $\varphi_{\mathbf{y}}$. 
-> > 
-> > $\varphi'_{\mathbf{y}}(\mathbf{x})=I-A^{-1}\mathbf{f}'(\mathbf{x})=A^{-1}(A-\mathbf{f}'(\mathbf{x}))$. By [[#^f8852a]],
-> > $$
-> > \begin{align}
-> > \lVert \varphi_{\mathbf{y}}' (\mathbf{x})\rVert \leq \lVert A^{-1} \rVert \lVert A-\mathbf{f}'(\mathbf{x}) \rVert < \frac{1}{2}\quad \quad (\mathbf{x}\in U).
-> > \end{align}
-> > $$
-> > Applying the [[LEC CAL1 18#^fb4aaf|mean value theorem]] yields
-> > $$
-> > \begin{align}
-> > |\varphi_{\mathbf{y}}(\mathbf{x}_{1})-\varphi_{\mathbf{y}}(\mathbf{x}_{2})|\leq\frac{1}{2}|\mathbf{x}_{1}-\mathbf{x}_{2}|\quad \quad (\mathbf{x}_{1}, \mathbf{x}_{2}\in U).
-> > \end{align}
-> > $$
-> > 
-> > ^36ae5d
-> > 
-> > It follows that $\varphi_{\mathbf{y}}$ has at most one fixed point in $U$, so $\mathbf{f}(\mathbf{x})=\mathbf{y}$ for at most one $\mathbf{x}\in U$. 
-> > 
-> > **$f(U)$ is open in $\mathbb{R}^{n}$**
-> > 
-> > Let $V=\mathbf{f}(U)$. Pick $\mathbf{y}_{0}\in V$. Then $\mathbf{y}_{0}=\mathbf{f}(\mathbf{x}_{0})$ for some $\mathbf{x}_{0}\in U$. Let $B=B_{r}(\mathbf{x}_{0})$ be such that $\overline{B_{r}(\mathbf{x}_{0})}\subset U$. We will show that $B_{\lambda r}(\mathbf{y}_{0})\subset V$.
-> > 
-> > Let $\mathbf{y}\in B_{\lambda r}(\mathbf{y}_{0})$. 
-> > $$
-> > \begin{align}
-> > |\varphi_{\mathbf{y}}(\mathbf{x}_{0})-\mathbf{x}_{0}|=|A^{-1}(\mathbf{y}-\mathbf{y}_{0})|< \lVert A^{-1} \rVert \lambda r=\frac{r}{2}.
-> > \end{align}
-> > $$
-> > 
-> > ^a8c43d
-> > 
-> > If $\mathbf{x}\in \overline{B}$, by [[#^36ae5d]] and [[#^a8c43d]], 
-> > $$
-> > \begin{align}
-> > |\varphi_{\mathbf{y}}(\mathbf{x})-\mathbf{x}_{0}| & \leq |\varphi_{\mathbf{y}}(\mathbf{x})-\varphi_{\mathbf{y}} (\mathbf{x}_{0})|+|\varphi_{\mathbf{y}}(\mathbf{x}_{0})-\mathbf{x}_{0}| \\
-> >  & <\frac{1}{2}|\mathbf{x}-\mathbf{x}_{0}|+\frac{r}{2} \leq r;
-> > \end{align}
-> > $$
-> > hence $\varphi_{\mathbf{y}}(\mathbf{x})\in B$. 
-> > 
-> > Thus $\varphi_{\mathbf{y}}$ is a contraction of $\overline{B}$ into $\overline{B}$. Being a closed subset of $\mathbb{R}^{n}$, $\overline{B}$ is complete. By the [[LEC CAL1 10#^e6644a|Banach contraction principle]], $\varphi_{\mathbf{y}}$ has a unique fixed point $\mathbf{x}\in \overline{B}$, for which we must have $\mathbf{f}(\mathbf{x})=\mathbf{y}$. Thus $\mathbf{y}\in \mathbf{f}(\overline{B})\subset \mathbf{f}(U)=V$.
-> > 
-> > **$\mathbf{g}$ is a $C^{1}$ mapping**
-> > 
-> > Let $\mathbf{y}, \mathbf{y}+\mathbf{k}\in V$. There exist $\mathbf{x}, \mathbf{x}+\mathbf{h}\in U$ such that $\mathbf{y}=\mathbf{f}(\mathbf{x})$, $\mathbf{y}+\mathbf{k}=f(\mathbf{x}+\mathbf{h})$.
-> > $$
-> > \begin{align}
-> > \varphi_{\mathbf{y}}(\mathbf{x}+\mathbf{h})-\varphi_{\mathbf{y}}(\mathbf{x})=\mathbf{h}+A^{-1}[\mathbf{f}(\mathbf{x})-\mathbf{f}(\mathbf{x}+\mathbf{h})]=\mathbf{h}-A^{-1}\mathbf{k}.
-> > \end{align}
-> > $$
-> > By [[#^36ae5d]], $|\mathbf{h}-A^{-1}\mathbf{k}|\leq |\mathbf{h}|/2$. Hence $|A^{-1}\mathbf{k}|\geq |\mathbf{h}|/2$ and
-> > $$
-> > |\mathbf{h}|\leq 2\lVert A^{-1} \rVert |\mathbf{k}|=\lambda ^{-1}|\mathbf{k}|.
-> > $$
-> > 
-> > ^ccd2d7
-> > 
-> > Next, note that by [[#^f4c340]], [[#^f8852a]], and [[LEC CAL1 3#^a7608b]], $\mathbf{f}'(\mathbf{x})$ has an inverse, say $T$. We will show that $T$ is $\mathbf{g}'(\mathbf{y})$. Since
-> > $$
-> > \begin{align}
-> > \mathbf{g}(\mathbf{y}+\mathbf{k})-\mathbf{g}(\mathbf{y})-T\mathbf{k} & =\mathbf{h}-T\mathbf{k} \\
-> >  & =-T[\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{f}'(\mathbf{x})\mathbf{h}],
-> > \end{align}
-> > $$
-> > [[#^ccd2d7]] implies 
-> > $$
-> > \begin{align}
-> > \frac{|\mathbf{g}(\mathbf{y}+\mathbf{k})-\mathbf{g}(\mathbf{y})-T\mathbf{k}|}{|\mathbf{k}|}\leq \frac{\lVert T \rVert }{\lambda}\frac{|\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{f}'(\mathbf{x})\mathbf{h}|}{|\mathbf{h}|}.
-> > \end{align}
-> > $$
-> > As $\mathbf{k}\to 0$, $\mathbf{h}\to 0$ by [[#^ccd2d7]]. Thus, the right side of the inequality tends to $0$ as $\mathbf{k}\to 0$. Hence the same is true of the left. By the [[LEC CAL1 16#^054571|Definition of the derivative]], we have proven that 
-> > $$
-> > \mathbf{g}'(\mathbf{y})=T=\mathbf{f}'(\mathbf{x})^{-1}=\mathbf{f}'(\mathbf{g}(\mathbf{y}))^{-1}\quad \quad (\mathbf{y}\in V).
-> > $$
-> > 
-> > Since $\mathbf{g}$ is differentiable on $V$, it is continuous on $V$. If we denote the set of all invertible elements of $\mathcal{L}(\mathbb{R}^{n})$ by $\Omega$, $\mathbf{f}':U\to \Omega$ is continuous, and the inversion map $\Omega\to \Omega$ is also continuous by [[LEC CAL1 3#^a7608b]]. Thus, $\mathbf{g}'$ is continuous, and $g$ is $C^{1}$.
-> 
-s
+
+^e75cec
+
+
+**Proof:**
+Put $\mathbf{f}'(\mathbf{a})=A$, and let 
+$$
+\lambda=\frac{1}{2\lVert A^{-1} \rVert}.
+$$
+
+^f4c340
+
+Since $\mathbf{f}'$ is continuous at $\mathbf{a}$, there is an open ball $U\subset E$ with center $\mathbf{a}$ such that
+$$
+\lVert \mathbf{f}'(\mathbf{x})-A \rVert<\lambda\quad \quad (\mathbf{x}\in U).
+$$
+
+^f8852a
+
+**$f|_{U}$ is an injection**
+
+Associate with each $\mathbf{y}\in \mathbb{R}^{n}$ a function $\varphi_{\mathbf{y}}$, defined by
+$$
+\varphi_{\mathbf{y}}(\mathbf{x})=\mathbf{x}+A^{-1}(\mathbf{y}-\mathbf{f}(\mathbf{x}))\quad \quad (\mathbf{x}\in E).
+$$
+Note that $\mathbf{f}(\mathbf{x})=\mathbf{y}$ iff $\mathbf{x}$ is a fixed point of $\varphi_{\mathbf{y}}$. 
+
+$\varphi'_{\mathbf{y}}(\mathbf{x})=I-A^{-1}\mathbf{f}'(\mathbf{x})=A^{-1}(A-\mathbf{f}'(\mathbf{x}))$. By [[#^f8852a]],
+$$
+\begin{align}
+\lVert \varphi_{\mathbf{y}}' (\mathbf{x})\rVert \leq \lVert A^{-1} \rVert \lVert A-\mathbf{f}'(\mathbf{x}) \rVert < \frac{1}{2}\quad \quad (\mathbf{x}\in U).
+\end{align}
+$$
+Applying the [[LEC CAL1 18#^fb4aaf|mean value theorem]] yields
+$$
+\begin{align}
+|\varphi_{\mathbf{y}}(\mathbf{x}_{1})-\varphi_{\mathbf{y}}(\mathbf{x}_{2})|\leq\frac{1}{2}|\mathbf{x}_{1}-\mathbf{x}_{2}|\quad \quad (\mathbf{x}_{1}, \mathbf{x}_{2}\in U).
+\end{align}
+$$
+
+^36ae5d
+
+It follows that $\varphi_{\mathbf{y}}$ has at most one fixed point in $U$, so $\mathbf{f}(\mathbf{x})=\mathbf{y}$ for at most one $\mathbf{x}\in U$. 
+
+**$f(U)$ is open in $\mathbb{R}^{n}$**
+
+Let $V=\mathbf{f}(U)$. Pick $\mathbf{y}_{0}\in V$. Then $\mathbf{y}_{0}=\mathbf{f}(\mathbf{x}_{0})$ for some $\mathbf{x}_{0}\in U$. Let $B=B_{r}(\mathbf{x}_{0})$ be such that $\overline{B_{r}(\mathbf{x}_{0})}\subset U$. We will show that $B_{\lambda r}(\mathbf{y}_{0})\subset V$.
+
+Let $\mathbf{y}\in B_{\lambda r}(\mathbf{y}_{0})$. 
+$$
+\begin{align}
+|\varphi_{\mathbf{y}}(\mathbf{x}_{0})-\mathbf{x}_{0}|=|A^{-1}(\mathbf{y}-\mathbf{y}_{0})|< \lVert A^{-1} \rVert \lambda r=\frac{r}{2}.
+\end{align}
+$$
+
+^a8c43d
+
+If $\mathbf{x}\in \overline{B}$, by [[#^36ae5d]] and [[#^a8c43d]], 
+$$
+\begin{align}
+|\varphi_{\mathbf{y}}(\mathbf{x})-\mathbf{x}_{0}| & \leq |\varphi_{\mathbf{y}}(\mathbf{x})-\varphi_{\mathbf{y}} (\mathbf{x}_{0})|+|\varphi_{\mathbf{y}}(\mathbf{x}_{0})-\mathbf{x}_{0}| \\
+ & <\frac{1}{2}|\mathbf{x}-\mathbf{x}_{0}|+\frac{r}{2} \leq r;
+\end{align}
+$$
+hence $\varphi_{\mathbf{y}}(\mathbf{x})\in B$. 
+
+Thus $\varphi_{\mathbf{y}}$ is a contraction of $\overline{B}$ into $\overline{B}$. Being a closed subset of $\mathbb{R}^{n}$, $\overline{B}$ is complete. By the [[LEC CAL1 10#^e6644a|Banach contraction principle]], $\varphi_{\mathbf{y}}$ has a unique fixed point $\mathbf{x}\in \overline{B}$, for which we must have $\mathbf{f}(\mathbf{x})=\mathbf{y}$. Thus $\mathbf{y}\in \mathbf{f}(\overline{B})\subset \mathbf{f}(U)=V$.
+
+**$\mathbf{g}$ is a $C^{1}$ mapping**
+
+Let $\mathbf{y}, \mathbf{y}+\mathbf{k}\in V$. There exist $\mathbf{x}, \mathbf{x}+\mathbf{h}\in U$ such that $\mathbf{y}=\mathbf{f}(\mathbf{x})$, $\mathbf{y}+\mathbf{k}=f(\mathbf{x}+\mathbf{h})$.
+$$
+\begin{align}
+\varphi_{\mathbf{y}}(\mathbf{x}+\mathbf{h})-\varphi_{\mathbf{y}}(\mathbf{x})=\mathbf{h}+A^{-1}[\mathbf{f}(\mathbf{x})-\mathbf{f}(\mathbf{x}+\mathbf{h})]=\mathbf{h}-A^{-1}\mathbf{k}.
+\end{align}
+$$
+By [[#^36ae5d]], $|\mathbf{h}-A^{-1}\mathbf{k}|\leq |\mathbf{h}|/2$. Hence $|A^{-1}\mathbf{k}|\geq |\mathbf{h}|/2$ and
+$$
+|\mathbf{h}|\leq 2\lVert A^{-1} \rVert |\mathbf{k}|=\lambda ^{-1}|\mathbf{k}|.
+$$
+
+^ccd2d7
+
+Next, note that by [[#^f4c340]], [[#^f8852a]], and [[LEC CAL1 3#^a7608b]], $\mathbf{f}'(\mathbf{x})$ has an inverse, say $T$. We will show that $T$ is $\mathbf{g}'(\mathbf{y})$. Since
+$$
+\begin{align}
+\mathbf{g}(\mathbf{y}+\mathbf{k})-\mathbf{g}(\mathbf{y})-T\mathbf{k} & =\mathbf{h}-T\mathbf{k} \\
+ & =-T[\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{f}'(\mathbf{x})\mathbf{h}],
+\end{align}
+$$
+[[#^ccd2d7]] implies 
+$$
+\begin{align}
+\frac{|\mathbf{g}(\mathbf{y}+\mathbf{k})-\mathbf{g}(\mathbf{y})-T\mathbf{k}|}{|\mathbf{k}|}\leq \frac{\lVert T \rVert }{\lambda}\frac{|\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{f}'(\mathbf{x})\mathbf{h}|}{|\mathbf{h}|}.
+\end{align}
+$$
+As $\mathbf{k}\to 0$, $\mathbf{h}\to 0$ by [[#^ccd2d7]]. Thus, the right side of the inequality tends to $0$ as $\mathbf{k}\to 0$. Hence the same is true of the left. By the [[LEC CAL1 16#^054571|Definition of the derivative]], we have proven that 
+$$
+\mathbf{g}'(\mathbf{y})=T=\mathbf{f}'(\mathbf{x})^{-1}=\mathbf{f}'(\mathbf{g}(\mathbf{y}))^{-1}\quad \quad (\mathbf{y}\in V).
+$$
+
+Since $\mathbf{g}$ is differentiable on $V$, it is continuous on $V$. If we denote the set of all invertible elements of $\mathcal{L}(\mathbb{R}^{n})$ by $\Omega$, $\mathbf{f}':U\to \Omega$ is continuous, and the inversion map $\Omega\to \Omega$ is also continuous by [[LEC CAL1 3#^a7608b]]. Thus, $\mathbf{g}'$ is continuous, and $g$ is $C^{1}$.
+
+
+
 > [!Corollary]
 > If $\mathbf{f}$ is a $C^{1}$ mapping of an open set $E\subset \mathbb{R}^{n}$ into $\mathbb{R}^{n}$ and if $\mathbf{f}'(\mathbf{x})$ is invertible for every $\mathbf{x}\in E$, then $\mathbf{f}(W)$ is an open subset of $\mathbb{R}^{n}$ for every open set $W\subset E$. In other words, $\mathbf{f}$ is an open mapping of $E$ into $\mathbb{R}^{n}$.
 

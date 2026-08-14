@@ -12,4 +12,3 @@ draft: false
 [[Smooth and analytic multivariable functions]]
 [[Tangent vectors in Rn as derivations]]
 
-

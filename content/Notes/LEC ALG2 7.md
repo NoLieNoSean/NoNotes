@@ -25,8 +25,8 @@ Remarks:
 ---
 # Group actions
 
-> [!Definition]
-> Let $G$ be a group and let $X$ be a set. We say that $G$ acts on $X$ if we have a map $\phi:G\times X\to X$ ($\phi(g, x)$ is denoted by $gx$), called a *group action*, satisfying
+> [!Definition] Group action
+> Let $G$ be a group and let $X$ be a set. We say that $G$ acts on $X$ (and call $X$ a **$G$-set**) if we have a map $\phi:G\times X\to X$ ($\phi(g, x)$ is denoted by $gx$), called a **group action**, satisfying
 > 1. $1_{G}x=x$ $\forall x\in X$, and
 > 2. $g_{1}(g_{2}x)=(g_{1}g_{2})x$ $\forall g_{1}, g_{2}\in G$ and $\forall x\in X$.
 > 
@@ -60,7 +60,7 @@ Thus, the codomain of $\phi$ can be reduced to the symmetric group $\text{Sym}(X
 
 ^bee0cf
 
-If $\phi$ is injective, then it is said to be *faithful* or *effective*. 
+
 
 > [!Example]
 > Let $G=S_{4}$ and $X=\{ \Pi_{1}, \Pi_{2}, \Pi_{3} \}$, the latter as defined in [[LEC ALG2 3#^6cf5fb]]. Let $\phi:G\times X\to X$ be defined by
@@ -81,3 +81,15 @@ If $\phi$ is injective, then it is said to be *faithful* or *effective*.
 ^3ca8d2
 
 [^1]: the defining map $G\to S_{X}$ is a homomorphism for left group actions, unlike for right group actions, as seen here. The only reason for this is the manner in which we define function composition: $f\circ g$ is 'first $g$ then $f$'. 
+
+
+> [!Definition] Equivariant maps
+> Suppose $S_{1}$ and $S_{2}$ are right $G$-sets. A map $\varphi:S_{1}\to S_{2}$ is said to be **$G$-equivariant** if for each $g\in G$, the operations of applying $\varphi$ and action of the right by $g$ commute: that is, 
+> $$
+> \begin{align}
+> \varphi(s\cdot g)=\varphi(s)\cdot g &  & \forall s\in S_{1}, \forall g\in G .
+> \end{align}
+> $$
+> A $G$-equivariant bijection $\varphi:S_{1}\to S_{2}$ is called a **$G$-isomorphism**. 
+
+^846bb7

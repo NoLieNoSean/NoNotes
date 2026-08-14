@@ -45,7 +45,7 @@ Every smooth map $f:M\to N$ between differentiable manifolds induces at each poi
 
 ^42f88b
 
-The [[LEC CAL1 21#^ccd2d7|inverse function theorem]] in $\mathbb{R}^{n}$ implies its analog for smooth manifolds:
+The [[LEC CAL1 21#^ccd2d7|inverse function theorem]] in $\mathbb{R}^{n}$ implies its analogue for smooth manifolds:
 
 > [!Theorem] @martelliIntroductionGeometricTopology2025 1.1.6
 > Let $f:M\to N$ be a smooth map between manifolds of the same dimension. The map is a [[#^42f88b|local diffeomorphism]] at $p\in M$ iff the differential $df_{p}:T_{p}M\to T_{f(p)}N$ is invertible. 

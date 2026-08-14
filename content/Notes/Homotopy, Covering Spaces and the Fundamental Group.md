@@ -163,11 +163,13 @@ tags:
 # Covering spaces
 
 > [!Definition] Covering space
-> Let $p:E\to B$ be a continuous surjective map. The open set $U$ of $B$ is said to be **evenly covered** by $p$ if the inverse image $p ^{-1}(U)$ can be written as the union of disjoint open sets $V_{\alpha}$ in $E$ such that for each $\alpha$, the restriction of $p$ to $V_{\alpha}$ is a homeomorphism of $V_{\alpha}$ onto $U$. The collection $\{ V_{\alpha} \}$ will be called a partition of $p ^{-1}(U)$ into **slices**. 
+> Let $p:E\to B$ be a continuous surjective map. The open set $U$ of $B$ is said to be **evenly covered** by $p$ if the inverse image $p ^{-1}(U)$ can be written as the union of disjoint open sets $V_{\alpha}$ in $E$ such that for each $\alpha$, the restriction of $p$ to $V_{\alpha}$ is a *homeomorphism* of $V_{\alpha}$ onto $U$. The collection $\{ V_{\alpha} \}$ will be called a partition of $p ^{-1}(U)$ into **slices**. 
 > 
 > If every point $b\in B$ has a neighborhood $U$ that is evenly covered by $p$, then $p$ is called a **covering map**, and $E$ is said to be a **covering space** of $B$. 
 
 ^03ba68
+
+Note that some authors (like Lee) assume $E$ is path connected. 
 
 > [!Proposition] @munkresTopology2000 Exr. 53.3
 > Let $p:E\to B$ be a covering map; let $B$ be connected. Show that if $p ^{-1}(b_{0})$ has cardinality $c$, then $p ^{-1}(b)$ has cardinality $c$ for every $b\in B$. We call $E$ a **$c$-fold covering** of $B$. 
@@ -194,6 +196,8 @@ tags:
 > \end{document}
 > ```
 > commutes. 
+
+
 
 Covering spaces are instances of [[Fiber bundles#^a3d022|fiber bundles]]. 
 
@@ -225,33 +229,46 @@ Covering spaces are instances of [[Fiber bundles#^a3d022|fiber bundles]].
 
 ^944522
 
-## Lifting properties of covering maps
+## Lifting properties of covering maps for paths
 
 > [!Definition] Lifting
 > Let $p:E\to B$ be a map. If $f$ is a continuous mapping of some space $X$ into $B$, a **lifting** of $f$ is a map $\tilde{f}:X\to E$ such that $p\circ \tilde{f}=f$. 
+> 
+> ```latex
+> % latex-id: a96d-3fdf-31c2-41bc-9a46
+> \begin{document}
+> % https://q.uiver.app/#q=WzAsMyxbMSwwLCJFIl0sWzEsMSwiQiJdLFswLDEsIlgiXSxbMCwxLCJwIl0sWzIsMSwiZiIsMl0sWzIsMCwiXFx0aWxkZXtmfSJdXQ==
+> \[\begin{tikzcd} & E \\ X & B \arrow["p", from=1-2, to=2-2] \arrow["{\tilde{f}}", from=2-1, to=1-2] \arrow["f"', from=2-1, to=2-2] \end{tikzcd}\] 
+> 
+> \end{document}
+> ```
+> 
+
 
 > [!Theorem]
-> Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Paths $f:[0, 1]\to B$ beginning at $b_{0}$  (homotopies $F:[0, 1]^{2}\to B$ with $F(0, 0)=b_{0}$) have a unique lifting such that $\tilde{f}(0)=e_{0}$ ($\tilde{F}(0, 0)=e_{0}$). If $F$ is a path homotopy, $\tilde{F}$ is a path homotopy. 
+> Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Paths $f:[0, 1]\to B$ beginning at $b_{0}$  (homotopies $F:[0, 1]^{2}\to B$ with $F(0, 0)=b_{0}$) have a *unique* lifting such that $\tilde{f}(0)=e_{0}$ ($\tilde{F}(0, 0)=e_{0}$). If $F$ is a path homotopy, $\tilde{F}$ is a path homotopy. 
 
 Proof applies the [[LEC CAL1 8#Lebesgue covering Lemma|Lebesgue number lemma]] to $f([0, 1])$ ($F([0, 1]^{2})$).
 
 > [!Theorem]
 > Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. Let $f$ and $g$ be two paths in $B$ from $b_{0}$ to $b_{1}$. Let $\tilde{f}$ and $\tilde{g}$ be their respective lifts to paths in $E$ beginning at $e_{0}$. If $f$ and $g$ are path homotopic, then $\tilde{f}$ and $\tilde{g}$ end at the same point of $E$ and are path homotopic. 
 
-> [!Definition]
-> Let $p:E\to B$ be a covering map; let $b_{0}\in B$. Choose $e_{0}$ such that $p(e_{0})=b_{0}$. Then, $\pi_{1}(B, b_{0})$ acts on $p ^{-1}(b_{0})$. The map $[f]\mapsto \tilde{f}(1)$, where $\tilde{f}$ is the lift of $f$ starting at $e_{0}$, is called the **lifting correspondence**. 
+> [!Definition] The Monodromy action
+> Let $p:E\to B$ be a covering map; let $b_{0}\in B$. Choose $e_{0}$ such that $p(e_{0})=b_{0}$. Then, $\pi_{1}(B, b_{0})$ [[LEC ALG2 7#Group actions|acts]] on $p ^{-1}(b_{0})$. This is known as the **Monodromy action**. The map $[f]\mapsto \tilde{f}_{e_{0}}(1)$, where $\tilde{f}_{e_{0}}$ is the lift of $f$ starting at $e_{0}$, is called the **lifting correspondence**. 
 
 The following theorem helps us use covering maps to compute fundamental groups. 
 
 > [!Theorem] @munkresTopology2000 54.4 & 54.6
 > Let $p:E\to B$ be a covering map; let $p(e_{0})=b_{0}$. 
-> 1. If $E$ is path connected, the lifting correspondence $\phi:\pi_{1}(B, b_{0})\to p ^{-1}(b_{0})$ is surjective. 
-> 2. If $E$ is simply connected, the lifting correspondence is bijective. 
-> 3. The homomorphism $p_{*}:\pi_{1}(E, e_{0})\to \pi_{1}(B, b_{0})$ is a monomorphism. 
+>  1. The homomorphism $p_{*}:\pi_{1}(E, e_{0})\to \pi_{1}(B, b_{0})$ is injective. 
+> 2. If $E$ is path connected, the lifting correspondence $\phi:\pi_{1}(B, b_{0})\to p ^{-1}(b_{0})$ is surjective. In other words, the $\pi_{1}(B, b_{0})$-action on $p ^{-1}(b_{0})$ is transitive. 
+> 3. If $E$ is simply connected, the lifting correspondence is bijective. 
 > 4. Let $H=p_{*}(\pi_{1}(E, e_{0}))$. The lifting correspondence $\phi$ induces an injective map $\pi_{1}(B, b_{0})/H\to p ^{-1}(b_{0})$ of the collection of right cosets of $H$ into $p ^{-1}(b_{0})$, which is bijective if $E$ is path connected. 
 > 5. If $f$ is a loop in $B$ based at $b_{0}$, then $[f]\in H$ iff $f$ lifts to a loop in $E$ based at $e_{0}$. 
 
 ^334a74
+
+Look at @leeIntroductionTopologicalManifolds2011 Exm 11.17 for an example.
 
 ## The fundamental group of the circle
 
