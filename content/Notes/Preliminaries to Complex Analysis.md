@@ -222,7 +222,7 @@ This tells us that an analytic function on $\Omega$ is also holomorphic on $\Ome
 > 
 
 
-Explore connections to [[LEC CAL2 9#^05ab36]]. 
+Explore connections to [[Differential Forms I#^05ab36]]. 
 
 > [!Corollary]
 > If $\gamma$ is a closed curve in an open set $\Omega$, and $f$ is continuous and has a primitive in $\Omega$, then

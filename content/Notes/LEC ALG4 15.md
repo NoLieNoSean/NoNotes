@@ -91,4 +91,6 @@ Proof similar to the case of $\text{Sym}(M)$.
 > $$
 > 
 
+^28f88b
+
 [^1]: Again, this is equivalent to requiring $f(x_{1}, \dots, x_{i},\dots, x_{j}, \dots, x_{n})=-f(x_{1}, \dots, x_{j}, \dots, x_{i}, \dots, x_{n})$ - see [[#^a335b3]]. 

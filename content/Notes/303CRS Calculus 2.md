@@ -21,10 +21,12 @@ CMI, Aug-Nov 2025, Krishna Hanumanthu
 Intermezzo: [[203CRS Calculus 1|CAL 1]] review
 
 [[LEC CAL2 7]] ✅ Partitions of unity
-[[LEC CAL2 8]] Change of variables
+[[LEC CAL2 8]] ✅ Change of variables
 
-[[LEC CAL2 9]] Multilinear algebra
-[[LEC CAL2 10]] Differential forms
+Stuff I rewrote about a year later:
+
+[[Differential Forms I]] 
+[[LEC CAL2 10]] 
 
 # Tutorials
 
