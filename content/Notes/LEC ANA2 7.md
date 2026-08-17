@@ -32,7 +32,7 @@ We now have the tools to prove [[LEC ANA1 20#^95867f]] more succinctly:
 
 # The Arzelà–Ascoli Theorem
 
-[[LEC ANA2 3#Completeness|Recall]] that for compact $X$, $C(X)$ is a Banach space. The motivating question for this section is: For compact $X$, when is a subset of $C(X)$ compact? If $C(X)$ were finite dimensional, the answer is trivial by the [[LEC CAL1 3#^98df3d|Heine Borel Theorem]]. The Arzelà–Ascoli Theorem provides a characterization of compact subsets of $C(X)$ when $C(X)$ is infinite dimensional: In addition to being closed and bounded, compact subsets of $C(X)$ are **equicontinuous**. 
+[[LEC ANA2 3#Completeness|Recall]] that for compact $X$, $C(X)$ is a Banach space. The motivating question for this section is: For compact $X$, when is a subset of $C(X)$ compact? If $C(X)$ is finite dimensional, the [[LEC CAL1 3#^98df3d|Heine Borel Theorem]] provides an easy characterization. The Arzelà–Ascoli Theorem provides a characterization of compact subsets of $C(X)$ when $C(X)$ is infinite dimensional - in addition to being closed and bounded, compact subsets of $C(X)$ are **equicontinuous**. 
 
 Equicontinuity is the natural generalization of [[LEC ANA1 20#^5d7328|uniform continuity]] to families of functions:
 

@@ -14,3 +14,4 @@ Topics:
 ---
 
 [[LEC GANA1 1]]
+[[LEC GANA1 2]]
