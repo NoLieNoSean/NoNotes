@@ -20,7 +20,7 @@ CMI, Aug-Nov 2025, Clare D'Cruz
 
 [[LEC ALG3 1]] ✅ Ring homomorphisms, polynomial rings, products and coproducts
 [[LEC ALG3 2]] ✅ Quotients and ideals
-[[LEC ALG3 3]] ✅ Modules
+[[LEC ALG3 3]] ✅ Modules and algebras
 [[LEC ALG3 4]] ✅ Quotients of polynomial rings, prime and maximal ideals, power series rings
 [[LEC ALG3 5]] ✅ Radicals
 [[LEC ALG3 6]] ✅ Krull's theorem, Chinese remainder theorem

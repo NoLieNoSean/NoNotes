@@ -3,6 +3,8 @@ id: "520"
 date: 2026-08-12
 time: 11:54
 tags:
+  - GGT
+  - Lecture
 ---
 [!Proposition]
 1. $SL_{2}(\mathbb{R})$ acts on $\mathbb{H}$ transitively via isometries. 

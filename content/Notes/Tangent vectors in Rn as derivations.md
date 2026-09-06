@@ -14,7 +14,11 @@ Follows @tuIntroductionManifolds2011 §2.
 
 Let $p\in \mathbb{R}^{n}$ and $f$ be a real valued $C^{\infty}$ function in a neighborhood of $p$. Let $v_{p}\in T_{p}\mathbb{R}^{n}$. The [[LEC CAL1 15#^7a4d1e|directional derivative]] of $f$ in direction $v_{p}$ [^1] is defined to be
 $$
-D_{v_{p}}f:=\left.\frac{d}{dt}\right|_{t=0} f(c(t)). 
+D_{v_{p}}f:=\left.\frac{d}{dt}\right|_{t=0} f(c(t)),
+$$
+where
+$$
+c(t):=(p^{1}+tv^{1}, \dots, p^{n}+tv^{n}).
 $$
 By the [[LEC CAL1 17#^67af50|chain rule]], 
 $$
@@ -23,7 +27,7 @@ $$
 
 ^0a8d1f
 
-Note that $D_{v_{p}}f$ is a number, not a function. We write
+Note that $D_{v_{p}}f$ is a *number*, not a function. We write
 $$
 D_{v_{p}}=\left. \sum v_{p}^{i}\frac{ \partial  }{ \partial x^{i} }  \right|_{p}
 $$
@@ -37,12 +41,12 @@ for the map that sends $f\mapsto D_{v_{p}}f$.
 The association $v\mapsto D_{v}$ allows us to think of tangent vectors as operators on functions. We will now explore this further. 
 
 > [!Definition] Germs of functions
-> Let $p\in \mathbb{R}^{n}$. Consider the set of all pairs $(f, U)$, where $U$ is a neighborhood of $p$ and $f:U\to \mathbb{R}$ is $C^{\infty}$. We write $(f, U)\sim(g, V)$ if there is an open set $W\subseteq U\cap V$ containing $p$ such that $f=g$ on $W$. This is an equivalence relation; the equivalence class of $(f, U)$ is called the **germ** of $f$ at $p$. We write $C_{p}^{\infty}\mathbb{R}^{n}$ or simply $C_{p}^{\infty}$ when admissible for the set of all germs of $C^{\infty}$ functions on $\mathbb{R}^{n}$ at $p$. The addition and multiplication of functions induce corresponding operations on $C_{p}^{\infty}$, *making it an $\mathbb{R}$-algebra*. 
+> Let $p\in \mathbb{R}^{n}$. Consider the set of all pairs $(f, U)$, where $U$ is a neighborhood of $p$ and $f:U\to \mathbb{R}$ is $C^{\infty}$. We write $(f, U)\sim(g, V)$ if there is an open set $W\subseteq U\cap V$ containing $p$ such that $f=g$ on $W$. This is an equivalence relation; the equivalence class of $(f, U)$ is called the **germ** of $f$ at $p$. We write $C_{p}^{\infty}\mathbb{R}^{n}$ or simply $C_{p}^{\infty}$ when admissible for the set of all germs of $C^{\infty}$ functions on $\mathbb{R}^{n}$ at $p$. Addition, multiplication of functions, and scalar multiplication induce corresponding operations on $C_{p}^{\infty}$, *making it an $\mathbb{R}$-algebra*. 
 
 Note that functions belonging to the same germ at $p$ will have the same directional derivatives at $p$. 
 # Derivations at a point
 
-For each tangent vector $v_{p}$, the directional derivative along $v_{p}$ is a map of real vector spaces $D_{v_{p}}:C^{\infty}_{p}\to \mathbb{R}$. It can be easily verified from [[#^0a8d1f]] that $D_{v_{p}}$ is $\mathbb{R}$-linear and satisfied the "Leibniz rule":
+For each tangent vector $v_{p}$, the directional derivative along $v_{p}$ is a map of real vector spaces $D_{v_{p}}:C^{\infty}_{p}\to \mathbb{R}$. It can be easily verified from [[#^0a8d1f]] that $D_{v_{p}}$ is $\mathbb{R}$-linear and satisfies the "Leibniz rule":
 $$
 D_{v_{p}}(fg)=(D_{v_{p}}f)g(p)+f(p)D_{v_{p}}g.
 $$

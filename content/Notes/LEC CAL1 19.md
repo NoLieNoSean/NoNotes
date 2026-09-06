@@ -207,6 +207,8 @@ Note that this is not a necessary condition for $\mathbf{f}$ to be differentiabl
 > > Next, define $H(x)=f(h, x)-f(0, x)$ and note that $\Delta h=H(h)-H(0)$. The same procedure yields $\lim_{ h \to 0 }\Delta h/h^{2}=D_{1, 2}f(0, 0)$. 
 > 
 
+^b3496c
+
 > [!Corollary]
 > If both partial derivatives $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ exist in an $n$-ball $B(\mathbf{c})$ and if both $D_{r, k}\mathbf{f}$ and $D_{k, r}\mathbf{f}$ are continuous at $\mathbf{c}$, then
 > $$

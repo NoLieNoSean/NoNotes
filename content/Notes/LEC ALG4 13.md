@@ -16,7 +16,7 @@ Recall what [[Category Theory Preliminaries II#^a625a6|adjoint]] functors are; w
 > \text{Hom}_{R\textsf{-Mod}}(F^{R}(S), M)\cong \text{Hom}_{\textsf{Set}}(S, M).  
 > $$
 
-Now, consider, $R\textsf{-AAlg}$, the category of associative $R$-algebras. It is a subcategory of $R\textsf{-Mod}$. Suppose that $A\in R\textsf{-AAlg}$, $M\in R\textsf{-Mod}$. Does there exist a left adjoint $T:R\textsf{-Mod}\to R\textsf{-AAlg}$ to the forgetful functor $R\textsf{-AAlg}\to R\textsf{-Mod}$, so that
+Now, consider, $R\textsf{-AAlg}$, the category of associative $R$-[[LEC ALG3 3#^419c68|algebras]]. It is a subcategory of $R\textsf{-Mod}$. Suppose that $A\in R\textsf{-AAlg}$, $M\in R\textsf{-Mod}$. Does there exist a left adjoint $T:R\textsf{-Mod}\to R\textsf{-AAlg}$ to the forgetful functor $R\textsf{-AAlg}\to R\textsf{-Mod}$, so that
 $$
 \text{Hom}_{R\textsf{-AAlg}}(T(M), A)\cong \text{Hom}_{R\textsf{-Mod}}(M, A)?
 $$

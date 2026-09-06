@@ -59,6 +59,32 @@ Some trivial facts:
 
 Given a ring $R$, the identity $M\to M$ is an $R$-module homomorphism. Clearly, the composition of two $R$-module homomorphisms is an $R$-module homomorphism. *Thus, $R$-modules form a [[Intro to Category Theory#^05a089|Category]], denoted by $R\textsf{-Mod}$.* The trivial group $0$ has a unique module structure over any ring $R$ and is a zero-object in $R\textsf{-Mod}$, that is, it is both initial and final. It can be easily verified that a bijective homomorphism of $R$-modules is an isomorphism in $R\textsf{-Mod}$. By [[#^04c10a]], the category $\mathbb{Z}\textsf{-Mod}$ is the same as the category $\textsf{Ab}$. 
 
+> [!Remark]
+> Recall that for $G, H\in \textsf{Ab}$, $\text{Hom}_{\textsf{Ab}}(G, H)\in \textsf{Ab}$, with the group operation inherited from $H$: $(\varphi_{1}+\varphi_{2})(g):=\varphi_{1}(g)+\varphi_{2}(g)$. Note that commutativity is required for this prescription to yield an element in $\text{Hom}_{\textsf{Ab}}(G, H)$:
+> $$
+> \begin{align}
+> (\varphi_{1}+\varphi_{2})(g_{1}+g_{2}) & =\varphi_{1}(g_{1})+\varphi_{1}(g_{2})+\varphi_{2}(g_{1})+\varphi_{2}(g_{2}) \\
+>   & =\varphi_{1}(g_{1})+\varphi_{2}(g_{1})+\varphi_{1}(g_{2})+\varphi_{2}(g_{2}) \\
+>  & =(\varphi_{1}+\varphi_{2})(g_{1})+(\varphi_{1}+\varphi_{2})(g_{2}).
+> \end{align}
+> $$
+> The remaining group axioms are easily verified.
+> 
+> Similarly, *if $R$ is a commutative ring, each set $\text{Hom}_{R\textsf{-Mod}}(M, N)$ can be seen as an element of $R\textsf{-Mod}$*. Indeed, let $M$ and $N$ be $R$-modules. Since homomorphisms of $R$-modules are in particular homomorphisms of abelian groups, 
+> $$
+> \text{Hom}_{R\textsf{-Mod}}(M, N)\subseteq \text{Hom}_{\textsf{Ab}}(M, N).
+> $$
+> The operation making $\text{Hom}_{\textsf{Ab}}(M, N)$ into a group clearly preserves $\text{Hom}_{R\textsf{-Mod}}(M, N)$, so the latter is an abelian group. For $r\in R$ and $\varphi\in \text{Hom}_{R\textsf{-Mod}}(M, N)$, the prescription $(r\varphi)(m):=r\varphi(m)$ defines a function $r\varphi:M\to N$. This function is an $R$-module homomorphism if $R$ is commutative, because
+> $$
+> (r\varphi)(am)=r\varphi(am)=(ra)\varphi(m)\overset{!}{=}(ar)\varphi(m)=a(r\varphi(m)).
+> $$
+> Thus, we have a natural action of $R$ on the abelian group $\text{Hom}_{R\textsf{-Mod}}(M, N)$, and it is immediate to verify that the associated map $R\to \text{End}_{\textsf{Ab}}(\text{Hom}_{R\textsf{-Mod}}(M, N))$ is a ring homomorphism, making $\text{Hom}_{R\textsf{-Mod}}(M, N)$ into an $R$-module.
+> 
+
+^e7f7db
+
+## Algebras
+
 > [!Proposition]
 > Let $R, S$ be rings and $\varphi:R\to S$ be a ring homomorphism. Then, $S$ is an $R$ module.
 > 
@@ -87,37 +113,17 @@ $$
 $$
 Such a structure is called an $R$-algebra.
 
-> [!Definition] $R$-algebra
-> Let $R$ be a commutative ring. An **$R$-algebra** is a ring homomorphism $\alpha:R\to S$ such that $\alpha(R)$ is contained in the center of $S$. 
+> [!Definition] Associative $R$-algebra
+> Let $R$ be a commutative ring. An **(associative) $R$-algebra** is a ring homomorphism $\alpha:R\to S$ such that $\alpha(R)$ is contained in the center of $S$. 
 
 ^419c68
 
-[[#^419c68]] defines an $R$-algebra as a ring with compatible $R$-module structure; it can also be thought of as an $R$-module with a compatible ring structure[^1]. 
+> [!Definition] Nonassociative $R$-algebra
+> Let $R$ be a commutative ring. [[#^419c68]] defines an $R$-algebra as a ring with compatible $R$-module structure; it can also be thought of as an $R$-module with a associative bilinear multiplicative structure (a compatible 'ring' structure)[^1]. We also allow for the case when the multiplicative structure is possibly not associative - such $R$-algebras are called **nonassociative $R$-algebras**. 
 
+^c44561
 
-> [!Remark]
-> Recall that for $G, H\in \textsf{Ab}$, $\text{Hom}_{\textsf{Ab}}(G, H)\in \textsf{Ab}$, with the group operation inherited from $H$: $(\varphi_{1}+\varphi_{2})(g):=\varphi_{1}(g)+\varphi_{2}(g)$. Note that commutativity is required for this prescription to yield an element in $\text{Hom}_{\textsf{Ab}}(G, H)$:
-> $$
-> \begin{align}
-> (\varphi_{1}+\varphi_{2})(g_{1}+g_{2}) & =\varphi_{1}(g_{1})+\varphi_{1}(g_{2})+\varphi_{2}(g_{1})+\varphi_{2}(g_{2}) \\
->   & =\varphi_{1}(g_{1})+\varphi_{2}(g_{1})+\varphi_{1}(g_{2})+\varphi_{2}(g_{2}) \\
->  & =(\varphi_{1}+\varphi_{2})(g_{1})+(\varphi_{1}+\varphi_{2})(g_{2}).
-> \end{align}
-> $$
-> The remaining group axioms are easily verified.
-> 
-> Similarly, *if $R$ is a commutative ring, each set $\text{Hom}_{R\textsf{-Mod}}(M, N)$ can be seen as an element of $R\textsf{-Mod}$*. Indeed, let $M$ and $N$ be $R$-modules. Since homomorphisms of $R$-modules are in particular homomorphisms of abelian groups, 
-> $$
-> \text{Hom}_{R\textsf{-Mod}}(M, N)\subseteq \text{Hom}_{\textsf{Ab}}(M, N).
-> $$
-> The operation making $\text{Hom}_{\textsf{Ab}}(M, N)$ into a group clearly preserves $\text{Hom}_{R\textsf{-Mod}}(M, N)$, so the latter is an abelian group. For $r\in R$ and $\varphi\in \text{Hom}_{R\textsf{-Mod}}(M, N)$, the prescription $(r\varphi)(m):=r\varphi(m)$ defines a function $r\varphi:M\to N$. This function is an $R$-module homomorphism if $R$ is commutative, because
-> $$
-> (r\varphi)(am)=r\varphi(am)=(ra)\varphi(m)\overset{!}{=}(ar)\varphi(m)=a(r\varphi(m)).
-> $$
-> Thus, we have a natural action of $R$ on the abelian group $\text{Hom}_{R\textsf{-Mod}}(M, N)$, and it is immediate to verify that the associated map $R\to \text{End}_{\textsf{Ab}}(\text{Hom}_{R\textsf{-Mod}}(M, N))$ is a ring homomorphism, making $\text{Hom}_{R\textsf{-Mod}}(M, N)$ into an $R$-module.
-> 
-
-^e7f7db
+"Nonassociative" means "not necessarily associative", just as "noncommutative" means "not necessarily commutative" for noncommutative rings. 
 
 ## Submodules and quotients
 

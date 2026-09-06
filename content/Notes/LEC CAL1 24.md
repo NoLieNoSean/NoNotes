@@ -3,21 +3,24 @@ id: "193"
 date: January 2025
 ---
 
-## Extremum problems with side conditions
+# Lagrange Multipliers
 
-> [!Theorem]
-> Let $f$ be a real valued function such that $f\in C'$ on an open set $S$ in $\mathbb{R}^{n}$. Let $g_{1}, \dots, g_{m}$ be $m$ real valued functions such that $\mathbf{g}=(g_{1}, \dots, g_{m})\in C_{1}$ on $S$, and assume that $m\leq n$. Let $X_{0}$ be that subset of $S$ on which $\mathbf{g}$ vanishes, that is, 
+> [!Theorem] @apostolCalculus2Multivariable1980 13.12
+> Let $f$ be a real valued function such that $f\in C'$ on an open set $S$ in $\mathbb{R}^{n}$. Let $g_{1}, \dots, g_{m}$ be $m$ real valued functions such that $\mathbf{g}=(g_{1}, \dots, g_{m})\in C'$ on $S$, and assume that $m\leq n$. Let $X_{0}$ be that subset of $S$ on which $\mathbf{g}$ vanishes, that is, 
 > $$
 > X_{0}=\{ \mathbf{x}\ | \  \mathbf{x}\in S, \mathbf{g}(\mathbf{x})=\mathbf{0} \}.
 > $$
-> Assume that $\mathbf{x}_{0}\in X_{0}$ and assume that there exists an $n$-ball $B(\mathbf{x}_{0})$ such that $f(\mathbf{x})\leq f(\mathbf{x}_{0})$ for all $\mathbf{x}\in X_{0}\cap B(\mathbf{x}_{0})$ or such that $f(\mathbf{x})\geq f(\mathbf{x}_{0})$ for all $\mathbf{x}\in X_{0}\cap B(\mathbf{x}_{0})$. Assume also that the $m$-rowed determinant $[D_{j}g_{i}(\mathbf{x}_{0})]\ne 0$. Then there exist $m$ real numbers $\lambda_{1}, \dots, \lambda_{m}$ such that the following $n$ equations are satisfied:
+> Assume that $\mathbf{x}_{0}\in X_{0}$ and assume that there exists an $n$-ball $B(\mathbf{x}_{0})$ such that $f(\mathbf{x})\leq f(\mathbf{x}_{0})$ for all $\mathbf{x}\in X_{0}\cap B(\mathbf{x}_{0})$ or such that $f(\mathbf{x})\geq f(\mathbf{x}_{0})$ for all $\mathbf{x}\in X_{0}\cap B(\mathbf{x}_{0})$. Assume also that the $m$-rowed determinant $[D_{j}g_{i}(\mathbf{x}_{0})]\ne 0$. Then there exist $m$ real numbers $(\lambda_{1}, \dots, \lambda_{m}) = \boldsymbol{\lambda}$ such that the following $n$ equations are satisfied:
 > $$
 > D_{r}f(\mathbf{x}_{0})+\sum_{k=1}^{m} \lambda_{k}D_{r}g_{k}(\mathbf{x}_{0})=0\quad(r=1, \dots, n).
 > $$
+> 
+
+The $n$ equations above being satisfied is equivalent to $\nabla f(\mathbf{x}_{0})$ being perpendicular to $\nabla g_{k}(\mathbf{x}_{0})$ for $1\leqslant k\leqslant m$ - it is easy to see why this means an extremum is attained at $\mathbf{x}_{0}$. 
 
 
 [!Example]
-Let $f:\mathbb{R}^{n}\to \mathbb{R}$ be a symmetric quadratic form given by 
+Let $f:\mathbb{R}^{n}\to \mathbb{R}$ b.  a symmetric quadratic form given by 
 $$
 f(x_{1}, \dots, x_{n})=\sum_{1\leq i, j\leq n} a_{i, j}x_{i}x_{j}.
 $$

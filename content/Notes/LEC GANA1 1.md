@@ -6,3 +6,5 @@ tags:
   - Lecture
   - GANA1
 ---
+%%You missed this lecture!%%
+

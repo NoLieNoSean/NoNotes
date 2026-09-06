@@ -3,9 +3,9 @@ id: "505"
 date: 2026-08-05
 time: 14:07
 tags:
-  - DGT
   - Processed
   - Lecture
+  - DGEO
 ---
 [[LEC CAL1 16#^83fea1|Recall]] that if $F$ is differentiable, its directional derivatives exist and are equal to the total derivate evaluated at $v$. More generally suppose $F$ is differentiable at $a$, and $\gamma:(-\epsilon, \epsilon)\to U$ is differentiable with $\gamma(0)=a$ and $\gamma'(0)=v$. Then
 $$
@@ -46,6 +46,8 @@ The following theorem is a nonlinear analogue of the preceding theorem.
 > > Set $v_{i}=Df_{a}(e_{i})$. Then $v_{1}, \dots, v_{n}$ are linearly independent. Extend them to a basis $v_{1}, \dots, v_{k}$ of $\mathbb{R}^{k}$. Define $\Psi:U\times \mathbb{R}^{n-k}\to \mathbb{R}^{k}$ by $\Psi(x, y)=f(x)+\sum_{j=1}^{k-n}y^{j}v_{n+j}$. The derivative of $\Psi$ at $(x, y)$ is $D\Psi_{(x, y)}(h, l)=Df_{x}(h)+\sum_{j=1}^{k-n}l^{j}v_{n+j}$. In particular, $D\Psi_{(a, 0)}(h, l)=\sum_{i=1}^{n}h^{i}v_{i}+\sum_{j=1}^{k-n}l^{j}v_{n+j}$. Thus, $D\Psi_{(a, 0)}$ is invertible. By the [[LEC CAL1 21#^e75cec|inverse function theorem]], there exist neighborhoods $U'\times B$ of $(a, 0)$ and $W$ of $f(a)$ such that $\Psi:U'\times B\to W$ is a diffeomorphism. Let $\Phi=\Psi^{-1}$. Since $\Psi(x, 0)=f(x)$, we have $f(U')\subseteq W$ and $\Phi(f(x))=(x, 0)$ for all $x\in U'$. 
 > 
 
+^77789d
+
 > [!Theorem] Normal form of a surjective linear map
 > Let $T:\mathbb{R}^{k}\to \mathbb{R}^{n}$ , $k\geqslant n$, be a surjective linear map. Then, after a linear change of coordinates in the ==domain==, $T$ is given by $(x^{1}, \dots, x^{k})\mapsto(x^{1}, \dots, x^{n})$. More formally, there exists an invertible linear map $A:\mathbb{R}^{k}\to \mathbb{R}^{k}$ such that $T(A^{-1}(x^{1}, \dots, x^{k}))=(x^{1}, \dots, x^{n})$. 
 > 
@@ -70,3 +72,5 @@ The following theorem is a nonlinear analogue of the preceding theorem.
 > > In our chosen basis $D\Phi=\begin{bmatrix}Df &  \\  & I_{k-n} \end{bmatrix}$ and $Df_{a}=I_{n}$. Thus, $D\Phi_{a}=I_{k}$. By the [[LEC CAL1 21#^e75cec|inverse function theorem]], $\Phi$ is a diffeomorphism after its domain is restricted to a sufficiently small neighborhood $U'$ of $a$. The first $n$ components of $\Phi$ are the components of $f$, and therefore $f\circ \Phi ^{-1}(x^{1}, \dots, x^{k})=(x^{1}, \dots, x^{n})$. 
 > 
 > 
+
+^549235
