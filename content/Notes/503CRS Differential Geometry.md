@@ -14,4 +14,6 @@ CMI, Aug-Nov 2026, Akashdeep Dey
 [[LEC DGT 4]] Vector fields
 [[LEC DGT 5]] First fundamental form, metrics on manifolds
 [[LEC DGT 6]] Riemannian and metric space isometries, covariant derivative
-[[LEC DGT 8]]
+[[LEC DGT 8]] Second fundamental form, curvature tensor, existence of unique parallel vector fields
+[[LEC DGT 9]] Parallel transport
+[[LEC DGT 10]] Geodesics, the tangent bundle, the exponential map

@@ -3,6 +3,9 @@ id: "526"
 date: 2026-08-17
 time: 15:33
 tags:
+  - Lecture
+  - GANA1
+desc: measures, properties of measures, Borel-Cantelli lemma, uniqueness of Caratheodory extension
 ---
 # Algebras and monotone classes
 

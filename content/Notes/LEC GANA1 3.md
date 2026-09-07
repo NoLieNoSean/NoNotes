@@ -3,6 +3,9 @@ id: "532"
 date: 2026-08-20
 time: 15:33
 tags:
+  - Lecture
+  - GANA1
+desc: construction of the Caratheodory extension
 ---
 [!Theorem]
 Suppose $\mathcal{A}\subseteq P(\Omega)$ is an algebra. Let $\mu$ be a $\sigma$-additive function on $\mathcal{A}$. Then there exists a $\sigma$-algebra $\mathcal{M}\subseteq P(\Omega)$ such that $\mathcal{A}\subseteq \mathcal{M}$ and a measure $\tilde{\mu}$ on $\mathcal{M}$ that restricts to $\mu$ on $\mathcal{A}$. The extension is unique on $\sigma(\mathcal{A})$ if $\mu$ is $\sigma$-finite. 

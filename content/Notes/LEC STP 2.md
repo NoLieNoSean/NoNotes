@@ -3,6 +3,8 @@ id: "524"
 date: 2026-08-14
 time: 15:42
 tags:
+  - STP
+  - Lecture
 ---
 Let $V$ be a real vector space of dimension $N$ with a bilinear form $\omega V\times V\to \mathbb{R}$ with
 1. $\omega(u, v)=-\omega(v, u)$

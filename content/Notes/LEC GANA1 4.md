@@ -5,6 +5,7 @@ time: 15:34
 tags:
   - GANA1
   - Lecture
+desc: Lebesgue measure, completeness of Caratheodory extension, Radon measures
 ---
 $$
 \begin{align}

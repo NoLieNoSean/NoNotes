@@ -13,6 +13,9 @@ CMI, Aug-Nov 2026, P Shankaran
 [[LEC GGT 3]] ?
 [[LEC GGT 4]] Constant curvature of $\mathbb{H}$
 [[LEC GGT 5]] Elliptic, parabolic, and hyperbolic isometries
-[[LEC GGT 6]]
-[[LEC GGT 7]]
-[[LEC GGT 8]]
+[[LEC GGT 6]] idk you'll have to figure this out later
+[[LEC GGT 7]] Surfaces as quotients of $\mathbb{H}$
+[[LEC GGT 8]] the word-metric, geodesics
+
+%% Quiz on Friday%%
+

@@ -1,7 +1,7 @@
 ---
-id: "541"
-date: 2026-08-27
-time: 15:41
+id: "548"
+date: 2026-08-28
+time: 14:45
 tags:
   - GANA1
   - Lecture
