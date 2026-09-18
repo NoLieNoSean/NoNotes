@@ -8,6 +8,8 @@ id: "89"
 ---
 # Bilinear forms
 
+^d9a4f7
+
 We will now generalize the notion of the inner product. We will see that the [[LEC ALG1 21#Inner Product Spaces|inner product, as defined in the previous lecture]], is a positive definite symmetric (bilinear) form on a real vector space, and a positive definite Hermitian form on a complex vector space. 
 
 > [!Definition] Bilinear form
@@ -61,7 +63,7 @@ for some $n\times n$ matrix $A$. Note that we didn't have to choose a basis to a
 
 ## Change of basis
 
-The matrix of a bilinear form $\langle \,, \rangle$ evidently depends on our choice of basis. How does this matrix change when we change the basis?
+How does the matrix of a bilinear form depend on our choice of basis?
 
 Let $\langle \,, \rangle$ be a bilinear form on a real vector space $V$, and let $A$ and $A'$ be its matrices with respect to bases $\mathcal {B}$ and $\mathcal {B'}$. Let $P$ be the the [[LEC ALG1 13#Change of basis|change of basis matrix]] from $\mathcal {B}$ to $\mathcal {B'}$ (i.e, $[\mathbf{v}]_{\mathcal {B}}=P[\mathbf{v}]_{\mathcal {B'}}$ for all $\mathbf{v}\in V$). Then, 
 
@@ -73,7 +75,7 @@ $$
 Thus, we have $A'=P^{T}AP$. 
 
 > [!Theorem]
-> If $A$ is the matrix of a bilinear form is a basis, and you change the basis such that the change of basis matrix is $P$, the new matrix of the bilinear form is $P^{T}AP$.
+> Let $A$ be the matrix of a bilinear form in basis $\mathcal{A}$. The matrix of the bilinear form in basis $\mathcal{B}$ is given by $P^{T}AP$, where $P$ is the change of basis matrix. 
 
 > [!Important]
 > For a real vector space $V$ with dimension $n$, when a basis is given, both linear operators and bilinear forms are described by $n\times n$ matrices. However, the theories of linear operators and bilinear forms are not equivalent. When one makes a change of basis, the matrix $A$ of a bilinear form changes to $P^{T}AP$, while the matrix $A$ of a linear operator changes to $P^{-1}AP$. 
@@ -106,14 +108,18 @@ Now consider a bilinear form $\langle \,, \rangle$ on an abstract vector space $
 
 The dot product is a symmetric, positive definite form on $\mathbb{R}^{n}$. The matrix of the dot product on $\mathbb{R}^{n}$ is the identity matrix. Thus, if $\langle \,, \rangle$ is the dot product, $\langle \mathbf{v}, \mathbf{w} \rangle=\mathbf{v}^{T}\mathbf{w}$. If we change basis to $\mathcal {B}$ using a change of basis matrix $P$, then $\langle \mathbf{v}, \mathbf{w} \rangle=[\mathbf{v}]_{\mathcal {B}}P^{T}P[\mathbf{w}]_{B}$, i.e, the matrix of the dot product becomes $P^{T}P$. If the change of basis is [[LEC ALG1 21#^d11820|orthogonal]], $P^{T}P$ is the identity matrix, and $\langle \mathbf{v}, \mathbf{w} \rangle=\langle [\mathbf{v}]_{\mathcal {B}}, [\mathbf{w}]_{\mathcal {B}} \rangle$. 
 
-Analogously to the terminology for positive forms, we say a matrix $A$ is positive definite if the form defined by $A$ on $\mathbb{R}^{n}$ is positive definite, i.e, $\mathbf{x}^{T}A\mathbf{x}>0$ for all nonzero column vectors $\mathbf{x}$. Evidently, if the form $\mathbf{x}^{T}A\mathbf{x}$ is equivalent to the dot product (which is positive definite), $A$ must be positive definite.
+Analogous to the terminology for positive forms, we say a matrix $A$ is positive definite if the form defined by $A$ on $\mathbb{R}^{n}$ is positive definite, i.e, $\mathbf{x}^{T}A\mathbf{x}>0$ for all nonzero $\mathbf{x}$. Clearly, if the form $\mathbf{x}^{T}A\mathbf{x}$ is equivalent to the dot product (which is positive definite), $A$ must be positive definite.
 
-Consider the following properties of a real $n\times n$ matrix:
-1. The form $\mathbf{x}^{T}A\mathbf{x}$ on $\mathbb{R}^{n}$ represents the dot product with respect to some basis of $\mathbb{R}^{n}$.
-2. There is an invertible matrix $P$ such that $A=P^{T}{P}$.
-3. The matrix $A$ is symmetric and positive definite.
-
-We have seen that 1 and 2 are equivalent, and that 1 implies 3. We will see that 3 implies 1 in a bit. So, the above statements are equivalent.
+> [!Proposition]
+> Let $A$ be an $n\times n$ matrix. TFAE:
+> 1. The form $\mathbf{x}^{T}A\mathbf{x}$ on $\mathbb{R}^{n}$ represents the dot product with respect to some basis of $\mathbb{R}^{n}$.
+> 2. There is an invertible matrix $P$ such that $A=P^{T}{P}$.
+> 3. $A$ is symmetric and positive definite.
+> 
+> > [!Proof]-
+> > 
+> > We have seen that 1 and 2 are equivalent, and that 1 implies 3. 3 implies 1?
+> 
 
 ---
 

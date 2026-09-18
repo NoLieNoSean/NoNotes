@@ -19,6 +19,8 @@ id: "135"
 >	- [[LEC ANA1 11#Balls and neighborhoods|Continuity definition in terms of open balls]]
 >- [[LEC ANA1 11#Definition|Definition]] of continuity of a function from L11
 
+%%
+
 ---
 ## A digression
 
@@ -31,7 +33,7 @@ P: A \implies B \\
 Q: C \implies B
 \end{align}
 $$
-Now, if $C\implies A$, what can we say about $P$ and $Q$? if $P$ is true, then $C\implies A\implies B$, i.e $Q$ is true. Thus, hypothesis of $Q$ $\implies$ hypothesis $P$ implies $P\implies Q$ and vice versa.
+Now, if $C\implies A$, what can we say about $P$ and $Q$? if $P$ is true, then $C\implies A\implies B$, i.e $Q$ is true. Thus, hypothesis of $Q$ $\implies$ hypothesis $P$ implies $P\implies Q$ and vice versa.%%
 
 ---
 ## What does it mean for a function to be continuous? 

@@ -3,9 +3,11 @@ id: "505"
 date: 2026-08-05
 time: 14:07
 tags:
-  - Processed
   - Lecture
   - DGEO
+desc: Local structure theorems for immersions and submersions
+P1: true
+P2: true
 ---
 [[LEC CAL1 16#^83fea1|Recall]] that if $F$ is differentiable, its directional derivatives exist and are equal to the total derivate evaluated at $v$. More generally suppose $F$ is differentiable at $a$, and $\gamma:(-\epsilon, \epsilon)\to U$ is differentiable with $\gamma(0)=a$ and $\gamma'(0)=v$. Then
 $$

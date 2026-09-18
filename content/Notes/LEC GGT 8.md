@@ -3,6 +3,8 @@ id: "546"
 date: 2026-09-02
 time: 12:04
 tags:
+  - Lecture
+  - GGT
 ---
 Suppose $G$ is a finitely generated group. Say $S\subseteq G$ is a finite generating set. We obtain a metric $d_{s}$ on $G$ where
 $$

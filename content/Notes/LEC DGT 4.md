@@ -5,11 +5,15 @@ time: 11:59
 tags:
   - DGEO
   - Lecture
+P1: true
+P2:
+desc: Vector fields
 ---
 # Vector fields
 
 > [!Definition] Vector field
 > A **vector field** $X$ on an open set $U\subseteq \mathbb{R}^{m}$ is a map $X:U\to \mathbb{R}^{m}$. For $p\in U$, we will often write $X_{p}$ in place of $X(p)$. The space of all smooth vector fields on $U$ is denoted $\mathfrak{X}(U)$. 
+
 
 > [!Definition] Vector field on a manifold
 > A **vector field on $M$** is a map $X:M\to \mathbb{R}^{k}$ such that $X_{p}:=X(p)\in T_{p}M$ for every $p\in M$. It is called **smooth** if it is [[LEC DGT 2#^2da0d5|smooth]] as a map from $M$ to $\mathbb{R}^{k}$. The space of all smooth vector fields on $M$ is denoted by $\mathfrak{X}(M)$. 
@@ -62,7 +66,7 @@ To verify that $D_{X}F$ is smooth, we note that if $X=(X^{1}, \dots, X^{m})$ and
 $$
 (D_{X}F)^{j}=\sum_{i}^{} X^{i}\partial_{i}F^{j},
 $$
-which also shows that $D_{X}$ *acts component-wise*, i.e. $D_{X}F=(D_{X}F^{1}, \dots, D_{X}F^{l})$. Further, we note that if $\{ E_{i} \}_{i=1}^{m}$ denote the standard coordinate vector fields on $\mathbb{R}^{m}$, $D_{E_{i}}F$ is just the $i$-th partial derivative $\partial_{i}F$. 
+which also shows that $D_{X}$ *acts component-wise*, i.e. $D_{X}F=(D_{X}F^{1}, \dots, D_{X}F^{l})$. Further, we note that if $\{ E_{i} \}_{i=1}^{m}$ denote the standard coordinate vector fields on $\mathbb{R}^{m}$, $D_{E_{i}}F$ is just the $i$-th partial derivative $\partial_{i}F$.
 
 The [[LEC CAL1 19#^b3496c|equality of mixed partial derivatives]] implies the differential operators $D_{E_{i}}$ and $D_{E_{j}}$ commute, i.e. $D_{E_{j}}D_{E_{i}}f=D_{E_{i}}D_{E_{j}}f$. This does not hold for arbitrary vector fields. Indeed, if $X=\sum_{i}X^{i}e_{i}$ and $Y=\sum_{j}Y^{j}e_{j}$, there holds
 $$
@@ -87,7 +91,7 @@ This motivates the following:
 > $$
 > This makes $\mathfrak{X}(U)$ a [[LEC LIALG 1#^128a59|Lie algebra]].[^2] Recall that $C^{\infty}(U)$ is an $\mathbb{R}$-algebra. Let $\mathrm{Der}(C^{\infty}(U))$ be as in [[LEC LIALG 2#^09387d]]; it is a Lie subalgebra of $\mathfrak{gl}(C^{\infty}(U))$ with the bracket $[\delta, \delta']=\delta\delta'-\delta'\delta$. 
 > 
-> The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is a Lie algebra homomorphism. 
+> The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is a Lie algebra isomorphism. 
 > 
 > > [!Proof]-
 > > 
@@ -120,7 +124,7 @@ Since $\phi_{i}|_{\phi(a)}=D\phi_{a}(e_{i})$, by the chain rule
 $$
 Df_{\phi(a)}(\phi_{i}|_{\phi(a)})=Df_{\phi(a)}(D\phi_{a}(e_{i}))=D(f\circ \phi)_{a}(e_{i})=\partial_{i}(f\circ \phi)(a).
 $$
-Therefore, the RHS of [[#^7c93bf]] smoothly depends on $a$. Clearly, $D_{X}$ continues to be an $\mathbb{R}$-linear derivation. 
+Therefore, the RHS of [[#^7c93bf]] smoothly depends on $a$. Clearly, $D_{X}$ is an $\mathbb{R}$-linear derivation. 
 
 We now attempt to define a Lie bracket on $\mathfrak{X}(M)$ for a manifold $M$. [^3] One can use two approaches. 
 
@@ -134,19 +138,19 @@ $$
 These two definitions are equivalent, and are independent of the chosen extensions or the parameterization. 
 
 > [!Proposition]
-> Let $X, Y\in \mathfrak{X}(M)$, $\phi:\Omega\to V$ be a local parameterization, $\overline{X}, \overline{Y}\in \mathfrak{X}(\Omega)$ be the coordinate representations of $X, Y$ as above, $\tilde{X}, \tilde{Y}$ be arbitrary ambient smooth extensions of $X, Y$ near a point $p\in V$ and let $p=\phi(a)$. Then
+> 1. Let $X, Y\in \mathfrak{X}(M)$, $\phi:\Omega\to V$ be a local parameterization, $\overline{X}, \overline{Y}\in \mathfrak{X}(\Omega)$ be the coordinate representations of $X, Y$ as above, $\tilde{X}, \tilde{Y}$ be arbitrary ambient smooth extensions of $X, Y$ near a point $p\in V$ and let $p=\phi(a)$. Then
 > $$
 > [\tilde{X}, \tilde{Y}](p)=D\phi_{a}([\overline{X}, \overline{Y}](a)).
 > $$
-> Consequently, the locally defined vector fields obtained by restricting $[\tilde{X}, \tilde{Y}]$ to $M$ are tangent to $M$, independent of the chosen extensions and agree on overlaps. They therefore determine a unique smooth vector field on $M$, denoted by $[X, Y]$. For every local parameterization $\phi:\Omega\to V$, 
+> 	Consequently, the locally defined vector fields obtained by restricting $[\tilde{X}, \tilde{Y}]$ to $M$ are tangent to $M$, independent of the chosen extensions and agree on overlaps. They therefore determine a unique smooth vector field on $M$, denoted by $[X, Y]$. For every local parameterization $\phi:\Omega\to V$, 
 > $$
 > [X, Y](\phi(a))=D\phi_{a}([\overline{X}, \overline{Y}](a)).
 > $$
-> In particular, the expression on the right-hand side is independent of the chosen local parameterization. Lastly, for every $f\in C^{\infty}(M)$, 
+> 2. The map $\mathfrak{X}(M)\to \mathrm{Der}(C^{\infty}(M))$ is a Lie algebra isomorphism: $f\in C^{\infty}(M)$, 
 > $$
 > D_{X}D_{Y}f-D_{Y}D_{X}f=D_{[X, Y]f}.
 > $$
-> 
+
 
 ^5180d1
 

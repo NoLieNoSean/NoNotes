@@ -10,6 +10,13 @@ CMI, Aug-Nov 2026, Senthamarai Kannan
 @humphreysIntroductionLieAlgebras1972
 Grade breakup: Quiz 4x5, Assignment 3x5, MidSem 25, Final 40
 
+%%
+```dataview
+TABLE date AS "Date", desc AS "desc", P1 AS "P1", P2 AS "P2"
+FROM #LIALG AND #Lecture 
+SORT date ASC
+```
+%%
 
 [[LEC LIALG 1]] Preliminaries, linear Lie algebras
 [[LEC LIALG 2]] Derivations, ideals, homomorphisms
@@ -18,3 +25,7 @@ Grade breakup: Quiz 4x5, Assignment 3x5, MidSem 25, Final 40
 [[LEC LIALG 5]] Lead up to Engel's theorem
 [[LEC LIALG 6]] Engel's theorem, Lie's Theorem
 [[LEC LIALG 7]]
+[[LEC LIALG 8]]
+[[LEC LIALG 9]]
+[[LEC LIALG 10]]
+[[LEC LIALG 11]]

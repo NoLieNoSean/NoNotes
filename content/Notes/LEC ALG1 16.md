@@ -7,7 +7,7 @@ date: 2024-10-15
 time: 14:00
 id: "82"
 ---
-## Another formula for determinants
+# Uniqueness of the determinant
 
 Let $M$ be an $n\times n$ matrix. Let $M_1,M_2,...,M_n$ be the rows of $M$.
 

@@ -7,9 +7,9 @@ date: 2024-09-06
 time: 10:30
 id: "132"
 ---
-## What does $\lim_{ x \to p }f(x)$ mean?
+# What does $\lim_{ x \to p }f(x)$ mean?
 
-### First stab at a definition
+## First stab at a definition
 
 >[!Definition]
 >Let $f: \mathbb{R}\to \mathbb{R}$.
@@ -22,7 +22,7 @@ Also note that we do NOT want to say $0<|f(x)-q|<\epsilon$, since $f(x)$ may be 
 > [!Note] What's wrong with this?
 > We would like to take the limit of a function as $x$ approaches a point $p$ which is not in its domain. Thus, we would like to allow the domain of the function to be something that does not contain $p$, i.e, some subset $E\subset\mathbb{R}$. However, we cannot just replace the domain $\mathbb{R}$ with $E$ in the definition, as this might result in the "such that" clause being vacuously true for some $p$ (when $E$ is a singleton set $\{ p \}$, for example, $\lim_{ x \to p }=q$ is true for all $q\in \mathbb{R}$), making the definition useless. Thus, we need to be more discerning about the types of subsets $E$ we allow in the definition.
 
-### Second stab at a definition
+## Second stab at a definition
 
 >[!Definition]
 >Let $f: E(\subset \mathbb{R})\to \mathbb{R}$, such that $E$ contains a deleted neighborhood of $p$. 
@@ -35,12 +35,11 @@ This definition attempts to ensure that the "such that" clause is never vacuousl
 >[!Note] What's wrong (or rather inconvenient) about this?
 >Consider a function $f:\mathbb{Q}(\subset \mathbb{R})\to \mathbb{R}$ defined as $f(x)=0$. While $\mathbb{Q}$ does not contain a deleted neighborhood of, say, $p=1$, we would still like to be able to say $\lim_{ x \to 1 }f(x)=0$. What we would actually like to mandate is regardless of how small $\delta$ becomes, we will always have *some* $x$ satisfying $0<|x-p|<\delta$. 
 
-### Brutus's stab at a definition
+## Limit points
 
 We formalize the requirements we have distilled so far by defining *limit points*.
-#### Limit points
-Rudin, 2.18
->[!Definition]
+
+>[!Definition] @rudinPrinciplesMathematicalAnalysis1976 2.18
 >Given $E\subset \mathbb{R}$, a point $p\in \mathbb{R}$ is a *limit point* of $E$, if for all $\delta>0$,  $(p-\delta, p+\delta)\cap E$ contains a point other than $p$.  
 >We denote the set of limit points of $E$ by $E'$. 
 
@@ -66,30 +65,25 @@ For $f:E(\subset \mathbb{R})\to \mathbb{R}$, it makes sense to define $\lim_{ x 
 ---
 ## Theorems about limit points
 
-Rudin, 2.20
->[!Theorem]
+
+>[!Theorem] @rudinPrinciplesMathematicalAnalysis1976 2.20
 >If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
 
 Fairly easy to see.
 
-Rudin, 3.2 d
->[!Theorem]
+>[!Theorem] @rudinPrinciplesMathematicalAnalysis1976 3.2d
 >If $X$ is a metric space, $E\subset X$ and if $p$ is a limit point of $E$, then there is a sequence $(p_{n})$ in $E$ such that $p=\lim_{ n \to \infty }p_{n}$. 
 
 Ditto.
 
 ---
-## Analogs for metric spaces
-
-### Definition of limit point in metric spaces
+## Analouges for metric spaces
 
 >[!Definition]
 >Given $E\subset X$, a point $p\in X$ is a *limit point* of $E$, if for all $\delta>0$, $B_{\delta}(p)\cap E$ contains a point other than $p$.
 
-### Definition of limit of a function in metric spaces
 
-Rudin, 4.1
->[!Definition]
+>[!Definition] @rudinPrinciplesMathematicalAnalysis1976 4.1
 >Let $X$ and $Y$ be metric spaces, $E\subset X$, $f:E\to Y$, $p$ is a limit point of $E$.
 >We write *$\lim_{ x \to p }f(x)= q$* , $q\in Y$ if for any $\epsilon>0$ there exists a $\delta>0$ such that $0<d_{X}(x, p)<\delta$ implies $d_{Y}(f(x), q)<\epsilon$, i.e, $f(B_{\delta}(p, E)\setminus \{ p \})\subset B_{\epsilon}(q, Y)$.
 

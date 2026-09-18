@@ -1,10 +1,14 @@
 ---
 id: "514"
-date: 2026-08-08
+date: 2026-08-07
 time: 16:15
 tags:
   - Lecture
   - DGEO
+  - Processed
+desc: Smooth manifolds
+P1: true
+P2: true
 ---
 @guilleminDifferentialTopology1974 Ch 1
 

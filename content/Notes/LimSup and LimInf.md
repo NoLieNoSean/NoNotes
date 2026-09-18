@@ -34,6 +34,8 @@ It should be noted that we now use the symbol $\to$ for certain types of diverge
 >$$
 >Both values may be infinite.
 
+^6a1a47
+
 ### À la Rudin
 
 >[!Definition]
@@ -82,11 +84,15 @@ These will be using Kulkarni's definitions.
 - Thus, we have  $i_{1}\le i_{2}\le i_{3}\le \dots\le s_{3}\le s_{2}\le s_{1}$. 
 - Note that $\lim\sup_{ n \to \infty }p_{n}=\infty$ means that every $s_{i}$ is $\infty$. 
 
->[!Theorem]
->Let $(p_{n})$ be a sequence. Then, $\liminf_{ n \to \infty } (p_{n})\le \limsup_{ n \to \infty } (p_{n})$.
+> [!Theorem]
+> Let $(p_{n})$ be a sequence. Then, $\liminf_{ n \to \infty } (p_{n})\le \limsup_{ n \to \infty } (p_{n})$.
+> 
+> > [!Proof]-
+> > 
+> > Pick any $s_{k}$. $i_{m}\le s_{k}$ for all $m$. Thus, $s_{k}$ is an upper bound for the set of all infima. Thus, $\lim\inf_{ n \to \infty }p_{n}=\sup \{ i_{m} \}\le s_{k}$. Since $s_{k}$ was arbitrary, the preceding statement is valid for all $k$. Thus, $\lim\inf_{ n \to \infty }p_{n}$ is a lower bound for the set of all suprema. Thus, $\lim\inf_{ n \to \infty }p_{n}\le \inf \{ s_{k} \}=\lim\sup_{ n \to \infty }p_{n}$. 
+> 
 
->**Proof**
->Pick any $s_{k}$. $i_{m}\le s_{k}$ for all $m$. Thus, $s_{k}$ is an upper bound for the set of all infima. Thus, $\lim\inf_{ n \to \infty }p_{n}=\sup \{ i_{m} \}\le s_{k}$. Since $s_{k}$ was arbitrary, the preceding statement is valid for all $k$. Thus, $\lim\inf_{ n \to \infty }p_{n}$ is a lower bound for the set of all suprema. Thus, $\lim\inf_{ n \to \infty }p_{n}\le \inf \{ s_{k} \}=\lim\sup_{ n \to \infty }p_{n}$. ❏
+^596c29
 
 >[!Theorem]
 >If $s_{n}\le t_{n}$ for $n\ge N$, where $N$ is fixed, then

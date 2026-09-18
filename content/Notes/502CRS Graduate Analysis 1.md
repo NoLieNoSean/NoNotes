@@ -28,3 +28,5 @@ SORT date ASC
 [[LEC GANA1 6]] %% postdoc %%
 [[LEC GANA1 7]]
 [[LEC GANA1 8]]
+[[LEC GANA1 9]]
+[[LEC GANA1 10]]

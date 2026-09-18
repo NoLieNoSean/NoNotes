@@ -5,6 +5,9 @@ time: 14:16
 tags:
   - DGEO
   - Lecture
+P1: true
+P2:
+desc: Tangent spaces
 ---
 # Tangent spaces
 

@@ -3,6 +3,8 @@ id: "528"
 date: 2026-08-18
 time: 14:07
 tags:
+  - Lecture
+  - LIALG
 ---
 Quiz next tuesday
 

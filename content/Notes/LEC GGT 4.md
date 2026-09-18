@@ -3,6 +3,8 @@ id: "529"
 date: 2026-08-19
 time: 11:56
 tags:
+  - Lecture
+  - GGT
 ---
 Aim: $\mathbb{H}$ has constant curvature $-1$. 
 

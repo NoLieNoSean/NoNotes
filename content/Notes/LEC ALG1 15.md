@@ -116,7 +116,7 @@ Thus, we arrive at these alternate defining properties of the determinant:
 >LADW used the same defining properties, with (2) replaced by antisymmetry.
 
 ---
-## Cofactor expansions
+# Cofactor expansions
 
 >[!Definition]
 >Let $A$ be an $n\times n$ matrix. 
