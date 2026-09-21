@@ -72,6 +72,8 @@ Recall [[LEC ANA2 14#^486748]].
 > $$
 > 
 
+^191119
+
 $\mathcal{C}$ is clearly non-empty (it contains the endpoints of all $J^{n}_{i}$) and compact.
 
 > [!Proposition]

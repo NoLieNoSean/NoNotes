@@ -14,7 +14,7 @@ Topics:
 ---
 %%
 ```dataview
-TABLE date AS "Date", desc AS "desc"
+TABLE date, desc, P1, P2
 FROM #GANA1 AND #Lecture 
 SORT date ASC
 ```
@@ -30,3 +30,4 @@ SORT date ASC
 [[LEC GANA1 8]]
 [[LEC GANA1 9]]
 [[LEC GANA1 10]]
+[[LEC GANA1 11]]
