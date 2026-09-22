@@ -1,5 +1,5 @@
 This is where my notes live.
-Additional contributions: Karan, Aniruda.
+Additional contributions: Karan, Aniruda, Sayeed.
 
 PS. The search bar is broken, and I can't be bothered to fix it. 
 # [Start here](tags/MOC)

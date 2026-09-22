@@ -101,7 +101,6 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > > 
 > 
 
-
 ^61d065
 
 # The Lebesgue measure
@@ -109,8 +108,16 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > [!Definition] Complete $\sigma$-algebra
 > A $\sigma$-algebra $\mathcal{F}$ is **complete** with respect to a measure $\mu$ if $A\in \mathcal{F}$ and $\mu(A)=0$ implies $B\in \mathcal{F}$ for all $B\subseteq A$. 
 
+> [!Fact]
+> $$|\mathcal{B}(\mathbb{R})| = c$$
+
 > [!Example]
 > $\mathcal{B}(\mathbb{R})$ is not complete with respect to the measure $\lambda^{\star}$. 
+> > [!Proof]-
+> > Cantor set is a Borel set with measure 0 and cardinality $c$. 
+> > So if $\mathcal{B}(\mathbb{R})$ were complete then the power set of Cantor set would be a subset of $\mathcal{B}(\mathbb{R})$, which would imply $|\mathcal{B}(\mathbb{R})| \geq 2^{c}$, contradiction!
+> 
+
 
 > [!Proposition] Completion of a measure
 > Let $\mu$ be a measure on a $\sigma$-algebra $\mathcal{F}\subseteq P(\Omega)$. Define
@@ -121,6 +128,16 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > $$
 > $\tilde{\mathcal{F}}$ is a $\sigma$-algebra. Define $\tilde{\mu}$ on $\tilde{\mathcal{F}}$ by $\tilde{\mu}(A)=\mu(B_{2})=\mu(B_{1})$. Then, $\tilde{\mu}$ is a measure on $\tilde{\mathcal{F}}$, $\tilde{\mu}|_{\mathcal{F}}=\mu$, and $\tilde{\mathcal{F}}$ is complete. We call $(\tilde{\mathcal{F}}, \tilde{\mu})$ the **completion** of $(\mathcal{F}, \mu)$. 
 
+> [!Proposition] 
+> For any $\mu$, $\mathcal{M}_{\mu}$ is complete.
+> > [!Proof]-
+> > Let $A \in \mathcal{M}_{\mu}$ be such that $\mu(A) = 0$.
+> > Let $B \subseteq A$.
+> > For every subset $E$ of the measure space, $\mu^*(E) \leq \mu^*(E \cap B) + \mu^*(E \cap B^c)$ by subadditivity.
+> > $\mu^* (E \cap B) \leq \mu^*(B) = 0 \implies \mu^{*}(E) \geq \mu^{*}(E \cap B^{c}) = \mu^{*}(E \cap B^{c}) + \mu^{*}(E \cap B)$.
+> > Therefore, $B \in \mathcal{M}_{\mu }$.
+
+
 > [!Proposition]
 > For any algebra $\mathcal{A}$ with $\sigma$-finite measure $\mu$, $(\mathcal{M}_{\mu}, \mu^{\star})$ is the completion of $(\sigma(\mathcal{A}), \mu^{\star})$. 
 
@@ -130,6 +147,9 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 
 > [!Corollary]
 > $|\mathcal{M}_{\lambda}|=2^{c}$.
+> > [!Proof]- 
+> > Cantor set is a set with measure $0$, hence its powerset is a subset of $\mathcal{M}_{\lambda}$. And $\mathcal{M}_{\lambda} \subseteq P(\mathbb{R})$.
+> > Hence, $$2^{c} \leq |\mathcal{M}_{\lambda}| \leq 2^{c}$$
 
 ^ba1099
 
@@ -154,12 +174,45 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > [!Proposition]
 > Let $X$ be a metric space and $\mu$ be a finite measure on $\mathcal{B}_{X}$. Then for all $A\in \mathcal{B}_{X}$, 
 > $$
-> \begin{align}
-> \mu(A) & =\inf \{ \mu(U):U\text{ is open}, A\subseteq U \}\\
->  & =\sup \{ \mu(F):F\text{ is closed}, F\subseteq A \}.
-> \end{align}
+> \left.
+> \begin{aligned}
+> \mu(A) & =\inf \{ \mu(U):U\text{ is open}, A\subseteq U \} & \\
+>  & =\sup \{ \mu(F):F\text{ is closed}, F\subseteq A \} & 
+> \end{aligned}
+> \right  \} \quad (*)
 > $$
-> 
+> > [!Proof]-
+> > $\mathcal{F}=\{A \in \mathcal{B}_{X} : A \text{ satisfies } (*)\}$.
+> > Enough to show that open sets are in $\mathcal{F}$ and $\mathcal{F}$ is a $\sigma$-algebra.
+> > Let $U$ be an open set. $\mu(U) = \inf \{ \mu(U):U\text{ is open}, A\subseteq U \}$ is clear.
+> > Let $F_{n} = \{x \in X \mid d_{U^{c}}(x) \geq \frac{1}{n}\}, \, F_{n}$ is closed by continuity of $d_{U^c}$.
+> > $$\bigcup_{n=1}^{\infty}F_{n}= \{x \in X : d_{U^{c}}(x)> 0\} = U$$
+> > Hence, $F_n \uparrow U\implies \mu(F_{n})\uparrow \mu(U)$.
+> > Therefore open sets are in $\mathcal{F}$.
+> > 
+> > To prove $\mathcal{F}$ is a $\sigma$-algebra, we have to show that it is closed under complementation and countable union. The proof for closure under complementation is very similar to the previous proof. Next we prove the closure under countable union.
+> > 
+> > Let $\{A_{n}\}_{n=1}^\infty \subseteq  \mathcal{F}$, we need to show that $A = \bigcup_{n=1}^{\infty}A_{n} \in \mathcal{F}$.
+> > For $A_{n}$, choose $F_{n}\subseteq A_{n}\subseteq U_{n}$ such that $$\mu(U_{n} \setminus F_{n}) < \frac{\epsilon}{2^{n+1}}$$
+> > Take $U = \bigcup_{n=1}^{\infty}U_{n},\, F = \bigcup_{n=1}^{\infty}F_{n}$, note that $F \subseteq A \subseteq U$.
+> > $$
+> > \begin{align}
+> > 
+> > U \setminus F & = \left( \bigcup_{n=1}^{\infty}U_{n}\right) \setminus \left(\bigcup_{n=1}^{\infty}F_{n}\right)\\ \\
+> > & \subseteq \bigcup_{n=1}^{\infty} \left( U_{n} \setminus F_{n}\right)
+> > \end{align}
+> > $$
+> > $$
+> > \begin{align}
+> > \therefore \mu(U \setminus F) \leq \sum_{n=1}^{\infty} \mu(U_{n} \setminus F_{n}) < \frac{\epsilon}{2} 
+> > \end{align}
+> > $$
+> > Let $\bar{F}_{m} = \bigcup_{n=1}^{m}F_{n}, \bar{F}_{n} \uparrow F \implies \mu(\bar{F_{n}}) \uparrow \mu(F)$.
+> > Then, we can choose an $N$ such that $\mu(F \setminus \bar{F}_{n}) < \frac{\epsilon}{2} \implies \mu(U \setminus \bar{F}_{N}) < \epsilon$. 
+> > 
+
+^ace8e4
+
 
 > [!Corollary]
 > Let $X$ be a metric space. Let $\mu, \nu$ be measures on $\mathcal{B}(X)$. If $\mu(F)=\nu(F)$ for all closed $F\subseteq X$, then $\mu=\nu$. 
@@ -171,8 +224,38 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > Let $\mu$ be a Radon measure on $\mathcal{B}(\mathbb{R}^{N})$. Then, 
 > $$
 > \begin{align}
-> \mu(A) & =\inf \{ \mu(U):U \text{ is open}, A\subseteq U\} \\
->  & =\sup\{ \mu(K):K\text{ is compact}, K\subseteq A \}.
+> \mu(A) & =\inf \{ \mu(U):U \text{ is open}, A\subseteq U\} \tag{i}\\
+>  & =\sup\{ \mu(K):K\text{ is compact}, K\subseteq A \} \tag{ii}
 > \end{align}
 > $$
 > 
+> > [!Proof]-
+> > Let $A \subseteq \mathcal{B}(\mathbb{R}^{N})$. Notice that $\mu$ is $\sigma$-finite.
+> > If $\mu(A) = \infty$ then $\text{(i)}$ is automatically satisfied. So assume $\mu(A) < \infty$.
+> > Let $K_{n}=[-n,n]^{N}$, $\mu_{n}(A)=\mu(A \cap K_{n}^{o})$, where $K_{n}^{o}$ denotes the interior of $K_{n}$.
+> > Note that $\mu_{n}$ are finite measures.
+> > So, by [[#^ace8e4]], $\exists \text{ open } U_{n} \subseteq \mathbb{R}^{N} \text{ such that } U_{n} \supseteq A$ and $\mu_{n}(U_{n}\setminus A)< \frac{\epsilon}{2^{n}}$.
+> > Let $U = \bigcup_{n=1}^{\infty}(U_{n} \cap K_{n}^{o})$, $U \supseteq A$.
+> > $$
+> > \begin{align}
+> > \mu(U \setminus A) &= \mu\left( \bigcup_{n=1}^{\infty}\left( U_{n} \cap K_{n}^{o} \cap A^{c}\right) \right) \\
+> > &\leq  \sum_{n=1}^{\infty}\mu_{n}(U_{n} \cap A^{c}) <\epsilon.
+> > \end{align}
+> > $$
+> > Now we only need to prove $\text{(ii)}$.
+> > $\bar{\mu_{n}}(A) := \mu(A \cap K_{n})$ are finite measures.
+> > Suppose $\mu(A)< \infty$.
+> > Again by [[#^ace8e4]], $\exists \text{ closed } C_{n_{1}}\subseteq A$ such that $\bar{\mu_{n}}(A \setminus C_{n_{1}}) < \frac{\epsilon}{2}$.
+> > Also, $(A \cap K_{n}) \uparrow K_{n} \implies \exists n_{2} \in \mathbb{N} \text{ such that } \mu(A \cap K_{n_{2}})> \mu(A) - \frac{\epsilon}{2}$.
+> > Let $K = C_{n_{1}} \cap K_{n_{1}}$.
+> > $$
+> > \begin{align}
+> > \mu(A \setminus K) &= \mu(A) - \mu(K) \\
+> > & < \mu(A \cap K) - \mu(K) + \frac{\epsilon}{2} \\
+> > & = \mu_{n_{1}}(A \setminus C_{n_{1}}) < \epsilon
+> > \end{align}
+> > $$
+> > Suppose $\mu(A)=\infty$.
+> > Note that $A \cap K_{n} \uparrow A$. $\mu(A \cap K_{n}) < \infty \implies \exists \text{ compact }F_{n}\subseteq A \cap K_{n}$ such that $\mu(F_{n}) > \mu(A \cap K_{n})-1 \implies \mu(F_{n}) \to \infty$.
+> > 
+
