@@ -5,10 +5,11 @@ time: 14:47
 tags:
   - GANA1
   - Lecture
-desc: integration of simple and measurable functions, monotone convergence theorem, Fatou's lemma
+desc: integration of simple and nonnegative measurable functions, monotone convergence theorem, Fatou's lemma
 P1: true
 ---
-Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. We say that a statement $\textsf{p}$ on elements of $\Omega$ is true *almost everywhere* if there exists $F\in \mathcal{F}$ such that $\mu(F)=0$ and for all $x\in F^{c}$, $\textsf{p}$ holds. 
+> [!Definition]
+> Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. We say that a statement $\textsf{p}$ on elements of $\Omega$ is true *almost everywhere* if there exists $F\in \mathcal{F}$ such that $\mu(F)=0$ and for all $x\in F^{c}$, $\textsf{p}$ holds. 
 
 > [!Definition]
 > Let $(\Omega, \mathcal{F}, \mu)$ be a measure space, and $X$ be a metric space. Let $f_{n}, f:(\Omega, \mathcal{F})\to X$ be measurable functions. We say that
@@ -27,7 +28,7 @@ Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. We say that a statement $\t
 
 ---
 
-# Integration
+# Integration of simple and nonnegative measurable functions
 
 > [!Definition] Integral of simple function
 > Let $f:(X, \mathcal{F})\to[0, \infty]$ be a simple function. Let
@@ -55,12 +56,14 @@ Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. We say that a statement $\t
 > $$
 > 
 
-> [!Definition] Integral of measurable function
+> [!Definition] Integral of nonnegative measurable function
 > Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable, and $\{ f_{n} \}$ be a sequence of simple functions such that $f_{n}\uparrow f$. Define
 > $$
 > \int_{X}f\,d\mu=\sup_{n}\int f_{n}\,d\mu.
 > $$
 > 
+
+^2c598a
 
 [!Lemma]
 Let $f:(X< \mathcal{F})\to[0, \infty]$ be measurable. Then, 
