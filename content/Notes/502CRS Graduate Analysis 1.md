@@ -21,13 +21,14 @@ SORT date ASC
 %%
 
 
+
+
+
 [[LEC GANA1 2]]
 [[LEC GANA1 3]]
 [[LEC GANA1 4]]
-[[LEC GANA1 5]] %% postdoc %%
-[[LEC GANA1 6]] %% postdoc %%
-[[LEC GANA1 7]]
-[[LEC GANA1 8]]
+[[LEC GANA1 5]]
+[[LEC GANA1 6]]
+[[LEC GANA1 7]] %%o7%%
+[[LEC GANA1 8]] %%o8%%
 [[LEC GANA1 9]]
-[[LEC GANA1 10]]
-[[LEC GANA1 11]]

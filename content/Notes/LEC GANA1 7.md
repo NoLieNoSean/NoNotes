@@ -1,31 +1,70 @@
 ---
-id: "549"
-date: 2026-09-03
-time: 14:47
+id: "559"
+date: 2026-09-10
+time: 15:31
 tags:
   - GANA1
   - Lecture
-desc: measurable functions and their approximation by simple functions
 ---
-# Measurability
 
-[!Definition] 
-Let $X$ be a set, $\mathcal{F}$ be a $\sigma$-algebra on $X$, and $\mu$ be a measure on $(X, \mathcal{F})$. 
-1. The tuple $(X, \mathcal{F})$ is called a **measurable space**. 
-2. The tuple $(X, \mathcal{F}, \mu)$ is called a **measure space**. 
+We have the following immediate consequence of MCT, which allows us to swap $\sum$ and $\int$ for nonnegative measurable functions. 
+
+
+> [!Corollary]
+> Let $\{ f_{n} \}, f:(X, \mathcal{F})\to[0, \infty]$ be measurable, and suppose $\sum_{i=1}^{n}f_{i}\uparrow f$ pointwise. Then, by the [[LEC GANA1 6#^de9d0c|monotone convergence theorem]], 
+> $$
+> \begin{align}
+> \sup _{n}\int_{X}\sum_{i=1}^{n} f_{i}=\int_{X}f,
+> \end{align}
+> $$
+> or, 
+> $$
+> \sum_{i=1}^{\infty} \int_{X}f_{i}=\int_{X}\sum_{i=1}^{\infty} f_{i}.
+> $$
+> 
+
+
+[!Corollary]
+For all $A\subseteq \mathcal{F}$, for $f\geqslant 0$ measurable, define 
+$$
+\gamma(A)=\int_{A}fd\mu=\int_{X}f 1_{A}d\mu.
+$$
+Then $\gamma$ is a measure. Countable additivity comes from corollary to MCT. 
+
+
+---
+
+[!Definition] integral of a measurable real valued function
+
+Let $f:\Omega \to \mathbb{R}$ be measurable. Define
+$$
+\begin{align}
+f_{+}(x) & =\max\{ 0, f(x) \} \\
+ & =f 1_{\{ 1:f(t)\geqslant  0 \}}.
+\end{align}
+$$
+Clearly, $f_{+}\geqslant 0$ and measurable. Similarly, define $f_{-}=f 1_{\{ f< 0 \}}$. Then $f=f_{+}-f_{-}$, $f_{+}f_{-}=0$, and $|f|=f_{+}+f_{-}$. We now define $\int_{\Omega}f$ as $\int_{\Omega}f_{+}-\int_{\Omega}f_{-}$.
 
 [!Definition]
-Let $(X, \mathcal{F})$ and $(Y, \mathcal{G})$ be measure spaces. A function $\phi:X\to Y$ is **measurable** if $\phi ^{-1}(A)\in \mathcal{F}$ for all $A\in \mathcal{G}$. 
+A measurable function $f:\Omega\to \mathbb{R}$ is integrable if $\int_{\Omega}|f|d\mu< \infty$. This implies $\int_{\Omega}f_{+}, \int_{\Omega}f_{-}< \infty$, and we define
+$$
+\int_{\Omega}fd\mu=\int_{\Omega}f_{+}d\mu-\int_{\Omega}f_{-}d\mu.
+$$
 
-If $\mathcal{G}=\sigma(S)$, then $\phi$ is measurable iff $\phi ^{-1}(A)\in \mathcal{F}$ for all $A\in S$. 
+[!Remark]
+1. the integral defined above is $\mathbb{R}$-linear. 
+2. if $f\geqslant 0$, then $\int f\geqslant 0$. 
+3. if $f\geqslant g$, then $\int f\geqslant \int g$. 
 
-[!Proposition]
-Let $(X, \mathcal{F})$ be a measurable space. Let $\phi:X\to \mathbb{R}$ be any map. Then, $\phi$ is a measurable map $(X, \mathcal{F})\to(\mathbb{R}, \mathcal{B}(\mathbb{R}))$ iff any of the following hold:
-1. $\phi ^{-1}((a, b))\in \mathcal{F}$ for all $(a, b)\subseteq \mathbb{R}$. 
-2. $\phi ^{-1}((-\infty, t])\in \mathcal{F}$ for all $t\in \mathbb{R}$. 
-3. $\phi ^{-1}([t, \infty)\in \mathcal{F}$ for all $t\in \mathbb{R}$. 
-
-[!Proposition]
-Let $X, Y$ be metric spaces. If $f:X\to Y$ is a continuous map, then $f:(X, \mathcal{B}(X))\to(Y, \mathcal{B}(Y))$ is measurable. 
-
-[!Proposition]
+[!Theorem] Dominated convergence theorem
+Let $f_{n}, f, g_{n}, g:\Omega\to \mathbb{R}$ be such that 
+$$
+\begin{align}
+ & |f_{n}(x)|\leqslant  g_{n}(x) & \forall x\in \mathbb{R}  \\ 
+ & |f(x)|\leqslant  g(x) & \forall x\in \mathbb{R}
+\end{align}
+$$
+and $f_{n}(x)\to f(x)$ almost everywhere and $g_{n}(x)\to g(x)$ almost everywhere and $\int g_{n}< \infty$ and $\int g< \infty$ and $\int g_{n}\to \int g$. Then
+$$
+\lim_{ n \to \infty } \int f_{n}(x)\, d\mu=\int f(x)\,d\mu
+$$

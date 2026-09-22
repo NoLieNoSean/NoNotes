@@ -1,9 +1,8 @@
 ---
-id: "550"
-date: 2026-09-04
-time: 14:47
+id: "561"
+date: 2026-09-11
+time: 15:30
 tags:
-  - GANA1
   - Lecture
-desc: integration of simple and measurable functions, monotone convergence theorem, Fatou's lemma
+  - GANA1
 ---
