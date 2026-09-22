@@ -29,6 +29,6 @@ SORT date ASC
 [[LEC GANA1 4]]
 [[LEC GANA1 5]]
 [[LEC GANA1 6]]
-[[LEC GANA1 7]] %%o7%%
-[[LEC GANA1 8]] %%o8%%
+[[LEC GANA1 7]] 
+[[LEC GANA1 8]] 
 [[LEC GANA1 9]]

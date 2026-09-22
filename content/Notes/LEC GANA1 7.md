@@ -58,6 +58,8 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 > $$
 > 
 
+^f29946
+
 > [!Remark]
 > Let $f, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be integrable functions. 
 > 1. $\int(\alpha f+g)=\alpha \int f+\int g$. 

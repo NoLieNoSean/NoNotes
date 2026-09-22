@@ -10,7 +10,7 @@ P1: true
 ---
 # The product measure
 
-Fix measure spaces $(X, \mathcal{F}, \mu)$ and $(Y, \mathcal{G}, \nu)$ with $\sigma$-finite measures. We want to construct a product a product space $(X\times Y, \mathcal{F}\otimes \mathcal{G}, \mu \otimes \nu)$. 
+Fix measure spaces $(X, \mathcal{F}, \mu)$ and $(Y, \mathcal{G}, \nu)$ with *$\sigma$-finite* measures. We want to construct a product a product space $(X\times Y, \mathcal{F}\otimes \mathcal{G}, \mu \otimes \nu)$. 
 
 Define 
 $$
@@ -39,18 +39,27 @@ $$
 
 
 > [!Theorem] Tonelli
-> Suppose $F:(X\times Y, \mathcal{F}\otimes \mathcal{G})\to[0, \infty]$ is measurable. Then, the following hold:
-> 1. the section $y\mapsto F(x, y)$ is measurable on $Y$ for all $x\in X$, and the map $x \mapsto\int_{Y} F(x, y)\,d\nu$ is measurable on $X$. 
-> 2. the section $x\mapsto F(x, y)$ is measurable on $X$ for all $y\in Y$, and the map $y \mapsto\int_{X} F(x, y)\,d\mu$ is measurable on $Y$. 
+> Suppose $F:(X\times Y, \mathcal{F}\otimes \mathcal{G})\to[0, \infty]$ is measurable. Then, 
+> 1. the section $y\mapsto F(x, y)$ is measurable on $Y$ for all $x\in X$, and the map $x \mapsto\int_{Y} F(x, y)\,d\nu$ is measurable on $X$, 
+> 2. the section $x\mapsto F(x, y)$ is measurable on $X$ for all $y\in Y$, and the map $y \mapsto\int_{X} F(x, y)\,d\mu$ is measurable on $Y$,
 > 
-> We also have
+> and
+> $$
+> \int_{X\times Y}F(x, y)\,d(\mu \otimes \nu)=\int_{X}\left( \int_{Y}F(x, y)\,d\nu \right)d\mu=\int_{Y}\left( \int_{X}F(x, y)\,d\mu \right)\,d\nu.
+> $$
+> 
+
+> [!Theorem] Fubini
+> Suppose $F\in L^{1}(X\times Y, \mathcal{F}\otimes \mathcal{G}, \mu \otimes \nu)$ (so $F$ is [[LEC GANA1 7#^f29946|integrable]] on the product space). Then, 
+> 1. the section $y\mapsto F(x, y)$ is measurable on $Y$ for all $x\in X$, integrable on $Y$ for almost all $x\in X$, and $x \mapsto \int_{Y}F(x, y)d\nu$ [^1] is integrable on $X$,
+> 2. the section $x\mapsto F(x, y)$ is measurable on $X$ for all $y\in Y$, integrable on $X$ for almost all $y\in Y$, and $y \mapsto \int_{X}F(x, y)d\mu$ [^1] is integrable on $Y$,
+> 
+> and
 > $$
 > \int_{X\times Y}F(x, y)\,d(\mu \otimes \nu)=\int_{X}\left( \int_{Y}F(x, y)\,d\nu \right)d\mu=\int_{Y}\left( \int_{X}F(x, y)\,d\mu \right)\,d\nu.
 > $$
 > 
 
 
-> [!Theorem] Fubini
-> Let $F\in L^{1}(X\times Y, \mathcal{F}\otimes \mathcal{G}, \mu \otimes \nu)$ (so $F$ is integrable on the product space). Then, 
-> 1. the section $x\mapsto F(x, y)$ is measurable on $X$ for all $y\in Y$, and integrable on $X$ for almost all $y\in Y$. 
-> 2. the section $y\mapsto F(x, y)$ is measurable on $Y$ for all $x\in X$, and integrable on $Y$ for almost all $x\in X$.
+
+[^1]: defined arbitrarily at values for which the section is not integrable.
