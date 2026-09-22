@@ -7,6 +7,7 @@ tags:
   - Lecture
 desc: completeness, the Lebesgue measure, regularity
 P1: true
+P2: true
 ---
 
 > [!Recall]
@@ -212,7 +213,7 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > > 
 
 ^ace8e4
-
+ 
 
 > [!Corollary]
 > Let $X$ be a metric space. Let $\mu, \nu$ be measures on $\mathcal{B}(X)$. If $\mu(F)=\nu(F)$ for all closed $F\subseteq X$, then $\mu=\nu$. 
