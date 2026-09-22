@@ -5,7 +5,7 @@ time: 14:47
 tags:
   - GANA1
   - Lecture
-desc: integration of simple and measurable functions, monotone convergence theorem, Fatou's lemma
+desc: integration of simple and nonnegative measurable functions, monotone convergence theorem, Fatou's lemma
 P1: true
 ---
 > [!Definition]
@@ -28,7 +28,7 @@ P1: true
 
 ---
 
-# Integration
+# Integration of simple and nonnegative measurable functions
 
 > [!Definition] Integral of simple function
 > Let $f:(X, \mathcal{F})\to[0, \infty]$ be a simple function. Let

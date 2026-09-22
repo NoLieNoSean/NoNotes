@@ -6,7 +6,9 @@ tags:
   - GANA1
   - Lecture
 P1: true
+desc: MCT corollaries, DCT and corollaries, Lp spaces, convergence in measure
 ---
+# MCT corollaries
 
 We have the following immediate consequence of MCT, which allows us to swap $\sum$ and $\int$ for nonnegative measurable functions. 
 
@@ -35,6 +37,8 @@ We have the following immediate consequence of MCT, which allows us to swap $\su
 
 
 ---
+
+# Integration of real valued measurable functions
 
 We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonnegative:
 
@@ -90,7 +94,9 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 
 ---
 
-> [!Definition]
+# $L^{p}$, $L^{\infty}$ spaces and convergence in measure
+
+> [!Definition] $L^{p}$ spaces
 > For a measure space $(\Omega, \mathcal{F}, \mu)$, define
 > $$
 > L^{1}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|< \infty  \right\}.
@@ -110,13 +116,12 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 > 1. $1_{[n, \infty)}\to 0$ pointwise, but $\int 1_{[n, \infty]}=\infty$ for all $n$, and does not converge to $\int 0=0$. 
 > 2. $n 1_{(0, 1/n)}\to 0$ pointwise, but $\int n 1_{(0, 1/n)}=1$ for all $n$, and does not converge to $0$.  
 
----
+
 
 > [!Proposition]
 > 1. If $f\geqslant 0$, then $\int f=0$ $\implies$ $f=0$ a.e..
 > 2. Let $f$ be a nonnegative integrable function. Then, $\mu(\{ t:f(t)=\infty \})=0$. 
 > 3. Let $f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable and satisfy $\int_{A}f=0$ for all $A\in \mathcal{F}$. Then, $f=0$ a.e..
-
 
 > [!Definition] Convergence in measure
 > Let $f_{n}, f:(\Omega, \mathcal{f}, \mu)\to \mathbb{R}$ be measurable. We say that **$\{ f_{n} \}$ converges to $f$ in measure**, and write $f_{n}\xrightarrow{\mu}f$, if for all $\epsilon> 0$, 
@@ -131,9 +136,7 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 > 1. If $\mu$ is a finite measure on $(\Omega, \mathcal{F})$, then $f_{n}\to f$ a.e. $\implies$ $f_{n}\xrightarrow{\mu}f$. 
 > 2. If $f_{n}\xrightarrow{\mu}f$, there exists a subsequence $\{ f_{n_{k}} \}$ such that $f_{n_{k}}\to f$ a.e..
 
-
-
-> [!Definition]
+> [!Definition] $L^{\infty}$ space
 > For a measure space $(\Omega, \mathcal{F}, \mu)$, define
 > $$
 > L^{\infty}(X, \mathcal{F}, \mu)=\{ f:(\Omega, \mathcal{F})\to \mathbb{R} :f\text{ is measurable}, |f(t)|\leqslant  M< \infty \text{ a.e.}\}.
@@ -163,7 +166,8 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 > $$
 > B=A\cup\left( \bigcup_{n=1}^{\infty} A_{n} \right).
 > $$
-> On $B^{c}$, $f_{n}\to f$ uniformly: $|f_{n}(t)-f(t)|\leqslant \lVert f_{n}-f \rVert_{\infty}\to 0$ for all $t$. 
+> Note that $\mu(B)=0$ (monotone continuity!). On $B^{c}$, $f_{n}\to f$ *uniformly*: $|f_{n}(t)-f(t)|\leqslant \lVert f_{n}-f \rVert_{\infty}\to 0$ for all $t$. 
+
 
 > [!Remark]
 > Suppose $f_{n}\to f$ in $L^{p}$. Let $A^{\epsilon}_{n}=\{ t:|(f-f_{n})(t)|\geqslant \epsilon \}$. Since $\int |f_{n}-f|^{p}\geqslant \epsilon^{p}\mu(A^{\epsilon}_{n})$, we have $\mu(A_{n}^{\epsilon})\to 0$ for all $\epsilon> 0$. Thus, 
