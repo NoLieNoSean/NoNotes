@@ -40,7 +40,7 @@ P1: true
 > > 
 > > Thus, for all $k\in \mathbb{N}$ there exists $n_{k}$ such that for all $m\geqslant n_{k}$, 
 > > $$
-> > |f_{m}(x)-f(x)|< 1/k \quad \forall x\in A_{\epsilon}.
+> > |f_{m}(x)-f(x)|< 1/k \quad \forall x\in X \setminus A_{\epsilon}.
 > > $$
 > > Therefore, $f_{n}\to f$ uniformly on $A^{c}_{\epsilon}$. 
 > > 

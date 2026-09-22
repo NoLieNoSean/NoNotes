@@ -128,6 +128,33 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > \end{align}
 > $$
 > $\tilde{\mathcal{F}}$ is a $\sigma$-algebra. Define $\tilde{\mu}$ on $\tilde{\mathcal{F}}$ by $\tilde{\mu}(A)=\mu(B_{2})=\mu(B_{1})$. Then, $\tilde{\mu}$ is a measure on $\tilde{\mathcal{F}}$, $\tilde{\mu}|_{\mathcal{F}}=\mu$, and $\tilde{\mathcal{F}}$ is complete. We call $(\tilde{\mathcal{F}}, \tilde{\mu})$ the **completion** of $(\mathcal{F}, \mu)$. 
+> > [!Proof]-
+> > We would at first show that $\tilde{\mathcal{F}}$ is a $\sigma$-algebra.
+> > Clearly $\mathcal{F}\subseteq  \tilde{\mathcal{F}}$.
+> > $A \in \tilde{\mathcal{F}} \implies \exists B_{1}, B_{2} \in \mathcal{F}$ such that $B_{1} \subseteq A \subseteq B_{2}$ and $\mu(B_{2} \setminus B_{1})= 0$.
+> > This implies, $B_{2}^{c} \subseteq A^{c} \subseteq B_{1}^{c}$.
+> > And $B_{1}^{c} \setminus B_{2}^{c}= B_{2} \setminus B_{1} \implies \mu(B_{1}^{c} \setminus B_{2}^{c}) = 0 \implies A^{c} \in \tilde{\mathcal{F}}$.
+> > 
+> > Now let $\{A_{n}\}_{n=1}^{\infty} \subseteq  \tilde{\mathcal{F}}$, let $\{B_{n}\}_{n=1}^{\infty}, \{C_{n}\}_{n=1}^{\infty} \subseteq  {\mathcal{F}}$ be such that $\mu(C_{n} \setminus B_{n})= 0,\, B_{n} \subseteq A_{n} \subseteq C_{n}, \, \forall n$.
+> > Then 
+> > $$
+> > \bigcup_{n=1}^{\infty} B_{n} \subseteq \bigcup_{n=1}^{\infty} A_{n} \subseteq \bigcup_{n=1}^{\infty}C_{n}
+> > $$
+> > and 
+> > $$
+> > \left(\bigcup_{n=1}^{\infty}C_{n}\right) \setminus \left(\bigcup_{n=1}^{\infty} B_{n}\right) \subseteq \bigcup_{n=1}^{\infty} (C_{n} \setminus B_{n})
+> > $$
+> > $\mu\left( \bigcup_{n=1}^{\infty} (C_{n} \setminus B_{n}) \right) \leq \sum_{n=1}^{\infty} \mu(C_{n}\setminus B_{n}) = 0$.
+> > Therefore $\bigcup_{n=1}^{\infty} A_n \in \tilde{\mathcal{F}}$.
+> > Hence, $\tilde{\mathcal{F}}$ is a $\sigma$-algebra.
+> > 
+> > Next we would prove countable additivity of $\tilde{\mu}$,
+> > Now let $\{A_{n}\}_{n=1}^{\infty} \subseteq  \tilde{\mathcal{F}}$, let $\{B_{n}\}_{n=1}^{\infty}, \{C_{n}\}_{n=1}^{\infty} \subseteq  {\mathcal{F}}$ be such that $\mu(C_{n} \setminus B_{n})= 0,\, B_{n} \subseteq A_{n} \subseteq C_{n}, \, \forall n$, also suppose $A_{n}$'s are pairwise disjoint.
+> > Then
+> > $$
+> > \tilde{\mu}\left( \bigcup_{n=1}^{\infty}A_{n} \right) = \mu\left( \bigcup_{n=1}^{\infty}B_{n} \right)= \sum_{n=1}^{\infty}\mu(B_{n})= \sum_{n=1}^{\infty}\tilde{\mu}(A_{n})
+> > $$
+> > Hence $\tilde{\mu}$ is a measure.
 
 > [!Proposition] 
 > For any $\mu$, $\mathcal{M}_{\mu}$ is complete.
