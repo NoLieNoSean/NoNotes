@@ -5,12 +5,13 @@ time: 15:31
 tags:
   - GANA1
   - Lecture
+P1: true
 ---
 
 We have the following immediate consequence of MCT, which allows us to swap $\sum$ and $\int$ for nonnegative measurable functions. 
 
 > [!Corollary]
-> Let $\{ f_{n} \}, f:(X, \mathcal{F})\to[0, \infty]$ be measurable, and suppose $\sum_{i=1}^{n}f_{i}\uparrow f$ pointwise. Then, by the [[LEC GANA1 6#^de9d0c|monotone convergence theorem]], 
+> Let $f_{n}, f:(X, \mathcal{F})\to[0, \infty]$ be measurable, and suppose $\sum_{i=1}^{n}f_{i}\uparrow f$ pointwise. Then, by the [[LEC GANA1 6#^de9d0c|monotone convergence theorem]], 
 > $$
 > \begin{align}
 > \sup _{n}\int_{X}\sum_{i=1}^{n} f_{i}=\int_{X}f,
@@ -89,20 +90,20 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 
 ---
 
-[!Definition]
-For a measure space $(\Omega, \mathcal{F}, \mu)$, define
-$$
-L^{1}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|< \infty  \right\}.
-$$
-We will write $L^{1}$ in place of $L^{1}(\Omega, \mathcal{F}, \mu)$ when the measure space is clear form context. $L^{1}$ is a vector space. 
-
-For $\{ f_{n} \}, f\subseteq L_{1}$, we say that $f_{n}\to f$ in $L^{1}$ if $\int |f-f_{n}|\to 0$. 
-
-We also have $L^{p}$ spaces for $0< p< \infty$:
-$$
-L^{p}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|^{p}< \infty  \right\}.
-$$
-
+> [!Definition]
+> For a measure space $(\Omega, \mathcal{F}, \mu)$, define
+> $$
+> L^{1}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|< \infty  \right\}.
+> $$
+> We will write $L^{1}$ in place of $L^{1}(\Omega, \mathcal{F}, \mu)$ when the measure space is clear form context. $L^{1}$ is a vector space. 
+> 
+> For $f_{n}, f\subseteq L^{1}$, we say that **$f_{n}\to f$ in $L^{1}$** if $\int |f-f_{n}|\to 0$. 
+> 
+> We also have $L^{p}$ spaces for $0< p< \infty$:
+> $$
+> L^{p}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|^{p}< \infty  \right\}.
+> $$
+> 
 
 
 > [!Example]
@@ -111,6 +112,76 @@ $$
 
 ---
 
-[!Proposition]
-1. If $f\geqslant 0$, then $\int f=0$ $\implies$ $f=0$ a.e..
-2. 
+> [!Proposition]
+> 1. If $f\geqslant 0$, then $\int f=0$ $\implies$ $f=0$ a.e..
+> 2. Let $f$ be a nonnegative integrable function. Then, $\mu(\{ t:f(t)=\infty \})=0$. 
+> 3. Let $f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable and satisfy $\int_{A}f=0$ for all $A\in \mathcal{F}$. Then, $f=0$ a.e..
+
+
+> [!Definition] Convergence in measure
+> Let $f_{n}, f:(\Omega, \mathcal{f}, \mu)\to \mathbb{R}$ be measurable. We say that **$\{ f_{n} \}$ converges to $f$ in measure**, and write $f_{n}\xrightarrow{\mu}f$, if for all $\epsilon> 0$, 
+> $$
+> \mu(\{ t:|(f_{n}-f)(t)|\geqslant  \epsilon \})\to 0.
+> $$
+> 
+
+For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarrow{\mu}} 0$. 
+
+> [!Proposition]
+> 1. If $\mu$ is a finite measure on $(\Omega, \mathcal{F})$, then $f_{n}\to f$ a.e. $\implies$ $f_{n}\xrightarrow{\mu}f$. 
+> 2. If $f_{n}\xrightarrow{\mu}f$, there exists a subsequence $\{ f_{n_{k}} \}$ such that $f_{n_{k}}\to f$ a.e..
+
+
+
+> [!Definition]
+> For a measure space $(\Omega, \mathcal{F}, \mu)$, define
+> $$
+> L^{\infty}(X, \mathcal{F}, \mu)=\{ f:(\Omega, \mathcal{F})\to \mathbb{R} :f\text{ is measurable}, |f(t)|\leqslant  M< \infty \text{ a.e.}\}.
+> $$
+> Define
+> $$
+> \lVert f \rVert _{\infty}=\inf \{ k:|f(t)|\leqslant k\text{ a.e.} \}.
+> $$
+> For $f_{n}, f\in L^{\infty}$, we say that **$f_{n}\to f$ in $L^{\infty}$** if $\lVert f-f_{n} \rVert_{\infty}\to 0$. 
+
+%% typo: vasanth writes $\leqslant$ instead of $>$ below %%
+
+> [!Remark]
+> Suppose $k_{n}\downarrow \lVert f \rVert_{\infty}$, and let $A_{n}=\{ t:|f(t)|> k_{n} \}$. Clearly, $\mu(A_{n})=0$ and $A_{n}\downarrow A$. Thus, $\mu(A_{n})\downarrow \mu(A)$, and $\mu(\{ t:|f(t)|> \lVert f \rVert_{\infty} \})=0$. 
+
+^da0b0d
+
+> [!Remark]
+> Let $f_{n}, f\in L^{\infty}$, and $f_{n}\to f$ in $L^{\infty}$. Let
+> $$
+> \begin{align}
+> A_{n} & =\{ t:|(f-f_{n})(t)|>  \lVert f-f_{n} \rVert _{\infty} \} \\
+> A & =\{ t:|f(t)|> \lVert f \rVert _{\infty}  \}
+> \end{align}
+> $$
+> By [[#^da0b0d]], $\mu(A_{n})=\mu(A)=0$. Let
+> $$
+> B=A\cup\left( \bigcup_{n=1}^{\infty} A_{n} \right).
+> $$
+> On $B^{c}$, $f_{n}\to f$ uniformly: $|f_{n}(t)-f(t)|\leqslant \lVert f_{n}-f \rVert_{\infty}\to 0$ for all $t$. 
+
+> [!Remark]
+> Suppose $f_{n}\to f$ in $L^{p}$. Let $A^{\epsilon}_{n}=\{ t:|(f-f_{n})(t)|\geqslant \epsilon \}$. Since $\int |f_{n}-f|^{p}\geqslant \epsilon^{p}\mu(A^{\epsilon}_{n})$, we have $\mu(A_{n}^{\epsilon})\to 0$ for all $\epsilon> 0$. Thus, 
+> $$
+> f_{n}\xrightarrow{L^{p}}f\implies f_{n}\xrightarrow{\mu}f\quad\forall0< p< \infty.
+> $$
+> Similarly, if $f_{n}\to f$ in $L^{\infty}$, $\mu(A_{n}^{\epsilon})=0$ for all $n\geqslant N$, for some $N$ determined by $\epsilon$. Thus,  
+> $$
+> f_{n}\xrightarrow{L^{\infty}}f\implies f_{n}\xrightarrow{\mu}f.
+> $$
+> 
+
+> [!Proposition]
+> Let $f_{n}, f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable with $f_{n}, f\geqslant 0$, $\int f_{n}, \int f< \infty$, $\int f_{n}\to \int f$, and $f_{n}\to f$ a.e.. Then, 
+> $$
+> \int |f_{n}-f|\to 0.
+> $$
+> 
+
+> [!Corollary]
+> Let $f_{n}$, $f$ be density functions, i.e., $\int f_{n}=\int f=1$, and $f_{n}, f\geqslant 0$. Then, $f_{n}\to f$ a.e. $\implies$ $\int |f_{n}-f|\to 0$. 
