@@ -9,7 +9,7 @@ desc: completeness, the Lebesgue measure, regularity
 P1: true
 ---
 
-
+%% test %% 
 > [!Recall]
 > Recall the setup from [[LEC GANA1 3#The Borel measure]]:
 > 1. $\lambda$ is a measure on the algebra $\mathcal{A}$. 
