@@ -7,6 +7,7 @@ tags:
   - Lecture
 desc: integration of simple and nonnegative measurable functions, monotone convergence theorem, Fatou's lemma
 P1: true
+P2: true
 ---
 > [!Definition]
 > Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. We say that a statement $\textsf{p}$ on elements of $\Omega$ is true *almost everywhere* if there exists $F\in \mathcal{F}$ such that $\mu(F)=0$ and for all $x\in F^{c}$, $\textsf{p}$ holds. 
@@ -154,34 +155,52 @@ Thus, we can define
 > \sup _{n}\int_{X}f_{n}=\int_{X} f.
 > $$
 > 
+> 
+> > [!Proof]-
+> > 
+> > It follows form [[#^fab189]] that $\sup_{n}\int f_{n}\leqslant \int f$. It remains to show the reverse inequality. It suffices to show that for any simple $s\leqslant f$, it holds that $\sup_{n}\int f_{n}\geqslant \int s$.  
+> > 
+> > Consider the bounded family $s\wedge f_{n}$. For each $n$, there exists simple $s_{n}$ such that
+> > $$
+> > s_{n}\leqslant  s\wedge f_{n}\leqslant  s_{n}+1/n.
+> > $$
+> > Define $t_{n}:=\max \{ s_{1}, \dots, s_{n} \}$. Because $s_{i}\leqslant f_{i}\leqslant f_{n}$, 
+> > $$
+> > t_{n}\leqslant  s\wedge f_{n}\leqslant t_{n}+1/n.
+> > $$
+> > Because $f_{n}\uparrow f$ and $s\leqslant f$, we have $s\wedge f_{n}\uparrow s$. So, $t_{n}\uparrow s$, whence $\int t_{n}\uparrow \int s$. Thus, 
+> > $$
+> > \begin{align}
+> > t_{n} & \leqslant  f_{n} \\
+> > \implies \int t_{n} & \leqslant  \int f_{n} \\
+> >  \implies \sup _{n}\int t_{n} & \leqslant  \sup _{n}\int f_{n} \\
+> >  \implies \int s & \leqslant  \sup _{n}\int f_{n}.
+> > \end{align}
+> > $$
+> > 
+> > 
+> 
 
 ^de9d0c
 
-[!Proof]-
-
-It follows form [[#^fab189]] that $\sup_{n}\int f_{n}\leqslant \int f$. It remains to show the reverse inequality. It suffices to show that for any simple $s\leqslant f$, it holds that $\sup_{n}\int f_{n}\geqslant \int s$.  
-
-Consider the bounded family $s\wedge f_{n}$. For each $n$, there exists simple $s_{n}$ such that
-$$
-s_{n}\leqslant  s\wedge f_{n}\leqslant  s_{n}+1/n.
-$$
-Define $t_{n}:=\max \{ s_{1}, \dots, s_{n} \}$. Because $s_{i}\leqslant f_{i}\leqslant f_{n}$, 
-$$
-t_{n}\leqslant  s\wedge f_{n}\leqslant t_{n}+1/n.
-$$
-Because $f_{n}\uparrow f$ and $s\leqslant f$, we have $s\wedge f_{n}\uparrow s$. 
-
-
-
-
 > [!Theorem] Fatou's lemma
-> Let $\{ f_{n} \}:(X, \mathcal{F})\to(0, \infty)$ be measurable positive real valued functions. Then
+> Let $\{ f_{n} \}:(X, \mathcal{F})\to(0, \infty]$ be measurable positive real valued functions. Then
 > $$
 > \int\liminf_{n}f_{n}\leqslant \liminf_{n}\int f_{n}.
 > $$
 > 
-
-
-
-[!Proof]-
-
+> 
+> 
+> > [!Proof]-
+> > 
+> > Let $g_{n}:=\inf_{m\geqslant n}f_{m}$. We have $g_{n}\uparrow \liminf f_{n}$. By [[#^de9d0c|MCT]], $\int g_{n}\uparrow \int\liminf_{n} f_{n}$. On the other hand, 
+> > $$
+> > \begin{align}
+> > \int g_{n} & \leqslant \int f_{m} & \forall m\geqslant  n  \\
+> >  \implies \int g_{n} & \leqslant \inf _{m\geqslant  n}\int f_{m} \\
+> >  \implies \sup _{n}\int g_{n} & \leqslant \sup _{n}\inf _{m\geqslant  n}\int f_{m} \\
+> > \implies \int \liminf_{n}f_{n} & \leqslant  \liminf_{n}\int f_{n}.
+> > \end{align}
+> > $$
+> > 
+> > 
