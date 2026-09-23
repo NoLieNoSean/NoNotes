@@ -27,13 +27,12 @@ We have the following immediate consequence of MCT, which allows us to swap $\su
 
 ^d5ec73
 
-
 > [!Corollary]
-> Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable. For all $A\in \mathcal{F}$,
+> Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable. For all $A\in \mathcal{F}$, define
 > $$
-> \gamma(A)=\int_{A}fd\mu=\int_{X}f 1_{A}d\mu.
+> \nu(A):=\int_{A}fd\mu=\int_{X}f 1_{A}d\mu.
 > $$
-> Then $\gamma$ is a measure. Countable additivity comes from [[#^d5ec73]]. 
+> Then $\nu$ is a measure. Countable additivity comes from [[#^d5ec73]]. 
 
 
 ---

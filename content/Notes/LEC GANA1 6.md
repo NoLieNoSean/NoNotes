@@ -184,7 +184,7 @@ Thus, we can define
 ^de9d0c
 
 > [!Theorem] Fatou's lemma
-> Let $\{ f_{n} \}:(X, \mathcal{F})\to(0, \infty]$ be measurable positive real valued functions. Then
+> Let $\{ f_{n} \}:(X, \mathcal{F})\to[0, \infty]$ be measurable positive real valued functions. Then
 > $$
 > \int\liminf_{n}f_{n}\leqslant \liminf_{n}\int f_{n}.
 > $$
