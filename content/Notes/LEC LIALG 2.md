@@ -5,6 +5,8 @@ time: 14:03
 tags:
   - LIALG
   - Lecture
+desc: Derivations, ideals, homomorphisms
+P1: true
 ---
 # Lie algebras of derivations
 
@@ -13,7 +15,7 @@ tags:
 
 ^09387d
 
-It is easily checked that $\mathrm{Der}(\mathfrak{A})$ is a vector subspace of $\text{End}(\mathfrak{A})$. Moreover, the commutator $[\delta, \delta']$ of two derivations is again a derivation, so $\mathrm{Der}(\mathfrak{A})$ is a subalgebra of $\mathfrak{gl}(\mathfrak{A})$. 
+It is easily checked that $\mathrm{Der}(\mathfrak{A})$ is a vector subspace of $\text{End}(\mathfrak{A})$. Moreover, the commutator $[\delta, \delta']$ of two derivations is again a derivation, so *$\mathrm{Der}(\mathfrak{A})$ is a subalgebra of $\mathfrak{gl}(\mathfrak{A})$*. 
 
 Since a Lie algebra $L$ is an $F$-algebra in the above sense, $\mathrm{Der}(L)$ is defined. Note that derivations are *not* Lie algebra homomorphisms - both of them lie in $\text{End}(L)$, but satisfy different identities. If $\varphi$ is a Lie algebra endomorphism and $\psi$ is a derivation of $L$, there holds
 $$
@@ -41,7 +43,7 @@ We now define a particular derivation on $L$.
 > A subspace $I$ of a Lie algebra $L$ is called an **ideal** of $L$ if $x\in L$, $y\in I$ together imply $[xy]\in I$. 
 
 
-For example, check that $\mathfrak{n}(n, F)$ is an ideal of $\mathfrak{t}(n, F)$. Clearly, all ideals are subalgebras. 
+For example, check that $\mathfrak{n}(n, F)$ is an ideal of $\mathfrak{t}(n, F)$. Clearly, *all ideals are subalgebras*. 
 
 Ideals play the role in Lie algebra theory which is played by normal subgroups in group theory and by two sided ideals in ring theory: they arise as kernels of homomorphisms. 
 
@@ -104,7 +106,9 @@ Here come the homomorphism theorems of yore:
 > 
 > We've seen the [[#^b3afb1|adjoint]] $\text{ad}(x)$ as a member of $\mathfrak{gl}(L)$ for $x\in L$. We now consider the map $\text{ad}:L\to \mathfrak{gl}(L)$: It is clear that $\text{ad}$ is a linear transformation, and it is easily seen that $\text{ad}$ preserves the Lie bracket, making it a Lie algebra homomorphism. It is called the **adjoint representation** of $L$. 
 > 
-> Incidentally, note that $\ker \text{ad}=Z(L)$. Thus, if $L$ is simple, then $Z(L)=0$, so $\text{ad}:L\to \mathfrak{gl}(L)$ is a monomorphism: any simple Lie algebra is isomorphic to a linear Lie algebra.  
+> Incidentally, note that $\ker \text{ad}=Z(L)$. Thus, if $L$ is simple, then $Z(L)=0$, so $\text{ad}:L\to \mathfrak{gl}(L)$ is a monomorphism: *any simple Lie algebra is isomorphic to a linear Lie algebra*.  
+
+^f7a6db
 
 
 

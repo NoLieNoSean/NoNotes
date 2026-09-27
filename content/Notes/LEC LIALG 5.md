@@ -5,12 +5,19 @@ time: 14:07
 tags:
   - Lecture
   - LIALG
+desc: lead up to Engel's theorem
+P1: true
 ---
-Quiz next tuesday
+%%Quiz next tuesday%%
 
----
+# Build up to Engel's theorem
 
-comes right up to Engel's theorem. 
+> [!Definition] ad-nilpotent
+> For any Lie algebra $L$ and $x\in L$, we call $x$ **ad-nilpotent** if $\text{ad}\, x\in \text{End}(L)$ is nilpotent. 
+
+Clearly, if $L$ is [[LEC LIALG 4#^2c9e07|nilpotent]], then all elements of $L$ are ad-nilpotent. [[LEC LIALG 6#^ad92b6|Engel's theorem]] tells us that the converse is true. 
+
+As a first application, we can use the following lemma to see that $\mathfrak{n}(n, F)$ is nilpotent without having to compute the central series. 
 
 > [!Lemma]
 > Let $V$ be a finite dimensional vector space over $F$. Let $x\in \mathfrak{gl}(V)=\text{End}(V)$ be a nilpotent endomorphism of $V$. Then $\text{ad}(x)$ is a nilpotent endomorphism of $\mathfrak{gl}(V)$. 
@@ -23,7 +30,12 @@ comes right up to Engel's theorem.
 
 ^ee0216
 
----
+> [!Note]
+> 1. A matrix can be ad-nilpotent in $\mathfrak{gl}(n, F)$ without being nilpotent (the identity matrix is an example).
+> 2. $\mathfrak{d}(n, F)$ is an example of a nilpotent Linear lie algebra, none of whose elements are nilpotent. For $x\in \mathfrak{d}(n, F)$, $\text{ad}\,x|_{\mathfrak{d}(n, F)}$ is nilpotent ($0$, in fact) as [[#^ee0216]] requires, but not nilpotent in $\mathfrak{gl}(n, F)$. 
+> 3. On the other hand, $\mathfrak{n}(n, F)$ is nilpotent, and all its elements are too. 
+
+Engel's theorem will be deduced from the following result:
 
 > [!Theorem] @humphreysIntroductionLieAlgebras1972 [p. 12]
 > Let $V$ be a nonzero finite dimensional vector space over $F$. Let $L$ be a Lie subalgebra of $\mathfrak{gl}(V)$ consisting of nilpotent elements. Then, there is a nonzero vector $v\in V$ such that $x\cdot v=0$ for all $x\in L$. That is, there is a common eigenvector for all elements of $L$ with eigenvalue $0$. In other words, 

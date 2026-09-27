@@ -5,4 +5,5 @@ time: 14:00
 tags:
   - LIALG
   - Lecture
+desc: abstract Jordan decomposition
 ---

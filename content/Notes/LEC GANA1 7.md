@@ -85,6 +85,7 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 
 ^1795b3
 
+Sandwich. Use Fatou's. 
 
 > [!Corollary]
 > Let $f_{n}, f, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable functions such that $|f_{n}|\leqslant g$ pointwise, $f_{n}\to f$ a.e., and $\int g< \infty$. Then, the conclusions of [[#^1795b3]] follow.

@@ -5,36 +5,51 @@ time: 14:04
 tags:
   - LIALG
   - Lecture
----
-[!Corollary] @humphreysIntroductionLieAlgebras1972 [p. 13] 
-Let $L$ be nilpotent, $K$ an ideal of $L$. Then if $K\ne 0$, $K\cap Z(L)\ne 0$. 
-
-[!Proof]-
-
-Since $K$ is an ideal of $L$, $L$ acts on $K$ by the adjoint representation via the homomorphism $\varphi:L\to \mathfrak{gl}(K)$, $\varphi(x)=\text{ad}_{L}(x)|_{K}$. Since $L$ is nilpotent, $\text{ad}_{L}(x)$ is nilpotent for every $x\in L$. It follows that $\varphi(L)$ is a nilpotent Lie subalgebra of $\mathfrak{gl}(K)$. It therefore follows that is a nonzero element $z\in K$ such that $\varphi(x)(z)=[xz]=0$ for all $x\in L$. Hence, we have $0\ne z\in K\cap Z(L)$. 
-
+desc: Corollaries of Engel's theorem
+P1: true
 ---
 
-[!Definition]
-Let $V$ be a nonzero finite dimensional vector space over $F$. A strictly ascending series
+Recall that for a Linear Lie algebra $L$,
 $$
-0\subsetneq V_{i_{1}}\subsetneq V_{i_{2}}\subsetneq\dots \subsetneq V_{i_{r}}=V
+L\text{ is nilpotent}\underset{\impliedby \forall x\in L}{\implies} x\in L\text{ is ad-nilpotent}\underset{\centernot\implies}{\impliedby} x\in L \text{ is nilpotent}
 $$
-of vector subspaces such that $\dim V_{i_{j}}=i_{j}$ is called a flag of $V$. Let $V$ be a nonzero finite dimensional vector space over $F$ of dimension $n\geqslant 2$. Fix an integer $1\leqslant r\leqslant n-1$. 
 
-Let $G_{r}(V)$ denote the collection of all $r$-dimensional vector subspaces of $V$, and call it the Grassmanian. The collection of all flags $0\subsetneq V_{r}\subsetneq V$ with $\dim(V_{r})=r$ is identified with $G_{r}(V)$. 
+So, while [[LEC LIALG 5#^684123]] is not applicable to any nilpotent lie algebra $L$ (it only works for *linear* Lie algebras consisting of nilpotent elements), it certainly can be applied to adjoint representation of $L$! We will use this observation a few times. 
 
-[!Definition]
-Let $V$ be a nonzero finite dimensional vector space over $F$ of dimension $n$. A strictly ascending series
-$$
-0=V_{0}\subsetneq V_{1}\subsetneq\dots \subsetneq V_{n}=V
-$$
-such that $\dim V_{i}=i$ is called a full flag of $V$. 
+# Corollaries of Engel's theorem
 
-$GL(V)$ acts transitively on the collection of full flags of $V$. If $V=F^{n}$, The collection of all full flags of $V$ is identified with $GL(n, F)/B$, where $B$ is the subgroup of all $n\times n$ invertible upper-triangular matrices. 
+> [!Corollary] @humphreysIntroductionLieAlgebras1972 [p. 13] 
+> Let $L$ be nilpotent, $K$ an ideal of $L$. Then if $K\ne 0$, $K\cap Z(L)\ne 0$. In particular, $Z(L)\ne 0$ by [[LEC LIALG 4#^98ab7d]]. 
+> 
+> > [!Proof]-
+> > 
+> > Since $K$ is an ideal of $L$, $L$ acts on $K$ by the [[LEC LIALG 2#^f7a6db|adjoint representation]] via the homomorphism $\varphi:L\to \mathfrak{gl}(K)$, $\varphi(x)=\text{ad}_{L}(x)|_{K}$. Since $L$ is nilpotent, $\text{ad}_{L}(x)$ is nilpotent for every $x\in L$. It follows that $\varphi(L)$ is a subalgebra of $\mathfrak{gl}(K)$ consisting of nilpotent elements[^1]. By [[LEC LIALG 5#^684123]], there is a nonzero element $z\in K$ such that $\varphi(x)(z)=[xz]=0$ for all $x\in L$. Hence, we have $0\ne z\in K\cap Z(L)$. 
+> 
 
-[!Corollary]
-Let $V$ be a nonzero finite dimensional vector space over $F$ of dimension $n$. Let $L$ be a Lie subalgebra of $\mathfrak{gl}(V)$ consisting of nilpotent elements. Then there is a full flag of $V$ such that $xV_{i}\subseteq V_{i-1}$ for every $x\in L$ and $1\leqslant i\leqslant n$. In other words, there exists a basis of $V$ relative to which the matrices of $L$ are in $\mathfrak{n}(n, F)$. 
+
+> [!Definition] Flag
+> Let $V$ be a nonzero finite dimensional vector space over $F$. A strictly ascending series
+> $$
+> 0\subsetneq V_{i_{1}}\subsetneq V_{i_{2}}\subsetneq\dots \subsetneq V_{i_{r}}=V
+> $$
+> of vector subspaces such that $\dim V_{i_{j}}=i_{j}$ is called a **flag** of $V$. 
+
+
+> [!Definition] Full flag
+> Let $V$ be a nonzero finite dimensional vector space over $F$ of dimension $n$. A strictly ascending series
+> $$
+> 0=V_{0}\subsetneq V_{1}\subsetneq\dots \subsetneq V_{n}=V
+> $$
+> such that $\dim V_{i}=i$ is called a **full flag** of $V$. 
+
+$GL(V)$ acts transitively on the collection of full flags of $V$. If $V=F^{n}$, the collection of all full flags of $V$ is identified with the collection of cosets[^2] $GL(n, F)/B$, where $B$ is the subgroup of all $n\times n$ invertible upper-triangular matrices. 
+
+
+
+> [!Corollary]
+> Let $V$ be a nonzero finite dimensional vector space over $F$ of dimension $n$. Let $L$ be a Lie subalgebra of $\mathfrak{gl}(V)$ consisting of nilpotent elements. Then there is a full flag of $V$ such that $xV_{i}\subseteq V_{i-1}$ for every $x\in L$ and $1\leqslant i\leqslant n$. In other words, there exists a basis of $V$ relative to which the matrices of $L$ are in $\mathfrak{n}(n, F)$. 
+
+^e8795e
 
 [!Proof]-
 
@@ -54,27 +69,19 @@ $$
 $$
 is a full flag of $V$ such that $xV_{i}\subseteq V_{i-1}$ fore very $1\leqslant i\leqslant n$. 
 
----
 
-[!Corollary]
-Let $L$ be a nonzero nilpotent Lie algebra over $F$ of dimension $n$. Then there is a full flag $0=L_{0}\subsetneq L_{1}\subsetneq\dots \subsetneq L_{n}=L$ of ideals of $L$ such that $\text{ad}_{L}(x)(L_{i})\subsetneq L_{i-1}$ for every $1\leqslant i\leqslant n$ and $x\in L$. 
+> [!Corollary]
+> Let $L$ be a nonzero nilpotent Lie algebra over $F$ of dimension $n$. Then there is a full flag $0=L_{0}\subsetneq L_{1}\subsetneq\dots \subsetneq L_{n}=L$ of ideals of $L$ such that $\text{ad}_{L}(x)(L_{i})\subsetneq L_{i-1}$ for every $1\leqslant i\leqslant n$ and $x\in L$. 
+> 
+> > [!Proof]-
+> > 
+> > Consider the adjoint representation $\text{ad}_{L}:L\to \mathfrak{gl}(L)$. Since $L$ is nilpotent, all elements of $L$ are ad-nilpotent, so $\text{ad}_{L}(L)$ is a subalgebra of $\mathfrak{gl}(L)$ consisting of nilpotent elements. By [[#^e8795e]], there is a full flag $0=L_{0}\subsetneq L_{1}\subsetneq\dots \subsetneq L_{n}=L$ of $L$ such that $\text{ad}_{L}(x)(L_{i})\subseteq L_{i-1}$ for all $x\in L$ and $1\leqslant i\leqslant n$. 
+> 
 
-[!Proof]-
-Consider the adjoint representation $\text{ad}_{L}:L\to \mathfrak{gl}(L)$. Since $L$ is nilpotent, $\text{ad}_{L}(L)$ is a nilpotent subalgebra of $\mathfrak{gl}(L)$. By the previous corollary, there is a full flag $0=L_{0}\subsetneq L_{1}\subsetneq\dots \subsetneq L_{n}=L$ of $L$ such that $\text{ad}_{L}(x)(L_{i})\subseteq L_{i-1}$ for all $x\in L$ and $1\leqslant i\leqslant n$. 
-
----
-
-[!Corollary]
-Let $L$ be a nonzero nilpotent Lie algebra over $F$ of dimension $n$. Then there is a basis $\{ x_{1}, \dots, x_{n} \}$ of $L$ such that the matrix of $\text{ad}_{L}(x)$ lies in $\mathfrak{n}(n, F)$ for every $x\in L$. 
-
----
-
-[!Corollary]
-Let $F$ be an algebraically closed field of characteristic zero. Let $V$ be a nonzero finite dimensional vector space of dimension $n$. Let $L$ be a solvable Lie subalgebra of $\mathfrak{gl}(V)$. Then there is a full flag of $V$ such that $xV_{i}\subseteq V_{i-1}$ for all $0\leqslant i\leqslant n$ and all $x\in L$. 
-
-[!Proof]-
-
-Exactly what you expect. 
+> [!Corollary]
+> Let $L$ be a nonzero nilpotent Lie algebra over $F$ of dimension $n$. Then there is a basis $\{ x_{1}, \dots, x_{n} \}$ of $L$ in which the matrix of $\text{ad}_{L}(x)$ lies in $\mathfrak{n}(n, F)$ for every $x\in L$. 
 
 
+[^1]: Ahem, *not* a nilpotent subalgebra. 
 
+[^2]: $B$ is not normal - recall [[LEC ALG1 19#^f6b178]]. 

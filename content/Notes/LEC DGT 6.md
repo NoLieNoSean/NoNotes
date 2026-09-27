@@ -44,12 +44,10 @@ Recall the definition of [[LEC DGT 5#^0c7a72|intrinsic distance]] from the previ
 > Let $M^{m}, N^{n}$ be smooth manifolds. If $\varphi:M\to N$ is a Riemannian isometry, then $\varphi$ is a metric space space isometry. Conversely, if $\varphi:M\to N$ is a homeomorphism which is a metric space isometry, then $\varphi$ is a diffeomorphism and a Riemannian isometry. 
 
 > [!Theorem]
-> Suppose $M\subseteq \mathbb{R}$. TFAE:
+> Suppose $M\subseteq \mathbb{R}$, or $M\subseteq \mathbb{R}^{k}$ is closed. TFAE:
 > 1. For all $p, q\in M$, there exists a length minimizing piecewise smooth curve $p\rightsquigarrow q$
 > 2. For all $p, q\in M$, there exists a length minimizing smooth curve $p\rightsquigarrow q$. 
 > 
-> Moreover, if $M$ is a closed subset of $\mathbb{R}^{k}$, $(1)\iff(2)$ holds. 
-> 
 > Such length minimizing curves are called **geodesics**. 
-
+> 
 

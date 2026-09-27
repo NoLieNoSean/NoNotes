@@ -95,7 +95,7 @@ tags:
 
 ## Algebraically closed fields and algebraic closures
 
-> [!Definition]
+> [!Definition] Algebraic closure
 > 1. A field $k$ is said to be **algebraically closed** if every polynomial in $k[x]$ of degree $\geqslant 1$ has a root in $k$.
 > 2. An **algebraic closure** of a field $k$ is an algebraic extension of $k$ which is algebraically closed.
 

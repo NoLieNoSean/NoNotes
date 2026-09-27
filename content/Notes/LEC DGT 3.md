@@ -35,6 +35,14 @@ $$
 D\tilde{f}_{p}(v)=D\tilde{f}_{p}(\gamma'(0))=(\tilde{f}\circ\gamma)'(0)=(f\circ\gamma)'(0).
 $$
 
+> [!Remark]
+> To actually compute $Df_{p}(v)$, take local coordinates $\phi:\Omega\to V\ni p$. Let $\overline{f}=f\circ \phi:\Omega\to \mathbb{R}$. Let $\overline{\gamma}:I\to \Omega$ be such that $\overline{\gamma}(0)=\phi ^{-1}(p)$ and $\phi_{*}\overline{\gamma}'(0)=v$. Let $\gamma=\phi \circ \overline{\gamma}$. 
+> $$
+> \begin{align}
+> (f\circ\gamma)'(0)=(\overline{f}\circ \phi ^{-1}\circ \phi \circ \overline{\gamma})'(0)=(\overline{f}\circ \overline{\gamma})'(0).
+> \end{align}
+> $$
+> 
 
 > [!Proposition]
 > [[#^233791]] is well defined, and $Df_{p}$ is a linear map. 

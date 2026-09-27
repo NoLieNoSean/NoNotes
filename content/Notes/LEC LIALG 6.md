@@ -5,8 +5,10 @@ time: 14:03
 tags:
   - Lecture
   - LIALG
+desc: Engel's theorem, Lie's Theorem
+P1: true
 ---
-Recall [[LEC LIALG 5#^684123]]. 
+# Engel's theorem
 
 > [!Theorem] Engel
 > Let $L$ be a Lie algebra. If all elements of $L$ are $\text{ad}$-nilpotent, then $L$ is nilpotent. 
@@ -30,12 +32,18 @@ Recall [[LEC LIALG 5#^684123]].
 > > Further, we have $\dim(L')\leqslant \dim(L)-1$. Therefore, by induction on $\dim L$, $L'$ is nilpotent. But $L'=L/Z(L)$. Therefore, by @humphreysIntroductionLieAlgebras1972 [p. 12], $L$ is nilpotent. 
 > 
 
+^ad92b6
+
 ---
 
+# A lemma for Lie
+
+[[LEC LIALG 5#^684123]] guarantees the existence of a common eigenvector for a linear Lie algebra consisting of nilpotent endomorphisms. We can extract a similar common eigenvector for solvable Lie algebras too, assuming $F$ is [[LEC ALG3 19#^4fa8fa|algebraically closed]] (in order to have available eigenvalues of $\text{ad}\, x$ for arbitrary $x$, not just for $\text{ad}\, x$ nilpotent). It turns out to be necessary also to have $\text{char}\,F=0$. 
+
+> [!Theorem]
+> Let $F$ be an algebraically closed field with characteristic zero. Let $L$ be a solvable subalgebra of $\mathfrak{gl}(V)$, $V$ finite dimensional. Then there is a homomorphism $\lambda:L\to F$ of Lie algebras and a non zero vector $v\in V$ such that $x\cdot v=\lambda (x)v$ for all $x\in L$. Equivalently, there is a common eigenvector for all elements of $L$. Equivalently, there is an $L$-stable one-dimensional vector subspace of $V$. 
 
 
-[!Theorem]
-Let $F$ be an algebraically closed field with characteristic zero. Let $L$ be a solvable subalgebra of $\mathfrak{gl}(V)$. Then there is a homomorphism $\lambda:L\to F$ of Lie algebras and a non zero vector $v\in V$ such that $x\cdot v=\lambda (x)v$ for all $x\in L$. Equivalently, there is a common eigenvector for all elements of $L$. Equivalently, there is an $L$-stable one-dimensional vector subspace of $V$. 
 
 [!Proof]-
 

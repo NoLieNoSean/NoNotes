@@ -50,6 +50,8 @@ Since $g_{p}$ is a positive definite symmetric [[LEC ALG1 23#^d9a4f7|bilinear fo
 > $$
 > 
 
+^926cee
+
 > [!Example]
 > Suppose $M^{m}\subseteq \mathbb{R}^{k}$, $N^{n}\subseteq \mathbb{R}^{l}$. Let $\varphi:\Omega\to U\subseteq M$, $\psi:\Theta\to V\subseteq N$ be local parameterizations around $p\in M$, $q\in N$. Then the product map $\rho:\Omega \times\Theta \to U\times V$ is a local parameterization of $M\times N$ around $(p, q)$. 
 > 
@@ -139,6 +141,8 @@ If $\gamma$ is piecewise smooth (regular), a **reparameterization** of $\gamma$ 
 > > Fix $p\in M$. Let $S$ be the set of all $q\in M$ such that there exists a piecewise regular curve from $p$ to $q$. We'll show that $S$ is both open and closed. 
 > > 
 > > Let $q\in S$. There exists a local parameterization $\varphi:B^{n}_{1}(0)\to V$ around $q$. For any $q'\in V$, there exists regular $\gamma:[0, 1]\to V$ form $q$ to $q'$ - just take the image under $\varphi$ of the straight line in $B_{1}^{n}(0)$. By concatenating $\gamma$ with a piecewise regular curve from $p$ to $q$, we obtain a piecewise regular curve from $p$ to $q'$. Thus, $V\subseteq S$, and $S$ is open. It can be shown that $S^{c}$ is open in a similar way. 
+
+The reason we choose to work with *piecewise* regular curves is that they form a family that is closed under concatenation. 
 
 > [!Definition] Intrinsic distance
 > Given a manifold $M$, the **intrinsic distance function** on $M$ is defined to be

@@ -21,6 +21,8 @@ SORT date ASC
 [[LEC GGT 3]] ?
 [[LEC GGT 4]] Constant curvature of $\mathbb{H}$
 [[LEC GGT 5]] Elliptic, parabolic, and hyperbolic isometries
+
+
 [[LEC GGT 6]] Ping-pong lemma and the Tits alternative
 [[LEC GGT 7]] Surfaces as quotients of $\mathbb{H}$
 [[LEC GGT 8]] the word-metric, geodesics
@@ -29,6 +31,5 @@ SORT date ASC
 
 [[LEC GGT 9]]
 [[LEC GGT 11]]
-[[LEC GGT 12]]
 [[LEC GGT 13]]
 [[LEC GGT 14]] %% you missed this one %%

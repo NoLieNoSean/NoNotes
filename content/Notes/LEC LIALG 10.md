@@ -5,6 +5,9 @@ time: 14:06
 tags:
   - LIALG
   - Lecture
+desc: Cartan's Criterion
+P1: true
+P2: true
 ---
 Recall [[LEC LIALG 9#^9c4263]]. 
 
@@ -36,9 +39,9 @@ By a corollary to the J-C decomposition,
 $$
 \text{ad}_{\mathfrak{gl}(V) }(x)=\text{ad}_{\mathfrak{gl}(V) }(x_{s})+\text{ad}_{\mathfrak{gl}(V) }(x_{n})
 $$
-is the J-C decomposition of $\text{ad}_{\mathfrak{gl}(V)}(x)$ in $\text{End}(\text{End}(V))$. Since $x\in M$, $\text{ad}_{\mathfrak{gl}(V)}(x)(B)\subseteq A$. By property (3) of the the J-C decomposition, $(\text{ad}_{\mathfrak{gl}(V)}(x))_{s}=\text{ad}_{\mathfrak{gl}(V)}(x_{s})(B)\subseteq A$. Thus, by [[LEC LIALG 10#^f6ac3f]], $\text{ad}_{\mathfrak{gl}(V)}(y)(B)\subseteq A$. Hence we have $y\in M$. 
+is the J-C decomposition of $\text{ad}_{\mathfrak{gl}(V)}(x)$ in $\text{End}(\text{End}(V))$. Since $x\in M$, $\text{ad}_{\mathfrak{gl}(V)}(x)(B)\subseteq A$. By property (3) of the the J-C decomposition, $(\text{ad}_{\mathfrak{gl}(V)}(x))_{s}(B)=\text{ad}_{\mathfrak{gl}(V)}(x_{s})(B)\subseteq A$. Thus, by [[LEC LIALG 10#^f6ac3f]], $\text{ad}_{\mathfrak{gl}(V)}(y)(B)\subseteq A$. Hence we have $y\in M$. 
 
-By hypothesis on $x$, $\mathrm{Tr}(xy)=0$, so $\mathrm{Tr}(x_{s}, y)+\mathrm{Tr}(x_{n}, y)=0$. The matrices of $x_{n}$ and $y$ relative to $\{ v_{1}, \dots, v_{n} \}$ are strictly upper triangular and diagonal, respectively. Hence the matrix of $x_{n}y$ in this basis is strictly upper triangular, and $\mathrm{Tr}(x_{n}y)=0$. Therefore, we have $\mathrm{Tr}(x_{s}y)=0$. Since the matrices of $x_{s}$ and $y$ relative to $\{ v_{1}, \dots, v_{n} \}$ are $\text{diag}(a_{1}, \dots, a_{n})$ and $\text{diag}(f(a_{1}), \dots, f(a_{n}))$. Thus, 
+By hypothesis on $x$, $\mathrm{Tr}(xy)=0$, so $\mathrm{Tr}(x_{s}, y)+\mathrm{Tr}(x_{n}, y)=0$. The matrices of $x_{n}$ and $y$ relative to $\{ v_{1}, \dots, v_{n} \}$ are strictly upper triangular and diagonal, respectively. Hence the matrix of $x_{n}y$ in this basis is strictly upper triangular, and $\mathrm{Tr}(x_{n}y)=0$. Therefore, we have $\mathrm{Tr}(x_{s}y)=0$. Since the matrices of $x_{s}$ and $y$ relative to $\{ v_{1}, \dots, v_{n} \}$ are $\text{diag}(a_{1}, \dots, a_{n})$ and $\text{diag}(f(a_{1}), \dots, f(a_{n}))$,
 $$
 \mathrm{Tr}(x_{s}, y) =\sum_{i=1}^{n} a_{i}f(a_{i})=0.
 $$
@@ -56,62 +59,68 @@ since $f(a_{i})\in \mathbb{Q}$ for all $1\leqslant i\leqslant n$, we have $f(a_{
 
 Observe that if $L$ is a Lie algebra over $F$ such that $[LL]$ is nilpotent, then $L$ is solvable. 
 
-[!Lemma]
-$D^{n+1}(L)\subseteq C^{n}([LL])$ for all $n\in \mathbb{N}$. 
+> [!Lemma]
+> $D^{n+1}(L)\subseteq C^{n}([LL])$ for all $n\in \mathbb{N}$. 
+> 
+> > [!Proof]-
+> > 
+> > $$
+> > \begin{align}
+> > D^{2}(L) & = [D^{1}(L), D^{1}{(L)}] \\
+> >  & =[[LL], [LL]] \\
+> >  & = C^{1}([LL])
+> > \end{align}
+> > $$
+> > Now let $n\in \mathbb{N}$ be $\geqslant 2$. By induction, we have
+> > $$
+> > \begin{align}
+> > D^{n+1}(L) & =[D^{n}(L), D^{n}(L)] \\
+> >  & \subseteq[C^{n-1}([LL]), C^{n-1}([LL])] \\
+> >  & \subseteq[[LL], C^{n-1}[LL]] \\
+> >  & =C^{n}([LL]).
+> > \end{align}
+> > $$
+> > 
+> 
 
-[!Proof]-
 
-$$
-\begin{align}
-D^{2}(L) & = [D^{1}(L), D^{1}{(L)}] \\
- & =[[LL], [LL]] \\
- & = C^{1}([LL])
-\end{align}
-$$
-Now let $n\in \mathbb{N}$ be $\geqslant 2$. By induction, we have
-$$
-\begin{align}
-D^{n+1}(L) & =[D^{n}(L), D^{n}(L)] \\
- & \subseteq[C^{n-1}([LL]), C^{n-1}([LL])] \\
- & \subseteq[[LL], C^{n-1}[LL]] \\
- & =C^{n}([LL]).
-\end{align}
-$$
-
-
-[!Exercise]
-Let $V$ be a finite dimensional vector space over $F$. Prove that 
-$$
-\mathrm{Tr}([xy]z) =\mathrm{Tr}(x[yz])
-$$
-for all $x, y, z\in \text{End}(V)$. 
+> [!Exercise]
+> Let $V$ be a finite dimensional vector space over $F$. Prove that 
+> $$
+> \mathrm{Tr}([xy]z) =\mathrm{Tr}(x[yz])
+> $$
+> for all $x, y, z\in \text{End}(V)$. 
 
 ---
 
-[!Theorem] Cartan
-Let $F$ be an algebraically closed field of characteristic zero. Let $V$ be a finite dimensional vector space over $F$. Let $L$ be a Lie subalgebra over $\mathfrak{gl}(V)$ such that $\mathrm{Tr}(xy)=0$ for all $x\in L$ and for all $y\in[LL]$. Then $L$ is solvable. 
+> [!Theorem] Cartan
+> Let $F$ be an algebraically closed field of characteristic zero. Let $V$ be a finite dimensional vector space over $F$. Let $L$ be a Lie subalgebra over $\mathfrak{gl}(V)$ such that $\mathrm{Tr}(xy)=0$ for all $x\in L$ and for all $y\in[LL]$. Then $L$ is solvable. 
+> 
+> > [!Proof]-
+> > Take $A=[LL]$, $B=L$, and set
+> > $$
+> > M=\{ x\in \mathfrak{gl}(V) :\text{ad}_{\mathfrak{gl}(V) }(x)(L)\subseteq[LL] \}.
+> > $$
+> > Clearly, $[LL]\subseteq L\subseteq M$. For $x, y\in L$ and $z\in M$, 
+> > $$
+> > \begin{align}
+> > \mathrm{Tr}([xy]z)  & =\mathrm{Tr}(x[yz])  \\
+> >  & =-\mathrm{Tr}(\underbrace{ x }_{ \in L }\underbrace{ [zy] }_{ \in LL })  \\
+> >  & =0.
+> > \end{align}
+> > $$
+> > Since every element of $[LL]$ is a linear combination of elements of the form $[x_{i}, y_{i}]$, $x_{i}, y_{i}\in L$ and trace is $F$-linear, we have $\mathrm{Tr}(xz)=0$ for all $x\in[LL]$ and $z\in M$. By [[LEC LIALG 10#^51dd58]], every element of $[LL]$ is nilpotent. By an earlier result, $\text{ad}_{\mathfrak{gl}(V)}(x)=\lambda_{x}-\rho_{x}$ is nilpotent for every $x\in[LL]$. Hence, 
+> > $$
+> > \text{ad}_{[LL] }(x)=(\text{ad}_{\mathfrak{gl}(V) }(x))|_{[LL]}
+> > $$
+> > is nilpotent. Hence, by Engel's theorem, $[LL]$ is nilpotent. As we have seen, this implies $L$ is solvable. 
+> 
 
-[!Proof]-
-Take $A=[LL]$, $B=L$, and set
-$$
-M=\{ x\in \mathfrak{gl}(V) :\text{ad}_{\mathfrak{gl}(V) }(x)(L)\subseteq[LL] \}.
-$$
-Clearly, $[LL]\subseteq L\subseteq M$. For $x, y\in L$ and $z\in M$, 
-$$
-\begin{align}
-\mathrm{Tr}([xy]z)  & =\mathrm{Tr}(x[yz])  \\
- & =-\mathrm{Tr}(\underbrace{ x }_{ \in L }\underbrace{ [zy] }_{ \in LL })  \\
- & =0.
-\end{align}
-$$
-Since every element of $[LL]$ is a linear combination of elements of the form $[x_{i}, y_{i}]$, $x_{i}, y_{i}\in L$ and trace is $F$-linear, we have $\mathrm{Tr}(xz)=0$ for all $x\in[LL]$ and $z\in M$. By [[LEC LIALG 10#^51dd58]], every element of $[LL]$ is nilpotent. By an earlier result, $\text{ad}_{\mathfrak{gl}(V)}(x)=\lambda_{x}-\rho_{x}$ is nilpotent for every $x\in[LL]$. Hence, 
-$$
-\text{ad}_{\mathfrak{gl}(V) }(x)=(\text{ad}_{\mathfrak{gl}(V) }(x))|_{[LL]}
-$$
-is nilpotent. Hence, by Engel's theorem, $[LL]$ is nilpotent. As we have seen, this implies $L$ is solvable. 
+^20da11
 
-[!Corollary]
-Let $F$ be an algebraically closed field of characteristic zero, and let $L$ be a Lie algebra over $F$ such that $\mathrm{Tr}(\text{ad}(x)\text{ad}(y))=0$ for all $x\in L$ and $y\in[LL]$. Then $L$ is solvable. 
 
-[!Proof]-
-Consider the adjoint representation $\text{ad}_{L}:L\to \mathfrak{gl}(L)$. Since $\text{ad}_{L}$ is a homomorphism of Lie algebras, we have $\text{ad}_{L}([LL])=[\text{ad}_{L}(L), \text{ad}_{L}(L)]$. By hypothesis, $\mathrm{Tr}(xy)=0$ for all $x\in \text{ad}_{L}(L)$ and $y\in[\text{ad}_{L}(L), \text{ad}_{L}(L)]$. Take $L'=\text{ad}_{L}(L)\subseteq \mathfrak{gl}(L)$. By Cartan's criterion, $L'$ is solvable. On the other hand, the Lie algebras $\text{ad}_{L}(L)$ and $L/Z(L)$ are isomorphic. Thus, $L/Z(L)$ is solvable. Further, $Z(L)$ is solvable. 
+> [!Corollary]
+> Let $F$ be an algebraically closed field of characteristic zero, and let $L$ be a Lie algebra over $F$ such that $\mathrm{Tr}(\text{ad}(x)\text{ad}(y))=0$ for all $x\in L$ and $y\in[LL]$. Then $L$ is solvable. 
+> 
+> > [!Proof]-
+> > Consider the adjoint representation $\text{ad}_{L}:L\to \mathfrak{gl}(L)$. Since $\text{ad}_{L}$ is a homomorphism of Lie algebras, we have $\text{ad}_{L}([LL])=[\text{ad}_{L}(L), \text{ad}_{L}(L)]$. By hypothesis, $\mathrm{Tr}(xy)=0$ for all $x\in \text{ad}_{L}(L)$ and $y\in[\text{ad}_{L}(L), \text{ad}_{L}(L)]$. Take $L'=\text{ad}_{L}(L)\subseteq \mathfrak{gl}(L)$. By [[#^20da11|Cartan's criterion]], $L'$ is solvable. On the other hand, the Lie algebras $\text{ad}_{L}(L)$ and $L/Z(L)$ are isomorphic. Thus, $L/Z(L)$ is solvable. Further, $Z(L)$ is solvable. 

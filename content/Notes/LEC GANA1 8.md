@@ -49,6 +49,8 @@ $$
 > $$
 > 
 
+trivial for simple $F$, use MCT for general $F$. 
+
 > [!Theorem] Fubini
 > Suppose $F\in L^{1}(X\times Y, \mathcal{F}\otimes \mathcal{G}, \mu \otimes \nu)$ (so $F$ is [[LEC GANA1 7#^f29946|integrable]] on the product space). Then, 
 > 1. the section $y\mapsto F(x, y)$ is measurable on $Y$ for all $x\in X$, integrable on $Y$ for almost all $x\in X$, and $x \mapsto \int_{Y}F(x, y)d\nu$ [^1] is integrable on $X$,
@@ -59,6 +61,7 @@ $$
 > \int_{X\times Y}F(x, y)\,d(\mu \otimes \nu)=\int_{X}\left( \int_{Y}F(x, y)\,d\nu \right)d\mu=\int_{Y}\left( \int_{X}F(x, y)\,d\mu \right)\,d\nu.
 > $$
 > 
+
 
 
 

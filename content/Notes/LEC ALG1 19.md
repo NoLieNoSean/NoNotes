@@ -95,6 +95,8 @@ Recall:
 > > where we have used the fact that $A=[A]_{\mathcal{S}\mathcal{S}}$ and $[I]_{\mathcal{B}\mathcal{S}}^{-1}=[I]_{\mathcal{S}\mathcal{B}}$. Put $P=G[I]_{\mathcal{B}\mathcal{S}}$. 
 > 
 
+^f6b178
+
 >[!Remark] 
 > If $A$ is an $n \times n$ matrix over a field $\mathbb{F}$ such that its characteristic polynomial is a product of linear factors in $\mathbb{F}$, then there exists an invertible matrix $P$ (with entries in $\mathbb{F}$) such that $PAP^{-1}$ is upper triangular.
 

@@ -5,6 +5,8 @@ time: 14:02
 tags:
   - LIALG
   - Lecture
+desc: Basic definitions, linear Lie algebras
+P1: true
 ---
 
 > [!Definition] Lie algebra
@@ -46,6 +48,9 @@ Note that any nonzero element $x\in L$ defines a one dimensional subalgebra $Fx$
 
 > [!Definition] Linear Lie algebra
 > Any subalgebra of a Lie algebra $\mathfrak{gl}(V)$ is called a **linear Lie algebra**. 
+
+> [!Proposition]
+> $[e_{ij}, e_{kl}]=\delta_{jk}e_{il}-\delta_{li}e_{kj}$. 
 
 > [!Example] Special linear algebra
 > 

@@ -7,16 +7,17 @@ tags:
   - Lecture
 P1: true
 P2:
-desc: Vector fields
+desc: Vector fields and derivations
 ---
 # Vector fields
 
 > [!Definition] Vector field
 > A **vector field** $X$ on an open set $U\subseteq \mathbb{R}^{m}$ is a map $X:U\to \mathbb{R}^{m}$. For $p\in U$, we will often write $X_{p}$ in place of $X(p)$. The space of all smooth vector fields on $U$ is denoted $\mathfrak{X}(U)$. 
 
-
 > [!Definition] Vector field on a manifold
-> A **vector field on $M$** is a map $X:M\to \mathbb{R}^{k}$ such that $X_{p}:=X(p)\in T_{p}M$ for every $p\in M$. It is called **smooth** if it is [[LEC DGT 2#^2da0d5|smooth]] as a map from $M$ to $\mathbb{R}^{k}$. The space of all smooth vector fields on $M$ is denoted by $\mathfrak{X}(M)$. 
+> A **vector field on $M$** is a map $X:M\to \mathbb{R}^{k}$ such that $X_{p}:=X(p)\in T_{p}M$ for every $p\in M$. It is called **smooth** if it is [[LEC DGT 2#^2da0d5|smooth]] as a map from $M$ to $\mathbb{R}^{k}$. The space of all smooth vector fields on $M$ is denoted by $\mathfrak{X}(M)$.
+
+While $\mathfrak{X}(M)$ is clearly a $C^{\infty}(M)$-module, we will think of $\mathfrak{X}(M)$ as an $\mathbb{R}$-vector space for now.  
 
 > [!Definition] Coordinate vector fields
 > Let $\phi:\Omega\to V$ be a local parameterization of $M\subseteq \mathbb{R}^{k}$, where $\Omega \subseteq \mathbb{R}^{n}$. For $i=1, \dots, n$, define the **$i$-th coordinate vector field** $\phi_{i}:V\to \mathbb{R}^{k}$ by 
@@ -50,9 +51,11 @@ Further, each $\phi_{i}$ is smooth in the sense of [[LEC DGT 2#^2da0d5]], becaus
 
 [^1]: Note that $D\phi$ here is the usual derivative of maps between euclidian space - the kind you learnt about in calculus.
 
-## Action of vector fields by derivations
+---
 
-### Vector fields on Euclidean space
+# Action of vector fields by derivations
+
+### Derivations on Euclidean space
 
 Let $U\subseteq \mathbb{R}^{m}$ be open. We define a $\mathfrak{X}(U)$-action on $C^{\infty}(U, \mathbb{R}^{l})$ by 
 $$
@@ -107,7 +110,7 @@ This motivates the following:
 
 [^2]: The Jacobi identity follows from [[#^306cdb]]. 
 
-### Vector fields on manifolds
+### Derivations on manifolds
 
 If $X\in \mathfrak{X}(M)$ and $f\in C^{\infty}(M)$, define $D_{X}f:M\to \mathbb{R}$ by $(D_{X}f)(p):=Df_{p}(X_{p})$ (recall [[LEC DGT 3#^233791]]). Using a local parameterization $\phi$, let us verify that $D_{X}f$ is smooth. If $X=\sum_{i}X^{i}\phi_{i}$, 
 $$
@@ -142,20 +145,29 @@ These two definitions are equivalent, and are independent of the chosen extensio
 > $$
 > [\tilde{X}, \tilde{Y}](p)=D\phi_{a}([\overline{X}, \overline{Y}](a)).
 > $$
-> 	Consequently, the locally defined vector fields obtained by restricting $[\tilde{X}, \tilde{Y}]$ to $M$ are tangent to $M$, independent of the chosen extensions and agree on overlaps. They therefore determine a unique smooth vector field on $M$, denoted by $[X, Y]$. For every local parameterization $\phi:\Omega\to V$, 
+> 	Consequently, the locally defined vector fields obtained by restricting $[\tilde{X}, \tilde{Y}]$ to $M$ are tangent to $M$, independent of the chosen extensions and agree on overlaps. They therefore determine a unique smooth vector field on $M$, denoted by $[X, Y]$: For every local parameterization $\phi:\Omega\to V$, 
 > $$
-> [X, Y](\phi(a))=D\phi_{a}([\overline{X}, \overline{Y}](a)).
+> [X, Y](\phi(a)):=D\phi_{a}([\overline{X}, \overline{Y}](a)).
 > $$
-> 2. The map $\mathfrak{X}(M)\to \mathrm{Der}(C^{\infty}(M))$ is a Lie algebra isomorphism: $f\in C^{\infty}(M)$, 
+> 2. The map $D_{\_{}}:\mathfrak{X}(M)\to \mathrm{Der}(C^{\infty}(M))$ is a Lie algebra isomorphism: for all $f\in C^{\infty}(M)$, 
 > $$
-> D_{X}D_{Y}f-D_{Y}D_{X}f=D_{[X, Y]f}.
+> D_{X}D_{Y}f-D_{Y}D_{X}f=D_{[X, Y]}f.
 > $$
-
 
 ^5180d1
 
 [^3]: Note that we cannot just replace $DF_{p}$ in [[#^514d18]] with the derivative form [[LEC DGT 3#^233791]], since a vector field does not have to be a map between manifolds!
 
+
+> [!Proposition]
+> Let $X, Y\in \mathfrak{X}(M)$, and $f\in C^{\infty}(M)$. The following hold: 
+> 1. $D$ is $\mathbb{R}$-linear in both arguments. 
+> 2. $D_{fX}Y=fD_{X}Y$.
+> 3. $D_{X}(fY)=(D_{X}f)Y+fD_{X}Y$.
+> 4. $D_{X}Y-D_{Y}X=[X, Y]$.
+> 5. $D_{X}\langle Y, Z \rangle=\langle D_{X}Y, Z \rangle+\langle Y, D_{X}Z \rangle$. 
+
+^51b187
 
 > [!Theorem]
 > Let $M$ be an $n$-dimensional manifold, $p\in M$, and let $X_{1}, \dots, X_{m}$ be smooth vector fields defined on a neighborhood $U\subseteq M$ of $p$. Suppose that $X_{1}(p), \dots, X_{m}(p)$ are linearly independent and that $[X_{i}, X_{j}]\equiv 0$ on $U$ for all $i, j=1, \dots, m$. Then $m\leqslant n$, and there exists a local parameterization $\phi:\Omega\to V$ of $M$ around $p$ such that $X_{i}=\phi_{i}$ on $V$ for every $i=1, \dots, m$, where $\phi_{i}$ denotes the $i$-th coordinate vector field associated with $\phi$. 

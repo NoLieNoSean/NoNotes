@@ -165,7 +165,6 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > > $\mu^* (E \cap B) \leq \mu^*(B) = 0 \implies \mu^{*}(E) \geq \mu^{*}(E \cap B^{c}) = \mu^{*}(E \cap B^{c}) + \mu^{*}(E \cap B)$.
 > > Therefore, $B \in \mathcal{M}_{\mu }$.
 
-
 > [!Proposition]
 > For any algebra $\mathcal{A}$ with $\sigma$-finite measure $\mu$, $(\mathcal{M}_{\mu}, \mu^{\star})$ is the completion of $(\sigma(\mathcal{A}), \mu^{\star})$. 
 

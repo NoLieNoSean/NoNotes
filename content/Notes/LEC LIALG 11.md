@@ -5,6 +5,7 @@ time: 13:50
 tags:
   - LIALG
   - Lecture
+desc: killing form
 ---
 [!Definition]
 Let $V$ be a finite dimensional vector space over $F$. Define $K:L\times L\to F$, the **killing form** of $L$,  by $K(x, y)=\mathrm{Tr}(\text{ad}(x)\text{ad}(y))$ for all $x, y\in L$. 
@@ -28,7 +29,7 @@ Step 1: Let $V$ be a finite dimensional vector space over $F$. Let $W$ be a vect
 
 Proof: one easy way to see this is to use the fact that the trace of a map is the sum of all of its eigenvalues. Kannan's proof (essentially the same idea): if $W=0$, we are done. So, assume that $W\ne 0$. Let $n=\dim(V)$ and $r=\dim(W)$. Choose a basis $\{ v_{1}, \dots, v_{n} \}$ of $V$ such that $\{ v_{1}, \dots, v_{r} \}$ is a basis of $W$. Since $T(V)\subseteq W$, we have $T(v_{j})=\sum_{i=1}^{r}a_{ij}v_{i}$ for $1\leqslant j\leqslant n$. Thus, $a_{jj}=0$ for all $j> r$. Hence, we have $\mathrm{Tr}(T)=\sum_{i=1}^{r}a_{ii}=\mathrm{Tr}(T|_{W})$. 
 
---
+
 
 Let $x, y\in I$ be arbitrary. Take $V=L$, $W=I$, $T=\text{ad}(x)\text{ad}(y)$. Then we have $T(V)\subseteq W$. By step 1, ...
 
