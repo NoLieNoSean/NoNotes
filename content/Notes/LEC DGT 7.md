@@ -208,7 +208,7 @@ $$
 > D_{Y}\langle Z, X \rangle  & =\langle \nabla_{Y}Z, X \rangle +\langle Z, \nabla_{Y}X \rangle .
 > \end{align}
 > $$
-> Note that unlike the commuting mixed partials, $\nabla_{X}Y\ne\nabla_{Y}X$, so things turn out slightly messier:
+> Note that unlike the commuting mixed partials, $\nabla_{X}Y\ne\nabla_{Y}X$, so things are slightly messier:
 > $$
 > \begin{align}
 >  & D_{X}\langle Z, Y \rangle +D_{Y}\langle Z, X \rangle -D_{Z}\langle X, Y \rangle  \\

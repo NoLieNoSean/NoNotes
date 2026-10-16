@@ -10,14 +10,12 @@ CMI, Aug-Nov 2026, Akashdeep Dey
 
 ---
 
-
-%%
 ```dataview
 TABLE date AS "Date", desc AS "desc", P1 AS "P1", P2 AS "P2"
 FROM #DGEO AND #Lecture 
 SORT date ASC
 ```
-%%
+
 
 
 [[LEC DGT 1]] ✅ Local structure theorems for immersions and submersions
@@ -32,3 +30,16 @@ SORT date ASC
 [[LEC DGT 10]] Geodesics, the tangent bundle, the exponential map
 [[LEC DGT 11]]
 [[LEC DGT 12]] %% you missed this one! %%
+[[LEC DGT 13]]
+[[LEC DGT 14]] %% you missed this one! %%
+[[LEC DGT 15]] %% you missed this one! %%
+[[LEC DGT 16]] %% you missed this one! %%
+
+
+
+---
+
+[[AS DGT 1]]
+[[AS DGT 2]]
+[[AS DGT 3]]
+

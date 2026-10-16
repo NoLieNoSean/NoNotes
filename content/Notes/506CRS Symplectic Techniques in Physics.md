@@ -6,17 +6,17 @@ tags:
   - MOC
   - STP
 ---
+CMI, Aug-Nov 2026, Alok Laddha
 
-%%
+---
+
 ```dataview
 TABLE date AS "Date", desc AS "desc"
 FROM #STP AND #Lecture 
 SORT date ASC
 ```
-%%
 
-
-
+# Lectures
 
 [[LEC STP 1]]
 [[LEC STP 2]]
@@ -25,3 +25,8 @@ SORT date ASC
 [[LEC STP 5]]
 [[LEC STP 6]]
 [[LEC STP 7]]
+[[LEC STP 8]]
+[[LEC STP 9]]
+[[LEC STP 10]]
+%% unknown number of lectures %%
+[[LEC STP 10]]

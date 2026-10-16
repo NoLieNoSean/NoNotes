@@ -14,6 +14,11 @@ P2: true
 Recall [[LEC GANA1 2#^9aa087]]. In this lecture, we will construct $\mathcal{M}$ and $\tilde{\mu}$. 
 
 > [!Definition] Outer measure
+> Given a set $X$, an **outer measure** on $X$ is a function $\mu:P(X)\to[0, \infty]$ such that 
+> 1. $\mu(\emptyset)=0$, and
+> 2. $\mu$ is countably subadditive. 
+
+> [!Definition]
 > Let $\mu$ be a measure on an algebra $\mathcal{A}$. Define $\mu^{\star}:P(\Omega)\to[0, \infty]$ by
 > $$
 > \mu^{\star}(E)=\inf_{A_{n}\in \mathcal{A},\, E\subseteq \bigcup_{n=1}^{\infty} A_{n}}\sum_{n=1}^{\infty}\mu(A_{n})
@@ -25,6 +30,8 @@ Recall [[LEC GANA1 2#^9aa087]]. In this lecture, we will construct $\mathcal{M}$
 > [!Proposition]
 > 1. $\mu^{\star}|_{\mathcal{A}}=\mu$. 
 > 2. $\mu^{\star}$ is countably subadditive. 
+>    
+> In particular, $\mu^{\star}$ is an outer measure on $\Omega$. 
 > 
 > > [!Proof]-
 > > 

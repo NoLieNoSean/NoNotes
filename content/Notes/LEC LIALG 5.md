@@ -73,7 +73,7 @@ Engel's theorem will be deduced from the following result:
 > > Suppose $K$ is a maximal proper Lie subalgebra of $L$ (existence is clear in finite dimensions). By maximality of $K$, $N_{L}(K)=L$, i.e., $K$ is an ideal of $L$. Let $W=\{ v\in V:xv=0 \forall x\in K \}$. Since $K$ consists of nilpotent elements and has dimension less than $L$, $W$ is nonempty by the induction hypothesis. We note that $W$ is $L$-stable: for $x\in L$, $y\in K$, and $w\in W$, 
 > > $$
 > > \begin{align}
-> > yxw = x\underbrace{ yw }_{ =0 }-\underbrace{ [xy] }_{ =0 }w=0.
+> > yxw = x\underbrace{ yw }_{ =0 }-\underbrace{ [xy] }_{ \in K }w=0.
 > > \end{align}
 > > $$
 > > Let $K'$ be a $1$-dimensional subalgebra of $L/K$; its inverse image under projection, $\pi ^{-1}(K')$, is a Lie subalgebra of $L$ containing $K$ with $\dim(\pi ^{-1}(K'))=1+\dim K$. By maximality of $K$, $\pi ^{-1}(K')$ must be $L$. Thus, 

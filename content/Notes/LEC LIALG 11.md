@@ -7,8 +7,8 @@ tags:
   - Lecture
 desc: killing form
 ---
-[!Definition]
-Let $V$ be a finite dimensional vector space over $F$. Define $K:L\times L\to F$, the **killing form** of $L$,  by $K(x, y)=\mathrm{Tr}(\text{ad}(x)\text{ad}(y))$ for all $x, y\in L$. 
+> [!Definition] Killing form
+> Let $L$ be any Lie algebra. Define $K:L\times L\to F$, the **killing form** of $L$,  by $K(x, y)=\mathrm{Tr}(\text{ad}(x)\text{ad}(y))$ for all $x, y\in L$. 
 
 [!Proposition]
 1. $K$ is a symmetric bilinear form. 

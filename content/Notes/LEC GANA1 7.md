@@ -28,7 +28,7 @@ We have the following immediate consequence of MCT, which allows us to swap $\su
 ^d5ec73
 
 > [!Corollary]
-> Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable. For all $A\in \mathcal{F}$, define
+> Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable. Let $\mu$ be a measure on $(X, \mathcal{F})$. For all $A\in \mathcal{F}$, define
 > $$
 > \nu(A):=\int_{A}fd\mu=\int_{X}f 1_{A}d\mu.
 > $$

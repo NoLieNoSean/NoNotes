@@ -8,21 +8,17 @@ tags:
 ---
 CMI, Aug-Nov 2026, R Srinivasan
 
-Topics:
-1. Measure spaces, monotone class lemma, outer measures and Caratheodory extension, Lebesgue measure (invariant under translations), measurable functions, integration, MCT, Fatou’s lemma, LDCT, product measures, Fubini. Optional: Convergence in measure, Lusin’s theorem. 
-
 ---
-%%
+
+
 ```dataview
 TABLE date, desc, P1, P2
 FROM #GANA1 AND #Lecture 
 SORT date ASC
 ```
-%%
 
 
-
-
+# Lectures
 
 [[LEC GANA1 2]]
 [[LEC GANA1 3]]
@@ -32,3 +28,10 @@ SORT date ASC
 [[LEC GANA1 7]] 
 [[LEC GANA1 8]] 
 [[LEC GANA1 9]]
+[[LEC GANA1 10]]
+[[LEC GANA1 11]]
+[[LEC GANA1 12]]
+[[LEC GANA1 13]]
+# Assignments
+
+[[AS GANA1 1]]
