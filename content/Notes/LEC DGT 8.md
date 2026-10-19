@@ -8,12 +8,14 @@ tags:
 P1: true
 desc: Second fundamental form, Curvature tensor, vector fields along curves
 ---
+# The Curvature Tensor
+
 Recall [[LEC DGT 7#^9c4967]]. 
 
 > [!Definition] Second fundamental form
 > For $p\in M$, the **second fundamental form** of $M$ at $p$, $\mathbb{I}_{p}:T_{p}M\times T_{p}M\to N_{p}M$ is defined by
 > $$
-> \mathbb{I}_{p}(v, w)=(D_{v}\Pi)(w).
+> \mathbb{I}_{p}(v, w):=(D_{v}\Pi)(w).
 > $$
 > 
 > 
@@ -34,6 +36,8 @@ $$
 D_{X}Y=\nabla_{X}Y+\mathbb{I}(X, Y).
 $$
 
+^273d1a
+
 > [!Lemma]
 > $\mathbb{I}_{p}(v, w)=\mathbb{I}_{p}(w, v)$ for all $v, w\in T_{p}M$. 
 > 
@@ -44,10 +48,54 @@ $$
 > > $$
 > > 
 
-$\mathbb{I}$ is not preserved by local isometries, so it is not intrinsic. However, one can define certain quantities using $\mathbb{I}$ which are intrinsic. 
+^e6aec2
+
+$\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]]), so it is not intrinsic. However, one can define certain quantities using $\mathbb{I}$ which are intrinsic.
 
 
-%% Curvature tensor stuff%%
+[!Definition]
+Let $X, Y, Z\in \mathfrak{X}(M)$. Define the **curvature tensor** $R(X, Y)$ 
+
+
+Let $\varphi:\Omega\to V$ be a local parameterization of $M$. Let $h_{ij}:\Omega \to \mathbb{R}^{k}$ be defined by $h_{ij}(a)=\mathbb{I}_{\varphi(a)}(\varphi_{i}, \varphi_{j})$. By [[#^e6aec2]], $h_{ij}=h_{ji}$. Using [[#^273d1a]], 
+$$
+\begin{align}
+D_{\varphi_{i}}\varphi_{j} |_{\varphi(a)} & =\nabla_{\varphi_{i}}\varphi_{j} |_{\varphi(a)}+\mathbb{I}_{\varphi(a)}(\varphi_{i}, \varphi_{j}) \\
+\implies \partial_{ij}\varphi & =\Gamma_{ij}^{l}\partial_{l}\varphi+h_{ij}.
+\end{align}
+$$
+We start with the following identities:
+$$
+\begin{align}
+\partial_{ijk}\varphi & =\partial_{k}\Gamma^{l}_{ij}\partial_{l}\varphi +\Gamma^{l}_{ij}(\Gamma^{m}_{kl}\partial_{m}\varphi+h_{kl})+\partial_{k}h_{ij} \\
+ & =(\partial_{k}\Gamma^{m}_{ij}+\Gamma^{l}_{ij}\Gamma^{m}_{kl})\partial_{m}\varphi+\Gamma^{l}_{ij}h_{kl}+\partial_{k}h_{ij}. \\
+ \\
+\partial_{ikj}\varphi & = (\partial_{j}\Gamma^{m}_{ik}+\Gamma^{l}_{ik }\Gamma^{m}_{jl})\partial_{m}\varphi+\Gamma^{l}_{ik}h_{jl}+\partial_{j}h_{ik}.
+\end{align}
+$$
+Rearrange, dot with $\partial_{s}\varphi$:
+$$
+\begin{align}
+  \langle (\partial_{k}\Gamma^{m}_{ij}+\Gamma^{l}_{ij}\Gamma^{m}_{kl}-\partial_{j}\Gamma^{m}_{ik}-\Gamma^{l}_{ik}\Gamma^{m}_{jl})\partial_{m}\varphi, \partial_{s}\varphi \rangle
+ & =\langle \partial_{j}h_{ik}-\partial_{k}h_{ij}+\Gamma^{l}_{ik}h_{jl}-\Gamma_{ij}^{l}h_{kl}, \partial_{s}\varphi \rangle \\
+\underbrace{ (\partial_{k}\Gamma^{m}_{ij}+\Gamma^{l}_{ij}\Gamma^{m}_{kl}-\partial_{j}\Gamma^{m}_{ik}-\Gamma^{l}_{ik}\Gamma^{m}_{jl})g_{ms} }_{ \text{intrinsic} } & = \langle \partial_{j}h_{ik}-\partial_{k}h_{ij}, \partial_{s}\varphi \rangle  \\
+ & = -\langle \partial_{k}h_{ij}, \partial_{s}\varphi \rangle +\langle \partial_{j}h_{ik}, \partial_{s}\varphi \rangle  \\
+ & =\langle h_{ij}, \partial_{ks}\varphi \rangle -\langle h_{ik}, \partial_{js}\varphi \rangle  \\
+ & = \langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle. 
+\end{align}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
 
 $$
 \begin{align}

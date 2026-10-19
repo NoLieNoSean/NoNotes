@@ -121,13 +121,15 @@ $$
 (D_{X}f)(\phi(a))=\sum_{i}(X^{i}\circ \phi)(a)Df_{\phi(a)}(\phi_{i}|_{\phi(a)}).
 $$
 
-^7c93bf
-
 Since $\phi_{i}|_{\phi(a)}=D\phi_{a}(e_{i})$, by the chain rule
 $$
-Df_{\phi(a)}(\phi_{i}|_{\phi(a)})=Df_{\phi(a)}(D\phi_{a}(e_{i}))=D(f\circ \phi)_{a}(e_{i})=\partial_{i}(f\circ \phi)(a).
+Df_{\phi(a)}(\phi_{i}|_{\phi(a)})=Df_{\phi(a)}(D\phi_{a}(e_{i}))=D(f\circ \phi)_{a}(e_{i})=\partial_{i}(f\circ \phi)(a),
 $$
-Therefore, the RHS of [[#^7c93bf]] smoothly depends on $a$. Clearly, $D_{X}$ is an $\mathbb{R}$-linear derivation. 
+so
+$$
+(D_{X}f)(\phi(a))=\sum_{i}(X^{i}\circ \phi)(a)\partial_{i}(f\circ \phi)(a),
+$$
+which depends smoothly depends on $a$. Clearly, $D_{X}$ is an $\mathbb{R}$-linear derivation. 
 
 We now attempt to define a Lie bracket on $\mathfrak{X}(M)$ for a manifold $M$. [^3] One can use two approaches. 
 

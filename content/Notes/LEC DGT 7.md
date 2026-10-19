@@ -7,16 +7,50 @@ tags:
   - Lecture
 P1: true
 desc: the covariant derivative and its intrinsicness
+P2: true
 ---
 > [!Definition] Pushforward
 > Let $F:M\to N$ be a diffeomorphism. Define $F_{*}:\mathfrak{X}(M)\to \mathfrak{X}(N)$ by
 > $$
 > F_{*}X|_{F(q)}:=DF_{q}(X_{q}).
 > $$
+> When $F:M\to N$ is any smooth map and $v\in T_{p}M$, we denote $Df_{p}v$ by $F_{*}v$. 
+
+^d4f63b
+
+
+> [!Proposition]
+> Let $F:M\to N$ be a diffeomorphism. Then, $F_{*}:\mathfrak{X}(M)\to \mathfrak{X}(N)$ is a Lie algebra isomorphism; in particular, $F_{*}[X, Y]=[F_{*}X, F_{*}Y]$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $\tilde{X}=F_{*}X$, $\tilde{Y}=F_{*}Y$. Let $\varphi:\Omega\to V$ be a local parameterization of $M$. Then $\tilde{\varphi}=F\circ\varphi:\Omega\to F(V)$ is a local parameterization of $N$. Let $\overline{X}, \overline{Y}$ be the [[LEC DGT 4#^5ef441|coordinate representations]] of $X$ and $Y$ wrt $\varphi$, i.e., $\varphi_{*}\overline{X}=X$, $\varphi_{*}\overline{Y}=Y$. Because
+> > $$
+> > \begin{align}
+> > \tilde{\varphi}_{*}\overline{X} & =F_{*}\varphi_{*}\overline{X} \\
+> >  & =F_{*}X \\
+> >  & = \tilde{X},
+> > \end{align}
+> > $$
+> > $\overline{X}$, $\overline{Y}$ are also the coordinate representations of $\tilde{X}$, $\tilde{Y}$ wrt $\tilde{\varphi}$. 
+> > 
+> > We can restate the definition in [[LEC DGT 4#^5180d1]].1 as $[X, Y]=[\varphi_{*}\overline{X}, \varphi_{*}\overline{Y}]:=\varphi_{*}[\overline{X}, \overline{Y}]$.
+> > $$
+> > \begin{array}{rcl}
+> > F_{*}[X, Y]
+> >    & \underset{\text{defn.}}{=} &  F_{*}\varphi_{*}[\overline{X}, \overline{Y}] \\
+> >    & = & \tilde{\varphi}_{*}[\overline{X}, \overline{Y}] \\
+> >    & \underset{\text{defn.}}{=}  & [\tilde{\varphi}_{*}\overline{X}, \tilde{\varphi}_{*}\overline{Y}] \\
+> >  & = & [\tilde{X}, \tilde{Y}].
+> > \end{array}
+> > $$
+> > 
 > 
 
+^3a4ac2
+
 > [!Lemma]
-> Let $F:M\to N$ be a diffeomorphism. Let $f\in C^{\infty}(N)$, $v\in T_{p}M$. Then $D_{v}(f\circ F)=D_{F_{*}v}f$.
+> Let $F:M\to N$ be smooth. Let $f\in C^{\infty}(N)$, $v\in T_{p}M$. Then $D_{v}(f\circ F)=D_{F_{*}v}f$.
 > 
 > > [!Proof]-
 > > 
@@ -31,31 +65,15 @@ desc: the covariant derivative and its intrinsicness
 
 ^1d8e76
 
-> [!Lemma]
-> Let $F:M\to N$ be a diffeomorphism. Then, $F_{*}:\mathfrak{X}(M)\to \mathfrak{X}(N)$ is a Lie algebra homomorphism, i.e., $F_{*}[X, Y]=[F_{*}X, F_{*}Y]$. 
-> 
-> > [!Proof]-
-> > 
-> > Let $\varphi:\Omega\to V$ be a local parameterization of $M$. Then $\tilde{\varphi}=F\circ\varphi:\Omega\to F(V)$ is a local parameterization of $N$. If $X=X^{i}\varphi_{i}$, 
-> > $$
-> > F_{*}X=F_{*}(X^{i}\varphi_{i})=X^{i}F_{*}\varphi_{i}=X^{i} \tilde{\varphi}_{i},
-> > $$
-> > so the coordinate representation of $X$ wrt to $\varphi$ is equal to the coordinate representation of $F_{*}X$ wrt $\tilde{\varphi}$. 
-> > 
-> > Let $\tilde{X}=F_{*}X$, $\tilde{Y}=F_{*}Y$. Note that $\tilde{\varphi}_{*}\overline{X}_{a}=\tilde{X}_{\tilde{\varphi}(a)}$. Thus, 
-> > $$
-> > F_{*}[X, Y]_{\varphi(a)}=F_{*}\varphi_{*}[\overline{X}, \overline{Y}]_{a}=\tilde{\varphi}_{*}[\overline{X}, \overline{Y}]_{a}=[\tilde{X}, \tilde{Y}]_{\tilde{\varphi}(a)}.
-> > $$
-> > 
-> 
-
 # Covariant derivative
 
-Let $M\subseteq \mathbb{R}^{k}$. Given $X\in \mathfrak{X}(M)$, $p\in M$ and $v\in T_{p}M$, we'd like to define a derivative of $X$ at $p$ in the direction $v$, $\nabla_{v}X\in T_{p}M$, such that it is intrinsic, i.e., if $F:M\to N$ is an isometry then $\nabla_{F_{*}v}F_{*}X=F_{*}(\nabla_{v}X)$.
+Let $M\subseteq \mathbb{R}^{k}$. Given $X\in \mathfrak{X}(M)$, $p\in M$ and $v\in T_{p}M$, we'd like to define a **covariant derivative** $\nabla_{v}X$ of $X$ at $p$ in direction $v$ satisfying the following conditions:
+1. $\nabla_{v}X\in T_{p}M$, and
+2. $\nabla$ is *intrinsic*: if $F:M\to N$ is an isometry and if $\tilde{\nabla}$ is the covariant derivative on $N$, we must have $\tilde{\nabla}_{F_{*}v}F_{*}X=F_{*}(\nabla_{v}X)$.
 
-We could consider $D_{v}X$. However, this does not work because
+The immediate candidate $D_{v}X$ doesn't quite meet these requirements:
 1. in general, $D_{v}X\not\in T_{p}M$, and
-2. the operation is not intrinsic, i.e., $D_{F_{*}v}F_{*}X\ne F_{*}(D_{v}X)$. 
+2. $D$ is not intrinsic, i.e., $D_{F_{*}v}F_{*}X\ne F_{*}(D_{v}X)$. 
 
 > [!Example]
 > Let $M=(-\pi, \pi)\times \mathbb{R}\subseteq \mathbb{R}^{2}$. Let $F:M\to \mathbb{R}^{3}$ be
@@ -107,16 +125,29 @@ The following lemma justifies $\nabla_{X}Y\in \mathfrak{X}(M)$.
 
 > [!Lemma]
 > $\Pi:M\to \mathcal{L}$ is smooth. 
+> 
+> > [!Proof]-
+> > 
+> > Choose a local parameterization $\varphi:\Omega\to V$. We need to show that $\Pi\circ\varphi:\Omega\to \mathcal{L}$ is smooth. Let $a\in \Omega$, $A_{a}:=D\varphi_{a}$. Let $v\in \mathbb{R}^{k}$, $w=\Pi_{\varphi(a)}(v)$. Let $w=Ae$ for some $e\in \mathbb{R}^{n}$. Because $v-w\perp T_{\varphi(a)}M$, we have
+> > $$
+> > \begin{array}{llr}
+> >  & \langle v-Ae, Af \rangle   =0   & \forall f\in \mathbb{R}^{n} \\
+> >  \iff& \langle A^{T}v-A^{T}Ae, f \rangle   = 0 & \forall f\in \mathbb{R}^{n} \\
+> > \iff & A^{T}Ae=A^{T}v \\
+> >  \iff & e=(A^{T}A)^{-1}A^{T}v \\
+> >  \iff  & \Pi_{\varphi(a)}(v)= A(A^{T}A)^{-1}A^{T}v 
+> > \end{array}
+> > $$
+> > Because this holds for all $v$, we have $\Pi_{\varphi(a)}= A_{a}(A^{T}_{a}A_{a})^{-1}A_{a}^{T}$. Since $D\varphi_{a}$ depends smoothly on $a$, so does $\Pi_{\varphi(a)}$. 
+> 
 
 ^7d2954
 
-
-
-Recall [[LEC DGT 4#^51b187]]: 
+Recall these identities involving the operator $D$:
 
 ![[LEC DGT 4#^51b187]]
 
-We have these analogues for $\nabla$, all of which follow immediately from the corresponding identities for $D$ (the last one follows from the fact that $(D_{X}Y-\nabla_{X}Y)|_{p}\perp T_{p}M$ at each $p$).
+We have the following analogues for $\nabla$, all of which follow immediately from the corresponding identities for $D$ (the last one follows from the fact that $(D_{X}Y-\nabla_{X}Y)|_{p}\perp T_{p}M$ at each $p$).
 
 > [!Proposition]
 > Let $X, Y\in \mathfrak{X}(M)$, and $f\in C^{\infty}(M)$. The following hold:
@@ -153,15 +184,19 @@ We have these analogues for $\nabla$, all of which follow immediately from the c
 > $$
 > 
 
-Note that for $X, Y\in \mathfrak{X}(M)$ with $X=X^{i}\varphi_{i}$ and $Y=Y^{j}\varphi_{j}$, we have
-$$
-\begin{align}
-\nabla_{X}Y & =\nabla_{X^{i}\varphi_{i}}Y^{j}\varphi_{j}  \\
- & =X^{i}\nabla_{\varphi_{i}}Y^{j}\varphi_{j} \\
- & =X^{i}(D_{\varphi_{i}}Y^{j})\varphi_{j}+X^{i}Y^{j}\nabla_{\varphi_{i}}\varphi_{j} \\
- & =X^{i}(\partial_{i}Y^{j})\varphi_{j}+X^{i}Y^{j}(\Gamma_{ij}^{k}\circ\varphi ^{-1})\varphi_{k}.
-\end{align}
-$$
+> [!Remark]
+> Note that for $X, Y\in \mathfrak{X}(M)$ with $X=X^{i}\varphi_{i}$ and $Y=Y^{j}\varphi_{j}$, we have
+> $$
+> \begin{align}
+> \nabla_{X}Y & =\nabla_{X^{i}\varphi_{i}}Y^{j}\varphi_{j}  \\
+>  & =X^{i}\nabla_{\varphi_{i}}Y^{j}\varphi_{j} \\
+>  & =X^{i}(D_{\varphi_{i}}Y^{j})\varphi_{j}+X^{i}Y^{j}\nabla_{\varphi_{i}}\varphi_{j} \\
+>  & =X^{i}(\partial_{i}Y^{j})\varphi_{j}+X^{i}Y^{j}(\Gamma_{ij}^{k}\circ\varphi ^{-1})\varphi_{k}.
+> \end{align}
+> $$
+
+^7154ac
+
 
 > [!Proposition]
 > Let $\varphi:\Omega\to V$ be a local parameterization of $M$. Let $g_{ij}$ be [[LEC DGT 5#^926cee|components]] of $\mathrm{I}_{M}$ with respect to $\varphi$, and $\Gamma_{ij}^{k}$ be the Christoffel symbols with respect to $\varphi$. Denote the entries of $[g_{ij}]^{-1}$ by $g^{ij}$. Then, 
@@ -199,6 +234,9 @@ $$
 
 ^c86eb5
 
+
+
+
 > [!Remark]
 > If we replace $\varphi_{i}, \varphi_{j}, \varphi_{k}$ in the proof of [[#^c86eb5]] with arbitrary vector fields $X, Y, Z$ (and using [[#^269bec]]) we obtain 
 > $$
@@ -227,41 +265,57 @@ $$
 
 Finally, we prove that $\nabla$ is in fact intrinsic. 
 
-> [!Theorem]
-> If $F:M\to N$ is an isometry and $\nabla, \tilde{\nabla}$ are the covariant derivatives on $M, N$, then 
-> $$
-> \tilde{\nabla}_{F_{*}X}F_{*}Y=F_{*}(\nabla_{X}Y).
-> $$
-> 
-> 
-> > [!Proof]-
-> > 
-> > Let $Z\in \mathfrak{X}(M)$ be arbitrary. Denote $F_{*}X$, $F_{*}Y$, $F_{*}Z$ by $\tilde{X}$, $\tilde{Y}$, $\tilde{Z}$. Since $F$ is an isometry, $\langle \tilde{X}, \tilde{Y} \rangle_{F(p)}=\langle X, Y \rangle_{p}$, so $\langle X, Y \rangle=\langle \tilde{X}, \tilde{Y} \rangle\circ F$. By [[#^1d8e76]], 
-> > $$
-> > \begin{align}
-> > D_{X}\langle Y, Z \rangle |_{p} & =D_{X}(\langle \tilde{Y}, \tilde{Z} \rangle \circ F)|_{p} \\
-> >  & =D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}.
-> > \end{align}
-> > $$
-> > Similarly, 
-> > $$
-> > \begin{align}
-> > \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)} & =\langle F_{*}Z_{p}, F_{*}[X, Y]_{p} \rangle  \\
-> >  & =\langle Z, [X, Y] \rangle |_{p}.
-> > \end{align}
-> > $$
-> > By [[#^de839a]], 
-> > $$
-> > \begin{align}
-> > 2\langle \tilde{\nabla}_{\tilde{X}}\tilde{Y}, \tilde{Z} \rangle|_{F(p)}  & = D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}+\dots \\
-> >  & ~~~~~ + \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)}+\dots \\
-> >  & =D_{X}\langle Y, Z \rangle |_{p}+\dots \\
-> >  & ~~~~~ + \langle Z, [X, Y] \rangle |_{p} \\
-> >  & =2\langle \nabla_{X}Y, Z \rangle |_{p}.
-> > \end{align}
-> > $$
-> > The claim follows. 
-> 
+[!Theorem]
+If $F:M\to N$ is an isometry and $\nabla, \tilde{\nabla}$ are the covariant derivatives on $M, N$, then 
+$$
+\tilde{\nabla}_{F_{*}X}F_{*}Y=F_{*}(\nabla_{X}Y).
+$$
+
+
+[!Proof]-
+
+Let $Z\in \mathfrak{X}(M)$ be arbitrary. Denote $F_{*}X$, $F_{*}Y$, $F_{*}Z$ by $\tilde{X}$, $\tilde{Y}$, $\tilde{Z}$. Since $F$ is an isometry, $\langle \tilde{X}, \tilde{Y} \rangle_{F(p)}=\langle X, Y \rangle_{p}$, so $\langle X, Y \rangle=\langle \tilde{X}, \tilde{Y} \rangle\circ F$. By [[#^1d8e76]], 
+$$
+\begin{align}
+D_{X}\langle Y, Z \rangle |_{p} & =D_{X}(\langle \tilde{Y}, \tilde{Z} \rangle \circ F)|_{p} \\
+ & =D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}.
+\end{align}
+$$
+Similarly, using [[#^3a4ac2]], 
+$$
+\begin{align}
+\langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)} & =\langle F_{*}Z_{p}, F_{*}[X, Y]_{p} \rangle  \\
+ & =\langle Z, [X, Y] \rangle |_{p}.
+\end{align}
+$$
+By [[#^de839a]], 
+$$
+\begin{align}
+2\langle \tilde{\nabla}_{\tilde{X}}\tilde{Y}, \tilde{Z} \rangle|_{F(p)}  & = D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}+\dots \\
+ & ~~~~~ + \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)}+\dots \\
+ & =D_{X}\langle Y, Z \rangle |_{p}+\dots \\
+ & ~~~~~ + \langle Z, [X, Y] \rangle |_{p} \\
+ & =2\langle \nabla_{X}Y, Z \rangle |_{p} \\
+ & =2\langle F_{*}\nabla_{X}Y, \tilde{Z} \rangle |_{F(p)}.
+\end{align}
+$$
+
+The claim follows. 
+
+
+^8c411c
+
+Note that [[#^8c411c]] also follows immediately from [[#^7154ac]] and [[#^c86eb5]] (and the fact that isometries preserve the first fundamental form):
+
+$$
+\begin{align}
+F_{*}\nabla_{X}Y & =F_{*}(X^{i}(\partial_{i}Y^{j})\varphi_{j}+X^{i}Y^{j}(\Gamma_{ij}^{k}\circ\varphi ^{-1})\varphi_{k}) \\
+ & =\tilde{X}^{i}((D_{\varphi_{i}}Y^{j})\circ F^{-1})\tilde{\varphi}_{j}+ \tilde{X}^{i}\tilde{Y}^{j}(\Gamma^{k}_{ij}\circ \tilde{\varphi}^{-1}) \tilde{\varphi}_{k} \\
+ & = \tilde{X}^{i}(D_{\tilde{\varphi}_{i}}\tilde{Y}^{j})\tilde{\varphi}_{j}+ \tilde{X}^{i}\tilde{Y}^{j}(\Gamma^{k}_{ij}\circ \tilde{\varphi}^{-1}) \tilde{\varphi}_{k} \\
+ & =\tilde{\nabla}_{\tilde{X}}\tilde{Y}.
+\end{align}
+$$
+
 
 [^1]: Global?
 
@@ -273,14 +327,14 @@ D_{X}Y=\nabla_{X}Y+\hat{\Pi}(D_{X}Y).
 $$
 Recall that the two summands above are orthogonal. We have seen that $\nabla_{X}Y$ is intrinsic, but $\hat{\Pi}(D_{X}Y)$ is not. The latter depends on how the tangent space $T_{p}M$ varies with $p$. 
 
-Since $\Pi:M\to \mathcal{L}(\mathbb{R}^{k}, \mathbb{R}^{k})$, $\Pi$ can be thought of as a smooth map from $M$ to $\mathbb{R}^{k^{2}}$. 
+$\Pi$ can be thought of as a smooth map from $M$ to $\mathbb{R}^{k^{2}}$. 
 
 > [!Proposition]
 > $\hat{\Pi}(D_{X}Y)=(D_{X}\Pi)(Y)$. 
 > 
 > > [!Proof]-
 > > 
-> > Let $\Pi=[\Pi_{i}^{j}]$. Because $\Pi(Y)=Y$, we have $\Pi_{i}^{j}Y^{j}=Y^{j}$. Applying $D_{X}$ on both sides, we obtain
+> > Let $\Pi=[\Pi_{i}^{j}]$. Because $\Pi(Y)=Y$, we have $\Pi_{i}^{j}Y^{j}=Y^{j}$ (here, $Y^{j}$ are not components wrt a local parameterization, but the vanilla components of $Y$). Applying $D_{X}$ on both sides, we obtain
 > > $$
 > > \begin{align}
 > > (D_{X}\Pi_{i}^{j})Y^{j}+\Pi_{i}^{j}(D_{X}Y^{j}) & =D_{X}Y^{j}. \\
@@ -288,6 +342,7 @@ Since $\Pi:M\to \mathcal{L}(\mathbb{R}^{k}, \mathbb{R}^{k})$, $\Pi$ can be thoug
 > >  \implies (D_{X}\Pi)(Y) =\hat{\Pi}(D_{X}Y).
 > > \end{align}
 > > $$
+> > 
 > 
 
 ^7cc2b0

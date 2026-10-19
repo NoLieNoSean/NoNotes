@@ -5,7 +5,7 @@ time: 14:00
 tags:
   - Lecture
   - DGEO
-desc: Riemannian Isometries, curves, lengths, reparameterizations, intrinsic metric
+desc: Riemannian Isometries and the first fundamental form, curves, lengths, reparameterizations, intrinsic metric
 P1: true
 P2: true
 ---
@@ -19,8 +19,6 @@ $$
 > [!Definition] First fundamental form
 > For $p\in M\subseteq \mathbb{R}^{n}$, the **first fundamental form** of $M$ at $p$ is the inner product $g_{p}:T_{p}M\times T_{p}M\to \mathbb{R}$ obtained by restricting the standard inner product of $\mathbb{R}^{k}$ to $T_{p}M$. The first fundamental form is abbreviated as FFF, and denoted $\mathrm{I}_{M}$. 
 
-We say that a property of $M$ is **intrinsic** if it can be described purely in terms of the FFF of $M$. 
-
 > [!Definition] Isometries and local isometries
 > 1. An **isometry** from $M$ to $N$ is a diffeomorphism $F:M\to N$ such that for all $p\in M$, $DF_{p}:T_{p}M\to T_{F(p)}N$ is a linear isometry, i.e. for all $v, w\in T_{p}M$, 
 > $$
@@ -31,8 +29,6 @@ We say that a property of $M$ is **intrinsic** if it can be described purely in 
 > 3. Two manifolds $M, N$ are **locally isometric** around $p\in M$ and $q\in N$ if there exists open neighborhoods $U\subseteq M$ of $p$ and $V\subseteq N$ of $q$ and an isometry $F:U\to V$ with $F(p)=q$. 
 
 ^88035c
-
-Since intrinsic properties can be completely described in terms of the FFF, they are preserved by isometries. 
 
 Since $g_{p}$ is a positive definite symmetric [[LEC ALG1 23#^d9a4f7|bilinear form]] on $T_{p}M$, we can represent $g_{p}$ by a positive definite symmetric matrix once we fix a basis for $T_{p}M$. 
 
@@ -51,6 +47,10 @@ Since $g_{p}$ is a positive definite symmetric [[LEC ALG1 23#^d9a4f7|bilinear fo
 > 
 
 ^926cee
+
+> [!Definition] Intrinsic property
+> We say that a property of $M$ is **intrinsic** if it can be described purely in terms of the components of $\mathrm{I}_{M}$. Since [[#^88035c|isometries]] preserve these by definition, they also preserve intrinsic properties. 
+
 
 > [!Example]
 > Suppose $M^{m}\subseteq \mathbb{R}^{k}$, $N^{n}\subseteq \mathbb{R}^{l}$. Let $\varphi:\Omega\to U\subseteq M$, $\psi:\Theta\to V\subseteq N$ be local parameterizations around $p\in M$, $q\in N$. Then the product map $\rho:\Omega \times\Theta \to U\times V$ is a local parameterization of $M\times N$ around $(p, q)$. 

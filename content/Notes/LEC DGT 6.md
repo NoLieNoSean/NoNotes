@@ -16,7 +16,7 @@ Recall the definition of [[LEC DGT 5#^0c7a72|intrinsic distance]] from the previ
 
 > [!Lemma]
 > Let $\varphi:M\to N$ be a [[LEC DGT 5#^88035c|Riemannian isometry]]. Then $d_{N}(\varphi(p), \varphi(q))=d_{M}(p, q)$, i.e., $\varphi$ is also a metric space isometry. 
-
+	
 > [!Lemma]
 > $d_{\mathbb{R}^{n}}(p, q)=|p-q|$ for all $p, q\in \mathbb{R}^{n}$.
 
@@ -41,7 +41,7 @@ Recall the definition of [[LEC DGT 5#^0c7a72|intrinsic distance]] from the previ
 > No. 
 
 > [!Remark]
-> Let $M^{m}, N^{n}$ be smooth manifolds. If $\varphi:M\to N$ is a Riemannian isometry, then $\varphi$ is a metric space space isometry. Conversely, if $\varphi:M\to N$ is a homeomorphism which is a metric space isometry, then $\varphi$ is a diffeomorphism and a Riemannian isometry. 
+> Let $M^{m}, N^{n}$ be smooth manifolds. If $\varphi:M\to N$ is a Riemannian isometry, then $\varphi$ is a metric space isometry. Conversely, if $\varphi:M\to N$ is a homeomorphism which is a metric space isometry, then $\varphi$ is a diffeomorphism and a Riemannian isometry. 
 
 > [!Theorem]
 > Suppose $M\subseteq \mathbb{R}$, or $M\subseteq \mathbb{R}^{k}$ is closed. TFAE:
