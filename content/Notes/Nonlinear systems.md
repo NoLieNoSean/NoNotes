@@ -71,6 +71,8 @@ where $\mathbf{f}:E\to \mathbb{R}^{n}$ and $E$ is an open subset of $\mathbb{R}^
 > $$
 > has a unique solution $\mathbf{x}(t)$ on the interval $[-a, a]$. 
 
+^4078e8
+
 Picard's method of successive approximations is used to prove this theorem; it is based on the fact that $\mathbf{x}(t)$ is a solution of the IVP
 $$
 \begin{align}

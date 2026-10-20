@@ -5,4 +5,5 @@ time: 22:59
 tags:
   - DGEO
   - Lecture
+desc: The exponential map
 ---

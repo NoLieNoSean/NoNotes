@@ -265,43 +265,43 @@ We have the following analogues for $\nabla$, all of which follow immediately fr
 
 Finally, we prove that $\nabla$ is in fact intrinsic. 
 
-[!Theorem]
-If $F:M\to N$ is an isometry and $\nabla, \tilde{\nabla}$ are the covariant derivatives on $M, N$, then 
-$$
-\tilde{\nabla}_{F_{*}X}F_{*}Y=F_{*}(\nabla_{X}Y).
-$$
-
-
-[!Proof]-
-
-Let $Z\in \mathfrak{X}(M)$ be arbitrary. Denote $F_{*}X$, $F_{*}Y$, $F_{*}Z$ by $\tilde{X}$, $\tilde{Y}$, $\tilde{Z}$. Since $F$ is an isometry, $\langle \tilde{X}, \tilde{Y} \rangle_{F(p)}=\langle X, Y \rangle_{p}$, so $\langle X, Y \rangle=\langle \tilde{X}, \tilde{Y} \rangle\circ F$. By [[#^1d8e76]], 
-$$
-\begin{align}
-D_{X}\langle Y, Z \rangle |_{p} & =D_{X}(\langle \tilde{Y}, \tilde{Z} \rangle \circ F)|_{p} \\
- & =D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}.
-\end{align}
-$$
-Similarly, using [[#^3a4ac2]], 
-$$
-\begin{align}
-\langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)} & =\langle F_{*}Z_{p}, F_{*}[X, Y]_{p} \rangle  \\
- & =\langle Z, [X, Y] \rangle |_{p}.
-\end{align}
-$$
-By [[#^de839a]], 
-$$
-\begin{align}
-2\langle \tilde{\nabla}_{\tilde{X}}\tilde{Y}, \tilde{Z} \rangle|_{F(p)}  & = D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}+\dots \\
- & ~~~~~ + \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)}+\dots \\
- & =D_{X}\langle Y, Z \rangle |_{p}+\dots \\
- & ~~~~~ + \langle Z, [X, Y] \rangle |_{p} \\
- & =2\langle \nabla_{X}Y, Z \rangle |_{p} \\
- & =2\langle F_{*}\nabla_{X}Y, \tilde{Z} \rangle |_{F(p)}.
-\end{align}
-$$
-
-The claim follows. 
-
+> [!Theorem]
+> If $F:M\to N$ is an isometry and $\nabla, \tilde{\nabla}$ are the covariant derivatives on $M, N$, then 
+> $$
+> \tilde{\nabla}_{F_{*}X}F_{*}Y=F_{*}(\nabla_{X}Y).
+> $$
+> 
+> 
+> > [!Proof]-
+> > 
+> > Let $Z\in \mathfrak{X}(M)$ be arbitrary. Denote $F_{*}X$, $F_{*}Y$, $F_{*}Z$ by $\tilde{X}$, $\tilde{Y}$, $\tilde{Z}$. Since $F$ is an isometry, $\langle \tilde{X}, \tilde{Y} \rangle_{F(p)}=\langle X, Y \rangle_{p}$, so $\langle X, Y \rangle=\langle \tilde{X}, \tilde{Y} \rangle\circ F$. By [[#^1d8e76]], 
+> > $$
+> > \begin{align}
+> > D_{X}\langle Y, Z \rangle |_{p} & =D_{X}(\langle \tilde{Y}, \tilde{Z} \rangle \circ F)|_{p} \\
+> >  & =D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}.
+> > \end{align}
+> > $$
+> > Similarly, using [[#^3a4ac2]], 
+> > $$
+> > \begin{align}
+> > \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)} & =\langle F_{*}Z_{p}, F_{*}[X, Y]_{p} \rangle  \\
+> >  & =\langle Z, [X, Y] \rangle |_{p}.
+> > \end{align}
+> > $$
+> > By [[#^de839a]], 
+> > $$
+> > \begin{align}
+> > 2\langle \tilde{\nabla}_{\tilde{X}}\tilde{Y}, \tilde{Z} \rangle|_{F(p)}  & = D_{\tilde{X}}\langle \tilde{Y}, \tilde{Z} \rangle |_{F(p)}+\dots \\
+> >  & ~~~~~ + \langle \tilde{Z}, [\tilde{X}, \tilde{Y}] \rangle |_{F(p)}+\dots \\
+> >  & =D_{X}\langle Y, Z \rangle |_{p}+\dots \\
+> >  & ~~~~~ + \langle Z, [X, Y] \rangle |_{p} \\
+> >  & =2\langle \nabla_{X}Y, Z \rangle |_{p} \\
+> >  & =2\langle F_{*}\nabla_{X}Y, \tilde{Z} \rangle |_{F(p)}.
+> > \end{align}
+> > $$
+> > 
+> > The claim follows. 
+> 
 
 ^8c411c
 
