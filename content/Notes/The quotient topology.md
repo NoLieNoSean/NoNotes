@@ -22,7 +22,7 @@ Clearly, surjective continuous open/closed maps are quotient maps.
 ^3b95fe
 
 > [!Definition] Quotient topology
-> If $X$ is a space and $A$ is a set and if $p:X\to A$ is a surjective map, then  there exists exactly one topology $\mathcal{T}$ on $A$ relative to which $p$ is a quotient map (==open sets are exactly the images of saturated open sets of $A$==); it is called the **quotient topology** induced by $p$. 
+> If $X$ is a space and $A$ is a set and if $p:X\to A$ is a surjective map, then  there exists exactly one topology $\mathcal{T}$ on $A$ relative to which $p$ is a quotient map (==open sets are exactly the images of saturated open sets of $X$==); it is called the **quotient topology** induced by $p$. 
 
 ^4fa85d
 

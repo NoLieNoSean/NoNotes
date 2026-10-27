@@ -29,11 +29,15 @@ SORT date ASC
 [[LEC DGT 9]] Parallel transport
 [[LEC DGT 10]] Geodesics, the tangent bundle, the exponential map
 [[LEC DGT 11]]
-[[LEC DGT 12]] %% you missed this one! %%
-[[LEC DGT 13]]
-[[LEC DGT 14]] %% you missed this one! %%
+
+[[LEC DGT 12]]
+[[LEC DGT 13]] %% you missed this one! %%
+[[LEC DGT 14]]
 [[LEC DGT 15]] %% you missed this one! %%
 [[LEC DGT 16]] %% you missed this one! %%
+[[LEC DGT 17]] %% you missed this one! %%
+[[LEC DGT 18]] %% you missed this one! %%
+[[LEC DGT 19]] %% you missed this one! %%
 
 
 

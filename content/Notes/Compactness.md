@@ -128,6 +128,8 @@ If we assume $X$ is Hausdorff, local compactness admits the kind of formulation 
 > > 
 > 
 
+^3e23c5
+
 > [!Proposition]
 > Let $X$ be locally compact Hausdorff. Let $A\subseteq X$. If $A$ is closed in $X$ or open in $X$, then $A$ is locally compact. 
 

@@ -32,6 +32,8 @@ For example, abelian implies solvable, whereas simple algebras are definitely no
 > [!Definition] Semisimple Lie algebra
 > Let $L$ be an arbitrary Lie algebra and let $S$ be a maximal solvable ideal (chill, we're in finite dimensions). If $I$ is any other solvable ideal of $L$, then [[#^772394]].3 forces $S+I=S$, or $I\subseteq S$. This proves the existence of a unique maximal solvable ideal, called the **radical** of $L$ and denoted $\mathrm{Rad}(L)$. If $\mathrm{Rad}(L)=0$, $L$ is called **semisimple**. 
 
+^e90d23
+
 
 It follows from [[#^772394]].2 that for any Lie algebra $L$, $L/\text{rad}(L)$ is semisimple. 
 

@@ -5,19 +5,22 @@ time: 11:52
 tags:
   - GGT
   - Lecture
-desc: Length spaces, geodesics, and closed local geodesics
+desc: Length spaces
+P1: true
 ---
-Ref: Bridson-Haefligh, Part 1 ch 3
 
+# Length spaces
 
-> [!Proposition]
+> [!Proposition] @bridsonMetricSpacesNonpositive1999 I.3.2
 > Let $(X, d)$ be a metric space, and let $\overline{d}:X\times X\to[0, \infty]$ be the map which assigns to each pair of points $x, y\in X$ the infimum of the lengths of rectifiable curves which join them (if no such curve exists then $\overline{d}(x, y)=0$). 
 > 1. $\overline{d}$ is a metric. 
 > 2. $\overline{d}(x, y)\geqslant d(x, y)$ for all $x, y\in X$, i.e., the topology induced by $\overline{d}$ is finer than the topology induced by $d$. 
-> 3. If $c:[a, b]\to X$ is continuous with respect to the topology induced by $\overline{d}$, then it is continuous with respect to the topology induced by $d$. 
+> 3. If $c:[a, b]\to X$ is continuous with respect to the topology induced by $\overline{d}$, then it is continuous with respect to the topology induced by $d$. If $c:[a, b]\to X$ is continuous and rectifiable with respect to the topology induced by $\overline{d}$, then it is continuous and rectifiable with respect to the topology induced by $d$. 
 > 4. If a map $c:[a, b]\to X$ is a rectifiable curve in $(X, d)$, then it is a continuous and rectifiable curve in $(X, \overline{d})$. 
 > 5. The length of a curve $c:[a, b]\to X$ in $(X, \overline{d})$ is the same as its length in $(X, d)$. 
 > 6. $\overline{\overline{d}}=\overline{d}$. 
+> 
+
 
 ^ed6c2f
 
@@ -28,13 +31,17 @@ Ref: Bridson-Haefligh, Part 1 ch 3
 
 The topologies induced by $d$ and $\overline{d}$ may be different. For example, the graph of a nonrectifiable curve in $I\times I$ is compact in the topology induced by $d$, but noncompact in the topology induced by $\overline{d}$. 
 
-
-> [!Theorem]
-> Let $X$ be a length metric space. Suppose that $X$ is complete (as a metric space) and locally compact. Then
+> [!Theorem] Hopf-Rinow, @bridsonMetricSpacesNonpositive1999 I.3.7
+> Let $X$ be a length metric space. Suppose that $X$ is complete and [[Compactness#^3e23c5|locally compact]]. Then
 > 1. Every closed bounded subset in $X$ is compact. 
-> 2. $X$ is a geodesic space. 
+> 2. $X$ is a [[LEC GGT 8#^11d791|geodesic space]]. 
+
+^142a7d
 
 Proof uses [[#^4414ec]]. For example, $\mathbb{R}^{2}\setminus \{ 0 \}$ with $\lVert \cdot \rVert$ is not complete; it is also not a geodesic metric space. $\mathbb{R}^{2}\setminus \{ 0 \}\cong S^{1}\times \mathbb{R}$, however, satisfies the hypotheses. 
+
+> [!Definition] Proper metric space
+> A metric space is said to be **proper** if for every $x\in X$ and $r> 0$, the closed ball $\overline{B}(x, r)$ is compact. 
 
 > [!Corollary]
 > A length space is proper iff it is complete and locally compact. 
@@ -69,7 +76,7 @@ A variation of [[#^3f63a7]]:
 
 
 > [!Theorem]
-> Suppose $X$ is a compact geodesic metric space which is semi-locally simply connected. Then every loop $S^{1}\to X$ is either null-homotopic or homotopic to a closed local geodesic. 
+> Suppose $X$ is a compact geodesic metric space which is [[Semi-locally simply connected spaces#^6ca9d2|semi-locally simply connected]]. Then every loop $S^{1}\to X$ is either null-homotopic or homotopic to a closed local geodesic. 
 
 
 Proof uses [[LEC CAL1 8#^1e576d|Lebesgue number lemma]].

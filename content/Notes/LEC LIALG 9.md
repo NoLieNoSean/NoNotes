@@ -145,6 +145,8 @@ Let $A$ be an $F$-algebra. [[LEC LIALG 2#Lie algebras of derivations|Recall]] th
 > > Show that $\mathfrak{A}_{a}\mathfrak{A}_{b}\subseteq \mathfrak{A}_{a+b}$. 
 > 
 
+^eea5fe
+
 
 > [!Lemma]
 > Let $F$ be a field, and $K$ be a subfield of $F$. Treat $F$ as a vector space over $K$. Let $f:F\to F$ be a $K$-linear map. Let $\{ a_{1}, \dots, a_{r} \}$ be a finite sequence of elements of $F$. Let $b_{i}:=f(a_{i})$ for $1\leqslant i\ \leqslant r$. Then there is a polynomial $p(T)\in F[T]T$ such that $p(a_{i})=b_{i}$ for all $1\leqslant i\leqslant r$. 

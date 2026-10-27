@@ -5,6 +5,7 @@ time: 11:54
 tags:
   - GGT
   - Lecture
+desc: The Gromov-Hausdorff convergence I
 ---
 Let $X$ be a metric space. Let $A, B\subseteq X$ be compact. Define the Hausdorff distance $d_{H}(A, B)$ to be
 $$

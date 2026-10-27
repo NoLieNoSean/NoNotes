@@ -70,7 +70,14 @@ Exhibit B: The product topology on $\mathbb{R}^{\mathbb{N}}$ is metrizable
 [[CW complexes]]
 [[More on Covering Spaces]]
 [[Homology]]
+[[Groups acting on spaces]]
+# Misc articles
+
+[[Semi-locally simply connected spaces]]
+[[Topological groups]]
 
 ---
 
 [[AS TOP 1]]
+
+

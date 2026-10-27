@@ -6,6 +6,7 @@ tags:
   - Lecture
   - GGT
 desc: Pulling a length metric back to a covering space
+P1: true
 ---
 # Length metrics on covering spaces
 

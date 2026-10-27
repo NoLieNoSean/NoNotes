@@ -32,6 +32,9 @@ SORT date ASC
 [[LEC GANA1 11]]
 [[LEC GANA1 12]]
 [[LEC GANA1 13]]
+[[LEC GANA1 14]] %% you missed this one%%
+[[LEC GANA1 15]] %% you missed this one%%
+[[LEC GANA1 16]] %% you missed this one%%
 # Assignments
 
 [[AS GANA1 1]]

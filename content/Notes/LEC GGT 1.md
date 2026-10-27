@@ -5,6 +5,7 @@ time: 11:52
 tags:
   - GGT
   - Lecture
+desc: The poincare metric
 ---
 Gromov's essay?
 

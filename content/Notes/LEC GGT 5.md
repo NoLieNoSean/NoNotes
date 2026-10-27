@@ -5,6 +5,7 @@ time: 11:54
 tags:
   - GGT
   - Lecture
+desc: Types of isometries of H
 ---
 [!Proposition]
 Let $A\in SL_{2}(\mathbb{R})$ act on $\mathbb{H}$. 

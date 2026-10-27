@@ -5,7 +5,7 @@ time: 11:52
 tags:
   - GGT
   - Lecture
-desc: developed the ping-pong method for producing free subgroups, then began applying it to linear groups, particularly SL2(C) / PSL2(C), as part of the proof of the Tits alternative.
+desc: the ping-pong method for producing free subgroups, its applying it to linear groups, particularly SL2(C) / PSL2(C), as part of the proof of the Tits alternative.
 ---
 
 # Ping pong lemma

@@ -5,6 +5,7 @@ time: 11:56
 tags:
   - Lecture
   - GGT
+desc: Curvature of H
 ---
 Aim: $\mathbb{H}$ has constant curvature $-1$. 
 

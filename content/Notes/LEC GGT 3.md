@@ -6,4 +6,3 @@ tags:
   - Lecture
   - GGT
 ---
-?

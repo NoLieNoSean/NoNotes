@@ -3,6 +3,7 @@ id: "518"
 date: 2026-08-12
 time: 01:46
 tags:
+  - TOP
 ---
 # Lifting properties
 
@@ -10,6 +11,8 @@ We generalize some observations from [[Homotopy, Covering Spaces and the Fundame
 
 > [!Proposition] Lifts are unique, @leeIntroductionTopologicalManifolds2011 Thm 11.12
 > Let $q:E\to X$ be a covering map. Suppose $Y$ is connected, $\varphi:Y\to X$ is continuous, and $\tilde{\varphi}_{1}, \tilde{\varphi}_{2}:Y\to E$ are lifts of $\varphi$ that agree at some point of $Y$. Then $\tilde{\varphi}_{1}$ is identically equal to $\tilde{\varphi}_{2}$. 
+
+^7160cb
 
 > [!Proposition] Homotopies lift, @leeIntroductionTopologicalManifolds2011 Thm 11.13
 > Let $q:E\to X$ be a covering map, and let $Y$ be a locally connected space. Suppose $\varphi_{0}, \varphi_{1}:Y\to X$ are continuous maps, $H:Y\times I\to X$ is a homotopy form $\varphi_{0}$ to $\varphi_{1}$, and $\tilde{\varphi}_{0}:Y\to E$ is any lift of $\varphi_{0}$. Then there exists a unique lift of $H$ to a homotopy $\tilde{H}$ satisfying $\tilde{H}_{0}=\tilde{\varphi}_{0}$. If $H$ is stationary on some subset $A\subseteq Y$, then so is $\tilde{H}$. 
@@ -67,6 +70,8 @@ There is an important special case in which the subgroup $q_{*}(\pi_{1})(E, e)$ 
 > 
 > A covering homomorphism that is also a homeomorphism is called a **covering isomorphism**. 
 
+^6aeb93
+
 
 > [!Proposition] Properties of Covering Homomorphisms, @leeIntroductionTopologicalManifolds2011 Prp 11.36
 > Let $q_{1}:E_{1}\to X$ and $q_{2}:E_{2}\to X$ be coverings of the same space $X$. 
@@ -104,11 +109,40 @@ There is an important special case in which the subgroup $q_{*}(\pi_{1})(E, e)$ 
 ^f57977
 
 > [!Definition] Universal Covering Space
-> Because of [[#^f57977]], any covering of $X$ by a comply connected space $\tilde{X}$ is called a **universal covering**, and $\tilde{X}$ is called the **universal covering space of $X$**. 
+> Any covering of $X$ by a simply connected space $\tilde{X}$ is called a **universal covering**. These are unique up to isomorphism by [[#^f57977]].
 
 ^357bab
+
+> [!Remark]
+> A necessary condition for $X$ to have a simply connected covering space is that $X$ must be [[Semi-locally simply connected spaces|semilocally simply connected]]. To see this, suppose $p:\tilde{X}\to X$ is a covering space with $\tilde{X}$ simply connected. Every point $x\in X$ has a neighborhood $U$ having a lift $\tilde{U}\subseteq \tilde{X}$ projecting homeomorphically to $U$ by $p$. Each loop in $U$ lifts to a loop in $\tilde{U}$, and the lifted loop is nullhomotopic in $\tilde{X}$. Composing this nullhomotopy with $p$, the original loop in $U$ is nullhomotopic in $X$. 
+
+^efb75c
 
 > [!Theorem] Existence of the Universal Cover, @leeIntroductionTopologicalManifolds2011 Thm 11.43
 > Every connected and locally simply connected topological space (in particular, every connected manifold) has a [[#^357bab|universal covering space]]. 
 
 #t Read the (rather long) proof of this theorem sometime 
+
+> [!Theorem] @hatcherAlgebraicTopology2002 [p. 63]
+> Every path connected, locally path connected, and semilocally simply connected topological space has a universal covering space. 
+> 
+
+
+---
+
+# Classification of covering spaces
+
+We restrict attention to spaces that are locally path connected, connected (equivalently, path connected), and semilocally simply connected ([[#^efb75c]]).
+
+> [!Proposition] @hatcherAlgebraicTopology2002 1.36
+> Suppose $X$ is path connected, locally path connected, and semilocally simply connected. Then for every subgroup $H\subseteq \pi_{1}(X, x_{0})$ there is a covering space $p:X_{H}\to X$ such that $p_{*}(\pi_{1}(X_{H}, \tilde{x}_{0}))=H$ for a suitably chosen base point $\tilde{x}_{0}\in X_{H}$. 
+
+> [!Proposition] @hatcherAlgebraicTopology2002 1.37
+> If $X$ is path connected and locally path connected, then two path connected coving spaces $p_{1}:\tilde{X}_{1}\to X$ and $p_{2}:\tilde{X}_{2}\to X$ are [[#^6aeb93|isomorphic]] via an isomorphism taking a basepoint $\tilde{x}_{1}\in p_{1}^{-1}(x_{0})$ to a basepoint $\tilde{x}_{2}\in p_{2}^{-1}(x_{0})$ iff $p_{1*}(\pi_{1}(\tilde{X}_{1}, \tilde{x}_{1}))=p_{2*}(\pi_{1}(\tilde{X}_{2}, \tilde{x}_{2}))$. 
+
+> [!Theorem]
+> Let $X$ be path connected, locally path connected, and semilocally simply connected. Then there is a bijection between the set of basepoint preserving isomorphism classes of path connected covering spaces $p:(\tilde{X}, \tilde{x}_{0})\to(X, x_{0})$ and the set of subgroups of $\pi_{1}(X, x_{0})$, obtained by associating the subgroup $p_{*}(\pi_{1}(\tilde{X}, \tilde{x}_{0}))$ to the covering space $(\tilde{X}, \tilde{x}_{0})$. 
+
+See @rookiecookieCoveringSpaces for examples. 
+
+

@@ -59,6 +59,8 @@ $$
 > 
 > Conversely, if $f$ restricts to a diffeomorphism between neighborhoods of $p$ and $f(p)$, then $Df_{p}$ is a linear isomorphism. 
 
+^0d2d87
+
 > [!Proposition] Principle of Lagrange multipliers
 > Let $U\subseteq \mathbb{R}^{k}$ be open, and let $F, g^{1}, \dots, g^{m}:U\to \mathbb{R}$ be smooth, where $m \leqslant k$. Suppose that $p\in U$ satisfies $g^{i}(p)=0$ for $i=1, \dots, m$. Assume that the vectors $\nabla g^{1}(p), \dots, \nabla g^{m}(p)$ are linearly independent. If $F$ has a local extremum at $p$ subject to the constraints $g^{i}(p)=0$ for $i=1, \dots, m$, then there exist $\lambda_{1}, \dots, \lambda_{m}\in \mathbb{R}$ such that
 > $$

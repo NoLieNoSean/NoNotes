@@ -5,4 +5,5 @@ time: 11:50
 tags:
   - Lecture
   - GGT
+desc: Growth and rigidity
 ---

@@ -41,3 +41,10 @@ SORT date ASC
 [[LEC LIALG 16]]
 [[LEC LIALG 17]]
 [[LEC LIALG 18]]
+[[LEC LIALG 19]]
+
+---
+
+# Assignment 1
+
+[[AS LIALG 1]]
