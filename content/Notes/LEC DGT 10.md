@@ -8,6 +8,8 @@ tags:
 desc: exponential map, tangent bundle
 P1: true
 ---
+# The exponential map and the tangent bundle
+
 > [!Notation]
 > For $p\in M$ and $w\in T_{p}M$, let $\gamma_{w}:I_{w}\to M$ denote [[LEC DGT 9#^ba5caa|the maximal geodesic]] with $\gamma_{w}(0)=p$ and $\gamma_{w}'(0)=w$.
 
@@ -39,7 +41,7 @@ Notes:
 > [!Definition] The tangent bundle
 > Let $M^{n}\subseteq \mathbb{R}^{k}$ be a manifold. The **tangent bundle** of $M$, $TM=\{ (p, v)\in \mathbb{R}^{k}\times \mathbb{R}^{k}:p\in M, v\in T_{p}M \}$.
 
-> [!Proposition]
+> [!Theorem]
 > $TM\subseteq \mathbb{R}^{2k}$ is a manifold of dimension $2n$. 
 
 > [!Definition]
@@ -55,7 +57,7 @@ The following two lemmas will be proved in the graduate manifolds course.
 > [!Lemma]
 > Suppose $F\in \mathfrak{X}(M)$. Denote the unique maximal integral curves of [[#^37f71e]] by $y_{p}:I_{p}\to M$, $y_{p}(0)=p$. Define $\mathcal{D}=\{ (t, p) \in \mathbb{R}\times M\vartheta\in I_{p}\}$, $\theta:\mathcal{D}\to M$ by $\theta(t, p)=y_{p}(t)$. Then $\mathcal{D}$ is open in $\mathbb{R}\times M$, and $\theta$ is smooth. 
 
-> [!Proposition]
+> [!Theorem]
 > $\mathcal{E}\subseteq TM$ is open and $\exp:\mathcal{E}\to M$ is smooth. 
 
 > [!Proposition]
@@ -73,10 +75,6 @@ The following two lemmas will be proved in the graduate manifolds course.
 > > $$
 > > 
 
+^1a092d
 
-By the [[LEC DGT 3#^0d2d87|inverse function theorem]], there exists $\epsilon> 0$ and an open neighborhood $U\subseteq M$ of $p$ such that $\exp_{p}:B_{\epsilon}(0)\to U$ is a diffeomorphism. 
 
-> [!Definition] normal neighborhood and parameterization
-> An open neighborhood $U$ of $p\in M$ is called a **normal neighborhood** of $p$ if there exists a star shaped neighborhood $V$ of $0$ in $T_{p}M$ such that $\exp_{p}:V\to U$ is a diffeomorphism. 
-> 
-> Suppose $\{ b_{i} \}$ is an orthonormal basis of $T_{p}M$ and $B:\mathbb{R}^{n}\to T_{p}M$ maps $e_{i}\mapsto b_{i}$. Let $\Omega=B^{-1}(V)$. Then, $\varphi:\Omega\to U$ defined by $\varphi=\exp_{p}\circ B$ is called a **normal parameterization** of $U$. 

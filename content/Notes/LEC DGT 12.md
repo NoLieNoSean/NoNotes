@@ -5,5 +5,6 @@ time: 19:37
 tags:
   - Lecture
   - DGEO
+pics: true
 ---
 %% see Surya's notes%%

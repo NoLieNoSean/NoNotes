@@ -5,4 +5,5 @@ time: 10:30
 tags:
   - Lecture
   - DGEO
+pics: true
 ---

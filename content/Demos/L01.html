@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>L(1,0) = S³</title>
+<style>
+  body { margin:0; overflow:hidden; background:#07081a; color:#eee; font-family:system-ui,sans-serif; }
+  #info { position:absolute; top:12px; left:12px; z-index:10; max-width:380px;
+          background:rgba(10,12,30,0.78); padding:12px 14px; border-radius:8px;
+          border:1px solid #2a2f55; backdrop-filter: blur(6px); }
+  #info h3 { margin:0 0 6px 0; color:#9ad; }
+  #info p  { margin:4px 0; font-size:13px; line-height:1.45; }
+  #bar { position:absolute; bottom:14px; left:50%; transform:translateX(-50%); z-index:10;
+         display:flex; gap:6px; background:rgba(10,12,30,0.78); padding:8px;
+         border-radius:8px; border:1px solid #2a2f55; }
+  .btn { padding:7px 13px; background:#1a1f3a; color:#cdd; border:1px solid #3a4070;
+         border-radius:5px; cursor:pointer; font-size:12px; }
+  .btn:hover { background:#2a3058; }
+  .btn.active { background:#2a6a5a; border-color:#5ad; color:#fff; }
+  .legend { display:inline-block; width:10px; height:10px; border-radius:50%;
+            vertical-align:middle; margin-right:4px; }
+</style>
+</head>
+<body>
+<div id="info">
+  <h3>L(1,0) ≅ S³</h3>
+  <p id="stage-text">Stage 1 — Two solid cylinders. Red = longitude, blue = meridian.</p>
+  <p style="font-size:11px;color:#89a">
+    <span class="legend" style="background:#ff6666"></span>longitude
+    <span class="legend" style="background:#66aaff"></span>meridian
+  </p>
+</div>
+<div id="bar">
+  <button class="btn active" onclick="go(0)">1 · Cylinders</button>
+  <button class="btn"        onclick="go(1)">2 · Tori</button>
+  <button class="btn"        onclick="go(2)">3 · Interlock</button>
+  <button class="btn"        onclick="go(3)">4 · Glue m↔l</button>
+  <button class="btn"        onclick="go(4)">5 · S³</button>
+  <button class="btn"        onclick="auto=!auto">Auto</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ---------- scene ---------- */
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x07081a);
+scene.fog = new THREE.Fog(0x07081a, 18, 40);
+
+const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 100);
+camera.position.set(0, 3.2, 9);
+
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+const dl = new THREE.DirectionalLight(0xffffff, 0.9);
+dl.position.set(6, 10, 5); scene.add(dl);
+const dl2 = new THREE.DirectionalLight(0x88aaff, 0.35);
+dl2.position.set(-6, -3, -4); scene.add(dl2);
+
+/* ---------- shared materials ---------- */
+const matA = new THREE.MeshPhysicalMaterial({
+  color:0x4488ff, transparent:true, opacity:0.55,
+  roughness:0.35, metalness:0.05, side:THREE.DoubleSide,
+  clearcoat:0.4
+});
+const matB = new THREE.MeshPhysicalMaterial({
+  color:0xff6644, transparent:true, opacity:0.55,
+  roughness:0.35, metalness:0.05, side:THREE.DoubleSide,
+  clearcoat:0.4
+});
+const matS3 = new THREE.MeshPhysicalMaterial({
+  color:0xccaaee, transparent:true, opacity:0.7,
+  roughness:0.25, metalness:0.1, side:THREE.DoubleSide,
+  clearcoat:0.6
+});
+
+/* ---------- helpers: build a cylinder whose vertices we can morph into a torus ----------
+   We build the cylinder as a tube of (Nt+1) rings x (Nr+1) points around,
+   matching the layout of a TorusGeometry(tubularSegments=Nt, radialSegments=Nr).
+   Then morphing is just lerping vertex positions. */
+const Nt = 64, Nr = 32;
+
+function makeCylinderGeometry(R, H) {
+  // Layout: ring index j in [0..Nt], angle index i in [0..Nr]
+  // vertex(i,j) = ( R*cos(2π i/Nr),  -H/2 + H*j/Nt,  R*sin(2π i/Nr) )
+  const positions = new Float32Array((Nt+1)*(Nr+1)*3);
+  const indices = [];
+  for (let j=0; j<=Nt; j++) {
+    const y = -H/2 + H*j/Nt;
+    for (let i=0; i<=Nr; i++) {
+      const a = 2*Math.PI*i/Nr;
+      const k = (j*(Nr+1) + i)*3;
+      positions[k]   = R*Math.cos(a);
+      positions[k+1] = y;
+      positions[k+2] = R*Math.sin(a);
+    }
+  }
+  for (let j=0; j<Nt; j++) {
+    for (let i=0; i<Nr; i++) {
+      const a = j*(Nr+1) + i;
+      const b = a + 1;
+      const c = a + (Nr+1);
+      const d = c + 1;
+      indices.push(a,c,b, b,c,d);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  g.setIndex(indices);
+  g.computeVertexNormals();
+  return g;
+}
+
+function makeTorusGeometry(R, r) {
+  const positions = new Float32Array((Nt+1)*(Nr+1)*3);
+  const indices = [];
+  for (let j=0; j<=Nt; j++) {
+    const u = 2*Math.PI*j/Nt;
+    for (let i=0; i<=Nr; i++) {
+      const v = 2*Math.PI*i/Nr;
+      const k = (j*(Nr+1) + i)*3;
+      positions[k]   = (R + r*Math.cos(v))*Math.cos(u);
+      positions[k+1] = r*Math.sin(v);
+      positions[k+2] = (R + r*Math.cos(v))*Math.sin(u);
+    }
+  }
+  for (let j=0; j<Nt; j++) {
+    for (let i=0; i<Nr; i++) {
+      const a = j*(Nr+1) + i;
+      const b = a + 1;
+      const c = a + (Nr+1);
+      const d = c + 1;
+      indices.push(a,c,b, b,c,d);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  g.setIndex(indices);
+  g.computeVertexNormals();
+  return g;
+}
+
+/* ---------- longitude / meridian curves on a torus ----------
+   Meridian: u = const, v runs 0..2π   (small circle around tube)
+   Longitude: v = const, u runs 0..2π  (big circle around hole) */
+function torusCurve(R, r, kind, phase) {
+  // kind: 'm' or 'l'; phase: offset along the other direction
+  const pts = [];
+  const N = 128;
+  for (let k=0; k<=N; k++) {
+    const t = 2*Math.PI*k/N;
+    let u,v;
+    if (kind==='m') { u = phase; v = t; }
+    else            { u = t;     v = phase; }
+    pts.push(new THREE.Vector3(
+      (R + r*Math.cos(v))*Math.cos(u),
+      r*Math.sin(v),
+      (R + r*Math.cos(v))*Math.sin(u)
+    ));
+  }
+  return new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints(pts),
+    new THREE.LineBasicMaterial({ color: kind==='m' ? 0x66aaff : 0xff6666, linewidth:2 })
+  );
+}
+
+/* same curves but drawn on the cylinder (before morph) */
+function cylCurve(R, H, kind, phase) {
+  const pts = [];
+  const N = 128;
+  for (let k=0; k<=N; k++) {
+    const t = k/N;
+    let a, y;
+    if (kind==='m') { a = 2*Math.PI*t; y = phase; }           // circle around
+    else            { a = phase;      y = -H/2 + H*t; }        // line along
+    pts.push(new THREE.Vector3(R*Math.cos(a), y, R*Math.sin(a)));
+  }
+  return new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints(pts),
+    new THREE.LineBasicMaterial({ color: kind==='m' ? 0x66aaff : 0xff6666 })
+  );
+}
+
+/* ---------- build the two bodies ---------- */
+const Rbig = 1.6, Rsmall = 0.55, H = 3.2;
+const cylA = makeCylinderGeometry(Rsmall, H);
+const torA = makeTorusGeometry(Rbig, Rsmall);
+const cylB = makeCylinderGeometry(Rsmall, H);
+const torB = makeTorusGeometry(Rbig, Rsmall);
+
+const bodyA = new THREE.Mesh(cylA, matA);
+const bodyB = new THREE.Mesh(cylB, matB);
+scene.add(bodyA, bodyB);
+
+// Curves (one meridian + one longitude on each body)
+const curvesA = new THREE.Group();
+curvesA.add(cylCurve(Rsmall, H, 'm', 0));
+curvesA.add(cylCurve(Rsmall, H, 'l', 0));
+bodyA.add(curvesA);
+
+const curvesB = new THREE.Group();
+curvesB.add(cylCurve(Rsmall, H, 'm', 0));
+curvesB.add(cylCurve(Rsmall, H, 'l', Math.PI)); // flipped orientation on B
+bodyB.add(curvesB);
+
+// Initial placement: two cylinders side by side
+bodyA.position.set(-2.2, 0, 0);
+bodyB.position.set( 2.2, 0, 0);
+
+/* ---------- S³ ball (final stage) ---------- */
+const sphereGeo = new THREE.SphereGeometry(2.2, 64, 48);
+// Paint upper/lower hemispheres with matching colors so identification is visible
+const cols = new Float32Array(sphereGeo.attributes.position.count*3);
+for (let i=0; i<sphereGeo.attributes.position.count; i++) {
+  const y = sphereGeo.attributes.position.getY(i);
+  // upper hemisphere color = lower hemisphere color at same (x,z) → identification
+  const x = sphereGeo.attributes.position.getX(i);
+  const z = sphereGeo.attributes.position.getZ(i);
+  const hue = (Math.atan2(z,x)/(2*Math.PI) + 0.5);
+  const c = new THREE.Color().setHSL(hue, 0.55, 0.55 + 0.15*Math.sign(y));
+  cols[i*3]=c.r; cols[i*3+1]=c.g; cols[i*3+2]=c.b;
+}
+sphereGeo.setAttribute('color', new THREE.BufferAttribute(cols,3));
+const sphereMat = new THREE.MeshPhysicalMaterial({
+  vertexColors:true, transparent:true, opacity:0.85,
+  roughness:0.25, metalness:0.05, side:THREE.DoubleSide, clearcoat:0.6
+});
+const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+sphere.visible = false;
+scene.add(sphere);
+
+// Equator ring to emphasise the identified boundary
+const eqPts = [];
+for (let k=0; k<=128; k++) {
+  const a = 2*Math.PI*k/128;
+  eqPts.push(new THREE.Vector3(2.2*Math.cos(a), 0, 2.2*Math.sin(a)));
+}
+const equator = new THREE.Line(
+  new THREE.BufferGeometry().setFromPoints(eqPts),
+  new THREE.LineBasicMaterial({ color:0xffee88 })
+);
+equator.visible = false;
+scene.add(equator);
+
+/* ---------- morph helper: lerp positions of a BufferGeometry ---------- */
+function morphPositions(geom, targetPositions, t) {
+  const pos = geom.attributes.position.array;
+  for (let i=0; i<pos.length; i++) pos[i] += (targetPositions[i]-pos[i])*t;
+  geom.attributes.position.needsUpdate = true;
+  geom.computeVertexNormals();
+}
+const torAPos = torA.attributes.position.array.slice();
+const torBPos = torB.attributes.position.array.slice();
+const cylAPos = cylA.attributes.position.array.slice();
+const cylBPos = cylB.attributes.position.array.slice();
+
+/* ---------- stage machine ---------- */
+const stageTexts = [
+  "Stage 1 — Two solid cylinders. Red = longitude, blue = meridian.",
+  "Stage 2 — Identify top & bottom disks of each cylinder → two solid tori.",
+  "Stage 3 — Rotate one torus 90° and interlock them (Hopf-link configuration).",
+  "Stage 4 — Glue: meridian of B is identified with longitude of A  (this is L(1,0)).",
+  "Stage 5 — Collapse the wedged solid into the other. Result: a 3-ball whose upper and lower hemispheres are identified = S³."
+];
+
+let current = 0, target = 0, tProg = 1;
+let auto = false, autoTimer = 0;
+
+function go(n) {
+  target = Math.max(0, Math.min(4, n));
+  tProg = 0;
+  document.getElementById('stage-text').textContent = stageTexts[target];
+  document.querySelectorAll('.btn').forEach((b,i)=> b.classList.toggle('active', i===target));
+}
+
+/* ---------- animation ---------- */
+const clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05);
+
+  // progress toward target
+  if (tProg < 1) {
+    tProg = Math.min(1, tProg + dt*0.9);
+    const e = smooth(tProg);
+
+    // Stage 0 → 1 : cylinder → torus (both bodies)
+    if (target >= 1) {
+      morphPositions(bodyA.geometry, torAPos, e*0.12);
+      morphPositions(bodyB.geometry, torBPos, e*0.12);
+    } else {
+      morphPositions(bodyA.geometry, cylAPos, e*0.12);
+      morphPositions(bodyB.geometry, cylBPos, e*0.12);
+    }
+
+    // Stage 1 → 2 : rotate B by 90° and bring them together
+    if (target >= 2) {
+      const k = Math.min(1, Math.max(0, (tProg-0.0)/0.9));
+      const s = smooth(k);
+      bodyA.position.x += (-bodyA.position.x) * 0.1;
+      bodyB.position.x += (-bodyB.position.x) * 0.1;
+      bodyB.rotation.z += (Math.PI/2 - bodyB.rotation.z) * 0.1;
+      // slide them so they interlock
+      bodyA.position.y += (0 - bodyA.position.y)*0.1;
+      bodyB.position.y += (0 - bodyB.position.y)*0.1;
+    } else if (target < 2) {
+      bodyB.rotation.z += (0 - bodyB.rotation.z)*0.1;
+      bodyA.position.x += (-2.2 - bodyA.position.x)*0.1;
+      bodyB.position.x += ( 2.2 - bodyB.position.x)*0.1;
+    }
+
+    // Stage 3 → 4 : merge into S³ sphere
+    if (target >= 4) {
+      const k = Math.min(1, Math.max(0, tProg));
+      const s = smooth(k);
+      matA.opacity = 0.55*(1-s);
+      matB.opacity = 0.55*(1-s);
+      sphere.visible = true;
+      equator.visible = true;
+      sphere.scale.setScalar(0.2 + 0.8*s);
+      sphereMat.opacity = 0.85*s;
+    } else {
+      matA.opacity = 0.55;
+      matB.opacity = 0.55;
+      sphere.visible = false;
+      equator.visible = false;
+    }
+  }
+
+  // gentle idle rotation
+  if (target >= 2 && target < 4) {
+    scene.rotation.y += dt*0.15;
+  }
+  if (target === 4) {
+    sphere.rotation.y += dt*0.2;
+    equator.rotation.y += dt*0.2;
+  }
+
+  // auto-advance
+  if (auto) {
+    autoTimer += dt;
+    if (autoTimer > 3.2) { autoTimer = 0; go((target+1)%5); }
+  }
+
+  controls.update();
+  renderer.render(scene, camera);
+}
+function smooth(x){ return x*x*(3-2*x); }
+
+animate();
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+</script>
+</body>
+</html>

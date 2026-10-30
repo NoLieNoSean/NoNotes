@@ -5,29 +5,64 @@ time: 14:03
 tags:
   - DGEO
   - Lecture
----
-In the previous lecture, we showed that $\exp_{p}:\mathcal{E}_{p}\to M$, $\mathcal{E}_{p}\subseteq T_{p}M$ is a star shaped open neighborhood of $0$, $D(\exp_{p})|_{0}:T_{p}M\to T_{p}M$ is $\mathrm{id}$. By the inverse function theorem, there exist open neighborhoods $V\subseteq T_{p}M$ of $0$ and $U\subseteq M$ of $p$ such that $\exp_{p}:V\to U$ is a diffeomorphism. 
-
+pics: true
 ---
 
-[!Definition]
-let $p\in U\subseteq M$. We say that $U$ is a normal neighborhood of $p$ if there exists a star shaped open neighborhood $V\subseteq T_{p}M$ of $0$ such that $\exp_{p}:V\to U$ is a diffeomorphism. 
+Recall [[LEC DGT 10#^1a092d]]. By the [[LEC DGT 3#^0d2d87|inverse function theorem]], there exists $\epsilon> 0$ and an open neighborhood $U\subseteq M$ of $p$ such that $\exp_{p}:B_{\epsilon}(0)\to U$ is a diffeomorphism. 
 
-Fix ONB $\{ b_{i} \}$ of $T_{p}M$. Let $B:\mathbb{R}^{n}\to T_{p}M$ be the linear isomorphism sending $e_{i}\mapsto b_{i}$. Let $\Omega=B^{-1}V$, $\varphi:\Omega\to U$ by $\varphi:\exp_{p}\circ B$. We call $\varphi ^{-1}$ a normal coordinate system on $U$ centered at $p$, $\varphi ^{-1}(p)=0\in \mathbb{R}^{n}$. 
+> [!Definition] normal neighborhood and parameterization
+> An open neighborhood $U$ of $p\in M$ is called a **normal neighborhood** of $p$ if there exists a star shaped neighborhood $V$ of $0$ in $T_{p}M$ such that $\exp_{p}:V\to U$ is a diffeomorphism. 
+> 
+> Suppose $\{ b_{i} \}$ is an orthonormal basis of $T_{p}M$ and $B:\mathbb{R}^{n}\to T_{p}M$ maps $e_{i}\mapsto b_{i}$. Let $\Omega=B^{-1}(V)$. Then, $\varphi:\Omega\to U$ defined by $\varphi=\exp_{p}\circ B$ is called a **normal parameterization** of $U$. We call $\varphi ^{-1}$ a **normal coordinate system** (NCS) on $U$. 
 
-[!Lemma]
-Let $\varphi$ be a local parameterization corresponding to a NCS centered at $p$ then $\varphi_{i}|_{p}=b_{i}$. 
+^1b1064
 
-[!Lemma]
-Let $\varphi$, $\psi$ be two local parameterizations corresponding to two NCS centered at $p$, $\varphi ^{-1}=(x^{1}, \dots, x^{n})$, $\psi ^{-1}=(y^{1}, \dots, y^{n})$. Then there exists $A=(A^{j}_{i})\in O(n)$ such that $y^{j}=A^{j}_{i}x^{i}$. 
+> [!Lemma]
+> Let $\varphi:\Omega\to U$ be a normal parameterization around $p\in M$. Then, $\varphi_{i}|_{p}=b_{i}$. 
+> 
+> > [!Proof]-
+> > 
+> > $$
+> > \begin{align}
+> > \varphi_{i}|_{p} & =D\varphi_{0}(e_{i}) \\
+> > 	 & =D(\exp_{p})_{0}Be_{i} \\
+> > 	 &  =b_{i}.
+> > 
+> > \end{align}
+> > $$
+> > 
 
-[!Proof]-
-$\varphi ^{-1}\circ \psi: \tilde{\Omega}\to \Omega$. Suppose $\varphi$ is obtained using $B$, and $\psi$ is obtained using $\tilde{B}$. Then, 
-$$
-\begin{align}
-\varphi ^{-1}\circ \psi=B^{-1}\circ \exp_{p}|_{v}^{-1}\circ \exp_{p}\circ \tilde{B}=B^{-1}\tilde{B}\in O(n).
-\end{align}
-$$
+> [!Lemma]
+> Let $\varphi$, $\psi$ be two normal parameterizations around $p\in M$, $\varphi ^{-1}=(x^{1}, \dots, x^{n})$, $\psi ^{-1}=(y^{1}, \dots, y^{n})$. Then there exists $A=(A^{j}_{i})\in O(n)$ such that $y^{j}=A^{j}_{i}x^{i}$. 
+> 
+> > [!Proof]-
+> > 
+> > $\varphi ^{-1}\circ \psi: \tilde{\Omega}\to \Omega$. Suppose $\varphi$, $\psi$ are obtained using $B, \tilde{B}:\mathbb{R}^{n}\to T_{p}M$ respectively. 
+> > 
+> > Then, 
+> > $$
+> > \begin{align}
+> > \varphi ^{-1}\circ \psi=B^{-1}\circ \exp_{p}^{-1}\circ \exp_{p}\circ \tilde{B}=B^{-1}\tilde{B}\in O(n).
+> > \end{align}
+> > $$
+> > 
+> 
+
+[!Remark]
+
+Suppose $F:M\to N$ is a local isometry. Let $p\in M$ have a neighborhood $U'$ such that $F|_{U}$ is an isometry. Let $U\subseteq U'$ and $\epsilon> 0$ be such that $\exp_{p}:B_{\epsilon}(0)\to U$ is a diffeomorphism. Then, the following diagram commutes:
+
+```latex
+% latex-id: 0620-cb4d-f6d3-492b-8217
+\begin{document}
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG1hdGhjYWwgRV9wIl0sWzEsMCwiXFxtYXRoY2FsIEVfe0YocCl9Il0sWzAsMSwiTSJdLFsxLDEsIk4iXSxbMiwzLCJGIiwyXSxbMCwxLCJERl9wIl0sWzAsMiwiXFxleHBfcCIsMl0sWzEsMywiXFxleHBfe0YocCl9Il1d
+\[\begin{tikzcd} {\mathcal E_p} & {\mathcal E_{F(p)}} \\ M & N \arrow["{DF_p}", from=1-1, to=1-2] \arrow["{\exp_p}"', from=1-1, to=2-1] \arrow["{\exp_{F(p)}}", from=1-2, to=2-2] \arrow["F"', from=2-1, to=2-2] \end{tikzcd}\] 
+
+\end{document}
+```
+
+Indeed, let $v\in \mathcal{E}_{p}$. By definition of $\mathcal{E}_{p}$, $1\in I_{v}$, and $\exp_{p}(v)=\gamma_{v}(1)$. Since $F$ is a local isometry, $\tilde{\gamma}:=F\circ\gamma:I_{v}$ 
+
 
 ---
 

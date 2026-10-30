@@ -25,6 +25,7 @@ Note:
 > [!Definition] Oriented intersections
 > Let $a, b$ be oriented simple closed curves in the oriented surface $S$ such that $a\pitchfork b$. An **orientation** for a point $x\in a\cap b$ is the assignment of $\pm 1$ obtained as follows: Let $(U_{\gamma}, \phi_{\gamma})$ be a chart in the orientation of $S$ with $\phi_{\gamma}(U_{\gamma})=\mathbb{R}^{2}$ such that $\phi_{\gamma}$ maps $x$ to $(0, 0)$, $a$ to the $x$-axis, $b$ to the $y$-axis. If $\phi_{\gamma\ | \ a}$ and $\phi_{\gamma\ | \ b}$ are both [[Differentiable manifolds#^51ad4d|orientation-preserving]] or both orientation-reversing, then the orientation on $x$ is $+1$. Otherwise, it is $-1$. 
 
+
 > [!Definition] Oriented Intersection Number
 > Let $a, b$ be oriented simple closed curves in the oriented surface $S$ such that $a\pitchfork b$. The sum of the orientations on points in $a\cap b$ is called the **oriented intersection number** of $a$ and $b$. 
 
@@ -33,6 +34,7 @@ Note:
 
 > [!Definition] Oriented intersection number for homotopy classes
 > For homotopy classes $[a]$, $[b]$, the **oriented intersection number**, $[a]\cdot[b]$, is the oriented intersection number of transverse representatives of the classes. 
+
 
 ---
 
@@ -47,7 +49,7 @@ Note:
 > 
 > ![[Screenshot 2026-07-09 at 23.50.46.png]]
 > 
-
+i
 ^d60470
 
 > [!Lemma] Alexander Trick

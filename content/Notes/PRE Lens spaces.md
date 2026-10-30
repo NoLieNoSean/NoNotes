@@ -35,7 +35,6 @@ $$
 
 ---
 
-
 So, given $\begin{bmatrix}q & s \\ p & r\end{bmatrix}\in\text{Mod}(\mathbb{T}^{2})$, we can precompose and postcompose by Dehn twists without altering the lens space. 
 $$
 \begin{align}
@@ -54,14 +53,11 @@ These manifest as the following matrix operations:
 - Adding a multiple of the first column to the second column
 
 ---
-
-
 # The fundamental group
 
 To familiarize ourselves with Lens spaces, let us compute their fundamental groups. 
 
 ![[Topological manifolds#^a8b826]]
-
 
 ![[Differentiable manifolds#^759a38]]
 
@@ -107,6 +103,7 @@ Thus,
 $$
 \pi_{1}(L(p, q))=\langle l_{1}, l_{2}\ | \  l_{2}^{p}=e, l_{1}=l_{2}^{r} \rangle =\mathbb{Z}/p\mathbb{Z}.
 $$
+
 
 <iframe src="https://www.desmos.com/3d/3jgsafbiss" width="100%" height= "500px"></iframe>
 

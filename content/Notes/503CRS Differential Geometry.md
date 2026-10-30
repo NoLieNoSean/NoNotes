@@ -11,7 +11,7 @@ CMI, Aug-Nov 2026, Akashdeep Dey
 ---
 
 ```dataview
-TABLE date AS "Date", desc AS "desc", P1 AS "P1", P2 AS "P2"
+TABLE date AS "Date", desc AS "desc", P1 AS "P1", P2 AS "P2", pics
 FROM #DGEO AND #Lecture 
 SORT date ASC
 ```
@@ -38,7 +38,7 @@ SORT date ASC
 [[LEC DGT 17]] %% you missed this one! %%
 [[LEC DGT 18]] %% you missed this one! %%
 [[LEC DGT 19]] %% you missed this one! %%
-
+[[LEC DGT 20]] %% you missed this one! %%
 
 
 ---
