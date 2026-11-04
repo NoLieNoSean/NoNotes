@@ -5,6 +5,7 @@ time: 15:36
 tags:
   - GANA1
   - Lecture
+desc: Banach spaces, reprise
 ---
 [!Definition]
 Two Banach spaces $X$ and $Y$ are said to be isomorphic if there exists a linear isometry $T:X\to Y$. 

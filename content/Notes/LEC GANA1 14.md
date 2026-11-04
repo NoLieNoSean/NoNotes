@@ -5,5 +5,5 @@ time: 19:17
 tags:
   - Lecture
   - GANA1
-desc: Riesz representation theorem
+desc: Hilbert spaces, the Riesz lemma
 ---

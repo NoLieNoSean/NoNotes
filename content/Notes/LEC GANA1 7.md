@@ -8,7 +8,7 @@ tags:
 P1: true
 desc: MCT corollaries, DCT and corollaries, Lp spaces, convergence in measure
 ---
-# MCT corollaries
+	# MCT corollaries
 
 We have the following immediate consequence of MCT, which allows us to swap $\sum$ and $\int$ for nonnegative measurable functions. 
 

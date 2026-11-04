@@ -5,4 +5,5 @@ time: 15:30
 tags:
   - GANA1
   - Lecture
+desc: Uniform boundedness principle
 ---

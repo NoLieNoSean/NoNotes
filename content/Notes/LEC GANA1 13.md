@@ -5,7 +5,7 @@ time: 15:31
 tags:
   - GANA1
   - Lecture
-desc: Open mapping theorem
+desc: Open mapping theorem, Closed graph theorem
 ---
 [!Remark] Remarks on H-B
 1. If $X_{0}\subseteq X$ is a NLS, there exists an embedding $X_{0}^{\star}\hookrightarrow X^{\star}$, $\varphi_{0}\xmapsto{\text{H-B}}\varphi$, $\lVert \varphi_{0} \rVert=\lVert \varphi \rVert$. Of course, this is not unique (remember the choice of $t_{0}$ in the proof of H-B). 
