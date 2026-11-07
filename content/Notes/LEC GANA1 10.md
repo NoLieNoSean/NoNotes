@@ -1,6 +1,6 @@
 ---
 id: "581"
-date: 2026-10-08
+date: 2026-10-01
 time: 20:19
 tags:
   - Lecture
