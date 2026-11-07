@@ -4,7 +4,15 @@ date: 2026-08-23
 time: 19:12
 tags:
 ---
-Let $X$ and $Y$ be complex inner product spaces throughout. We denote the Hermitian adjoint of a matrix $A$ by $A^{*}$. 
+For an $m\times n$ matrix $A$, its Hermitian adjoint $A^{*}$ is defined by $A^{*}=\overline{A^{T}}$. The following identity is the main property of the adjoint matrix:
+$$
+\begin{align}
+\langle A\mathbf{x}, \mathbf{y} \rangle=\langle \mathbf{x}, A^{*}\mathbf{y} \rangle &  & \forall \mathbf{x}\in \mathbb{C}^{n}, \mathbf{y}\in \mathbb{C}^{m}. 
+\end{align}
+$$
+The above identity is often used as the definition of the adjoint operator, and it uniquely defines the adjoint. 
+
+Let $X$ and $Y$ be complex inner product spaces throughout.
 
 > [!Definition] Isometry
 > An operator $U:X\to Y$ is called an **isometry** if it preserves the norm, 
@@ -78,6 +86,8 @@ However, if $A$ has all real eigenvalues, we can find real $U$ and $T$.
 > A=UDU^{*},
 > $$
 > where $U$ is a unitary matrix and $D$ is a *real* diagonal matrix. Moreover, if the matrix $A$ is real, $U$ can be chosen to be real. 
+
+^7e0cb4
 
 Thus, self-adjoint matrices are unitarily equivalent to a diagonal matrix. Can we characterize all such matrices? Suppose the matrix of an operator $A$ in some orthonormal basis is diagonal. It is easy to see that for a diagonal matrix $D$, 
 $$

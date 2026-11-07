@@ -23,7 +23,7 @@ See @pughRealMathematicalAnalysis2015 5§1.
 > [!Remark]
 > For a bounded linear operator $T$ on a normed space the three quantities
 > $$
-> \sup_{\lvert x \rvert \leq 1}\lvert Tx \rvert , \quad \sup_{\lvert x \rvert =1}\lvert Tx \rvert , \quad \sup_{x\ne 0}\frac{|Tx|}{|x|}
+> \sup_{\lvert x \rvert \leq 1}\lvert Tx \rvert , \quad \sup_{\lvert x \rvert =1}\lvert Tx \rvert , \quad \sup_{x\ne 0}\frac{|Tx|}{|x|}, \quad \inf \{ k:|Tx|\leqslant k|x| \}
 > $$
 > are equal, even in infinite dimensions (however, note that the supremum need not be attained in infinite dimensions, since [[LEC ANA2 7#^bd2833|the unit ball is not compact]]). 
 
