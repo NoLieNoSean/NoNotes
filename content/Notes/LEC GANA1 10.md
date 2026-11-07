@@ -6,6 +6,7 @@ tags:
   - Lecture
   - GANA1
 desc: The Riemann Integral, Banach spaces
+P1: true
 ---
 # The Riemann Integral
 
