@@ -167,7 +167,7 @@ P1: true
 
 We will show that minimizing curves are geodesics. 
 
-Let us consider the case when $\gamma$ is regular. 
+Let us first consider the case when $\gamma$ is regular. 
 
 > [!Definition] Proper variation
 > Let $\gamma:[0, 1]\to M$ be a regular curve. A **proper variation** $\Gamma$ of $\gamma$ is a smooth map $\Gamma:(-\epsilon, \epsilon)\times[0, 1]\to M$ such that the following conditions are satisfied ($\Gamma_{s}(t)=\Gamma(s, t)$, $\Gamma_{s}:[0, 1]\to M$)
@@ -231,22 +231,26 @@ Because $\Gamma(s, 0)=p$ for all $s\in(-\epsilon, \epsilon)$, $S(s, 0)=0$ for al
 ^f8884c
 
 > [!Remark]
-> Let $\Gamma$ be a proper variation of $\gamma$, $S=\partial_{s}\Gamma$, $T=\partial_{t}\Gamma$, $\hat{T}(s, t)=T(s, t)/\lVert T(s, t) \rVert$. Then, using [[LEC CAL1 17#^07b5e5]] and [[#^e556a2]], 
+> Let $\Gamma:J\times I\to M$ be smooth, $S=\partial_{s}\Gamma$, $T=\partial_{t}\Gamma$, $\hat{T}(s, t)=T(s, t)/\lVert T(s, t) \rVert$. Then, using [[LEC CAL1 17#^07b5e5]] and [[#^e556a2]], 
 > $$
 > \begin{align}
 > \frac{d}{ds} L(\Gamma_{s}) & =\frac{d}{ds}  \int_{0}^{1} \langle T, T \rangle^{1/2}  \, dt \\
 >  & = \int_{0}^{1} \langle T, T \rangle ^{-1/2}\langle D_{s}T, T \rangle  \, dt  \\
 >  & =\int_{0}^{1} \langle D_{t}S, \hat{T} \rangle  \, dt \\
 >  & =\int_{0}^{1} \left( \frac{d}{dt} \langle S, \hat{T} \rangle -\langle S, D_{t}\hat{T} \rangle \right)  \, dt \\
->  & =\langle S, \hat{T} \rangle (s, 1)-\langle S, \hat{T} \rangle (s, 0)-\int_{0}^{1} \langle S, D_{t}\hat{T} \rangle  \, dt  \\
->  & =0+0-\int_{0}^{1} \langle S, D_{t}\hat{T} \rangle  \, dt .
+>  & =\langle S, \hat{T} \rangle (s, 1)-\langle S, \hat{T} \rangle (s, 0)-\int_{0}^{1} \langle S, D_{t}\hat{T} \rangle  \, dt.
 > \end{align}
+> $$
+> If $\Gamma$ is a proper variation of a curve $\gamma$, then
+> $$
+> \frac{d}{ds} L(\Gamma_{s})=-\int_{0}^{1} \langle S, D_{t}\hat{T} \rangle  \, dt. 
 > $$
 > If $\gamma$ is minimizing, evaluating the above identity at $s=0$ gives
 > $$
 > \int_{0}^{1} \langle V, D_{t}\hat{T}|_{\gamma} \rangle  \, dt=0,
 > $$
-> where $V=S|\gamma$ is the variational field of $\Gamma$.
+> where $V=S|_{\gamma}$ is the variational field of $\Gamma$.
+
 
 ^c34b62
 
@@ -255,6 +259,8 @@ Because $\Gamma(s, 0)=p$ for all $s\in(-\epsilon, \epsilon)$, $S(s, 0)=0$ for al
 > If $\gamma$ is minimizing then $\gamma$ is smooth and the [[LEC DGT 5#^44b2ea|arc length parameterization]] of $\gamma$ is a geodesic. 
 > 
 > > [!Proof]-
+> > 
+> > First, assume $\gamma$ is regular. 
 > > 
 > > Let $\alpha\in C^{\infty}([0, 1])$ be any map such that $\alpha(0)=\alpha(1)=0$ and $\alpha> 0$ on $(0, 1)$. Let $\hat{\gamma}'(t):=\gamma'(t)/\lVert \gamma'(t) \rVert$. Define
 > > $$
@@ -276,9 +282,40 @@ Because $\Gamma(s, 0)=p$ for all $s\in(-\epsilon, \epsilon)$, $S(s, 0)=0$ for al
 > > \end{align}
 > > $$
 > > so $\tilde{\gamma}'=\hat{\gamma}'\circ\varphi$. [[LEC DGT 8#^58b7b2]] now implies $D_{t}\tilde{\gamma}'\equiv 0$. 
+> > 
+> > ---
+> > 
+> > Now suppose $\gamma$ is piecewise regular: $\gamma|_{[t_{i}, t_{i+1}]}$ is smooth for $0\leqslant i< k$, $0=t_{0}< t_{1}<\dots< t_{k}=1$. By the preceding discussion, the arc length parameterization of $\gamma|_{[t_{i}, t_{i+1}]}$ is geodesic for each $i$. 
+> > 
+> > Fix $t_{l}$, $1\leqslant l< k$. We will show that $\gamma|_{[t_{l-1}, t_{l+1}]}$ is a geodesic. Let $\varphi:\Omega\to U$ be a local parameterization around $p=\gamma(t_{l})$. Let $\chi:[0, 1]\to \mathbb{R}$ be a bump function such that $\chi(t_{l})=1$, $\text{supp}(\chi)\subseteq[t_{l-1}, t_{l+1}]$, and $\gamma(\text{supp}(\chi))\subseteq U$. 
+> > 
+> > Fix $w=D\varphi(\tilde{w})\in T_{p}M$. Define
+> > $$
+> > \begin{align}
+> > \Gamma(s, t):=\varphi(\varphi ^{-1}(\gamma(t))+s\chi(t)\tilde{w}).
+> > \end{align}
+> > $$
+> > Since $\gamma(\text{supp}(\chi))$ is compact, there exists by the Lebesgue number lemma $\epsilon> 0$ such that $\Gamma([-\epsilon, \epsilon]\times\text{supp}(\chi))\subseteq U$. Note that $\Gamma|_{[-\epsilon, \epsilon]\times[t_{i}, t_{i+1}]}$ is smooth for each $i$. Therefore, $L(\Gamma_{s}|_{[t_{i}, t_{i+1}]})$ is a smooth function of $s$ at $s=0$ for each $i$. Because $L(\Gamma_{s})=\sum_{i}L(\Gamma_{s}|_{[t_{i}, t_{i+1}]})$, it follows that $L(\Gamma_{s})$ is a smooth function of $s$ at $s=0$, and
+> > $$
+> > \frac{d}{ds} L(\Gamma_{s})=\sum_{i}\frac{d}{ds} L(\Gamma_{s}|_{[t_{i}, t_{i+1}]}).
+> > $$
+> > 
+> > By [[#^c34b62]], we have
+> > $$
+> > \begin{align}
+> > 0 & =\sum_{i}\big(\langle V, \hat{\gamma}' \rangle (t_{i+1})-\langle V, \hat{\gamma}' \rangle (t_{i})\big)-\sum_{i}\int_{t_{i}}^{t_{i+1}} \langle V, D_{t}\hat{\gamma}'\rangle  \, dt,
+> > \end{align}
+> > $$
+> > where one-sided values of $\hat{\gamma}'$ are used at partition points. 
+> > 
+> > Because $\gamma|_{[t_{i}, t_{i+1}]}$ is geodesic for each $i$, $D_{t}\hat{\gamma}'|_{[t_{i}, t_{i+1}]}=0$ for each $i$. Therefore, all integrals in the above expression are zero. Because $\text{supp}(\chi)\subseteq[t_{l-1}, t_{l+1}]$, the above expression reduces to
+> > $$
+> > \begin{align}
+> > 0 & =\langle V(t_{l}), \hat{\gamma}'_{-}(t_{l})-\hat{\gamma}'_{+}(t_{l}) \rangle   \\
+> >  & =\langle w,  \hat{\gamma}'_{-}(t_{l})-\hat{\gamma}'_{+}(t_{l})\rangle ,
+> > \end{align}
+> > $$
+> > where $\hat{\gamma}'_{-}(t_{l})=\lim_{ t \to t_{l}^{-} }\hat{\gamma}'(t)$, $\hat{\gamma}'_{+}=\lim_{ t \to t_{l}^{+} }\hat{\gamma}'(t)$. Because $w\in T_{p}M$ was arbitrary, it follows that $\hat{\gamma}'_{-}(t_{l})=\hat{\gamma}'_{+}(t_{l})$. [[LEC DGT 9#^16d892]] now implies that the arc length parameterization of $\gamma|_{[t_{l-1}, t_{l+1}]}$ is a geodesic. 
+> 
 
 ^d5b74f
-
-
-
-#q what about piecewise regular curves?

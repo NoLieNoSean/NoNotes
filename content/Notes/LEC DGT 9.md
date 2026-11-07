@@ -169,6 +169,8 @@ Suppose $L$ is a finite dimensional inner product space. Recall that there exist
 > > $J=(\gamma_{1}-\gamma_{2})^{-1}(0)\cap(\gamma_{1}'-\gamma_{2}')^{-1}(0)$ is closed in $I$. If $t_{0}\in J$, we've shown that there exists $\eta> 0$ such that $\gamma_{1}\equiv\gamma_{2}$ on $(t_{0}-\eta, t_{0}+\eta)$. Thus, $J$ is open in $I$, whence $J=I$. 
 > 
 
+^16d892
+
 
 > [!Theorem]
 > For all $p\in M$, $w\in T_{p}M$, there exists a unique maximal geodesic $\gamma:I\to M$ with $\gamma(0)=p$ and $\gamma'(0)=w$, i.e., if $\sigma:J\to M$ is another geodesic with $\sigma(0)=p$ and $\sigma'(0)=w$, then $J\subseteq I$ and $\sigma\equiv\gamma$ on $J$. 
