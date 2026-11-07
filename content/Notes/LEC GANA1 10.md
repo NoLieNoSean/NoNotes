@@ -83,3 +83,47 @@ desc: The Riemann Integral, Banach spaces
 >  $f$ is Riemann integrable iff $f$ is continuous almost everywhere.
 
 # Banach spaces
+
+> [!Definition] Normed linear spaces
+> [[LEC ALG1 21#Normed spaces]]
+
+> [!Examples]
+> - $\mathbb{R}^{n}, \mathbb{C}^{n}$ with respect to
+>   $\tilde{x}=(x_{1}, x_{2} \cdots x_{n})$
+>   $\| \tilde{x} \|_{p} = (\sum{\lvert x_{i} \rvert}^{p})^{\frac{1}{p}}$  for $p\geq 1$
+>   $\| \tilde{x} \|_{\infty } = \max_{1\leq i\leq n}{\lvert x_{i} \rvert}$ 
+>   
+> - $\mathscr{l}_{p} = \left\{ \{x_{n}\}: \sum \lvert x_{n} \rvert^{p} <\infty\right\}$ for $p\geq 1$
+>   $\|\{x_{n}\}\|_{p} = (\sum{\lvert x_{i} \rvert}^{p})^{\frac{1}{p}}$
+>   $\mathscr{l}_{\infty}=\{\{x_{n}\} \text{is bounded}\}$
+>   $\|\{x_{n}\}\|_{\infty} = \sup_{n}\lvert x_{n} \rvert$
+>   
+> - $(X, \mathscr{F},\mu)$ is a measure space.
+>   $L^{p}(X, \mathscr{F},\mu)= \left\{ f:X \to \mathbb{C} : \int \lvert f \rvert^{p}< \infty   \right\}$.
+>   $\|f\|_{p} = \left( \int \lvert f \rvert^{p} \right)^{\frac{1}{p}}$.
+>   $L^{\infty}(X, \mathscr{F},\mu) = \{ f:X\to \mathbb{C}: \lvert f(x) \rvert \leq M \, \forall x \, \in F^{c} \text{ with } \mu(F) = 0\}$
+>   $\|f\|_{\infty }= \inf \{M : \lvert f'(x) \rvert\leq M \text{ almost everywhere}\}$.
+
+> [!Definition] $B(S)$
+> For any set $S$,
+> $$
+> B(S) = \{f:S\to \mathbb{C} : \exists M \geq 0 \text{ such that } \lvert f(s) \rvert \leq M \,\, \forall s \in S\} \\
+> \|f\|_{\infty}= \sup_{s \in S}\lvert f(s) \rvert 
+> $$
+
+> [!Definition] Banach space
+
+> [!Examples]
+> - $B(S)$
+> - $C(X)\subseteq B(X)$ when $X$ is compact.
+
+> [!Definition] Quotient space
+> For normed linear space $X$, $X_{0} \subseteq X$.
+> On $X/X_{0}$ define $\|x + X_{0}\|_{0} = \inf_{x_{0}\in X_{0}} \|x + x_{0}\|$.
+
+> [!Proposition]  
+> $\|\cdot\|$ is a norm on $X/X_{0}$ iff $X_{0}$ is closed.
+> $X/X_{0}$ is Banach iff both $X$ and $X_0$ are Banach.
+
+> [!Lemma]
+> $X$ is a Banach space iff every absolutely convergent series converges.
