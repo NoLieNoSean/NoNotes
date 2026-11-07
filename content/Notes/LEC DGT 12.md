@@ -7,4 +7,4 @@ tags:
   - DGEO
 pics: true
 ---
-%% see Surya's notes%%
+ Recall [[LEC DGT 11#^d5b74f]] - If $\gamma$ is a piecewise regular length minimizing curve, then $\gamma$ is smooth and arc length parameterization of $\gamma$ is a geodesic. 

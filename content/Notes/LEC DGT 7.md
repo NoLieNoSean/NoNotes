@@ -14,7 +14,7 @@ P2: true
 > $$
 > F_{*}X|_{F(q)}:=DF_{q}(X_{q}).
 > $$
-> When $F:M\to N$ is any smooth map and $v\in T_{p}M$, we denote $Df_{p}v$ by $F_{*}v$. 
+> When $F:M\to N$ is any smooth map and $v\in T_{p}M$, we denote $DF_{p}v$ by $F_{*}v$. 
 
 ^d4f63b
 

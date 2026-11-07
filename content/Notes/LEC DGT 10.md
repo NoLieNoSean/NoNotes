@@ -60,6 +60,8 @@ The following two lemmas will be proved in the graduate manifolds course.
 > [!Theorem]
 > $\mathcal{E}\subseteq TM$ is open and $\exp:\mathcal{E}\to M$ is smooth. 
 
+^0cd610
+
 > [!Proposition]
 > $\mathcal{E}_{p}\subseteq T_{p}M$ is open and $\exp_{p}:\mathcal{E}_{p}\to M$ is smooth. 
 

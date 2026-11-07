@@ -7,7 +7,7 @@ tags:
   - Lecture
 P1: true
 P2:
-desc: Tangent spaces
+desc: Tangent spaces, Inverse function theorem, Lagrange multipliers
 ---
 # Tangent spaces
 

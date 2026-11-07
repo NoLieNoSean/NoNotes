@@ -122,7 +122,7 @@ Suppose $L$ is a finite dimensional inner product space. Recall that there exist
 > so
 > $$
 > \begin{align}
-> \boxed{D_{t}(V)=(\dot{V}^{k}+ V^{i}\dot{\gamma}^{j}(\Gamma^{k}_{ji}\circ \overline{\gamma}))\varphi_{k}|_{\gamma}U}
+> \boxed{D_{t}(V)=(\dot{V}^{k}+ V^{i}\dot{\gamma}^{j}(\Gamma^{k}_{ji}\circ \overline{\gamma}))\varphi_{k}|_{\gamma}}
 > \end{align}
 > $$
 > If we plug $V=\gamma'$, we get
@@ -175,3 +175,43 @@ Suppose $L$ is a finite dimensional inner product space. Recall that there exist
 
 ^ba5caa
 
+Finally, we show that local isometries take geodesics to geodesics:
+
+> [!Proposition]
+> Let $F:M\to N$ be a local isometry, $\gamma:I\to M$ a geodesic. Then, $\tilde{\gamma}:=F\circ\gamma$ is a geodesic in $N$. 
+> 
+> > [!Proof]-
+> > 
+> > Let $M^{(n)}\subseteq \mathbb{R}^{k}$. Let $t_{0}\in I$, $p=\gamma(t_{0})$. Let $\varphi:\Omega\to U$ be a local parameterization around $p$, $a=\varphi ^{-1}(p)$. Let $I'\subseteq I$ be a neighborhood of $t_{0}$ such that $\gamma(I')\subseteq U$. Applying the [[LEC DGT 3#^0d2d87|inverse function theorem]] to the map $\psi: \varphi ^{-1}\circ\gamma:I'\to \psi(I')\subseteq \Omega$ , we obtain neighborhoods $I''$ of $t_{0}$ and $\Omega'$ of $a$ such that $\psi$ is a diffeomorphism between $I''$ and $\Omega'\cap\gamma(I')$. Next, because $\psi'\circ\psi ^{-1}:\Omega'\cap\gamma(I')\to \mathbb{R}^{n}$ is smooth, it can by definition ([[LEC DGT 2#^2da0d5]]) be extended to a smooth map $\overline{X}:\Omega''\to \mathbb{R}^{n}$, $\Omega''\ni a$. Let $I'''\ni t_{0}$ be such that $\psi(I''')\subseteq \Omega''$ and $\psi|_{I'''}$ is a diffeomorphism onto its image. 
+> > 
+> > We can transport the vector field $\overline{X}$ to $\varphi(U)$ as $X=\varphi_{*}\overline{X}$. For $t\in I'''$, 
+> > $$
+> > \begin{align}
+> > X(\gamma(t)) & =(\varphi_{*}\overline{X})\circ\gamma(t)  \\
+> >  & =(D\varphi\,\overline{X})\circ\varphi ^{-1}\circ\gamma(t) \\
+> >  & =(D\varphi\,\overline{X})\circ \psi(t) \\
+> >  & =D\varphi\,\psi'(t) \\
+> >  & =D\varphi  D\varphi ^{-1}\gamma'(t) \\
+> >  & =\gamma'(t).
+> > \end{align}
+> > $$
+> > It follows that for $t\in I'''$,
+> > $$
+> > \begin{align}
+> > F_{*}X(\tilde{\gamma}(t)) & =  DF\, X(\gamma(t)) \\
+> >  & =DF\,\gamma'(t) \\
+> >  & =\tilde{\gamma}'(t).
+> > \end{align}
+> > $$
+> > Using [[LEC DGT 8#^5959ee]].3 and the [[LEC DGT 7#^8c411c|intrinsicness of the covariant derivative]], we obtain
+> > $$
+> > \begin{align}
+> > D_{t}(\tilde{\gamma}')(t_{0}) & =\nabla_{\tilde{\gamma}'(t_{0})}F_{*}X \\
+> >  & =\nabla_{\gamma'(t_{0})}X \\
+> >  & = D_{t}(\gamma')(t_{0}) \\
+> >  & =0.
+> > \end{align}
+> > $$
+> > 
+
+^b80625

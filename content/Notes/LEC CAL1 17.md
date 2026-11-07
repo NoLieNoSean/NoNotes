@@ -113,4 +113,6 @@ In particular, if $p=m=1$, $h'(a)=\nabla f(\mathbf{b})\cdot\mathbf{D}\mathbf{g}(
 > > 
 > 
 
+^07b5e5
+
 Note that [[LEC ANA1 27#Continuous functions|continuous functions are integrable]], and hence the above integrals are well defined. Also note that $f$ being continuous [[LEC ANA1 15#Vector valued functions whose components are continuous|implies]] $f_{1}$ and $f_{2}$ are continuous.

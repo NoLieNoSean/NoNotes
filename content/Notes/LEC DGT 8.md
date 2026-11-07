@@ -214,6 +214,19 @@ $$
 > [!Definition] Parallel vector field
 > $V\in \mathfrak{X}(\gamma)$ is called **parallel** if $D_{t}V\equiv 0$. 
 
+> [!Remark]
+> Suppose $\tilde{\gamma}=\gamma \circ\varphi$ is a reparameterization of $\gamma$. If $W\in \mathfrak{X}(\gamma)$, then $\tilde{W}:=W\circ\varphi\in \mathfrak{X}(\tilde{\gamma})$ and
+> $$
+> \begin{align}
+> D_{t}\tilde{W}(t) & =\Pi_{\tilde{\gamma}(t)}(\tilde{W}'(t)) \\
+>  & =\Pi_{\tilde{\gamma}(t)}(W'(\varphi(t))\varphi'(t)) \\
+>  & =\varphi'(t)D_{t}W(\varphi(t)).
+> \end{align}
+> $$
+> So, if $D_{t}W\equiv 0$, then $D_{t}\tilde{W}\equiv0$. 
+
+^58b7b2
+
 > [!Theorem]
 > Given smooth $\gamma:I\to M$, $t_{0}\in I$, and $v_{0}\in T_{\gamma(t_{0})}M$, there exists a unique $V\in \mathfrak{X}(\gamma)$ such that $V$ is parallel and $V(t_{0})=v_{0}$. 
 

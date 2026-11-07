@@ -130,6 +130,8 @@ If $\gamma$ is piecewise smooth (regular), a **reparameterization** of $\gamma$ 
 > $$
 > $\tilde{\gamma}$ is called the **arc length reparameterization** of $\gamma$. 
 
+^44b2ea
+
 
 # Intrinsic distance function on a manifold
 
