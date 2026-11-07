@@ -122,9 +122,10 @@ P1: true
 > For normed linear space $X$, $X_{0} \subseteq X$.
 > On $X/X_{0}$ define $\|x + X_{0}\|_{0} = \inf_{x_{0}\in X_{0}} \|x + x_{0}\|$.
 
+> [!Lemma]
+> $X$ is a Banach space iff every absolutely convergent series converges.
+
 > [!Proposition]  
 > $\|\cdot\|$ is a norm on $X/X_{0}$ iff $X_{0}$ is closed.
 > $X/X_{0}$ is Banach iff both $X$ and $X_0$ are Banach.
 
-> [!Lemma]
-> $X$ is a Banach space iff every absolutely convergent series converges.
