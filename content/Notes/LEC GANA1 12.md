@@ -25,6 +25,8 @@ In particular, $X^{\star}=B(X, \mathbb{C})$ is a Banach space, called the dual o
 > - Let $\{ y_{n} \}$ be an unbounded sequence. Define $\varphi_{\{ y_{n} \}}(\{ x_{n} \})=\sum x_{n}\overline{y}_{n}$ on the subspace $X_{0}=\left\{  \{ x_{n} \}\in \ell_{1}:\sum |x_{n}\overline{y}_{n}|< \infty  \right\}\subseteq \ell_{1}$, and consider the sequence $e_{n} = (0, \dots, 1, \dots, 0, \dots) \in X_{0}$. $\|e_{n}\| = 1$ is bounded, and $\|\phi_{\{ y_{n} \}}(e_{n})\|=\|y_{n}\|$ is unbounded. 
 > - Consider $f_{M}=1_{(0, M)}/M\in L^{1}(\mathbb{R}, \lambda)$. Note that $\lVert f_{M} \rVert_{1}=1$. Define $T(f)(x)=xf(x)$. Then $\|Tf_{M}\|= \int \frac{1}{M}xd \lambda = \frac{M^{2}}{2M}= \frac{M}{2}$. Therefore $\|Tf_{M}\|\to \infty$ as $M\to \infty$ where $\|f_{M}\|=1$.
 
+^6746b1
+
 ---
 
 > [!Question]
