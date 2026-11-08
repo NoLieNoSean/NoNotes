@@ -8,7 +8,7 @@ time: 15:31
 id: "169"
 ---
 
-> [!Proposition]
+> [!Lemma]
 > Let $(X, \lVert \cdot \rVert)$ be a NLS. Then $X$ is complete iff for every $\{ x_{n} \}_{n=1}^{\infty}\subseteq X$, 
 > $$
 > \sum_{n=1}^{\infty} \lVert x_{n} \rVert < \infty \implies \sum_{n=1}^{\infty} x_{n}\in X.

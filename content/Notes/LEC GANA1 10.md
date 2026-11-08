@@ -105,16 +105,15 @@ P1: true
 > 
 > We have not yet shown that $\ell_{p}$ and $L^{p}$ are complete. We will do so in [[LEC GANA1 16]]. 
 
-## Quotient space
+![[LEC ANA2 9#^9279fe]]
 
-> [!Definition] Quotient space
-> For normed linear space $X$, $X_{0} \subseteq X$.
-> On $X/X_{0}$ define $\|x + X_{0}\|_{0} = \inf_{x_{0}\in X_{0}} \|x + x_{0}\|$.
+
+> [!Proposition] Quotient Banach space
+> Let $X$ be a NLS, $X_{0}\subseteq X$ be a closed subspace. On $X/X_{0}$ define $\|x + X_{0}\| = \inf_{x_{0}\in X_{0}} \|x - x_{0}\|$. 
+> 
+> $X/X_{0}$ is a normed vector space with respect to this norm. It is Banach if $X$ is. 
 
 ^22e334
 
-![[LEC ANA2 9#^9279fe]]
 
-> [!Proposition]  
-> $\|\cdot\|$ from [[#^22e334]] is a norm on $X/X_{0}$ iff $X_{0}$ is closed, and $X/X_{0}$ is Banach iff both $X$ is Banach. 
 

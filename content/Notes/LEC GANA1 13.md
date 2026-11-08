@@ -53,6 +53,11 @@ P2: true
 
 ^3c11e9
 
+> [!Corollary]
+> Let $X, Y$ be Banach spaces. Let $T\in B(X, Y)$. TFAE:
+> 1. $T$ is bijective. 
+> 2. $T$ has a continuous inverse (in particular, $T$ is an open map). 
+
 > [!Example] Testing the hypotheses of OMT
 > Consider the [[LEC GANA1 11#^fe54b0|integral operator]] $T:C[0, 1]\to C[0, 1]$ defined by
 > $$
@@ -64,7 +69,7 @@ P2: true
 > $$
 > $h_{n}\in T(C[0, 1])$ for each $n$. However, $\lVert h_{n}-h \rVert_{\infty}=1/\sqrt{ n }\to 0$ for $h(x)=\sqrt{ x }$, so $h_{n}\to h$ uniformly, and $h\not\in T(C[0, 1])$. 
 > 
-> Now regard $T$ as a map $C[0, 1]\to T(C[0, 1])$. This makes it a bounded linear bijection. It's inverse, however, is unbounded (the example from [[LEC GANA1 12#^6746b1]].1 works). It is easily seen that a bounded linear bijection is an open map iff its inverse is bounded. Thus, $T$ cannot be an open map. The issue is the codomain not being Banach. 
+> Now regard $T$ as a map $C[0, 1]\to T(C[0, 1])$. This makes it a bounded linear bijection. It's inverse, however, is unbounded (the example from [[LEC GANA1 12#^6746b1]].1 works). It is easily seen that a bounded linear bijection is an open map iff its inverse is bounded. Thus, $T$ cannot be an open map. The issue is the codomain is not Banach. 
 
 
 ---

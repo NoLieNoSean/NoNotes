@@ -106,6 +106,8 @@ Recall [[LEC CAL1 3#^ecdf17]], [[LEC CAL1 3#^b01b34]].
 > > so $\lVert T-T_{n} \rVert\to 0$. 
 > 
 
+^5fc172
+
 
 
 
