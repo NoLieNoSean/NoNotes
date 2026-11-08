@@ -62,16 +62,17 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 > [!Remark]
 > Let $f, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be integrable functions. 
 > 1. $\int(\alpha f+g)=\alpha \int f+\int g$. 
-> 2. if $f\geqslant 0$, then $\int f\geqslant 0$. 
-> 3. if $f\geqslant g$, then $\int f\geqslant \int g$. 
+> 2. If $f\geqslant 0$, then $\int f\geqslant 0$. 
+> 3. If $f\geqslant g$, then $\int f\geqslant \int g$. 
+> 4. $\int f\leqslant \int |f|$.
 
 > [!Theorem] Dominated convergence theorem
 > Let $f_{n}, f, g_{n}, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable functions such that 
-> 1. $|f_{n}|\leqslant  g_{n}$ and $|f|\leqslant g$ pointwise for all $x\in \mathbb{R}$ and $n\in \mathbb{N}$,
-> 2. $f_{n}\to f$ a.e.,
-> 3. $g_{n}\to g$ a.e.,
-> 4. $\int g_{n}< \infty$ and $\int g< \infty$, and 
-> 5. $\int g_{n}\to \int g$. 
+> 5. $|f_{n}|\leqslant  g_{n}$ and $|f|\leqslant g$ pointwise for all $x\in \mathbb{R}$ and $n\in \mathbb{N}$,
+> 6. $f_{n}\to f$ a.e.,
+> 7. $g_{n}\to g$ a.e.,
+> 8. $\int g_{n}< \infty$ and $\int g< \infty$, and 
+> 9. $\int g_{n}\to \int g$. 
 > 
 > Then
 > $$
@@ -112,6 +113,8 @@ Sandwich. Use Fatou's.
 > L^{p}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|^{p}< \infty  \right\}.
 > $$
 > 
+
+^8c70d7
 
 
 > [!Example]
