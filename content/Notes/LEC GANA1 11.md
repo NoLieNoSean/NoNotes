@@ -56,6 +56,8 @@ Recall [[LEC CAL1 3#^ecdf17]], [[LEC CAL1 3#^b01b34]].
 > $$
 > It follows that $\lVert T_{k}f \rVert_{1}\leqslant \lVert T_{k}f \rVert_{\infty}\leqslant M\lVert f \rVert_{1}\leqslant M\lVert f \rVert_{\infty}$. In other words, $T_{k}:(C[0, 1], \lVert \cdot \rVert^{1})\to(C[0, 1], \lVert \cdot \rVert^{2})$ is a bounded operator for $\lVert \cdot \rVert^{i}=\lVert \cdot \rVert_{1}, \lVert \cdot \rVert_{\infty}$ for $i=1, 2$. 
 
+^fe54b0
+
 > [!Example] $C[0, 1]$ action on $L^{p}([0, 1])$
 > Consider the normed space $(L^{p}([0, 1]), \lVert \cdot \rVert_{q})$. For $f\in C([0, 1])$, define the operator $M_{f}$ on $L^{p}([0, 1])$ by $M_{f}g=fg$. It is clear that $M_{f}g\in L^{p}([0, 1])$, since $\lVert fg \rVert_{q}\leqslant \lVert f \rVert_{\infty}\lVert g \rVert_{q}$; this also tells us that $\lVert M_{f} \rVert\leqslant \lVert f \rVert_{\infty}$. On considering $g=1$, we see that $\lVert M_{f} \rVert=\lVert f \rVert_{\infty}$. 
 > 
