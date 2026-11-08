@@ -152,6 +152,8 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 > $$
 > For $f_{n}, f\in L^{\infty}$, we say that **$f_{n}\to f$ in $L^{\infty}$** if $\lVert f-f_{n} \rVert_{\infty}\to 0$. 
 
+^40acf2
+
 %% typo: vasanth writes $\leqslant$ instead of $>$ below %%
 
 > [!Remark]
