@@ -9,6 +9,8 @@ id: "87"
 ---
 # Inner Product Spaces
 
+^178340
+
 The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
 
 >[!Definition] Inner product space
