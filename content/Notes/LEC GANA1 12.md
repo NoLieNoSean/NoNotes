@@ -125,5 +125,5 @@ Conversely, given $\mathbb{R}$-linear $f_{1}, f_{2}:X\to \mathbb{R}$,(treating $
 > 2. $(X/X_{0})^{\star}\cong \mathcal{A}(X_{0})\subseteq X^{\star}$, where $\mathcal{A}(X_{0})$ is the annihilator of $X_{0}$. 
 > 
 > > [!Solution]-
-> > 1. Suppose $x_{0}\ne X_{0}$; $x_{0}+X_{0}\ne 0$ in $X/X_{0}$. Using [[#^c83482]].2, obtain $\psi :X/X_{0}\to \mathbb{C}$ such that $\lVert \psi(x_{0}+X_{0}) \rVert\ne 0$. If $q:X\to X/X_{0}$ is the quotient map, $\varphi=\psi \circ q$ is the desired functional. The converse follows from the mapping property of quotient vector spaces. 
+> > 1. Suppose $x_{0}\not\in X_{0}$; $x_{0}+X_{0}\ne 0$ in $X/X_{0}$. Using [[#^c83482]].2, obtain $\psi :X/X_{0}\to \mathbb{C}$ such that $\lVert \psi(x_{0}+X_{0}) \rVert\ne 0$. If $q:X\to X/X_{0}$ is the quotient map, $\varphi=\psi \circ q$ is the desired functional. The converse follows from the mapping property of quotient vector spaces. 
 > 
