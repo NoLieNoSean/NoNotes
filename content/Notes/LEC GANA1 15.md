@@ -135,23 +135,33 @@ desc: adjoint and unitary operators yada yada
 > A self adjoint operator $T$ is said to be positive if $\langle Tx, x \rangle\geq 0 \, \forall x$.
 > For self adjoint operators $S$ and $T$, we say $S\leq T$ if $T-S$ is positive.
 
-[!Proposition]
-1. $S\leq T\implies ASA^{*}\leq ATA^{*} \quad \forall A \in B(H)$ .
-2. If $0\leq S\leq T$ then $\lVert S \rVert\leq \lVert T \rVert$.
+> [!Proposition]
+> 1. $S\leq T\implies ASA^{*}\leq ATA^{*} \quad \forall A \in B(H)$ .
+> 2. If $0\leq S\leq T$ then $\lVert S \rVert\leq \lVert T \rVert$.
+> 
+> > [!Proof]-
+> > 1. $ATA^{*}-ASA^{*}= A(T-S)A^{*}$.
+> >    Now, if $B\geq 0$ then $\langle ABA^{*}x, x \rangle= \langle BA^{*}x, A^{*}x \rangle\geq 0$ as $B\geq 0$.
+> > 2. $\forall z$,  $$0\leq \langle Sz, z \rangle \leq \langle Tz, z \rangle \leq \lVert Tz \rVert \lVert z \rVert \leq \lVert T \rVert \lVert z \rVert ^{2}$$
+> >    Let $x,y \in H$ be such that $\lVert x \rVert,\lVert y \rVert\leq 1$. Choose $\alpha \in \mathbb{C}$ such that $\lvert \alpha  \rvert=1$ and $\langle Sx, \alpha y \rangle\geq 0$.
+> >    By polarization identity,
+> >    $$
+> >    4\langle Sx, \alpha y \rangle = \sum_{k=0}^{3}i^{k}\langle S(x + i^{k}\alpha y), x + i^{k}\alpha y \rangle 
+> >    $$
+> >    Now, for $k=0,2$ the term on the summation is real and for $k=1,3$ they are imaginary. And since the LHS is real, only terms for $k=0,2$ be nonzero. $$\begin{align}\implies 4\langle Sx, \alpha y \rangle&=\langle S(x + \alpha y), x + \alpha y \rangle- \langle S(x-\alpha y, x - \alpha y) \rangle \\& \leq \langle S(x + \alpha y), x + \alpha y \rangle \\& \leq \langle T(x+\alpha y), x + \alpha y \rangle  \\& \leq \lVert T \rVert \lVert x+y \rVert ^{2} \\& \leq 4 \lVert T \rVert 
+> >    \end{align}$$
+> >    Note that $\lvert \langle Sx, \alpha y \rangle \rvert= \lvert \alpha \rvert \lvert \langle Sx, y \rangle \rvert=\lvert \langle Sx, y \rangle \rvert$.
+> >    Hence, $\lvert \langle Sx,y \rangle \rvert\leq \lVert T \rVert \, \forall x, y$ with $\lvert x \rvert, \lvert y \rvert\leq 1$.
+> >    Therefore by [[#^29bfb0]],  $\lVert S \rVert\leq \lVert T \rVert$.
 
-[!Proof]-
-1. $ATA^{*}-ASA^{*}= A(T-S)A^{*}$.
-   Now, if $B\geq 0$ then $\langle ABA^{*}x, x \rangle= \langle BA^{*}x, A^{*}x \rangle\geq 0$ as $B\geq 0$.
-2. $\forall z$,  $$0\leq \langle Sz, z \rangle \leq \langle Tz, z \rangle \leq \lVert Tz \rVert \lVert z \rVert \leq \lVert T \rVert \lVert z \rVert ^{2}$$
-   Let $x,y \in H$ be such that $\lVert x \rVert,\lVert y \rVert\leq 1$. Choose $\alpha \in \mathbb{C}$ such that $\lvert \alpha  \rvert=1$ and $\langle Sx, \alpha y \rangle\geq 0$.
-   By polarization identity,
-   $$
-   4\langle Sx, \alpha y \rangle = \sum_{k=0}^{3}i^{k}\langle S(x + i^{k}\alpha y), x + i^{k}\alpha y \rangle 
-   $$
-   Now, for $k=0,2$ the term on the summation is real and for $k=1,3$ they are imaginary. And since the LHS is real, only terms for $k=0,2$ be nonzero. $$\begin{align}\implies 4\langle Sx, \alpha y \rangle&=\langle S(x + \alpha y), x + \alpha y \rangle- \langle S(x-\alpha y, x - \alpha y) \rangle \\& \leq \langle S(x + \alpha y), x + \alpha y \rangle \\& \leq \langle T(x+\alpha y), x + \alpha y \rangle  \\& \leq \lVert T \rVert \lVert x+y \rVert ^{2} \\& \leq 4 \lVert T \rVert 
-   \end{align}$$
-   Note that $\lvert \langle Sx, \alpha y \rangle \rvert= \lvert \alpha \rvert \lvert \langle Sx, y \rangle \rvert=\lvert \langle Sx, y \rangle \rvert$.
-   Hence, $\lvert \langle Sx,y \rangle \rvert\leq \lVert T \rVert \, \forall x, y$ with $\lvert x \rvert, \lvert y \rvert\leq 1$.
-   Therefore by [[#^29bfb0]],  $\lVert S \rVert\leq \lVert T \rVert$.
-   
-   
+[!Proposition]
+$T \in B(H, K)$ Then TFAE
+1. $T$ is invertible.
+2. $T^{*}$ is invertible.
+3. $T$ and $T^{*}$ are both bounded below.
+4. $T$ and $T^{*}$ are both injective and $T(H)$ is closed.
+5. $T$ is one-one and onto.
+[!Proof]
+$5 \iff 1$ is obvious.
+$1 \iff 2$ follows from the fact that $(T T^{-1})^{*}=(T^{-1})^{*}T^{*}$ and $\mathrm{id}^{*}=\mathrm{id}$.
+$1 \& 2 \implies 3$ 
