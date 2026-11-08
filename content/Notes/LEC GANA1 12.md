@@ -145,6 +145,3 @@ We denote the space $B(V, \mathbb{C})$ of continuous linear functionals on the N
 > > [!Solution]-
 > > 1. Suppose $x_{0}\not\in X_{0}$; $x_{0}+X_{0}\ne 0$ in $X/X_{0}$. Using [[#^c83482]].2, obtain $\psi :X/X_{0}\to \mathbb{C}$ such that $\lVert \psi(x_{0}+X_{0}) \rVert\ne 0$. If $q:X\to X/X_{0}$ is the quotient map, $\varphi=\psi \circ q$ is the desired functional. The converse follows from the mapping property of quotient vector spaces. 
 > 
-
-
-
