@@ -127,6 +127,3 @@ Conversely, given $\mathbb{R}$-linear $f_{1}, f_{2}:X\to \mathbb{R}$,(treating $
 > > [!Solution]-
 > > 1. Suppose $x_{0}\ne X_{0}$; $x_{0}+X_{0}\ne 0$ in $X/X_{0}$. Using [[#^c83482]].2, obtain $\psi :X/X_{0}\to \mathbb{C}$ such that $\lVert \psi(x_{0}+X_{0}) \rVert\ne 0$. If $q:X\to X/X_{0}$ is the quotient map, $\varphi=\psi \circ q$ is the desired functional. The converse follows from the mapping property of quotient vector spaces. 
 > 
-
-
-
