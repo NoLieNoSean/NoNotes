@@ -42,7 +42,7 @@ Here's an example application of [[LEC ANA2 7#^d4059b|The Arzelà–Ascoli Theor
 > \end{align}
 > $$
 > 
-> ^133df6
+> 
 > 
 > If $\lVert f \rVert_{\infty}\leq 1$, then $\lVert T_{k}f \rVert\leq \lVert k \rVert_{\infty}$. Thus, $\mathcal{F}$ is bounded in $C[0, 1]$. 
 > 
@@ -54,7 +54,7 @@ Here's an example application of [[LEC ANA2 7#^d4059b|The Arzelà–Ascoli Theor
 >  & = \epsilon.
 > \end{align}
 > $$
-> We also have to consider functions that are in $\mathcal{F}$ by virtue of us taking the closure in [[#^d4f319]]. Let $F\in \mathcal{F}$ be such a function. Then, for $\epsilon> 0$, there exists $f$ with $\lVert f \rVert\leq 1$ such that $\lVert T_{k}f-F \rVert<\epsilon$. Then, for $|x-x'|<\delta$,
+> We also have to consider functions that are in $\mathcal{F}$ by virtue of us taking the closure in the definition of $\mathcal{F}$. Let $F\in \mathcal{F}$ be such a function. Then, for $\epsilon> 0$, there exists $f$ with $\lVert f \rVert\leq 1$ such that $\lVert T_{k}f-F \rVert<\epsilon$. Then, for $|x-x'|<\delta$,
 > $$
 > \begin{align}
 > |F(x)-F(x')| & \leq |F(x)-T_{k}f(x)|+|T_{k}f(x)-T_{k}f(x')|+|T_{k}f(x')-F(x')| \\
@@ -63,6 +63,8 @@ Here's an example application of [[LEC ANA2 7#^d4059b|The Arzelà–Ascoli Theor
 > $$
 > so $\mathcal{F}$ is a equicontinuous family. By [[LEC ANA2 7#^d4059b|Arzelà–Ascoli]], $\mathcal{F}$ is compact.
 > 
+
+^133df6
 
 [^1]: Alternatively, you could observe that the convergence $\{ k_{x_{n}} \}\to k_{x}$ is actually uniform, and use [[LEC ANA1 33#^9132bb]] to conclude that $T_{k}f$ is continuous.
 [^2]: Incidentally, since $T_{k}$ is linear, [[#^133df6]] implies $\lVert T_{k}f-T_{k}g \rVert_{\infty} =\lVert T_{k}(f-g) \rVert _{\infty} \\\leq \lVert f-g \rVert _{\infty}\lVert k \rVert _{\infty}$. So, $T_{k}$ is actually uniformly continuous!

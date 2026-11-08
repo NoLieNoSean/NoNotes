@@ -132,7 +132,7 @@ Thus, we can define
 ^2c598a
 
 > [!Proposition]
-> Let $f, g$ be measurable functions. 
+> Let $f, g$ be nonnegative measurable functions. 
 > 1. $\int (af+g)=a\int f+\int g$. 
 > 2. If $f\leqslant g$, then $\int f\leqslant \int g$. 
 
