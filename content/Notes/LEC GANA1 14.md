@@ -136,10 +136,11 @@ P2: true
 > > So, $\langle x - \phi(x)y, y \rangle=0 \implies \langle x, y \rangle = \phi(x)\lVert y \rVert^{2}\implies \phi (x) = \langle x, \frac{y}{\lVert y \rVert^{2}}\rangle \implies \phi = \phi_{\left(\frac{y}{\lVert y \rVert^{2}}\right)}$.
 > > Finally, $\lVert\phi_{y_{1}}- \phi_{y_{2}}\rVert=\lVert \phi_{y_{1}-y_{2}} \rVert= \lVert y_{1}-y_{2} \rVert$, uniqueness follows.
 
-[!Exercise] 
-Let $X$ be a Banach space. For nonzero $\phi \in X^{*}$ prove that $X / \ker(\phi) \cong \mathbb{C}$.
-[!Proof]
-Consider $T: {X}/{\ker \phi }\to \mathbb{C}$ as $T(x + \ker \phi)= \phi(x)$.
-$T$ is well defined since $x + \ker \phi = y + \ker \phi \implies x-y \in \ker \phi \implies \phi(x-y)= 0$.
-$T$ is a vector space isomorphism because $\phi$ is nonzero hence surjective.
-$T$ is bounded since $\lVert T(x+M) \rVert \leq \phi(x-m)$
+> [!Exercise] 
+> Let $X$ be a Banach space. For nonzero $\phi \in X^{*}$ prove that $X / \ker(\phi) \cong \mathbb{C}$.
+> > [!Proof]-
+> > Consider $T: {X}/{\ker \phi }\to \mathbb{C}$ as $T(x + \ker \phi)= \phi(x)$.
+> > $T$ is a vector space isomorphism because $\phi$ is nonzero hence surjective.
+> > For all $m \in  \ker \phi , \lVert T(x+ \ker \phi ) \rVert = \lVert \phi(x-m)\rVert \leq \lVert \phi \rVert \lVert x-m \rVert$.
+> > Taking infimum over all $m$ gives $T(x + \ker \phi ) \leq \lVert \phi \rVert \lVert x + \ker \phi  \rVert$.
+> > Now since $T$ is a bounded linear operator which is bijective, $T^{-1}$ is also bounded. Hence $T$ is an isomorphism.
