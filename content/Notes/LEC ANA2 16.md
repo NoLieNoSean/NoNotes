@@ -9,8 +9,6 @@ tags:
 ---
 # Hilbert spaces
 
-^c023a5
-
 A Hilbert space is a complete [[LEC ALG1 21#^dd5bbe|inner product space]]. Examples include $\mathbb{C}^{n}$ with the [[LEC ALG1 21#^54ba8c|usual inner product]], and $\ell_{2}$ ([[LEC ANA2 1#^02d59c]], [[LEC ANA2 4#^0a51be]]).
 
 > [!Definition] Lebesgue spaces
