@@ -148,7 +148,7 @@ desc: adjoint and unitary operators yada yada
 > >    $$
 > >    4\langle Sx, \alpha y \rangle = \sum_{k=0}^{3}i^{k}\langle S(x + i^{k}\alpha y), x + i^{k}\alpha y \rangle 
 > >    $$
-> >    Now, for $k=0,2$ the term on the summation is real and for $k=1,3$ they are imaginary. And since the LHS is real, only terms for $k=0,2$ be nonzero. $$\begin{align}\implies 4\langle Sx, \alpha y \rangle&=\langle S(x + \alpha y), x + \alpha y \rangle- \langle S(x-\alpha y, x - \alpha y) \rangle \\& \leq \langle S(x + \alpha y), x + \alpha y \rangle \\& \leq \langle T(x+\alpha y), x + \alpha y \rangle  \\& \leq \lVert T \rVert \lVert x+y \rVert ^{2} \\& \leq 4 \lVert T \rVert 
+> >    Now, for $k=0,2$ the term on the summation is real and for $k=1,3$ they are imaginary. And since the LHS is real, only terms for $k=0,2$ be nonzero. $$\begin{align}\implies 4\langle Sx, \alpha y \rangle&=\langle S(x + \alpha y), x + \alpha y \rangle- \langle S(x-\alpha y, x - \alpha y) \rangle \\& \leq \langle S(x + \alpha y), x + \alpha y \rangle \\& \leq \langle T(x+\alpha y), x + \alpha y \rangle  \\& \leq \lVert T \rVert \lVert x+\alpha y \rVert ^{2} \\& \leq 4 \lVert T \rVert 
 > >    \end{align}$$
 > >    Note that $\lvert \langle Sx, \alpha y \rangle \rvert= \lvert \alpha \rvert \lvert \langle Sx, y \rangle \rvert=\lvert \langle Sx, y \rangle \rvert$.
 > >    Hence, $\lvert \langle Sx,y \rangle \rvert\leq \lVert T \rVert \, \forall x, y$ with $\lvert x \rvert, \lvert y \rvert\leq 1$.
@@ -165,3 +165,5 @@ $T \in B(H, K)$ Then TFAE
 $5 \iff 1$ is obvious.
 $1 \iff 2$ follows from the fact that $(T T^{-1})^{*}=(T^{-1})^{*}T^{*}$ and $\mathrm{id}^{*}=\mathrm{id}$.
 $1 \& 2 \implies 3$ 
+
+
