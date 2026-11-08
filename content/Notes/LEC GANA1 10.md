@@ -105,8 +105,7 @@ P1: true
 > 
 > We have not yet shown that $\ell_{p}$ and $L^{p}$ are complete. We will do so in [[LEC GANA1 16]]. 
 
-
-
+## Quotient space
 
 > [!Definition] Quotient space
 > For normed linear space $X$, $X_{0} \subseteq X$.
@@ -117,5 +116,5 @@ P1: true
 ![[LEC ANA2 9#^9279fe]]
 
 > [!Proposition]  
-> $\|\cdot\|$ from [[#^22e334]] is a norm on $X/X_{0}$ iff $X_{0}$ is closed, and $X/X_{0}$ is Banach iff both $X$ and $X_0$ are Banach.
+> $\|\cdot\|$ from [[#^22e334]] is a norm on $X/X_{0}$ iff $X_{0}$ is closed, and $X/X_{0}$ is Banach iff both $X$ is Banach. 
 

@@ -135,7 +135,7 @@ Reviewed [[LEC CAL1 10#The Banach contraction principle]]. The conclusion holds 
 # The Baire Category theorem
 
 > [!Definition]
-> $X$ is a metric space. $S\subseteq X$ is **nowhere dense** if $(\overline{S})^{\circ}=\emptyset$.
+> Let $X$ be a metric space. $S\subseteq X$ is **nowhere dense** if $(\overline{S})^{\circ}=\emptyset$.
 
 > [!Definition]
 > $F\subseteq X$ is said to be **meagre** or of **category I** if $F$ is contained in a countable union of closed nowhere dense sets. If $F\subseteq X$ is not of category I, it is said to be of **category II**.

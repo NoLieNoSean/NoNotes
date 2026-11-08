@@ -9,14 +9,18 @@ desc: Bounded operators
 P1: true
 ---
 
-
 > [!Exercise] Assignment
 > Let $X$ be a compact metric space. Consider $(C(X), \lVert \cdot \rVert)$. For fixed $x_{0}\in X$. Define $\mathcal{M}=\{ f\in C(X):f(x_{0})=0 \}$. Show that $\mathcal{M}$ is closed. Show that $C(X)/\mathcal{M}\cong(\mathbb{C},\lVert \cdot \rVert)$ as Banach spaces. 
 
-> [!Exercise] Assignment
+
+> [!Exercise] Assignment, @sunderFunctionalAnalysisSpectral1997 Exr 1.5.5
 > Let $X_{0}$ be a NLS. Show that there exists a Banach space $X$ and Linear, one dimensional, and norm preserving embedding $X_{0}\hookrightarrow X$ such that $X_{0}$ is dense in $X$. If $X'$ also satisfies the same conditions, $X\cong X'$ as Banach spaces. 
 
 ^604c21
+
+> [!Exercise] Assignment, @sunderFunctionalAnalysisSpectral1997 Exr 1.5.5
+> Let $T:X\to Y$ be bounded, $Y$ Banach. Let $X\subseteq \tilde{X}$, where $\tilde{X}$ is the completion form [[#^604c21]]. Then, there exists a unique bounded operator $\tilde{T}:\tilde{X}\to Y$ such that $\tilde{T}|_{X}=T$ and $\lVert \tilde{T} \rVert=\lVert T \rVert$. 
+
 
 ---
 # Bounded operators
@@ -100,5 +104,6 @@ Recall [[LEC CAL1 3#^ecdf17]], [[LEC CAL1 3#^b01b34]].
 > > so $\lVert T-T_{n} \rVert\to 0$. 
 > 
 
-> [!Exercise] Assignment
-> Let $T:X\to Y$ be bounded, $Y$ Banach. Let $X\subseteq \tilde{X}$, where $\tilde{X}$ is the completion form [[#^604c21]]. Then, there exists a unique bounded operator $\tilde{T}:\tilde{X}\to Y$ such that $\tilde{T}|_{X}=T$ and $\lVert \tilde{T} \rVert=\lVert T \rVert$. 
+
+
+

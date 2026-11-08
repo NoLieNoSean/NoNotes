@@ -5,7 +5,7 @@ time: 18:31
 tags:
   - Lecture
   - GANA1
-desc: the Han-Banach Theorem
+desc: the Hahn-Banach Theorem
 ---
 Let $X$ and $Y$ be NLS. We have seen that $B(X, Y)$ is a Banach space if $Y$ is Banach. 
 
