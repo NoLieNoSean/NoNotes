@@ -77,21 +77,49 @@ In particular, $X^{\star}=B(X, \mathbb{C})$ is a Banach space, called the dual o
 > > $$
 
 > [!Theorem] Hahn-Banach for real normed linear spaces
-> Let $X_{0}\subseteq X$ be a normed linear space over $\mathbb{R}$. If $\phi_{0}:X_{0}\to \mathbb{R}$ is bounded, then there is an extension $\phi:X\to \mathbb{R}$ of $\phi_{0}$ to $X$ which is bounded.
+> Let $X_{0}\subseteq X$ be a normed linear space over $\mathbb{R}$. If $\phi_{0}:X_{0}\to \mathbb{R}$ is bounded, then there is an extension $\phi:X\to \mathbb{R}$ of $\phi_{0}$ to $X$ such that $\lVert \phi \rVert= \lVert \phi_{0} \rVert$.
 > > [!Proof]-
 > > Take $p:X\to \mathbb{R}$ as $p(x)= \|\phi_{0}\| \|x\|$ to be the Minkowski function. Apply the previous lemma.
+> > Let $\phi$ be the extension. Then $\forall x \in  X$, $\lVert \phi(x) \rVert\leq p(x) = \lVert \phi_{0} \rVert \lVert x \rVert$.
+> > Therefore, $\lVert \phi \rVert\leq \lVert \phi_{0} \rVert$ and since $\phi$ extends $\phi_{0}$, $\lVert \phi_{0} \rVert\leq \lVert \phi \rVert$.
 
-Let $Y$ be over $\mathbb{C}$. Let $\varphi:Y\to \mathbb{C}$ be bounded. Define $f_{1}(x):=\mathrm{Re}(\varphi(x))$, $f_{2}:=\mathrm{Im}(\varphi(x))$. Then $f_{1}(ix)=-f_{2}(x)$. Conversely, given linear $f_{1}, f_{2}:X\to \mathbb{R}$, $\varphi(x):=f_{1}(x)+if_{2}(x)$ is complex linear if $f_{1}(ix)=-f_{2}(x)$. 
-
-[!Theorem]
-Let $X_{0}\subseteq X$ be NLS over $\mathbb{C}$ or $\mathbb{R}$. Let $\varphi_{0}:X_{0}\to \mathbb{C}$ be bounded. Then there exists $\varphi:X\to \mathbb{C}/\mathbb{R}$, bounded, and $\varphi|_{X_{0}}=\varphi_{0}$ and $\lVert \varphi \rVert=\lVert \varphi_{0} \rVert$. 
-
-[!Proof]-
-
-If $X$ is over $\mathbb{R}$, take the minkowski function to he $p(x)=\lVert \varphi_{0} \rVert\lVert x \rVert$ for all $x\in X$, and use the previous theorem. 
-
-Suppose $X$ is over $\mathbb{C}$. Let $f_{1}=\text{Re}(\varphi_{0})$, $f_{2}=\text{Im}(\varphi_{0})$. Note that $f_{1}, f_{2}$ are bounded, and that we can write $\varphi_{0}(x)=f_{1}(x)-if_{1}(ix)$. Extend $f_{1}$ to $\tilde{f_{1}}:X\to \mathbb{R}$, and define $\varphi:X\to \mathbb{R}$ by
+Let $Y$ be over $\mathbb{C}$. Let $\varphi:Y\to \mathbb{C}$ be a linear functional. Define $f_{1}(x):=\mathrm{Re}(\varphi(x))$, $f_{2}:=\mathrm{Im}(\varphi(x))$. Then
 $$
-\varphi(x)=\tilde{f_{1}}(x)-i \tilde{f_{1}}(ix).
+f_{1}(ix) + i f_{2}(ix) = \phi(ix) = i \phi(x) = if_{1}(x)-f_{2}(x)
 $$
-$\varphi$ is complex linear. Let $\varphi(x)=e^{ i\theta }|\varphi(x)|$. 
+Hence $f_{1}(ix)=-f_{2}(x)$. 
+Conversely, given $\mathbb{R}$-linear $f_{1}, f_{2}:X\to \mathbb{R}$,(treating $X$ as a $\mathbb{R}$ vector space) $\varphi(x):=f_{1}(x)+if_{2}(x)$ is $\mathbb{C}$-linear if $f_{1}(ix)=-f_{2}(x)$. 
+
+> [!Theorem] Hahn-Banach for complex normed linear spaces
+> Let $X_{0}\subseteq X$ be a normed linear space over $\mathbb{C}$. If $\phi_{0} \in X_{0}^{*}$ is bounded, then there is an extension $\phi \in X^{*}$ of $\phi_{0}$ to $X$ such that $\lVert \phi \rVert= \lVert \phi_{0} \rVert$.
+> 
+> > [!Proof]-
+> > Let $f_{1}:X_{0}\to \mathbb{R}$ be defined as $f_{1}(x)=Re(\phi_{0}(x))$. Then treating $X_0$ as $\mathbb{R}$-vector space, $f_1$ is a real linear functional. Also $\lvert f_{1}(x) \rvert \leq \lvert \phi_{0}(x) \rvert \leq \lVert \phi_{0} \rVert \lVert x \rVert \, \forall x \in  X_{0}$, hence $f_1$ is bounded.
+> > Now, treating $X$ as $\mathbb{R}$-normed linear space, by previous theorem, $f_{1}$ extends to bounded $\tilde{f_{1}}\in X^{*}$.
+> > Let $\phi:X\to \mathbb{C}$ be defined as $\phi(x)= \tilde{f_{1}}(x)- i \tilde{f_{1}}(ix)$.
+> > Note that $\phi$ is a $\mathbb{C}$-linear functional extending $\phi_{0}$.
+> > Now, $\phi(x)= e^{i \theta}\lvert \phi(x) \rvert$.
+> > $$
+> > \begin{align*}
+> > \implies \lvert \phi(x) \rvert &= e^{-i \theta}\phi(x)\\
+> > &= \phi(e^{-i \theta}x)\\
+> > &= Re(\phi(e^{-i \theta}x))\\
+> > &= \tilde{f_{1}}(e^{-i \theta}x)\\
+> > &\leq \lVert \tilde{f_{1}} \rVert \lVert e^{-i \theta}x \rVert \\
+> > &\leq \lVert \phi_{0} \rVert \lVert x \rVert 
+> > \end{align*}
+> > $$
+
+> [!Corollary] 
+> Let $X$ be an NLS and let $x \in  X$ be non-zero. Then $\exists \phi  \in X^{*}$ such that $\phi(x) = \lVert x \rVert$ and $\lVert \phi \rVert= 1$.
+> > [!Proof]-
+> > Let $X_{0}= \mathbb{C}x$ and define $\phi_{0}:X_{0}\to \mathbb{C}$ as $\phi_{0}(\lambda x) = \lambda \lVert x \rVert$. Extend $\phi_{0}$ using Hanh-Banach.
+
+> [!Corollary]
+> If $x,y \in X, x \ne y$ then $\exists \phi \in X^{*}$ such that $\phi(x) \ne \phi(y)$.
+
+> [!Corollary]
+> Let $X$ be an NLS and let $X_{0} \subsetneq X$ be a closed subspace. Then $\exists \phi \in X^{*}$ such that $\phi \not\equiv 0$ and $\phi\lvert_{X_{0}}= 0$.
+> In particular, for $x_{0}\in X  \setminus X_{0}, \exists \phi$ such that $\phi(x_{0})\ne{0}$ and $\phi \lvert_{X_{0}}=0$.
+> > [!Proof]-
+> > $x_{0} \not\in  X_{0} \implies (x+X_{0}) \ne 0$ in the space $X/X_{0}$. Apply the first corollary and obtain $\psi:(X/X_{0})\to \mathbb{C}$ such that $\lVert \psi(x_{0} + X_{0}) \rVert \ne 0$. Now compose it with the quotient map from $X$ to $X/X_{0}$.
