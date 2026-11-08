@@ -6,6 +6,8 @@ tags:
   - Lecture
   - GANA1
 desc: the Han-Banach Theorem
+P1: true
+P2: true
 ---
 Let $X$ and $Y$ be NLS. We have seen that $B(X, Y)$ is a Banach space if $Y$ is Banach. 
 
