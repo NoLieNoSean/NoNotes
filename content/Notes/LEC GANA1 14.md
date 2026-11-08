@@ -7,7 +7,7 @@ tags:
   - GANA1
 desc: Hilbert spaces, the Riesz lemma
 P1: true
-P2: true
+P2: false
 ---
 # Inner Product spaces
 [[LEC ALG1 21#^178340]]
@@ -39,8 +39,10 @@ P2: true
 
 
 # Hilbert spaces
-[[LEC ANA2 16#^c023a5]]
-> [!Remarks]
+
+See [[LEC ANA2 16]].
+
+> [!Remark]
 > 1. Polarisation identity
 >   $$
 >   \sum_{k=0}^{3} \langle x + i^{k}y, x + i^{k}y\rangle = 4 \langle x,y\rangle
