@@ -9,9 +9,7 @@ id: "87"
 ---
 # Inner Product Spaces
 
-^178340
-
-The motivation behind this is to define a notion of length and perpendicularity (angle) for vectors.
+The motivation for this section is to define a notion of length and perpendicularity (angle) for vectors.
 
 >[!Definition] Inner product space
 > A vector space $V$ over $\mathbb{F} = \mathbb{R}, \mathbb{C}$ is an **inner product space** if for any two $\mathbf{v}, \mathbf{w} \in V$, there is defined an element $\langle \mathbf{v},\mathbf{w} \rangle \in \mathbb{F}$ such that it satisfies the following properties:
@@ -112,8 +110,8 @@ We will need this to show that the norm defined above satisfies the triangle ine
 > > As this holds for all $\lambda$, we have
 > > $$
 > > \begin{align}
-> > 4\langle u, v\rangle^2 & \leq 4\langle u, u\rangle \langle v, v\rangle \\
-> > |\langle u, v\rangle|  & \leq \lVert u \rVert \,\lVert v \rVert .
+> > 4\langle \mathbf{u}, \mathbf{v}\rangle^2 & \leq 4\langle \mathbf{u}, \mathbf{u}\rangle \langle \mathbf{v}, \mathbf{v}\rangle \\
+> > |\langle \mathbf{u}, \mathbf{v}\rangle|  & \leq \lVert \mathbf{u} \rVert \,\lVert \mathbf{v} \rVert .
 > > \end{align}
 > > $$
 > > *Case 2:* $\langle \mathbf{u}, \mathbf{v}\rangle \not\in \mathbb{R}$

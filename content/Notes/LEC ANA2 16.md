@@ -108,7 +108,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > >  & \to 0 \text{ as }n\to \infty,
 > > \end{align}
 > > $$
-> > where the last inequality follows from [[LEC ALG1 21#^c0606c]]. 
+> > where the last inequality follows from the [[LEC ALG1 21#^c0606c|Cauchy-Schwarz inequality]]. 
 > > 
 > 
 
