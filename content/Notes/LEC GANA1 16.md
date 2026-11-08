@@ -7,15 +7,17 @@ tags:
   - Lecture
 desc: Holder's and Minkowski's inequalities
 ---
-[!Exercise] Assignment
-Let $k\in L^{2}([0, 1]\times[0, 1])$. Define $T_{k}:L^{2}[0, 1]\to L^{2}[0, 1]$ by
-$$
-(T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
-$$
-Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
+> [!Exercise] Assignment
+> Let $k\in L^{2}([0, 1]\times[0, 1])$. Define $T_{k}:L^{2}[0, 1]\to L^{2}[0, 1]$ by
+> $$
+> (T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
+> $$
+> Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
 
-[!Exercise] Assignment
-Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 
+> [!Exercise] Assignment
+> Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 
+
+
 
 ---
 

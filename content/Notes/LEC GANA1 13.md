@@ -99,4 +99,10 @@ For NLS $X, Y$, the product $X\times Y$ can be metrized in such a way that a seq
 > $$
 > [[LEC GANA1 12#^6746b1|We have seen]] that $D$ is unbounded. However, $G(D)$ is closed by [[LEC ANA1 33#^94a1f8]]. This is because the domain, equipped with the supremum norm, is not complete. 
 
+---
 
+# Uniform Boundedness Principle
+
+![[LEC ANA2 10#^90f996]]
+
+See @sunderFunctionalAnalysisSpectral1997 Exr 1.5.17 for exercises. 
