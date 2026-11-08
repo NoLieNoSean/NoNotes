@@ -6,6 +6,7 @@ tags:
   - GANA1
   - Lecture
 desc: Bounded operators
+P1: true
 ---
 
 
