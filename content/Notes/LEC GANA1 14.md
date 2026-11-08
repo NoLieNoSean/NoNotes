@@ -9,7 +9,7 @@ desc: Hilbert spaces, the Riesz lemma
 P1: true
 P2: true
 ---
-# Inner Product spaces
+	# Inner Product spaces
 [[LEC ALG1 21#^178340]]
 
 > [!proposition] Cauchy-Schwarz inequality
