@@ -17,8 +17,6 @@ desc: Holder's and Minkowski's inequalities
 > [!Exercise] Assignment
 > Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 
 
-
-
 ---
 
 [!Definition]
