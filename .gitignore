@@ -20,3 +20,5 @@ Config/
 Zotero/
 .pandoc/
 .stfolder/
+.stignore
+.obsidian.vimrc
