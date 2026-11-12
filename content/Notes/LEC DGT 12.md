@@ -7,7 +7,7 @@ tags:
   - DGEO
 pics: true
 P1: true
-desc: geodesics are local minimizers
+desc: injectivity radius, unit radial vector field
 ---
 Recall [[LEC DGT 11#^d5b74f]] - If $\gamma$ is a piecewise regular length minimizing curve, then $\gamma$ is smooth and arc length parameterization of $\gamma$ is a geodesic. 
 
@@ -79,10 +79,6 @@ The converse is not true: For example, a geodesic connecting two points on $S^{2
 > 1. $|\varphi_{r}(q)|=1$ for all $q\in U\setminus \{ p \}$ 
 > 2. $\varphi_{r}\perp \Sigma_{\epsilon}$ for all $0<\epsilon< \rho$
 > 3. $\text{grad}\,r=\varphi_{r}$. 
-
-
-[!Proof]-
-
 
 > [!Theorem]
 > Let $\rho$ be the injectivity radius at $p\in M$. Let $q\in U=\exp_{p}(B_{\rho}(0))$. Then the geodesic segment in $U$ from $p$ to $q$ is the unique (up to reparameterization) minimizing curve in $M$ from $p$ to $q$. 

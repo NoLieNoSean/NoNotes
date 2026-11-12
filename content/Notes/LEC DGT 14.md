@@ -6,4 +6,5 @@ tags:
   - Lecture
   - DGEO
 pics: true
+desc: Hopf-Rinow Theorem
 ---
