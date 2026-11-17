@@ -7,6 +7,7 @@ tags:
   - DGEO
 pics: true
 desc: Hopf-Rinow Theorem
+P1: true
 ---
 > [!Lemma]
 > Let $\gamma:[a, b]\to M$ be minimizing, $t_{1}, t_{2}\in[a, b]$. Then, $\gamma|_{[t_{1}, t_{2}]}$ is also minimizing. 

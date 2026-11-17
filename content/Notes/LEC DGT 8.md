@@ -81,6 +81,8 @@ $\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]])
 > $$
 > 
 
+^4a1f11
+
 > [!Proposition]
 > The curvature tensor is intrinsic, i.e., if $F:M\to N$ is an isometry and $R$ and $\tilde{R}$ are the curvature tensors on $M$ and $N$ respectively, then
 > $$
@@ -227,6 +229,10 @@ $$
 > [!Definition] Parallel vector field
 > $V\in \mathfrak{X}(\gamma)$ is called **parallel** if $D_{t}V\equiv 0$. 
 
+A parallel vector field on a curve in $\mathbb{R}^{n}$ might look like this:
+
+![[-20261117213412004.jpg|375]]
+
 > [!Remark]
 > Suppose $\tilde{\gamma}=\gamma \circ\varphi$ is a reparameterization of $\gamma$. If $W\in \mathfrak{X}(\gamma)$, then $\tilde{W}:=W\circ\varphi\in \mathfrak{X}(\tilde{\gamma})$ and
 > $$
@@ -242,5 +248,26 @@ $$
 
 > [!Theorem]
 > Given smooth $\gamma:I\to M$, $t_{0}\in I$, and $v_{0}\in T_{\gamma(t_{0})}M$, there exists a unique $V\in \mathfrak{X}(\gamma)$ such that $V$ is parallel and $V(t_{0})=v_{0}$. 
+> 
+> > [!Proof]-
+> > 
+> > Suppose $\gamma(I)$ lies in a coordinate neighborhood $U$. Let $\varphi:\Omega\to U$ be a local parameterization. Let $v_{0}=v_{0}^{i}\varphi_{i}|_{\gamma(t_{0})}$. 
+> > 
+> > $V\in \mathfrak{X}(\gamma)$ is parallel iff
+> > $$
+> > \dot{V}^{k}=-V^{i}\dot{\gamma}^{j}\Gamma_{ij}^{k}(\overline{\gamma}) \quad \forall k=1, \dots, n.
+> > $$
+> > This is a first order nonlinear system of ODEs: If we let $\mathbf{x}=(V^{1}, \dots, V^{n})$ and $\mathbf{x}_{0}=(v_{0}^{1}, \dots, v_{0}^{n})$, the above system can be expressed as
+> > $$
+> > \begin{align}
+> > \dot{\mathbf{x}} & =\mathbf{f}(\mathbf{x}, t) \\
+> >  \mathbf{x}(0) & =\mathbf{x}_{0}.
+> > \end{align}
+> > $$
+> > Use the [[Nonlinear systems#^4078e8|fundamental existence-uniqueness theorem]]. 
+> 
 
 ^f806e0
+
+
+%%^ proof is incomplete%%

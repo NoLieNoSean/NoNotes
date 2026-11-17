@@ -159,22 +159,26 @@ We have the following analogues for $\nabla$, all of which follow immediately fr
 
 ^269bec
 
-
 > [!Notation]
 > Let $V\subseteq M\subseteq \mathbb{R}^{k}$. For $f\in C^{\infty}(V)$, 
 > $$
 > \partial_{i}f:=D_{\varphi_{i}}f\in C^{\infty}(V).
 > $$
-> Note that $D_{\varphi_{i}}f(\varphi(a))=\partial_{i}(f\circ\varphi)(a)$:
+> 
+
+> [!Remark]
+> Note that $(D_{\varphi_{i}}f)(\varphi(a))=\partial_{i}(f\circ\varphi)(a)$:
 > $$
 > \begin{align}
-> D_{\varphi _{i}}f (\varphi(a)) & =Df_{\varphi(a)}(\varphi_{i}|_{\varphi(a)}) \\
+> (D_{\varphi _{i}}f )(\varphi(a)) & =Df_{\varphi(a)}(\varphi_{i}|_{\varphi(a)}) \\
 >  & =Df_{\varphi(a)}(D\varphi_{a}(e_{i})) \\
 >  & =D(f\circ\varphi)_{a}(e_{i}) \\
 >  & =\partial_{i}(f\circ\varphi)(a).
 > \end{align}
 > $$
 > 
+
+^8b6902
 
 
 > [!Definition] Christoffel symbols

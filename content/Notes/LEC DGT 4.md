@@ -88,13 +88,16 @@ $$
 This motivates the following:
 
 > [!Proposition]
-> Let $U\subseteq \mathbb{R}^{n}$ be open. Endow $\mathfrak{X}(U)$ with the bracket
-> $$
-> [X, Y]:=D_{X}Y-D_{Y}X.
-> $$
-> This makes $\mathfrak{X}(U)$ a [[LEC LIALG 1#^128a59|Lie algebra]].[^2] Recall that $C^{\infty}(U)$ is an $\mathbb{R}$-algebra. Let $\mathrm{Der}(C^{\infty}(U))$ be as in [[LEC LIALG 2#^09387d]]; it is a Lie subalgebra of $\mathfrak{gl}(C^{\infty}(U))$ with the bracket $[\delta, \delta']=\delta\delta'-\delta'\delta$. 
+> 1. Let $U\subseteq \mathbb{R}^{n}$ be open. Endow $\mathfrak{X}(U)$ with the bracket
+> 	$$
+> 	[X, Y]:=D_{X}Y-D_{Y}X.
+> 	$$
+> 	This makes $\mathfrak{X}(U)$ a [[LEC LIALG 1#^128a59|Lie algebra]].[^2] Recall that $C^{\infty}(U)$ is an $\mathbb{R}$-algebra. Let $\mathrm{Der}(C^{\infty}(U))$ be as in [[LEC LIALG 2#^09387d]]; it is a Lie subalgebra of $\mathfrak{gl}(C^{\infty}(U))$ with the bracket $[\delta, \delta']=\delta\delta'-\delta'\delta$. 
+> 2. The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is a Lie algebra isomorphism; we have the identity
+> 	$$
+> 	D_{[X, Y]}Z=D_{X}D_{Y}Z-D_{Y}D_{X}Z.
+> 	$$
 > 
-> The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is a Lie algebra isomorphism. 
 > 
 > > [!Proof]-
 > > 
@@ -102,9 +105,11 @@ This motivates the following:
 > > 1. $D_{X}:C^{\infty}(U)\to C^{\infty}(U)$ is a $\mathbb{R}$-linear map;
 > > 2. $D_{X}$ is a derivation, i.e., $D_{X}(fg)=fD_{X}g+gD_{X}f$;
 > > 3. The map $X\mapsto D_{X}$ respects the bracket: $D_{[X, Y]}=[D_{X}, D_{Y}]=D_{X}D_{Y}-D_{Y}D_{X}$. 
-> > 
-> > 
 > 
+
+^79bf9f
+
+
 
 
 
@@ -172,6 +177,8 @@ These two definitions are equivalent, and are independent of the chosen extensio
 ^51b187
 
 > [!Theorem]
-> Let $M$ be an $n$-dimensional manifold, $p\in M$, and let $X_{1}, \dots, X_{m}$ be smooth vector fields defined on a neighborhood $U\subseteq M$ of $p$. Suppose that $X_{1}(p), \dots, X_{m}(p)$ are linearly independent and that $[X_{i}, X_{j}]\equiv 0$ on $U$ for all $i, j=1, \dots, m$. Then $m\leqslant n$, and there exists a local parameterization $\phi:\Omega\to V$ of $M$ around $p$ such that $X_{i}=\phi_{i}$ on $V$ for every $i=1, \dots, m$, where $\phi_{i}$ denotes the $i$-th coordinate vector field associated with $\phi$. 
+> Let $M$ be an $n$-dimensional manifold, $p\in M$, and let $X_{1}, \dots, X_{m}$ be smooth vector fields defined on a neighborhood $U\subseteq M$ of $p$. Suppose that $X_{1}(p), \dots, X_{m}(p)$ are linearly independent and that $[X_{i}, X_{j}]\equiv 0$ on $U$ for all $i, j=1, \dots, m$. Then $m\leqslant n$, and there exists a local parameterization $\phi:\Omega\to V\subseteq U$ around $p$ such that $X_{i}=\phi_{i}$ on $V$ for every $i=1, \dots, m$, where $\phi_{i}$ denotes the $i$-th coordinate vector field associated with $\phi$. 
+
+^ceeba3
 
 Note that the hypotheses concerning linear independence and the Lie brackets are necessary because the coordinate vector fields are linearly independent at every point, and by [[#^5180d1]], the Lie bracket of two coordinate vector fields is zero. 

@@ -157,7 +157,7 @@ Similarly, we have
 
 ^9d0dd1
 
-So, if $F$ is a smooth $(0, k)$ (resp $(1, k)$) tensor field on $M$, then $F$ induces a $C^{\infty}(M)$-multilinear map $\tilde{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp $\mathfrak{X}(M)$). We will now show that the converse holds, too. 
+So, if $F$ is a smooth $(0, k)$ (resp $(1, k)$) tensor field on $M$, then $F$ induces a $C^{\infty}(M)$-multilinear (check!) map $\tilde{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp $\mathfrak{X}(M)$). We will now show that the converse holds, too. 
 
 Suppose $\mathcal{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp. $\mathfrak{X}(M)$) is any $C^{\infty}(M)$-multilinear.
 
@@ -222,4 +222,7 @@ Suppose $\mathcal{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp. $\mathfrak{X}(
 
 > [!Example] The curvature tensor is a $(1, 3)$ smooth tensor field
 > 
-> Recall [[LEC DGT 8#^bd8b5d]]. Is is clear that $p\mapsto R_{p}$ is a $(1, 3)$ tensor field on $M$. Smoothness follows from [[#^9d0dd1]]. 
+> Recall [[LEC DGT 8#^bd8b5d]]. Is is clear that $p\mapsto R_{p}$ is a $(1, 3)$ tensor field on $M$; smoothness follows from [[#^9d0dd1]]. As we have seen, this implies $R:\mathfrak{X}(M)\times \mathfrak{X}(M)\times \mathfrak{X}(M)\to \mathfrak{X}(M)$ is a $C^{\infty}(M)$-multilinear map. 
+
+^a4f2fa
+

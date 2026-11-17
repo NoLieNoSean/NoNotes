@@ -7,6 +7,7 @@ tags:
   - DGEO
 pics: true
 desc: geodesics are local minimizers
+P1: true
 ---
 > [!Proposition]
 > Given $p\in M$, there exists open neighborhood $W\subseteq M$ of $p$ and $\delta> 0$ such that for all $q\in W$, $\text{inj}(q)>\delta$ and $W\subseteq B_{\delta}(q)=\exp_{q}(B_{\delta}(0))$. 

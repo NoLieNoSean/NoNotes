@@ -1,9 +1,8 @@
 ---
-id: "616"
-date: 2026-11-04
-time: 14:00
+id: "621"
+date: 2026-10-30
+time: 10:30
 tags:
-  - Lecture
   - DGEO
-pics: true
+  - Lecture
 ---

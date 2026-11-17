@@ -20,6 +20,8 @@ P1: true
 > 
 > More generally, if $\gamma$ is piecewise smooth, there exists a partition $a=a_{0}< a_{1}<\dots< a_{k}=b$ such that $\gamma|_{[a_{i-1}, a_{i}]}$ is smooth for all $i=1, \dots, k$, and we define $V|_{[a_{i}, a_{i+1}]}$ to be the parallel transport of $V(a_{i})$ along $\gamma|_{[a_{i}, a_{i+1}]}$.
 
+^8e6628
+
 > [!Lemma]
 > $P_{t_{0}t_{1}}^{\gamma}:T_{\gamma(t_{0})}M\to T_{\gamma(t_{1})}M$ is a linear isometry. 
 
@@ -101,7 +103,7 @@ Suppose $L$ is a finite dimensional inner product space. Recall that there exist
 # Geodesics
 
 > [!Definition] Geodesic
-> A smooth curve $\gamma:I\to M$ is called **geodesic** if $D_{t}\gamma'\equiv 0$. 
+> A smooth curve $\gamma:I\to M$ is called a **geodesic** if $D_{t}\gamma'\equiv 0$. 
 
 
 > [!Remark]

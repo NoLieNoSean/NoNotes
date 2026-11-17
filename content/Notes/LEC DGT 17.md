@@ -6,4 +6,5 @@ tags:
   - Lecture
   - DGEO
 pics: true
+desc: symmetries of the curvature tensor, commutator of covariant derivatives, curvature and parallel transport
 ---

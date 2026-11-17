@@ -201,8 +201,6 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 
 ^7d478a
 
-[!Proof]-
-
 
 
 > [!Remark]
@@ -261,6 +259,8 @@ on the initial condition $\mathbf{y}$. More generally, if the differential equat
 > \end{align}
 > $$
 > has a unique solution $\mathbf{u}(t, \mathbf{y}, \boldsymbol{\mu})$ with $\mathbf{u}\in C^{1}(G)$, where $G=[-a, a]\times B(\mathbf{x}_{0}, \delta)\times B(\boldsymbol{\mu}_{0}, \delta)$. 
+
+^2d49a1
 
 This follows immediately from [[#^7d478a]] by replacing $\mathbf{x}_{0}$, $\mathbf{x}$, $\dot{\mathbf{x}}$, and $\mathbf{y}$ by the vectors $(\mathbf{x}_{0}, \boldsymbol{\mu}_{0})$, $(\mathbf{x}, \boldsymbol{\mu})$, $(\dot{\mathbf{x}}, \mathbf{0})$, and $(\mathbf{y}, \boldsymbol{\mu})$.
 
