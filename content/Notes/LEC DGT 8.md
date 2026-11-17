@@ -51,7 +51,7 @@ $$
 ^e6aec2
 
 > [!Lemma]
-> $\mathbb{I}$ is bilinear, i.e, if $X, Y\in \mathfrak{X}(M)$ and $X=X^{i}\varphi_{i}$, $Y=Y^{j}\varphi_{j}$, then
+> $\mathbb{I}$ is $C^{\infty}(M)$-bilinear. In particular, if $X, Y\in \mathfrak{X}(M)$ and $X=X^{i}\varphi_{i}$, $Y=Y^{j}\varphi_{j}$, then
 > $$
 > \mathbb{I}(X, Y)=X^{i}Y^{j}\mathbb{I}(\varphi_{i}, \varphi_{j}).
 > $$
@@ -80,7 +80,6 @@ $\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]])
 > R(X, Y)Z:=\nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}Z-\nabla_{[X, Y]}Z.
 > $$
 > 
-
 
 > [!Proposition]
 > The curvature tensor is intrinsic, i.e., if $F:M\to N$ is an isometry and $R$ and $\tilde{R}$ are the curvature tensors on $M$ and $N$ respectively, then
@@ -161,6 +160,20 @@ $\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]])
 > > 
 > 
 
+^ed8589
+
+> [!Remark]
+> We highlight the following identity from the proof of [[#^ed8589]] for future reference:
+> $$
+> \begin{align}
+> \langle R(X, Y) Z, W \rangle =\langle \mathbb{I}(X, Z), \mathbb{I}(Y, W) \rangle -\langle \mathbb{I}(X, Y), \mathbb{I}(Z, W) \rangle.
+> \end{align}
+> $$
+> Observe that the RHS evaluated at $p$ depends only on $X_{p}$, $Y_{p}$, $Z_{p}$, and $W_{p}$. Thus, for $v_{1}, v_{2}, v_{3}\in T_{p}M$, $R_{p}(v_{1}, v_{2}) v_{3}$ is well-defined. 
+> 
+> Because $\mathbb{I}$ is [[#^f5b590|bilinear]], $R_{p}:T_{p}M\times T_{p}M\times T_{p}M\to T_{p}M$ is trilinear. We will see in [[LEC DGT 15]] that this makes the assignment $p\mapsto R_{p}$ a $(1, 3)$ [[LEC DGT 15#^53a96c|tensor field]] on $M$. 
+
+^bd8b5d
 
 ---
 # Vector fields along curves

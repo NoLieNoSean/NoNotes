@@ -14,7 +14,7 @@ Recall [[LEC DGT 11#^d5b74f]] - If $\gamma$ is a piecewise regular length minimi
 The converse is not true: For example, a geodesic connecting two points on $S^{2}$ need not be length minimizing! However, a local version of the converse can be obtained. 
 
 > [!Definition] Injectivity radius
-> Let $p\in M$. The injectivity radius at $p$ is defined to be
+> Let $p\in M$. The **injectivity radius** at $p$ is defined to be
 > $$
 > \text{inj}(p)=\sup \{ a> 0: \exp_{p}:B_{a}(0)\to M\text{ is a diffeo. onto its image}\}
 > $$
@@ -81,4 +81,4 @@ The converse is not true: For example, a geodesic connecting two points on $S^{2
 > 3. $\text{grad}\,r=\varphi_{r}$. 
 
 > [!Theorem]
-> Let $\rho$ be the injectivity radius at $p\in M$. Let $q\in U=\exp_{p}(B_{\rho}(0))$. Then the geodesic segment in $U$ from $p$ to $q$ is the unique (up to reparameterization) minimizing curve in $M$ from $p$ to $q$. 
+> Let $\rho$ be the injectivity radius at $p\in M$. Let $q\in U=\exp_{p}(B_{\rho}(0))$. Then the geodesic segment in $U$ from $p$ to $q$ is the *unique* (up to reparameterization) minimizing curve in $M$ from $p$ to $q$. 
