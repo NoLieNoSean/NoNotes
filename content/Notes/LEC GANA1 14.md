@@ -13,7 +13,7 @@ P2: true
 
 See [[LEC ALG1 21#Inner Product Spaces]]. 
 
-In this section, $H$ can be any inner product space. 
+In this section, $H$ can be any inner product space over $\mathbb{C}$. 
 
 > [!proposition] Cauchy-Schwarz inequality
 > Let $H$ be an inner product space. Then for $x, y \in H$
@@ -43,9 +43,9 @@ In this section, $H$ can be any inner product space.
 > [!Remark]
 > 1. Polarization identity
 > 	$$
-> 	  \sum_{k=0}^{3} \langle x + i^{k}y, x + i^{k}y\rangle = 4 \langle x,y\rangle
+> 	  \sum_{k=0}^{3} i^{k}\langle x + i^{k}y, x + i^{k}y\rangle = 4 \langle x,y\rangle
 > 	$$
-> 	Holds true for any *sesquilinear form*. For real inner product spaces,
+> 	For real inner product spaces,
 > 	$$
 > 	  4 \langle x,y \rangle = \lVert x + y \rVert ^{2} - \lVert x-y \rVert ^{2}
 > 	$$
@@ -61,6 +61,16 @@ In this section, $H$ can be any inner product space.
 > 
 
 ^24334e
+
+> [!Remark]
+> A **sesquilinear form** is an inner product sans the positive definiteness requirement. In other words, a sesquilinear form is a map $B:X\times Y\to \mathbb{C}$ which is linear in the first slot and conjugate-linear in the second slot. The polarization identity holds for any sesquilinear form $B$:
+> $$
+> 4B(x,y)= \sum_{i=0}^{3}i^{k}B(x+i^{k}y, x+i^{k}y).
+> $$
+> 
+
+^af3e1a
+
 
 > [!Exercise] Assignment
 > Prove that if [[#^24334e]].2 is true then [[#^24334e]].1 can be used as a definition for an inner product.
@@ -144,6 +154,8 @@ We now restrict to complete inner product spaces.
 > > 
 > > %%Hint: $S_{1} \subset S_{2} \implies S_{2}^{\perp} \subset S_{1}^{\perp}$. /> ??? I do not see how one can use this here%%
 > 
+
+^89a352
 
 > [!Proposition] Riesz Lemma
 > Let $H$ be a Hilbert space.

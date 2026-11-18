@@ -58,6 +58,8 @@ P2: true
 > 1. $T$ is bijective. 
 > 2. $T$ has a continuous inverse (in particular, $T$ is an open map). 
 
+^da1f10
+
 > [!Example] Testing the hypotheses of OMT
 > Consider the [[LEC GANA1 11#^fe54b0|integral operator]] $T:C[0, 1]\to C[0, 1]$ defined by
 > $$
