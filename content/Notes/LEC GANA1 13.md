@@ -5,7 +5,7 @@ time: 15:31
 tags:
   - GANA1
   - Lecture
-desc: Open mapping theorem, Closed graph theorem
+desc: Open mapping theorem, Closed graph theorem, uniform boundedness principle
 P1: true
 P2: true
 ---

@@ -10,8 +10,6 @@ P1: true
 P2: true
 ---
 
-
-
 # Inner product spaces preliminaries
 
 See [[LEC ALG1 21#Inner Product Spaces]]. 

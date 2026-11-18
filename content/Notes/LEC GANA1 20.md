@@ -1,12 +1,13 @@
 ---
 id: "618"
-date: 2026-11-06
+date: 2026-11-13
 time: 15:30
 tags:
-  - Lecture
   - GANA1
+  - Lecture
+desc: The Fourier transform
 ---
-# The fourier transform
+# The Fourier transform
 
 For $f\in L^{1}(\mathbb{R})$, define $\hat{f}:\mathbb{R}\to \mathbb{C}$ by
 $$
