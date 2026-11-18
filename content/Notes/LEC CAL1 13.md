@@ -31,6 +31,8 @@ date: January 2025
 > $$
 > 
 
+^04887b
+
 ---
 ## Local extrema and saddle points
 

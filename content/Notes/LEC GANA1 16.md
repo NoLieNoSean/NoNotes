@@ -72,12 +72,41 @@ desc: Holder's and Minkowski's inequalities
 
 ---
 # $L_{p}$ spaces
-[!Definition] $\mathcal{L}_{p}$ spaces
-For a measure space $(X, \mathcal{A}, \mu )$,
-$$
-\mathcal{L}_{p}(X, \mathcal{A}, \mu)= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
-$$
-$\lVert \cdot  \rVert_{p}$ on $\mathcal{L}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
+> [!Definition] $\mathcal{L}_{p}$ spaces
+> For a measure space $(X, \mathcal{A}, \mu )$,
+> $$
+> \mathcal{\tilde{L}}_{p}(X, \mathcal{A}, \mu)= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
+> $$
+> $\lVert \cdot  \rVert_{p}$ on $\mathcal{\tilde{L}}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
+
+> [!Recall]
+> - Convex and concave functions [[LEC CAL1 13#^04887b]].
+> - Young's inequality [[Holder's inequality#^d28629]].
+
+> [!Theorem] Hölder's inequality
+> Let $p,q \in [1, \infty)$ be such that $\frac{1}{p}+\frac{1}{q}=1$. Then for $f \in \tilde{\mathcal{L}}_{p}(X), g \in \tilde{\mathcal{L}}_{q}(X)$, $fg$ and $\lVert fg \rVert_{1}\leq \lVert f \rVert_{p} \cdot \lVert g \rVert_{q}$.
+> > [!Proof]-
+> > WLOG, $\lVert f \rVert_{p}=\lVert g \rVert_{q}=1$.
+> > By [[Holder's inequality#^d28629|Young's inequality]], $\forall x$,
+> > $$
+> > \lvert f(x) \rvert \cdot  \lvert g(x) \rvert \leq \frac{1}{p}\lvert f(x) \rvert ^{p}+\frac{1}{q}\lvert g(x) \rvert ^{q}
+> > $$
+> > This implies,
+> > $$
+> > \int_{X}\lvert f(x) \rvert \lvert g(x) \rvert d \mu \leq \frac{1}{p} \int_{X}\lvert f(x) \rvert ^{p}d \mu + \frac{1}{q}\int_{X}\lvert g(x) \rvert ^{q}d \mu=\frac{1}{p}+\frac{1}{q}=1.
+> > $$
+
+> [!Remark]
+> Note that by Hölder's inequality, $f \in \tilde{\mathcal{L}}_{p}\implies f^{p-1}\in \tilde{\mathcal{L}}_{q}$.
+
+> [!Theorem] Minkowski inequality
+> Let $f, g \in \tilde{\mathcal{L}}^{p}(X)$, then $\lVert f + g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
+> > [!Proof]-
+> > $$
+> > \int_{X}\lvert f+g \rvert ^{p}d \mu= \int_{X}\lvert f+g \rvert ^{p-1} \cdot \lvert f+g \rvert d \mu\leq \int_{X}\lvert f \rvert \cdot \lvert f+g \rvert ^{p-1}d \mu + \int_{X}\lvert g \rvert \cdot \lvert f + g \rvert ^{p-1}d \mu 
+> > $$
+> > By Hölder's $\int_{X}\lvert f \rvert \cdot \lvert f + g \rvert^{p-1} d \mu \leq \lVert f \rVert_{p} \cdot \lVert f+g \rVert_{q}$.
+> > Therefore, $\lVert f+g \rVert_{p}^{p}\leq(\lVert f \rVert_{p}+\lVert g \rVert_{p})(\lVert f+g \rVert_{q}^{p}) \implies \lVert  f+g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
 
 ---
 

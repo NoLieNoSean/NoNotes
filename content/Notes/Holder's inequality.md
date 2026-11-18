@@ -25,6 +25,8 @@ $$
 > > ab = e^{x_{1}+x_{2}}=e^{\frac{1}{p}px_{1}+\frac{1}{q}qx_{2}}\leq \frac{1}{p}e^{px_{1}} + \frac{1}{q}e^{qx_{2}}=\frac{a^{p}}{p}+\frac{b^{q}}{q}.
 > > $$
 
+^d28629
+
 Now, let
 $$
 \begin{align}
