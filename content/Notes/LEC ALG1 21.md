@@ -21,7 +21,7 @@ The motivation for this section is to define a notion of length and perpendicula
 ^dd5bbe
 
 > [!Proposition] 
-> The inner product is anti-linear in the second slot.
+> The inner product is conjugate-linear in the second slot.
 > 
 > > [!Proof]-
 > > $$

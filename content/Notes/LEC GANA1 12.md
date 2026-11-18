@@ -11,7 +11,7 @@ P2: true
 ---
 # The Hahn-Banach Theorem
 
-We denote the space $B(V, \mathbb{C})$ of continuous linear functionals on the NLS $V$ by $V^{*}$, and call it the dual space of $V$. [[LEC GANA1 11#^5fc172|We have seen]] that $B(V, W)$ is a Banach space if $Y$ is Banach; it follows that $V^{*}$ is Banach for every NLS $V$. 
+We denote the space $B(V, \mathbb{C})$ of continuous linear functionals on the NLS $V$ by $V^{*}$, and call it the dual space of $V$. [[LEC GANA1 11#^5fc172|We have seen]] that $B(V, W)$ is a Banach space if $W$ is Banach; it follows that $V^{*}$ is Banach for every NLS $V$. 
 
 > [!Example] Bounded functionals
 > - In $\mathbb{C}^{n}$, for $\tilde{x}\in \mathbb{C}^{n}$, define $\phi_{\tilde{y}}(\tilde{x}) = \sum x_{i}y_{i}$.
