@@ -14,6 +14,8 @@ P2: true
 
 See [[LEC ALG1 21#Inner Product Spaces]]. 
 
+In this section, $H$ can be any inner product space. 
+
 > [!proposition] Cauchy-Schwarz inequality
 > Let $H$ be an inner product space. Then for $x, y \in H$
 > $$
@@ -65,6 +67,8 @@ See [[LEC ALG1 21#Inner Product Spaces]].
 > Prove that if [[#^24334e]].2 is true then [[#^24334e]].1 can be used as a definition for an inner product.
 
 # The Riesz lemma
+
+We now restrict to complete inner product spaces. 
 
 > [!Proposition]
 > Let $K$ be a closed convex subset of a Hilbert space $H$. Then for $y\in H$, there exists $x_{0} \in K$ such that $d(y, x_{0})= \inf_{x \in K}d(x,y)= d(y, K)$.
@@ -151,7 +155,7 @@ See [[LEC ALG1 21#Inner Product Spaces]].
 > > 
 > > $\lvert \phi_{y}(x) \rvert= \lvert \langle x, y \rangle \rvert\leq \lVert x \rVert \lVert y \rVert$, so $\lVert \phi_{y} \rVert\leq \lVert y \rVert$ and $\phi_{y} \in H^{*}$. We also have $\phi_{y}(y/\lVert y \rVert)= \lVert y \rVert$, so $\lVert \phi_{y} \rVert=\lVert y \rVert$. 
 > > 
-> > Let $\phi \in H^{*}$ be non-zero. Let $y \in (\ker \phi)^{\perp}$ be such that $\phi(y)=1$. For $x\in H$, $x-\phi(x)y \in \ker(\phi)$.
+> > If $\phi\in H^{*}$ is zero, then clearly $\phi=\phi_{0}$. Let $\phi \in H^{*}$ be non-zero, i.e., $\ker \phi \subsetneq H$. By [[#^55aad1]], $H=(\ker \phi)\oplus(\ker \phi)^{\perp}$, so $(\ker \phi)^{\perp}\ne \{ 0 \}$. Let $y \in (\ker \phi)^{\perp}$ be such that $\phi(y)=1$. For $x\in H$, $x-\phi(x)y \in \ker(\phi)$.
 > > $$
 > > \begin{align}
 > > \langle x-\phi(x)y, y \rangle  & =0 \\
@@ -161,6 +165,74 @@ See [[LEC ALG1 21#Inner Product Spaces]].
 > > $$
 > > so $\phi=\phi_{y/\lVert y \rVert^{2}}$. Lastly, observe that $\lVert\phi_{y_{1}}- \phi_{y_{2}}\rVert=\lVert \phi_{y_{1}-y_{2}} \rVert= \lVert y_{1}-y_{2} \rVert$; uniqueness follows. 
 > 
+
+^f0b16e
+
+> [!Remark]
+> If $H$ is not complete, [[#^f0b16e]].2 does not hold, since we cannot claim $(\ker \phi)^{\perp}\ne \{ 0 \}$ anymore. Indeed, if $H$ is not complete, you can have $S^{\perp}=\{ 0 \}$ even when $S$ is a proper closed subspace of $H$. 
+
+^017eea
+
+> [!Example]-
+> 
+> For an example of [[#^017eea]], consider
+> $$
+>  V:=c_{00}=\{x\in\ell^2:x\text{ has finite support}\}\subseteq \ell^{2}.
+> $$
+> $V$ is incomplete, and its completion is $\ell^{2}$. Take the subspace
+> $$
+> S:=\left\{x\in V:\sum_{n=1}^\infty x_n=0\right\}. 
+> $$
+> Suppose $z\in S^{\perp}$. Since $e_{i}-e_{j}\in S$ for every $i, j$, we have
+> $$
+> 0=\langle z, e_{i}-e_{j} \rangle =z_{i}-z_{j}.
+> $$
+> Thus all coordinates of $z$ are equal, forcing $z=0$. 
+> 
+> However, this is not the example we are looking for, because $S$ is not a closed subspace of $V$. In fact, $S$ is dense in $V$: 
+> $$
+> \begin{align}
+> \left( 1-\frac{1}{n}, \underbrace{ -\frac{1-(1/n)}{n}, \dots, -\frac{1-(1/n)}{n} }_{ n\text{ times } }, 0, \dots \right)\to e_{1}
+> \end{align}
+> $$
+> in the $\ell^{2}$-norm. To fix this, consider the Hilbert space
+> $$
+> H:=\mathbb R\oplus\ell^2.
+> $$
+> Define
+> $$
+> J:c_{00}\longrightarrow H,\qquad J(x)=\left(\sum_{n=1}^\infty x_n,\ x\right),
+> $$
+> and let $V:=J(c_{00})$, equipped with the inner product inherited from $H$.
+> 
+> Set
+> $$
+> S:=J\left(\left\{x\in c_{00}: \sum_{n=1}^\infty x_n=0\right\}\right).
+> $$
+> 
+> We first note that $V$ is incomplete. In fact, $V$ is dense in $H$. To see this, suppose $(a,y)\in V^\perp$. Then
+> $$
+> 0=a\sum_n x_n+\sum_n y_nx_n =\sum_n(a+y_n)x_n
+> $$
+> for every $x\in c_{00}$. Taking $x=e_n$, we obtain $y_n=-a$ for every $n$. Since $y\in\ell^2$, this forces $a=0$ and $y=0$. Thus $V^\perp=\{0\}$, so $V$ is dense in $H$. But $V\neq H$, since its elements have finitely supported second coordinates. Hence $V$ is incomplete, with completion $H$.
+> 
+> Next, observe that
+> $$
+> S=V\cap(\{0\}\oplus\ell^2).
+> $$
+> Since $\{0\}\oplus\ell^2$ is closed in $H$, its intersection with $V$ is closed in $V$.
+> 
+> Finally, suppose $J(x)\in S^\perp$. Since $e_i-e_j$ has coordinate sum zero, we have $J(e_i-e_j)\in S$. Consequently,
+> $$
+> 0=\langle J(x),J(e_i-e_j)\rangle_H =\langle x,e_i-e_j\rangle_{\ell^2} =x_i-x_j.
+> $$
+> Thus all coordinates of $x$ are equal, so necessarily $x=0$. Therefore $J(x)=0$.
+> 
+> Hence
+> $$
+> V\text{ incomplete},\quad S\text{ closed in }V,\quad S\neq V, \quad  S^\perp=\{0\}.
+> $$
+> Note that $S$ is not closed in the completion $H$: its closure there is $\{0\}\oplus\ell^2$.
 
 > [!Exercise] 
 > Let $X$ be a Banach space. For nonzero $\phi \in X^{*}$ prove that $X / \ker(\phi) \cong \mathbb{C}$.
