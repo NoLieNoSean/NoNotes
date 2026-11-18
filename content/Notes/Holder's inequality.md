@@ -13,28 +13,23 @@ $$
 \sum_{j=1}^{n} \lvert x_{j}y_{j} \rvert \leq \lVert \mathbf{x} \rVert _{p}\lVert \mathbf{y} \rVert _{q}
 $$
 
-> [!Theorem] Lemma
-> If $A, B>0$, then $AB\leq \frac{1}{p}A^{p}+\frac{1}{q}B^{q}$.
-
-> Proof
-> We know that $f(x)=\ln(x)$ is concave. Thus, 
+> [!Theorem] Young's inequality for products
+> For $a, b,p,q \in \mathbb{R}_{\geq 0}$ such that $\frac{1}{p}+\frac{1}{q}=1$, 
 > $$
-> \begin{align}
-> \ln(\lambda x+(1-\lambda)y)\geq & \lambda \ln(x)+(1-\lambda)\ln(y) \\
-> \end{align}
+> ab \leq \frac{a^{p}}{p} + \frac{b^{q}}{q}
 > $$
-> Plug in $x=A^{p}$, $y=B^{q}$, $\lambda=\frac{1}{p}$. 
-> $$
-> \begin{align}
-> \ln\left( \frac{1}{p}A^{p}+\frac{1}{q}B^{q} \right)\geq \ln A+\ln B=\ln AB
-> \end{align}
-> $$
+> > [!Proof]-
+> > For $a=0$ or $b=0$ it follows trivially, so assume $a = e^{x_{1}}, b = e^{x_{2}}$.
+> > Now we use the fact that $(x \mapsto e^{x})$ is a convex function.
+> > $$
+> > ab = e^{x_{1}+x_{2}}=e^{\frac{1}{p}px_{1}+\frac{1}{q}qx_{2}}\leq \frac{1}{p}e^{px_{1}} + \frac{1}{q}e^{qx_{2}}=\frac{a^{p}}{p}+\frac{b^{q}}{q}.
+> > $$
 
 Now, let
 $$
 \begin{align}
-A_{i} & =\frac{{|x_{i}|}}{\lVert \mathbf{x} \rVert _{p}} \\
-B_{i} & = \frac{{|y_{i}|}}{\lVert \mathbf{y} \rVert _{q}}
+a_{i} & =\frac{{|x_{i}|}}{\lVert \mathbf{x} \rVert _{p}} \\
+b_{i} & = \frac{{|y_{i}|}}{\lVert \mathbf{y} \rVert _{q}}
 \end{align}
 $$
 So, we have the inequalities

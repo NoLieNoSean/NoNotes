@@ -30,7 +30,7 @@ desc: adjoint and unitary operators yada yada
 > > [!Proof]-
 > > By Riesz representation theorem, for any $z \in K$,
 > > $$
-> > \lVert z \rVert = \lVert \phi_{z} \rVert = \sup_{\lVert y\leq 1 \rVert }\lvert \langle z, x\rangle \rvert 
+> > \lVert z \rVert = \lVert \phi_{z} \rVert = \sup_{\lVert y\leq 1 \rVert }\lvert \langle z, y\rangle \rvert 
 > > $$
 > > Take $z = Tx$.
 > 

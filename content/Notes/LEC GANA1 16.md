@@ -19,41 +19,65 @@ desc: Holder's and Minkowski's inequalities
 
 ---
 
-[!Definition]
-Let $T$ be a bounded operator on $H$. We say that $T$ is normal if $TT^{*}=T^{*}T$. . 
+> [!Definition]
+> Let $T$ be a bounded operator on $H$. We say that $T$ is normal if $TT^{*}=T^{*}T$.  
 
-[!Proposition]
-Let $H$ be a complex Hilbert space. $T$ is normal iff $\lVert Tx \rVert=\lVert T^{*}x \rVert$ for all $x\in H$. 
-
-> [!Proof]-
+> [!Proposition]
+> Let $H$ be a complex Hilbert space. $T$ is normal iff $\lVert Tx \rVert=\lVert T^{*}x \rVert$ for all $x\in H$. 
 > 
+> > [!Proof]-
+> > 
+> > $$
+> > \begin{align}
+> > \lVert Tx \rVert ^{2} & =\langle Tx, Tx \rangle  \\
+> >  & =\langle T^{*}Tx, x \rangle  \\
+> >  & =\langle T T^{*}x, x \rangle  \\
+> >  & =\lVert T^{*}x \rVert ^{2}.
+> > \end{align}
+> > $$
+
+> [!Example]
+> Let $H=L^{2}(X, \mu)$. Let $f\in L^{\infty}(X, \mu)$. Define $M_{f}:H\to H$ as $M_{f}(g)=fg$. 
+> 
+> Note that, $\int_{X}\lvert fg \rvert^{2}d \mu \leq \lVert f \rVert_{L^\infty}^{2} \cdot \int_{X}\lvert g \rvert^{2}d \mu < \infty$.
+> Hence $M_{f}$ is a well defined operator with $\lVert M_{f} \rVert\leq \lVert f \rVert_{L^\infty }$.
+> 
+> Next we will show that $\lVert M_{f} \rVert=\lVert f \rVert_{L^\infty }$.
+> Consider $A_{\epsilon}=\{ x \in X : \lvert f(x) \rvert > \lVert f \rVert_{L^{\infty}}-\epsilon \}$. Since $\lVert f \rVert_{L^{\infty}}$ is the essential supremum, $\mu(A_{\epsilon})> 0$. Clearly, $1_{A_{\epsilon}} \in L^{2}(X)$ with $\left\lVert \frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}} \right\rVert = 1$.
+> Now, 
 > $$
 > \begin{align}
-> \lVert Tx \rVert ^{2} & =\langle Tx, Tx \rangle  \\
->  & =\langle T^{*}Tx, x \rangle  \\
->  & =\langle T T^{*}x, x \rangle  \\
->  & =\lVert T^{*}x \rVert ^{2}.
+> \left\lVert M_{f}\left(\frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}}\right) \right\rVert_{L^{2}} &= \frac{1}{\sqrt{\mu(1_{A_{\epsilon}})}} \sqrt{\left(\int_{X}1_{A_{\epsilon}}f^{2}d \mu \right)}\\
+> &=\frac{1}{\sqrt{\mu(A_{\epsilon })}}\sqrt{\int_{A_{\epsilon}}f^{2}d \mu }\\
+> &\geq \frac{1}{\sqrt{\mu(A_{\epsilon})}}\sqrt{\int_{A_{\epsilon}}\left(\lVert f \rVert _{L^{\infty}}-\epsilon \right)^2}\\
+> &= \lVert f \rVert _{L^{\infty}}-\epsilon 
 > \end{align}
 > $$
-
-Let $H=L^{2}(X, \mu)$. Let $f\in L^{\infty}(X, \mu)$. Define $(M_{f}f)=fg$. Shows that $M_{f}$ is a linear operator on $L^{2}(X,\mu)$ with norm $\lVert f \rVert_{\infty}$. Shows that $(M_{f})^{*}=M_{\overline{f}}$, and that $M_{f}$ is unitary. 
+> Therefore, $\lVert M_{f} \rVert_{L^{2}}=\lVert f \rVert_{L^{\infty}}$.
+> If $f, g \in L^{\infty}$ then $M_{f}$ and $M_{g}$ commute. Also $(M_{f})^{*}=M_{\overline{f}}$.
+> Also if $\lVert f(t) \rVert=1\, \forall t \in X$ then $M_{f}$ is unitary.
 
 ---
 
-[!Exercise] Assignment
-1. Let $H=L^{2}(\mathbb{R})$. For $t\in \mathbb{R}$, show that $(U_{t}f)(s)=f(s-t)$ is unitary. 
-2. Let $H=L^{2}[0, \infty)$. For $t> 0$, show that
+> [!Exercise] Assignment
+> 1. Let $H=L^{2}(\mathbb{R})$. For $t\in \mathbb{R}$, show that the shift operator $(U_{t}f)(s)=f(s-t)$ is unitary. 
+> 2. Let $H=L^{2}[0, \infty)$. For $t> 0$, show that
+> $$
+> (S_{t}f)(s)=\begin{cases}
+> f(s-t) & s\geqslant  t \\
+> 0 & s< t
+> \end{cases}
+> $$
+> 	is an isometry, but not unitary(Compute $S_t^*$). 
+
+---
+# $L_{p}$ spaces
+[!Definition] $\mathcal{L}_{p}$ spaces
+For a measure space $(X, \mathcal{A}, \mu )$,
 $$
-(S_{t}f)(s)=\begin{cases}
-f(s-t) & s\geqslant  t \\
-0 & s< t
-\end{cases}
+\mathcal{L}_{p}(X, \mathcal{A}, \mu)= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
 $$
-	is an isometry, but not unitary. 
-
-
-
-Define $\tilde{L}^{p}(X)=\left\{  f\in L^{0}(X) , \int |f|^{p}< \infty \right\}$. ...
+$\lVert \cdot  \rVert_{p}$ on $\mathcal{L}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
 
 ---
 
