@@ -107,7 +107,7 @@ P2: true
 ^df127d
 
 > [!Proposition] Existence of adjoint
-> Let $H, K$ be Hilbert spaces. For $T\in B(H, K)$, there exists unique $T^{*}\in B(K, H)$ such that
+> Let $H, K$ be Hilbert spaces. For $T\in B(H, K)$, there exists *unique* $T^{*}\in B(K, H)$ such that
 > $$
 > \begin{align}
 > \langle Tx,y \rangle = \langle x,T^{*}y \rangle  &  &  \forall x \in H, \forall y \in K
@@ -126,6 +126,8 @@ P2: true
 > > $$
 > > 
 > 
+
+^391a15
 
 > [!Proposition] Properties of the adjoint
 > 1. $(\alpha T + S)^{*}= \overline{\alpha}T^{*}+S^{*}$.

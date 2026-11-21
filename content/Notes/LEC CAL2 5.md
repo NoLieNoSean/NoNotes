@@ -20,7 +20,7 @@ id: "196"
 > The support of $\chi _C$ is given by $\overline{C}$. 
 
 > [!Definition]
-> Assume $C\subset \mathbb{R}^{n}$ is bounded, that is, $C\subseteq R$ for some rectangle $R$. Let $f:\mathbb{R}^{n}\to \mathbb{R}$ be bounded on $R$. $f$ is said to be integrable over $C$ if $f\chi_{C}$ is integrable over $R$, in which case we define 
+> Assume $C\subset \mathbb{R}^{n}$ is bounded, that is, $C\subseteq R$ for some rectangle $R$. Let $f:\mathbb{R}^{n}\to \mathbb{R}$ be bounded on $R$. $f$ is said to be **integrable** over $C$ if $f\chi_{C}$ is integrable over $R$, in which case we define 
 > $$
 > \int_{C}f:=\int_{R}f\chi_{C}.
 > $$

@@ -83,6 +83,8 @@ Recall that the graph of a function $f:X\to Y$ of metric spaces is the subset $G
 > [!Remark]
 > $G(f)$ is closed iff the following condition holds: If $x_{n}\to x$ and $Tx_{n}\to y$, then $y=Tx$. 
 
+^5a6f7c
+
 For NLS $X, Y$, the product $X\times Y$ can be metrized in such a way that a sequence in $X\times Y$ converges precisely when each of the coordinate sequences converges. One such metric is given by $\lVert (x, y)\rVert=\lVert x \rVert+\lVert y \rVert$, and the resulting (complete) NLS is denoted $X\oplus_{\ell_{1}}Y$. 
 
 > [!Proposition] Closed graph theorem, @sunderFunctionalAnalysisSpectral1997 Thm 1.5.14

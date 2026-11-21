@@ -7,14 +7,32 @@ tags:
   - Lecture
 desc: Holder's and Minkowski's inequalities
 ---
-> [!Exercise] Assignment
-> Let $k\in L^{2}([0, 1]\times[0, 1])$. Define $T_{k}:L^{2}[0, 1]\to L^{2}[0, 1]$ by
-> $$
-> (T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
-> $$
-> Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
+[!Remark]
+If $f, g\in L^{2}$, then $fg\in L^{1}$
+
+[!Exercise] Assignment
+Let $I=[0, 1]$. Let $k\in L^{2}(I^{2};\mathbb{C})$. Define $T_{k}:L^{2}(I; \mathbb{C})\to L^{2}(I; \mathbb{C})$ by
+$$
+(T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
+$$
+Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
 
 [!Solution]-
+
+First, we show that $T_{k}f\in L^{2}(I;\mathbb{C})$. Recall that $k\in L^{2}(I^{2})$ implies $\int_{I^{2}} |k|^{2}< \infty$. By [[LEC GANA1 8#^18d8a9|Fubini]], the section $x \mapsto |k(x, y)|^{2}$ is integrable (i.e., $k(\_, y)\in L^{2}(I)$) for almost all $y\in I$. 
+
+$T_{k}f$ is measurable. 
+
+$T_{k}f$ is square integrable:
+$$
+\begin{align}
+\int_{0}^{1} \lvert T_{k}f (y)\rvert ^{2} \, dy & \leqslant \int_{0}^{1} \left( \int_{0}^{1} |f(x)||k(x, y)| \, dx  \right)^{2} \, dy  \\
+ & \leqslant \int_{0}^{1} \left( \int_{0}^{1} |f(x)|^{2} \, dx  \right)\left( \int_{0}^{1} |k(x, y)|^{2} \, dx  \right) \, dy \\
+ &  \leqslant \lVert f \rVert _{2}\int_{0}^{1} \int_{0}^{1} |k(x, y)|^{2} \, dx  \, dy \\
+ &   =\lVert f \rVert _{2}\lVert k \rVert _{2}.
+\end{align}
+$$
+
 
 Consider $S:L^{2}[0, 1]\to L^{2}[0, 1]$ defined by
 $$
@@ -30,53 +48,67 @@ $$
 $$
 ...
 
+That $T_{k}$ is bounded and $T_{k}^{*}=S$ now follows from [[#^a9df42]]. 
 
 > [!Exercise] Assignment
 > Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 
+> 
+> > [!Solution]-
+> > 
+> > We will use the [[LEC GANA1 13#^7f08a9]]. By [[LEC GANA1 13#^5a6f7c]], we must show that if $x_{n}\to x$ and $Tx_{n}\to y$, then $Tx=y$. For any $w\in H$, using the [[LEC ANA2 16#^181916|continuity of the inner product]], 
+> > $$
+> > \begin{align}
+> > \langle Tx,  w\rangle  & =\langle x, Sw \rangle  \\
+> >  & = \lim_{ n \to \infty } \langle x_{n}, Sw \rangle  \\
+> >  &  =\lim_{ n \to \infty } \langle Tx_{n}, w \rangle  \\
+> >  &   =\langle y, w \rangle .
+> > \end{align}
+> > $$
+> > Thus, $Tx=y$, and $T$ is bounded. It follows from the [[LEC GANA1 15#^391a15|uniqueness]] of the adjoint that $T^{*}=S$. 
+> 
 
-[!Solution]
-
-We will use the [[LEC GANA1 13#^7f08a9]]. 
+^a9df42
 
 ---
 
-> [!Definition]
-> Let $T$ be a bounded operator on $H$. We say that $T$ is normal if $TT^{*}=T^{*}T$.  
+Unless otherwise mentioned, assume Hilbert spaces are complex. 
+
+> [!Definition] Normal operator
+> We call $T\in B(H)$ **normal** if $TT^{*}=T^{*}T$.  
 
 > [!Proposition]
 > Let $H$ be a complex Hilbert space. $T$ is normal iff $\lVert Tx \rVert=\lVert T^{*}x \rVert$ for all $x\in H$. 
 > 
 > > [!Proof]-
 > > 
+> > Note that
 > > $$
-> > \begin{align}
-> > \lVert Tx \rVert ^{2} & =\langle Tx, Tx \rangle  \\
-> >  & =\langle T^{*}Tx, x \rangle  \\
-> >  & =\langle T T^{*}x, x \rangle  \\
-> >  & =\lVert T^{*}x \rVert ^{2}.
-> > \end{align}
+> > \langle T^{*}Tx, x \rangle =\langle TT^{*}x, x \rangle \iff  \langle Tx, Tx \rangle =\langle T^{*}x, T^{*}x \rangle.
 > > $$
+> > So, if $T$ is normal, then $\lVert Tx \rVert=\lVert T^{*}x \rVert$. The converse follows from the fact that an operator on a Hilbert space is determined by its quadratic form [[LEC GANA1 15#^424bda]]. 
+> 
 
-> [!Example]
-> Let $H=L^{2}(X, \mu)$. Let $f\in L^{\infty}(X, \mu)$. Define $M_{f}:H\to H$ as $M_{f}(g)=fg$. 
-> 
-> Note that, $\int_{X}\lvert fg \rvert^{2}d \mu \leq \lVert f \rVert_{L^\infty}^{2} \cdot \int_{X}\lvert g \rvert^{2}d \mu < \infty$.
-> Hence $M_{f}$ is a well defined operator with $\lVert M_{f} \rVert\leq \lVert f \rVert_{L^\infty }$.
-> 
-> Next we will show that $\lVert M_{f} \rVert=\lVert f \rVert_{L^\infty }$.
-> Consider $A_{\epsilon}=\{ x \in X : \lvert f(x) \rvert > \lVert f \rVert_{L^{\infty}}-\epsilon \}$. Since $\lVert f \rVert_{L^{\infty}}$ is the essential supremum, $\mu(A_{\epsilon})> 0$. Clearly, $1_{A_{\epsilon}} \in L^{2}(X)$ with $\left\lVert \frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}} \right\rVert = 1$.
-> Now, 
-> $$
-> \begin{align}
-> \left\lVert M_{f}\left(\frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}}\right) \right\rVert_{L^{2}} &= \frac{1}{\sqrt{\mu(1_{A_{\epsilon}})}} \sqrt{\left(\int_{X}1_{A_{\epsilon}}f^{2}d \mu \right)}\\
-> &=\frac{1}{\sqrt{\mu(A_{\epsilon })}}\sqrt{\int_{A_{\epsilon}}f^{2}d \mu }\\
-> &\geq \frac{1}{\sqrt{\mu(A_{\epsilon})}}\sqrt{\int_{A_{\epsilon}}\left(\lVert f \rVert _{L^{\infty}}-\epsilon \right)^2}\\
-> &= \lVert f \rVert _{L^{\infty}}-\epsilon 
-> \end{align}
-> $$
-> Therefore, $\lVert M_{f} \rVert_{L^{2}}=\lVert f \rVert_{L^{\infty}}$.
-> If $f, g \in L^{\infty}$ then $M_{f}$ and $M_{g}$ commute. Also $(M_{f})^{*}=M_{\overline{f}}$.
-> Also if $\lVert f(t) \rVert=1\, \forall t \in X$ then $M_{f}$ is unitary.
+
+[!Example]
+Let $H=L^{2}(X, \mu)$. Let $f\in L^{\infty}(X, \mu)$. Define $M_{f}:H\to H$ as $M_{f}(g)=fg$. 
+
+Note that, $\int_{X}\lvert fg \rvert^{2}d \mu \leq \lVert f \rVert_{L^\infty}^{2} \cdot \int_{X}\lvert g \rvert^{2}d \mu < \infty$.
+Hence $M_{f}$ is a well defined operator with $\lVert M_{f} \rVert\leq \lVert f \rVert_{L^\infty }$.
+
+Next we will show that $\lVert M_{f} \rVert=\lVert f \rVert_{L^\infty }$.
+Consider $A_{\epsilon}=\{ x \in X : \lvert f(x) \rvert > \lVert f \rVert_{L^{\infty}}-\epsilon \}$. Since $\lVert f \rVert_{L^{\infty}}$ is the essential supremum, $\mu(A_{\epsilon})> 0$. Clearly, $1_{A_{\epsilon}} \in L^{2}(X)$ with $\left\lVert \frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}} \right\rVert = 1$.
+Now, 
+$$
+\begin{align}
+\left\lVert M_{f}\left(\frac{1_{A_{\epsilon}}}{\sqrt{\mu(A_{\epsilon })}}\right) \right\rVert_{L^{2}} &= \frac{1}{\sqrt{\mu(1_{A_{\epsilon}})}} \sqrt{\left(\int_{X}1_{A_{\epsilon}}f^{2}d \mu \right)}\\
+&=\frac{1}{\sqrt{\mu(A_{\epsilon })}}\sqrt{\int_{A_{\epsilon}}f^{2}d \mu }\\
+&\geq \frac{1}{\sqrt{\mu(A_{\epsilon})}}\sqrt{\int_{A_{\epsilon}}\left(\lVert f \rVert _{L^{\infty}}-\epsilon \right)^2}\\
+&= \lVert f \rVert _{L^{\infty}}-\epsilon 
+\end{align}
+$$
+Therefore, $\lVert M_{f} \rVert_{L^{2}}=\lVert f \rVert_{L^{\infty}}$.
+If $f, g \in L^{\infty}$ then $M_{f}$ and $M_{g}$ commute. Also $(M_{f})^{*}=M_{\overline{f}}$.
+Also if $\lVert f(t) \rVert=1\, \forall t \in X$ then $M_{f}$ is unitary.
 
 ---
 

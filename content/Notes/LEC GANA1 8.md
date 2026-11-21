@@ -62,7 +62,11 @@ trivial for simple $F$, use MCT for general $F$.
 > $$
 > 
 
+^18d8a9
+
 
 
 
 [^1]: defined arbitrarily at values for which the section is not integrable.
+
+---
