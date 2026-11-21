@@ -69,6 +69,8 @@ A variation of [[#^3f63a7]]:
 > [!Definition]
 > Let $X$ be a uniquely geodesic space. Let $c(x, y)$ denote the linear reparameterization $[0, 1]\to X$ of the geodesic segment joining $x$ to $y$. Geodesics in $X$ are said to **vary continuously with their endpoints** if $c(x_{n}, y_{n})\to c(x, y)$ uniformly whenever $x_{n}\to x$ and $y_{n}\to y$. 
 
+^c423bf
+
 > [!Corollary]
 > If a proper metric space $X$ is uniquely geodesic, then geodesics in $X$ vary continuously with their endpoints. 
 

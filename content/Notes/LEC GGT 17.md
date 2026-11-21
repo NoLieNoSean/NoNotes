@@ -10,7 +10,7 @@ desc: Quasi Isometries I
 # Quasi-isometries
 
 [!Lemma]
-Let $(X, d)$ be a metric space. Let $\Gamma$ be a group with fintie generating set $\mathcal{A}$ and associated word metric $d_{\mathcal{A}}$. 
+Let $(X, d)$ be a metric space. Let $\Gamma$ be a group with finite generating set $\mathcal{A}$ and associated word metric $d_{\mathcal{A}}$. 
 
 > [!Proposition] Švarc-Milnor, @bridsonMetricSpacesNonpositive1999 8.19
 > Let $X$ be a *length space*. If $\Gamma$ acts properly and cocompactly by isometries on $X$, then $\Gamma$ is finitely generated and for any choice of basepoint $x_{0}\in X$, the map $\gamma\mapsto\gamma x_{0}$ is a quasi-isometry. 

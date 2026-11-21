@@ -21,3 +21,9 @@ SORT date ASC
 
 
 [[CAT-(k) spaces]]
+[[Isometries of CAT(0) spaces]]
+
+
+Stuff to check
+1. The definition of the metric on the hyperboloid. I.2.6
+2. Model spaces can be obtained by scaling the metric on $M_{-1}$ and $M_{1}$. I.2.10

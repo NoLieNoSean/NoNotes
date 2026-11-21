@@ -5,6 +5,7 @@ time: 11:54
 tags:
   - GGT
   - Lecture
+desc: Isometries of H
 ---
 [!Proposition]
 1. $SL_{2}(\mathbb{R})$ acts on $\mathbb{H}$ transitively via isometries. 
