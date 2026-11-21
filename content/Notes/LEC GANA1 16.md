@@ -14,8 +14,29 @@ desc: Holder's and Minkowski's inequalities
 > $$
 > Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
 
+[!Solution]-
+
+Consider $S:L^{2}[0, 1]\to L^{2}[0, 1]$ defined by
+$$
+\begin{align}
+S(y)=\int_{0}^{1} f(x) \overline{k(y, x)} \, dx .
+\end{align}
+$$
+Then, 
+$$
+\begin{align}
+\langle T_{k}f, g \rangle  & = \int_{0}^{1} \int_{0}^{1} f(x) \overline{g(y)}k(x, y) \, dx  \, dy 
+\end{align}
+$$
+...
+
+
 > [!Exercise] Assignment
 > Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 
+
+[!Solution]
+
+We will use the [[LEC GANA1 13#^7f08a9]]. 
 
 ---
 
