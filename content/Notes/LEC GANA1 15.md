@@ -7,7 +7,7 @@ tags:
   - GANA1
 desc: Corollaries of Riesz, the adjoint operator, unitary maps
 P1: true
-P2:
+P2: true
 ---
 # Consequences of the Riesz lemma
 
@@ -85,6 +85,8 @@ P2:
 > \end{pmatrix}\in \mathbb{R}^{2},
 > $$
 > but $\begin{pmatrix}0 &1 \\ -1 &0\end{pmatrix}\ne 0$. 
+
+^424bda
 
 # The adjoint operator
 
@@ -258,17 +260,86 @@ P2:
 
 ---
 
-# Unitaries and Isometries
+# Isometries and Unitaries
 
-> [!Definition] Isometry
-> $U\in B(H, K)$ is an **isometry** if $\lVert Ux \rVert=\lVert x \rVert$ for all $x\in H$. By the [[LEC GANA1 14#^24334e|polarization identity]], $\langle Ux, Uy \rangle=\langle x, y \rangle$ for all $x, y\in H$. 
+If the arbitrary cardinality sets $I$ bother you, just assume $H$ is separable throughout. 
 
-> [!Proposition]
-> Let $U\in B(H)$. TFAE:
-> 1. $U$ is an isometry. 
-> 2. If $E\subseteq H$ is an orthonormal basis, then $U(E)$ is an orthonormal set. 
-> 3. there exists an orthonormal basis $E\subseteq H$ such that $U(E)$ is an orthonormal set. 
-> 4. $U^{*}U=\mathrm{id}_{H}$. 
+> [!Proposition] Isometries, @sunderFunctionalAnalysisSpectral1997 Prop. 2.4.11
+> Let $H, K$ be Hilbert spaces. Let $U\in L(H, K)$. TFAE:
+> 1. If $\{ e_{i}:i\in I \}$ is any orthonormal set in $H$, then $\{ Ue_{i}:i\in I \}$ is an orthonormal set in $K$. 
+> 2. There exists an orthonormal basis $\{ e_{i}:i\in I \}$ for $H$ such that $\{ Ue_{i}:i\in I \}$ is an orthonormal set in $K$. 
+> 3. $\langle Ux, Uy \rangle=\langle x, y \rangle$ for all $x, y\in H$.
+> 4. $\lVert Ux \rVert=\lVert x \rVert$ for all $x\in H$. 
+> 5. $U^{*}U=\mathrm{id}_{H}$. 
+> 
+> $U$ is called an **isometry** if it satisfies any of the above. 
+> 
+> > [!Proof]-
+> > 
+> > (1) ⇒ (2): [[LEC GANA1 14B#^36efa1|There exists]] an orthonormal basis for $H$. 
+> > 
+> > (2) ⇒ (3): If $x, y\in H$ and $\{ e_{i}:i\in I \}$ is as in (2), then[^1]
+> > $$
+> > \begin{align}
+> > \langle Ux, Uy \rangle  & =\left< U\left( \sum_{i\in I} \langle x, e_{i} \rangle e_{i}\right), U\left( \sum_{j\in I}\langle y, e_{j} \rangle e_{j} \right) \right>  \\
+> >  & = \sum_{i, j}\langle x, e_{i} \rangle \langle y, e_{j} \rangle \langle Ue_{i}, Ue_{j} \rangle  \\
+> >  & =\sum_{i\in I}\langle x, e_{i} \rangle \langle y, e_{i} \rangle  \\
+> >  & =\langle x, y \rangle .
+> > \end{align}
+> > $$
+> > 
+> > (3) ⇒ (4): Put $y=x$. 
+> > 
+> > (4) ⇒ (5): For $x\in H$, 
+> > $$
+> > \langle U^{*}Ux, x \rangle =\langle Ux, Ux \rangle =\langle \mathrm{id}_{H}x, x \rangle .
+> > $$
+> > By [[#^424bda]], $U^{*}U=\mathrm{id}_{H}$. 
+> > 
+> > (5) ⇒ (1): If $\{ e_{i}:i\in I \}$ is any orthonormal set in $H$, then
+> > $$
+> > \langle Ue_{i}, Ue_{j} \rangle =\langle U^{*}Ue_{i}, e_{j} \rangle =\langle e_{i}, e_{j} \rangle =\delta_{ij}.
+> > $$
+> > 
+> 
 
-> [!Definition] Unitary map
-> An isometry $U\in B(H, K)$ is said to be **unitary** if $U$ is onto. 
+^823011
+
+[^1]: We're using the continuity of the inner product ([[LEC ANA2 16#^181916]]) here. #td You have to see how this works when $I$ is not countable. 
+
+> [!Proposition] Unitary maps, @sunderFunctionalAnalysisSpectral1997 Prop. 2.4.12
+> Let $H, K$ be Hilbert spaces. Let $U\in L(H, K)$ be an [[#^823011|isometry]]. TFAE:
+> 1. If $\{ e_{i}:i\in I \}\subseteq H$ is an orthonormal basis for $H$, then $\{ Ue_{i} :i\in I\}$ is an orthonormal basis for $K$. 
+> 2. There exists an orthonormal set $\{ e_{i}:i\in I \} \subseteq H$ such that $\{ Ue_{i}:i\in I \}$ is an orthonormal basis for $K$. 
+> 3. $UU^{*}=\mathrm{id}_{K}$. 
+> 4. $U$ is invertible. 
+> 5. $U$ in onto. 
+> 
+> $U$ is called **unitary** if it satisfies any of the above. 
+> 
+> > [!Proof]-
+> > 
+> > (1) ⇒ (2) is clear. 
+> > 
+> > (2) ⇒ (3): If $\{ e_{i}:i\in I \}$ is as in (2), and if $x\in K$, then
+> > $$
+> > \begin{align}
+> > UU^{*}x & =UU^{*}\left( \sum _{i\in I}\langle x, Ue_{i} \rangle Ue_{i} \right) \\
+> >  & = \sum_{i\in I}\langle x, Ue_{i} \rangle UU^{*}Ue_{i} \\
+> >  & =\sum_{i\in I}\langle x, Ue_{i} \rangle Ue_{i} \\
+> >  & = x.
+> > \end{align}
+> > $$
+> > 
+> > (3) ⇒ (4): The hypothesis from (3) and [[#^823011]].5 imply $U^{-1}=U^{*}$. 
+> > 
+> > (4) ⇒ (5) is clear. 
+> > 
+> > (5) ⇒ (1) Let $z\in K$. Let $x\in H$ be such that $Ux=z$. Let $\{ e_{i}:i\in I \}$ be an orthonormal basis for $H$. Then, 
+> > $$
+> > \begin{align}  
+> > x & =\sum_{i\in I}\langle x, e_{i} \rangle e_{i} \\
+> > \implies z & =\sum_{i\in I}\langle x, e_{i} \rangle Ue_{i},
+> > \end{align}
+> > $$
+> > so $z\in \overline{\text{span}\{ Ue_{i} \}_{i\in I}}$. Thus, $\{ Ue_{i} \}_{i\in I}$ is an orthonormal basis for $K$. 

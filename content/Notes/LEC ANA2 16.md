@@ -51,6 +51,8 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 > > Let $H$ be a separable Hilbert space, and $S\subseteq H$ be orthonormal. If $\mathbf{e}, \mathbf{f}\in S$, $\lVert \mathbf{e}-\mathbf{f} \rVert^{2}=\langle \mathbf{e}-\mathbf{f}, \mathbf{e}-\mathbf{f} \rangle=2$. Let $\{ x_{n} \}_{n=1}^{\infty}\subseteq H$ be dense in $H$. $B(x_{n}, \sqrt{ 2 }/2)$ can contain at most one element of $S$. Thus, $S$ must be countable.
 > 
 
+^05a23a
+
 > [!Remark]
 > Let $\{ \mathbf{x}_{1}, \dots, \mathbf{x}_{n} \}$ be an orthogonal subset of a Hilbert space $H$. Then, 
 > $$
@@ -153,7 +155,7 @@ Contrast with a [[Hamel bases#^c53024|Hamel basis]].
 
 > [!Proposition]
 > Let $H$ be a separable Hilbert space. Let $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ be an orthonormal set. TFAE:
-> 1. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is an orthonormal basis.
+> 1. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is an [[#^5f2a03|orthonormal basis]].
 > 2. $\{ \mathbf{e}_{n} \}_{n=1}^{\infty}$ is a maximal orthonormal set.
 > 3. $\mathbf{x}=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle \mathbf{e}_{n}$ for all $\mathbf{x}\in H$. 
 > 4. $\langle \mathbf{x}, \mathbf{y} \rangle=\sum_{n=1}^{\infty}\langle \mathbf{x}, \mathbf{e}_{n} \rangle\langle \mathbf{e}_{n}, \mathbf{y} \rangle$ for all $\mathbf{x}, \mathbf{y}\in H$. 
