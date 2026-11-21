@@ -52,7 +52,7 @@ P2: true
 # Integration of simple and nonnegative measurable functions
 
 > [!Definition] Integral of simple function
-> Let $f:(X, \mathcal{F})\to[0, \infty]$ be a simple function. Let
+> Let $f:(X, \mathcal{F})\to[0, \infty)$ be a simple function. Let
 > $$
 > f=\sum_{i=1}^{n} a_{i}1_{A_{i}},
 > $$
@@ -84,6 +84,7 @@ P2: true
 > > 
 > > $(3)$ is clear. 
 > 
+
 
 > [!Proposition]
 > Let $f:(X, \mathcal{F})\to[0, \infty]$ is measurable. Suppose $\{ f_{n} \}$, $\{ g_{n} \}$ are sequences of simple functions such that $f_{n}\uparrow f$ and $g_{n}\uparrow f$. Then
@@ -136,8 +137,30 @@ Thus, we can define
 > 1. $\int (af+g)=a\int f+\int g$. 
 > 2. If $f\leqslant g$, then $\int f\leqslant \int g$. 
 
+> [!Proposition]
+> Let $f:(X, \mathcal{F})\to[0, \infty)$ be measurable. If $\int_{X} f=0$, then $f=0$ a.e..
+> 
+> > [!Proof]-
+> > 
+> > For each $n\in \mathbb{N}$, define
+> > $$
+> > A_{n}=\left\{  x\in X:f(x)\geqslant  \frac{1}{n}  \right\}.
+> > $$
+> > By definition of $A_{n}$, we have the pointwise inequality $f\geqslant 1_{A_{n}}/n$. Using the monotonicity of the integral, 
+> > $$
+> > 0=\int_{X}f\,d\mu\geqslant \int_{X}\frac{1}{n}1_{A_{n}}\,d\mu= \frac{1}{n}\mu(A_{n}),
+> > $$
+> > so $\mu(A_{n})=0$. Observe that
+> > $$
+> > \{ x\in X:f(x)> 0 \}=\bigcup_{n=1}^{\infty} A_{n}, 
+> > $$
+> > and that $\mu\left( \bigcup_{n=1}^{\infty}A_{n} \right)\leqslant \sum_{n=1}^{\infty}\mu(A_{n})=0$. Thus, $f=0$ a.e..
+> 
+
+^5b9fe5
+
 > [!Lemma]
-> Let $f:(X< \mathcal{F})\to[0, \infty]$ be measurable. Then, 
+> Let $f:(X, \mathcal{F})\to[0, \infty]$ be measurable. Then, 
 > $$
 > \int f\,d\mu=\sup \left\{  \int_{X}s\,d\mu:s\text{ is simple and }s\leqslant  f  \right\}.
 > $$
@@ -202,5 +225,4 @@ Thus, we can define
 > > \implies \int \liminf_{n}f_{n} & \leqslant  \liminf_{n}\int f_{n}.
 > > \end{align}
 > > $$
-> > 
-> > 
+

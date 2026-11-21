@@ -104,18 +104,17 @@ We can drop the boundedness hypothesis if we extend the codomain:
 
 # Simple functions
 
-> [!Definition] Simple function
-> Let $(X, \mathcal{F})$ be a measurable space, and let $A\in \mathcal{F}$. Denote the indicator function on $A$ by $1_{A}$:
-> $$
-> 1_{A}(x)=\begin{cases}
-> 1 & x\in A  \\
-> 0  & x\not\in A.
-> \end{cases}
-> $$
-> $1_{A}:(X, \mathcal{F})\to \mathbb{R}$ is measurable. 
-> 
-> Call a measurable function $\phi:(X, \mathcal{F})\to \mathbb{R}$ **simple** if $\phi(X)$ is finite. 
+Let $(X, \mathcal{F})$ be a measurable space, and let $A\in \mathcal{F}$. Denote the indicator function on $A$ by $1_{A}$:
+$$
+1_{A}(x)=\begin{cases}
+1 & x\in A  \\
+0  & x\not\in A.
+\end{cases}
+$$
+$1_{A}:(X, \mathcal{F})\to \mathbb{R}$ is measurable. 
 
+> [!Definition] Simple function
+> Call a measurable function $\phi:(X, \mathcal{F})\to \mathbb{R}$ **simple** if $\phi(X)$ is finite. 
 
 If $\phi(X)=\{ t_{1}, \dots, t_{n} \}\subseteq \mathbb{R}$ and $A_{i}=\phi ^{-1}(\{ t_{i} \})$, we have
 $$
@@ -123,7 +122,7 @@ $$
 $$
 
 > [!Proposition]
-> Let $f:(X, \mathcal{F})\to [0, \infty]$ be measurable. Then there exist simple functions $f_{n}:(X, \mathcal{F})\to \mathbb{R}$ such that $f_{n}(x)\uparrow f(x)$ for all $x\in X$. Furthermore, if there exists $M> 0$ such that $|f(x)|< M$ for all $x\in X$, then $f_{n}\to f$ uniformly. 
+> Let $f:(X, \mathcal{F})\to [0, \infty]$ be measurable. Then there exist simple functions $f_{n}:(X, \mathcal{F})\to [0, \infty)$ such that $f_{n}(x)\uparrow f(x)$ for all $x\in X$. Furthermore, if there exists $M> 0$ such that $|f(x)|< M$ for all $x\in X$, then $f_{n}\to f$ uniformly. 
 > > [!Proof]-
 > > 
 > > Let $n\in\mathbb N$ and define

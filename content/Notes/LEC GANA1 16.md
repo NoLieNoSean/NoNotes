@@ -7,6 +7,81 @@ tags:
   - Lecture
 desc: Holder's and Minkowski's inequalities
 ---
+# $L_{p}$ spaces
+
+[!Definition] $\tilde{\mathcal{L}}_{p}$ spaces
+For a measure space $(X, \mathcal{A}, \mu )$, define
+$$
+\mathcal{{L}}_{p}(X, \mathcal{A}, \mu; \mathbb{R}):= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
+$$
+$\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
+
+> [!Recall]
+> - Convex and concave functions [[LEC CAL1 13#^04887b]].
+> - Young's inequality [[Holder's inequality#^d28629]].
+
+> [!Theorem] Hölder's inequality
+> Let $p,q \in [1, \infty)$ be such that $\frac{1}{p}+\frac{1}{q}=1$. Then for $f \in \tilde{\mathcal{L}}_{p}(X), g \in \tilde{\mathcal{L}}_{q}(X)$, $fg$ and $\lVert fg \rVert_{1}\leq \lVert f \rVert_{p} \cdot \lVert g \rVert_{q}$.
+> > [!Proof]-
+> > WLOG, $\lVert f \rVert_{p}=\lVert g \rVert_{q}=1$.
+> > By [[Holder's inequality#^d28629|Young's inequality]], $\forall x$,
+> > $$
+> > \lvert f(x) \rvert \cdot  \lvert g(x) \rvert \leq \frac{1}{p}\lvert f(x) \rvert ^{p}+\frac{1}{q}\lvert g(x) \rvert ^{q}
+> > $$
+> > This implies,
+> > $$
+> > \int_{X}\lvert f(x) \rvert \lvert g(x) \rvert d \mu \leq \frac{1}{p} \int_{X}\lvert f(x) \rvert ^{p}d \mu + \frac{1}{q}\int_{X}\lvert g(x) \rvert ^{q}d \mu=\frac{1}{p}+\frac{1}{q}=1.
+> > $$
+
+> [!Remark]
+> Note that by Hölder's inequality, $f \in \tilde{\mathcal{L}}_{p}\implies f^{p-1}\in \tilde{\mathcal{L}}_{q}$.
+
+> [!Theorem] Minkowski inequality
+> Let $f, g \in \tilde{\mathcal{L}}_{p}(X)$, then $\lVert f + g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
+> > [!Proof]-
+> > $$
+> > \int_{X}\lvert f+g \rvert ^{p}d \mu= \int_{X}\lvert f+g \rvert ^{p-1} \cdot \lvert f+g \rvert d \mu\leq \int_{X}\lvert f \rvert \cdot \lvert f+g \rvert ^{p-1}d \mu + \int_{X}\lvert g \rvert \cdot \lvert f + g \rvert ^{p-1}d \mu 
+> > $$
+> > By Hölder's $\int_{X}\lvert f \rvert \cdot \lvert f + g \rvert^{p-1} d \mu \leq \left( \int_{X}\lvert f \rvert^{p} d \mu \right)^{1/p} \cdot \left( \int_{X} \lvert f+g \rvert^{(p-1)q}d \mu \right)^{1/q}\leq  \lVert f \rVert_{p}\cdot \lVert f+g \rVert_{p}^{p-1}$ .
+> > Therefore, $\lVert f+g \rVert_{p}^{p}\leq(\lVert f \rVert_{p}+\lVert g \rVert_{p})(\lVert f+g \rVert_{p}^{p-1}) \implies \lVert  f+g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
+
+^d1da59
+
+> [!Definition] $L_{p}$ spaces
+> $L_{p}(X):= \tilde{\mathcal{L}}_{p}(X)/\{ f: f=0 \text{ almost everywhere} \}$.
+> Note that $\tilde{\mathcal{L}}_{p}$ are semi-normed linear spaces by minkowski, hence $L_{p}$ are NLS.
+
+> [!Remarks]
+> 1. $\ell_{p} \subset \ell_{q}$ for $1 \leq p <  q\leq \infty$.
+> >[!Proof]-
+> >    $\{ x_{n} \}\in \ell_{p}\implies x_{n} \in \ell_{\infty }$. Now, $\sum_{n=1}^{\infty}\lvert x_{n} \rvert^{q}=\sum_{n=1}^{\infty}\lvert x_{n} \rvert^{p}\cdot \lvert x_{n} \rvert^{q-p}\leq \left(\lVert \{ x_{n} \} \rVert_{\infty}\right)^{q-p}\cdot \lVert \{ x_{n} \} \rVert_{p}$.
+> 2. Let $\mu$ be a finite measure, then $L_{p}(\mu) \subset L_{q}(\mu )$ for $p> q$.
+> >[!Proof]-
+> >    Let $\alpha = \frac{p}{q}> 1$, then
+> >    $$f\in L_{p}(\mu)\implies \int_{X}\lvert f \cdot 1 \rvert^{q} \overset{\text{Hölder's}}{\displaystyle\leq } \left(\int_{X}\lvert f \rvert^{\alpha q}\right)^{1/\alpha } \cdot \left(\int_{X}1\right)^{1/{\left(1-\alpha^{-1}\right)}}\leq \lVert f \rVert_{p}^{q} \cdot \mu(X)^{1/\left(1-\alpha^{-1}\right)}$$
+
+> [!Assignment]
+> 1. Let $\sum_{i=1}^{n}\frac{1}{p_{i}}=\frac{1}{p}\leq  1$ and suppose $\phi_{i}\in L_{p_{i}}(X) \, \forall i$.
+>    Then prove that
+>    $$\left\lVert  \prod_{i=1}^{n}{\phi_{i}}  \right\rVert_{p} \leq \prod_{i=1}^{n}\left(\lVert \phi_{i} \rVert _{p_{i}} \right)$$
+> 2. Let $1\leq p <  q$, $\phi \in L_{p} \cap L_{q}$, Then prove that $\phi \in L_{r} \, \forall r \in (p, q)$. Morever
+>    $$
+>    \begin{align}
+>    \lVert \phi \rVert _{r} = \left(\lVert \phi \rVert _{p}\right)^{\alpha} \cdot \left( \lVert \phi \rVert _{q}\right)^{1-\alpha }
+>    \end{align}
+>    $$
+>    where $\alpha \in [0,1]$  is such that $\frac{1}{r}=\frac{\alpha}{p}+\frac{{1-\alpha}}{q}$.
+
+---
+
+$L^{p}$ is Banach wrt $\lVert \cdot \rVert_{p}$. (we have already shown that $L^{\infty}$ is Banach, but I can't recall?)
+
+---
+
+%%%%%%%%%%%%%%%%
+
+---
+
 [!Remark]
 If $f, g\in L^{2}$, then $fg\in L^{1}$
 
@@ -124,75 +199,3 @@ Also if $\lVert f(t) \rVert=1\, \forall t \in X$ then $M_{f}$ is unitary.
 > 	is an isometry, but not unitary(Compute $S_t^*$). 
 
 ---
-# $L_{p}$ spaces
-> [!Definition] $\tilde{\mathcal{L}}_{p}$ spaces
-> For a measure space $(X, \mathcal{A}, \mu )$,
-> $$
-> \mathcal{\tilde{L}}_{p}(X, \mathcal{A}, \mu)= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
-> $$
-> $\lVert \cdot  \rVert_{p}$ on $\mathcal{\tilde{L}}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
-
-> [!Recall]
-> - Convex and concave functions [[LEC CAL1 13#^04887b]].
-> - Young's inequality [[Holder's inequality#^d28629]].
-
-> [!Theorem] Hölder's inequality
-> Let $p,q \in [1, \infty)$ be such that $\frac{1}{p}+\frac{1}{q}=1$. Then for $f \in \tilde{\mathcal{L}}_{p}(X), g \in \tilde{\mathcal{L}}_{q}(X)$, $fg$ and $\lVert fg \rVert_{1}\leq \lVert f \rVert_{p} \cdot \lVert g \rVert_{q}$.
-> > [!Proof]-
-> > WLOG, $\lVert f \rVert_{p}=\lVert g \rVert_{q}=1$.
-> > By [[Holder's inequality#^d28629|Young's inequality]], $\forall x$,
-> > $$
-> > \lvert f(x) \rvert \cdot  \lvert g(x) \rvert \leq \frac{1}{p}\lvert f(x) \rvert ^{p}+\frac{1}{q}\lvert g(x) \rvert ^{q}
-> > $$
-> > This implies,
-> > $$
-> > \int_{X}\lvert f(x) \rvert \lvert g(x) \rvert d \mu \leq \frac{1}{p} \int_{X}\lvert f(x) \rvert ^{p}d \mu + \frac{1}{q}\int_{X}\lvert g(x) \rvert ^{q}d \mu=\frac{1}{p}+\frac{1}{q}=1.
-> > $$
-
-> [!Remark]
-> Note that by Hölder's inequality, $f \in \tilde{\mathcal{L}}_{p}\implies f^{p-1}\in \tilde{\mathcal{L}}_{q}$.
-
-> [!Theorem] Minkowski inequality
-> Let $f, g \in \tilde{\mathcal{L}}_{p}(X)$, then $\lVert f + g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
-> > [!Proof]-
-> > $$
-> > \int_{X}\lvert f+g \rvert ^{p}d \mu= \int_{X}\lvert f+g \rvert ^{p-1} \cdot \lvert f+g \rvert d \mu\leq \int_{X}\lvert f \rvert \cdot \lvert f+g \rvert ^{p-1}d \mu + \int_{X}\lvert g \rvert \cdot \lvert f + g \rvert ^{p-1}d \mu 
-> > $$
-> > By Hölder's $\int_{X}\lvert f \rvert \cdot \lvert f + g \rvert^{p-1} d \mu \leq \left( \int_{X}\lvert f \rvert^{p} d \mu \right)^{1/p} \cdot \left( \int_{X} \lvert f+g \rvert^{(p-1)q}d \mu \right)^{1/q}\leq  \lVert f \rVert_{p}\cdot \lVert f+g \rVert_{p}^{p-1}$ .
-> > Therefore, $\lVert f+g \rVert_{p}^{p}\leq(\lVert f \rVert_{p}+\lVert g \rVert_{p})(\lVert f+g \rVert_{p}^{p-1}) \implies \lVert  f+g \rVert_{p}\leq \lVert f \rVert_{p}+\lVert g \rVert_{p}$.
-
-> [!Definition] $L_{p}$ spaces
-> $L_{p}(X):= \tilde{\mathcal{L}}_{p}(X)/\{ f: f=0 \text{ almost everywhere} \}$.
-> Note that $\tilde{\mathcal{L}}_{p}$ are semi-normed linear spaces by minkowski, hence $L_{p}$ are NLS.
-
-> [!Remarks]
-> 1. $\ell_{p} \subset \ell_{q}$ for $1 \leq p <  q\leq \infty$.
-> >[!Proof]-
-> >    $\{ x_{n} \}\in \ell_{p}\implies x_{n} \in \ell_{\infty }$. Now, $\sum_{n=1}^{\infty}\lvert x_{n} \rvert^{q}=\sum_{n=1}^{\infty}\lvert x_{n} \rvert^{p}\cdot \lvert x_{n} \rvert^{q-p}\leq \left(\lVert \{ x_{n} \} \rVert_{\infty}\right)^{q-p}\cdot \lVert \{ x_{n} \} \rVert_{p}$.
-> 2. Let $\mu$ be a finite measure, then $L_{p}(\mu) \subset L_{q}(\mu )$ for $p> q$.
-> >[!Proof]-
-> >    Let $\alpha = \frac{p}{q}> 1$, then
-> >    $$f\in L_{p}(\mu)\implies \int_{X}\lvert f \cdot 1 \rvert^{q} \overset{\text{Hölder's}}{\displaystyle\leq } \left(\int_{X}\lvert f \rvert^{\alpha q}\right)^{1/\alpha } \cdot \left(\int_{X}1\right)^{1/{\left(1-\alpha^{-1}\right)}}\leq \lVert f \rVert_{p}^{q} \cdot \mu(X)^{1/\left(1-\alpha^{-1}\right)}$$
-
-> [!Assignment]
-> 1. Let $\sum_{i=1}^{n}\frac{1}{p_{i}}=\frac{1}{p}\leq  1$ and suppose $\phi_{i}\in L_{p_{i}}(X) \, \forall i$.
->    Then prove that
->    $$\left\lVert  \prod_{i=1}^{n}{\phi_{i}}  \right\rVert_{p} \leq \prod_{i=1}^{n}\left(\lVert \phi_{i} \rVert _{p_{i}} \right)$$
-> 2. Let $1\leq p <  q$, $\phi \in L_{p} \cap L_{q}$, Then prove that $\phi \in L_{r} \, \forall r \in (p, q)$. Morever
->    $$
->    \begin{align}
->    \lVert \phi \rVert _{r} = \left(\lVert \phi \rVert _{p}\right)^{\alpha} \cdot \left( \lVert \phi \rVert _{q}\right)^{1-\alpha }
->    \end{align}
->    $$
->    where $\alpha \in [0,1]$  is such that $\frac{1}{r}=\frac{\alpha}{p}+\frac{{1-\alpha}}{q}$.
-
----
-
-$L^{p}$ is Banach wrt $\lVert \cdot \rVert_{p}$. (we have already shown that $L^{\infty}$ is Banach, but I can't recall?)
-
----
-Holder's inequality proof using convexity of $e^{x}$. 
-
----
-
-Minkowski's inequality
