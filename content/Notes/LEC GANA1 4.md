@@ -238,6 +238,8 @@ In particular, $\lambda^{\star}(A+x)=\lambda^{\star}(A)$ for all $A\in \mathcal{
 > > Then, we can choose an $N$ such that $\mu(F \setminus \bar{F}_{n}) < \frac{\epsilon}{2} \implies \mu(U \setminus \bar{F}_{N}) < \epsilon$. 
 > > 
 
+^b68379
+
 ^ace8e4
  
 
