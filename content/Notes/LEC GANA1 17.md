@@ -20,33 +20,33 @@ desc: build up to Lp dual = lq
 
 ---
 
-[!Proposition]
-$C_{0}=\{ \{ x_{n} \}_{n=1}^{\infty}:x_{n}\in \mathbb{C}, x_{n}\to 0 \}\subseteq \ell^{\infty}$. 
-$(C_{0})^{*} \cong \ell_{1}$.
-[!Proof]-
-Define $\phi: \ell_{1}\to (C_{0})^{*}$ by $$ \phi:=\{ y_{n} \} \mapsto \left( \{ x_{n} \} \mapsto \sum x_{n}y_{n} \right).$$
-Notice that $\lvert \phi(\{ y_{n} \})(\{ x_{n} \}) \rvert = \left\lvert  \sum x_{n}y_{n}  \right\rvert\leq \lVert x_{n} \rVert_{\infty} \cdot \left\lvert  \sum y_{n}  \right\rvert\leq  \lVert x_{n} \rVert_{\infty}\cdot \lVert y_{n} \rVert_{1}$.
-Therefore, $\lVert \phi(\{ y_{n} \}) \rVert \leq \lVert y_{n} \rVert_{1}$.
-Let $\overline{x}^{(k)} \in  \ell_{1}$ given by
-$$
-\overline{x}^{(k)} := \left( \frac{\lvert y_{1} \rvert }{ y_{1}  }, \frac{{\lvert y_{2} \rvert }}{y_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }y_{i}=0}}{\cdots} , \frac{{\lvert y_{k} \rvert }}{y_{k}} , 0, 0, \cdots \right).
-$$
-This forces $\phi(\{ y_{n} \})(\overline{x}^{(k)})=\sum_{i=1}^{k}\lvert y_{k} \rvert \to \lVert y_{n} \rVert_{1}$, and since $\lVert \overline{x}^{(k)} \rVert_{\infty}\leq 1, \,\lVert \phi(\{ y_{n} \}) \rVert=\lVert \{ y_{n} \} \rVert_{1}$.
-Therefore $\phi$ is isometry hence injection.
-
-Conversely, suppose $\alpha \in (C_{0})^{*}$,  define $\alpha_{i}:= \alpha(e_{i})$. 
-Again define $\tilde{\alpha}^{(k)} \in C_{0}$ be defined as
-$$
-\tilde{\alpha}^{(k)}= \left( \frac{\lvert \alpha _{1} \rvert }{ \alpha _{1}  }, \frac{{\lvert \alpha _{2} \rvert }}{\alpha_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }\alpha _{i}=0}}{\cdots} , \frac{{\lvert \alpha _{k} \rvert }}{\alpha_{k}} , 0, 0, \cdots \right).
-$$
-Now notice that $\lVert \tilde{\alpha}^{(k)} \rVert_{\infty }\leq 1 \implies \alpha(\tilde{\alpha}^{(k)})\leq \lVert \alpha \rVert\implies \sum_{i=1}^{k}\lvert \alpha_{i} \rvert\leq \lVert \alpha \rVert\implies \lVert \{ \alpha_{n} \} \rVert_{1} \leq \lVert \alpha \rVert\implies \{ \alpha_{n} \}\in \ell_{1}$.
-Now let $\{ x_{n} \}\in C_{0}$ and let $\tilde{x}^{(k)} \in C_{0}$ be given by
-$$
-\tilde{x}^{(k)}:= \left( x_{1}, x_{2}, \cdots ,x_{k}, 0, 0, \cdots \right).
-$$
-Notice that $d_{\ell_{\infty }}(\{ x_{n} \} ,  \tilde{x}^{(k)}_{n} ) = \sup_{j> k}\lvert x_{j} \rvert\to 0$.
-Therefore, $$\alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.$$
-Hence, $\phi(\{ \alpha_{n} \})=\alpha$. Therefore $\phi$ gives an isomorphism.
+> [!Proposition]
+> $C_{0}=\{ \{ x_{n} \}_{n=1}^{\infty}:x_{n}\in \mathbb{C}, x_{n}\to 0 \}\subseteq \ell^{\infty}$. 
+> $(C_{0})^{*} \cong \ell_{1}$.
+> > [!Proof]-
+> > Define $\phi: \ell_{1}\to (C_{0})^{*}$ by $$ \phi:=\{ y_{n} \} \mapsto \left( \{ x_{n} \} \mapsto \sum x_{n}y_{n} \right).$$
+> > Notice that $\lvert \phi(\{ y_{n} \})(\{ x_{n} \}) \rvert = \left\lvert  \sum x_{n}y_{n}  \right\rvert\leq \lVert x_{n} \rVert_{\infty} \cdot \left\lvert  \sum y_{n}  \right\rvert\leq  \lVert x_{n} \rVert_{\infty}\cdot \lVert y_{n} \rVert_{1}$.
+> > Therefore, $\lVert \phi(\{ y_{n} \}) \rVert \leq \lVert y_{n} \rVert_{1}$.
+> > Let $\overline{y}^{(k)} \in  \ell_{1}$ given by
+> > $$
+> > \overline{y}^{(k)} := \left( \frac{\lvert y_{1} \rvert }{ y_{1}  }, \frac{{\lvert y_{2} \rvert }}{y_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }y_{i}=0}}{\cdots} , \frac{{\lvert y_{k} \rvert }}{y_{k}} , 0, 0, \cdots \right).
+> > $$
+> > This forces $\phi(\{ y_{n} \})(\overline{y}^{(k)})=\sum_{i=1}^{k}\lvert y_{k} \rvert \to \lVert y_{n} \rVert_{1}$, and since $\lVert \overline{y}^{(k)} \rVert_{\infty}\leq 1, \,\lVert \phi(\{ y_{n} \}) \rVert=\lVert \{ y_{n} \} \rVert_{1}$.
+> > Therefore $\phi$ is isometry hence injection.
+> > 
+> > Conversely, suppose $\alpha \in (C_{0})^{*}$,  define $\alpha_{i}:= \alpha(e_{i})$. 
+> > Again define $\tilde{\alpha}^{(k)} \in C_{0}$ be defined as
+> > $$
+> > \tilde{\alpha}^{(k)}= \left( \frac{\lvert \alpha _{1} \rvert }{ \alpha _{1}  }, \frac{{\lvert \alpha _{2} \rvert }}{\alpha_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }\alpha _{i}=0}}{\cdots} , \frac{{\lvert \alpha _{k} \rvert }}{\alpha_{k}} , 0, 0, \cdots \right).
+> > $$
+> > Now notice that $\lVert \tilde{\alpha}^{(k)} \rVert_{\infty }\leq 1 \implies \alpha(\tilde{\alpha}^{(k)})\leq \lVert \alpha \rVert\implies \sum_{i=1}^{k}\lvert \alpha_{i} \rvert\leq \lVert \alpha \rVert\implies \lVert \{ \alpha_{n} \} \rVert_{1} \leq \lVert \alpha \rVert\implies \{ \alpha_{n} \}\in \ell_{1}$.
+> > Now let $\{ x_{n} \}\in C_{0}$ and let $\tilde{x}^{(k)} \in C_{0}$ be given by
+> > $$
+> > \tilde{x}^{(k)}:= \left( x_{1}, x_{2}, \cdots ,x_{k}, 0, 0, \cdots \right).
+> > $$
+> > Notice that $d_{\ell_{\infty }}(\{ x_{n} \} ,  \tilde{x}^{(k)}_{n} ) = \sup_{j> k}\lvert x_{j} \rvert\to 0$.
+> > Therefore, $$\alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.$$
+> > Hence, $\phi(\{ \alpha_{n} \})=\alpha$. Therefore $\phi$ gives an isomorphism.
 
 ---
 
