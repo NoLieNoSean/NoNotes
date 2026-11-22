@@ -40,6 +40,8 @@ The mean value theorem, as stated here [[LEC ANA1 24#Mean value theorem|here]], 
 > D_{k}f(\mathbf{c}),\quad f_{k}(\mathbf{c}),\quad \frac{ \partial f }{ \partial x_{k} } (\mathbf{c}).
 > $$
 
+^69f0b5
+
 Note that a function of $n$ variables can have partial derivatives at a point with respect to each of the variables and yet not be continuous at the point.
 
 ---

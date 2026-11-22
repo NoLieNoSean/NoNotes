@@ -107,9 +107,9 @@ Sandwich. Use Fatou's.
 > $$
 > \mathcal{L}^{p}(X, \mathcal{F}, \mu; F)=\left\{  f:(X, \mathcal{F})\to F: f\text{ measurable},\int |f|^{p}< \infty  \right\},
 > $$
-> where $F=\mathbb{R}, \mathbb{C}$. We will write $\mathcal{L}^{p}$ in place of $\mathcal{L}^{1}(X, \mathcal{F}, \mu; F)$ when it makes sense to do so. It is easy to work out from [[#^a5edca]] that $\mathcal{L}^{p}$ is a vector space. 
+> where $F=\mathbb{R}, \mathbb{C}$. We will write $\mathcal{L}^{p}(X, \mu)$ or just $\mathcal{L}^{p}$ in place of $\mathcal{L}^{1}(X, \mathcal{F}, \mu; F)$ when it makes sense to do so. $\mathcal{L}^{p}$ [[LEC GANA1 16#^f58a29|is a vector space]]. 
 > 
-> Define $\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}^{p}(X)$ by $\lVert f \rVert_{p}=\left( \int\lvert f \rvert^{p}d \mu \right)^{1/p}$. By the [[LEC GANA1 16#^d1da59|Minkowski inequality]], $\lVert \cdot \rVert_{p}$ is a semi-norm on $\mathcal{L}^{p}$.
+> Define $\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}^{p}(X, \mu)$ by $\lVert f \rVert_{p}=\left( \int\lvert f \rvert^{p}d \mu \right)^{1/p}$. By the [[LEC GANA1 16#^d1da59|Minkowski inequality]], $\lVert \cdot \rVert_{p}$ is a semi-norm on $\mathcal{L}^{p}$.
 > 
 > By [[LEC GANA1 6#^5b9fe5]], $\lVert f \rVert_{p}=0$ $\iff$ $f=0$ a.e.., for all $1\leqslant p\leqslant \infty$. The set $N=\{ f\in \mathcal{L}^{p}:f=0\text{ a.e.} \}$ is a vector subspace of $\mathcal{L}^{p}$. Define
 > $$
@@ -120,6 +120,23 @@ Sandwich. Use Fatou's.
 > For $f_{n}, f\subseteq L^{p}$, we say that **$f_{n}\to f$ in $L^{p}$** if $\lVert f-f_{n} \rVert_{p}\to 0$. 
 
 ^8c70d7
+
+> [!Definition] $L^{\infty}$ space
+> For a measure space $(X, \mathcal{F}, \mu)$, define
+> $$
+> \mathcal{L}^{\infty}(X, \mathcal{F}, \mu; F)=\{ f:(\Omega, \mathcal{F})\to \mathbb{R} :f\text{ is measurable}, |f(t)|\leqslant  M< \infty \text{ a.e.}\},
+> $$
+> where $F=\mathbb{R}, \mathbb{C}$. $\mathcal{L}^{\infty}$ is a vector space. 
+> 
+> Define $\lVert \cdot \rVert_{\infty}$ on $\mathcal{L}^{\infty}(X, \mu)$ by 
+> $$
+> \lVert f \rVert _{\infty}=\inf \{ k:|f(t)|\leqslant k\text{ a.e.} \}.
+> $$
+> Define $L^{\infty}$ as we did in [[#^8c70d7]]. $\lVert \cdot \rVert_{\infty}$ is a norm on $L^{\infty}$. 
+> 
+> For $f_{n}, f\in L^{\infty}$, we say that **$f_{n}\to f$ in $L^{\infty}$** if $\lVert f-f_{n} \rVert_{\infty}\to 0$. 
+
+^40acf2
 
 
 > [!Example]
@@ -146,18 +163,7 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 > 1. If $\mu$ is a finite measure on $(\Omega, \mathcal{F})$, then $f_{n}\to f$ a.e. $\implies$ $f_{n}\xrightarrow{\mu}f$. 
 > 2. If $f_{n}\xrightarrow{\mu}f$, there exists a subsequence $\{ f_{n_{k}} \}$ such that $f_{n_{k}}\to f$ a.e..
 
-> [!Definition] $L^{\infty}$ space
-> For a measure space $(\Omega, \mathcal{F}, \mu)$, define
-> $$
-> L^{\infty}(X, \mathcal{F}, \mu)=\{ f:(\Omega, \mathcal{F})\to \mathbb{R} :f\text{ is measurable}, |f(t)|\leqslant  M< \infty \text{ a.e.}\}.
-> $$
-> Define
-> $$
-> \lVert f \rVert _{\infty}=\inf \{ k:|f(t)|\leqslant k\text{ a.e.} \}.
-> $$
-> For $f_{n}, f\in L^{\infty}$, we say that **$f_{n}\to f$ in $L^{\infty}$** if $\lVert f-f_{n} \rVert_{\infty}\to 0$. 
 
-^40acf2
 
 %% typo: vasanth writes $\leqslant$ instead of $>$ below %%
 
