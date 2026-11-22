@@ -5,7 +5,7 @@ time: 15:33
 tags:
   - GANA1
   - Lecture
-desc: Holder's and Minkowski's inequalities
+desc: Normal operators, Lp spaces are Banach
 P1: true
 P2: true
 ---

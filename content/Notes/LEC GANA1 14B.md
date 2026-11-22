@@ -6,6 +6,8 @@ tags:
   - Lecture
   - GANA1
 desc: Orthonormal bases
+P1: true
+P2: true
 ---
 @sunderFunctionalAnalysisSpectral1997 §2.3 covers the material from [[LEC ANA2 16]], but without assuming that the orthonormal sets are countable (which becomes important when working with nonseparable Hilbert spaces, [[LEC ANA2 16#^05a23a]]). The notions of convergence in this context are covered in §2.2, starting from Def. 2.2.3. 
 

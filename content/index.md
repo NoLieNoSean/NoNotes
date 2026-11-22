@@ -8,24 +8,48 @@ Additional contributions: Karan, Aniruda, Sayeed.
 </table>
 
 
-<span style="font-size: 0.5em">!!@!@!@!!!@!@!@@!@!@!@@ | <span><a href="https://www.youtube.com/watch?v=T-d0ZJ7tWgE">No Lie No Sean</a></span><br>These are written for personal use; I make no claims about their quality, completeness, or accuracy.</span>
+<span>!!@!@!@!!!@!@!@@!@!@!@@ | <span><a href="https://www.youtube.com/watch?v=T-d0ZJ7tWgE">No Lie No Sean</a></span><br>These are written for personal use; I make no claims about their quality, completeness, or accuracy.</span>
 
 ```
-                                
-                          ████  
-      ██████        ██████████  
-    ████  ████    ████      ████
-    ██      ████████          ██
-  ████        ████            ██
-  ██            ██          ██  
-  ████                      ██  
-    ████                  ████  
-      ██                  ██    
-        ████            ██      
-          ████        ████      
-              ████    ██        
-                ██████          
-                  ████          
-                  ██            
+                          ████                        ██        ██  
+      ██████        ██████████                        ██      ██    
+    ████  ████    ████      ████                        ██    ██    
+    ██      ████████          ██                          ██  ██    
+  ████        ████            ██                          ██    ██  
+  ██            ██          ██                              ██  ██  
+  ████                      ██                              ██    ██
+    ████                  ████                              ██      
+      ██                  ██                          ██████████████
+        ████            ██                        ████    ██        
+          ████        ████                      ██      ██          
+              ████    ██                        ██████            ██
+                ██████                  ██████  ██    ██████████████
+                  ████                ██      ████                  
+                  ██                 ██          ██                                                  
 ```
 
+```
+                    ▅▅▀██▅
+                   ▀▀▀████
+                 ▅▅▅   ▅▅   ▅▅▅
+       ▀▀█▅▅▀██████▅ ▅▅██▅▅ ▅██████▀▅▅█▀▀
+            ▅▅▅ ▅▅▅▅ ▀▀██▀▀ ▅▅▅▅ ▅▅▅
+              ▀▀▀ ▀▀█▅ ▀▀ ▅█▀▀ ▀▀▀
+                     ▀█▅▅█▀
+                    █▅ ▅▅ ▅█
+                    ██ ██ ██
+                    ██ ██ ██
+                     ▀ ██ ▀
+                       ██
+                       ██
+
+
+    ██        ▅██████████  ██████████  ████████▅
+   ██                                         ██
+  ██         ▀█████████▅      ██      █████████▀
+ ██                  ██      ██      ██▀   ██   
+██████████  █████████▀      ██      ██      ██
+
+```
+
+![[-20261123005600268.jpg]]
