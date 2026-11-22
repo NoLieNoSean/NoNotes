@@ -49,12 +49,12 @@ P1: true
 > > Therefore, $$\alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.$$
 > > Hence, $\phi(\{ \alpha_{n} \})=\alpha$. Therefore $\phi$ gives an isomorphism.
 
----
-
 > [!Exercise]
 > Show that $\ell^{p\star}=\ell^{q}$ for $\frac{1}{p}+\frac{1}{q}=1$.
 
 ---
+
+# Radon-Nikodym Theorem
 
 > [!Definition]
 > Let $\mu$, $\nu$ be two $\sigma$-finite measures. We say $\nu \ll  \mu$ if $\nu$ (i.e. absolutely continuous wrt $\mu$) if $\mu(E) = 0 \implies \nu(E)= 0\; \forall E \in  \mathcal{F}$.
@@ -122,6 +122,8 @@ P1: true
 > - $\nu_{1}\ll \nu_{2}\ll \nu_{3} \implies  \left(  \frac{{d \nu_{3}}}{d \nu_{2}}  \right) \cdot \left( \frac{{d \nu_{2}}}{d \nu_{1}} \right)$.
 ---
 
+# Complex measure and total variation
+
 > [!Definition] Complex measure
 > For a measurable space $(X, \mathcal{F})$, $\mu: \mathcal{F}\to \mathbb{C}$ is called a complex measure if $\mu(\emptyset)=0$ and $\mu(\bigsqcup E_{i})= \sum \mu(E_{i})$.
 
@@ -131,6 +133,8 @@ P1: true
 > > $$
 > > \sum \lvert \mu(E_{n}) \rvert = \sum_{\mu(E_{n})>  0} \lvert \mu(E_{n}) \rvert + \sum_{\mu(E_{n})< 0}\lvert \mu(E_{n}) \rvert = \mu\left(\bigsqcup_{\mu(E_{n})> 0} E_{n}\right) - \mu\left(\bigsqcup_{\mu(E_{n})< 0}E_{n}\right) \in \mathbb{R}.
 > > $$
+
+^1b03da
 
 > [!Definition] Total variation measure
 > For a complex measure space $(X, \mathcal{F}, \mu)$, total variation measure $\lvert \mu \rvert: \mathcal{F}\to [0, \infty]$ is defined as 
