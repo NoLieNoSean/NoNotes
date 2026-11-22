@@ -135,8 +135,8 @@ P2: true
 > 3. $\lVert T^{*} \rVert=\lVert T \rVert$.
 > 4. $\lVert T^{*}T \rVert= \lVert T \rVert^{2}$. This is called the $C^{*}$-identity. 
 > 5. $(T^{*})^{*}=T$.
-> 6. $\ker(T^{*})=\text{Ran}(T)^{\perp}$. 
-> 7. $\ker(T^{*})^{\perp}=\overline{\text{Ran}(T)}$, $\ker(T)=\text{Ran}(T^{*})^{\perp}$, $\ker(T)^{\perp}=\overline{\text{Ran}(T^{*})}$. 
+> 6. $\ker(T^{*})=\text{Im}(T)^{\perp}$. 
+> 7. $\ker(T^{*})^{\perp}=\overline{\text{Im}(T)}$, $\ker(T)=\text{Im}(T^{*})^{\perp}$, $\ker(T)^{\perp}=\overline{\text{Im}(T^{*})}$. 
 > 
 > > [!Proof]-
 > > 
