@@ -137,6 +137,8 @@ Thus, we can define
 > 1. $\int (af+g)=a\int f+\int g$. 
 > 2. If $f\leqslant g$, then $\int f\leqslant \int g$. 
 
+^83841c
+
 > [!Proposition]
 > Let $f:(X, \mathcal{F})\to[0, \infty)$ be measurable. If $\int_{X} f=0$, then $f=0$ a.e..
 > 

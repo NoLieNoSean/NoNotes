@@ -7,14 +7,59 @@ tags:
   - Lecture
 desc: Holder's and Minkowski's inequalities
 ---
-# $L_{p}$ spaces
+# $L^{p}$ spaces
 
-[!Definition] $\tilde{\mathcal{L}}_{p}$ spaces
-For a measure space $(X, \mathcal{A}, \mu )$, define
+![[LEC GANA1 7#^8c70d7]]
+
+
+## $L^{2}$ - a special case
+
+$L^{2}$ is special because it is an inner product space, and the Minkowski inequality can be derived from the Cauchy-Schwarz inequality. 
+
+Let $f, g\in L^{2}(X, \mathcal{F}, \mu; \mathbb{C})$. Pointwise, we have
 $$
-\mathcal{{L}}_{p}(X, \mathcal{A}, \mu; \mathbb{R}):= \left\{  f : X \to \mathbb{R} \text{ is measurable} : \int_{X}\lvert f \rvert ^{p}d \mu < \infty   \right\}
+2|f(x)||g(x)|\leqslant |f(x)|^{2}+|g(x)|^{2}.
 $$
-$\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}_{p}(X)$ is defined as $\lVert f \rVert_{p}=\left( \int_{X}\lvert f \rvert^{p}d \mu \right)^{1/p}$.
+Integrating both sides using monotonicity and additivity of the integral ([[LEC GANA1 6#^83841c]]), 
+$$
+\begin{align}
+2\int_{X}|fg|\,d\mu & \leqslant  \int_{X}(|f|^{2}+|g|^{2})\,d\mu \\
+ & \leqslant \int_{X}|f|^{2}\,d\mu+\int_{X}|g|^{2}\,d\mu \\
+ & < \infty.
+\end{align}
+$$
+Hence, $f\overline{g}\in L^{1}$. We can therefore define
+
+> [!Definition]
+> For $f, g\in L^{2}(X, \mathcal{F}, \mu;\mathbb{C})$, define
+> $$
+> \langle f, g \rangle :=\int_{X} f\overline{g}\,d\mu.
+> $$
+> 
+
+It is clear that $\langle ,  \rangle$ is an inner product on $L^{2}$. 
+
+> [!Remark]
+> The [[LEC GANA1 14#^70ae36|Cauchy-Schwarz inequality]] reads
+> $$
+> \left| \int f\overline{g} \right| \leqslant \left( \int |f|^{2} \right)^{1/2}\left( \int |g|^{2} \right)^{1/2}.
+> $$
+> Note that if $f, g\in L^{2}$, we have $|f|, |g|\in L^{2}$. Applying the C-S inequality to $|f|, |g|$, we get
+> $$
+> \int |f||g|\leqslant  \left( \int |f|^{2} \right)^{1/2}\left( \int |g|^{2} \right)^{1/2},
+> $$
+> so $fg\in L^{1}$. 
+
+^d01098
+
+[[LEC GANA1 14#^0b76b1|As we have seen]], the C-S inequality yields the triangle inequality:
+$$
+\lVert f +g\rVert_{2}\leqslant \lVert f \rVert _{2}+\lVert g \rVert _{2}.
+$$
+## $L^{p}$ for $p\ne 2$
+
+These are not inner product spaces, so we have to take a different route to establishing the Minkowski inequality. 
+
 
 > [!Recall]
 > - Convex and concave functions [[LEC CAL1 13#^04887b]].
@@ -82,48 +127,88 @@ $L^{p}$ is Banach wrt $\lVert \cdot \rVert_{p}$. (we have already shown that $L^
 
 ---
 
-[!Remark]
-If $f, g\in L^{2}$, then $fg\in L^{1}$
+> [!Exercise] Assignment
+> Let $I=[0, 1]$. Let $k\in L^{2}(I^{2};\mathbb{C})$. Define $T_{k}:L^{2}(I; \mathbb{C})\to L^{2}(I; \mathbb{C})$ by
+> $$
+> (T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
+> $$
+> Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
+> 
+> > [!Solution]-
+> > 
+> > **$T_{k}f\in L^{2}(I;\mathbb{C})$**
+> > 
+> > Recall that $k\in L^{2}(I^{2})$ implies $\int_{I^{2}} |k|^{2}< \infty$. By [[LEC GANA1 8#^18d8a9|Fubini]], the section $x \mapsto |k(x, y)|^{2}$ is integrable (i.e., $k(\_, y)\in L^{2}(I)$) for almost all $y\in I$. By [[#^d01098]], $f(x)k(x, y)$ is integrable over $x$ for fixed $y$, so $T_{k}f$ is well-defined as a map $I\to \mathbb{C}$. 
+> > 
+> > Next, we show that $T_{k}f$ is measurable. Define $F(x, y)=f(x)k(x, y)$. By [[LEC GANA1 8#^665d25]],
+> > $$
+> > \int_{I^{2}}|f(x)|^{2}\,d(x, y)=\int_{I}|f|^{2}\,dx,
+> > $$
+> > so $|f|\in L^{2}(I^{2})$. As in [[#^d01098]],
+> > $$
+> > \begin{aligned} 
+> >  \int_{I^2}|F(x,y)|\,d(x,y) &=\int_{I^2}|f(x)||k(x,y)|\,d(x,y)\\ 
+> >   &\leqslant \|f\|_2\|k\|_2\\ &<\infty,
+> > \end{aligned}.
+> > $$
+> > so $F\in L^{1}(I^{2})$. 
+> > 
+> > Thus, by [[LEC GANA1 8#^ec7a42|the version of Fubini for complex valued functions]],
+> > $$
+> > \begin{align}
+> > \int_{I^{2}}  F(x, y)\,d(x, y)=\int_{I}\left( \int_{I}f(x)k(x, y)\,dx \right)\,dy.
+> > \end{align}
+> > $$
+> > In particular, the map $y\mapsto \int_{I}f(x)k(x, y)\,dx$ is integrable, and a fortiori measurable. 
+> > 
+> > Finally, $T_{k}f$ is square integrable:
+> > $$
+> > \begin{align}
+> > \int_{0}^{1} \lvert T_{k}f (y)\rvert ^{2} \, dy & = \int_{0}^{1} \left( \int_{0}^{1} |f(x)||k(x, y)| \, dx  \right)^{2} \, dy  \\
+> >  & \leqslant \int_{0}^{1} \left( \int_{0}^{1} |f(x)|^{2} \, dx  \right)\left( \int_{0}^{1} |k(x, y)|^{2} \, dx  \right) \, dy \\
+> >  &  \leqslant \lVert f \rVert _{2}^{2}\int_{0}^{1} \int_{0}^{1} |k(x, y)|^{2} \, dx  \, dy \\
+> >  &   =\lVert f \rVert _{2}^{2}\lVert k \rVert _{2}^{2}.
+> > \end{align}
+> > $$
+> > ---
+> > 
+> > **Computing $T_{k}^{*}$** 
+> > 
+> > Consider $S:L^{2}[0, 1]\to L^{2}[0, 1]$ defined by
+> > $$
+> > \begin{align}
+> > S(g)(y)=\int_{0}^{1} g(x) \overline{k(y, x)} \, dx .
+> > \end{align}
+> > $$
+> > Then, 
+> > $$
+> > \begin{align}
+> > \langle T_{k}f, g \rangle  & = \int_{0}^{1} \int_{0}^{1} f(x) \overline{g(y)}k(x, y) \, dx  \, dy  \\
+> > \end{align}
+> > $$
+> > Define $h(x, y)=f(x) \overline{g(y)}$. By [[LEC GANA1 8#^541a16]] applied to $|f|, |g|$, we have $h\in L^{2}(I^{2})$. Since $k\in L^{2}(I^{2})$, we have $hk\in L^{1}(I^{2})$. Therefore, 
+> > $$
+> > \begin{align}
+> > \int_{I^{2}}|f(x)\overline{g}(y)k(x, y)|\,d(x, y) & < \infty, 
+> > \end{align}
+> > $$
+> > and we can apply Fubini:
+> > $$
+> > \begin{align}
+> > \langle T_{k}f, g \rangle  & = \int_{0}^{1}f(x) \left( \int_{0}^{1}  \overline{g(y)}k(x, y) \, dy \right)  \, dx   \\
+> >  & =\int_{0}^{1}f(x) \left( \overline{\int_{0}^{1}  g(y) \overline{k(x, y)} \, dy} \right)  \, dx .
+> > \end{align}
+> > $$
+> > Since both the factors in $I\times I$ are the same measure space, we can swap $x$ and $y$:
+> > $$
+> > \begin{align}
+> > \langle T_{k}f, g \rangle  & =\int_{0}^{1}f(y) \left( \overline{\int_{0}^{1}  g(x) \overline{k(y, x)} \, dx} \right)  \, dy \\
+> >  & =\langle f, Sg \rangle 
+> > \end{align}
+> > $$
+> > That $T_{k}$ is bounded and $T_{k}^{*}=S$ now follows from [[#^a9df42]]. 
+> 
 
-[!Exercise] Assignment
-Let $I=[0, 1]$. Let $k\in L^{2}(I^{2};\mathbb{C})$. Define $T_{k}:L^{2}(I; \mathbb{C})\to L^{2}(I; \mathbb{C})$ by
-$$
-(T_{k}f)(y)=\int_{0}^{1} f(x)k(x, y) \, dx .
-$$
-Prove that $T_{k}$ is bounded. Compute $T_{k}^{*}$. 
-
-[!Solution]-
-
-First, we show that $T_{k}f\in L^{2}(I;\mathbb{C})$. Recall that $k\in L^{2}(I^{2})$ implies $\int_{I^{2}} |k|^{2}< \infty$. By [[LEC GANA1 8#^18d8a9|Fubini]], the section $x \mapsto |k(x, y)|^{2}$ is integrable (i.e., $k(\_, y)\in L^{2}(I)$) for almost all $y\in I$. 
-
-$T_{k}f$ is measurable. 
-
-$T_{k}f$ is square integrable:
-$$
-\begin{align}
-\int_{0}^{1} \lvert T_{k}f (y)\rvert ^{2} \, dy & \leqslant \int_{0}^{1} \left( \int_{0}^{1} |f(x)||k(x, y)| \, dx  \right)^{2} \, dy  \\
- & \leqslant \int_{0}^{1} \left( \int_{0}^{1} |f(x)|^{2} \, dx  \right)\left( \int_{0}^{1} |k(x, y)|^{2} \, dx  \right) \, dy \\
- &  \leqslant \lVert f \rVert _{2}\int_{0}^{1} \int_{0}^{1} |k(x, y)|^{2} \, dx  \, dy \\
- &   =\lVert f \rVert _{2}\lVert k \rVert _{2}.
-\end{align}
-$$
-
-
-Consider $S:L^{2}[0, 1]\to L^{2}[0, 1]$ defined by
-$$
-\begin{align}
-S(y)=\int_{0}^{1} f(x) \overline{k(y, x)} \, dx .
-\end{align}
-$$
-Then, 
-$$
-\begin{align}
-\langle T_{k}f, g \rangle  & = \int_{0}^{1} \int_{0}^{1} f(x) \overline{g(y)}k(x, y) \, dx  \, dy 
-\end{align}
-$$
-...
-
-That $T_{k}$ is bounded and $T_{k}^{*}=S$ now follows from [[#^a9df42]]. 
 
 > [!Exercise] Assignment
 > Let $H$ be a Hilbert space. Let $T:H\to H$ be linear. Let $S:H\to H$ be such that $\langle Tx, y \rangle=\langle x, Sy \rangle$. Then, $T$ is bounded, and $T^{*}=S$. 

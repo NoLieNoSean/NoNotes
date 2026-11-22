@@ -16,7 +16,7 @@ See [[LEC ALG1 21#Inner Product Spaces]].
 In this section, $H$ can be any inner product space over $\mathbb{C}$. 
 
 > [!proposition] Cauchy-Schwarz inequality
-> Let $H$ be an inner product space. Then for $x, y \in H$
+> Let $H$ be an inner product space, with the norm derived from the inner product by $\lVert x \rVert=\sqrt{ \langle x, x \rangle }$. Then for $x, y \in H$
 > $$
 > \lvert \langle x, y \rangle  \rvert \leq \lVert x \rVert \lVert y \rVert 
 > $$
@@ -37,8 +37,12 @@ In this section, $H$ can be any inner product space over $\mathbb{C}$.
 > > $$
 > > If equality holds then $x = \frac{{\langle x, y \rangle}}{\lVert y \rVert}y$.
 
+^70ae36
+
 > [!Corollary] Triangle inequality
 > $(\lVert x \rVert+ \lVert y \rVert)^{2}= \lVert x \rVert^{2} + \lVert y \rVert^{2} +2\lVert x \rVert\lVert y \rVert \geq \lVert x \rVert^{2}+\lVert y \rVert^{2} + 2Re(\langle x, y \rangle) = \lVert x+y \rVert^{2}$.
+
+^0b76b1
 
 > [!Remark]
 > 1. Polarization identity

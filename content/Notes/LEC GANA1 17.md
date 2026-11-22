@@ -6,6 +6,7 @@ tags:
   - Lecture
   - GANA1
 desc: build up to Lp dual = lq
+P1: true
 ---
 > [!Proposition]
 > Let $X$ be a compact metric space, $\mu$ finite measure on $X$. Then, $C(X) \hookrightarrow L^{p}(X)$ is dense for all $1\leqslant p< \infty$. 
