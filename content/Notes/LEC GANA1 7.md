@@ -64,7 +64,7 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 > 1. $\int(\alpha f+g)=\alpha \int f+\int g$. 
 > 2. If $f\geqslant 0$, then $\int f\geqslant 0$. 
 > 3. If $f\geqslant g$, then $\int f\geqslant \int g$. 
-> 4. $\int f\leqslant \int |f|$.
+> 4. $|\int f|\leqslant \int |f|$.
 
 ^a5edca
 
@@ -100,31 +100,24 @@ Sandwich. Use Fatou's.
 
 ---
 
-# $\mathcal{L}^{p}$, $\mathcal{L}^{\infty}$ spaces and convergence in measure
+# $L^{p}$, $L^{\infty}$ spaces and convergence in measure
 
-[!Definition] $\mathcal{L}^{p}$ spaces
-For a measure space $(X, \mathcal{F}, \mu)$ and $1\leqslant p< \infty$, define
-$$
-\mathcal{L}^{p}(X, \mathcal{F}, \mu; F)=\left\{  f:(X, \mathcal{F})\to F: f\text{ measurable},\int |f|^{p}< \infty  \right\},
-$$
-where $F=\mathbb{R}, \mathbb{C}$. We will write $\mathcal{L}^{p}$ in place of $\mathcal{L}^{1}(X, \mathcal{F}, \mu; F)$ when it makes sense to do so. It is easy to work out from [[#^a5edca]] that $\mathcal{L}^{1}$ is a vector space. 
-
-Define $\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}^{p}(X)$ by $\lVert f \rVert_{p}=\left( \int\lvert f \rvert^{p}d \mu \right)^{1/p}$. By the [[LEC GANA1 16#^d1da59|Minkowski inequality]], $\lVert \cdot \rVert_{p}$ is a semi-norm on $\mathcal{L}^{p}$. 
-
-By [[LEC GANA1 6#^5b9fe5]], $\lVert f \rVert_{p}=0$ $\iff$ $f=0$ a.e.., for all $1\leqslant p\leqslant \infty$. The set $N=\{ f\in \mathcal{L}^{p}:f=0\text{ a.e.} \}$ is a vector subspace of $\mathcal{L}^{p}$. Define
-$$
-L^{p}(X, \mathcal{F}, )
-$$
-
-
-
-For $f_{n}, f\subseteq L^{1}$, we say that **$f_{n}\to f$ in $L^{1}$** if $\int |f-f_{n}|\to 0$. 
-
-We also have $L^{p}$ spaces for $0< p< \infty$:
-$$
-L^{p}(\Omega, \mathcal{F}, \mu)=\left\{  f:(\Omega, \mathcal{F})\to \mathbb{R}: f\text{ measurable},\int |f|^{p}< \infty  \right\}.
-$$
-
+> [!Definition] $L^{p}$ spaces
+> For a measure space $(X, \mathcal{F}, \mu)$ and $1\leqslant p< \infty$, define
+> $$
+> \mathcal{L}^{p}(X, \mathcal{F}, \mu; F)=\left\{  f:(X, \mathcal{F})\to F: f\text{ measurable},\int |f|^{p}< \infty  \right\},
+> $$
+> where $F=\mathbb{R}, \mathbb{C}$. We will write $\mathcal{L}^{p}$ in place of $\mathcal{L}^{1}(X, \mathcal{F}, \mu; F)$ when it makes sense to do so. It is easy to work out from [[#^a5edca]] that $\mathcal{L}^{p}$ is a vector space. 
+> 
+> Define $\lVert \cdot  \rVert_{p}$ on $\mathcal{{L}}^{p}(X)$ by $\lVert f \rVert_{p}=\left( \int\lvert f \rvert^{p}d \mu \right)^{1/p}$. By the [[LEC GANA1 16#^d1da59|Minkowski inequality]], $\lVert \cdot \rVert_{p}$ is a semi-norm on $\mathcal{L}^{p}$.
+> 
+> By [[LEC GANA1 6#^5b9fe5]], $\lVert f \rVert_{p}=0$ $\iff$ $f=0$ a.e.., for all $1\leqslant p\leqslant \infty$. The set $N=\{ f\in \mathcal{L}^{p}:f=0\text{ a.e.} \}$ is a vector subspace of $\mathcal{L}^{p}$. Define
+> $$
+> L^{p}(X, \mathcal{F}, \mu):=\mathcal{L}^{p}(X, \mathcal{F}, \mu)/N.
+> $$
+> $\lVert \cdot \rVert_{p}$ descends to a norm on $L^{p}$. 
+> 
+> For $f_{n}, f\subseteq L^{p}$, we say that **$f_{n}\to f$ in $L^{p}$** if $\lVert f-f_{n} \rVert_{p}\to 0$. 
 
 ^8c70d7
 
