@@ -115,7 +115,7 @@ Sandwich. Use Fatou's.
 > $$
 > L^{p}(X, \mathcal{F}, \mu):=\mathcal{L}^{p}(X, \mathcal{F}, \mu)/N.
 > $$
-> $\lVert \cdot \rVert_{p}$ descends to a norm on $L^{p}$. 
+> $\lVert \cdot \rVert_{p}$ descends to a norm[^1] on $L^{p}$. 
 > 
 > For $f_{n}, f\subseteq L^{p}$, we say that **$f_{n}\to f$ in $L^{p}$** if $\lVert f-f_{n} \rVert_{p}\to 0$. 
 
@@ -144,11 +144,11 @@ Sandwich. Use Fatou's.
 > 2. $n 1_{(0, 1/n)}\to 0$ pointwise, but $\int n 1_{(0, 1/n)}=1$ for all $n$, and does not converge to $0$.  
 
 
-
 > [!Proposition]
-> 1. If $f\geqslant 0$, then $\int f=0$ $\implies$ $f=0$ a.e..
-> 2. Let $f$ be a nonnegative integrable function. Then, $\mu(\{ t:f(t)=\infty \})=0$. 
-> 3. Let $f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable and satisfy $\int_{A}f=0$ for all $A\in \mathcal{F}$. Then, $f=0$ a.e..
+> 1. Let $f$ be a nonnegative integrable function. Then, $\mu(\{ t:f(t)=\infty \})=0$. 
+> 2. Let $f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable and satisfy $\int_{A}f=0$ for all $A\in \mathcal{F}$. Then, $f=0$ a.e..
+
+^33c35d
 
 > [!Definition] Convergence in measure
 > Let $f_{n}, f:(\Omega, \mathcal{f}, \mu)\to \mathbb{R}$ be measurable. We say that **$\{ f_{n} \}$ converges to $f$ in measure**, and write $f_{n}\xrightarrow{\mu}f$, if for all $\epsilon> 0$, 
@@ -188,9 +188,9 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 
 
 > [!Remark]
-> Suppose $f_{n}\to f$ in $L^{p}$. Let $A^{\epsilon}_{n}=\{ t:|(f-f_{n})(t)|\geqslant \epsilon \}$. Since $\int |f_{n}-f|^{p}\geqslant \epsilon^{p}\mu(A^{\epsilon}_{n})$, we have $\mu(A_{n}^{\epsilon})\to 0$ for all $\epsilon> 0$. Thus, 
+> Suppose $f_{n}\to f$ in $L^{p}$. Let $A^{\epsilon}_{n}=\{ x:|(f-f_{n})(x)|\geqslant \epsilon \}$. Since $\int |f_{n}-f|^{p}\geqslant \epsilon^{p}\mu(A^{\epsilon}_{n})$, we have $\mu(A_{n}^{\epsilon})\to 0$ for all $\epsilon> 0$. Thus, 
 > $$
-> f_{n}\xrightarrow{L^{p}}f\implies f_{n}\xrightarrow{\mu}f\quad\forall0< p< \infty.
+> f_{n}\xrightarrow{L^{p}}f\implies f_{n}\xrightarrow{\mu}f\quad\forall {1}\leqslant  p< \infty.
 > $$
 > Similarly, if $f_{n}\to f$ in $L^{\infty}$, $\mu(A_{n}^{\epsilon})=0$ for all $n\geqslant N$, for some $N$ determined by $\epsilon$. Thus,  
 > $$
@@ -207,3 +207,5 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 
 > [!Corollary]
 > Let $f_{n}$, $f$ be density functions, i.e., $\int f_{n}=\int f=1$, and $f_{n}, f\geqslant 0$. Then, $f_{n}\to f$ a.e. $\implies$ $\int |f_{n}-f|\to 0$. 
+
+[^1]: It is well defined, as for $f\in \mathcal{L}^{p}$ and $g\in N$, $\lVert f+g \rVert_{p}\leqslant \lVert f \rVert_{p}+\lVert g \rVert_{p}=\lVert f \rVert_{p}$ and $\lVert f \rVert_{p}\leqslant \lVert f+g \rVert_{p}+\lVert g \rVert_{p}=\lVert f+g \rVert_{p}$, so $\lVert f+g \rVert_{p}=\lVert f_{p} \rVert$. 

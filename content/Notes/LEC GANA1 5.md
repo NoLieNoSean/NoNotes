@@ -84,6 +84,8 @@ If $\mathcal{G}=\sigma(S)$, then $\phi$ is measurable iff $\phi ^{-1}(A)\in \mat
 > > \inf_n(\sup_{k\ge n}\varphi_k).
 > > $$
 
+^72ce9f
+
 > [!Corollary]
 > Let $\{ \varphi_{n} \}$ be a countable family of measurable functions $(X, \mathcal{F})\to \mathbb{R}$. The set $\{ x\in X:\lim_{n }\varphi_{n}(x) \text{ exists} \}$ is measurable. 
 
@@ -99,6 +101,8 @@ We can drop the boundedness hypothesis if we extend the codomain:
 
 > [!Proposition]
 > Let $\{ \varphi_{n} \}$ be a countable family of measurable functions $(X, \mathcal{F})\to \overline{\mathbb{R}}$. Then, $\sup_{n}\varphi_{n}$ is measurable. 
+
+^2cd675
 
 ---
 
