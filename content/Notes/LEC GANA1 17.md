@@ -260,6 +260,8 @@ P1: true
 > > Suppose $h$ and $h'$ both satisfy $\nu(E)= \int_{E}h d \mu = \int_{E} h' d \mu$ for all $E \in \mathcal{F}$. Then $\int_{E}(h-h')d \mu = 0$ for all $E\in \mathcal{F}$, so $h$ is $\mu$-a.e. unique by [[LEC GANA1 6#^5b9fe5]].4.
 > 
 
+^0a786f
+
 
 > [!Remarks]
 > > [!Definition]
