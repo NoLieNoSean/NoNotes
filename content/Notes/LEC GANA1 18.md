@@ -7,11 +7,12 @@ tags:
   - GANA1
 desc: Lp dual = Lq
 ---
-# Total variation of a complex measure is a finite measure.
+# Total variation of a complex measure is a finite measure
+
 > [!Definition]
 > Given a measure space $(X, \mathcal{F}, \mu)$, $A \in \mathcal{F}$ is called an atom if $\mu(A)> 0$ and for every measurable $B \subseteq A$, $\mu (B)=0$ or $\mu(A \setminus B)=0$.
 
-Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \rvert$ be the total variation of $\mu$.
+Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \rvert$ be the [[LEC GANA1 17#^b24e1f|total variation measure]] of $\mu$.
 
 > [!Claim]
 > Atoms in $(X, \mathcal{F}, \lvert \mu  \rvert)$ have finite total variation.

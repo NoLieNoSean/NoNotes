@@ -7,6 +7,7 @@ tags:
   - GANA1
 desc: build up to Lp dual = lq
 P1: true
+P2: true
 ---
 > [!Lemma]
 > Let $(X, \mathcal{F}, \mu)$ be a measure space. Simple functions are dense in $L^{p}(X, \mathcal{F}, \mu)$ for $1\leqslant p\leqslant \infty$. 
@@ -67,57 +68,10 @@ P1: true
 > > 
 > 
 
+^deb4a4
+
 
 ---
-
-> [!Proposition]
-> Consider $C_{0}=\{ \{ x_{n} \}_{n=1}^{\infty}:x_{n}\in \mathbb{C}, x_{n}\to 0 \}\subseteq \ell^{\infty}$.
-> 1. For any $\{ y_{n} \}\in \ell^{1}$, define $\phi_{\{ y_{n} \}}(\{ x_{n} \})=\sum_{n=1}^{\infty}x_{n}y_{n}$. Then, $\phi_{\{ y_{n} \}}\in C_{0}^{*}$, and $\lVert \phi_{\{ y_{n} \}} \rVert=\lVert \{ y_{n} \} \rVert_{\ell^{1}}$. 
-> 2. Given any $\phi\in C_{0}^{*}$, there exists $\{ y_{n} \}\in \ell^{1}$ such that $\phi=\phi_{\{ y_{n} \}}$. 
-> 
-> In other words, $(C_{0})^{*} \cong \ell_{1}$.
-> 
-> > [!Proof]-
-> > 
-> > For $\{ x_{n} \}\in C_{0}$,
-> > $$
-> > \lvert \phi_{\{ y_{n} \}}(\{ x_{n} \}) \rvert = \left\lvert  \sum x_{n}y_{n}  \right\rvert\leq \lVert \{ x_{n} \} \rVert_{\infty}    \sum |y_{n} | \leq  \lVert \{ x_{n} \} \rVert_{\infty} \lVert \{ y_{n} \} \rVert_{1}.
-> > $$
-> > Therefore, $\lVert \phi_{\{ y_{ n} \}} \rVert \leq \lVert \{ y_{n} \} \rVert_{1}$.
-> > 
-> > Let $\tilde{y}^{(k)}=\{ \tilde{y}^{(k)}_{n} \} \in  C_{0}$ given by
-> > $$
-> > \left( \frac{\lvert y_{1} \rvert }{ y_{1}  }, \frac{{\lvert y_{2} \rvert }}{y_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }y_{i}=0}}{\cdots} , \frac{{\lvert y_{k} \rvert }}{y_{k}} , 0, 0, \cdots \right).
-> > $$
-> > $\lVert \tilde{y}^{(k)}  \rVert_{\infty}\leq 1$ and $\phi_{\{ y_{n} \}}(\tilde{y}^{(k)})=\sum_{i=1}^{k}\lvert y_{k} \rvert \to \lVert \{ y_{n} \} \rVert_{1}$. Thus, $\lVert \phi_{\{ y_{n} \}} \rVert=\lVert \{ y_{n} \} \rVert_{1}$, and $\phi$ is an isometry. 
-> > 
-> > ---
-> > 
-> > Conversely, suppose $\alpha \in (C_{0})^{*}$, and define $\alpha_{i}= \alpha(e_{i})$. 
-> > 
-> > Define $\tilde{\alpha}^{(k)}=\{ \tilde{\alpha}^{(k)}_{n} \} \in C_{0}$ by
-> > $$
-> > \left( \frac{\lvert \alpha _{1} \rvert }{ \alpha _{1}  }, \frac{{\lvert \alpha _{2} \rvert }}{\alpha_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }\alpha _{i}=0}}{\cdots} , \frac{{\lvert \alpha _{k} \rvert }}{\alpha_{k}} , 0, 0, \cdots \right).
-> > $$
-> > $\lVert \tilde{\alpha}^{(k)} \rVert_{\infty}\leqslant 1$. So, $|\alpha(\tilde{\alpha}^{(k)})|\leqslant \lVert \alpha \rVert$ for all $k$. Since $\alpha(\tilde{\alpha}^{(k)})=\sum_{i=1}^{k}|\alpha_{i}|$, we have $\sum_{i=1}^{\infty}|\alpha_{i}|< \infty$, and $\{ \alpha_{n} \}\in \ell^{1}$. 
-> > 
-> > Note that we haven't yet used the fact that we're working with the subspace $C_{0}\subseteq \ell^{\infty}$ and not $\ell^{\infty}$ itself. We do now. 
-> > 
-> > Let $\{ x_{n} \}\in C_{0}$ and let $\tilde{x}^{(k)} \in C_{0}$ be given by
-> > $$
-> > \left( x_{1}, x_{2}, \cdots ,x_{k}, 0, 0, \cdots \right).
-> > $$
-> > Notice that $d_{\ell_{\infty }}(\{ x_{n} \} ,  \tilde{x}^{(k)} ) = \sup_{j> k}\lvert x_{j} \rvert\to 0$, so $\tilde{x}^{(k)}\to \{ x_{n} \}$ in $\ell^{\infty}$. 
-> > 
-> > We have
-> > $$
-> > \alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.
-> > $$
-> > Therefore, $\phi(\{ \alpha_{n} \})=\alpha$, and $\phi$ is an isomorphism of Banach spaces. 
-> 
-
-> [!Exercise]
-> Show that $\ell^{p*}=\ell^{q}$ for $1< p< \infty$ and $\frac{1}{p}+\frac{1}{q}=1$.
 
 ---
 # Radon-Nikodym Theorem
@@ -337,6 +291,8 @@ P1: true
 > \lvert \mu \rvert(E):= \sup \left\{  \sum_{n=1}^{\infty}\lvert \mu(E_{n}) \rvert : \bigsqcup_{n=1}^{\infty}E_{n}=E  \right\}.
 > $$
 > 
+
+^b24e1f
 
 > [!Proposition] 
 > For a complex measure space $(X, \mathcal{F}, \mu)$, $\lvert \mu \rvert$ is a positive (i.e. vanilla) measure.
