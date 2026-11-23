@@ -274,7 +274,7 @@ P1: true
 > For a measurable space $(X, \mathcal{F})$, $\mu: \mathcal{F}\to \mathbb{C}$ is called a complex measure if $\mu(\emptyset)=0$ and $\mu(\bigsqcup E_{i})= \sum \mu(E_{i})$.
 
 > [!Proposition] 
-> Let $\mu:\mathcal{F}\to \mathbb{R}$ be a complex measure, then for disjoint collection $\{ E_{n} \}\subseteq \mathcal{F}$, $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
+> Let $\mu:\mathcal{F}\to \mathbb{R}$ be a signed real measure, then for disjoint collection $\{ E_{n} \}\subseteq \mathcal{F}$, $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
 > > [!Proof]-
 > > $$
 > > \sum \lvert \mu(E_{n}) \rvert = \sum_{\mu(E_{n})>  0} \lvert \mu(E_{n}) \rvert + \sum_{\mu(E_{n})< 0}\lvert \mu(E_{n}) \rvert = \mu\left(\bigsqcup_{\mu(E_{n})> 0} E_{n}\right) - \mu\left(\bigsqcup_{\mu(E_{n})< 0}E_{n}\right) \in \mathbb{R}.
