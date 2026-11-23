@@ -92,5 +92,3 @@ Let $(X, \mathcal{A}, \mu)$ be a finite measure space(Holds for $\sigma$-finite 
    \lvert \nu(E)-\nu(E_{n}) \rvert= \lvert \phi(1_{E}-1_{E_{n}}) \rvert \leq \lVert \phi \rVert \cdot \lVert 1_{E}-1_{E_{n}} \rVert _{p}= \lvert \phi \rvert \mu(E \setminus E_{n})^{1/p}\to 0
    $$
    Thus $\nu$ is a complex measure.
-   
-   
