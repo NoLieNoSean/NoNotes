@@ -88,6 +88,8 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 > 2. $C[0, 1]$ is separable.
 >    ![[Pasted image 20250930105556.jpeg]]
 
+^af6583
+
 > [!Example]
 > Define $C_{0}:=\{ \{ x_{n} \}\ | \ x_{n}\to 0 \}\subset \mathscr{l}_{\infty}$. We will show that $C_{0}$ is a separable subspace of $\mathscr{l}_{\infty}$. Let $\mathcal{F}\subseteq C_{0}$ be as in [[#^74c8ab]]. 
 > Let $\mathbf{x}=\{ x_{k} \}\in C_{0}$, and define $\mathbf{x}_{n}$ as we have previously.
@@ -100,6 +102,8 @@ Recall what a [[LEC CAL1 9#Separable metric spaces|separable space]] is.
 
 > [!Example]
 > $\mathscr{l}_{\infty}$ is not separable. Consider $S=\{ \{ x_{n} \}\ | \ x_{n}\in \{ \pm 1 \} \}$. For any $\mathbf{x}, \mathbf{y}\in S$, $\lVert \mathbf{x}-\mathbf{y} \rVert_{\infty}=2$. Consider the disjoint uncountable collection of open balls $\{ B_{1}(\mathbf{x})\ | \ \mathbf{x}\in S \}$. Since a dense subset of $\mathscr{l}_{\infty}$ must intersect all open balls of $\mathscr{l}_{\infty}$, a countable dense subset doesn't exist.
+
+^592e25
 
 > [!Exercise]
 > 
