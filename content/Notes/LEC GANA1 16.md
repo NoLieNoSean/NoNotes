@@ -412,6 +412,8 @@ These are not inner product spaces, so we have to take a different route to esta
 > > 
 > 
 
+^16bd3b
+
 > [!Proposition]
 > Suppose $f\in L^{p}\cap L^{\infty}$. Then, $f\in L^{q}$ for all $p\leqslant q\leqslant \infty$, and $\lim_{ q \to \infty }\lVert f \rVert_{q}=\lVert f \rVert_{\infty}$. 
 > 

@@ -229,6 +229,8 @@ P2: true
 > $$
 > 
 
+^0a786f
+
 
 > [!Proposition]
 > Suppose $\nu_{1}\ll \nu_{2}\ll \nu_{3}$ are $\sigma$-finite measures on $(X, \mathcal{F})$. Then, 
