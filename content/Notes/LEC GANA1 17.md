@@ -326,7 +326,7 @@ P1: true
 > > $$
 > > \sum \lvert \mu(E_{n}) \rvert \leq \sum \lvert Re(\mu (E_{n})) \rvert  + \sum \lvert Im(\mu(E_{n})) \rvert .
 > > $$
-> > So, if $\sum \lvert \mu(E_{n}) \rvert$ diverges then one of the summation terms on right diverges, which would contradict [[#^1b03da]] since $\text{Re}(\mu)$ and $\text{Im}(\mu)$ are signed real measures.
+> > Now since $Re(\mu)$ and $Im(\mu)$ are signed real measures, both the terms on the RHS are finite by [[#^1b03da]].
 > 
 
 > [!Definition] Total variation measure
