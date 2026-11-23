@@ -6,9 +6,6 @@ tags:
   - Lecture
   - GANA1
 ---
-
-
-
 > [!Remark]
 > $\ell^{p}$ is separable for $1\leqslant p< \infty$ - the $\mathbb{Q}+i\mathbb{Q}$ span of $\{ e_{n}:n\in \mathbb{N} \}$ is a countable dense subset, [[LEC ANA2 5#^74c8ab|as we've seen before]]. 
 > 
@@ -131,17 +128,14 @@ tags:
 > [!Definition] Reflexive Banach space
 > Let $X$ be a normed space, with dual space $X^{*}$. Recall ([[LEC GANA1 12#^c83482]].3) that the map $\Lambda :X\to X^{**}$, defined by $x \mapsto \hat{x}$, is an isometric embedding. If $\Lambda$ is surjective (i.e. $X\cong X^{**}$), we called $X$ **reflexive**. Note that a reflexive space must be Banach, since $X^{*}$ is always Banach. 
 
-
 > [!Remark]
 > 1. $\ell^{p}$ is reflexive for $1< p< \infty$ ([[#^6104a0]]).
 >    $(\ell^{1})^{*}\cong \ell^{\infty}$, $(\ell^{\infty})^{*}\supsetneq \ell^{1}$. 
 > 2. $L^{p}$ is reflexive for $1< p< \infty$ ([[LEC GANA1 18]])
 >    $(L^{1})^{*}\cong L^{\infty}$, $(L^{\infty})^{*}\supsetneq L^{1}$. 
 
-
 ---
 
-%% start of fourier analysis %%
 
 [!Definition] Convolution
 
