@@ -125,6 +125,11 @@ P1: true
 > [!Definition]
 > Let $\mu$, $\nu$ be two $\sigma$-finite measures on $(X, \mathcal{F})$. We say that **$\nu$ is absolutely continuous wrt $\mu$** (and write $\nu\ll \mu$) if for all $E\in \mathcal{F}$, $\mu(E)=0\implies \nu(E)=0$.  
 
+> [!Remark]
+> Suppose $\nu\ll \mu$. If a statement holds $\mu$-a.e., then it holds $\nu$-a.e..
+
+^456c57
+
 > [!Proposition]
 > Let $\mu$ be a $\sigma$-finite measure on $(X, \mathcal{F})$. Let $f$ be a positive measurable function taking finite values a.e.. Then $\nu(E):=\int_{E}fd\mu$ is a $\sigma$-finite measure and $\nu\ll \mu$. 
 > 
@@ -190,7 +195,7 @@ P1: true
 > > $$
 > > \boxed{\int_{X}f \,d \nu= \int_{X}fp\,d \rho \quad \forall f \in L^{2}(\rho).}
 > > $$
-> > We will show that $p \in [0, 1)$ $\rho$-almost everywhere. For all $E\in \mathcal{F}$, $\int_{E}p\,d\rho=\nu(E)\geqslant 0$, so $p\geqslant 0$ $\rho$-a.e. by [[LEC GANA1 6#^5b9fe5]].3. 
+> > We will show that $p \in [0, 1)$ $\rho$-almost everywhere. Using the above equation, for all $E\in \mathcal{F}$, $\int_{E}p\,d\rho=\nu(E)\geqslant 0$, so $p\geqslant 0$ $\rho$-a.e. by [[LEC GANA1 6#^5b9fe5]].3. 
 > > 
 > > Also, 
 > > $$
@@ -258,62 +263,117 @@ P1: true
 > > $$
 > > 
 > > Suppose $h$ and $h'$ both satisfy $\nu(E)= \int_{E}h d \mu = \int_{E} h' d \mu$ for all $E \in \mathcal{F}$. Then $\int_{E}(h-h')d \mu = 0$ for all $E\in \mathcal{F}$, so $h$ is $\mu$-a.e. unique by [[LEC GANA1 6#^5b9fe5]].4.
+> > 
+> 
+
+^39ffe3
+
+> [!Definition] Radon-Nikodym derivative
+> Let $\mu, \nu$ be $\sigma$-finite measures on $(X, \mathcal{F})$ such that $\nu\ll \mu$. The function $h:X\to[0, \infty]$ from [[#^39ffe3]] is called the **Radon-Nikodym derivative** of $\nu$ wrt $\mu$, and is denoted by $\frac{d\nu}{d\mu}$. For measurable $g:X\to[0, \infty]$, we have
+> $$
+> \int_{X} g\,d\nu=\int_{X}g\left( \frac{d\nu}{d\mu} \right)\,d\mu.
+> $$
 > 
 
 ^0a786f
 
 
-> [!Remarks]
-> > [!Definition]
-> > $h = \frac{{d \nu}}{d \mu}$ is called the Radon-Nikodym derivative of $\nu$ wrt $\mu$.
+> [!Proposition]
+> Suppose $\nu_{1}\ll \nu_{2}\ll \nu_{3}$ are $\sigma$-finite measures on $(X, \mathcal{F})$. Then, 
+> $$
+> \begin{align}
+> \left( \frac{d\nu_{1}}{d\nu_{2}} \right)\left( \frac{d\nu_{2}}{d\nu_{3}} \right)=\left( \frac{d\nu_{1}}{d\nu_{3}} \right)  &  & \nu_{1}, \nu_{2}, \nu_{3}\text{-a.e.}
+> \end{align}
+> $$
 > 
-> - $\nu_{1}\ll \nu_{2}\ll \nu_{3} \implies  \left(  \frac{{d \nu_{3}}}{d \nu_{2}}  \right) \cdot \left( \frac{{d \nu_{2}}}{d \nu_{1}} \right)$.
----
+> > [!Proof]-
+> > 
+> > For any measurable $g:X\to[0, \infty]$, we have
+> > $$
+> > \begin{align}
+> > \int_{X}g\left( \frac{d\nu_{1}}{d\nu_{3}} \right)\,d\nu_{3}=\int_{X}g\,d\nu_{1}=\int_{X}g\left( \frac{d\nu_{1}}{d\nu_{2}} \right)\,d\nu_{2}=\int_{X}g\left( \frac{d\nu_{1}}{d\nu_{2}} \right)\left( \frac{d\nu_{2}}{d\nu_{3}} \right)\,d\nu_{3}.
+> > \end{align}
+> > $$
+> > Take $g=1$ to obtain
+> > $$
+> > \int_{X}\left( \left( \frac{d\nu_{1}}{d\nu_{3}} \right)-\left( \frac{d\nu_{1}}{d\nu_{2}} \right)\left( \frac{d\nu_{2}}{d\nu_{3}} \right) \right)\,d\nu_{3}=0.
+> > $$
+> > We are done by [[LEC GANA1 6#^5b9fe5]].1 and [[#^456c57]]. 
+> 
 
 # Complex measure and total variation
 
 > [!Definition] Complex measure
-> For a measurable space $(X, \mathcal{F})$, $\mu: \mathcal{F}\to \mathbb{C}$ is called a complex measure if $\mu(\emptyset)=0$ and $\mu(\bigsqcup E_{i})= \sum \mu(E_{i})$.
+> For a measurable space $(X, \mathcal{F})$, $\mu: \mathcal{F}\to \mathbb{C}$ is called a **complex measure** if $\mu(\emptyset)=0$ and $\mu(\coprod_{n=1}^{\infty} E_{n})= \sum_{n=1}^{\infty} \mu(E_{n})$.
 
 > [!Proposition] 
-> Let $\mu:\mathcal{F}\to \mathbb{R}$ be a signed real measure, then for disjoint collection $\{ E_{n} \}\subseteq \mathcal{F}$, $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
+> Let $\mu:\mathcal{F}\to \mathbb{R}$ be a signed real measure. Then, for a disjoint countable collection $\{ E_{n} \}\subseteq \mathcal{F}$, we have $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
+> 
 > > [!Proof]-
 > > $$
-> > \sum \lvert \mu(E_{n}) \rvert = \sum_{\mu(E_{n})>  0} \lvert \mu(E_{n}) \rvert + \sum_{\mu(E_{n})< 0}\lvert \mu(E_{n}) \rvert = \mu\left(\bigsqcup_{\mu(E_{n})> 0} E_{n}\right) - \mu\left(\bigsqcup_{\mu(E_{n})< 0}E_{n}\right) \in \mathbb{R}.
+> > \begin{align}
+> > \sum \lvert \mu(E_{n}) \rvert  & = \sum_{\mu(E_{n})>  0} \lvert \mu(E_{n}) \rvert + \sum_{\mu(E_{n})< 0}\lvert \mu(E_{n}) \rvert  \\
+> >  & = \mu\left(\coprod_{\mu(E_{n})> 0} E_{n}\right) - \mu\left(\coprod_{\mu(E_{n})< 0}E_{n}\right) \in \mathbb{R}.
+> > \end{align}
 > > $$
+> > 
+> 
 
 ^1b03da
 
 > [!Corollary] 
-> Let $\mu:\mathcal{F}\to \mathbb{C}$ be a complex measure, then for disjoint collection $\{ E_{n} \}\subseteq \mathcal{F}$, $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
+> Let $(X, \mathcal{F}, \mu)$ be a complex measure space. Then, for a disjoint countable collection $\{ E_{n} \} \subseteq \mathcal{F}$, we have $\sum \lvert \mu(E_{n}) \rvert< \infty$.
+> 
 > > [!Proof]-
 > > $$
-> > \sum \lvert \mu(E_{n}) \rvert \leq \sum \lvert Re(\mu (E_{n})) \rvert  + \sum \lvert Im(\mu(E_{n})) \rvert 
+> > \sum \lvert \mu(E_{n}) \rvert \leq \sum \lvert Re(\mu (E_{n})) \rvert  + \sum \lvert Im(\mu(E_{n})) \rvert .
 > > $$
-> > Now since $Re(\mu)$ and $Im(\mu)$ are signed real measures, both the terms on the RHS are finite.
+> > Now since $Re(\mu)$ and $Im(\mu)$ are signed real measures, both the terms on the RHS are finite by [[#^1b03da]].
+> 
 
 > [!Definition] Total variation measure
-> For a complex measure space $(X, \mathcal{F}, \mu)$, total variation measure $\lvert \mu \rvert: \mathcal{F}\to [0, \infty]$ is defined as 
+> For a complex measure space $(X, \mathcal{F}, \mu)$, **total variation** measure $\lvert \mu \rvert: \mathcal{F}\to [0, \infty]$ is defined as 
 > $$
 > \lvert \mu \rvert(E):= \sup \left\{  \sum_{n=1}^{\infty}\lvert \mu(E_{n}) \rvert : \bigsqcup_{n=1}^{\infty}E_{n}=E  \right\}.
 > $$
+> 
 
 > [!Proposition] 
-> $\lvert \mu \rvert$ is a positive(ie normal) measure.
+> For a complex measure space $(X, \mathcal{F}, \mu)$, $\lvert \mu \rvert$ is a positive (i.e. vanilla) measure.
+> 
 > > [!Proof]-
-> > Clearly $\lvert \mu \rvert(\phi)=0$ and $\lvert \mu \rvert$ takes only non-negative value, hence we only need to show $\sigma$-additivity.
 > > 
-> > Let $E = \bigsqcup_{n} E_{n} = \bigsqcup_{m} F_{m}$. Clearly, $F_{m}= \bigsqcup_{n}(E_{n}\cap F_{m})$, by additivity of $\mu$, $\mu(F_{m})=\sum_{n}\mu\left(E_{n}\cap F_{m}\right)\implies \lvert \mu(F_{m}) \rvert\leq \sum_{n}\lvert \mu(E_{n} \cap F_{m}) \rvert$.
-> > Also since $E_{n} = \bigsqcup_{m}(E_{n} \cap F_{m})$, by definition of $\lvert \mu \rvert$, $\lvert \mu \rvert (E_{n}) \geq \sum_{m}\lvert \mu(E_{n} \cap F_{m}) \rvert$.
-> > Therefore,
-> > $$
-> > \sum_{m}\lvert \mu  (F_{m})\rvert=\sum_{m}\sum_{n}\lvert \mu(E_{n} \cap F_{m}) \rvert = \sum_{n}\sum_{m}\lvert \mu(E_{n} \cap F_{m}) \rvert \leq \sum_{n}\lvert \mu \rvert (E_{n}).
-> > $$
-> > By taking supremum on the left side of $\sum_{m}\lvert \mu(F_{m}) \rvert\leq \sum_{n}\lvert \mu \rvert(E_{n})$, we get that $\lvert \mu \rvert(E) \leq \sum_{n}\lvert \mu \rvert(E_{n})$.
+> > Clearly $|\mu|(\emptyset)=0$ and $\lvert \mu \rvert$ takes non-negative values, so we only need to show $\sigma$-additivity.
 > > 
-> > Now again suppose $E = \bigsqcup_{n} E_{n}$.
+> > Suppose $E=\coprod_{n}E_{n}$. 
+> > 
+> > ---
+> > 
+> > Consider another partition $E=\coprod_{m}F_{m}$. We have $F_{m}=\coprod_{n}(E_{n}\cap F_{m})$. By the additivity of $\mu$, $\mu(F_{m})  =\sum_{n}\mu(E_{n}\cap F_{m})$, so
+> > $$
+> > \begin{align} 
+> > |\mu(F_{m})|  \leqslant \sum_{n}|\mu(E_{n}\cap F_{m})|.
+> > \end{align}
+> > $$
+> > We also have $E_{n}=\coprod_{m}(E_{n}\cap F_{m})$. By the definition of $|\mu|$, 
+> > $$
+> > \begin{align}
+> > |\mu|(E_{n})\geqslant \sum_{m}|\mu(E_{n}\cap F_{m})|.
+> > \end{align}
+> > $$
+> > Combining the two inequalities, we get
+> > $$
+> > \sum_{m}\lvert \mu  (F_{m})\rvert\leqslant \sum_{m}\sum_{n}\lvert \mu(E_{n} \cap F_{m}) \rvert = \sum_{n}\sum_{m}\lvert \mu(E_{n} \cap F_{m}) \rvert \leq \sum_{n}\lvert \mu \rvert (E_{n}).
+> > $$
+> > On taking the supremum over all partitions $\coprod_{m}F_{m}$ on the left, we get
+> > $$
+> > \boxed{|\mu|(E)\leqslant \sum_{n}|\mu|(E_{n})}.
+> > $$
+> > ---
+> > 
 > > Assume $\lvert \mu \rvert(E_{n})< \infty$ for every $n$. Let $\epsilon> 0$.
-> > For each $n$, choose a partition $\{ F^{n}_{m} \}_{m}$ of $E_{n}$ satisfying
+> > 
+> > For each $n$, choose a partition $\{ F^{n}_{m} \}$ of $E_{n}$ satisfying
 > > $$
 > > \sum_{m}\lvert \mu (F_{m}^{n})\rvert\geq \lvert \mu \rvert (E_{n})-\frac{\epsilon}{2^{n}} .
 > > $$
@@ -323,4 +383,4 @@ P1: true
 > > $$
 > > Now take $\epsilon\to 0$.
 > > 
-> > If $\lvert \mu \rvert(E_{n_{0}})=\infty$ for some $n_{0}$ then choose a partition $\{ G_{m} \}$ of $E_{n_{0}}$ such that $\sum_{m}\lvert \mu(G_{m}) \rvert> N$. Now $\mathcal{P}_{N} = \{ E_{n} \}_{n \ne n_{0}} \cup \{G_{m}\}$ gives a countable partition of $E$ such that $\sum_{P \in \mathcal{P}_{n}}\lvert \mu(P) \rvert> N$. Taking $N\to \infty$ gives $\lvert \mu \rvert(E)=\infty$ making $\mu(E)\geq \sum_{n}\lvert \mu(E_{n}) \rvert$.
+> > If $\lvert \mu \rvert(E_{n_{0}})=\infty$ for some $n_{0}$ then choose a partition $\{ G_{m} \}$ of $E_{n_{0}}$ such that $\sum_{m}\lvert \mu(G_{m}) \rvert> N$. Now $\mathcal{P}_{N} = \{ E_{n} \}_{n \ne n_{0}} \cup \{G_{m}\}$ gives a countable partition of $E$ such that $\sum_{P \in \mathcal{P}_{n}}\lvert \mu(P) \rvert> N$. Taking $N\to \infty$ gives $\lvert \mu \rvert(E)=\infty$, so $|\mu|(E)\geq \sum_{n}\lvert \mu\rvert(E_{n})$.
