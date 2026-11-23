@@ -190,7 +190,6 @@ For example, $1_{[n, \infty)}\to 0$ a.e., but $1_{[n, \infty)}\cancel{\xrightarr
 > $$
 > Note that $\mu(B)=0$ (monotone continuity!). On $B^{c}$, $f_{n}\to f$ *uniformly*: $|f_{n}(t)-f(t)|\leqslant \lVert f_{n}-f \rVert_{\infty}\to 0$ for all $t$. 
 
-
 > [!Remark]
 > Suppose $f_{n}\to f$ in $L^{p}$. Let $A^{\epsilon}_{n}=\{ x:|(f-f_{n})(x)|\geqslant \epsilon \}$. Since $\int |f_{n}-f|^{p}\geqslant \epsilon^{p}\mu(A^{\epsilon}_{n})$, we have $\mu(A_{n}^{\epsilon})\to 0$ for all $\epsilon> 0$. Thus, 
 > $$
