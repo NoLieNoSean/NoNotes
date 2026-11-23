@@ -137,12 +137,36 @@ tags:
 ---
 
 
-[!Definition] Convolution
+> [!Definition] Convolution
+> For given $f,g:\mathbb{R}\to \mathbb{R}$, $f \star g :\mathbb{R}\to \mathbb{R}$ is defined as
+> $$
+> (f \star g)(x)=\int_{\mathbb{R}}f(y)g(y-x)dy
+> $$
 
-[!Proposition] Minkowski for integrals
+> [!Proposition] Minkowski for integrals
+> Suppose that $(X,  \mu)$ and $(Y,  \nu)$ are $\sigma$-finite measure spaces. Let $f: X \times Y \to \mathbb{C}$ be measurable.
+> 1. If  $f\geq 0$ and $1\leq p< \infty$, then
+>    $$ \left[ \int_{X}  \left(\int_{Y} f(x,y)  d\nu(y)  \right)^{p} d\mu(x) \right]^{1/p}\leq \int_{Y}\left( \int_{X} f(x,y)  ^{p} d \mu(x)\right)^{1/p} d \nu(y). $$
+> 2. If $1\leq p\leq \infty$, $f( \cdot, y)\in L^{p}(X, \mu)$, $y \mapsto \lVert f(\cdot, y) \rVert \in L^{1}(Y, \nu)$ then $f(x, \cdot)\in L^{1}(Y, \nu)$ for a.e. $x \in X$, the function $x \mapsto \int_{Y} F(x,y) d\nu(y)$ is in $L^{p}(\mu)$, and $$ \left\lVert  \int_{Y}f(\cdot,y)d \nu(y)  \right\rVert_{p}\leq \int_{Y}\lVert f(\cdot,y) \rVert _{p}d\nu(y) $$
+> > [!Proof]-
+> > If $p=1$ then 1. is an equality by Tonelli. Let $p> 1$ and let $q$ be such that $\frac{1}{p}+\frac{1}{q}=1$. Then for $g \in L^{q}(X, \mu)$,
+> > $$
+> > \begin{align}
+> > \int_{X}\lvert g(x) \rvert \left( \int_{Y}f(x,y)d \nu(y) \right)d \mu(x) &\stackrel{\mathrm{\text{Tonelli}}}{=} \int_{Y}\left( \int_{X}\lvert g(x) \rvert f(x,y)d \mu(x) \right)d\nu(y)\\
+> >  &\stackrel{\mathrm{\text{Hölder}}}{\leq}\lVert g \rVert _{q}\int_{Y}\left( \int_{X}f(x,y)^{p}d\mu(x) \right)^{1/p}d \nu(y) \end{align}
+> > $$
+> > Choose $g(x):=\left( \int_{Y}f(x,y)d \nu(y) \right)^{p-1}$. 
 
-[!Proposition]
-Let $f\in L^{1}$, $g\in L^{p}$. Then $f\star g\in L^{p}$. 
+> [!Proposition]
+> Let $f\in L^{1}$, $g\in L^{p}$. Then $f\star g\in L^{p}$. 
+> > [!Proof]-
+> > $$
+> > \begin{align}
+> > \lvert f \star g \rvert &= \left[ \int\left( \int f(y)g(x-y)dy \right)^{p}dx \right]^{1/p} \\
+> > &\leq \int\left( \int \lvert f(y)g(x-y) \rvert ^{p} \right)^{1/p}dy \\
+> > &= \lVert f \rVert _{1} \cdot \lVert g \rVert _{p}
+> > \end{align}
+> > $$
 
 
 [!Remark]
