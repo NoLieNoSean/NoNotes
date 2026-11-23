@@ -32,7 +32,15 @@ We have the following immediate consequence of MCT, which allows us to swap $\su
 > $$
 > \nu(A):=\int_{A}fd\mu=\int_{X}f 1_{A}d\mu.
 > $$
-> Then $\nu$ is a measure. Countable additivity comes from [[#^d5ec73]]. 
+> Then $\nu$ is a measure. Countable additivity comes from [[#^d5ec73]]:
+> $$
+> \begin{align}
+> \nu \left( \coprod_{n} A_{n} \right) =\int_{X}\sum_{n} f 1_{A_{n}}\,d\mu=\sum_{n} \int_{X}f 1_{A_{n}}\,d\mu=\sum_{n} \nu(A_{n})
+> \end{align}
+> $$
+> 
+
+^1b4222
 
 
 ---
@@ -94,6 +102,8 @@ Sandwich. Use Fatou's.
 > [!Corollary]
 > Let $f_{n}, f, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable functions such that $|f_{n}|\leqslant g$ pointwise, $f_{n}\to f$ a.e., and $\int g< \infty$. Then, the conclusions of [[#^1795b3]] follow.
 
+^1cb1b8
+
 > [!Corollary]
 > Let $\mu$ be a finite measure on $(\Omega, \mathcal{F})$. Let $f_{n}, f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable functions such that $|f_{n}|\leqslant k$ pointwise for some $k> 0$, and $f_{n}\to f$ a.e. Then, the conclusions of [[#^1795b3]] follow. 
 
@@ -143,12 +153,6 @@ Sandwich. Use Fatou's.
 > 1. $1_{[n, \infty)}\to 0$ pointwise, but $\int 1_{[n, \infty]}=\infty$ for all $n$, and does not converge to $\int 0=0$. 
 > 2. $n 1_{(0, 1/n)}\to 0$ pointwise, but $\int n 1_{(0, 1/n)}=1$ for all $n$, and does not converge to $0$.  
 
-
-> [!Proposition]
-> 1. Let $f$ be a nonnegative integrable function. Then, $\mu(\{ t:f(t)=\infty \})=0$. 
-> 2. Let $f:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable and satisfy $\int_{A}f=0$ for all $A\in \mathcal{F}$. Then, $f=0$ a.e..
-
-^33c35d
 
 > [!Definition] Convergence in measure
 > Let $f_{n}, f:(\Omega, \mathcal{f}, \mu)\to \mathbb{R}$ be measurable. We say that **$\{ f_{n} \}$ converges to $f$ in measure**, and write $f_{n}\xrightarrow{\mu}f$, if for all $\epsilon> 0$, 

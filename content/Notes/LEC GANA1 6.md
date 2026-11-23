@@ -139,25 +139,69 @@ Thus, we can define
 
 ^83841c
 
-> [!Proposition]
-> Let $f:(X, \mathcal{F})\to[0, \infty)$ be measurable. If $\int_{X} f=0$, then $f=0$ a.e..
-> 
-> > [!Proof]-
-> > 
-> > For each $n\in \mathbb{N}$, define
-> > $$
-> > A_{n}=\left\{  x\in X:f(x)\geqslant  \frac{1}{n}  \right\}.
-> > $$
-> > By definition of $A_{n}$, we have the pointwise inequality $f\geqslant 1_{A_{n}}/n$. Using the monotonicity of the integral, 
-> > $$
-> > 0=\int_{X}f\,d\mu\geqslant \int_{X}\frac{1}{n}1_{A_{n}}\,d\mu= \frac{1}{n}\mu(A_{n}),
-> > $$
-> > so $\mu(A_{n})=0$. Observe that
-> > $$
-> > \{ x\in X:f(x)> 0 \}=\bigcup_{n=1}^{\infty} A_{n}, 
-> > $$
-> > and that $\mu\left( \bigcup_{n=1}^{\infty}A_{n} \right)\leqslant \sum_{n=1}^{\infty}\mu(A_{n})=0$. Thus, $f=0$ a.e..
-> 
+[!Proposition]
+Let $f:(X, \mathcal{F})\to[0, \infty)$ be measurable. 
+1. If $\int_{X} f=0$, then $f=0$ a.e..
+2. If $\int_{X}f< \infty$, then $f< \infty$ a.e..
+
+Let $f:(X, \mathcal{F})\to [-\infty, \infty]$ be measurable. 
+3. If $\int_{A}f\geq 0$ for all $A\in \mathcal{F}$, then $f\geqslant 0$ a.e..
+4. If $\int_{A}f=0$ for all $A\in \mathcal{F}$, then $f=0$ a.e..
+
+[!Proof]-
+
+(1) For each $n\in \mathbb{N}$, consider the measurable sets
+$$
+A_{n}=\left\{  x\in X:f(x)\geqslant  \frac{1}{n}  \right\}.
+$$
+By definition of $A_{n}$, we have the pointwise inequality $f\geqslant 1_{A_{n}}/n$. Using the monotonicity of the integral, 
+$$
+0=\int_{X}f\,d\mu\geqslant \int_{X}\frac{1}{n}1_{A_{n}}\,d\mu= \frac{1}{n}\mu(A_{n}),
+$$
+so $\mu(A_{n})=0$. Observe that
+$$
+\{ x\in X:f(x)> 0 \}=\bigcup_{n=1}^{\infty} A_{n}, 
+$$
+and that $\mu\left( \bigcup_{n=1}^{\infty}A_{n} \right)\leqslant \sum_{n=1}^{\infty}\mu(A_{n})=0$. Thus, $f=0$ a.e..
+
+---
+
+(2) Consider the measurable set
+$$
+A=\{x\in X:f(x)=\infty\}.
+$$
+Suppose, for a contradiction, that $\mu(A)>0$.
+
+Since $f\geq 0$, we have, for every $n\in\mathbb N$, $f\geq n\mathbf 1_A$.
+
+By monotonicity of the integral,
+$$
+\int_X f\,d\mu \geq n\int_X\mathbf 1_A\,d\mu =n\mu(A).
+$$
+Since $\mu(A)>0$, letting $n\to\infty$ gives
+$$
+\int_X f\,d\mu=\infty,
+$$
+contradicting the hypothesis.
+
+---
+
+(3) Consider the measurable sets
+$$
+A_n=\left\{x\in X:f(x)\leq-\frac1n\right\}.
+$$
+Suppose that $\mu(A_n)>0$ for some $n$. Then, since $f\leq-1/n$ on $A_n$, monotonicity gives
+$$
+\int_{A_n}f\,d\mu \leq -\frac1n\mu(A_n)<0,
+$$
+contradicting the hypothesis. Thus $\mu(A_n)=0$ for every $n$.
+
+But,
+$$
+\{x\in X:f(x)<0\} =\bigcup_{n=1}^{\infty}A_n.
+$$
+By countable subadditivity, $\mu(\{f<0\})=0$. Hence $f\geq0$ a.e..
+
 
 ^5b9fe5
 

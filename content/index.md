@@ -25,7 +25,7 @@ Additional contributions: Karan, Aniruda, Sayeed.
               ████    ██                        ██████            ██
                 ██████                  ██████  ██    ██████████████
                   ████                ██      ████                  
-                  ██                 ██          ██                                                  
+                  ██                 ██          ██                  
 ```
 
 ```
