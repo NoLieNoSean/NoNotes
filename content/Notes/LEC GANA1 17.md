@@ -8,112 +8,258 @@ tags:
 desc: build up to Lp dual = lq
 P1: true
 ---
-> [!Proposition]
-> Let $X$ be a compact metric space, $\mu$ finite measure on $X$. Then, $C(X) \hookrightarrow L^{p}(X)$ is dense for all $1\leqslant p< \infty$. 
+> [!Lemma]
+> Let $(X, \mathcal{F}, \mu)$ be a measure space. Simple functions are dense in $L^{p}(X, \mathcal{F}, \mu)$ for $1\leqslant p\leqslant \infty$. 
+> 
 > > [!Proof]-
-> > We would show that any simple functions from $(X, \mu )$ can be uniformly approximated by continuous functions which would imply the result for every $L_{p}$, for which it is enough to show that $1_{E}$ can be uniformly approximated for measurable $E \subseteq X$.
-> > By [[LEC GANA1 4#^b68379|Regularity]], $\exists$ open $U$  and compact $K$ such that $K \subseteq E \subseteq U$ such that $\mu(U \setminus E), \mu(E \setminus K) < \epsilon$.
-> > Now, by Urysohn's lemma, $\exists f \in C(X)$ such that $f|_{K}=1, f|_{U^{c}}=0$ and $f(x) \in [0,1] \, \forall x \in X$.
-> > Finally,
+> > 
+> > Suppose $p< \infty$. 
+> > 
+> > First, suppose $f\in L^{p}\geqslant 0$, a fix a representative of $f$ in $\mathcal{L}^{p}$. Since $f$ is measurable, we obtained a sequence of simple functions $s_{n}$ such that $s_{n}\uparrow f$ by [[LEC GANA1 5#^87b42b]]. Now consider $|f-s_{n}|^{p}$. We have
 > > $$
-> > \int_{X}\lvert 1_{E}-f \rvert d \mu \leq \int_{U \setminus E} \lvert f \rvert d \mu + \int_{E \setminus K} \lvert 1-f \rvert d \mu < 2 \epsilon .
+> > \begin{align}
+> > 0\leqslant |f-s_{n}|^{p}\leqslant |f|^{p}, \quad \quad |f-s_{n}|^{p}\to 0 \text{ a.e.}
+> > \end{align}
 > > $$
+> > By the [[LEC GANA1 7#^1cb1b8|dominated convergence theorem]], 
+> > $$
+> > \lim_{ n \to \infty } \int_{X}|f-s_{n}|^{p}\,d\mu=0.
+> > $$
+> > For real valued $f$, write $f=f^{+}-f^{-}$. Both $f^{+}$ and $f^{-}$ belong to $L^{p}$, so by the preceding argument there are sequences of simple functions $s_{n}^{+}\to f^{+}$ and $s_{n}^{-}\to f^{-}$ in $L^{p}$. 
+> > 
+> > Consequently,
+> > $$
+> > s_n=s_n^+-s_n^-\to f
+> > $$
+> > in $L^p$, since
+> > $$
+> > \|f-s_n\|_p \leq \|f^+-s_n^+\|_p+\|f^--s_n^-\|_p.
+> > $$
+> > For complex-valued $f$, apply the same argument to its real and imaginary parts.
+> > 
+> > Hence simple functions are dense in $L^p(X)$.
+> > 
+> > ---
+> > 
+> > Suppose $p=\infty$. 
+> > 
+> > Given $f\in L^\infty$ and $\varepsilon>0$, modify $f$ on a null set so that it is bounded everywhere. Partition its bounded range into finitely many sets of diameter at most $\varepsilon$, and replace its values on each preimage by a representative value. This gives a simple function $s$ satisfying
+> > $$
+> > \|f-s\|_\infty\leq\varepsilon.
+> > $$
+> > 
+> 
+
+^74bbd8
+
+> [!Proposition]
+> Let $X$ be a compact metric space, $\mu$ finite measure on $\mathcal{B}_{X}$. Then, $C(X) \hookrightarrow L^{p}(X, \mathcal{B}_{X}, \mu)$ is dense for all $1\leqslant p< \infty$. 
+> 
+> > [!Proof]-
+> > 
+> > In light of [[#^74bbd8]], it suffices to show that simple functions on $(X, \mu)$ can be approximated arbitrarily well in the $p$-norm by continuous functions. 
+> > 
+> > Fix $E\in \mathcal{B}_{X}$, and let $\epsilon> 0$. By [[LEC GANA1 4#^b68379|regularity]], there exists open $U$ and closed (hence compact) $K$ such that $K\subseteq E\subseteq U$ and $\mu(U\setminus E)<\epsilon$, $\mu(E\setminus K)<\epsilon$. By [[Urysohn Lemma and applications#^d977b6|Urysohn's lemma]], there exists $f\in C(X)$ with $0\leqslant f\leqslant 1$, $f|_{K}=1$, and $f|_{U^{c}}=0$. 
+> > 
+> > $$
+> > \int_{X}\lvert 1_{E}-f \rvert^{p}\, d \mu \leq \int_{U \setminus E} \lvert f \rvert^{p}\, d \mu + \int_{E \setminus K} \lvert 1-f \rvert^{p}\, d \mu < 2 \epsilon .
+> > $$
+> > 
+> 
+
 
 ---
 
 > [!Proposition]
-> $C_{0}=\{ \{ x_{n} \}_{n=1}^{\infty}:x_{n}\in \mathbb{C}, x_{n}\to 0 \}\subseteq \ell^{\infty}$. 
-> $(C_{0})^{*} \cong \ell_{1}$.
+> Consider $C_{0}=\{ \{ x_{n} \}_{n=1}^{\infty}:x_{n}\in \mathbb{C}, x_{n}\to 0 \}\subseteq \ell^{\infty}$.
+> 1. For any $\{ y_{n} \}\in \ell^{1}$, define $\phi_{\{ y_{n} \}}(\{ x_{n} \})=\sum_{n=1}^{\infty}x_{n}y_{n}$. Then, $\phi_{\{ y_{n} \}}\in C_{0}^{*}$, and $\lVert \phi_{\{ y_{n} \}} \rVert=\lVert \{ y_{n} \} \rVert_{\ell^{1}}$. 
+> 2. Given any $\phi\in C_{0}^{*}$, there exists $\{ y_{n} \}\in \ell^{1}$ such that $\phi=\phi_{\{ y_{n} \}}$. 
+> 
+> In other words, $(C_{0})^{*} \cong \ell_{1}$.
+> 
 > > [!Proof]-
-> > Define $\phi: \ell_{1}\to (C_{0})^{*}$ by $$ \phi:=\{ y_{n} \} \mapsto \left( \{ x_{n} \} \mapsto \sum x_{n}y_{n} \right).$$
-> > Notice that $\lvert \phi(\{ y_{n} \})(\{ x_{n} \}) \rvert = \left\lvert  \sum x_{n}y_{n}  \right\rvert\leq \lVert x_{n} \rVert_{\infty} \cdot \left\lvert  \sum y_{n}  \right\rvert\leq  \lVert x_{n} \rVert_{\infty}\cdot \lVert y_{n} \rVert_{1}$.
-> > Therefore, $\lVert \phi(\{ y_{n} \}) \rVert \leq \lVert y_{n} \rVert_{1}$.
-> > Let $\overline{y}^{(k)} \in  \ell_{1}$ given by
-> > $$
-> > \overline{y}^{(k)} := \left( \frac{\lvert y_{1} \rvert }{ y_{1}  }, \frac{{\lvert y_{2} \rvert }}{y_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }y_{i}=0}}{\cdots} , \frac{{\lvert y_{k} \rvert }}{y_{k}} , 0, 0, \cdots \right).
-> > $$
-> > This forces $\phi(\{ y_{n} \})(\overline{y}^{(k)})=\sum_{i=1}^{k}\lvert y_{k} \rvert \to \lVert y_{n} \rVert_{1}$, and since $\lVert \overline{y}^{(k)} \rVert_{\infty}\leq 1, \,\lVert \phi(\{ y_{n} \}) \rVert=\lVert \{ y_{n} \} \rVert_{1}$.
-> > Therefore $\phi$ is isometry hence injection.
 > > 
-> > Conversely, suppose $\alpha \in (C_{0})^{*}$,  define $\alpha_{i}:= \alpha(e_{i})$. 
-> > Again define $\tilde{\alpha}^{(k)} \in C_{0}$ be defined as
+> > For $\{ x_{n} \}\in C_{0}$,
 > > $$
-> > \tilde{\alpha}^{(k)}= \left( \frac{\lvert \alpha _{1} \rvert }{ \alpha _{1}  }, \frac{{\lvert \alpha _{2} \rvert }}{\alpha_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }\alpha _{i}=0}}{\cdots} , \frac{{\lvert \alpha _{k} \rvert }}{\alpha_{k}} , 0, 0, \cdots \right).
+> > \lvert \phi_{\{ y_{n} \}}(\{ x_{n} \}) \rvert = \left\lvert  \sum x_{n}y_{n}  \right\rvert\leq \lVert \{ x_{n} \} \rVert_{\infty}    \sum |y_{n} | \leq  \lVert \{ x_{n} \} \rVert_{\infty} \lVert \{ y_{n} \} \rVert_{1}.
 > > $$
-> > Now notice that $\lVert \tilde{\alpha}^{(k)} \rVert_{\infty }\leq 1 \implies \alpha(\tilde{\alpha}^{(k)})\leq \lVert \alpha \rVert\implies \sum_{i=1}^{k}\lvert \alpha_{i} \rvert\leq \lVert \alpha \rVert\implies \lVert \{ \alpha_{n} \} \rVert_{1} \leq \lVert \alpha \rVert\implies \{ \alpha_{n} \}\in \ell_{1}$.
-> > Now let $\{ x_{n} \}\in C_{0}$ and let $\tilde{x}^{(k)} \in C_{0}$ be given by
+> > Therefore, $\lVert \phi_{\{ y_{ n} \}} \rVert \leq \lVert \{ y_{n} \} \rVert_{1}$.
+> > 
+> > Let $\tilde{y}^{(k)}=\{ \tilde{y}^{(k)}_{n} \} \in  C_{0}$ given by
 > > $$
-> > \tilde{x}^{(k)}:= \left( x_{1}, x_{2}, \cdots ,x_{k}, 0, 0, \cdots \right).
+> > \left( \frac{\lvert y_{1} \rvert }{ y_{1}  }, \frac{{\lvert y_{2} \rvert }}{y_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }y_{i}=0}}{\cdots} , \frac{{\lvert y_{k} \rvert }}{y_{k}} , 0, 0, \cdots \right).
 > > $$
-> > Notice that $d_{\ell_{\infty }}(\{ x_{n} \} ,  \tilde{x}^{(k)}_{n} ) = \sup_{j> k}\lvert x_{j} \rvert\to 0$.
-> > Therefore, $$\alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.$$
-> > Hence, $\phi(\{ \alpha_{n} \})=\alpha$. Therefore $\phi$ gives an isomorphism.
+> > $\lVert \tilde{y}^{(k)}  \rVert_{\infty}\leq 1$ and $\phi_{\{ y_{n} \}}(\tilde{y}^{(k)})=\sum_{i=1}^{k}\lvert y_{k} \rvert \to \lVert \{ y_{n} \} \rVert_{1}$. Thus, $\lVert \phi_{\{ y_{n} \}} \rVert=\lVert \{ y_{n} \} \rVert_{1}$, and $\phi$ is an isometry. 
+> > 
+> > ---
+> > 
+> > Conversely, suppose $\alpha \in (C_{0})^{*}$, and define $\alpha_{i}= \alpha(e_{i})$. 
+> > 
+> > Define $\tilde{\alpha}^{(k)}=\{ \tilde{\alpha}^{(k)}_{n} \} \in C_{0}$ by
+> > $$
+> > \left( \frac{\lvert \alpha _{1} \rvert }{ \alpha _{1}  }, \frac{{\lvert \alpha _{2} \rvert }}{\alpha_{2}} , \underset{\substack{\uparrow\\\text{set } i \text{-th entry to }0 \text{ if }\alpha _{i}=0}}{\cdots} , \frac{{\lvert \alpha _{k} \rvert }}{\alpha_{k}} , 0, 0, \cdots \right).
+> > $$
+> > $\lVert \tilde{\alpha}^{(k)} \rVert_{\infty}\leqslant 1$. So, $|\alpha(\tilde{\alpha}^{(k)})|\leqslant \lVert \alpha \rVert$ for all $k$. Since $\alpha(\tilde{\alpha}^{(k)})=\sum_{i=1}^{k}|\alpha_{i}|$, we have $\sum_{i=1}^{\infty}|\alpha_{i}|< \infty$, and $\{ \alpha_{n} \}\in \ell^{1}$. 
+> > 
+> > Note that we haven't yet used the fact that we're working with the subspace $C_{0}\subseteq \ell^{\infty}$ and not $\ell^{\infty}$ itself. We do now. 
+> > 
+> > Let $\{ x_{n} \}\in C_{0}$ and let $\tilde{x}^{(k)} \in C_{0}$ be given by
+> > $$
+> > \left( x_{1}, x_{2}, \cdots ,x_{k}, 0, 0, \cdots \right).
+> > $$
+> > Notice that $d_{\ell_{\infty }}(\{ x_{n} \} ,  \tilde{x}^{(k)} ) = \sup_{j> k}\lvert x_{j} \rvert\to 0$, so $\tilde{x}^{(k)}\to \{ x_{n} \}$ in $\ell^{\infty}$. 
+> > 
+> > We have
+> > $$
+> > \alpha(\{ x_{n} \})= \lim_{ k \to \infty }\alpha( \tilde{x}_{n}^{(k)} )= \lim_{ k \to \infty }\sum_{i=1}^{k}x_{i}\alpha(e_{i})= \sum x_{i}\alpha_{i}.
+> > $$
+> > Therefore, $\phi(\{ \alpha_{n} \})=\alpha$, and $\phi$ is an isomorphism of Banach spaces. 
+> 
 
 > [!Exercise]
-> Show that $\ell^{p\star}=\ell^{q}$ for $\frac{1}{p}+\frac{1}{q}=1$.
+> Show that $\ell^{p*}=\ell^{q}$ for $1< p< \infty$ and $\frac{1}{p}+\frac{1}{q}=1$.
 
 ---
-
 # Radon-Nikodym Theorem
 
 > [!Definition]
-> Let $\mu$, $\nu$ be two $\sigma$-finite measures. We say $\nu \ll  \mu$ if $\nu$ (i.e. absolutely continuous wrt $\mu$) if $\mu(E) = 0 \implies \nu(E)= 0\; \forall E \in  \mathcal{F}$.
+> Let $\mu$, $\nu$ be two $\sigma$-finite measures on $(X, \mathcal{F})$. We say that **$\nu$ is absolutely continuous wrt $\mu$** (and write $\nu\ll \mu$) if for all $E\in \mathcal{F}$, $\mu(E)=0\implies \nu(E)=0$.  
 
 > [!Proposition]
-> Let $\mu$ be a $\sigma$-finite measure. Let $f$ be a positive measurable function taking finite values a.e.. Then $\nu(E):=\int_{E}fd\mu$ is a $\sigma$-finite measure and $\nu\ll \mu$. 
+> Let $\mu$ be a $\sigma$-finite measure on $(X, \mathcal{F})$. Let $f$ be a positive measurable function taking finite values a.e.. Then $\nu(E):=\int_{E}fd\mu$ is a $\sigma$-finite measure and $\nu\ll \mu$. 
+> 
 > > [!Proof]-
-> > $\nu$ is a measure by [[LEC GANA1 6#^de9d0c|MCT]].
-> > Let $X_{i} \uparrow X$  be such that $\mu(X_{i})< \infty$.
-> > Let $Y_{n,m}:= \{ x \in X_{n}: \lvert f(x) \rvert\leq m \}$.
-> > Then set of points where $f$ takes finite values is $\bigcup Y_{n,m}\implies \mu\left( X \setminus \bigcup Y_{n,m} \right)=0\implies \nu\left( X \setminus \bigcup Y_{n,m} \right)=0$.
-> > Morever, 
+> > 
+> > That $\nu$ is a measure follows from the monotone convergence theorem (see [[LEC GANA1 7#^1b4222]]). It is also clear that $\nu\ll \mu$. 
+> > 
+> > Since $\mu$ is $\sigma$-finite, there exist $X_{i} \uparrow X$  such that $\mu(X_{i})< \infty$. Let
+> > $$
+> > Y_{n,m}:= \{ x \in X_{n}: \lvert f(x) \rvert\leq m \}.
+> > $$
+> > Then set of points where $f$ takes finite values is $\bigcup Y_{n, m}$. Since $f$ takes finite values a.e., $\mu\left( X\setminus \bigcup Y_{n, m} \right)=0$. By the definition of $\nu$, $\nu\left( X\setminus \bigcup Y_{n, m} \right)=0$. 
+> > 
+> > Moreover, 
 > > $$
 > > \nu(Y_{n,m})= \int_{Y_{n,m}}f(x)d\mu\leq m \mu(X_{n})< \infty.
 > > $$
-> > Hence,
+> > It follows that $\nu$ is $\sigma$-finite:
 > > $$
-> > X = \left( \bigcup Y_{n,m} \right) \cup \left( X \setminus \bigcup Y_{n,m} \right)
+> > X = \left( \bigcup Y_{n,m} \right) \cup \left( X \setminus \bigcup Y_{n,m} \right).
 > > $$
-> > all of which have finite $\nu$ measure.
+> > 
+> 
 
 > [!Theorem] Radon–Nikodym theorem
+> 
 > Let $\mu, \nu$ be $\sigma$-finite measures on $(X, \mathcal{F})$ such that $\nu\ll \mu$. 
-> Then $\exists$ $\mathcal{F}$-measurable $h:X\to [0, \infty]$ such that
+> 
+> Then, there exists measurable $h:X\to [0, \infty]$, uniquely determined $\mu$-almost everywhere, such that
 > $$
-> \nu(E) = \int_{E}h d\mu \; \forall E \in \mathcal{F}
+> \begin{align}
+> \nu(E) = \int_{E}h \,d\mu  &  &  \forall E \in \mathcal{F}.
+> \end{align}
 > $$
-> and value $h$ is uniquely determined $\mu$-almost everywhere.
-> 	Furthermore,
+> Moreover,
 > $$
-> \int_{X}g d \nu = \int_{X} hg d \mu 
+> \int_{X}g \,d \nu = \int_{X} hg \,d \mu 
 > $$
-> for every nonnegative $\mathcal{F}$ measurable $g$.
+> for every nonnegative measurable $g$. 
+> 
 > > [!Proof]-
-> > Assume $\mu, \nu$ are finite measures.
-> > Let $\rho= \mu + \nu$, note that $\mu \gg \rho \gg \mu, \nu$.
-> > Consider the map $\phi:L^{2}(X, \mathcal{F}, \rho)\to \mathbb{R}$ defined by 
+> > 
+> > **Assume $\mu, \nu$ are finite measures.**
+> > 
+> > Let $\rho= \mu + \nu$. Note that $\rho$ and $\mu$ are mutually absolutely continuous, i.e., $\mu\ll \rho$ and $\rho\ll \mu$. 
+> > 
+> > Consider the linear map $\phi:L^{2}(X, \mathcal{F}, \rho;\mathbb{R})\to \mathbb{R}$ defined by 
 > > $$
 > > \phi(f):= \int_{X}f d \nu.
 > > $$
-> > Now,
+> > The integral on the RHS is well defined because $\nu$ is a finite measure.
+> > 
+> > Using [[LEC GANA1 16#^cd6771|Hölder's inequality]],
 > > $$
-> > \lvert \phi(f) \rvert  \leq  \int_{X}\lvert f \rvert d \nu = \int_{X} \lvert f \rvert  1_{X} d \nu \overset{\text{Hölder's}}{\displaystyle\leq } \lVert f \rVert _{L^{2}(\nu)} \cdot \lVert 1_{X} \rVert _{L^{2}(\nu )} = \lVert f \rVert _{L^{2}(\nu)} \cdot \sqrt{\nu(X)}\leq \lVert f \rVert _{L^{2}(\rho)} \cdot \sqrt{\nu(X)}.
+> > \begin{align}
+> > \lvert \phi(f) \rvert  \leq  \int_{X}\lvert f \rvert d \nu = \int_{X} \lvert f \rvert  1_{X} d \nu    & \overset{\text{Hölder}}{\displaystyle \leq } \lVert f \rVert _{L^{2}(\nu)}  \lVert 1_{X} \rVert _{L^{2}(\nu )} \\
+> >  & \,\,\,\,\,\,= \lVert f \rVert _{L^{2}(\nu)}  \sqrt{\nu(X)}\leq \lVert f \rVert _{L^{2}(\rho)}  \sqrt{\nu(X)}.
+> > \end{align}
 > > $$
 > > Hence, $\phi$ is a bounded operator.
-> > By [[LEC GANA1 14#^f0b16e|Riesz's lemma]], $\exists p \in L^{2}(X, \mathcal{F}, \rho )$ such that 
+> > 
+> > By [[LEC GANA1 14#^f0b16e|Riesz's lemma]], there exists $p \in L^{2}(\rho)$ such that 
 > > $$
-> > \int_{X}f d \nu= \int_{X}fpd \rho \quad \forall f \in L^{2}(\rho).
+> > \boxed{\int_{X}f \,d \nu= \int_{X}fp\,d \rho \quad \forall f \in L^{2}(\rho).}
 > > $$
-> > Next we would show that $p \in [0, 1)$ $\rho-$almost everywhere.
-> > For $E \in \mathcal{F}$, $\int_{E}p d \rho = \nu(E) \geq 0 \implies p \geq 0 \;\rho$-almost everywhere.
-> > Also, $\int_{E}p d \rho = \nu(E) = \rho(E) - \mu(E) \implies \mu(E) = \int_{E}(1-p)d \rho$ and since $\mu \gg \rho$, $1> p \; \rho-$almost everywhere.
+> > We will show that $p \in [0, 1)$ $\rho$-almost everywhere. For all $E\in \mathcal{F}$, $\int_{E}p\,d\rho=\nu(E)\geqslant 0$, so $p\geqslant 0$ $\rho$-a.e. by [[LEC GANA1 6#^5b9fe5]].3. 
 > > 
-> > Define $h = \frac{p}{1-p}$, note that $h$ is well defined and non-negative $\rho$-almost everywhere. Notice that this $h$ satisfies the conditions stated in the hypothesis.
+> > Also, 
+> > $$
+> > \begin{align}
+> >  & \int_{E}p \,d \rho = \nu(E) = \rho(E) - \mu(E)  \\
+> > \implies &  \boxed{\mu(E) = \int_{E}(1-p)\,d \rho.}
+> > \end{align}
+> > $$
+> > Since $\mu(E)\geqslant 0$ for every $E\in \mathcal{F}$, $1-p\geqslant 0$ $\rho$-a.e. by [[LEC GANA1 6#^5b9fe5]].3. If $1-p=0$ on a set $E$ with $\rho(E)> 0$, then $\mu(E)=0$, contradicting $\mu\gg \rho$. Thus, $1-p> 0$ $\rho$-a.e..
 > > 
-> > Now we generalize the result to the $\sigma$-finite case. Let $X = \bigsqcup A_{n} = \bigsqcup B_{n}$ be such that $\mu(A_{n}), \nu(B_{n})< \infty$.
-> > Let $X_{n}$ be an enumeration of $A_{i} \cap B_{j}$.  For each $X_{n}$ we get corresponding $h_{n}$ by the previous steps. Now let $h = \sum 1_{X_{n}}h_{n}$. By MCT, $\int g d \nu = \int hg d \mu$ for every measurable $g$.
+> > ---
 > > 
-> > Suppose $h$ and $h'$ both satisfy $\nu(E)= \int_{E}h d \mu = \int_{E} h' d \mu$ for every $E \in \mathcal{F}$ then $\int_{E}(h-h')d \mu = 0$. This gives the uniqueness.
+> > Observe that for every nonnegative measurable function $g$, 
+> > $$
+> > \boxed{\int_{X}g\,d\mu=\int_{X}g(1-p)\,d\rho.}
+> > $$
+> > Indeed, this holds for indicator functions by the identity $\mu(E)=\int_{E}(1-p)\,d\rho$, hence for nonnegative simple functions by linearity. For arbitrary nonnegative $g$, there exists a sequence of simple functions $\{ s_{n} \}$ such that $0\leqslant s_{n}\uparrow g$. Since $1-p\geqslant 0$ $\rho$-a.e., we have
+> > $$
+> > \begin{align}
+> > s_{n}\cdot(1-p)\uparrow g\cdot(1-p) &  & \rho\text{-a.e.}
+> > \end{align}
+> > $$
+> > Applying the [[LEC GANA1 6#^de9d0c|monotone convergence theorem]] twice gives
+> > $$
+> > \begin{align}
+> > \int_{X}g\,d\mu & =\sup _{n}\int_{X}s_{n}\,d\mu \\
+> >  & =\sup _{n}\int_{X}s_{n}(1-p)\,d\rho \\
+> >  &  =\int_{X}g(1-p)\,d\rho.
+> > \end{align}
+> > $$
+> > 
+> > ---
+> > 
+> > Define
+> > $$
+> > h := \frac{p}{1-p}.
+> > $$
+> > $h$ is well defined, [[LEC GANA1 5#^b33d70|measurable]], and non-negative $\rho$-almost everywhere. 
+> > 
+> > For $E\in \mathcal{F}$ and nonnegative measurable $g$,
+> > $$
+> > \int_{X}g\,d\nu=\int_{X}gp\,d\rho=\int_{X}gh(1-p)\,d\rho=\int_{X}gh\,d\mu.
+> > $$
+> > On plugging $g=1_{E}$, 
+> > 
+> > $$
+> > \begin{align}
+> > \nu(E)=\int_{X}1_{E}\,d\nu =\int_{X}1_{E}h\,d\mu=\int_{E}h\,d\mu.
+> > \end{align}
+> > $$
+> > 
+> > ---
+> > 
+> > **Now suppose $\mu, \nu$ are $\sigma$-finite.** 
+> > 
+> > Let $X = \coprod A_{n} = \coprod B_{n}$, $\mu(A_{n}), \nu(B_{n})< \infty$.
+> > 
+> > Let $X_{n}$ be an enumeration of $A_{i} \cap B_{j}$. For each $X_{n}$ we get corresponding $h_{n}:X_{n}\to[0, \infty]$ by the previous steps. Let $h = \sum 1_{X_{n}}h_{n}$. By the [[LEC GANA1 6#^de9d0c|monotone convergence theorem]], for nonnegative measurable $g$, 
+> > $$
+> > \begin{align}
+> > \int_{X}g\,d\nu & =\sup _{n}\int_{X}1_{X_{n}}g\,d\nu \\
+> >  & =\sup _{n}\int_{X}1_{X_{n}}h_{n}g\,d\mu \\
+> >  & =\int_{X}hg\,d\mu.
+> > \end{align}
+> > $$
+> > 
+> > Suppose $h$ and $h'$ both satisfy $\nu(E)= \int_{E}h d \mu = \int_{E} h' d \mu$ for all $E \in \mathcal{F}$. Then $\int_{E}(h-h')d \mu = 0$ for all $E\in \mathcal{F}$, so $h$ is $\mu$-a.e. unique by [[LEC GANA1 6#^5b9fe5]].4.
+> 
+
 
 > [!Remarks]
 > > [!Definition]

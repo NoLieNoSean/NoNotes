@@ -24,6 +24,8 @@ The following theorem expresses the most important property of normal spaces. In
 > 
 > %%
 
+^d977b6
+
 > [!Definition]
 > If $A$ and $B$ are two subsets of the topological space $X$, and if there is a continuous function $f:X\to[0, 1]$ such that $f(A)=\{ 0 \}$ and $f(B)=\{ 1 \}$, we say that $A$ and $B$ can be **separated by a continuous function**. 
 

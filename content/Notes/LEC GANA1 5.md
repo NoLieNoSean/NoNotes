@@ -57,6 +57,8 @@ If $\mathcal{G}=\sigma(S)$, then $\phi$ is measurable iff $\phi ^{-1}(A)\in \mat
 > > Let $g:\mathbb R\to\mathbb R$ be defined by $g(t)=1/t$ if $t\ne0$ and $g(0)=0$. Then $f=g\circ\phi$. It suffices to show that $g$ is measurable. Since $g$ is continuous on $\mathbb R\setminus\{0\}$ and $\{0\}$ is Borel, $g^{-1}((-\infty,a])$ is Borel for every $a\in\mathbb R$. Hence $g$ is measurable, and therefore $f=g\circ\phi$ is measurable.
 > > 
 
+^b33d70
+
 
 
 > [!Remark]
@@ -164,3 +166,6 @@ $$
 > > $$
 > > 
 > > so $f_n\to f$ uniformly.
+
+^87b42b
+

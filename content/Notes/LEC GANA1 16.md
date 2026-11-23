@@ -344,7 +344,7 @@ These are not inner product spaces, so we have to take a different route to esta
 > >  & \leqslant  1.
 > > \end{align}
 > > $$
-> > By [[LEC GANA1 7#^33c35d]].1, $\sum_{k=1}^{\infty}|f_{n_{k+1}}-f_{n_{k}}|< \infty$ a.e.. Hence $\{ f_{n_{k}} \}$ converges a.e. to some measurable function $f$, which is measurable by [[LEC GANA1 5#^72ce9f]].
+> > By [[LEC GANA1 6#^5b9fe5]].3, $\sum_{k=1}^{\infty}|f_{n_{k+1}}-f_{n_{k}}|< \infty$ a.e.. Hence $\{ f_{n_{k}} \}$ converges a.e. to some measurable function $f$, which is measurable by [[LEC GANA1 5#^72ce9f]].
 > > 
 > > ---
 > > **Show that $f\in L^{p}$**
