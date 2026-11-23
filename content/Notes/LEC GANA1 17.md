@@ -283,12 +283,12 @@ P1: true
 ^1b03da
 
 > [!Corollary] 
-> For a complex measure space $(X, \mathcal{F}, \mu)$, if $\{ E_{n} \} \subseteq \mathcal{F}$ is a disjoint collection then $\sum \lvert \mu(E_{n}) \rvert< \infty$.
+> Let $\mu:\mathcal{F}\to \mathbb{C}$ be a complex measure, then for disjoint collection $\{ E_{n} \}\subseteq \mathcal{F}$, $\sum {\lvert  \mu(E_{n}) \rvert}< \infty$.
 > > [!Proof]-
 > > $$
 > > \sum \lvert \mu(E_{n}) \rvert \leq \sum \lvert Re(\mu (E_{n})) \rvert  + \sum \lvert Im(\mu(E_{n})) \rvert 
 > > $$
-> > So, if $\sum \lvert \mu(E_{n}) \rvert$ diverges then one of the summation terms on right hand side diverges, which would contradict the previous proposition since $Re(\mu)$ and $Im(\mu)$ are signed real measures.
+> > Now since $Re(\mu)$ and $Im(\mu)$ are signed real measures, both the terms on the RHS are finite.
 
 > [!Definition] Total variation measure
 > For a complex measure space $(X, \mathcal{F}, \mu)$, total variation measure $\lvert \mu \rvert: \mathcal{F}\to [0, \infty]$ is defined as 

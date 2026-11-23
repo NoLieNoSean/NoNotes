@@ -70,7 +70,7 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > > $$
 
 ---
-# $(L^{p})^{*}=L^{q}$
+# $(L^{p})^{*}\cong L^{q}$
 
 [!Theorem]
 Let $(X, \mathcal{A}, \mu)$ be a finite measure space(Holds for $\sigma$-finite also) and $\frac{1}{p}+\frac{1}{q}=1$.
