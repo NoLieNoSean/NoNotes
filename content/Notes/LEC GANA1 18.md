@@ -61,7 +61,7 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > [!Corollary]
 > If $\mu$ is a complex measure, then $\lvert \mu \rvert\leq \lvert Re(\mu) \rvert + \lvert Im(\mu) \rvert< \infty$. So $\lvert \mu \rvert$ is a finite positive measure.
 
-> [!Corollary]
+> [!Corollary] Jordan decomposition theorem
 > If $\mu$ is a complex measure, then it can be expressed as $\mu = (\mu_{1}-\mu_{2}) + i(\mu_{3}-\mu_{4})$ where each $\mu_{i}$'s are finite positive measures.
 > > [!Proof]-
 > > Clearly it is enough to show for signed real measures, and for that case, take
