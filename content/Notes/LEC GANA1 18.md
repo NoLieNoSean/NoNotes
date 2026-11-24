@@ -6,53 +6,69 @@ tags:
   - Lecture
   - GANA1
 desc: Lp dual = Lq
+P1: true
+P2: true
 ---
 # Total variation of a complex measure is a finite measure
 
 > [!Definition]
-> Given a measure space $(X, \mathcal{F}, \mu)$, $A \in \mathcal{F}$ is called an atom if $\mu(A)> 0$ and for every measurable $B \subseteq A$, $\mu (B)=0$ or $\mu(A \setminus B)=0$.
+> Given a measure space $(X, \mathcal{F}, \mu)$, $A \in \mathcal{F}$ is called an **atom** if $\mu(A)> 0$ and for every measurable $B \subseteq A$, $\mu (B)=0$ or $\mu(A \setminus B)=0$.
 
 Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \rvert$ be the [[LEC GANA1 17#^b24e1f|total variation measure]] of $\mu$.
 
 > [!Claim]
-> Atoms in $(X, \mathcal{F}, \lvert \mu  \rvert)$ have finite total variation.
+> For an atom $F$ in $(X, \mathcal{F}, \lvert \mu  \rvert)$, $|\mu|(F)< \infty$. 
+> 
 > > [!Proof]-
-> > Let $F$ be an atom and suppose $\bigsqcup_{n}F_{n}=F$ be a measurable partition.
-> > If $\lvert \mu \rvert(F_{n_{0}})> 0$ then since $F$ is an atom $\lvert \mu  \rvert(F \setminus F_{n_{0}})= \sum_{n \ne n_{0}}\lvert \mu \rvert(F_{n})=0$.
-> > This forces that for every $n \ne n_{0},  \lvert \mu \rvert(F_{n})=0$ and hence $\mu(F_{n})=0$ for every $n \ne n_{0}$ .
-> > And since $\lvert \mu \rvert(F)> 0$, there is exactly one $n_{0}$ such that $\lvert \mu \rvert(F_{n_{0}})> 0$.
-> > Therefore,
+> > 
+> > Let $F$ be an atom. Suppose $\coprod_{n}F_{n}=F$ is a measurable partition. Suppose $|\mu|(F_{n_{0}})> 0$ for some $n_{0}$. Since $F$ is an atom, $\lvert \mu  \rvert(F \setminus F_{n_{0}})= \sum_{n \ne n_{0}}\lvert \mu \rvert(F_{n})=0$, so $|\mu|(F_{n})=0$ for every $n\ne n_{0}$. Hence, $\mu(F_{n})=0$ for every $n\ne n_{0}$. 
+> > 
+> > Since $\lvert \mu \rvert(F)> 0$, there is exactly one $n_{0}$ such that $\lvert \mu \rvert(F_{n_{0}})> 0$.
+> > 
+> > Therefore, 
 > > $$
 > > \sum \lvert \mu(F_{n}) \rvert = \lvert \mu(F_{n_{0}}) \rvert = \left\lvert  \sum \mu(F_{n})  \right\rvert = \lvert \mu(F) \rvert.
 > > $$
-> > Therefore for every partition $\{ F_{n} \}$, $\sum \lvert \mu(F_{n}) \rvert=\lvert \mu(F) \rvert$, taking supremum over every partition on the LHS gives us $\lvert \mu \rvert(F)= \lvert \mu(F) \rvert< \infty$.
+> > So for every partition $\{ F_{n} \}$, $\sum \lvert \mu(F_{n}) \rvert=\lvert \mu(F) \rvert$. Taking supremum over all partitions on the LHS gives $\lvert \mu \rvert(F)= \lvert \mu(F) \rvert< \infty$.
+> 
+
+^7d593f
 
 > [!Claim]
-> Let $\lvert \mu \rvert(F)=\infty$ and define
+> Suppose $\lvert \mu \rvert(F)=\infty$ and define
 > $$
 > \mathcal{G}_{F}=\{ E \subseteq F \text{ is measurable}: \lvert \mu \rvert ( F \setminus E ) = \infty  \}.
 > $$
 > Then $\sup_{E \in \mathcal{G}_{F}}\lvert \mu \rvert(E)=\infty$.
+> 
 > > [!Proof]-
-> > FTSOC, $\sup_{E \in \mathcal{G}_{F}}\lvert \mu \rvert(E)=\alpha < \infty$.
 > > 
-> > Notice that $\emptyset \in \mathcal{G_{F}}$. 
-> > Also notice that $\mathcal{G}_{F}$ is closed under finite unions as $A, B \in \mathcal{G}_{F}$ implies that  $\lvert \mu \rvert(A \cup B)\leq \mu(A)+\mu(B)\leq 2 \alpha$ which implies $\lvert \mu \rvert(F \setminus (A \cup B))= \infty$.
+> > FTSOC, suppose $\sup_{E \in \mathcal{G}_{F}}\lvert \mu \rvert(E)=\alpha < \infty$.
 > > 
-> > Now choose $E_{n} \in \mathcal{G}_{F}$ such that $\lvert \mu \rvert(E_{n}) \in (\alpha -\frac{1}{n}, \alpha]$. Since $\mathcal{G}_{F}$ is closed under finite unions we can replace $E_{n}$ with $\bigcup_{i\leq n}E_{i}$ and get  $\lvert \mu \rvert(E_{i}) \uparrow \alpha$, this implies $\lvert \mu \rvert\left( E \right) = \alpha$ by taking $E = \bigcup E_{i}$.
+> > Notice that $\emptyset \in \mathcal{G_{F}}$. Also notice that $\mathcal{G}_{F}$ is closed under finite unions as $A, B \in \mathcal{G}_{F}$ implies  $\lvert \mu \rvert(A \cup B)\leq |\mu|(A)+|\mu|(B)\leq 2 \alpha$ which implies $\lvert \mu \rvert(F \setminus (A \cup B))= \infty$.
 > > 
-> > With $E$ having finite $\lvert \mu \rvert$ measure, we get that $\lvert \mu \rvert(F \setminus E)=\infty$. Hence by previous claim, there exists measurable $F_{1} \bigsqcup F_{2}= F$ such that $\lvert \mu \rvert(F_{1}), \lvert \mu \rvert(F_{2})> 0$. And since $\lvert \mu \rvert(F_{1}) + \lvert \mu \rvert(F_{2})= \lvert \mu \rvert(F)=\infty$, WLOG, $\lvert \mu \rvert(F_{2})=\infty$.
+> > Now choose $E_{n} \in \mathcal{G}_{F}$ such that $\lvert \mu \rvert(E_{n}) \in (\alpha -\frac{1}{n}, \alpha]$. Since $\mathcal{G}_{F}$ is closed under finite unions we can replace $E_{n}$ with $\bigcup_{i\leq n}E_{i}$ and get  $\lvert \mu \rvert(E_{i}) \uparrow \alpha$, so that $\lvert \mu \rvert\left( E \right) = \alpha$ by taking $E = \bigcup E_{i}$.
+> > 
+> > With $E$ having finite $\lvert \mu \rvert$ measure, we get that $\lvert \mu \rvert(F \setminus E)=\infty$. By [[#^7d593f]], $F\setminus E$ is not an atom, so there exist measurable $F_{1} \bigsqcup F_{2}= F\setminus E$ such that $\lvert \mu \rvert(F_{1}), \lvert \mu \rvert(F_{2})> 0$. 
+> > 
+> > Because $\lvert \mu \rvert(F_{1}) + \lvert \mu \rvert(F_{2})= \lvert \mu \rvert(F)=\infty$, WLOG, $\lvert \mu \rvert(F_{2})=\infty$.
+> > 
 > > Taking $E'= E \bigsqcup F_{1}$, we get $\lvert \mu \rvert(F \setminus E') = \lvert \mu \rvert(F_{2})=\infty$, hence $E' \in \mathcal{G}_{F}$.
+> > 
 > > But $\lvert \mu \rvert(E')= \lvert \mu \rvert(E)+\lvert \mu \rvert(F_{1})> \alpha$,  contradicting $\alpha$ being the supremum.
+> 
+
 
 > [!Claim]
 > $\lvert \mu \rvert(F)=\infty \implies F= A \bigsqcup B$  for some measurable $A, B$ such that $\lvert \mu (A)\rvert> 1$ and $\lvert \mu  \rvert(B)= \infty$.
+> 
 > > [!Proof]-
 > > Choose measurable partition $F = F_{1} \bigsqcup F_{2}$ by previous claim such that $\lvert \mu \rvert(F_{1})> 2$ and $\lvert \mu \rvert(F_{2})=\infty$.
 > > Let $\bigsqcup_{n}A_{n}=F_{1}$ be such that $\sum \lvert \mu(A_{n}) \rvert> {2}$. WLOG, $\mu(A_{i}) \ne 0 \, \forall i$.
 > > Let $\{ P_{n} \}$ be enumeration of $A_{n}$'s with positive $\mu$ measure and let $\{ N_{n} \}$ be the enumeration of the negative ones.
 > > Then $\left\lvert  \mu\left( \bigcup P_{n} \right)  \right\rvert+\left\lvert  \mu\left( \bigcup N_{n} \right)  \right\rvert = \sum \lvert \mu(P_{n}) \rvert+\sum \lvert \mu(N_{n}) \rvert =\sum \lvert \mu(A_{n}) \rvert > 2$.
 > > Take $A$ to be one of $\bigcup P_{n}$ or $\bigcup N_{n}$ such that it satisfies $\lvert \mu(A) \rvert > 1$, then $B = F \setminus A \supseteq F_{2} \implies \lvert \mu \rvert(B)=\infty$.
+> 
 
 > [!Proposition] 
 > $\lvert \mu \rvert$ is a finite measure.
@@ -62,7 +78,9 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > [!Corollary]
 > If $\mu$ is a complex measure, then $\lvert \mu \rvert\leq \lvert Re(\mu) \rvert + \lvert Im(\mu) \rvert< \infty$. So $\lvert \mu \rvert$ is a finite positive measure.
 
-> [!Corollary] Jordan decomposition theorem
+^182c67
+
+> [!Corollary] Jordan decomposition of a complex measure
 > If $\mu$ is a complex measure, then it can be expressed as $\mu = (\mu_{1}-\mu_{2}) + i(\mu_{3}-\mu_{4})$ where each $\mu_{i}$'s are finite positive measures.
 > > [!Proof]-
 > > Clearly it is enough to show for signed real measures, and for that case, take
@@ -71,6 +89,7 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > > $$
 
 ^7682e5
+
 > [!Remark] 
 > 1. If $\mu = \mu_{1}-\mu_{2}$ is jordan decomposition of signed real measure $\mu$, then $\mu_{i}\ll  \lvert \mu \rvert$ by the definition of $\mu_{i}$.
 > 2. If $\mu = (\mu_{1}-\mu_{2}) +i (\mu_{3}-\mu_{4})$ is jordan decomposition of complex measure $\mu$, then $\mu_{i}\ll \lvert \mu \rvert$. It follows from the fact that $\lvert Re (\mu)\rvert, \lvert Im(\mu) \rvert\le \lvert \mu \rvert$.
@@ -80,58 +99,130 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 ---
 # $(L^{p})^{*}\cong L^{q}$
 
-[!Theorem]
-Let $(X, \mathcal{A}, \mu)$ be a finite measure space(Holds for $\sigma$-finite also) and $\frac{1}{p}+\frac{1}{q}=1$.
-1. If $g \in L^{q}$, then define $\phi_{g}(f)= \int fg$ for $f \in L_{p}$. Then
-   $$
-   \lVert \phi_{g} \rVert_{(L^{p})^{*}} = \lVert g \rVert _{L^{q}}.
-   $$
-2. Given any $\phi \in (L^{p})^{*}$, $\exists g \in L^{q}$ such that $\phi = \phi_{g}$.
-
-[!Proof]-
-1. By Hölder's, $\lvert \phi_{g}(f) \rvert\leq \int \lvert fg \rvert\leq \lVert f \rVert_{p}\cdot \lVert g \rVert_{q}$. So $\phi_{g}$ is a well defined linear functional with $\lVert \phi_{g} \rVert\leq \lVert g \rVert_{q}$.
-   Assume $p> 1$.
-   For $g \in L^{q}$, define $f= \frac{{\overline{g}\cdot \lvert g \rvert}^{1/(p-1)}}{\lvert g \rvert}$ then $\lvert f \rvert^{p}= (\lvert g \rvert^{1/(p-1)})^{p}=\lvert g \rvert^{q}$ so $f \in L^{p}$ with $\lVert f \rVert_{p}= \lVert g \rVert_{q}^{q/p} = \lVert g \rVert_{q}^{q-1}$.
-   This gives $\lvert \phi_{g}(f) \rvert= \left\lvert  \int \frac{{\overline{g} \cdot \lvert g \rvert^{1/(p-1)}}}{\lvert g \rvert}.g   \right\rvert  = \left\lvert  \int \lvert g \rvert^{1/(p-1)}\cdot \lvert g \rvert  \right\rvert = \int \lvert g \rvert^{q} = \lVert g \rVert^{q}_{q}= \lVert f \rVert_{p}\lVert g \rVert_{q}$.
-   Hence, $\lVert \phi_{g} \rVert= \lVert g \rVert_{q}$.
-   For $p=1$, let $E_{\epsilon}= \{ x \in X : \lvert g(x) \rvert> \lVert g \rVert_{\infty}- \epsilon\}$, and let $f_{\epsilon}=\frac{\overline{g}}{\lvert g \rvert}1_{E_{\epsilon}}$. Then $f_{\epsilon}\in L^{1}$ with $\lVert f_{\epsilon} \rVert_{1}=\mu(E_{\epsilon})$. This gives 
-   $$
-   \lvert \phi_{g}(f_{\epsilon}) \rvert = \int_{E_{\epsilon}}\lvert g \rvert d \mu\geq (\lVert g \rVert_{\infty} - \epsilon)\mu(E_{\epsilon})=(\lVert g \rVert _{\infty}-\epsilon)\lVert f_{\epsilon } \rVert _{1}.
-   $$
-   Therefore, $\lVert \phi_{g} \rVert\geq \lVert g \rVert_{\infty}-\epsilon$ for every $\epsilon> 0 \implies \lVert \phi_{g} \rVert=\lVert g \rVert$.
-2. Let $\phi \in (L_{p})^{*}$ be given. Since $\mu$ is finite, $1_{E} \in L^{p}$. Let $\nu(E):= \phi(1_{E})$.
-   We would show that $\nu$ is a complex measure. Note that $\nu$ is finitely additive since $\phi$ is linear.
-   Suppose $E_{n} \uparrow E$, then 
-   $$
-   \lvert \nu(E)-\nu(E_{n}) \rvert= \lvert \phi(1_{E}-1_{E_{n}}) \rvert \leq \lVert \phi \rVert \cdot \lVert 1_{E}-1_{E_{n}} \rVert _{p}= \lVert \phi \rVert \mu(E \setminus E_{n})^{1/p}\to 0
-   $$
-   Thus $\nu$ is a complex measure.
-   
-   Next we would show that $\lvert \nu \rvert\ll  \mu$. For that, suppose $\mu(E)=0$, then $\lVert 1_{E} \rVert_{L^{p}}=0 \implies \lvert \phi(1_{E}) \rvert\leq \lVert \phi \rVert \cdot \lVert 1_{E} \rVert_{L^{p}}=0 \implies \nu(E)=0$.
-   Now, $\bigsqcup E_{n}=E \implies \mu(E_{n})=0$ for every $E_{n} \implies \nu(E_{n})=0$ for every $E_{n}$, and hence
-   $$
-   \sum \lvert \nu(E_{n}) \rvert =0
-   $$
-   Taking supremum over every partition $\{ E_{n} \}$, we get that $\lvert \nu \rvert (E)=0$, and therefore $\lvert \nu \rvert\ll \mu$.
-   
-   Let $\nu = \nu_{1}-\nu_{2} + i(\nu_{3}-\nu_{4})$ by the Jordan decomposition of $\nu$([[LEC GANA1 18#^7682e5]]).
-   By [[LEC GANA1 18#^9eb56e]].2, $\nu_{i}\ll \lvert \nu \rvert\implies \nu_{i}\ll \mu$.
-   Now by [[LEC GANA1 17#^0a786f| Radon-Nikodym]], obtain derivatives of $\frac{d\nu_{i}}{d \mu }$, and define $g := \left( \frac{{d \nu_{1}}}{d \mu}- \frac{{d \nu_{2}}}{d \mu} \right) +i \left(  \frac{{d \nu_{3}}}{d \mu} - \frac{{d \nu_{4}}}{d \mu } \right)$.
-   Then, $g$ is measurable and $\forall E \in \mathcal{A}$ satisfies $$ \nu(E)= \int_{E}g d\mu \implies \phi(1_{E})= \int_{X}g \cdot  1_{E}d\mu= \phi_{g}(1_{E}). $$
-   So, $\forall$ simple $f \in L^{p}$, $\phi(f)=\int_{X}fg d \mu$.
-   Also since each $\nu_{i}$ are finite measures, each $\frac{d\nu_{i}}{d\mu}\in L^{1}(\mu )$, hence $g \in L^{1}(\mu )$.
-   
-   Note that $\phi_{g}$ is defined if $g \in L_{q}$ which would be proven later.
-   
-   Since $\phi=\phi_{g}$ for every simple functions and by continuity of $\phi$ and $\phi_{g}$ and by [[LEC GANA1 17#^74bbd8]], $\phi=\phi_{g}$ for every input in $L_{p}$.
-   
-   Next we show that $g \in L^{q}$.
-   Assume $p> 1$.
-   Choose a sequence of simple functions $\{ g_{n} \}$ such that $g_{n}\uparrow \lvert g \rvert$ pointwise with $g_{n}\geq 0$. Define 
-   $$ h_{n}:=\frac{\overline{g}}{\lvert g \rvert } \cdot g_{n}^{1/(p-1)}. $$
-   Then $\lvert \phi(h_{n}) \rvert=\left\lvert  \int \lvert g \rvert g_{n}^{1/(p-1)}  \right\rvert\geq \left\lvert  \int g_{n}^{q}  \right\rvert=\lVert g_{n} \rVert_{q}^{q}$. And since $\lVert h_{n} \rVert_{p}=\lVert g_{n} \rVert_{q}^{q/p}$, we get that $\lVert \phi \rVert\cdot \lVert h_{n} \rVert_{p}\geq \lVert g_{n} \rVert_{q}^{q}\implies \lVert \phi \rVert\geq \lVert g_{n} \rVert_{q}$ , and by MCT $\lVert \phi \rVert\geq \lVert g \rVert_{q}\implies g \in L^{q}$.
-   For $p=1$, let $E_{\epsilon}= \{ x \in X: \lvert g(x) \rvert\geq \lVert \phi \rVert+\epsilon \}$, and set $h = \frac{\overline{g}}{\lvert g \rvert}1_{E}$. Then $h$ is bounded, hence
-   $$
-   (\lVert \phi \rVert +\epsilon)\mu(E)\leq \int_{E}\lvert g \rvert d \mu= \int_{X} hg d \mu=\phi(h)\leq \lVert \phi \rVert \cdot \lVert h \rVert _{1}= \lVert \phi \rVert \mu(E).
-   $$
-   and since $\mu$ is a finite measure, this forces $\mu(E)=0$. Taking union over $\epsilon=\frac{1}{n}$, we get that $\lvert g \rvert\leq \lVert \phi \rVert$ a.e., so $g \in L^{\infty}$.
+> [!Theorem]
+> Let $(X, \mathcal{F}, \mu)$ be a finite measure space. Let $1\leqslant p< \infty$,  $\frac{1}{p}+\frac{1}{q}=1$.
+> 1. If $g \in L^{q}$, then define $\phi_{g}(f)= \int fg$ for $f \in L_{p}$. Then
+>    $$
+>    \lVert \phi_{g} \rVert_{(L^{p})^{*}} = \lVert g \rVert _{L^{q}}.
+>    $$
+> 2. Given any $\phi \in (L^{p})^{*}$, $\exists g \in L^{q}$ such that $\phi = \phi_{g}$.
+> 
+> > [!Proof]- Proof of (1)
+> > 
+> > $\phi_{g}$ is well defined by [[LEC GANA1 16#^cd6771|Hölder]], which also gives us $\lvert \phi_{g}(f) \rvert\leq \int \lvert fg \rvert\leq \lVert f \rVert_{p}\cdot \lVert g \rVert_{q}$. So $\phi_{g}$ is a bounded linear functional with $\lVert \phi_{g} \rVert\leq \lVert g \rVert_{q}$.
+> > 
+> > Assume $p> 1$. Define 
+> > $$
+> > f:= \frac{{\overline{g}\cdot \lvert g \rvert}^{1/(p-1)}}{\lvert g \rvert}.
+> > $$
+> > then $\lvert f \rvert^{p}= (\lvert g \rvert^{1/(p-1)})^{p}=\lvert g \rvert^{q}$ so $f \in L^{p}$ with $\lVert f \rVert_{p}= \lVert g \rVert_{q}^{q/p} = \lVert g \rVert_{q}^{q-1}$.
+> > 
+> > Evaluating $\phi_{g}$ at $f$ yields 
+> > $$
+> > \lvert \phi_{g}(f) \rvert= \left\lvert  \int \frac{{\overline{g} \cdot \lvert g \rvert^{1/(p-1)}}}{\lvert g \rvert}.g   \right\rvert  = \left\lvert  \int \lvert g \rvert^{1/(p-1)}\cdot \lvert g \rvert  \right\rvert = \int \lvert g \rvert^{q} = \lVert g \rVert^{q}_{q}= \lVert f \rVert_{p}\lVert g \rVert_{q}.
+> > $$
+> > Hence, $\lVert \phi_{g} \rVert= \lVert g \rVert_{q}$.
+> > 
+> > For $p=1$, let $E_{\epsilon}= \{ x \in X : \lvert g(x) \rvert> \lVert g \rVert_{\infty}- \epsilon\}$, and let $f_{\epsilon}=\frac{\overline{g}}{\lvert g \rvert}1_{E_{\epsilon}}$. Then $f_{\epsilon}\in L^{1}$ with $\lVert f_{\epsilon} \rVert_{1}=\mu(E_{\epsilon})$. Evaluating $\phi_{g}$ at $f_{\epsilon}$ yields 
+> > $$
+> >    \lvert \phi_{g}(f_{\epsilon}) \rvert = \int_{E_{\epsilon}}\lvert g \rvert d \mu\geq (\lVert g \rVert_{\infty} - \epsilon)\mu(E_{\epsilon})=(\lVert g \rVert _{\infty}-\epsilon)\lVert f_{\epsilon } \rVert _{1}.
+> > $$
+> > By letting $\epsilon\to 0$, we get $\lVert \phi_{g} \rVert=\lVert g \rVert_{\infty}$. 
+> 
+> > [!Proof]- Proof of (2)
+> > 
+> > Let $\phi \in (L_{p})^{*}$ be given. 
+> > 
+> > Since $\mu$ is finite, $1_{E} \in L^{p}$ for all $E\in \mathcal{F}$. Define $\nu(E):= \phi(1_{E})$.
+> > 
+> > ---
+> > **$\nu$ is a complex measure.** 
+> >  
+> > $\nu$ is finitely additive since $\phi$ is linear. Using a generalization of [[LEC GANA1 2#^f6c633]] to complex measures, it suffices to show that $\nu$ is monotone continuous. Suppose $E_{n} \uparrow E$. Then, 
+> > $$
+> > \lvert \nu(E)-\nu(E_{n}) \rvert= \lvert \phi(1_{E}-1_{E_{n}}) \rvert \leq \lVert \phi \rVert \cdot \lVert 1_{E}-1_{E_{n}} \rVert _{p}= \lVert \phi \rVert \mu(E \setminus E_{n})^{1/p}\to 0,
+> > $$
+> > where we have used the hypothesis that $\mu$ is a finite measure in the last step.
+> > 
+> > So, $\nu$ is a complex measure. By [[#^182c67]], $|\nu|$ is a finite vanilla measure.
+> > 
+> > ---
+> > **$\lvert \nu \rvert\ll  \mu$**
+> > 
+> > Suppose $\mu(E)=0$, then $\lVert 1_{E} \rVert_{L^{p}}=0 \implies \lvert \phi(1_{E}) \rvert\leq \lVert \phi \rVert \cdot \lVert 1_{E} \rVert_{L^{p}}=0 \implies \nu(E)=0$.
+> > Now, $\bigsqcup E_{n}=E \implies \mu(E_{n})=0$ for every $E_{n} \implies \nu(E_{n})=0$ for every $E_{n}$, and hence
+> > $$
+> > \sum \lvert \nu(E_{n}) \rvert =0
+> > $$
+> > Taking supremum over every partition $\{ E_{n} \}$, we get that $\lvert \nu \rvert (E)=0$, and therefore $\lvert \nu \rvert\ll \mu$.
+> > 
+> > ---
+> > **Defining $g$ as the generalized R-N derivative of $\nu$**
+> > 
+> > Let $\nu = \nu_{1}-\nu_{2} + i(\nu_{3}-\nu_{4})$ be the Jordan decomposition of $\nu$ as in [[LEC GANA1 18#^7682e5]]. By [[LEC GANA1 18#^9eb56e]].2, $\nu_{i}\ll \lvert \nu \rvert$, so $\nu_{i}\ll \mu$. 
+> > 
+> > Use the [[LEC GANA1 17#^0a786f|Radon-Nikodym derivatives]] of the $\nu_{i}$ wrt $\mu$ to define
+> > $$
+> > g := \left( \frac{{d \nu_{1}}}{d \mu}- \frac{{d \nu_{2}}}{d \mu} \right) +i \left(  \frac{{d \nu_{3}}}{d \mu} - \frac{{d \nu_{4}}}{d \mu } \right).
+> > $$
+> > 
+> > $g$ is measurable, and behaves like a R-N derivative:
+> > $$
+> > \begin{align}
+> > \nu(E) & =\int_{E}\left( \frac{d\nu_{1}}{d\mu} \right)d\mu-\int_{E}\left( \frac{d\nu_{2}}{d\mu} \right)\,d\mu +i \int_{E}\left( \frac{d\nu_{3}}{d\mu} \right)\,d\mu-i \int_{E}\left( \frac{d\nu_{4}}{d\mu} \right)\,d\mu \\
+> >  & =\int_{E}g\,d\mu.
+> > \end{align}
+> > $$
+> > 
+> > Because the $\nu_{i}$s are finite measures, 
+> > $$
+> > \int_{X}\left( \frac{d\nu_{i}}{d\mu} \right)\,d\mu=\nu_{i}(X)< \infty,
+> > $$
+> > so each $d\nu_{i}/d\mu\in L^{1}(\mu)$, and consequently $g\in L^{1}(\mu)$. 
+> > 
+> > ---
+> > **$g\in L^{q}$**
+> > 
+> > Suppose $p> 1$.
+> > 
+> > Choose a sequence of simple functions $\{ g_{n} \}$ such that $g_{n}\uparrow \lvert g \rvert$ pointwise with $g_{n}\geq 0$. Define 
+> > $$
+> > h_{n}:=\frac{\overline{g}\cdot g_{n}^{1/(p-1)}}{\lvert g \rvert } .
+> > $$
+> > Observe that
+> > $$
+> > \int |h_{n}|^{p}=\int |g_{n}|^{q}< \infty,
+> > $$
+> > where we've again used the finiteness of $\mu$. Thus, $h_{n}\in L^{p}$, and $\lVert h_{n} \rVert_{p}=\lVert g_{n} \rVert_{q}^{q/p}$. 
+> > 
+> > We have
+> > $$
+> > \lvert \phi(h_{n}) \rvert=\left\lvert  \int \lvert g \rvert g_{n}^{1/(p-1)}  \right\rvert\geq \left\lvert  \int g_{n}^{q}  \right\rvert=\lVert g_{n} \rVert_{q}^{q},
+> > $$
+> > so $\lVert \phi \rVert\lVert h_{n} \rVert_{p}\geqslant \lVert g_{n} \rVert^{q}_{q}$, or $\lVert \phi \rVert\geqslant \lVert g_{n} \rVert_{q}$. Using [[LEC GANA1 6#^de9d0c|MCT]], 
+> > $$
+> > \begin{align}
+> > \int |g|^{q}=\sup _{n}\int |g_{n}|^{q}\leqslant \lVert \phi \rVert ^{q}< \infty.
+> > \end{align}
+> > $$
+> > Thus, $g\in L^{q}$. 
+> > 
+> > 
+> > Suppose $p=1$. 
+> > 
+> > Let $E_{\epsilon}= \{ x \in X: \lvert g(x) \rvert\geq \lVert \phi \rVert+\epsilon \}$, and set $h = \frac{\overline{g}}{\lvert g \rvert}1_{E_{\epsilon}}$. Then $h$ is bounded, hence
+> > $$
+> >    (\lVert \phi \rVert +\epsilon)\mu(E_{\epsilon})\leq \int_{E_{\epsilon}}\lvert g \rvert \,d \mu= \int_{X} hg \,d \mu=\phi(h)\leq \lVert \phi \rVert \cdot \lVert h \rVert _{1}= \lVert \phi \rVert \mu(E_{\epsilon}).
+> > $$
+> > Because $\mu$ is a finite measure, this forces $\mu(E)=0$. Taking union over $\epsilon=\frac{1}{n}$, we get that $\lvert g \rvert\leq \lVert \phi \rVert$ a.e., so $g \in L^{\infty}$.
+> > 
+> > 
+> > ---
+> > **$\phi=\phi_{g}$**
+> > 
+> > For all $E\in \mathcal{F}$, 
+> > $$
+> > \phi(1_{E})= \nu(E)=\int_{X}g \cdot  1_{E}\,d\mu= \phi_{g}(1_{E}). 
+> > $$
+> > By linearity, $\phi$ and $\phi_{g}$ agree on simple functions. By [[LEC GANA1 17#^74bbd8]] and the continuity of $\phi$ and $\phi_{g}$, we have $\phi\equiv \phi_{g}$. 
+> 
