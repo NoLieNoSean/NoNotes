@@ -19,6 +19,8 @@ P2: true
 > $$
 > $\mathrm{Rm}$ is a smooth $(0, 4)$ tensor field.
 
+^e854a7
+
 > [!Theorem]
 > TFAE:
 > 1. $R_{M}\equiv 0$ (equivalently, $\mathrm{Rm}_{M}\equiv 0$).

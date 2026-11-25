@@ -123,7 +123,7 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > > $$
 > > Hence, $\lVert \phi_{g} \rVert= \lVert g \rVert_{q}$.
 > > 
-> > For $p=1$, let $E_{\epsilon}= \{ x \in X : \lvert g(x) \rvert> \lVert g \rVert_{\infty}- \epsilon\}$, and let $f_{\epsilon}=\frac{\overline{g}}{\lvert g \rvert}1_{E_{\epsilon}}$. Then $f_{\epsilon}\in L^{1}$ with $\lVert f_{\epsilon} \rVert_{1}=\mu(E_{\epsilon})$. Evaluating $\phi_{g}$ at $f_{\epsilon}$ yields 
+> > For $p=1$, let $E_{\epsilon}= \{ x \in X : \lvert g(x) \rvert> \lVert g \rVert_{\infty}- \epsilon\}$, and let $f_{\epsilon}=\frac{\overline{g}}{\lvert g \rvert}1_{E_{\epsilon}}$. Then, because $\mu$ is finite, $f_{\epsilon}\in L^{1}$ with $\lVert f_{\epsilon} \rVert_{1}=\mu(E_{\epsilon})$. Evaluating $\phi_{g}$ at $f_{\epsilon}$ yields 
 > > $$
 > >    \lvert \phi_{g}(f_{\epsilon}) \rvert = \int_{E_{\epsilon}}\lvert g \rvert d \mu\geq (\lVert g \rVert_{\infty} - \epsilon)\mu(E_{\epsilon})=(\lVert g \rVert _{\infty}-\epsilon)\lVert f_{\epsilon } \rVert _{1}.
 > > $$
@@ -195,14 +195,15 @@ Let $(X, \mathcal{F}, \mu)$ be a signed real measure space and let $\lvert \mu \
 > > $$
 > > where we've again used the finiteness of $\mu$. Thus, $h_{n}\in L^{p}$, and $\lVert h_{n} \rVert_{p}=\lVert g_{n} \rVert_{q}^{q/p}$. 
 > > 
+> > Since we have shown $g\in L^{1}(\mu)$, $\phi_{g}$ is  well-defined. 
 > > We have
 > > $$
-> > \lvert \phi(h_{n}) \rvert=\left\lvert  \int \lvert g \rvert g_{n}^{1/(p-1)}  \right\rvert\geq \left\lvert  \int g_{n}^{q}  \right\rvert=\lVert g_{n} \rVert_{q}^{q},
+> > \lvert \phi_{g}(h_{n}) \rvert=\left\lvert  \int \lvert g \rvert g_{n}^{1/(p-1)}  \right\rvert\geq \left\lvert  \int g_{n}^{q}  \right\rvert=\lVert g_{n} \rVert_{q}^{q},
 > > $$
-> > so $\lVert \phi \rVert\lVert h_{n} \rVert_{p}\geqslant \lVert g_{n} \rVert^{q}_{q}$, or $\lVert \phi \rVert\geqslant \lVert g_{n} \rVert_{q}$. Using [[LEC GANA1 6#^de9d0c|MCT]], 
+> > so $\lVert \phi_{g} \rVert\lVert h_{n} \rVert_{p}\geqslant \lVert g_{n} \rVert^{q}_{q}$, or $\lVert \phi_{g} \rVert\geqslant \lVert g_{n} \rVert_{q}$. Using [[LEC GANA1 6#^de9d0c|MCT]], 
 > > $$
 > > \begin{align}
-> > \int |g|^{q}=\sup _{n}\int |g_{n}|^{q}\leqslant \lVert \phi \rVert ^{q}< \infty.
+> > \int |g|^{q}=\sup _{n}\int |g_{n}|^{q}\leqslant \lVert \phi_{g} \rVert ^{q}< \infty.
 > > \end{align}
 > > $$
 > > Thus, $g\in L^{q}$. 

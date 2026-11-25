@@ -77,15 +77,16 @@ A tensor field of $(0, 0)$, $(1, 0)$, and $(0, 1)$ are real valued functions, ve
 > 
 
 > [!Remark]
-> Let $V, W$ be $\mathbb{R}$-vector spaces, and $A:V\to W$ be an isomorphism. Let $A^{*}:W\to V$ be the dual map, $A^{*}(\alpha)=\alpha \circ A$. Then, 
+> Let $V, W$ be $\mathbb{R}$-vector spaces, and $A:V\to W$ be an isomorphism. Let $A^{*}:W\to V$ be the [[LEC GANA1 15#^391a15|adjoint]]. Then, 
 > $$
 > (A^{-1})^{\otimes l}\otimes (A^{*})^{\otimes k}:T^{l}_{k}(W)\to T^{l}_{k}(V)
 > $$
 > is an isomorphism. If $\{ v_{1}, \dots, v_{n} \}$ is a basis of $V$, $\{ v^{1}, \dots, v^{n} \}$ is its dual, and $\{ w^{1}, \dots, w^{n} \}$ is the dual of $\{ w_{1}, \dots, w_{n} \}:=\{ Av_{1}, \dots, Av_{n} \}$, then $A^{*}w^{i}=v^{i}$ for all $1\leqslant i\leqslant n$. In other words, 
 > $$
-> (v_{j_{1}}\otimes \dots \otimes v_{l_{l}})\otimes (v^{i_{1}}\otimes \dots \otimes v^{i_{k}})\xmapsto{(A^{-1})^{\otimes l}\otimes (A^{*})^{\otimes k}}(w_{j_{1}}\otimes \dots \otimes w_{l_{l}})\otimes (w^{i_{1}}\otimes \dots \otimes w^{i_{k}}).
+> (w_{j_{1}}\otimes \dots \otimes w_{l_{l}})\otimes (w^{i_{1}}\otimes \dots \otimes w^{i_{k}})\xmapsto{(A^{-1})^{\otimes l}\otimes (A^{*})^{\otimes k}} (v_{j_{1}}\otimes \dots \otimes v_{l_{l}})\otimes (v^{i_{1}}\otimes \dots \otimes v^{i_{k}}).
 > $$
 > 
+
 
 ^8acb26
 

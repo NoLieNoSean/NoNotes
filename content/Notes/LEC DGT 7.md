@@ -155,7 +155,8 @@ We have the following analogues for $\nabla$, all of which follow immediately fr
 > 2. $\nabla_{fX}Y=f\nabla_{X}Y$. 
 > 3. $\nabla_{X}(fY)=(D_{X}f)(Y)+f\nabla_{X}Y$. 
 > 4. $\nabla_{X}Y-\nabla_{Y}X=[X, Y]$. 
-> 5. $D_{X}\langle Y, Z \rangle=\langle D_{X}Y, Z \rangle+\langle Y, D_{X}Z \rangle=\langle \nabla_{X}Y, Z \rangle+\langle Y, \nabla_{X}Z \rangle$. 
+> 5. **Metric compatibility**: $D_{X}\langle Y, Z \rangle=\langle D_{X}Y, Z \rangle+\langle Y, D_{X}Z \rangle=\langle \nabla_{X}Y, Z \rangle+\langle Y, \nabla_{X}Z \rangle$.
+> 
 
 ^269bec
 

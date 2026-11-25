@@ -23,9 +23,31 @@ P1: true
 ^8e6628
 
 > [!Lemma]
-> $P_{t_{0}t_{1}}^{\gamma}:T_{\gamma(t_{0})}M\to T_{\gamma(t_{1})}M$ is a linear isometry. 
+> $P_{t_{0}t_{1}}^{\gamma}:T_{\gamma(t_{0})}M\to T_{\gamma(t_{1})}M$ is a unitary map. 
+> 
+> > [!Proof]-
+> > 
+> > Let $u_{1}, u_{2}\in T_{\gamma(t_{0})}M$, $a, b\in \mathbb{R}$. Let $V_{1}, V_{2}$ be parallel transports of $u_{1}, u_{2}$ along $\gamma$. Note that $V:=aV_{1}+bV_{2}$ is parallel along $\gamma$, with $V(t_{0})=au_{1}+bu_{2}$. By the uniqueness of parallel transport, $V$ must be the parallel transport of $au_{1}+bu_{2}$ along $\gamma$. Thus, 
+> > $$
+> > \begin{align}
+> > P^{\gamma}_{t_{0}t_{1}}(au_{1}+bu_{2}) & =V(t_{1}) \\
+> >  & =aV_{1}(t_{1})+bV_{2}(t_{2}) \\
+> >  & =aP_{t_{0}t_{1}}^{\gamma}(u_{1})+bP_{t_{0}t_{1}}^{\gamma}(u_{2}).
+> > \end{align}
+> > $$
+> > 
+> > It is clear form [[#^8e6628]] that $(P^{\gamma}_{t_{0}t_{1}})^{-1}=P^{\gamma}_{t_{1}t_{0}}$. That $P^{\gamma}_{t_{0}t_{1}}$ is an isometry follows from the [[LEC DGT 8#^5959ee|metric compatibility of $D_{t}$]]:
+> > $$
+> > \begin{align}
+> > \frac{d}{dt} \langle V_{1}, V_{2} \rangle  & =\langle D_{t}V_{1}, V_{2} \rangle +\langle V_{1}, D_{t}V_{2} \rangle  \\
+> >  & =0,
+> > \end{align}
+> > $$
+> > so $\langle u_{1}, u_{2} \rangle=\langle V_{1}, V_{2} \rangle(t_{0})=\langle V_{1}, V_{2} \rangle(t_{1})=\langle P^{\gamma}_{t_{0}t_{1}}u_{1}, P^{\gamma}_{t_{0}t_{1}}u_{2} \rangle$. 
+> 
 
 ^df3518
+
 
 > [!Remark]
 > 
@@ -107,7 +129,7 @@ Suppose $L$ is a finite dimensional inner product space. Recall that there exist
 
 
 > [!Remark]
-> If $V\in \mathfrak{X}(\gamma)$ with $V(t)=V^{i}(t)\varphi_{i}|_{\gamma(t)}$ for a local parameterization $\varphi$, 
+> If $V\in \mathfrak{X}(\gamma)$ with $V(t)=V^{i}(t)\varphi_{i}|_{\gamma(t)}$ for a local parameterization $\varphi$, using [[LEC DGT 8#^5959ee]].2, 
 > $$
 > \begin{align}
 > D_{t}(V)(t) & =\dot{V}^{i}(t)\varphi_{i}|_{\gamma(t)}+V^{i}(t)(D_{t}\varphi_{i}|_{\gamma})(t).

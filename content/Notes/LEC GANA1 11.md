@@ -28,7 +28,7 @@ P1: true
 Recall [[LEC CAL1 3#^ecdf17]], [[LEC CAL1 3#^b01b34]]. 
 
 > [!Example] Finite dimensions
-> Let $T\in M_{n, m}(\mathbb{C})$. Then, $T^{*}T$ is self adjoint. By [[Structure of operators in inner product spaces#^7e0cb4|the spectral theorem for self-adjoint operators]], there exists a unitary matrix $U$ (i.e., $U^{*}U=I$) such that $T^{*}T=UDU^{*}$, where $D=\text{diag}(\lambda_{1}, \dots, \lambda_{m})$ is a real diagonal matrix. Let $\lambda=\text{max}\{ \lambda_{1} , \dots, \lambda_{m}\}$. 
+> Let $T\in M_{n, m}(\mathbb{C})$. Then, $T^{*}T$ is self adjoint. By [[Structure of operators in finite dimensional inner product spaces#^7e0cb4|the spectral theorem for self-adjoint operators]], there exists a unitary matrix $U$ (i.e., $U^{*}U=I$) such that $T^{*}T=UDU^{*}$, where $D=\text{diag}(\lambda_{1}, \dots, \lambda_{m})$ is a real diagonal matrix. Let $\lambda=\text{max}\{ \lambda_{1} , \dots, \lambda_{m}\}$. 
 > 
 > We'll compute $\lVert T \rVert$. 
 > $$

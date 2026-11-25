@@ -221,7 +221,7 @@ $$
 > 2. For $f\in C^{\infty}(I)$, $(fV)'=f'V+fV'$, so $D_{t}(fV)=f'V+fD_{t}V$. 
 > 3. If $V=\tilde{V}(\gamma(t))$, then $V'(t)=D_{\gamma'(t)}\tilde{V}$, and $D_{t}(V)(t)=\nabla_{\gamma'(t)}\tilde{V}$. 
 > 4. $V'=D_{t}V+\mathbb{I}_{p}(\gamma', V)$. 
-> 5. $\frac{d}{dt}\langle V, W \rangle=\langle V', W \rangle+\langle V, W' \rangle=\langle D_{t}V, W \rangle+\langle V, D_{t}W \rangle$.
+> 5. **Metric compatibility:** $\frac{d}{dt}\langle V, W \rangle=\langle V', W \rangle+\langle V, W' \rangle=\langle D_{t}V, W \rangle+\langle V, D_{t}W \rangle$.
 > 
 
 ^5959ee

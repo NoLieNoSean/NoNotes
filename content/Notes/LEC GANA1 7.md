@@ -76,14 +76,12 @@ We now extend [[LEC GANA1 6#^2c598a]] to measurable functions that are not nonne
 
 ^a5edca
 
-
 > [!Theorem] Dominated convergence theorem
 > Let $f_{n}, f, g_{n}, g:(\Omega, \mathcal{F}, \mu)\to \mathbb{R}$ be measurable functions such that 
 > 1. $|f_{n}|\leqslant  g_{n}$ and $|f|\leqslant g$ pointwise for all $x\in \mathbb{R}$ and $n\in \mathbb{N}$,
-> 2. $f_{n}\to f$ a.e.,
-> 3. $g_{n}\to g$ a.e.,
-> 4. $\int g_{n}< \infty$ and $\int g< \infty$, and 
-> 5. $\int g_{n}\to \int g$. 
+> 2. $f_{n}\to f$ a.e., $g_{n}\to g$ a.e.,
+> 3. $\int g_{n}< \infty$ and $\int g< \infty$, and 
+> 4. $\int g_{n}\to \int g$. 
 > 
 > Then
 > $$
