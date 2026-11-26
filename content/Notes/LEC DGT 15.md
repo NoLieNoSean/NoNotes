@@ -160,7 +160,7 @@ Similarly, we have
 
 So, if $F$ is a smooth $(0, k)$ (resp $(1, k)$) tensor field on $M$, then $F$ induces a $C^{\infty}(M)$-multilinear (check!) map $\tilde{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp $\mathfrak{X}(M)$). We will now show that the converse holds, too. 
 
-Suppose $\mathcal{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp. $\mathfrak{X}(M)$) is any $C^{\infty}(M)$-multilinear.
+Suppose $\mathcal{F}:\mathfrak{X}(M)^{k}\to C^{\infty}(M)$ (resp. $\mathfrak{X}(M)$) is any $C^{\infty}(M)$-multilinear map. 
 
 > [!Lemma]
 > Let $X_{1}, \dots, X_{k}\in \mathfrak{X}(M)$. Suppose there exists an index $i$ such that $X_{i}\equiv 0$ on a neighborhood $U$ of $p$. Then $\mathcal{F}(X_{1}, \dots, X_{k})(p)=0$.

@@ -47,7 +47,7 @@ Thus, $R_{p}(u, v)w=R(X, Y)Z|_{p}=0$.
 1 ⇒ 2: Fix $p\in M$. Fix local parameterization $\varphi:I^{n}\to U$ around $p$, where $I=(-1, 1)$ and $\varphi(0, \dots, 0)=p$. 
 
 > [!Lemma]
-> For all $v\in T_{p}M$, there exists $X\in \mathfrak{X}(U)$ such that $X_{p}=v$ and $X$ is parallel on $U$, i.e., $\nabla_{w}X|_{q}=0$ for all $q\in U$ and $w\in T_{q}M$. 
+> Suppose $R_{M}\equiv 0$. For all $v\in T_{p}M$, there exists $X\in \mathfrak{X}(U)$ such that $X_{p}=v$ and $X$ is parallel on $U$, i.e., $\nabla_{w}X|_{q}=0$ for all $q\in U$ and $w\in T_{q}M$. 
 > 
 > > [!Proof]-
 > > 

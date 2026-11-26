@@ -175,14 +175,14 @@ Let us first consider the case when $\gamma$ is regular.
 > 2. for all $s\in(-\epsilon, \epsilon)$, $\Gamma_{s}(0)=p$, $\Gamma_{s}(1)=q$, and $\Gamma_{s}$ is regular. 
 
 > [!Definition]
-> Let $\Gamma:J\times I\to M$ be smooth. A **vector field along $\Gamma$** is a smooth map $V:J\times I\to \mathbb{R}^{k}$ such that $V(s, t)\in T_{\Gamma(s, t)}M$. 
+> Let $\Gamma:J\times I\to M$ be smooth. A **vector field along $\Gamma$** is a smooth map $V:J\times I\to \mathbb{R}^{k}$ such that $V(s, t)\in T_{\Gamma(s, t)}M$. The space of vector fields over $\Gamma$ is denoted $\mathfrak{X}(\Gamma)$. 
 > 
-> For fixed $s$, $V_{s}(t)=V(s, t)\in \mathfrak{X}(\Gamma_{s})$. We call $D_{t}V(s, t):=D_{t}V_{s}(t)$ the **covariant derivative of $V$ along $\Gamma_{s}$**. 
+> For fixed $s$, $V_{s}(t)=V(s, t)\in \mathfrak{X}(\Gamma_{s})$. We call $D_{t}V(s, t):=D_{t}V_{s}(t)\in \mathfrak{X}(\Gamma)$ the **covariant derivative of $V$ along $\Gamma_{s}$**. 
 > 
-> For fixed $t$, $V_{t}(s)=V(s, t)\in \mathfrak{X}(\Gamma^{t})$. We call $D_{s}V(s, t):=D_{s}V_{t}(s)$ the **covariant derivative of $V$ along $\Gamma^{t}$**. 
+> For fixed $t$, $V_{t}(s)=V(s, t)\in \mathfrak{X}(\Gamma^{t})$. We call $D_{s}V(s, t):=D_{s}V_{t}(s)\in \mathfrak{X}(\Gamma)$ the **covariant derivative of $V$ along $\Gamma^{t}$**. 
 > 
 > Note that $\partial_{s}\Gamma$ and $\partial_{t}\Gamma$ are vector fields along $\Gamma$. We may denote them by $S$ and $T$ respectively. 
-> 
+
 
 ^92ef37
 

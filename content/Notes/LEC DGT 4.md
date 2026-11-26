@@ -92,28 +92,26 @@ This motivates the following:
 > 	$$
 > 	[X, Y]:=D_{X}Y-D_{Y}X.
 > 	$$
-> 	This makes $\mathfrak{X}(U)$ a [[LEC LIALG 1#^128a59|Lie algebra]].[^2] Recall that $C^{\infty}(U)$ is an $\mathbb{R}$-algebra. Let $\mathrm{Der}(C^{\infty}(U))$ be as in [[LEC LIALG 2#^09387d]]; it is a Lie subalgebra of $\mathfrak{gl}(C^{\infty}(U))$ with the bracket $[\delta, \delta']=\delta\delta'-\delta'\delta$. 
-> 2. The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is a Lie algebra isomorphism; we have the identity
+> 	This makes $\mathfrak{X}(U)$ an $\mathbb{R}$-[[LEC LIALG 1#^128a59|Lie algebra]].
+> 2. Recall that $C^{\infty}(U)$ is an $\mathbb{R}$-algebra. Let $\mathrm{Der}(C^{\infty}(U))$ be as in [[LEC LIALG 2#^09387d]]; it is a Lie subalgebra of $\mathfrak{gl}(C^{\infty}(U))$ with the bracket $[\delta, \delta']=\delta\delta'-\delta'\delta$. The map $\mathfrak{X}(U)\to \mathrm{Der}(C^{\infty}(U))$ given by $X\mapsto D_{X}$ is an isomorphism of $\mathbb{R}$-Lie algebras; we have the identity
 > 	$$
 > 	D_{[X, Y]}Z=D_{X}D_{Y}Z-D_{Y}D_{X}Z.
 > 	$$
 > 
-> 
 > > [!Proof]-
 > > 
-> > We will prove the following assertions in order:
-> > 1. $D_{X}:C^{\infty}(U)\to C^{\infty}(U)$ is a $\mathbb{R}$-linear map;
-> > 2. $D_{X}$ is a derivation, i.e., $D_{X}(fg)=fD_{X}g+gD_{X}f$;
-> > 3. The map $X\mapsto D_{X}$ respects the bracket: $D_{[X, Y]}=[D_{X}, D_{Y}]=D_{X}D_{Y}-D_{Y}D_{X}$. 
+> > We've just shown that $D_{[X, Y]}=D_{X}D_{Y}-D_{Y}D_{X}$ above. Using this, we can prove that $[, ]$ satisfies the Jacobi identity, making $\mathfrak{X}(U)$ an $\mathbb{R}$-Lie algebra. 
+> > 
+> > Now, consider the map $X\mapsto D_{X}$.
+> > 1. $D_{X}:C^{\infty}(U)\to C^{\infty}(U)$ is a $\mathbb{R}$-linear map. 
+> > 2. $D_{X}$ is in fact a derivation, i.e., $D_{X}(fg)=fD_{X}g+gD_{X}f$.
+> > 3. The map $X\mapsto D_{X}$ is a $\mathbb{R}$-linear map. 
+> > 4. We get that $X\mapsto D_{X}$ is a Lie algebra homomorphism for free: $D_{[X, Y]}=D_{X}D_{Y}-D_{Y}D_{X}=[D_{X}, D_{Y}]$. 
+> > 
+> > Finally, we show that for every $\delta\in\text{Der}(C^{\infty}(U))$, there exists $X$ such that $\delta=D_{X}$.
 > 
 
 ^79bf9f
-
-
-
-
-
-[^2]: The Jacobi identity follows from [[#^306cdb]]. 
 
 ### Derivations on manifolds
 
@@ -156,10 +154,12 @@ These two definitions are equivalent, and are independent of the chosen extensio
 > $$
 > [X, Y](\phi(a)):=D\phi_{a}([\overline{X}, \overline{Y}](a)).
 > $$
+> 	$\mathfrak{X}(M)$ is a $\mathbb{R}$-Lie algebra with this bracket.
 > 2. The map $D_{\_{}}:\mathfrak{X}(M)\to \mathrm{Der}(C^{\infty}(M))$ is a Lie algebra isomorphism: for all $f\in C^{\infty}(M)$, 
 > $$
 > D_{X}D_{Y}f-D_{Y}D_{X}f=D_{[X, Y]}f.
 > $$
+> 
 
 ^5180d1
 

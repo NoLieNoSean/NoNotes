@@ -36,7 +36,7 @@ P1: true
 > > \end{align}
 > > $$
 > > 
-> > It is clear form [[#^8e6628]] that $(P^{\gamma}_{t_{0}t_{1}})^{-1}=P^{\gamma}_{t_{1}t_{0}}$. That $P^{\gamma}_{t_{0}t_{1}}$ is an isometry follows from the [[LEC DGT 8#^5959ee|metric compatibility of $D_{t}$]]:
+> > It is clear form [[#^8e6628]] that $(P^{\gamma}_{t_{0}t_{1}})^{-1}=P^{\gamma}_{t_{1}t_{0}}$. That $P^{\gamma}_{t_{0}t_{1}}$ is an isometry follows from the [[LEC DGT 8#^5959ee|metric compatibility]] of $D_{t}$:
 > > $$
 > > \begin{align}
 > > \frac{d}{dt} \langle V_{1}, V_{2} \rangle  & =\langle D_{t}V_{1}, V_{2} \rangle +\langle V_{1}, D_{t}V_{2} \rangle  \\
@@ -64,25 +64,42 @@ P1: true
 ^098938
 
 > [!Proposition]
-> Let $v\in T_{p}M$, $X\in \mathfrak{X}(M)$. Let $\gamma:(-\epsilon, \epsilon)\to M$ be smooth with $\gamma(0)=p$, $\gamma'(0)=v$. Then, 
+> Let $v\in T_{p}M$, $\gamma:(-\epsilon, \epsilon)\to M$ be smooth with $\gamma(0)=p$, $\gamma'(0)=v$. Let $V\in \mathfrak{X}(\gamma)$. Then, 
+> $$
+> D_{t}(V)(0)=\lim_{ h \to 0 } \frac{P_{h0}^{\gamma}(V(h))-V(0)}{h}.
+> $$
+> 
+> > [!Proof]-
+> > 
+> > Let $\{ E_{i} \}_{i=1}^{n}$ be parallel transports along $\gamma$ of an orthonormal basis $\{ E_{i}(0) \}_{i=1}^{n}$ of $T_{\gamma(0)}M$ as in [[#^098938]]. If $V(t)=V^{i}(t)E_{i}(t)$, by [[LEC DGT 8#^5959ee]].3, 
+> > $$
+> > D_{t}(V)(0)=\dot{V}^{i}(0)E_{i}(0).
+> > $$
+> > Next, by [[#^098938]], the parallel transport of $V(h)=V^{i}(h)E_{i}(h)\in T_{\gamma(h)}M$ to $\gamma(0)$ is given by $P_{h0}^{\gamma}(V(h))=V^{i}(h)E_{i}(0)$. Thus, 
+> > $$
+> > \begin{align}
+> > \lim_{ h \to 0 } \frac{P_{h0}^{\gamma}(V(h))-V(0)}{h}=\lim_{ h \to 0 } \left( \frac{V^{i}(h)-V^{i}(0)}{h} \right)E_{i}(0)=\dot{V}^{i}(0)E_{i}(0).
+> > \end{align}
+> > $$
+> > 
+> 
+
+^a37c42
+
+> [!Corollary]
+> Let $v\in T_{p}M$, $\gamma:(-\epsilon, \epsilon)\to M$ be smooth with $\gamma(0)=p$, $\gamma'(0)=v$. Let $X\in \mathfrak{X}(M)$. Then, 
 > $$
 > \nabla_{v}X|_{p}=\lim_{ h \to 0 } \frac{P_{h0}^{\gamma}(X_{\gamma(h)})-X_{p}}{h}.
 > $$
 > 
 > > [!Proof]-
 > > 
-> > Let $V=X|_{\gamma}\in \mathfrak{X}(\gamma)$, and $\{ E_{i} \}_{i=1}^{n}$ be parallel transports along $\gamma$ of an orthonormal basis $\{ E_{i}(0) \}_{i=1}^{n}$ of $T_{\gamma(0)}M$ as in [[#^098938]]. By [[LEC DGT 8#^5959ee]].3, 
+> > Take $V=X|_{\gamma}\in \mathfrak{X}(\gamma)$, and observe that, by [[LEC DGT 8#^5959ee]].3, 
 > > $$
-> > \nabla_{v}X|_{p}=\nabla_{\gamma'(0)}X|_{\gamma(0)}=D_{t}(V)(0)=\dot{V}^{i}(0)E_{i}(0).
+> > \nabla_{v}X|_{p}=\nabla_{\gamma'(0)}X|_{\gamma(0)}=D_{t}(V)(0).
 > > $$
-> > Next, we have $X_{\gamma(h)}=V^{i}(h)E_{i}(h)$. By [[#^098938]] its parallel transport to $\gamma(0)$ is given by $P_{h0}^{\gamma}(X_{\gamma(h)})=V^{i}(h)E_{i}(0)$. Thus, 
-> > $$
-> > \begin{align}
-> > \lim_{ h \to 0 } \left( \frac{V^{i}(h)-V^{i}(0)}{h} \right)E_{i}(0)=\dot{V}^{i}(0)E_{i}(0).
-> > \end{align}
-> > $$
-> > 
-
+> > Apply [[#^a37c42]]. 
+> 
 
 
 ---
