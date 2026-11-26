@@ -174,6 +174,8 @@ Let us first consider the case when $\gamma$ is regular.
 > 1. $\Gamma_{0}=\gamma$
 > 2. for all $s\in(-\epsilon, \epsilon)$, $\Gamma_{s}(0)=p$, $\Gamma_{s}(1)=q$, and $\Gamma_{s}$ is regular. 
 
+^edb7b8
+
 > [!Definition]
 > Let $\Gamma:J\times I\to M$ be smooth. A **vector field along $\Gamma$** is a smooth map $V:J\times I\to \mathbb{R}^{k}$ such that $V(s, t)\in T_{\Gamma(s, t)}M$. The space of vector fields over $\Gamma$ is denoted $\mathfrak{X}(\Gamma)$. 
 > 

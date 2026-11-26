@@ -145,6 +145,8 @@ However, it seems we can do better:
 > $$
 > has a unique solution that is defined on the entire interval $[\alpha, \beta]$. 
 
+^e3d9fa
+
 
 # Dependence on Initial conditions and parameters
 

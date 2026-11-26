@@ -144,19 +144,21 @@ $\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]])
 > > Rearranging and taking the inner product with $W$, we get
 > > $$
 > > \begin{align}
-> > \langle \nabla_{Z}\nabla_{Y}X-\nabla_{Y}\nabla_{Z}X+\nabla_{[Y, Z]}X, W \rangle  & =-\langle D_{Y}\mathbb{I}(X, Z), W \rangle+\langle D_{Z}\mathbb{I}(X, Y), W \rangle  \\
-> >  & =\langle \mathbb{I}(X, Z), D_{Y}W  \rangle -\langle \mathbb{I}(X, Y), D_{Z}W \rangle  \\
-> >  & =\langle \mathbb{I}(X, Z), \mathbb{I}(Y, W) \rangle -\langle \mathbb{I}(X, Y), \mathbb{I}(Z, W) \rangle   \\
-> >  & = X^{i}Y^{j}Z^{k}W^{s}(\langle h_{ik}, h_{js} \rangle -\langle h_{ij}, h_{ks} \rangle ),
+> > \langle \nabla_{Z}\nabla_{Y}X-\nabla_{Y}\nabla_{Z}X+\nabla_{[Y, Z]}X, W \rangle  & =-\langle D_{Z}\mathbb{I}(X, Y), W \rangle+\langle D_{Y}\mathbb{I}(X, Z), W \rangle  \\
+> >  & =\langle \mathbb{I}(X, Y), D_{Z}W \rangle-\langle \mathbb{I}(X, Z), D_{Y}W  \rangle   \\
+> >  & =\langle \mathbb{I}(X, Y), \mathbb{I}(Z, W) \rangle-\langle \mathbb{I}(X, Z), \mathbb{I}(Y, W) \rangle    \\
+> >  & = X^{i}Y^{j}Z^{k}W^{s}(\langle h_{ij}, h_{ks} \rangle-\langle h_{ik}, h_{js} \rangle),
 > > \end{align}
 > > $$
-> > where we used [[#^f5b590]] in the last step. Denote $\mathbb{I}(\tilde{\varphi}_{i},  \tilde{\varphi}_{j})$ by $\tilde{h}_{ij}$. Since the quantity $\langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle$ is intrinsic, $(\langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle)\circ F^{-1}=\langle \tilde{h}_{ij}, \tilde{h}_{ks} \rangle -\langle \tilde{h}_{ik} , \tilde{h}_{js}\rangle$. Therefore, 
+> > where we used [[#^f5b590]] in the last step. The LHS is $\langle R(Z, Y)X, W \rangle$. 
+> > 
+> > Denote $\mathbb{I}(\tilde{\varphi}_{i},  \tilde{\varphi}_{j})$ by $\tilde{h}_{ij}$. Since the quantity $\langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle$ is intrinsic, $(\langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle)\circ F^{-1}=\langle \tilde{h}_{ij}, \tilde{h}_{ks} \rangle -\langle \tilde{h}_{ik} , \tilde{h}_{js}\rangle$. Therefore, 
 > > $$
 > > \begin{align}
-> > \langle \tilde{R}(\tilde{X}, \tilde{Y})\tilde{Z}, \tilde{W} \rangle  & =\tilde{X}^{i}\tilde{Y}^{j}\tilde{Z}^{k}\tilde{W}^{s}(\langle \tilde{h}_{ij}, \tilde{h}_{ks} \rangle -\langle \tilde{h}_{ik} , \tilde{h}_{js}\rangle) \\
+> > \langle \tilde{R}(\tilde{Z}, \tilde{Y})\tilde{X}, \tilde{W} \rangle  & =\tilde{X}^{i}\tilde{Y}^{j}\tilde{Z}^{k}\tilde{W}^{s}(\langle \tilde{h}_{ij}, \tilde{h}_{ks} \rangle -\langle \tilde{h}_{ik} , \tilde{h}_{js}\rangle) \\
 > >  & = (X^{i}Y^{j}Z^{k}W^{s}(\langle h_{ij}, h_{ks} \rangle -\langle h_{ik} , h_{js}\rangle))\circ F^{-1} \\
-> >  & =\langle R(X, Y)Z, W \rangle \circ F^{-1} \\
-> >  & =\langle F_{*}R(X, Y)Z, \tilde{W} \rangle .
+> >  & =\langle R(Z, Y)X, W \rangle \circ F^{-1} \\
+> >  & =\langle F_{*}R(Z, Y)X, \tilde{W} \rangle .
 > > \end{align}
 > > $$
 > > 
@@ -164,11 +166,11 @@ $\mathbb{I}$ is not preserved by local isometries (recall [[LEC DGT 7#^d4f63b]])
 
 ^ed8589
 
-> [!Remark]
+> [!Remark] The Gauss equation
 > We highlight the following identity from the proof of [[#^ed8589]] for future reference:
 > $$
 > \begin{align}
-> \langle R(X, Y) Z, W \rangle =\langle \mathbb{I}(X, Z), \mathbb{I}(Y, W) \rangle -\langle \mathbb{I}(X, Y), \mathbb{I}(Z, W) \rangle.
+> \langle R(X, Y) Z, W \rangle =\langle \mathbb{I}(X, W), \mathbb{I}(Y, Z) \rangle -\langle \mathbb{I}(X, Z), \mathbb{I}(Y, W) \rangle.
 > \end{align}
 > $$
 > Observe that the RHS evaluated at $p$ depends only on $X_{p}$, $Y_{p}$, $Z_{p}$, and $W_{p}$. Thus, for $v_{1}, v_{2}, v_{3}\in T_{p}M$, $R_{p}(v_{1}, v_{2}) v_{3}$ is well-defined. 

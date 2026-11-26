@@ -8,6 +8,7 @@ tags:
 pics: true
 desc: symmetries of the curvature tensor, Curvature and infinitesimal holonomy
 P2: true
+P1: true
 ---
 # Symmetries of the curvature tensor
 
@@ -140,6 +141,8 @@ P2: true
 > > $$\boxed{ \operatorname{Rm}(X,Y,Z,W) = \operatorname{Rm}(Z,W,X,Y). }$$
 > > 
 > 
+
+^15df4a
 
 
 ---
